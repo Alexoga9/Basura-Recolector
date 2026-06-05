@@ -1,0 +1,61 @@
+@icon("res://addons/iconos/Loot.svg")
+extends Area2D
+
+@onready var sprite2d = %Sprite
+@onready var collision_shape_2d = %CollisionShape2D
+@onready var sonido = %sonido
+
+@export var data: LootDefinicion
+
+var objetivo = null
+var velocidad: int = -1
+
+var id: String
+var nombre: String
+enum TipoLoot {EXPERIENCIA, VIDA, DINERO, POWER_UP}
+var tipo_de_loot: TipoLoot
+var valor: int
+var tags: String
+
+
+func _ready():
+	iniciar_valores()
+
+
+func _process(delta):
+	perseguir_jugador(delta)
+
+
+func perseguir_jugador(delta):
+	if objetivo != null:
+		global_position = global_position.move_toward(objetivo.global_position, velocidad)
+		velocidad += 2 * delta
+
+
+func collect():
+	sonido.play()
+	collision_shape_2d.call_deferred("set", "disabled", true)
+	sprite2d.visible = false
+	return data
+
+
+func _on_area_entered(area):
+	if area.is_in_group("Radar_Loot"):
+		objetivo = area
+
+
+func _on_sonido_finished():
+	queue_free()
+
+
+func iniciar_valores():
+
+	id = data.id
+	nombre = data.nombre
+
+	tipo_de_loot = int(data.tipo_de_loot)
+	#print(TipoLoot)
+	valor = data.valor
+	tags = data.tags
+	sonido.stream = data.audio
+	sprite2d.texture = data.sprite

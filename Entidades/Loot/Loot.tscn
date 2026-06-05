@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cd6lygsc501ww"]
+
+[ext_resource type="Script" uid="uid://d1alhwontnr3g" path="res://Entidades/Loot/Loot_Item.gd" id="1_yo54l"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_si7tl"]
+radius = 15.0
+
+[node name="Loot" type="Area2D" unique_id=1883567907 groups=["Loot"]]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("1_yo54l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1608053603]
+unique_name_in_owner = true
+shape = SubResource("CircleShape2D_si7tl")
+debug_color = Color(0.21118888, 0.6402497, 0, 0.41960785)
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1161258588]
+unique_name_in_owner = true
+
+[node name="sonido" type="AudioStreamPlayer" parent="." unique_id=1004405695]
+unique_name_in_owner = true
+volume_db = -10.0
+pitch_scale = 1.5
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="finished" from="sonido" to="." method="_on_sonido_finished"]
