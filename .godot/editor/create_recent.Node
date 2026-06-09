@@ -1,0 +1,7 @@
+TextureRect
+VBoxContainer
+Label
+MarginContainer
+Node
+CollisionShape2D
+RigidBody2D
