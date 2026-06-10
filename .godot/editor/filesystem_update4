@@ -1,6 +1,1 @@
-res://Commons/Componentes/Fighting/Hechizo Inventario/HechizoInventario.gd
-res://Commons/Componentes/Core/GameOver.gd
 res://Entidades/Jugador/Jugador.tscn
-res://Commons/Componentes/Utilidades/Loot/loot_collector.gd
-res://Entidades/Jugador/Jugador.gd
-res://Commons/Componentes/Core/VidaComponente.gd

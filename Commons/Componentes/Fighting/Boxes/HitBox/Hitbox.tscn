@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://8ronqdxeu1xx"]
+
+[ext_resource type="Script" uid="uid://c4fh7380451lc" path="res://Commons/Componentes/Fighting/Boxes/HitBox/Hitbox.gd" id="1_0s02i"]
+[ext_resource type="Script" uid="uid://dmqihw87y0few" path="res://Commons/Componentes/Fighting/Boxes/HitBox/HitboxState.gd" id="3_aqqee"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_85drw"]
+
+[node name="Hitbox" type="Area2D" unique_id=899891702]
+script = ExtResource("1_0s02i")
+
+[node name="HitBoxState" type="Node" parent="." unique_id=429923884]
+unique_name_in_owner = true
+script = ExtResource("3_aqqee")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=951220603]
+unique_name_in_owner = true
+shape = SubResource("CircleShape2D_85drw")
+debug_color = Color(0.33065826, 0.61709917, 0.26041028, 0.41960785)
+
+[connection signal="area_entered" from="." to="." method="_on_hurtbox_entered"]
+[connection signal="iniciado" from="." to="HitBoxState" method="_on_hitbox_iniciado"]
+[connection signal="pulso_activado" from="." to="." method="_on_pulso_activado"]
