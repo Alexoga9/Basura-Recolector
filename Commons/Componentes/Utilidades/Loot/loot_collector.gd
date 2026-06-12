@@ -3,6 +3,7 @@ extends Area2D
 
 @onready var energia_componente = %EnergiaComponente
 
+
 # Hacer un ajuste en cuanto a la energia componente apartir de vida
 func _on_area_entered(area):
 	if area.is_in_group("Loot"):

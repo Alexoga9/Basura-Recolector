@@ -2,9 +2,10 @@ class_name LootDefinicion extends Resource
 
 @export var id: String
 @export var nombre: String
-enum TipoLoot {EXPERIENCIA, VIDA, DINERO, POWER_UP}
+enum TipoLoot {BASICO, PESADO, PAQUETE}
 @export var tipo_de_loot: TipoLoot
 @export var valor: int
+@export var tiene_requisito: bool
 
 @export var escena: PackedScene
 @export var tags: String
