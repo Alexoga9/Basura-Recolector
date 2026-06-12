@@ -5,7 +5,7 @@ class_name Jugador extends CharacterBody2D
 @onready var movimiento_componente: MovimientoComponente = %MovimientoComponente
 
 # In Game
-@onready var vida_componente: VidaComponente = %VidaComponente
+@onready var vida_componente: EnergiaComponente = %EnergiaComponente
 @onready var camera_2d: Camera2D = %Camera2D
 
 

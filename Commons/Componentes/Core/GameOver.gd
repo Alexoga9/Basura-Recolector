@@ -3,7 +3,7 @@ class_name GameOver extends Node
 
 signal estamina_agotada
 
-@export var vida: VidaComponente
+@export var vida: EnergiaComponente
 
 # cambiar esto por agotamiento
 

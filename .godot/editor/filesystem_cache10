@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1781049316
+::res://::1781291396
 caja.tscn::PackedScene::4195103314344714558::1780620915::0::1::::<><><>0<>0<><>::uid://e7kokadv3aib::::res://icon.svg
 icon.svg::CompressedTexture2D::347448159123347105::1780615952::1780615982::1::::<><><>0<>0<>2a257197ab89ee7f878beb39683f1788<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 mundo.tscn::PackedScene::1237652422123070963::1780620833::0::1::::<><><>0<>0<><>::uid://e7kokadv3aib::::res://icon.svg<>uid://e856quj4lvvn::::res://Entidades/Jugador/Jugador.tscn<>uid://b01e0d548qufu::::res://caja.tscn
@@ -286,9 +286,9 @@ ExperienciaComponente.gd::GDScript::4801811609277169812::1778519987::0::1::::Exp
 LootComponente.gd::GDScript::8009989860672201178::1778519394::0::1::::LootComponente<>Node<>res://addons/iconos/gems.svg<>0<>0<><>::
 loot_collector.gd::GDScript::7310163185020304175::1781046399::0::1::::<>Area2D<>res://addons/iconos/PickUp.svg<>0<>0<><>::
 ::res://Entidades/::1781049201
-::res://Entidades/Jugador/::1781049201
+::res://Entidades/Jugador/::1781049727
 Jugador.gd::GDScript::6399978102221987805::1781046399::0::1::::Jugador<>CharacterBody2D<><>0<>0<><>::
-Jugador.tscn::PackedScene::350757581547968371::1781046299::0::1::::<><><>0<>0<><>::uid://cxggx7fu5gior::::res://Entidades/Jugador/Jugador.gd<>uid://ctb6hc0tn7yig::::res://Commons/Componentes/Core/VidaComponente.gd<>uid://ddrnbgxm8522b::::res://Commons/Componentes/Movimiento/InputComponente.gd<>uid://e7kokadv3aib::::res://icon.svg<>uid://bnt3655fcthcm::::res://Commons/Componentes/Movimiento/Vectores/MovimientoComponente.gd<>uid://c313hyi3lxct::::res://Commons/Componentes/Core/GameOver.gd<>uid://dcfdk4qx3vf0b::::res://Commons/Componentes/Utilidades/Loot/loot_collector.gd<>uid://dqiir7o6l4sjy::::res://Commons/Componentes/Fighting/Radares/RadarComponente.gd
+Jugador.tscn::PackedScene::350757581547968371::1781049727::0::1::::<><><>0<>0<><>::uid://cxggx7fu5gior::::res://Entidades/Jugador/Jugador.gd<>uid://ctb6hc0tn7yig::::res://Commons/Componentes/Core/VidaComponente.gd<>uid://ddrnbgxm8522b::::res://Commons/Componentes/Movimiento/InputComponente.gd<>uid://e7kokadv3aib::::res://icon.svg<>uid://bnt3655fcthcm::::res://Commons/Componentes/Movimiento/Vectores/MovimientoComponente.gd<>uid://c313hyi3lxct::::res://Commons/Componentes/Core/GameOver.gd<>uid://dcfdk4qx3vf0b::::res://Commons/Componentes/Utilidades/Loot/loot_collector.gd<>uid://dqiir7o6l4sjy::::res://Commons/Componentes/Fighting/Radares/RadarComponente.gd
 ::res://Entidades/Loot/::1781049201
 Loot.tscn::PackedScene::5048114697728855634::1778517114::0::1::::<><><>0<>0<><>::uid://d1alhwontnr3g::::res://Entidades/Loot/Loot_Item.gd
 Loot_Item.gd::GDScript::8984853550903457978::1778623991::0::1::::<>Area2D<>res://addons/iconos/Loot.svg<>0<>0<><>::

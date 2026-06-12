@@ -1,6 +1,6 @@
 @tool
 @icon("res://addons/iconos/estamina.svg")
-class_name VidaComponente extends Node
+class_name EnergiaComponente extends Node
 
 signal murio
 signal valor_vida_cambiado(nuevo_valor: float)

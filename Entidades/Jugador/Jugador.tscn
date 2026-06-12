@@ -41,14 +41,14 @@ zoom = Vector2(2.015, 2.015)
 
 [node name="Componentes" type="Node" parent="." unique_id=6844626]
 
-[node name="VidaComponente" type="Node" parent="Componentes" unique_id=851066434]
+[node name="EnergiaComponente" type="Node" parent="Componentes" unique_id=851066434]
 unique_name_in_owner = true
 script = ExtResource("1_b2vdw")
 es_jugador = true
 vida = 100.0
 vida_maxima = 100.0
 
-[node name="GameOver" type="Node" parent="Componentes/VidaComponente" unique_id=1343825619 node_paths=PackedStringArray("vida")]
+[node name="GameOver" type="Node" parent="Componentes/EnergiaComponente" unique_id=1343825619 node_paths=PackedStringArray("vida")]
 script = ExtResource("4_qtgc7")
 vida = NodePath("..")
 metadata/_custom_type_script = "uid://c313hyi3lxct"
