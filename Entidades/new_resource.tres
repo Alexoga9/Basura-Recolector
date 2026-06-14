@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="LootDefinicion" format=3 uid="uid://daq1xqhby8g5g"]
+
+[ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="1_rdfia"]
+
+[resource]
+script = ExtResource("1_rdfia")
+id = "caja"
+metadata/_custom_type_script = "uid://dnu2r5yw53pto"

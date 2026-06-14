@@ -1,6 +1,8 @@
 @icon("res://addons/iconos/muerte.svg")
 class_name MuerteComponente extends Node
 
+# puede ser traducido como destruido componente, para las
+# basuras con resistencia
 @export var vida_componente: VidaComponente
 @export var loot_componente: LootComponente
 @export var animacion_muerte: String = "morir"

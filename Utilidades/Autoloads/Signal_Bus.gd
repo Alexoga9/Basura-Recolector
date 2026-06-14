@@ -1,9 +1,9 @@
 @tool
 extends Node
 
-# vida del jugador
-signal vida_jugador_cambiada(valor)
-signal vida_maxima_jugador_cambiada(valor)
+# energia del jugador
+signal energia_jugador_cambiada(valor)
+signal energia_maxima_jugador_cambiada(valor)
 signal murio_jugador
 
 # experiencia del jugador

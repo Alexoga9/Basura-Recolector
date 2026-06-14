@@ -13,7 +13,7 @@ config_version=5
 config/name="Basura recolector"
 run/main_scene="uid://rvr7pqnbebp8"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Assets/icon.svg"
 
 [autoload]
 
@@ -24,9 +24,27 @@ Global="*uid://50g7q8nvqdp2"
 
 gdscript/warnings/enable=false
 
+[display]
+
+window/size/viewport_width=368
+window/size/viewport_height=208
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/SimpleFormatOnSave/plugin.cfg", "res://addons/kanban_tasks/plugin.cfg", "res://addons/ridiculous_coding/plugin.cfg", "res://addons/script_splitter/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://Assets/": "red",
+"res://Commons/": "blue",
+"res://Entidades/": "orange",
+"res://Escenario/": "pink",
+"res://Recursos/": "gray",
+"res://Utilidades/": "purple"
+}
 
 [input]
 
