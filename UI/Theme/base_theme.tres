@@ -1,0 +1,9 @@
+[gd_resource type="Theme" format=3 uid="uid://cdsknvhcopbsf"]
+
+[resource]
+Button/font_sizes/font_size = 11
+MarginContainer/constants/margin_bottom = 9
+MarginContainer/constants/margin_left = 31
+MarginContainer/constants/margin_right = 29
+MarginContainer/constants/margin_top = 11
+VBoxContainer/constants/separation = 4

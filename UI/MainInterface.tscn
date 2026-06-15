@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://do8yofa8fafkw"]
 
 [ext_resource type="Script" uid="uid://b2wppdlddgt15" path="res://UI/UI_Scripts/baseButton.gd" id="1_itd1i"]
+[ext_resource type="Theme" uid="uid://cdsknvhcopbsf" path="res://UI/Theme/base_theme.tres" id="2_itd1i"]
 
 [node name="MainInterface" type="Control" unique_id=419586284]
 layout_mode = 3
@@ -19,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_itd1i")
 
 [node name="MainConteinerMG" type="MarginContainer" parent="MainPanel" unique_id=1332852484]
 visible = false
@@ -27,96 +29,80 @@ anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -146.5
-offset_right = 146.5
+offset_left = -57.5
+offset_right = 57.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
-theme_override_constants/margin_left = 0
-theme_override_constants/margin_top = 34
-theme_override_constants/margin_right = -1
-theme_override_constants/margin_bottom = 37
 
 [node name="GameTitlle" type="Label" parent="MainPanel/MainConteinerMG" unique_id=249463748]
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 0
-theme_override_font_sizes/font_size = 42
 text = "Game Titlle"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ButtonConteiner" type="VBoxContainer" parent="MainPanel/MainConteinerMG" unique_id=187168567]
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 4
 size_flags_stretch_ratio = 3.78
-theme_override_constants/separation = 36
+theme = ExtResource("2_itd1i")
 alignment = 1
 
 [node name="start_button" type="Button" parent="MainPanel/MainConteinerMG/ButtonConteiner" unique_id=487821723]
 layout_mode = 2
-size_flags_stretch_ratio = 0.0
-theme_override_font_sizes/font_size = 28
 text = "Start
 "
 
 [node name="settings_button" type="Button" parent="MainPanel/MainConteinerMG/ButtonConteiner" unique_id=515200645]
 layout_mode = 2
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 28
 text = "Settings"
 icon_alignment = 1
 
 [node name="quit_button" type="Button" parent="MainPanel/MainConteinerMG/ButtonConteiner" unique_id=1222631774]
 layout_mode = 2
-size_flags_vertical = 4
-size_flags_stretch_ratio = 0.0
-theme_override_font_sizes/font_size = 27
 text = "Quit
 "
 
 [node name="Foot" type="HBoxContainer" parent="MainPanel/MainConteinerMG" unique_id=496601746]
 layout_mode = 2
 size_flags_vertical = 8
-theme_override_constants/separation = 87
+theme_override_constants/separation = 26
 alignment = 1
 
 [node name="Label" type="Label" parent="MainPanel/MainConteinerMG/Foot" unique_id=1246523828]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 8
 text = "Daniel"
 
 [node name="Label2" type="Label" parent="MainPanel/MainConteinerMG/Foot" unique_id=120569436]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 8
 text = "Alex"
 
 [node name="Label3" type="Label" parent="MainPanel/MainConteinerMG/Foot" unique_id=1225164436]
 layout_mode = 2
-size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 8
 text = "Snow"
 
 [node name="SettingConteinerMG2" type="MarginContainer" parent="MainPanel" unique_id=133212083]
 layout_mode = 1
-anchors_preset = 13
-anchor_left = 0.5
-anchor_right = 0.5
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -146.5
-offset_right = 146.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
-theme_override_constants/margin_left = 0
-theme_override_constants/margin_top = 34
-theme_override_constants/margin_right = -1
-theme_override_constants/margin_bottom = 37
 
 [node name="SettingsTitlle" type="Label" parent="MainPanel/SettingConteinerMG2" unique_id=1782719874]
 layout_mode = 2
 size_flags_vertical = 0
-theme_override_font_sizes/font_size = 42
 text = "Settings Titlle"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -126,65 +112,53 @@ layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
 size_flags_stretch_ratio = 3.78
-theme_override_constants/separation = 36
 alignment = 1
 
 [node name="Musica" type="Label" parent="MainPanel/SettingConteinerMG2/ButtonConteiner2" unique_id=1997359490]
 layout_mode = 2
-size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 8
 text = "Musica"
 
 [node name="Video" type="Label" parent="MainPanel/SettingConteinerMG2/ButtonConteiner2" unique_id=744019919]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 8
 text = "Video"
 
 [node name="Audio" type="Label" parent="MainPanel/SettingConteinerMG2/ButtonConteiner2" unique_id=625044598]
 layout_mode = 2
-size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 8
 text = "Audio"
 
 [node name="ButtonConteiner" type="VBoxContainer" parent="MainPanel/SettingConteinerMG2" unique_id=1872352806]
 layout_mode = 2
+size_flags_horizontal = 0
 size_flags_vertical = 4
 size_flags_stretch_ratio = 3.78
-theme_override_constants/separation = 36
 alignment = 1
 
 [node name="Video" type="Label" parent="MainPanel/SettingConteinerMG2/ButtonConteiner" unique_id=2003209080]
 layout_mode = 2
-size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 8
 text = "Video"
 
 [node name="Musica" type="Label" parent="MainPanel/SettingConteinerMG2/ButtonConteiner" unique_id=775587256]
 layout_mode = 2
-size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 8
 text = "Musica"
 
 [node name="Audio" type="Label" parent="MainPanel/SettingConteinerMG2/ButtonConteiner" unique_id=26389135]
 layout_mode = 2
-size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 8
 text = "Audio"
 
-[node name="Foot" type="HBoxContainer" parent="MainPanel/SettingConteinerMG2" unique_id=2009163973]
+[node name="Back_button" type="Button" parent="MainPanel/SettingConteinerMG2" unique_id=1734260240]
 layout_mode = 2
-size_flags_vertical = 8
-theme_override_constants/separation = 87
-alignment = 1
-
-[node name="Label" type="Label" parent="MainPanel/SettingConteinerMG2/Foot" unique_id=671028381]
-layout_mode = 2
-size_flags_horizontal = 4
-text = "Daniel"
-
-[node name="Label2" type="Label" parent="MainPanel/SettingConteinerMG2/Foot" unique_id=1802233634]
-layout_mode = 2
-size_flags_horizontal = 4
-text = "Alex"
-
-[node name="Label3" type="Label" parent="MainPanel/SettingConteinerMG2/Foot" unique_id=1229791178]
-layout_mode = 2
-size_flags_horizontal = 4
-text = "Snow"
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 8
+text = "back"
 
 [connection signal="pressed" from="MainPanel/MainConteinerMG/ButtonConteiner/start_button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="MainPanel/MainConteinerMG/ButtonConteiner/settings_button" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="MainPanel/SettingConteinerMG2/Back_button" to="." method="_on_back_button_pressed"]
