@@ -43,6 +43,7 @@ folder_colors={
 "res://Entidades/": "orange",
 "res://Escenario/": "pink",
 "res://Recursos/": "gray",
+"res://UI/": "green",
 "res://Utilidades/": "purple"
 }
 
