@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://rvr7pqnbebp8"]
 
 [ext_resource type="Texture2D" uid="uid://e7kokadv3aib" path="res://Assets/icon.svg" id="1_lgngo"]
+[ext_resource type="PackedScene" uid="uid://bxxsc2sciuuu3" path="res://Escenario/Inventario.tscn" id="1_vttfp"]
 [ext_resource type="PackedScene" uid="uid://e856quj4lvvn" path="res://Entidades/Jugador/Jugador.tscn" id="2_fw4w5"]
 [ext_resource type="PackedScene" uid="uid://b01e0d548qufu" path="res://Entidades/caja.tscn" id="3_fw4w5"]
 
 [node name="Mundo" type="Node" unique_id=283243708]
+
+[node name="Control" parent="." unique_id=615073819 instance=ExtResource("1_vttfp")]
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1884187704]
 modulate = Color(0.39283404, 0.39437628, 0.40885204, 1)

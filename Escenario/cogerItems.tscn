@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bq2jmt8xu17ps"]
+
+[ext_resource type="Script" uid="uid://c7afoe64tj6c3" path="res://Escenario/coger_items.gd" id="1_xe7ge"]
+[ext_resource type="Texture2D" uid="uid://e7kokadv3aib" path="res://Assets/icon.svg" id="2_q5x5m"]
+
+[node name="Node2D" type="Node2D" unique_id=1895368560]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=307132450]
+script = ExtResource("1_xe7ge")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=2031050729]
+texture = ExtResource("2_q5x5m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=427938856]

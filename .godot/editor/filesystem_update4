@@ -1,4 +1,4 @@
-res://UI/Theme/base_button_theme.tres
-res://UI/MainInterface.tscn
-res://UI/Theme/base_theme.tres
-res://UI/UI_Scripts/baseButton.gd
+res://Entidades/Jugador/Jugador.tscn
+res://Escenario/Inventario.tscn
+res://Escenario/cogerItems.tscn
+res://Escenario/mundo.tscn
