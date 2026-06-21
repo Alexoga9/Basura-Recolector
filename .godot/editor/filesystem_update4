@@ -1,4 +1,7 @@
-res://Entidades/Jugador/Jugador.tscn
-res://Escenario/Inventario.tscn
-res://Escenario/cogerItems.tscn
-res://Escenario/mundo.tscn
+res://Escenario/InventarioSlot.gd
+res://Recursos/LootDefinicion.gd
+res://Utilidades/Autoloads/inventario.gd
+res://Commons/Componentes/Utilidades/Inventario/Inventario.tscn
+res://Commons/Componentes/Utilidades/Inventario/cogerItems.tscn
+res://Commons/Componentes/Utilidades/Loot/loot_collector.gd
+res://Entidades/Loot/Loot.tscn

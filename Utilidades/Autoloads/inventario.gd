@@ -5,8 +5,9 @@ signal slot_updated(item_id: String, new_count: int)
 var _counts: Dictionary = {}
 
 
+# añade y tiene tope si ya se lleno
 func add_item(item: LootDefinicion) -> void:
-	if _counts.get(item.id, 0) >= item.valor:
+	if _counts.get(item.id, 0) >= item.cantidad_maxima:
 		print("[Inventory] Slot lleno: ", item.id)
 		return
 

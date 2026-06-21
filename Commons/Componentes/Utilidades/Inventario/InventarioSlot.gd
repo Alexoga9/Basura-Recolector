@@ -3,8 +3,8 @@ extends Panel
 
 @export var item_data: LootDefinicion # Arrastra el .tres aquí en el inspector
 
-@onready var icon: TextureRect = $TextureRect
-@onready var count_label: Label = $Label
+@onready var count_label = %Label
+@onready var icon = %TextureRect
 
 
 func _ready() -> void:

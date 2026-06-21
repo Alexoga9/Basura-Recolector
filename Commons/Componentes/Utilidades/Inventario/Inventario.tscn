@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://bxxsc2sciuuu3"]
 
-[ext_resource type="Script" uid="uid://cvdailrt3pbqn" path="res://Escenario/InventarioSlot.gd" id="1_syqwc"]
-[ext_resource type="Resource" uid="uid://daq1xqhby8g5g" path="res://Entidades/new_resource.tres" id="2_syqwc"]
-[ext_resource type="Texture2D" uid="uid://p7dfkv8att0p" path="res://Assets/Inventario/image.png" id="3_aorov"]
+[ext_resource type="Script" uid="uid://cvdailrt3pbqn" path="res://Commons/Componentes/Utilidades/Inventario/InventarioSlot.gd" id="1_rkrsp"]
+[ext_resource type="Texture2D" uid="uid://p7dfkv8att0p" path="res://Assets/Inventario/image.png" id="2_nttg7"]
 
 [node name="Control" type="Control" unique_id=615073819]
 layout_mode = 3
@@ -22,16 +21,17 @@ size_flags_vertical = 0
 
 [node name="Panel" type="Panel" parent="CanvasLayer/HBoxContainer" unique_id=851919116]
 layout_mode = 2
-script = ExtResource("1_syqwc")
-item_data = ExtResource("2_syqwc")
+script = ExtResource("1_rkrsp")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/HBoxContainer/Panel" unique_id=906568026]
+unique_name_in_owner = true
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("3_aorov")
+texture = ExtResource("2_nttg7")
 
 [node name="Label" type="Label" parent="CanvasLayer/HBoxContainer/Panel" unique_id=857493552]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
