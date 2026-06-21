@@ -1,8 +1,18 @@
 [gd_scene format=3 uid="uid://bxxsc2sciuuu3"]
 
 [ext_resource type="Script" uid="uid://cvdailrt3pbqn" path="res://Commons/Componentes/Utilidades/Inventario/InventarioSlot.gd" id="1_rkrsp"]
-[ext_resource type="Resource" uid="uid://daq1xqhby8g5g" path="res://Entidades/new_resource.tres" id="2_ftg80"]
+[ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="2_ftg80"]
 [ext_resource type="Texture2D" uid="uid://p7dfkv8att0p" path="res://Assets/Inventario/image.png" id="2_nttg7"]
+
+[sub_resource type="Resource" id="Resource_x7tyv"]
+script = ExtResource("2_ftg80")
+id = "piedra"
+nombre = "Piedra"
+valor = 15
+cantidad_maxima = 64
+tiene_requisito = true
+tags = "Material"
+metadata/_custom_type_script = "uid://dnu2r5yw53pto"
 
 [node name="Inventario" type="Control" unique_id=615073819]
 layout_mode = 3
@@ -22,7 +32,7 @@ size_flags_vertical = 0
 [node name="Panel" type="Panel" parent="HBoxContainer" unique_id=851919116]
 layout_mode = 2
 script = ExtResource("1_rkrsp")
-item_data = ExtResource("2_ftg80")
+item_data = SubResource("Resource_x7tyv")
 
 [node name="Casilla" type="TextureRect" parent="HBoxContainer/Panel" unique_id=906568026]
 layout_mode = 0
