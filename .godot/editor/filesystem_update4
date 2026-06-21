@@ -1,7 +1,4 @@
-res://Escenario/InventarioSlot.gd
+res://Entidades/caja.tscn
+res://Entidades/new_resource.tres
 res://Recursos/LootDefinicion.gd
-res://Utilidades/Autoloads/inventario.gd
-res://Commons/Componentes/Utilidades/Inventario/Inventario.tscn
-res://Commons/Componentes/Utilidades/Inventario/cogerItems.tscn
 res://Commons/Componentes/Utilidades/Loot/loot_collector.gd
-res://Entidades/Loot/Loot.tscn

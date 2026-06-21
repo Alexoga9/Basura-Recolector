@@ -5,4 +5,10 @@
 [resource]
 script = ExtResource("1_rdfia")
 id = "caja"
+nombre = null
+tipo_de_loot = 2
+valor = null
+cantidad_maxima = null
+tiene_requisito = null
+tags = null
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"

@@ -18,7 +18,7 @@ func settear_valores_del_loot(loot:Node2D, posicion:CharacterBody2D):
 	if loot != null:
 		loot.id = id
 		loot.nombre = nombre
-		#loot.tipo_de_loot = tipo_de_loot
+		loot.tipo_de_loot = tipo_de_loot
 		loot.valor = valor
 		loot.cantidad_maxima = cantidad_maxima
 		loot.tags = tags
