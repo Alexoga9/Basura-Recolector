@@ -1,8 +1,1 @@
-res://Commons/Componentes/Utilidades/Inventario/InventarioSlot.gd
-res://Commons/Componentes/Utilidades/Loot/loot_collector.gd
-res://Entidades/new_resource.tres
-res://Recursos/LootDefinicion.gd
-res://Commons/Componentes/Utilidades/Inventario/Inventario.tscn
-res://Utilidades/Autoloads/inventario.gd
-res://Utilidades/Autoloads/Signal_Bus.gd
-res://Commons/Componentes/Utilidades/Inventario/mundo.tscn
+res://Entidades/Loot/Loot.tscn

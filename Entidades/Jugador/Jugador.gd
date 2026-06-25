@@ -5,7 +5,7 @@ class_name Jugador extends CharacterBody2D
 @onready var movimiento_componente: MovimientoComponente = %MovimientoComponente
 
 # In Game
-@onready var vida_componente: EnergiaComponente = %EnergiaComponente
+@onready var energia_componente: EnergiaComponente = %EnergiaComponente
 @onready var camera_2d: Camera2D = %Camera2D
 
 
@@ -15,4 +15,5 @@ func _ready():
 
 func _physics_process(delta):
 	movimiento_componente.movimiento(input_componente.input_movimiento(), delta)
+	input_componente.input_recoger_basura_automatica()
 	#marker_2d.actualizar_marker_por_input(input_componente.input_movimiento())

@@ -1,13 +1,12 @@
 [gd_resource type="Resource" script_class="LootDefinicion" format=3 uid="uid://daq1xqhby8g5g"]
 
 [ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="1_rdfia"]
-[ext_resource type="Texture2D" uid="uid://cucnhcxusefni" path="res://Assets/Inventario/piedra.png" id="2_rnlra"]
+[ext_resource type="Texture2D" uid="uid://e7kokadv3aib" path="res://Assets/icon.svg" id="2_rnlra"]
 
 [resource]
 script = ExtResource("1_rdfia")
 id = "caja"
 nombre = null
-tipo_de_loot = 2
 valor = null
 cantidad_maxima = 10
 tiene_requisito = null

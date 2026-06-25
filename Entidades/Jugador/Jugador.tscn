@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://ddrnbgxm8522b" path="res://Commons/Componentes/Movimiento/InputComponente.gd" id="2_30dg6"]
 [ext_resource type="Texture2D" uid="uid://e7kokadv3aib" path="res://Assets/icon.svg" id="2_y6klq"]
 [ext_resource type="Script" uid="uid://bnt3655fcthcm" path="res://Commons/Componentes/Movimiento/Vectores/MovimientoComponente.gd" id="3_30dg6"]
-[ext_resource type="Script" uid="uid://c313hyi3lxct" path="res://Commons/Componentes/Core/GameOver.gd" id="4_qtgc7"]
+[ext_resource type="Script" uid="uid://c313hyi3lxct" path="res://Commons/Componentes/Core/Agotamiento.gd" id="4_qtgc7"]
 [ext_resource type="Script" uid="uid://dcfdk4qx3vf0b" path="res://Commons/Componentes/Utilidades/Loot/loot_collector.gd" id="9_6pwru"]
 [ext_resource type="Script" uid="uid://dqiir7o6l4sjy" path="res://Commons/Componentes/Radares/RadarComponente.gd" id="9_y6klq"]
 
@@ -19,7 +19,7 @@ radius = 30.066593
 radius = 7.071068
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yyjpx"]
-radius = 335.93155
+radius = 70.0
 
 [node name="Jugador" type="CharacterBody2D" unique_id=1030727379 groups=["Jugador"]]
 collision_mask = 0
@@ -46,7 +46,7 @@ unique_name_in_owner = true
 script = ExtResource("1_b2vdw")
 es_jugador = true
 
-[node name="GameOver" type="Node" parent="Componentes/EnergiaComponente" unique_id=1343825619 node_paths=PackedStringArray("vida")]
+[node name="Agotamiento" type="Node" parent="Componentes/EnergiaComponente" unique_id=1343825619 node_paths=PackedStringArray("vida")]
 script = ExtResource("4_qtgc7")
 vida = NodePath("..")
 metadata/_custom_type_script = "uid://c313hyi3lxct"
@@ -63,6 +63,7 @@ body_character = NodePath("../..")
 sprite = NodePath("../../Sprite2D")
 
 [node name="LootAtractor" type="Area2D" parent="." unique_id=919355164 groups=["Radar_Loot"]]
+editor_description = "Viene siendo un area de reconocimiento"
 position = Vector2(-1, 6)
 collision_layer = 0
 collision_mask = 8
@@ -72,6 +73,8 @@ shape = SubResource("CircleShape2D_frfy0")
 debug_color = Color(0.63369, 0.5259296, 0.0091273235, 0.41960785)
 
 [node name="Loot Collector" type="Area2D" parent="." unique_id=376001421]
+editor_description = "Se encarga de recolectar los objetos  en el mundo.
+"
 visible = false
 collision_layer = 0
 collision_mask = 8
@@ -83,9 +86,11 @@ shape = SubResource("CircleShape2D_1ibpt")
 debug_color = Color(0.2517849, 0.6236958, 0.3297198, 0.41960785)
 
 [node name="RadarComponente" type="Area2D" parent="." unique_id=1555040956]
-visible = false
+editor_description = "Reconoce las entidades a su al rededor, administrandolas en un Array.
+
+Permite elegir si quieres un enemigo aleatorio, cercano o lejano"
 collision_layer = 0
-collision_mask = 4
+collision_mask = 12
 script = ExtResource("9_y6klq")
 metadata/_custom_type_script = "uid://dqiir7o6l4sjy"
 

@@ -1,7 +1,7 @@
 @icon("res://addons/iconos/Radar.svg")
 class_name RadarComponente extends Area2D
 
-var entidades: Array[Area2D]
+var entidades: Array[Loot]
 
 var centro = global_position
 
@@ -11,18 +11,20 @@ func _ready():
 	area_exited.connect(entidad_fuera_de_radar)
 
 
-func entidad_dentro_de_radar(area: Area2D):
+func entidad_dentro_de_radar(area: Loot):
 	#print(area.get_parent().name + " Ha entrado en el radar")
 	entidades.append(area)
+	area.objetivo = Global.jugador
+	print(str(area.objetivo))
 
 
-func entidad_fuera_de_radar(area: Area2D):
+func entidad_fuera_de_radar(area: Loot):
 	#print(area.get_parent().name + " Ha salido del radar")
 	entidades.erase(area)
 
 
 # ironicamente, no da la entidad más cercana
-func get_entidad_mas_cercana() -> Area2D:
+func get_entidad_mas_cercana() -> Loot:
 	var mas_cercana = null
 	var distancia_minima = INF
 
@@ -36,7 +38,7 @@ func get_entidad_mas_cercana() -> Area2D:
 	return mas_cercana
 
 
-func get_entidad_mas_lejana() -> Area2D:
+func get_entidad_mas_lejana() -> Loot:
 	var mas_lejana = null
 	var distancia_maxima = -1 # Empieza con -1 (cualquier distancia será mayor)
 
@@ -50,7 +52,7 @@ func get_entidad_mas_lejana() -> Area2D:
 	return mas_lejana
 
 
-func get_entidad_aleatoria() -> Area2D:
+func get_entidad_aleatoria() -> Loot:
 	if entidades.is_empty():
 		return null
 

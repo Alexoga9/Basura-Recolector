@@ -12,6 +12,17 @@ func input_movimiento() -> Vector2:
 	return mov
 
 
+func input_recoger_basura_automatica() -> bool:
+	var presionado: bool
+	if Input.is_action_just_pressed("Recoger"):
+		presionado = true
+		SignalBus.recoger_basura_automatica.emit()
+		print("E")
+		return presionado
+	else:
+		return false
+
+
 func input_ataque():
 	if Input.get_action_strength("Ulti"):
 		pass

@@ -1,7 +1,8 @@
+CollisionShape2D
+RigidBody2D
 TextureRect
 CanvasLayer
 Area2D
-CollisionShape2D
 Sprite2D
 Label
 Panel
@@ -11,4 +12,3 @@ Button
 VBoxContainer
 MarginContainer
 Node
-RigidBody2D

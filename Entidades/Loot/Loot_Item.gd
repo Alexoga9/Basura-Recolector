@@ -1,5 +1,5 @@
 @icon("res://addons/iconos/Loot.svg")
-extends Area2D
+class_name Loot extends Area2D
 
 @onready var sprite2d = %Sprite
 @onready var collision_shape_2d = %CollisionShape2D
@@ -8,11 +8,12 @@ extends Area2D
 @export var data: LootDefinicion
 
 var objetivo = null
+var input_recibido: bool = false
 var velocidad: int = -1
 
 var id: String
 var nombre: String
-enum TipoLoot {EXPERIENCIA, VIDA, DINERO, POWER_UP}
+enum TipoLoot {BASICO, PESADO, PAQUETE}
 var tipo_de_loot: TipoLoot
 var valor: int
 var tags: String
@@ -20,10 +21,17 @@ var tags: String
 
 func _ready():
 	iniciar_valores()
+	SignalBus.recoger_basura_automatica.connect(recibir_input)
 
 
 func _process(delta):
-	perseguir_jugador(delta)
+	if input_recibido:
+		perseguir_jugador(delta)
+
+
+func recibir_input():
+	input_recibido = true
+	print("Input recibido")
 
 
 func perseguir_jugador(delta):

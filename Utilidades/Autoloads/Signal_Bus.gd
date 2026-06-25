@@ -17,3 +17,9 @@ signal enemigo_matado
 # Jugador
 signal jugador_listo
 signal input_movimiento
+
+# Input
+signal recoger_basura_automatica(bool)
+
+# Basura
+signal basura_recogida

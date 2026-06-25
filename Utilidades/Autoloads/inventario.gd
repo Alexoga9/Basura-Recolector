@@ -13,6 +13,7 @@ func add_item(item: LootDefinicion) -> void:
 
 	_counts[item.id] = _counts.get(item.id, 0) + 1
 	slot_updated.emit(item.id, _counts[item.id])
+	print(str(_counts))
 
 
 func get_count(item_id: String) -> int:

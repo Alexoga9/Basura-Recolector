@@ -19,7 +19,7 @@ config/icon="res://Assets/icon.svg"
 
 SignalBus="*uid://de1hm7ggjo12u"
 Global="*uid://50g7q8nvqdp2"
-Inventario="*uid://d2f0m5j1ciuls"
+Inventario="*uid://bxxsc2sciuuu3"
 
 [debug]
 
@@ -43,6 +43,7 @@ folder_colors={
 "res://Commons/": "blue",
 "res://Entidades/": "orange",
 "res://Escenario/": "pink",
+"res://Escenarios/": "yellow",
 "res://Recursos/": "gray",
 "res://UI/": "green",
 "res://Utilidades/": "purple"

@@ -1,5 +1,5 @@
 @icon("res://addons/iconos/Game Over.svg")
-class_name GameOver extends Node
+class_name Agotamiento extends Node
 
 signal estamina_agotada
 

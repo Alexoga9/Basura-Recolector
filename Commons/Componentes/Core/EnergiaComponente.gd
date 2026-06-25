@@ -32,7 +32,7 @@ signal valor_maximo_energia_cambiado(nuevo_max: float)
 		if energia > energia_maxima:
 			energia = energia_maxima
 
-var invicibilidad: bool = false
+var energia_inagotable: bool = false
 var _inicializado: bool = false
 
 
@@ -63,7 +63,7 @@ func recuperar(recuperacion: float):
 
 
 func agotar(agotamiento: float):
-	if agotamiento > 0 and not invicibilidad:
+	if agotamiento > 0 and not energia_inagotable:
 		energia -= agotamiento
 
 
@@ -87,8 +87,8 @@ func reducir_energia_maxima(reduccion: float):
 		energia_maxima = max(energia_maxima - reduccion, 1)
 
 
-func frames_de_invencibilidad():
-	if invicibilidad:
+func frames_de_energia_inagotable():
+	if energia_inagotable:
 		# Aquí iría la lógica de invencibilidad con timer
 		pass
 

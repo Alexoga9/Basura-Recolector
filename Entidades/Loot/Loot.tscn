@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d1alhwontnr3g" path="res://Entidades/Loot/Loot_Item.gd" id="1_yo54l"]
 [ext_resource type="Resource" uid="uid://daq1xqhby8g5g" path="res://Entidades/new_resource.tres" id="2_4wyng"]
+[ext_resource type="Texture2D" uid="uid://e7kokadv3aib" path="res://Assets/icon.svg" id="3_1jfvb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_si7tl"]
 radius = 15.0
@@ -19,6 +20,8 @@ debug_color = Color(0.21118888, 0.6402497, 0, 0.41960785)
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1161258588]
 unique_name_in_owner = true
+scale = Vector2(0.1875, 0.1875)
+texture = ExtResource("3_1jfvb")
 
 [node name="sonido" type="AudioStreamPlayer" parent="." unique_id=1004405695]
 unique_name_in_owner = true
