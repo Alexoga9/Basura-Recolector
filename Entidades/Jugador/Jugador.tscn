@@ -100,5 +100,8 @@ metadata/_custom_type_script = "uid://dqiir7o6l4sjy"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RadarComponente" unique_id=1726165650]
 shape = SubResource("CircleShape2D_yyjpx")
 
+[node name="Cargar basura" type="Marker2D" parent="." unique_id=1495227192]
+position = Vector2(0, -11)
+
 [connection signal="area_entered" from="LootAtractor" to="LootAtractor" method="_on_area_entered"]
 [connection signal="area_entered" from="Loot Collector" to="Loot Collector" method="_on_area_entered"]
