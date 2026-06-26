@@ -40,7 +40,6 @@ texture = SubResource("AtlasTexture_y6klq")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=664749476 groups=["Camara"]]
 unique_name_in_owner = true
-zoom = Vector2(2.015, 2.015)
 
 [node name="Componentes" type="Node" parent="." unique_id=6844626]
 

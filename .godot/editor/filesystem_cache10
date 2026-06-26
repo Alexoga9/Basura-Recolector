@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1782435745
+::res://::1782515805
 ::res://addons/::1781049200
 default_env.tres::Environment::-1::1773270161::0::1::::<><><>0<>0<><>::
 ridiculous.png::CompressedTexture2D::4698160805014417687::1773270161::1780616388::1::::<><><>0<>0<>9282b53936cb6b34a12affb14154bdbd<>res://.godot/imported/ridiculous.png-4135992b2ab7447190f13a701c3cfe63.ctex::
@@ -284,14 +284,14 @@ LootComponente.gd::GDScript::8009989860672201178::1781480087::0::1::::LootCompon
 loot_collector.gd::GDScript::7310163185020304175::1782083158::0::1::::<>Area2D<>res://addons/iconos/PickUp.svg<>0<>0<><>::
 ::res://Entidades/::1782430712
 new_resource.tres::Resource/LootDefinicion::7193912661482045954::1782081734::0::1::::<><><>0<>0<><>::uid://dnu2r5yw53pto::::res://Recursos/LootDefinicion.gd<>uid://e7kokadv3aib::::res://Assets/icon.svg
-::res://Entidades/Basura/::1782435683
-Basura.tscn::PackedScene::3371038408796737317::1782435683::0::1::::<><><>0<>0<><>::uid://b8xyvx6fjldhd::::res://Entidades/Basura/Basura_item.gd<>uid://5k76mbciamak::::res://Entidades/Loot/loots/re_madera.tres
+::res://Entidades/Basura/::1782436293
+Basura.tscn::PackedScene::3371038408796737317::1782436293::0::1::::<><><>0<>0<><>::uid://b8xyvx6fjldhd::::res://Entidades/Basura/Basura_item.gd<>uid://5k76mbciamak::::res://Entidades/Loot/loots/re_madera.tres
 Basura_item.gd::GDScript::4751629177755572933::1782431246::0::1::::Basura<>RigidBody2D<>res://addons/iconos/basura.svg<>0<>0<><>::
-::res://Entidades/Jugador/::1782435642
+::res://Entidades/Jugador/::1782435803
 Jugador.gd::GDScript::6399978102221987805::1782157542::0::1::::Jugador<>CharacterBody2D<><>0<>0<><>::
-Jugador.tscn::PackedScene::350757581547968371::1782435642::0::1::::<><><>0<>0<><>::uid://cxggx7fu5gior::::res://Entidades/Jugador/Jugador.gd<>uid://ctb6hc0tn7yig::::res://Commons/Componentes/Core/EnergiaComponente.gd<>uid://uwbbh380hhme::::res://Assets/jugador/Spring 2 v1.png<>uid://ddrnbgxm8522b::::res://Commons/Componentes/Movimiento/InputComponente.gd<>uid://bnt3655fcthcm::::res://Commons/Componentes/Movimiento/Vectores/MovimientoComponente.gd<>uid://c313hyi3lxct::::res://Commons/Componentes/Core/Agotamiento.gd<>uid://dcfdk4qx3vf0b::::res://Commons/Componentes/Utilidades/Loot/loot_collector.gd<>uid://dqiir7o6l4sjy::::res://Commons/Componentes/Radares/RadarComponente.gd
-::res://Entidades/Loot/::1782432437
-Loot.tscn::PackedScene::5048114697728855634::1782432437::0::1::::<><><>0<>0<><>::uid://d1alhwontnr3g::::res://Entidades/Loot/Loot_Item.gd
+Jugador.tscn::PackedScene::350757581547968371::1782435803::0::1::::<><><>0<>0<><>::uid://cxggx7fu5gior::::res://Entidades/Jugador/Jugador.gd<>uid://ctb6hc0tn7yig::::res://Commons/Componentes/Core/EnergiaComponente.gd<>uid://uwbbh380hhme::::res://Assets/jugador/Spring 2 v1.png<>uid://ddrnbgxm8522b::::res://Commons/Componentes/Movimiento/InputComponente.gd<>uid://bnt3655fcthcm::::res://Commons/Componentes/Movimiento/Vectores/MovimientoComponente.gd<>uid://c313hyi3lxct::::res://Commons/Componentes/Core/Agotamiento.gd<>uid://dcfdk4qx3vf0b::::res://Commons/Componentes/Utilidades/Loot/loot_collector.gd<>uid://dqiir7o6l4sjy::::res://Commons/Componentes/Radares/RadarComponente.gd
+::res://Entidades/Loot/::1782436531
+Loot.tscn::PackedScene::5048114697728855634::1782436531::0::1::::<><><>0<>0<><>::uid://d1alhwontnr3g::::res://Entidades/Loot/Loot_Item.gd
 Loot_Item.gd::GDScript::8984853550903457978::1782431274::0::1::::Loot<>Area2D<>res://addons/iconos/Loot.svg<>0<>0<><>::
 ::res://Entidades/Loot/loots/::1782431639
 re_madera.tres::Resource/LootDefinicion::2128308021987729466::1782431639::0::1::::<><><>0<>0<><>::uid://dnu2r5yw53pto::::res://Recursos/LootDefinicion.gd<>uid://d0v6krou2ook8::::res://Assets/Inventario/madera.png

@@ -28,7 +28,7 @@ gdscript/warnings/enable=false
 [display]
 
 window/size/viewport_width=368
-window/size/viewport_height=208
+window/size/viewport_height=216
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
