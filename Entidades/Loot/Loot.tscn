@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://d1alhwontnr3g" path="res://Entidades/Loot/Loot_Item.gd" id="1_yo54l"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_si7tl"]
-radius = 15.0
+radius = 3.0
 
 [node name="Loot" type="Area2D" unique_id=1738087845 groups=["Loot"]]
 collision_layer = 2
