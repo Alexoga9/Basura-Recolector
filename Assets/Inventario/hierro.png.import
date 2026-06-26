@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0v6krou2ook8"
-path="res://.godot/imported/madra.png-3eb522f0542b0cb4fa95f94fe2d8e14e.ctex"
+uid="uid://cucnhcxusefni"
+path="res://.godot/imported/hierro.png-0b5463821681284ffd2bc4a5e5af0d47.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Inventario/madra.png"
-dest_files=["res://.godot/imported/madra.png-3eb522f0542b0cb4fa95f94fe2d8e14e.ctex"]
+source_file="res://Assets/Inventario/hierro.png"
+dest_files=["res://.godot/imported/hierro.png-0b5463821681284ffd2bc4a5e5af0d47.ctex"]
 
 [params]
 

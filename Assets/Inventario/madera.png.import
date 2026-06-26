@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2w68k8llr4oi"
-path="res://.godot/imported/a.png-08227f508e5ed26db413539f336a3107.ctex"
+uid="uid://d0v6krou2ook8"
+path="res://.godot/imported/madera.png-1a75a8c08d20e4d82027691cc7726bda.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Inventario/a.png"
-dest_files=["res://.godot/imported/a.png-08227f508e5ed26db413539f336a3107.ctex"]
+source_file="res://Assets/Inventario/madera.png"
+dest_files=["res://.godot/imported/madera.png-1a75a8c08d20e4d82027691cc7726bda.ctex"]
 
 [params]
 

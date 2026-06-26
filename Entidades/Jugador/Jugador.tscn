@@ -2,15 +2,19 @@
 
 [ext_resource type="Script" uid="uid://cxggx7fu5gior" path="res://Entidades/Jugador/Jugador.gd" id="1_5k27j"]
 [ext_resource type="Script" uid="uid://ctb6hc0tn7yig" path="res://Commons/Componentes/Core/EnergiaComponente.gd" id="1_b2vdw"]
+[ext_resource type="Texture2D" uid="uid://uwbbh380hhme" path="res://Assets/jugador/Spring 2 v1.png" id="2_1ibpt"]
 [ext_resource type="Script" uid="uid://ddrnbgxm8522b" path="res://Commons/Componentes/Movimiento/InputComponente.gd" id="2_30dg6"]
-[ext_resource type="Texture2D" uid="uid://e7kokadv3aib" path="res://Assets/icon.svg" id="2_y6klq"]
 [ext_resource type="Script" uid="uid://bnt3655fcthcm" path="res://Commons/Componentes/Movimiento/Vectores/MovimientoComponente.gd" id="3_30dg6"]
 [ext_resource type="Script" uid="uid://c313hyi3lxct" path="res://Commons/Componentes/Core/Agotamiento.gd" id="4_qtgc7"]
 [ext_resource type="Script" uid="uid://dcfdk4qx3vf0b" path="res://Commons/Componentes/Utilidades/Loot/loot_collector.gd" id="9_6pwru"]
 [ext_resource type="Script" uid="uid://dqiir7o6l4sjy" path="res://Commons/Componentes/Radares/RadarComponente.gd" id="9_y6klq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b35yh"]
-radius = 33.01515
+radius = 11.18034
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6klq"]
+atlas = ExtResource("2_1ibpt")
+region = Rect2(0, 0, 23.126373, 28.894768)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_frfy0"]
 radius = 30.066593
@@ -19,7 +23,7 @@ radius = 30.066593
 radius = 7.071068
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yyjpx"]
-radius = 70.0
+radius = 44.102154
 
 [node name="Jugador" type="CharacterBody2D" unique_id=1030727379 groups=["Jugador"]]
 collision_mask = 0
@@ -32,8 +36,7 @@ shape = SubResource("CircleShape2D_b35yh")
 debug_color = Color(1.3536774e-07, 0.102459945, 0.126971, 0.41960785)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2087376258]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_y6klq")
+texture = SubResource("AtlasTexture_y6klq")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=664749476 groups=["Camara"]]
 unique_name_in_owner = true
@@ -64,9 +67,9 @@ sprite = NodePath("../../Sprite2D")
 
 [node name="LootAtractor" type="Area2D" parent="." unique_id=919355164 groups=["Radar_Loot"]]
 editor_description = "Viene siendo un area de reconocimiento"
-position = Vector2(-1, 6)
+visible = false
 collision_layer = 0
-collision_mask = 8
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LootAtractor" unique_id=635740052]
 shape = SubResource("CircleShape2D_frfy0")
@@ -77,11 +80,10 @@ editor_description = "Se encarga de recolectar los objetos  en el mundo.
 "
 visible = false
 collision_layer = 0
-collision_mask = 8
+collision_mask = 2
 script = ExtResource("9_6pwru")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Loot Collector" unique_id=643640936]
-position = Vector2(-1, 9)
 shape = SubResource("CircleShape2D_1ibpt")
 debug_color = Color(0.2517849, 0.6236958, 0.3297198, 0.41960785)
 
@@ -89,6 +91,7 @@ debug_color = Color(0.2517849, 0.6236958, 0.3297198, 0.41960785)
 editor_description = "Reconoce las entidades a su al rededor, administrandolas en un Array.
 
 Permite elegir si quieres un enemigo aleatorio, cercano o lejano"
+visible = false
 collision_layer = 0
 collision_mask = 12
 script = ExtResource("9_y6klq")

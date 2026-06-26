@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gqtxmyvoyday"
-path="res://.godot/imported/q.png-bab9ec3dd0d01dfaf03fd73e92fdbad0.ctex"
+uid="uid://uwbbh380hhme"
+path="res://.godot/imported/Spring 2 v1.png-f8a74662dfee74ee8f5d045f8a862918.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Inventario/q.png"
-dest_files=["res://.godot/imported/q.png-bab9ec3dd0d01dfaf03fd73e92fdbad0.ctex"]
+source_file="res://Assets/jugador/Spring 2 v1.png"
+dest_files=["res://.godot/imported/Spring 2 v1.png-f8a74662dfee74ee8f5d045f8a862918.ctex"]
 
 [params]
 

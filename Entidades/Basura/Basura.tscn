@@ -1,19 +1,21 @@
-[gd_scene format=3 uid="uid://cd6lygsc501ww"]
+[gd_scene format=3 uid="uid://boa7rlwdurt22"]
 
-[ext_resource type="Script" uid="uid://d1alhwontnr3g" path="res://Entidades/Loot/Loot_Item.gd" id="1_yo54l"]
+[ext_resource type="Script" uid="uid://b8xyvx6fjldhd" path="res://Entidades/Basura/Basura_item.gd" id="1_6qpr3"]
+[ext_resource type="Resource" uid="uid://5k76mbciamak" path="res://Entidades/Loot/loots/re_madera.tres" id="2_6qpr3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_si7tl"]
 radius = 15.0
 
-[node name="Loot" type="Area2D" unique_id=1738087845 groups=["Loot"]]
-collision_layer = 2
-collision_mask = 0
-script = ExtResource("1_yo54l")
+[node name="Loot" type="RigidBody2D" unique_id=1091806052 groups=["Loot"]]
+collision_mask = 8
+gravity_scale = 0.0
+script = ExtResource("1_6qpr3")
+data = ExtResource("2_6qpr3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1608053603]
 unique_name_in_owner = true
 shape = SubResource("CircleShape2D_si7tl")
-debug_color = Color(0.21118888, 0.6402497, 0, 0.41960785)
+debug_color = Color(0.98978466, 0, 0.27423584, 0.41960785)
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1161258588]
 unique_name_in_owner = true

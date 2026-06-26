@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2w68k8llr4oi"
-path="res://.godot/imported/piedra.png-07603b1def36b1866ae29a80304b7e12.ctex"
+uid="uid://gqtxmyvoyday"
+path="res://.godot/imported/heno.png-e4e8f9d9182c1050c8a5b7615231e4f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Inventario/piedra.png"
-dest_files=["res://.godot/imported/piedra.png-07603b1def36b1866ae29a80304b7e12.ctex"]
+source_file="res://Assets/Inventario/heno.png"
+dest_files=["res://.godot/imported/heno.png-e4e8f9d9182c1050c8a5b7615231e4f0.ctex"]
 
 [params]
 
