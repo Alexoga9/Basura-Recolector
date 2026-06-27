@@ -21,12 +21,20 @@ position = Vector2(596, 315)
 
 [node name="Node" type="Node" parent="." unique_id=665496197]
 
+[node name="Loot5" parent="Node" unique_id=1738087845 instance=ExtResource("3_tgroa")]
+position = Vector2(559, 352)
+data = ExtResource("4_2fd2i")
+
+[node name="Loot6" parent="Node" unique_id=919298538 instance=ExtResource("3_tgroa")]
+position = Vector2(630, 295)
+data = ExtResource("5_ofho3")
+
 [node name="Loot" parent="Node" unique_id=1883567907 instance=ExtResource("3_tgroa")]
-position = Vector2(517, 357)
+position = Vector2(535, 308)
 data = ExtResource("4_2fd2i")
 
 [node name="Loot3" parent="Node" unique_id=1841113591 instance=ExtResource("3_tgroa")]
-position = Vector2(552, 284)
+position = Vector2(584, 277)
 data = ExtResource("5_ofho3")
 
 [node name="Loot2" parent="Node" unique_id=1091806052 instance=ExtResource("6_2fd2i")]

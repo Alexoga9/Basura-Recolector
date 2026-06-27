@@ -7,7 +7,7 @@ enum TipoCuerpo {CHARACTER_BODY, AREA}
 @export_category("Movimiento")
 @export var velocidad_movimiento: float = 40.0
 @export var velocidad_rotacion: float = (TAU * 2)
-
+@onready var animated_sprite_2d: AnimatedSprite2D = %AnimatedSprite2D
 @export_category("Referencias")
 @export var body_character: CharacterBody2D
 @export var body: Node2D
@@ -30,11 +30,17 @@ func _validate_property(property: Dictionary):
 
 func movimiento(direccion: Vector2, delta: float):
 	# Actualizar sprite
-	if sprite:
+	if animated_sprite_2d:
 		if direccion.x > 0:
-			sprite.flip_h = true
+			animated_sprite_2d.flip_h = false
 		elif direccion.x < 0:
-			sprite.flip_h = false
+			animated_sprite_2d.flip_h = true
+
+	if animated_sprite_2d:
+		if direccion != Vector2.ZERO:
+			animated_sprite_2d.play("Walk")
+		else:
+			animated_sprite_2d.play("Idle")
 
 	# Guardar último movimiento válido
 	if direccion != Vector2.ZERO:
