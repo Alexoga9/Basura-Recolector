@@ -11,6 +11,7 @@ size = Vector2(72, 60)
 
 [node name="Trituradora" type="StaticBody2D" unique_id=578851082]
 collision_layer = 16
+collision_mask = 0
 script = ExtResource("1_we1hm")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1781763865]
@@ -23,10 +24,10 @@ shape = SubResource("RectangleShape2D_1wau7")
 debug_color = Color(0.26880014, 0.2435346, 0.23927382, 0.41960785)
 
 [node name="Trigger Basura" type="Area2D" parent="." unique_id=1733789509]
-collision_layer = 0
+collision_layer = 8
 collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger Basura" unique_id=588954144]
 shape = SubResource("RectangleShape2D_0bwxm")
 
-[connection signal="area_entered" from="Trigger Basura" to="." method="_on_trigger_basura_area_entered"]
+[connection signal="body_entered" from="Trigger Basura" to="." method="_on_trigger_basura_body_entered"]

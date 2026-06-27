@@ -20,6 +20,7 @@ func recibir_basura_fisica():
 	pass
 
 
-func _on_trigger_basura_area_entered(area):
-	if area.is_in_group("Jugador"):
+func _on_trigger_basura_body_entered(body):
+	print("Area")
+	if body.is_in_group("Jugador"):
 		print("jugador")

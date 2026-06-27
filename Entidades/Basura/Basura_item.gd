@@ -65,6 +65,6 @@ func iniciar_valores():
 	tipo_de_basura = int(data.tipo_de_basura)
 	#print(TipoLoot)
 	valor = data.valor
-	tags = data.tags
+#	tags = data.tags
 	sonido.stream = data.audio
 	sprite2d.texture = data.sprite
