@@ -68,3 +68,7 @@ func iniciar_valores():
 #	tags = data.tags
 	sonido.stream = data.audio
 	sprite2d.texture = data.sprite
+
+
+func _on_area_2d_mouse_entered():
+	print("puto")

@@ -10,9 +10,7 @@ script = ExtResource("2_ftg80")
 id = "0"
 nombre = "Piedra"
 valor = 15
-cantidad_maxima = 64
 tiene_requisito = true
-tags = "Material"
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"
 
 [node name="Inventario" type="Control" unique_id=615073819]

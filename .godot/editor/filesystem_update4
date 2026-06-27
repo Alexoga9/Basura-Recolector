@@ -1,7 +1,5 @@
-res://Entidades/Jugador/Jugador.tscn
-res://Entidades/Trituradora/trituradora.tscn
-res://Entidades/Trituradora/trituradora.gd
 res://Recursos/LootDefinicion.gd
-res://Entidades/Basura/Basura.tscn
-res://Entidades/Loot/Loot_Item.gd
+res://Commons/Componentes/Utilidades/Inventario/Inventario.tscn
+res://Entidades/Loot/loots/re_madera.tres
 res://Entidades/Basura/Basura_item.gd
+res://Entidades/Basura/Basura.tscn

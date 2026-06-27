@@ -7,8 +7,7 @@
 script = ExtResource("1_hemhm")
 id = "madera"
 nombre = "madera"
+sprite = ExtResource("2_re0x1")
 tipo_de_elemento = 1
 valor = 2
-cantidad_maxima = 12
-sprite = ExtResource("2_re0x1")
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"

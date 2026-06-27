@@ -14,6 +14,9 @@ metadata/_custom_type_script = "uid://dnu2r5yw53pto"
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e042u"]
 size = Vector2(14, 5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_peotj"]
+size = Vector2(16, 16)
+
 [node name="Basura" type="RigidBody2D" unique_id=1091806052 groups=["Basura"]]
 collision_layer = 4
 collision_mask = 13
@@ -37,4 +40,10 @@ unique_name_in_owner = true
 volume_db = -10.0
 pitch_scale = 1.5
 
+[node name="Area2D" type="Area2D" parent="." unique_id=392840213]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=527528103]
+shape = SubResource("RectangleShape2D_peotj")
+
 [connection signal="finished" from="sonido" to="." method="_on_sonido_finished"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
