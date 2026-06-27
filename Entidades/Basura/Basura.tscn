@@ -1,22 +1,32 @@
 [gd_scene format=3 uid="uid://boa7rlwdurt22"]
 
 [ext_resource type="Script" uid="uid://b8xyvx6fjldhd" path="res://Entidades/Basura/Basura_item.gd" id="1_6qpr3"]
-[ext_resource type="Resource" uid="uid://5k76mbciamak" path="res://Entidades/Loot/loots/re_madera.tres" id="2_6qpr3"]
+[ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="2_e042u"]
+[ext_resource type="Texture2D" uid="uid://dut0438runrb" path="res://Assets/Inventario/caja.png" id="3_peotj"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_si7tl"]
-radius = 5.0990195
+[sub_resource type="Resource" id="Resource_mq21f"]
+script = ExtResource("2_e042u")
+id = "Basura"
+nombre = "Basura"
+sprite = ExtResource("3_peotj")
+metadata/_custom_type_script = "uid://dnu2r5yw53pto"
 
-[node name="Basura" type="RigidBody2D" unique_id=1091806052 groups=["Loot"]]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e042u"]
+size = Vector2(14, 5)
+
+[node name="Basura" type="RigidBody2D" unique_id=1091806052 groups=["Basura"]]
 collision_layer = 4
 collision_mask = 13
 gravity_scale = 0.0
-linear_damp = 5.0
+lock_rotation = true
+linear_damp = 20.0
 script = ExtResource("1_6qpr3")
-data = ExtResource("2_6qpr3")
+data = SubResource("Resource_mq21f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1608053603]
 unique_name_in_owner = true
-shape = SubResource("CircleShape2D_si7tl")
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_e042u")
 debug_color = Color(0.98978466, 0, 0.27423584, 0.41960785)
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1161258588]

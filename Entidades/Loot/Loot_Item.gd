@@ -13,8 +13,8 @@ var velocidad: int = -1
 
 var id: String
 var nombre: String
-enum TipoLoot {BASICO, PESADO, PAQUETE}
-var tipo_de_loot: TipoLoot
+enum TipoBasura {BASICO, PESADO}
+var tipo_de_basura: TipoBasura
 var valor: int
 var tags: String
 
@@ -61,7 +61,7 @@ func iniciar_valores():
 	id = data.id
 	nombre = data.nombre
 
-	tipo_de_loot = int(data.tipo_de_loot)
+	tipo_de_basura = int(data.tipo_de_basura)
 	#print(TipoLoot)
 	valor = data.valor
 	tags = data.tags

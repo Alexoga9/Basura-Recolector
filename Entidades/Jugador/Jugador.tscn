@@ -10,7 +10,7 @@
 [ext_resource type="Script" uid="uid://dqiir7o6l4sjy" path="res://Commons/Componentes/Radares/RadarComponente.gd" id="9_y6klq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b35yh"]
-radius = 11.18034
+radius = 4.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y6klq"]
 atlas = ExtResource("2_1ibpt")
@@ -26,16 +26,17 @@ radius = 7.071068
 radius = 44.102154
 
 [node name="Jugador" type="CharacterBody2D" unique_id=1030727379 groups=["Jugador"]]
-collision_mask = 0
+collision_mask = 16
 motion_mode = 1
 script = ExtResource("1_5k27j")
 
 [node name="Cuerpo" type="CollisionShape2D" parent="." unique_id=925831003]
-position = Vector2(0, 1)
+position = Vector2(0, 9)
 shape = SubResource("CircleShape2D_b35yh")
 debug_color = Color(1.3536774e-07, 0.102459945, 0.126971, 0.41960785)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2087376258]
+z_index = 1
 texture = SubResource("AtlasTexture_y6klq")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=664749476 groups=["Camara"]]
@@ -98,9 +99,6 @@ metadata/_custom_type_script = "uid://dqiir7o6l4sjy"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RadarComponente" unique_id=1726165650]
 shape = SubResource("CircleShape2D_yyjpx")
-
-[node name="Cargar basura" type="Marker2D" parent="." unique_id=1495227192]
-position = Vector2(0, -11)
 
 [connection signal="area_entered" from="LootAtractor" to="LootAtractor" method="_on_area_entered"]
 [connection signal="area_entered" from="Loot Collector" to="Loot Collector" method="_on_area_entered"]
