@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://e856quj4lvvn" path="res://Entidades/Jugador/Jugador.tscn" id="2_fw4w5"]
 [ext_resource type="PackedScene" uid="uid://cd6lygsc501ww" path="res://Entidades/Loot/Loot.tscn" id="3_tgroa"]
 [ext_resource type="Resource" uid="uid://dmky67t6umj3u" path="res://Entidades/Loot/loots/rs_piedra.tres" id="4_2fd2i"]
-[ext_resource type="Resource" uid="uid://5k76mbciamak" path="res://Entidades/Loot/loots/re_madera.tres" id="5_ofho3"]
 [ext_resource type="PackedScene" uid="uid://boa7rlwdurt22" path="res://Entidades/Basura/Basura.tscn" id="6_2fd2i"]
 [ext_resource type="PackedScene" uid="uid://b8u0pprb4t2sj" path="res://Entidades/Trituradora/trituradora.tscn" id="8_u72it"]
 
@@ -28,7 +27,6 @@ data = ExtResource("4_2fd2i")
 
 [node name="Loot3" parent="Node" unique_id=1841113591 instance=ExtResource("3_tgroa")]
 position = Vector2(552, 284)
-data = ExtResource("5_ofho3")
 
 [node name="Loot2" parent="Node" unique_id=1091806052 instance=ExtResource("6_2fd2i")]
 position = Vector2(664, 326)

@@ -2,13 +2,17 @@
 
 [ext_resource type="Script" uid="uid://b8xyvx6fjldhd" path="res://Entidades/Basura/Basura_item.gd" id="1_6qpr3"]
 [ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="2_e042u"]
+[ext_resource type="AudioStream" uid="uid://dr7bho43atgf6" path="res://Assets/tornado audio.mp3" id="2_peotj"]
 [ext_resource type="Texture2D" uid="uid://dut0438runrb" path="res://Assets/Inventario/caja.png" id="3_peotj"]
 
 [sub_resource type="Resource" id="Resource_mq21f"]
 script = ExtResource("2_e042u")
 id = "Basura"
 nombre = "Basura"
+audio = ExtResource("2_peotj")
 sprite = ExtResource("3_peotj")
+cantidad_maxima = 10
+valor = 100
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e042u"]

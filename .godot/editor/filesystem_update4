@@ -1,5 +1,5 @@
-res://Recursos/LootDefinicion.gd
-res://Commons/Componentes/Utilidades/Inventario/Inventario.tscn
-res://Entidades/Loot/loots/re_madera.tres
-res://Entidades/Basura/Basura_item.gd
+res://Entidades/Jugador/RadarBasura.gd
 res://Entidades/Basura/Basura.tscn
+res://Commons/Componentes/Core/dinero/dinero.gd
+res://Entidades/Trituradora/trituradora.gd
+res://Escenarios/mundo.tscn

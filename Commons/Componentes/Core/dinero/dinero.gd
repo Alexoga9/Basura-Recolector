@@ -1,6 +1,7 @@
-@tool
-@icon("res://addons/iconos/dinero.svg")
-class_name Dinero extends Node
+#@tool
+#@icon("res://addons/iconos/dinero.svg")
+#class_name Dinero 
+extends Node
 
 signal valor_dinero_cambiado(nuevo_valor: float)
 
@@ -9,7 +10,9 @@ signal valor_dinero_cambiado(nuevo_valor: float)
 		valor_dinero_cambiado.emit(dinero)
 
 		if not Engine.is_editor_hint():
-			SignalBus.dinero_jugador_cambiada.emit(dinero)
+			valor_dinero_cambiado.emit(dinero)
+
+		valor_dinero_cambiado.emit(dinero)
 
 var _inicializado: bool = false
 
@@ -27,8 +30,10 @@ func _emitir_valores_iniciales():
 	# Emitir valores iniciales SOLO una vez
 	valor_dinero_cambiado.emit(dinero)
 
-	if not Engine.is_editor_hint():
-		SignalBus.dinero_jugador_cambiada.emit(dinero)
+	#if not Engine.is_editor_hint():
+		#SignalBus.dinero_jugador_cambiada.emit(dinero)
+
+	valor_dinero_cambiado.emit(dinero)
 
 
 func ganar(ganancia: float):

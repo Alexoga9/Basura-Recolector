@@ -23,4 +23,6 @@ func recibir_basura_fisica():
 func _on_trigger_basura_body_entered(body):
 	print("Area")
 	if body.is_in_group("Jugador"):
-		print("jugador")
+		Dinero.ganar(100)
+		Inventario.remove_item("Basura", Inventario.get_count("Basura"))
+		print("Dinero: " + str(Dinero.dinero))
