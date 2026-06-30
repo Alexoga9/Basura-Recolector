@@ -1,5 +1,3 @@
-res://Entidades/Jugador/RadarBasura.gd
-res://Entidades/Basura/Basura.tscn
-res://Commons/Componentes/Core/dinero/dinero.gd
-res://Entidades/Trituradora/trituradora.gd
-res://Escenarios/mundo.tscn
+res://Entidades/Jugador/Jugador.tscn
+res://Assets/TileMap/new_tile_set.tres
+res://Utilidades/Autoloads/inventario.gd
