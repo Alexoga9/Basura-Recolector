@@ -13,8 +13,8 @@ var velocidad: int = -1
 
 var id: String
 var nombre: String
-enum TipoLoot {BASICO, PESADO, PAQUETE}
-var tipo_de_loot: TipoLoot
+enum TipoBasura {BASICO, PESADO, PAQUETE}
+var tipo_de_basura: TipoBasura
 var valor: int
 var tags: String
 
@@ -44,6 +44,7 @@ func collect():
 	sonido.play()
 	collision_shape_2d.call_deferred("set", "disabled", true)
 	sprite2d.visible = false
+	Inventario.add_item(data)
 	return data
 
 
@@ -61,9 +62,13 @@ func iniciar_valores():
 	id = data.id
 	nombre = data.nombre
 
-	tipo_de_loot = int(data.tipo_de_loot)
+	tipo_de_basura = int(data.tipo_de_basura)
 	#print(TipoLoot)
 	valor = data.valor
-	tags = data.tags
+#	tags = data.tags
 	sonido.stream = data.audio
 	sprite2d.texture = data.sprite
+
+
+func _on_area_2d_mouse_entered():
+	print("puto")

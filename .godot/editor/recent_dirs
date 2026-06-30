@@ -1,7 +1,8 @@
-res://Assets/TileMap/
-res://Assets/jugador/
+res://Commons/Componentes/Core/dinero/
+res://Entidades/Trituradora/
+res://
+res://Entidades/Loot/loots/
+res://Commons/Componentes/Utilidades/Inventario/
 res://Utilidades/Autoloads/
-res://Entidades/Loot/Basura/
 res://UI/Theme/
 res://Entidades/
-res://

@@ -1,14 +1,16 @@
 [gd_scene format=3 uid="uid://cd6lygsc501ww"]
 
 [ext_resource type="Script" uid="uid://d1alhwontnr3g" path="res://Entidades/Loot/Loot_Item.gd" id="1_yo54l"]
+[ext_resource type="Resource" uid="uid://5k76mbciamak" path="res://Entidades/Loot/loots/re_madera.tres" id="2_4wyng"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_si7tl"]
-radius = 15.0
+radius = 3.0
 
 [node name="Loot" type="Area2D" unique_id=1738087845 groups=["Loot"]]
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_yo54l")
+data = ExtResource("2_4wyng")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1608053603]
 unique_name_in_owner = true

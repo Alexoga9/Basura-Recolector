@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://b8u0pprb4t2sj"]
+
+[ext_resource type="Texture2D" uid="uid://e7kokadv3aib" path="res://Assets/icon.svg" id="1_0bwxm"]
+[ext_resource type="Script" uid="uid://bavd3c4essg3w" path="res://Entidades/Trituradora/trituradora.gd" id="1_we1hm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1wau7"]
+size = Vector2(19, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0bwxm"]
+size = Vector2(72, 60)
+
+[node name="Trituradora" type="StaticBody2D" unique_id=578851082]
+collision_layer = 16
+collision_mask = 0
+script = ExtResource("1_we1hm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1781763865]
+scale = Vector2(0.15625, 0.15625)
+texture = ExtResource("1_0bwxm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=144946869]
+position = Vector2(0, 7)
+shape = SubResource("RectangleShape2D_1wau7")
+debug_color = Color(0.26880014, 0.2435346, 0.23927382, 0.41960785)
+
+[node name="Trigger Basura" type="Area2D" parent="." unique_id=1733789509]
+collision_layer = 8
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger Basura" unique_id=588954144]
+shape = SubResource("RectangleShape2D_0bwxm")
+
+[connection signal="body_entered" from="Trigger Basura" to="." method="_on_trigger_basura_body_entered"]

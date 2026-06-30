@@ -10,7 +10,10 @@
 		{
 			"uuid": "a8023536-47a3-4b86-9150-4fafd96ed043",
 			"title": "Todo",
-			"tasks": []
+			"tasks": [
+				"826eae76-0772-4561-a1b9-3657036c180b",
+				"5e8ba825-4e4d-448a-9533-1a793c6081de"
+			]
 		},
 		{
 			"uuid": "1ec6ee84-6f62-4e40-91a5-b10fbd2bde9c",
@@ -23,7 +26,22 @@
 			"tasks": []
 		}
 	],
-	"tasks": [],
+	"tasks": [
+		{
+			"uuid": "826eae76-0772-4561-a1b9-3657036c180b",
+			"title": "Arreglar codigo de dinero",
+			"description": "No se actualiza el dinero\n",
+			"category": "c247e7a7-19bd-4ff3-b436-039cb216ea7a",
+			"steps": []
+		},
+		{
+			"uuid": "5e8ba825-4e4d-448a-9533-1a793c6081de",
+			"title": "Acceder a valor desde el diccionario del inventario",
+			"description": "",
+			"category": "c247e7a7-19bd-4ff3-b436-039cb216ea7a",
+			"steps": []
+		}
+	],
 	"layout": {
 		"columns": [
 			[
