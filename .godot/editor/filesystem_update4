@@ -1,6 +1,0 @@
-res://Escenarios/mundo.tscn
-res://Commons/Componentes/Movimiento/Vectores/MovimientoComponente.gd
-res://Assets/TileMap/Map.tscn
-res://Commons/Componentes/Utilidades/Inventario/Inventario.tscn
-res://Commons/Componentes/Utilidades/Inventario/InventarioSlot.gd
-res://Utilidades/Autoloads/inventario.gd
