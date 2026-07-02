@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bmx0we2et2krh"]
+
+[ext_resource type="Texture2D" uid="uid://e7kokadv3aib" path="res://Assets/icon.svg" id="1_a7ipy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_43avb"]
+
+[node name="Caja" type="RigidBody2D" unique_id=1786026753]
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=735567678]
+shape = SubResource("RectangleShape2D_43avb")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=894573777]
+self_modulate = Color(0.5548791, 0.22916862, 0, 1)
+position = Vector2(-0.20000052, -0.20000076)
+scale = Vector2(0.159375, 0.159375)
+texture = ExtResource("1_a7ipy")
