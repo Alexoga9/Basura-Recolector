@@ -1,3 +1,7 @@
+Button
+VBoxContainer
+VSlider
+MarginContainer
 CollisionShape2D
 Area2D
 Sprite2D
@@ -9,6 +13,3 @@ CanvasLayer
 Label
 Panel
 HBoxContainer
-LootComponente
-Button
-VBoxContainer

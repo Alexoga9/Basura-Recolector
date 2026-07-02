@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://dkvpakp2qt8ii"]
+
+[ext_resource type="Script" uid="uid://culo1b5mj4hha" path="res://UI/Tienda/tienda_ui.gd" id="1_w7g51"]
+
+[node name="Tienda_UI" type="Control" unique_id=1496166086]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w7g51")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=511161932]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=928642992]
+layout_mode = 2
+
+[node name="Resistencia de Energía" type="Button" parent="MarginContainer/VBoxContainer" unique_id=2129672191]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Resistencia de Energía"
+
+[node name="Velocidad de recolección" type="Button" parent="MarginContainer/VBoxContainer" unique_id=2036280940]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Velocidad de recolección"
+
+[node name="Poder de lanzamiento" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1658290193]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Poder de lanzamiento"
+
+[node name="Poder de golpe" type="Button" parent="MarginContainer/VBoxContainer" unique_id=78415026]
+layout_mode = 2
+size_flags_vertical = 3
+text = "poder de golpe"
+
+[node name="Recuperación de Energía" type="Button" parent="MarginContainer/VBoxContainer" unique_id=616082626]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Recuperación de Energía"
+
+[node name="Rango de recogida" type="Button" parent="MarginContainer/VBoxContainer" unique_id=2094145845]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Rango de recogida"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Resistencia de Energía" to="." method="_on_resistencia_de_energía_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Velocidad de recolección" to="." method="_on_velocidad_de_recolección_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Poder de lanzamiento" to="." method="_on_poder_de_lanzamiento_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Poder de golpe" to="." method="_on_poder_de_golpe_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Recuperación de Energía" to="." method="_on_recuperación_de_energía_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Rango de recogida" to="." method="_on_rango_de_recogida_pressed"]
