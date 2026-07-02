@@ -1,0 +1,9 @@
+res://Commons/Componentes/Movimiento/Vectores/MovimientoComponente.gd
+res://Commons/Componentes/Utilidades/Inventario/InventarioSlot.gd
+res://Entidades/Loot/loots/re_madera.tres
+res://Entidades/Loot/loots/rs_piedra.tres
+res://Utilidades/Autoloads/inventario.gd
+res://Escenarios/mundo.tscn
+res://Entidades/Jugador/Jugador.tscn
+res://UI/Tienda/tienda_ui.tscn
+res://UI/Tienda/tienda_ui.gd

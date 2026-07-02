@@ -10,6 +10,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_w7g51")
+precio_resistencia = 13
+precio_velocidadRecogida = 69
+precio_lanzamiento = 42
+precio_poderGolpe = 999
+precio_recuperacion = 1
+precio_rango = 25
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=511161932]
 layout_mode = 1
@@ -26,39 +32,99 @@ theme_override_constants/margin_bottom = 25
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=928642992]
 layout_mode = 2
 
-[node name="Resistencia de Energía" type="Button" parent="MarginContainer/VBoxContainer" unique_id=2129672191]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=378374443]
 layout_mode = 2
+
+[node name="Resistencia de Energía" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=2129672191]
+layout_mode = 2
+size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Resistencia de Energía"
 
-[node name="Velocidad de recolección" type="Button" parent="MarginContainer/VBoxContainer" unique_id=2036280940]
+[node name="Label Resistencia de Energía" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1862479907]
+unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 4
+text = "100"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=2065939879]
+layout_mode = 2
+
+[node name="Velocidad de recolección" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=2036280940]
+layout_mode = 2
+size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Velocidad de recolección"
 
-[node name="Poder de lanzamiento" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1658290193]
+[node name="Label Velocidad de recolección" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1206821139]
+unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 4
+text = "100"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1917337587]
+layout_mode = 2
+
+[node name="Poder de lanzamiento" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1658290193]
+layout_mode = 2
+size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Poder de lanzamiento"
 
-[node name="Poder de golpe" type="Button" parent="MarginContainer/VBoxContainer" unique_id=78415026]
+[node name="Label Poder de lanzamiento" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=486576024]
+unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 4
+text = "100"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=713976343]
+layout_mode = 2
+
+[node name="Poder de golpe" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=78415026]
+layout_mode = 2
+size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "poder de golpe"
 
-[node name="Recuperación de Energía" type="Button" parent="MarginContainer/VBoxContainer" unique_id=616082626]
+[node name="Label Poder de golpe" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1091890163]
+unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 4
+text = "100"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1335501923]
+layout_mode = 2
+
+[node name="Recuperación de Energía" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=616082626]
+layout_mode = 2
+size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Recuperación de Energía"
 
-[node name="Rango de recogida" type="Button" parent="MarginContainer/VBoxContainer" unique_id=2094145845]
+[node name="Label Recuperación de Energía" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1267596939]
+unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 4
+text = "100"
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=2111069444]
+layout_mode = 2
+
+[node name="Rango de recogida" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer6" unique_id=2094145845]
+layout_mode = 2
+size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Rango de recogida"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Resistencia de Energía" to="." method="_on_resistencia_de_energía_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Velocidad de recolección" to="." method="_on_velocidad_de_recolección_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Poder de lanzamiento" to="." method="_on_poder_de_lanzamiento_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Poder de golpe" to="." method="_on_poder_de_golpe_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Recuperación de Energía" to="." method="_on_recuperación_de_energía_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Rango de recogida" to="." method="_on_rango_de_recogida_pressed"]
+[node name="Label Rango de recogida" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer6" unique_id=1019759324]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "100"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/Resistencia de Energía" to="." method="_on_resistencia_de_energía_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/Velocidad de recolección" to="." method="_on_velocidad_de_recolección_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer3/Poder de lanzamiento" to="." method="_on_poder_de_lanzamiento_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer4/Poder de golpe" to="." method="_on_poder_de_golpe_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer5/Recuperación de Energía" to="." method="_on_recuperación_de_energía_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer6/Rango de recogida" to="." method="_on_rango_de_recogida_pressed"]

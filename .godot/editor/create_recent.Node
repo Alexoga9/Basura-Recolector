@@ -1,3 +1,5 @@
+Label
+HBoxContainer
 Button
 VBoxContainer
 VSlider
@@ -10,6 +12,3 @@ Marker2D
 RigidBody2D
 TextureRect
 CanvasLayer
-Label
-Panel
-HBoxContainer
