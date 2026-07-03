@@ -24,23 +24,61 @@ position = Vector2(596, 315)
 [node name="Node" type="Node" parent="." unique_id=665496197]
 
 [node name="Loot5" parent="Node" unique_id=1738087845 instance=ExtResource("3_tgroa")]
-position = Vector2(559, 352)
+position = Vector2(535, 364)
 data = ExtResource("4_2fd2i")
 
 [node name="Loot6" parent="Node" unique_id=919298538 instance=ExtResource("3_tgroa")]
-position = Vector2(630, 295)
+position = Vector2(535, 336)
 
 [node name="Loot" parent="Node" unique_id=1883567907 instance=ExtResource("3_tgroa")]
 position = Vector2(535, 308)
 data = ExtResource("4_2fd2i")
 
 [node name="Loot3" parent="Node" unique_id=1841113591 instance=ExtResource("3_tgroa")]
-position = Vector2(584, 277)
+position = Vector2(535, 281)
 
-[node name="Loot2" parent="Node" unique_id=1091806052 instance=ExtResource("6_2fd2i")]
+[node name="Basuras" type="Node" parent="Node" unique_id=1174743801]
+
+[node name="Loot2" parent="Node/Basuras" unique_id=1091806052 instance=ExtResource("6_2fd2i")]
 position = Vector2(664, 326)
 
-[node name="Loot4" parent="Node" unique_id=165001272 instance=ExtResource("6_2fd2i")]
+[node name="Loot7" parent="Node/Basuras" unique_id=1276343682 instance=ExtResource("6_2fd2i")]
+position = Vector2(654, 351)
+
+[node name="Loot8" parent="Node/Basuras" unique_id=1079077092 instance=ExtResource("6_2fd2i")]
+position = Vector2(639, 325)
+
+[node name="Loot9" parent="Node/Basuras" unique_id=1716104005 instance=ExtResource("6_2fd2i")]
+position = Vector2(651, 307)
+
+[node name="Loot10" parent="Node/Basuras" unique_id=2070967356 instance=ExtResource("6_2fd2i")]
+position = Vector2(639, 364)
+
+[node name="Loot11" parent="Node/Basuras" unique_id=456136626 instance=ExtResource("6_2fd2i")]
+position = Vector2(672, 369)
+
+[node name="Loot12" parent="Node/Basuras" unique_id=329021941 instance=ExtResource("6_2fd2i")]
+position = Vector2(686, 356)
+
+[node name="Loot13" parent="Node/Basuras" unique_id=1395442083 instance=ExtResource("6_2fd2i")]
+position = Vector2(692, 332)
+
+[node name="Loot14" parent="Node/Basuras" unique_id=698021777 instance=ExtResource("6_2fd2i")]
+position = Vector2(699, 314)
+
+[node name="Loot15" parent="Node/Basuras" unique_id=1307620334 instance=ExtResource("6_2fd2i")]
+position = Vector2(681, 302)
+
+[node name="Loot16" parent="Node/Basuras" unique_id=521582679 instance=ExtResource("6_2fd2i")]
+position = Vector2(716, 302)
+
+[node name="Loot17" parent="Node/Basuras" unique_id=1392906129 instance=ExtResource("6_2fd2i")]
+position = Vector2(715, 325)
+
+[node name="Loot18" parent="Node/Basuras" unique_id=1328225134 instance=ExtResource("6_2fd2i")]
+position = Vector2(715, 325)
+
+[node name="Loot4" parent="Node/Basuras" unique_id=165001272 instance=ExtResource("6_2fd2i")]
 position = Vector2(630, 347)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2010886703]

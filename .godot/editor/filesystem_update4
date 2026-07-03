@@ -1,9 +1,7 @@
-res://Commons/Componentes/Movimiento/Vectores/MovimientoComponente.gd
+res://Commons/Componentes/Utilidades/Inventario/Inventario.tscn
+res://Assets/TileMap/new_tile_set.tres
 res://Commons/Componentes/Utilidades/Inventario/InventarioSlot.gd
-res://Entidades/Loot/loots/re_madera.tres
-res://Entidades/Loot/loots/rs_piedra.tres
+res://Commons/Componentes/Core/dinero/dinero.gd
 res://Utilidades/Autoloads/inventario.gd
 res://Escenarios/mundo.tscn
-res://Entidades/Jugador/Jugador.tscn
-res://UI/Tienda/tienda_ui.tscn
-res://UI/Tienda/tienda_ui.gd
+res://Entidades/Trituradora/trituradora.gd

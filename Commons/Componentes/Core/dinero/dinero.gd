@@ -7,6 +7,7 @@ signal valor_dinero_cambiado(nuevo_valor: float)
 
 @export var dinero: float = 10.0:
 	set(valor):
+		dinero = valor
 		valor_dinero_cambiado.emit(dinero)
 
 		if not Engine.is_editor_hint():

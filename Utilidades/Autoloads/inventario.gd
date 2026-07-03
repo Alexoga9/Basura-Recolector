@@ -26,6 +26,7 @@ func remove_item(item, amount: int = 1) -> bool:
 		print("[Inventory] No tienes suficientes ítems para remover: ", item_id)
 		return false
 
+# Condicionar que no se pueda restar si es 0 o llega a 0
 	_counts[item_id] -= amount
 
 	if item is LootDefinicion:

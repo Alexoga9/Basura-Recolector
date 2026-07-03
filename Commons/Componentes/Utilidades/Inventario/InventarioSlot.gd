@@ -4,7 +4,7 @@ extends Panel
 @export var item_data: LootDefinicion # Arrastra el .tres aquí en el inspector
 
 @onready var count_label = %Label
-@onready var icon = %icon
+@onready var icon = %Icono
 @onready var label_2: Label = %Label2
 
 
