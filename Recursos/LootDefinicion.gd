@@ -10,7 +10,7 @@ class_name LootDefinicion extends Resource
 @export var cantidad_maxima: int
 
 @export_group("Tipo de objeto")
-enum TipoElemento {BASURA, MATERIAL, COFRE}
+enum TipoElemento {BASURA, MATERIAL, COFRE, OBSTACULO}
 @export var tipo_de_elemento: TipoElemento
 enum TipoBasura {BASICO, PESADO}
 

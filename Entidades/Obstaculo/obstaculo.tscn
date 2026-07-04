@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b3umcmj5fb6un"]
+
+[ext_resource type="Texture2D" uid="uid://bml0qixvj7x5l" path="res://Assets/Inventario/hierro.png" id="1_ltxf4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1uaaj"]
+
+[node name="Obstaculo" type="StaticBody2D" unique_id=785359298]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1636948673]
+scale = Vector2(2.005, 2.005)
+texture = ExtResource("1_ltxf4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=723372471]
+shape = SubResource("RectangleShape2D_1uaaj")
