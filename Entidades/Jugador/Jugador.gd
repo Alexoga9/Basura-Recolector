@@ -10,6 +10,7 @@ class_name Jugador extends CharacterBody2D
 
 
 func _ready():
+	Global.set_jugador(self)
 	SignalBus.jugador_listo.emit()
 
 

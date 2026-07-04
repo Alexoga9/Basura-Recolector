@@ -23,3 +23,7 @@ signal recoger_basura_automatica(bool)
 
 # Basura
 signal basura_recogida
+
+# Tienda 
+signal mostrar_tienda
+signal ocultar_tienda

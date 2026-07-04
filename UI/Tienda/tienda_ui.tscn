@@ -1,53 +1,59 @@
 [gd_scene format=3 uid="uid://dkvpakp2qt8ii"]
 
+[ext_resource type="Script" uid="uid://culo1b5mj4hha" path="res://UI/Tienda/tienda_ui.gd" id="1_6namq"]
 [ext_resource type="PackedScene" uid="uid://birp1rvjh205r" path="res://UI/Tienda/panel_tienda.tscn" id="1_d2rrg"]
+[ext_resource type="Script" uid="uid://b7q2wajcrdolk" path="res://UI/Tienda/mejoras de habilidades/mejora_resistencia.gd" id="3_7a1nm"]
 
 [node name="TiendaUi" type="Control" unique_id=1611773581]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 368.0
-offset_bottom = 216.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1981709031]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=751276087]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_6namq")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=1078019514]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=146613591]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer" unique_id=751276087]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer" unique_id=1078019514]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Panel Tienda" parent="ScrollContainer/VBoxContainer" unique_id=1967462824 instance=ExtResource("1_d2rrg")]
+[node name="Panel Tienda" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1967462824 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
+layout_mode = 2
+logica_mejora = NodePath("Node")
+
+[node name="Node" type="Node" parent="MarginContainer/ScrollContainer/VBoxContainer/Panel Tienda" unique_id=1497121177]
+script = ExtResource("3_7a1nm")
+
+[node name="Panel Tienda2" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1143511343 instance=ExtResource("1_d2rrg")]
 layout_mode = 2
 
-[node name="Panel Tienda2" parent="ScrollContainer/VBoxContainer" unique_id=1143511343 instance=ExtResource("1_d2rrg")]
+[node name="Panel Tienda3" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1737779067 instance=ExtResource("1_d2rrg")]
 layout_mode = 2
 
-[node name="Panel Tienda3" parent="ScrollContainer/VBoxContainer" unique_id=1737779067 instance=ExtResource("1_d2rrg")]
+[node name="Panel Tienda4" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1425991459 instance=ExtResource("1_d2rrg")]
 layout_mode = 2
 
-[node name="Panel Tienda4" parent="ScrollContainer/VBoxContainer" unique_id=1425991459 instance=ExtResource("1_d2rrg")]
+[node name="Panel Tienda5" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=265702065 instance=ExtResource("1_d2rrg")]
 layout_mode = 2
 
-[node name="Panel Tienda5" parent="ScrollContainer/VBoxContainer" unique_id=265702065 instance=ExtResource("1_d2rrg")]
-layout_mode = 2
-
-[node name="Panel Tienda6" parent="ScrollContainer/VBoxContainer" unique_id=1081041739 instance=ExtResource("1_d2rrg")]
+[node name="Panel Tienda6" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1081041739 instance=ExtResource("1_d2rrg")]
 layout_mode = 2

@@ -47,6 +47,7 @@ func _habilitador_de_componentes():
 
 
 func _comprar_mejora():
+	logica_mejora.aplicar_mejora()
 	Dinero.dinero -= precio #Cambiar por el base
 	nivel += 1
 	_actualizar_barra_de_progreso()

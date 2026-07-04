@@ -4,9 +4,13 @@
 [ext_resource type="Script" uid="uid://chu2pujc70x6e" path="res://UI/Tienda/panel_tienda.gd" id="1_6k6d4"]
 [ext_resource type="Resource" uid="uid://dklrgm0gwnvn1" path="res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres" id="2_pgqec"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pgqec"]
+bg_color = Color(0.42156535, 0.61752206, 0.82153744, 1)
+
 [sub_resource type="Theme" id="Theme_6k6d4"]
 Button/font_sizes/font_size = 8
 Label/font_sizes/font_size = 8
+Panel/styles/panel = SubResource("StyleBoxFlat_pgqec")
 
 [node name="Panel Tienda" type="Control" unique_id=1195401960]
 custom_minimum_size = Vector2(0, 80)
