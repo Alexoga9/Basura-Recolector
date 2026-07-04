@@ -1,166 +1,53 @@
 [gd_scene format=3 uid="uid://dkvpakp2qt8ii"]
 
-[ext_resource type="Script" uid="uid://culo1b5mj4hha" path="res://UI/Tienda/tienda_ui.gd" id="1_w7g51"]
+[ext_resource type="PackedScene" uid="uid://birp1rvjh205r" path="res://UI/Tienda/panel_tienda.tscn" id="1_d2rrg"]
 
-[node name="Tienda_UI" type="Control" unique_id=1496166086]
+[node name="TiendaUi" type="Control" unique_id=1611773581]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 0
+offset_right = 368.0
+offset_bottom = 216.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_w7g51")
-precio_resistencia = 13
-precio_velocidadRecogida = 69
-precio_lanzamiento = 42
-precio_poderGolpe = 999
-precio_recuperacion = 1
-precio_rango = 25
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=511161932]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1981709031]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 25
-theme_override_constants/margin_right = 50
-theme_override_constants/margin_bottom = 25
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=928642992]
-layout_mode = 2
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=751276087]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=378374443]
-layout_mode = 2
-
-[node name="Resistencia de Energía" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=2129672191]
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=1078019514]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Resistencia de Energía"
 
-[node name="Precio Resistencia de Energía" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1862479907]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 4
-text = "100"
-
-[node name="Nivel Resistencia de Energía2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=117695641]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 4
-text = "100"
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=2065939879]
+[node name="Panel Tienda" parent="ScrollContainer/VBoxContainer" unique_id=1967462824 instance=ExtResource("1_d2rrg")]
 layout_mode = 2
 
-[node name="Velocidad de recolección" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=2036280940]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Velocidad de recolección"
-
-[node name="Precio Velocidad de recolección" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1206821139]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 4
-text = "100"
-
-[node name="Nivel Velocidad de recolección2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1366044088]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 4
-text = "100"
-
-[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1917337587]
+[node name="Panel Tienda2" parent="ScrollContainer/VBoxContainer" unique_id=1143511343 instance=ExtResource("1_d2rrg")]
 layout_mode = 2
 
-[node name="Poder de lanzamiento" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1658290193]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Poder de lanzamiento"
-
-[node name="Precio Poder de lanzamiento" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=486576024]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 4
-text = "100"
-
-[node name="Nivel Poder de lanzamiento2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=440595614]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 4
-text = "100"
-
-[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=713976343]
+[node name="Panel Tienda3" parent="ScrollContainer/VBoxContainer" unique_id=1737779067 instance=ExtResource("1_d2rrg")]
 layout_mode = 2
 
-[node name="Poder de golpe" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=78415026]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "poder de golpe"
-
-[node name="Precio Poder de golpe" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1091890163]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 4
-text = "100"
-
-[node name="Nivel Poder de golpe2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=235597623]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 4
-text = "100"
-
-[node name="HBoxContainer5" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1335501923]
+[node name="Panel Tienda4" parent="ScrollContainer/VBoxContainer" unique_id=1425991459 instance=ExtResource("1_d2rrg")]
 layout_mode = 2
 
-[node name="Recuperación de Energía" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=616082626]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Recuperación de Energía"
-
-[node name="Precio Recuperación de Energía" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1267596939]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 4
-text = "100"
-
-[node name="Nivel Recuperación de Energía2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1639446959]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 4
-text = "100"
-
-[node name="HBoxContainer6" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=2111069444]
+[node name="Panel Tienda5" parent="ScrollContainer/VBoxContainer" unique_id=265702065 instance=ExtResource("1_d2rrg")]
 layout_mode = 2
 
-[node name="Rango de recogida" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer6" unique_id=2094145845]
+[node name="Panel Tienda6" parent="ScrollContainer/VBoxContainer" unique_id=1081041739 instance=ExtResource("1_d2rrg")]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Rango de recogida"
-
-[node name="Precio Rango de recogida" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer6" unique_id=1019759324]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 4
-text = "100"
-
-[node name="Nivel Rango de recogida2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer6" unique_id=502449213]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 4
-text = "100"
-
-[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/Resistencia de Energía" to="." method="_on_resistencia_de_energía_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/Velocidad de recolección" to="." method="_on_velocidad_de_recolección_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer3/Poder de lanzamiento" to="." method="_on_poder_de_lanzamiento_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer4/Poder de golpe" to="." method="_on_poder_de_golpe_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer5/Recuperación de Energía" to="." method="_on_recuperación_de_energía_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer6/Rango de recogida" to="." method="_on_rango_de_recogida_pressed"]

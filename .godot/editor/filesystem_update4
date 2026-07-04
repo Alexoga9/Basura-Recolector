@@ -1,6 +1,1 @@
-res://UI/Tienda/tienda_ui.tscn
-res://UI/Tienda/tienda_ui.gd
 res://UI/Tienda/panel_tienda.tscn
-res://UI/Tienda/panel_tienda.gd
-res://Recursos/DatosHabilidades.gd
-res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
