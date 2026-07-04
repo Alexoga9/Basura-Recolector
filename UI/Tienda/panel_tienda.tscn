@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://birp1rvjh205r"]
+
+[ext_resource type="Texture2D" uid="uid://e7kokadv3aib" path="res://Assets/icon.svg" id="1_4wk4c"]
+[ext_resource type="Script" uid="uid://chu2pujc70x6e" path="res://UI/Tienda/panel_tienda.gd" id="1_6k6d4"]
+[ext_resource type="Resource" uid="uid://dklrgm0gwnvn1" path="res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres" id="2_pgqec"]
+
+[sub_resource type="Theme" id="Theme_6k6d4"]
+
+[node name="Panel Tienda" type="Panel" unique_id=1967462824]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_6k6d4")
+script = ExtResource("1_6k6d4")
+mejora = ExtResource("2_pgqec")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=658394005]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=581737212]
+layout_mode = 2
+
+[node name="imagen" type="TextureRect" parent="MarginContainer/HBoxContainer" unique_id=1419358289]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("1_4wk4c")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="Control" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1890556930]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.58
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Control" unique_id=715673161]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="nombre" type="Label" parent="MarginContainer/HBoxContainer/Control/VBoxContainer" unique_id=124324113]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Nombre"
+
+[node name="linea" type="ColorRect" parent="MarginContainer/HBoxContainer/Control/VBoxContainer" unique_id=209486722]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+
+[node name="descripcion" type="Label" parent="MarginContainer/HBoxContainer/Control/VBoxContainer" unique_id=1624348241]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Descricion
+De texto
+Aqui"
+
+[node name="nivel" type="Label" parent="MarginContainer/HBoxContainer/Control/VBoxContainer" unique_id=1984587817]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Nivel 1"
+horizontal_alignment = 2
+
+[node name="barra" type="ProgressBar" parent="MarginContainer/HBoxContainer/Control/VBoxContainer" unique_id=1135561093]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+step = 10.0
+value = 50.0
+show_percentage = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=2022160989]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="precio" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=95191658]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Nombre"
+
+[node name="boton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=257881978]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Button"

@@ -41,7 +41,13 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Resistencia de Energía"
 
-[node name="Label Resistencia de Energía" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1862479907]
+[node name="Precio Resistencia de Energía" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1862479907]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "100"
+
+[node name="Nivel Resistencia de Energía2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=117695641]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
@@ -56,7 +62,13 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Velocidad de recolección"
 
-[node name="Label Velocidad de recolección" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1206821139]
+[node name="Precio Velocidad de recolección" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1206821139]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "100"
+
+[node name="Nivel Velocidad de recolección2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1366044088]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
@@ -71,7 +83,13 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Poder de lanzamiento"
 
-[node name="Label Poder de lanzamiento" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=486576024]
+[node name="Precio Poder de lanzamiento" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=486576024]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "100"
+
+[node name="Nivel Poder de lanzamiento2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=440595614]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
@@ -86,7 +104,13 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "poder de golpe"
 
-[node name="Label Poder de golpe" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1091890163]
+[node name="Precio Poder de golpe" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1091890163]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "100"
+
+[node name="Nivel Poder de golpe2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=235597623]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
@@ -101,7 +125,13 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Recuperación de Energía"
 
-[node name="Label Recuperación de Energía" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1267596939]
+[node name="Precio Recuperación de Energía" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1267596939]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "100"
+
+[node name="Nivel Recuperación de Energía2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1639446959]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
@@ -116,7 +146,13 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Rango de recogida"
 
-[node name="Label Rango de recogida" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer6" unique_id=1019759324]
+[node name="Precio Rango de recogida" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer6" unique_id=1019759324]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "100"
+
+[node name="Nivel Rango de recogida2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer6" unique_id=502449213]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4

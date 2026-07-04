@@ -7,12 +7,23 @@ extends Control
 @export var precio_recuperacion: int
 @export var precio_rango: int
 
-@onready var label_resistencia_de_energía = %"Label Resistencia de Energía"
-@onready var label_velocidad_de_recolección = %"Label Velocidad de recolección"
-@onready var label_poder_de_lanzamiento = %"Label Poder de lanzamiento"
-@onready var label_poder_de_golpe = %"Label Poder de golpe"
-@onready var label_recuperación_de_energía = %"Label Recuperación de Energía"
-@onready var label_rango_de_recogida = %"Label Rango de recogida"
+@onready var precio_resistencia_de_energía = %"Precio Resistencia de Energía"
+@onready var nivel_resistencia_de_energía_2 = %"Nivel Resistencia de Energía2"
+
+@onready var precio_velocidad_de_recolección = %"Precio Velocidad de recolección"
+@onready var nivel_velocidad_de_recolección_2 = %"Nivel Velocidad de recolección2"
+
+@onready var precio_poder_de_lanzamiento = %"Precio Poder de lanzamiento"
+@onready var nivel_poder_de_lanzamiento_2 = %"Nivel Poder de lanzamiento2"
+
+@onready var precio_poder_de_golpe = %"Precio Poder de golpe"
+@onready var nivel_poder_de_golpe_2 = %"Nivel Poder de golpe2"
+
+@onready var precio_recuperación_de_energía = %"Precio Recuperación de Energía"
+@onready var nivel_recuperación_de_energía_2 = %"Nivel Recuperación de Energía2"
+
+@onready var precio_rango_de_recogida = %"Precio Rango de recogida"
+@onready var nivel_rango_de_recogida_2 = %"Nivel Rango de recogida2"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -21,21 +32,20 @@ func _ready():
 
 
 func settear_precios():
-	label_resistencia_de_energía.text = str(precio_resistencia)
-	label_velocidad_de_recolección.text = str(precio_velocidadRecogida)
-	label_poder_de_lanzamiento.text = str(precio_lanzamiento)
-	label_poder_de_golpe.text = str(precio_poderGolpe)
-	label_recuperación_de_energía.text = str(precio_recuperacion)
-	label_rango_de_recogida.text = str(precio_rango)
+	precio_resistencia_de_energía.text = str(precio_resistencia)
+	precio_velocidad_de_recolección.text = str(precio_velocidadRecogida)
+	precio_poder_de_lanzamiento.text = str(precio_lanzamiento)
+	precio_poder_de_golpe.text = str(precio_poderGolpe)
+	precio_recuperación_de_energía.text = str(precio_recuperacion)
+	precio_rango_de_recogida.text = str(precio_rango)
 
 
 func verificar_precio(precio:int):
-	Inventario.modify_wallet_value(precio)
-	precio *= 1.4
-	settear_precios()
+	var precio_actual: int
 	if Dinero.dinero >= precio:
 		Inventario.modify_wallet_value(precio)
-		precio *= 1.4
+		precio_actual = precio * 1.4
+		precio = precio_actual
 		settear_precios()
 
 
