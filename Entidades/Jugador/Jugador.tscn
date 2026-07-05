@@ -229,6 +229,7 @@ metadata/_custom_type_script = "uid://dqiir7o6l4sjy"
 shape = SubResource("CircleShape2D_yyjpx")
 
 [node name="Recoge BASURA" type="Area2D" parent="." unique_id=1673868854]
+unique_name_in_owner = true
 collision_layer = 0
 collision_mask = 4
 script = ExtResource("9_yyjpx")
@@ -237,7 +238,13 @@ script = ExtResource("9_yyjpx")
 position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_y6klq")
 
+[node name="Timer" type="Timer" parent="Recoge BASURA" unique_id=2060239449]
+unique_name_in_owner = true
+wait_time = 3.0
+one_shot = true
+
 [connection signal="area_entered" from="LootAtractor" to="LootAtractor" method="_on_area_entered"]
 [connection signal="area_entered" from="Loot Collector" to="Loot Collector" method="_on_area_entered"]
 [connection signal="body_entered" from="Recoge BASURA" to="Recoge BASURA" method="_on_body_entered"]
 [connection signal="body_exited" from="Recoge BASURA" to="Recoge BASURA" method="_on_body_exited"]
+[connection signal="timeout" from="Recoge BASURA/Timer" to="Recoge BASURA" method="_on_timer_timeout"]

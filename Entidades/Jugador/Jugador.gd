@@ -3,6 +3,7 @@ class_name Jugador extends CharacterBody2D
 # Funcionalidad
 @onready var input_componente: InputComponente = %InputComponente
 @onready var movimiento_componente: MovimientoComponente = %MovimientoComponente
+@onready var recoge_basura: RadarComponenteBasura = %"Recoge BASURA"
 
 # In Game
 @onready var energia_componente: EnergiaComponente = %EnergiaComponente

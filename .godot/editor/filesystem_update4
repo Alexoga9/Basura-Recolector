@@ -1,1 +1,7 @@
 res://Entidades/Maquina Expendedora/maquina_expendedora.gd
+res://Entidades/Jugador/RadarBasura.gd
+res://Entidades/Jugador/Jugador.tscn
+res://UI/HUD/Barras HUD.gd
+res://Entidades/Jugador/Jugador.gd
+res://UI/HUD/barras_hud.tscn
+res://Escenarios/mundo.tscn

@@ -35,3 +35,10 @@ modulate = Color(0, 0.76755, 0.76803166, 1)
 layout_mode = 2
 script = ExtResource("2_hihnk")
 metadata/_custom_type_script = "uid://d3ixr7t11n000"
+
+[node name="BarraCooldown" type="ProgressBar" parent="VBoxContainer" unique_id=953963724]
+unique_name_in_owner = true
+modulate = Color(0.96014315, 0.56177855, 3.85046e-07, 1)
+layout_mode = 2
+script = ExtResource("2_hihnk")
+metadata/_custom_type_script = "uid://d3ixr7t11n000"
