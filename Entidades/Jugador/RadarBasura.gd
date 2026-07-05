@@ -1,6 +1,7 @@
 class_name RadarComponenteBasura extends Area2D
 
 var cuerpos: Array[Basura]
+@onready var jugador: Jugador = $".."
 
 
 func _process(delta):
@@ -29,7 +30,8 @@ func get_entidad_aleatoria() -> Basura:
 
 
 func recoger_basura():
-	if Input.is_action_just_pressed("Recoger"):
+	if Input.is_action_just_pressed("Interaccion"):
 
-		if get_entidad_aleatoria() != null:
+		if get_entidad_aleatoria() != null and jugador.energia_componente.energia > 0:
 			get_entidad_aleatoria().collect()
+			jugador.energia_componente.agotar(1)

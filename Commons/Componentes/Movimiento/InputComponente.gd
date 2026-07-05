@@ -14,7 +14,7 @@ func input_movimiento() -> Vector2:
 
 func input_recoger_basura_automatica() -> bool:
 	var presionado: bool
-	if Input.is_action_just_pressed("Recoger"):
+	if Input.is_action_just_pressed("Interaccion"):
 		presionado = true
 		SignalBus.recoger_basura_automatica.emit()
 		print("E")

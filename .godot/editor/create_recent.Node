@@ -1,9 +1,10 @@
+VBoxContainer
+BarraDeProgreso
 Node
 MarginContainer
 CenterContainer
 Panel
 Control
-VBoxContainer
 ScrollContainer
 TextureRect
 VScrollBar
@@ -11,4 +12,3 @@ HBoxContainer
 ProgressBar
 Label
 ColorRect
-Button

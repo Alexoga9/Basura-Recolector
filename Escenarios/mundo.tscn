@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dkvpakp2qt8ii" path="res://UI/Tienda/Tienda_ui.tscn" id="7_8njad"]
 [ext_resource type="PackedScene" uid="uid://bujsrbbq0elhi" path="res://Entidades/Tienda/tienda.tscn" id="8_8njad"]
 [ext_resource type="PackedScene" uid="uid://b8u0pprb4t2sj" path="res://Entidades/Trituradora/trituradora.tscn" id="8_u72it"]
+[ext_resource type="PackedScene" uid="uid://mn8abrepyvev" path="res://UI/HUD/barras_hud.tscn" id="8_yw7ml"]
 
 [node name="Mundo" type="Node" unique_id=283243708]
 
@@ -85,9 +86,14 @@ position = Vector2(630, 347)
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2010886703]
 
 [node name="Control" parent="CanvasLayer" unique_id=615073819 instance=ExtResource("1_vttfp")]
+visible = false
 
 [node name="TiendaUi" parent="CanvasLayer" unique_id=1611773581 instance=ExtResource("7_8njad")]
 visible = false
+
+[node name="Barras HUD" parent="CanvasLayer" unique_id=2073494253 instance=ExtResource("8_yw7ml")]
+offset_right = -278.0
+offset_bottom = -134.0
 
 [node name="Trituradora" parent="." unique_id=578851082 instance=ExtResource("8_u72it")]
 position = Vector2(577, 239)
