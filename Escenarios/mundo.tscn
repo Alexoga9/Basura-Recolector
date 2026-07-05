@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://bujsrbbq0elhi" path="res://Entidades/Tienda/tienda.tscn" id="8_8njad"]
 [ext_resource type="PackedScene" uid="uid://b8u0pprb4t2sj" path="res://Entidades/Trituradora/trituradora.tscn" id="8_u72it"]
 [ext_resource type="PackedScene" uid="uid://mn8abrepyvev" path="res://UI/HUD/barras_hud.tscn" id="8_yw7ml"]
+[ext_resource type="PackedScene" uid="uid://cjlmg6cpg7g6g" path="res://Entidades/Maquina Expendedora/MaquinaExpendedora.tscn" id="11_tyb7f"]
+[ext_resource type="PackedScene" uid="uid://bgn5c32aqoq6c" path="res://Entidades/Consumible/consumible.tscn" id="12_qc3uw"]
 
 [node name="Mundo" type="Node" unique_id=283243708]
 
@@ -23,64 +25,64 @@ metadata/_edit_lock_ = true
 [node name="Jugador" parent="." unique_id=1030727379 instance=ExtResource("2_fw4w5")]
 position = Vector2(596, 315)
 
-[node name="Node" type="Node" parent="." unique_id=665496197]
+[node name="Recolectables" type="Node" parent="." unique_id=665496197]
 
-[node name="Loot5" parent="Node" unique_id=1738087845 instance=ExtResource("3_tgroa")]
+[node name="Loot5" parent="Recolectables" unique_id=1738087845 instance=ExtResource("3_tgroa")]
 position = Vector2(535, 364)
 data = ExtResource("4_2fd2i")
 
-[node name="Loot6" parent="Node" unique_id=919298538 instance=ExtResource("3_tgroa")]
+[node name="Loot6" parent="Recolectables" unique_id=919298538 instance=ExtResource("3_tgroa")]
 position = Vector2(535, 336)
 
-[node name="Loot" parent="Node" unique_id=1883567907 instance=ExtResource("3_tgroa")]
+[node name="Loot" parent="Recolectables" unique_id=1883567907 instance=ExtResource("3_tgroa")]
 position = Vector2(535, 308)
 data = ExtResource("4_2fd2i")
 
-[node name="Loot3" parent="Node" unique_id=1841113591 instance=ExtResource("3_tgroa")]
+[node name="Loot3" parent="Recolectables" unique_id=1841113591 instance=ExtResource("3_tgroa")]
 position = Vector2(535, 281)
 
-[node name="Basuras" type="Node" parent="Node" unique_id=1174743801]
+[node name="Basuras" type="Node" parent="Recolectables" unique_id=1174743801]
 
-[node name="Loot2" parent="Node/Basuras" unique_id=1091806052 instance=ExtResource("6_2fd2i")]
+[node name="Loot2" parent="Recolectables/Basuras" unique_id=1091806052 instance=ExtResource("6_2fd2i")]
 position = Vector2(664, 326)
 
-[node name="Loot7" parent="Node/Basuras" unique_id=1276343682 instance=ExtResource("6_2fd2i")]
+[node name="Loot7" parent="Recolectables/Basuras" unique_id=1276343682 instance=ExtResource("6_2fd2i")]
 position = Vector2(654, 351)
 
-[node name="Loot8" parent="Node/Basuras" unique_id=1079077092 instance=ExtResource("6_2fd2i")]
+[node name="Loot8" parent="Recolectables/Basuras" unique_id=1079077092 instance=ExtResource("6_2fd2i")]
 position = Vector2(639, 325)
 
-[node name="Loot9" parent="Node/Basuras" unique_id=1716104005 instance=ExtResource("6_2fd2i")]
+[node name="Loot9" parent="Recolectables/Basuras" unique_id=1716104005 instance=ExtResource("6_2fd2i")]
 position = Vector2(651, 307)
 
-[node name="Loot10" parent="Node/Basuras" unique_id=2070967356 instance=ExtResource("6_2fd2i")]
+[node name="Loot10" parent="Recolectables/Basuras" unique_id=2070967356 instance=ExtResource("6_2fd2i")]
 position = Vector2(639, 364)
 
-[node name="Loot11" parent="Node/Basuras" unique_id=456136626 instance=ExtResource("6_2fd2i")]
+[node name="Loot11" parent="Recolectables/Basuras" unique_id=456136626 instance=ExtResource("6_2fd2i")]
 position = Vector2(672, 369)
 
-[node name="Loot12" parent="Node/Basuras" unique_id=329021941 instance=ExtResource("6_2fd2i")]
+[node name="Loot12" parent="Recolectables/Basuras" unique_id=329021941 instance=ExtResource("6_2fd2i")]
 position = Vector2(686, 356)
 
-[node name="Loot13" parent="Node/Basuras" unique_id=1395442083 instance=ExtResource("6_2fd2i")]
+[node name="Loot13" parent="Recolectables/Basuras" unique_id=1395442083 instance=ExtResource("6_2fd2i")]
 position = Vector2(692, 332)
 
-[node name="Loot14" parent="Node/Basuras" unique_id=698021777 instance=ExtResource("6_2fd2i")]
+[node name="Loot14" parent="Recolectables/Basuras" unique_id=698021777 instance=ExtResource("6_2fd2i")]
 position = Vector2(699, 314)
 
-[node name="Loot15" parent="Node/Basuras" unique_id=1307620334 instance=ExtResource("6_2fd2i")]
+[node name="Loot15" parent="Recolectables/Basuras" unique_id=1307620334 instance=ExtResource("6_2fd2i")]
 position = Vector2(681, 302)
 
-[node name="Loot16" parent="Node/Basuras" unique_id=521582679 instance=ExtResource("6_2fd2i")]
+[node name="Loot16" parent="Recolectables/Basuras" unique_id=521582679 instance=ExtResource("6_2fd2i")]
 position = Vector2(716, 302)
 
-[node name="Loot17" parent="Node/Basuras" unique_id=1392906129 instance=ExtResource("6_2fd2i")]
+[node name="Loot17" parent="Recolectables/Basuras" unique_id=1392906129 instance=ExtResource("6_2fd2i")]
 position = Vector2(715, 325)
 
-[node name="Loot18" parent="Node/Basuras" unique_id=1328225134 instance=ExtResource("6_2fd2i")]
+[node name="Loot18" parent="Recolectables/Basuras" unique_id=1328225134 instance=ExtResource("6_2fd2i")]
 position = Vector2(715, 325)
 
-[node name="Loot4" parent="Node/Basuras" unique_id=165001272 instance=ExtResource("6_2fd2i")]
+[node name="Loot4" parent="Recolectables/Basuras" unique_id=165001272 instance=ExtResource("6_2fd2i")]
 position = Vector2(630, 347)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2010886703]
@@ -95,8 +97,16 @@ visible = false
 offset_right = -278.0
 offset_bottom = -134.0
 
-[node name="Trituradora" parent="." unique_id=578851082 instance=ExtResource("8_u72it")]
+[node name="Puestos Interactuables" type="Node" parent="." unique_id=138742373]
+
+[node name="Trituradora" parent="Puestos Interactuables" unique_id=578851082 instance=ExtResource("8_u72it")]
 position = Vector2(577, 239)
 
-[node name="Tienda" parent="Trituradora" unique_id=1450673076 instance=ExtResource("8_8njad")]
-position = Vector2(89, -1)
+[node name="Tienda" parent="Puestos Interactuables" unique_id=1450673076 instance=ExtResource("8_8njad")]
+position = Vector2(666, 238)
+
+[node name="MaquinaExpendedora" parent="Puestos Interactuables" unique_id=2087217714 instance=ExtResource("11_tyb7f")]
+position = Vector2(756, 236)
+
+[node name="Consumible" parent="Puestos Interactuables/MaquinaExpendedora" unique_id=1748902439 instance=ExtResource("12_qc3uw")]
+position = Vector2(-157, 139)

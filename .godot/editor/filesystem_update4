@@ -1,6 +1,0 @@
-res://Escenarios/mundo.tscn
-res://UI/HUD/barra_de_progreso.gd
-res://Commons/Componentes/Movimiento/InputComponente.gd
-res://Entidades/Jugador/RadarBasura.gd
-res://UI/HUD/barras_hud.tscn
-res://UI/HUD/Barras HUD.gd

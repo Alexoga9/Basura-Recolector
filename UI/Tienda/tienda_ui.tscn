@@ -38,9 +38,9 @@ size_flags_vertical = 3
 
 [node name="Panel Tienda" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1967462824 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
 layout_mode = 2
-logica_mejora = NodePath("Node")
+logica_mejora = NodePath("MejoraResistencia")
 
-[node name="Node" type="Node" parent="MarginContainer/ScrollContainer/VBoxContainer/Panel Tienda" unique_id=1497121177]
+[node name="MejoraResistencia" type="Node" parent="MarginContainer/ScrollContainer/VBoxContainer/Panel Tienda" unique_id=1497121177]
 script = ExtResource("3_7a1nm")
 
 [node name="Panel Tienda2" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1143511343 instance=ExtResource("1_d2rrg")]

@@ -1,6 +1,10 @@
+AudioStreamPlayer
+Sprite2D
+CollisionShape2D
+Area2D
+Node
 VBoxContainer
 BarraDeProgreso
-Node
 MarginContainer
 CenterContainer
 Panel
@@ -8,7 +12,3 @@ Control
 ScrollContainer
 TextureRect
 VScrollBar
-HBoxContainer
-ProgressBar
-Label
-ColorRect
