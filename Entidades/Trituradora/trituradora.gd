@@ -24,3 +24,4 @@ func _on_trigger_basura_body_entered(body):
 	print("Area")
 	if body.is_in_group("Jugador"):
 		pass
+		# inventario.backpack[basura](0)
