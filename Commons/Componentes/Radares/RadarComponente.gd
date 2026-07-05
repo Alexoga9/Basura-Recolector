@@ -12,8 +12,8 @@ func _ready():
 	area_entered.connect(entidad_dentro_de_radar)
 	area_exited.connect(entidad_fuera_de_radar)
 	# body
-	body_entered.connect(entidad_dentro_de_radar)
-	body_exited.connect(entidad_fuera_de_radar)
+	#body_entered.connect(entidad_dentro_de_radar)
+	#body_exited.connect(entidad_fuera_de_radar)
 
 
 func entidad_dentro_de_radar(area: Loot):

@@ -5,3 +5,7 @@ res://UI/HUD/Barras HUD.gd
 res://Entidades/Jugador/Jugador.gd
 res://UI/HUD/barras_hud.tscn
 res://Escenarios/mundo.tscn
+res://Commons/Componentes/Radares/RadarComponente.gd
+res://UI/Tienda/mejora_cooldown.gd
+res://UI/Tienda/Tienda_ui.tscn
+res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres

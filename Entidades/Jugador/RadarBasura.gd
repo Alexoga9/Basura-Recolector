@@ -4,7 +4,7 @@ var cuerpos: Array[Basura]
 @onready var jugador: Jugador = $".."
 @onready var timer: Timer = %Timer
 
-@export var cooldown_tiempo: int = 3
+@export var cooldown_tiempo: float = 3
 var cooldown_activo: bool = false
 
 

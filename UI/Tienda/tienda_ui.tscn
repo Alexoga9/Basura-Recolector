@@ -2,7 +2,34 @@
 
 [ext_resource type="Script" uid="uid://culo1b5mj4hha" path="res://UI/Tienda/tienda_ui.gd" id="1_6namq"]
 [ext_resource type="PackedScene" uid="uid://birp1rvjh205r" path="res://UI/Tienda/panel_tienda.tscn" id="1_d2rrg"]
+[ext_resource type="Texture2D" uid="uid://due6mtxcwadhu" path="res://Assets/Inventario/Items.png" id="3_6dplc"]
 [ext_resource type="Script" uid="uid://b7q2wajcrdolk" path="res://UI/Tienda/mejoras de habilidades/mejora_resistencia.gd" id="3_7a1nm"]
+[ext_resource type="Script" uid="uid://dxsan7lcfsr3y" path="res://Recursos/DatosHabilidades.gd" id="4_mnc04"]
+[ext_resource type="Script" uid="uid://wjs1ybjpn3rn" path="res://UI/Tienda/mejora_cooldown.gd" id="6_53afc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6dplc"]
+atlas = ExtResource("3_6dplc")
+region = Rect2(48, 64, 16, 16)
+
+[sub_resource type="Resource" id="Resource_p2tmy"]
+script = ExtResource("4_mnc04")
+nombre = "Resistencia"
+descripcion = "Mejora la cantidad de energia maxima"
+precio = 5
+imagen = SubResource("AtlasTexture_6dplc")
+metadata/_custom_type_script = "uid://dxsan7lcfsr3y"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65riy"]
+atlas = ExtResource("3_6dplc")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="Resource" id="Resource_upi7f"]
+script = ExtResource("4_mnc04")
+nombre = "Cooldown"
+descripcion = "Disminuye el tiempo de cooldown entre recogidas"
+precio = 5
+imagen = SubResource("AtlasTexture_65riy")
+metadata/_custom_type_script = "uid://dxsan7lcfsr3y"
 
 [node name="TiendaUi" type="Control" unique_id=1611773581]
 layout_mode = 3
@@ -36,15 +63,22 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Panel Tienda" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1967462824 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
+[node name="Resistencia" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1967462824 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
 layout_mode = 2
+mejora = SubResource("Resource_p2tmy")
 logica_mejora = NodePath("MejoraResistencia")
 
-[node name="MejoraResistencia" type="Node" parent="MarginContainer/ScrollContainer/VBoxContainer/Panel Tienda" unique_id=1497121177]
+[node name="MejoraResistencia" type="Node" parent="MarginContainer/ScrollContainer/VBoxContainer/Resistencia" unique_id=1497121177]
 script = ExtResource("3_7a1nm")
 
-[node name="Panel Tienda2" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1143511343 instance=ExtResource("1_d2rrg")]
+[node name="Cooldown" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1143511343 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
 layout_mode = 2
+mejora = SubResource("Resource_upi7f")
+logica_mejora = NodePath("MejoraCooldown")
+
+[node name="MejoraCooldown" type="Node" parent="MarginContainer/ScrollContainer/VBoxContainer/Cooldown" unique_id=1193635210]
+script = ExtResource("6_53afc")
+metadata/_custom_type_script = "uid://cp267s1mgfxd1"
 
 [node name="Panel Tienda3" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1737779067 instance=ExtResource("1_d2rrg")]
 layout_mode = 2

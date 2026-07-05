@@ -1,12 +1,16 @@
 [gd_resource type="Resource" script_class="DatosHabilidades" format=3 uid="uid://dklrgm0gwnvn1"]
 
 [ext_resource type="Script" uid="uid://dxsan7lcfsr3y" path="res://Recursos/DatosHabilidades.gd" id="1_7673l"]
-[ext_resource type="Texture2D" uid="uid://dut0438runrb" path="res://Assets/Inventario/caja.png" id="1_cxbg5"]
+[ext_resource type="Texture2D" uid="uid://due6mtxcwadhu" path="res://Assets/Inventario/Items.png" id="1_cxbg5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65riy"]
+atlas = ExtResource("1_cxbg5")
+region = Rect2(48, 32, 16, 16)
 
 [resource]
 script = ExtResource("1_7673l")
-nombre = "Wanabi"
-descripcion = "Sircecosa xd"
+nombre = "Resistencia"
+descripcion = "Mejora la cantidad de energia maxima"
 precio = 5
-imagen = ExtResource("1_cxbg5")
+imagen = SubResource("AtlasTexture_65riy")
 metadata/_custom_type_script = "uid://dxsan7lcfsr3y"
