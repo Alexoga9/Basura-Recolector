@@ -25,12 +25,13 @@ func _on_trigger_jugador_body_exited(body):
 
 func dispensar():
 	if Input.is_action_just_pressed("Interaccion") and jugador != null:
-		audio.play()
 		spawnear()
+		audio.play()
+
 		print("Toma we")
 
 
 func spawnear():
 	var nuevo = consumible.instantiate()
-	nuevo.global_position = self.global_position + Vector2(10,10)
-	add_child(nuevo)
+	nuevo.global_position = self.global_position + Vector2(0, 50)
+	get_tree().current_scene.add_child(nuevo)
