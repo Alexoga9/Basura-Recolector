@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cj67bs1scsaiw"
-path="res://.godot/imported/Moneda.png-8f0d2feafff47a4dbe24a22cc95c9dab.ctex"
+uid="uid://c4ou8oy02r2og"
+path="res://.godot/imported/Basic Tiles 1.0.png-aaddfd2f5a43650feb8497c043b47a65.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Inventario/Moneda.png"
-dest_files=["res://.godot/imported/Moneda.png-8f0d2feafff47a4dbe24a22cc95c9dab.ctex"]
+source_file="res://Assets/TileMap/Basic Tiles 1.0.png"
+dest_files=["res://.godot/imported/Basic Tiles 1.0.png-aaddfd2f5a43650feb8497c043b47a65.ctex"]
 
 [params]
 

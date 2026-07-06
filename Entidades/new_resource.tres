@@ -7,9 +7,8 @@
 script = ExtResource("1_rdfia")
 id = "caja"
 nombre = null
-valor = null
-cantidad_maxima = 10
-tiene_requisito = null
-tags = null
 sprite = ExtResource("2_rnlra")
+cantidad_maxima = 10
+valor = null
+tiene_requisito = null
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"

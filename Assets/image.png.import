@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfamtq7qj5ora"
-path="res://.godot/imported/All tiles Autumn.png-761c8898cdae2363a839894992d60bf5.ctex"
+uid="uid://q5jrk63qij1t"
+path="res://.godot/imported/image.png-0675dfeff6aa31652eb3551faf7498f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/TileMap/All tiles Autumn.png"
-dest_files=["res://.godot/imported/All tiles Autumn.png-761c8898cdae2363a839894992d60bf5.ctex"]
+source_file="res://Assets/image.png"
+dest_files=["res://.godot/imported/image.png-0675dfeff6aa31652eb3551faf7498f0.ctex"]
 
 [params]
 

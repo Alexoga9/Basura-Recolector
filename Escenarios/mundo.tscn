@@ -37,6 +37,20 @@ data = ExtResource("4_2fd2i")
 [node name="Loot3" parent="Node" unique_id=1841113591 instance=ExtResource("3_tgroa")]
 position = Vector2(535, 281)
 
+[node name="Loot7" parent="Node" unique_id=1782321174 instance=ExtResource("3_tgroa")]
+position = Vector2(504, 364)
+data = ExtResource("4_2fd2i")
+
+[node name="Loot8" parent="Node" unique_id=1459569408 instance=ExtResource("3_tgroa")]
+position = Vector2(504, 336)
+
+[node name="Loot2" parent="Node" unique_id=1284606587 instance=ExtResource("3_tgroa")]
+position = Vector2(504, 308)
+data = ExtResource("4_2fd2i")
+
+[node name="Loot4" parent="Node" unique_id=1821437375 instance=ExtResource("3_tgroa")]
+position = Vector2(504, 281)
+
 [node name="Basuras" type="Node" parent="Node" unique_id=1174743801]
 
 [node name="Loot2" parent="Node/Basuras" unique_id=1091806052 instance=ExtResource("6_2fd2i")]

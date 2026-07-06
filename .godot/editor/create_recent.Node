@@ -1,8 +1,9 @@
+VBoxContainer
+TileMapLayer
 Node
 Label
 HBoxContainer
 Button
-VBoxContainer
 VSlider
 MarginContainer
 CollisionShape2D
@@ -11,5 +12,3 @@ Sprite2D
 StaticBody2D
 Marker2D
 RigidBody2D
-TextureRect
-CanvasLayer

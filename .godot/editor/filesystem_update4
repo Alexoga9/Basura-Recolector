@@ -1,7 +1,2 @@
 res://Commons/Componentes/Utilidades/Inventario/Inventario.tscn
-res://Assets/TileMap/new_tile_set.tres
 res://Commons/Componentes/Utilidades/Inventario/InventarioSlot.gd
-res://Commons/Componentes/Core/dinero/dinero.gd
-res://Utilidades/Autoloads/inventario.gd
-res://Escenarios/mundo.tscn
-res://Entidades/Trituradora/trituradora.gd

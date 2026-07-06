@@ -11,13 +11,11 @@ func _on_area_entered(object: Loot):
 		match object.tipo_de_basura:
 
 			Loot.TipoBasura.BASICO:
-				print("Loot Basico")
 				Inventario.add_item(object.data)
 				object.collect()
 				pass
 
 			object.TipoLoot.PESADO:
-				print("Loot Pesodo")
 				Inventario.add_item(object.data)
 				pass
 
