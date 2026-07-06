@@ -31,6 +31,18 @@ precio = 5
 imagen = SubResource("AtlasTexture_65riy")
 metadata/_custom_type_script = "uid://dxsan7lcfsr3y"
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_mnc04"]
+atlas = ExtResource("3_6dplc")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="Resource" id="Resource_53afc"]
+script = ExtResource("4_mnc04")
+nombre = "Resistencia"
+descripcion = "Mejora la cantidad de energia maxima"
+precio = 5
+imagen = SubResource("AtlasTexture_mnc04")
+metadata/_custom_type_script = "uid://dxsan7lcfsr3y"
+
 [node name="TiendaUi" type="Control" unique_id=1611773581]
 layout_mode = 3
 anchors_preset = 15
@@ -49,9 +61,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 10
+theme_override_constants/margin_left = 60
 theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
+theme_override_constants/margin_right = 60
 theme_override_constants/margin_bottom = 10
 
 [node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer" unique_id=751276087]
@@ -82,6 +94,7 @@ metadata/_custom_type_script = "uid://cp267s1mgfxd1"
 
 [node name="Panel Tienda3" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1737779067 instance=ExtResource("1_d2rrg")]
 layout_mode = 2
+mejora = SubResource("Resource_53afc")
 
 [node name="Panel Tienda4" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1425991459 instance=ExtResource("1_d2rrg")]
 layout_mode = 2

@@ -14,6 +14,7 @@ tiene_requisito = true
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"
 
 [node name="Inventario" type="Control" unique_id=615073819]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

@@ -1,16 +1,18 @@
 [gd_scene format=3 uid="uid://birp1rvjh205r"]
 
-[ext_resource type="Texture2D" uid="uid://e7kokadv3aib" path="res://Assets/icon.svg" id="1_4wk4c"]
 [ext_resource type="Script" uid="uid://chu2pujc70x6e" path="res://UI/Tienda/panel_tienda.gd" id="1_6k6d4"]
+[ext_resource type="Theme" uid="uid://cbqiryocag03q" path="res://UI/Theme/TiendaTheme.tres" id="1_ahgl1"]
 [ext_resource type="Resource" uid="uid://dklrgm0gwnvn1" path="res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres" id="2_pgqec"]
+[ext_resource type="Texture2D" uid="uid://dt8pwpjhovtt6" path="res://Assets/Inventario/marco tienda.png" id="4_be048"]
+[ext_resource type="Texture2D" uid="uid://due6mtxcwadhu" path="res://Assets/Inventario/Items.png" id="6_vehtn"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pgqec"]
-bg_color = Color(0.42156535, 0.61752206, 0.82153744, 1)
+[sub_resource type="AtlasTexture" id="AtlasTexture_3e1ft"]
+atlas = ExtResource("6_vehtn")
+region = Rect2(16, 48, 16, 16)
 
-[sub_resource type="Theme" id="Theme_6k6d4"]
-Button/font_sizes/font_size = 8
-Label/font_sizes/font_size = 8
-Panel/styles/panel = SubResource("StyleBoxFlat_pgqec")
+[sub_resource type="AtlasTexture" id="AtlasTexture_xf2eu"]
+atlas = ExtResource("6_vehtn")
+region = Rect2(96, 0, 16, 16)
 
 [node name="Panel Tienda" type="Control" unique_id=1195401960]
 custom_minimum_size = Vector2(0, 80)
@@ -22,11 +24,33 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = SubResource("Theme_6k6d4")
+theme = ExtResource("1_ahgl1")
 script = ExtResource("1_6k6d4")
 mejora = ExtResource("2_pgqec")
 
-[node name="Panel" type="Panel" parent="." unique_id=1594233160]
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1293587172]
+visible = false
+texture_filter = 1
+custom_minimum_size = Vector2(148, 40)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 96.0
+offset_top = 242.0
+offset_right = -124.0
+offset_bottom = 66.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_be048")
+region_rect = Rect2(0, 0, 20, 20)
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 6
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=1256024605]
+custom_minimum_size = Vector2(148, 40)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -35,66 +59,56 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=658394005]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_right = 20
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer" unique_id=581737212]
 layout_mode = 2
+alignment = 1
 
 [node name="imagen" type="TextureRect" parent="Panel/MarginContainer/HBoxContainer" unique_id=1419358289]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("1_4wk4c")
-expand_mode = 4
+texture = SubResource("AtlasTexture_3e1ft")
+expand_mode = 3
 stretch_mode = 5
 
-[node name="Control" type="Control" parent="Panel/MarginContainer/HBoxContainer" unique_id=1890556930]
+[node name="VBoxContainer3" type="VBoxContainer" parent="Panel/MarginContainer/HBoxContainer" unique_id=715673161]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 3.58
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/HBoxContainer/Control" unique_id=715673161]
-layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_top = -44.0
-offset_bottom = 44.0
-grow_horizontal = 2
-grow_vertical = 2
 alignment = 1
 
-[node name="nombre" type="Label" parent="Panel/MarginContainer/HBoxContainer/Control/VBoxContainer" unique_id=124324113]
+[node name="nombre" type="Label" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer3" unique_id=124324113]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Nombre"
+autowrap_mode = 2
 
-[node name="linea" type="ColorRect" parent="Panel/MarginContainer/HBoxContainer/Control/VBoxContainer" unique_id=209486722]
+[node name="linea" type="ColorRect" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer3" unique_id=209486722]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 1)
 layout_mode = 2
 
-[node name="descripcion" type="Label" parent="Panel/MarginContainer/HBoxContainer/Control/VBoxContainer" unique_id=1624348241]
+[node name="descripcion" type="Label" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer3" unique_id=1624348241]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Descricion
 Aqui"
+autowrap_mode = 2
 
-[node name="nivel" type="Label" parent="Panel/MarginContainer/HBoxContainer/Control/VBoxContainer" unique_id=1984587817]
+[node name="nivel" type="Label" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer3" unique_id=1984587817]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Nivel 1"
 horizontal_alignment = 2
+autowrap_mode = 2
 
-[node name="barra" type="ProgressBar" parent="Panel/MarginContainer/HBoxContainer/Control/VBoxContainer" unique_id=1135561093]
+[node name="barra" type="ProgressBar" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer3" unique_id=1135561093]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 5)
 layout_mode = 2
@@ -102,20 +116,47 @@ max_value = 10.0
 step = 1.0
 show_percentage = false
 
+[node name="Control" type="Control" parent="Panel/MarginContainer/HBoxContainer" unique_id=1890556930]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.58
+
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/HBoxContainer" unique_id=2022160989]
 layout_mode = 2
+size_flags_horizontal = 3
 size_flags_vertical = 4
+alignment = 1
 
 [node name="precio" type="Label" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer" unique_id=95191658]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Nombre"
+autowrap_mode = 2
 
 [node name="boton" type="Button" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer" unique_id=257881978]
 unique_name_in_owner = true
 layout_mode = 2
+text = "Button"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel/MarginContainer/HBoxContainer" unique_id=1645314049]
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
-text = "Button"
+
+[node name="valor siguiente" type="Label" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=426617021]
+layout_mode = 2
+text = "Nombre"
+autowrap_mode = 2
+
+[node name="flecha subida" type="TextureRect" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=1264735615]
+layout_mode = 2
+texture = SubResource("AtlasTexture_xf2eu")
+stretch_mode = 5
+
+[node name="valor actual" type="Label" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=2023038483]
+layout_mode = 2
+text = "Nombre"
+autowrap_mode = 2
 
 [connection signal="pressed" from="Panel/MarginContainer/HBoxContainer/VBoxContainer/boton" to="." method="_on_boton_pressed"]

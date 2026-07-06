@@ -1,2 +1,9 @@
 res://Entidades/Tienda/tienda.gd
 res://Entidades/Trituradora/trituradora.gd
+res://UI/Tienda/Tienda_ui.tscn
+res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
+res://UI/Tienda/panel_tienda.tscn
+res://UI/Theme/TiendaTheme.tres
+res://UI/Tienda/mejoras de habilidades/logica_mejora.gd
+res://Commons/Componentes/Utilidades/Inventario/Inventario.tscn
+res://Escenarios/mundo.tscn
