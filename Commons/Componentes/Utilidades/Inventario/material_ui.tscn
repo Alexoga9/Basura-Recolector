@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://brs7mtp3khd2b"]
+
+[ext_resource type="Texture2D" uid="uid://e7kokadv3aib" path="res://Assets/icon.svg" id="1_wrbnp"]
+
+[node name="MaterialUI" type="VBoxContainer" unique_id=2083072087]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Piedra" type="Sprite2D" parent="." unique_id=398548879]
+position = Vector2(10, 10.000001)
+scale = Vector2(0.1171875, 0.1171875)
+texture = ExtResource("1_wrbnp")
+
+[node name="piedra_txt" type="Label" parent="Piedra" unique_id=2129057095]
+offset_left = 68.26667
+offset_top = -59.733345
+offset_right = 153.6
+offset_bottom = 59.733337
+
+[node name="Madera" type="Sprite2D" parent="." unique_id=2109309530]
+position = Vector2(39.000004, 10)
+scale = Vector2(0.1171875, 0.1171875)
+texture = ExtResource("1_wrbnp")
+
+[node name="madera_txt" type="Label" parent="Madera" unique_id=37836727]
+offset_left = 68.26667
+offset_top = -59.733345
+offset_right = 153.6
+offset_bottom = 59.733337
+
+[node name="Caja" type="Sprite2D" parent="." unique_id=972321686]
+position = Vector2(69, 10)
+scale = Vector2(0.1171875, 0.1171875)
+texture = ExtResource("1_wrbnp")
+
+[node name="Label" type="Label" parent="Caja" unique_id=1216973256]
+offset_left = 68.26667
+offset_top = -59.733345
+offset_right = 153.6
+offset_bottom = 59.733337

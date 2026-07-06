@@ -1,14 +1,14 @@
 VBoxContainer
+Label
+Sprite2D
+TextureRect
 TileMapLayer
 Node
-Label
 HBoxContainer
 Button
 VSlider
 MarginContainer
 CollisionShape2D
 Area2D
-Sprite2D
 StaticBody2D
 Marker2D
-RigidBody2D
