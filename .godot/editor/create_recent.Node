@@ -1,7 +1,3 @@
-CenterContainer
-NinePatchRect
-PanelContainer
-TextureRect
 Logica_Mejora
 Timer
 AudioStreamPlayer
@@ -12,3 +8,8 @@ Node
 VBoxContainer
 BarraDeProgreso
 MarginContainer
+CenterContainer
+Panel
+Control
+ScrollContainer
+TextureRect

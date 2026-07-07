@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cd6lygsc501ww" path="res://Entidades/Loot/Loot.tscn" id="3_tgroa"]
 [ext_resource type="Resource" uid="uid://dmky67t6umj3u" path="res://Entidades/Loot/loots/rs_piedra.tres" id="4_2fd2i"]
 [ext_resource type="PackedScene" uid="uid://boa7rlwdurt22" path="res://Entidades/Basura/Basura.tscn" id="6_2fd2i"]
-[ext_resource type="PackedScene" uid="uid://dqw5d3i3m8nac" path="res://UI/Tienda/Tienda_ui.tscn" id="7_8njad"]
+[ext_resource type="PackedScene" uid="uid://dkvpakp2qt8ii" path="res://UI/Tienda/Tienda_ui.tscn" id="7_8njad"]
 [ext_resource type="PackedScene" uid="uid://bujsrbbq0elhi" path="res://Entidades/Tienda/tienda.tscn" id="8_8njad"]
 [ext_resource type="PackedScene" uid="uid://b8u0pprb4t2sj" path="res://Entidades/Trituradora/trituradora.tscn" id="8_u72it"]
 [ext_resource type="PackedScene" uid="uid://mn8abrepyvev" path="res://UI/HUD/barras_hud.tscn" id="8_yw7ml"]
@@ -88,16 +88,14 @@ position = Vector2(630, 347)
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2010886703]
 
 [node name="Control" parent="CanvasLayer" unique_id=615073819 instance=ExtResource("1_vttfp")]
+visible = false
 
 [node name="TiendaUi" parent="CanvasLayer" unique_id=1611773581 instance=ExtResource("7_8njad")]
 visible = false
 
 [node name="Barras HUD" parent="CanvasLayer" unique_id=2073494253 instance=ExtResource("8_yw7ml")]
-visible = false
-offset_left = 3.0
-offset_top = 26.0
-offset_right = -272.0
-offset_bottom = -104.0
+offset_right = -278.0
+offset_bottom = -134.0
 
 [node name="Puestos Interactuables" type="Node" parent="." unique_id=138742373]
 

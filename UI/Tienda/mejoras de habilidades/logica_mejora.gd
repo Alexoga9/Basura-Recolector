@@ -11,7 +11,7 @@ func _ready():
 func iniciar():
 	await get_tree().process_frame
 	jugador = Global.jugador
-	#print("Esta el " + jugador.name)
+	print("Esta el " + jugador.name)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
