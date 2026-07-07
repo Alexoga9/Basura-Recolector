@@ -1,3 +1,5 @@
+HBoxContainer
+TextureRect
 Logica_Mejora
 Timer
 AudioStreamPlayer
@@ -11,5 +13,3 @@ MarginContainer
 CenterContainer
 Panel
 Control
-ScrollContainer
-TextureRect
