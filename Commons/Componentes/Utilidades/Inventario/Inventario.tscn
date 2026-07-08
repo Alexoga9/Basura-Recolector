@@ -6,7 +6,8 @@
 [ext_resource type="Resource" uid="uid://dmky67t6umj3u" path="res://Entidades/Loot/loots/rs_piedra.tres" id="3_hdjn2"]
 [ext_resource type="Resource" uid="uid://5k76mbciamak" path="res://Entidades/Loot/loots/re_madera.tres" id="4_k5oni"]
 [ext_resource type="Texture2D" uid="uid://q5jrk63qij1t" path="res://Assets/image.png" id="6_hdjn2"]
-[ext_resource type="Texture2D" uid="uid://e7kokadv3aib" path="res://Assets/icon.svg" id="7_k5oni"]
+[ext_resource type="Texture2D" uid="uid://gqtxmyvoyday" path="res://Assets/Inventario/heno.png" id="7_jjjfg"]
+[ext_resource type="PackedScene" uid="uid://mn8abrepyvev" path="res://UI/HUD/barras_hud.tscn" id="8_2kcwo"]
 
 [node name="Inventario" type="Control" unique_id=615073819]
 layout_mode = 3
@@ -18,7 +19,7 @@ grow_vertical = 2
 script = ExtResource("1_ftg80")
 items = Array[ExtResource("2_ftg80")]([ExtResource("3_hdjn2"), ExtResource("4_k5oni")])
 
-[node name="Image" type="Sprite2D" parent="." unique_id=1356842247]
+[node name="Referencia" type="Sprite2D" parent="." unique_id=1356842247]
 position = Vector2(186.00002, 115.00001)
 scale = Vector2(0.1989418, 0.23498422)
 texture = ExtResource("6_hdjn2")
@@ -38,52 +39,93 @@ size_flags_horizontal = 4
 script = ExtResource("1_rkrsp")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="InventarioSlot" unique_id=170167109]
-layout_mode = 0
-offset_left = 4.0
-offset_top = 3.0
-offset_right = 72.0
-offset_bottom = 25.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.036000002
+anchor_top = 0.052
+anchor_right = 0.643
+anchor_bottom = 0.43100002
+offset_left = -0.032000065
+offset_top = -0.016000032
+offset_right = -0.01599884
+offset_bottom = 0.0019989014
+theme_override_constants/separation = 10
 
-[node name="Piedra" type="Sprite2D" parent="InventarioSlot/VBoxContainer" unique_id=1063340439]
-position = Vector2(3.0000005, 4.5000067)
-scale = Vector2(0.0546875, 0.07031244)
-texture = ExtResource("7_k5oni")
+[node name="HBoxContainer" type="HBoxContainer" parent="InventarioSlot/VBoxContainer" unique_id=98750735]
+layout_mode = 2
 
-[node name="piedra_txt" type="Label" parent="InventarioSlot/VBoxContainer/Piedra" unique_id=1968183534]
-offset_left = 91.428566
-offset_top = -47.99994
-offset_right = 274.2857
-offset_bottom = 71.46674
+[node name="Contenedor" type="HBoxContainer" parent="InventarioSlot/VBoxContainer/HBoxContainer" unique_id=1938198506]
+layout_mode = 2
 
-[node name="Piedra2" type="Sprite2D" parent="InventarioSlot/VBoxContainer" unique_id=1293813691]
-position = Vector2(27, 4.0000067)
-scale = Vector2(0.05859376, 0.07031244)
-texture = ExtResource("7_k5oni")
+[node name="TextureRect" type="TextureRect" parent="InventarioSlot/VBoxContainer/HBoxContainer/Contenedor" unique_id=1078608498]
+layout_mode = 2
+texture = ExtResource("7_jjjfg")
 
-[node name="piedra_txt" type="Label" parent="InventarioSlot/VBoxContainer/Piedra2" unique_id=555923346]
-offset_left = 91.428566
-offset_top = -47.99994
-offset_right = 274.2857
-offset_bottom = 71.46674
+[node name="Label" type="Label" parent="InventarioSlot/VBoxContainer/HBoxContainer/Contenedor" unique_id=1359459983]
+layout_mode = 2
+text = "94"
 
-[node name="Piedra3" type="Sprite2D" parent="InventarioSlot/VBoxContainer" unique_id=190559169]
-position = Vector2(3, 16.000008)
-scale = Vector2(0.0546875, 0.07031244)
-texture = ExtResource("7_k5oni")
+[node name="Contenedor2" type="HBoxContainer" parent="InventarioSlot/VBoxContainer/HBoxContainer" unique_id=316051610]
+layout_mode = 2
 
-[node name="piedra_txt" type="Label" parent="InventarioSlot/VBoxContainer/Piedra3" unique_id=212964619]
-offset_left = 91.428566
-offset_top = -47.99994
-offset_right = 274.2857
-offset_bottom = 71.46674
+[node name="TextureRect" type="TextureRect" parent="InventarioSlot/VBoxContainer/HBoxContainer/Contenedor2" unique_id=89801839]
+layout_mode = 2
+texture = ExtResource("7_jjjfg")
 
-[node name="Piedra4" type="Sprite2D" parent="InventarioSlot/VBoxContainer" unique_id=1848155721]
-position = Vector2(27, 16.000008)
-scale = Vector2(0.0546875, 0.07031244)
-texture = ExtResource("7_k5oni")
+[node name="Label" type="Label" parent="InventarioSlot/VBoxContainer/HBoxContainer/Contenedor2" unique_id=890496484]
+layout_mode = 2
+text = "94"
 
-[node name="piedra_txt" type="Label" parent="InventarioSlot/VBoxContainer/Piedra4" unique_id=476747762]
-offset_left = 91.428566
-offset_top = -47.99994
-offset_right = 274.2857
-offset_bottom = 71.46674
+[node name="HBoxContainer2" type="HBoxContainer" parent="InventarioSlot/VBoxContainer" unique_id=1953262084]
+layout_mode = 2
+
+[node name="Contenedor" type="HBoxContainer" parent="InventarioSlot/VBoxContainer/HBoxContainer2" unique_id=613466750]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="InventarioSlot/VBoxContainer/HBoxContainer2/Contenedor" unique_id=1261546726]
+layout_mode = 2
+texture = ExtResource("7_jjjfg")
+
+[node name="Label" type="Label" parent="InventarioSlot/VBoxContainer/HBoxContainer2/Contenedor" unique_id=524293303]
+layout_mode = 2
+text = "94"
+
+[node name="Contenedor2" type="HBoxContainer" parent="InventarioSlot/VBoxContainer/HBoxContainer2" unique_id=1123309123]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="InventarioSlot/VBoxContainer/HBoxContainer2/Contenedor2" unique_id=618073608]
+layout_mode = 2
+texture = ExtResource("7_jjjfg")
+
+[node name="Label" type="Label" parent="InventarioSlot/VBoxContainer/HBoxContainer2/Contenedor2" unique_id=263719253]
+layout_mode = 2
+text = "94"
+
+[node name="Contenedor3" type="HBoxContainer" parent="InventarioSlot/VBoxContainer/HBoxContainer2" unique_id=641213658]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="InventarioSlot/VBoxContainer/HBoxContainer2/Contenedor3" unique_id=1583791991]
+layout_mode = 2
+texture = ExtResource("7_jjjfg")
+
+[node name="Label" type="Label" parent="InventarioSlot/VBoxContainer/HBoxContainer2/Contenedor3" unique_id=768399823]
+layout_mode = 2
+text = "94"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="InventarioSlot/VBoxContainer" unique_id=638117693]
+layout_mode = 2
+alignment = 1
+
+[node name="Barras HUD" parent="InventarioSlot/VBoxContainer/HBoxContainer3" unique_id=2073494253 instance=ExtResource("8_2kcwo")]
+layout_mode = 2
+
+[node name="Contenedor" type="HBoxContainer" parent="InventarioSlot/VBoxContainer/HBoxContainer3" unique_id=1659590310]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="InventarioSlot/VBoxContainer/HBoxContainer3/Contenedor" unique_id=14492682]
+layout_mode = 2
+texture = ExtResource("7_jjjfg")
+
+[node name="Label" type="Label" parent="InventarioSlot/VBoxContainer/HBoxContainer3/Contenedor" unique_id=1547106280]
+layout_mode = 2
+text = "94"

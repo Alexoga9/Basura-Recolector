@@ -13,11 +13,11 @@ func _process(delta):
 
 func recibir_basura_jugador():
 	print("jugador")
-	var cantidad_basura: int = Inventario.get_count("Basura")
-	var valor_basura: int = Inventario.get_item_resource("Basura").valor
-	var valor_de_venta: int = cantidad_basura*valor_basura
 
-	if cantidad_basura > 0:
+	if Inventario.get_count("Basura") > 0:
+		var cantidad_basura: int = Inventario.get_count("Basura")
+		var valor_basura: int = Inventario.get_item_resource("Basura").valor
+		var valor_de_venta: int = cantidad_basura*valor_basura
 		Dinero.ganar(valor_de_venta)
 		print(str(Dinero.dinero))
 		Inventario.remove_item("Basura", cantidad_basura)

@@ -8,3 +8,5 @@ res://UI/Tienda/Tienda_ui.tscn
 res://Commons/Componentes/Core/EnergiaComponente.gd
 res://Entidades/Maquina Expendedora/maquina_expendedora.gd
 res://Entidades/Maquina Expendedora/MaquinaExpendedora.tscn
+res://UI/HUD/barras_hud.tscn
+res://Commons/Componentes/Utilidades/Inventario/Inventario.tscn

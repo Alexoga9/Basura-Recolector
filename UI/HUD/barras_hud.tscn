@@ -3,42 +3,43 @@
 [ext_resource type="Script" uid="uid://cloxkbehvaa2q" path="res://UI/HUD/Barras HUD.gd" id="1_wa467"]
 [ext_resource type="Script" uid="uid://d3ixr7t11n000" path="res://UI/HUD/barra_de_progreso.gd" id="2_hihnk"]
 
-[node name="Barras HUD" type="Control" unique_id=2073494253]
-layout_mode = 3
+[node name="VBoxContainer" type="VBoxContainer" unique_id=376441717]
+custom_minimum_size = Vector2(40, 0)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_wa467")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=376441717]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 20
 alignment = 1
 
-[node name="BarraEnergia" type="ProgressBar" parent="VBoxContainer" unique_id=937398990]
+[node name="BarraEnergia" type="ProgressBar" parent="." unique_id=937398990]
 unique_name_in_owner = true
 modulate = Color(0.19402906, 0.7078665, 1.0973811e-05, 1)
+custom_minimum_size = Vector2(0, 5)
 layout_mode = 2
+show_percentage = false
 script = ExtResource("2_hihnk")
 metadata/_custom_type_script = "uid://d3ixr7t11n000"
 
-[node name="BarraBasura" type="ProgressBar" parent="VBoxContainer" unique_id=1966912099]
-unique_name_in_owner = true
-modulate = Color(0, 0.76755, 0.76803166, 1)
-layout_mode = 2
-script = ExtResource("2_hihnk")
-metadata/_custom_type_script = "uid://d3ixr7t11n000"
-
-[node name="BarraCooldown" type="ProgressBar" parent="VBoxContainer" unique_id=953963724]
+[node name="BarraCooldown" type="ProgressBar" parent="." unique_id=953963724]
 unique_name_in_owner = true
 modulate = Color(0.96014315, 0.56177855, 3.85046e-07, 1)
+custom_minimum_size = Vector2(0, 5)
 layout_mode = 2
+show_percentage = false
 script = ExtResource("2_hihnk")
 metadata/_custom_type_script = "uid://d3ixr7t11n000"
+
+[node name="BarraBasura" type="ProgressBar" parent="." unique_id=1966912099]
+unique_name_in_owner = true
+visible = false
+modulate = Color(0, 0.76755, 0.76803166, 1)
+layout_mode = 2
+show_percentage = false
+script = ExtResource("2_hihnk")
+metadata/_custom_type_script = "uid://d3ixr7t11n000"
+
+[node name="Barras HUD" type="Control" parent="." unique_id=2073494253]
+visible = false
+layout_mode = 2
+script = ExtResource("1_wa467")
