@@ -1,6 +1,1 @@
-res://UI/Tienda/panel_tienda.tscn
-res://UI/Theme/Tienda.tres
-res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
-res://Assets/TileMap/new_tile_set.tres
-res://UI/Tienda/Tienda_ui.tscn
-res://Escenarios/mundo.tscn
+res://Entidades/Trituradora/trituradora.gd

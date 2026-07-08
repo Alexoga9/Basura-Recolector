@@ -11,9 +11,16 @@ func _process(delta):
 	pass
 
 
-func recibir_basura_jugador(objeto:Node2D):
-	if objeto.is_in_group("Jugador"):
-		print("jugador")
+func recibir_basura_jugador():
+	print("jugador")
+	var cantidad_basura: int = Inventario.get_count("Basura")
+	var valor_basura: int = Inventario.get_item_resource("Basura").valor
+	var valor_de_venta: int = cantidad_basura*valor_basura
+
+	if cantidad_basura > 0:
+		Dinero.ganar(valor_de_venta)
+		print(str(Dinero.dinero))
+		Inventario.remove_item("Basura", cantidad_basura)
 
 
 func recibir_basura_fisica():
@@ -23,5 +30,6 @@ func recibir_basura_fisica():
 func _on_trigger_basura_body_entered(body):
 	print("Area")
 	if body.is_in_group("Jugador"):
+		recibir_basura_jugador()
 		pass
 		# inventario.backpack[basura](0)

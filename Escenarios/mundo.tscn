@@ -6,8 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://cd6lygsc501ww" path="res://Entidades/Loot/Loot.tscn" id="3_tgroa"]
 [ext_resource type="Resource" uid="uid://dmky67t6umj3u" path="res://Entidades/Loot/loots/rs_piedra.tres" id="4_2fd2i"]
 [ext_resource type="PackedScene" uid="uid://boa7rlwdurt22" path="res://Entidades/Basura/Basura.tscn" id="6_2fd2i"]
+[ext_resource type="PackedScene" uid="uid://dqw5d3i3m8nac" path="res://UI/Tienda/Tienda_ui.tscn" id="7_8njad"]
 [ext_resource type="PackedScene" uid="uid://bujsrbbq0elhi" path="res://Entidades/Tienda/tienda.tscn" id="8_8njad"]
 [ext_resource type="PackedScene" uid="uid://b8u0pprb4t2sj" path="res://Entidades/Trituradora/trituradora.tscn" id="8_u72it"]
+[ext_resource type="PackedScene" uid="uid://mn8abrepyvev" path="res://UI/HUD/barras_hud.tscn" id="8_yw7ml"]
+[ext_resource type="PackedScene" uid="uid://cjlmg6cpg7g6g" path="res://Entidades/Maquina Expendedora/MaquinaExpendedora.tscn" id="11_tyb7f"]
 
 [node name="Mundo" type="Node" unique_id=283243708]
 
@@ -95,11 +98,21 @@ position = Vector2(715, 325)
 [node name="Loot4" parent="Node/Basuras" unique_id=165001272 instance=ExtResource("6_2fd2i")]
 position = Vector2(630, 347)
 
+[node name="MaquinaExpendedora" parent="Node" unique_id=578851082 instance=ExtResource("11_tyb7f")]
+position = Vector2(746, 238)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2010886703]
 
-[node name="Control" parent="CanvasLayer" unique_id=615073819 instance=ExtResource("1_vttfp")]
+[node name="Barras HUD" parent="CanvasLayer" unique_id=2073494253 instance=ExtResource("8_yw7ml")]
+offset_right = -281.0
+offset_bottom = -135.0
 
-[node name="Trituradora" parent="." unique_id=578851082 instance=ExtResource("8_u72it")]
+[node name="TiendaUi" parent="CanvasLayer" unique_id=1611773581 instance=ExtResource("7_8njad")]
+
+[node name="Control" parent="CanvasLayer" unique_id=615073819 instance=ExtResource("1_vttfp")]
+visible = false
+
+[node name="Trituradora" parent="." unique_id=1291557497 instance=ExtResource("8_u72it")]
 position = Vector2(577, 239)
 
 [node name="Tienda" parent="Trituradora" unique_id=1450673076 instance=ExtResource("8_8njad")]
