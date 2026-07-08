@@ -3,15 +3,10 @@
 [ext_resource type="Script" uid="uid://d2f0m5j1ciuls" path="res://Utilidades/Autoloads/inventario.gd" id="1_ftg80"]
 [ext_resource type="Script" uid="uid://cvdailrt3pbqn" path="res://Commons/Componentes/Utilidades/Inventario/InventarioSlot.gd" id="1_rkrsp"]
 [ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="2_ftg80"]
-[ext_resource type="Texture2D" uid="uid://p7dfkv8att0p" path="res://Assets/Inventario/image.png" id="2_nttg7"]
-
-[sub_resource type="Resource" id="Resource_x7tyv"]
-script = ExtResource("2_ftg80")
-id = "0"
-nombre = "Piedra"
-valor = 15
-tiene_requisito = true
-metadata/_custom_type_script = "uid://dnu2r5yw53pto"
+[ext_resource type="Resource" uid="uid://dmky67t6umj3u" path="res://Entidades/Loot/loots/rs_piedra.tres" id="3_hdjn2"]
+[ext_resource type="Resource" uid="uid://5k76mbciamak" path="res://Entidades/Loot/loots/re_madera.tres" id="4_k5oni"]
+[ext_resource type="Texture2D" uid="uid://q5jrk63qij1t" path="res://Assets/image.png" id="6_hdjn2"]
+[ext_resource type="Texture2D" uid="uid://e7kokadv3aib" path="res://Assets/icon.svg" id="7_k5oni"]
 
 [node name="Inventario" type="Control" unique_id=615073819]
 layout_mode = 3
@@ -21,56 +16,74 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ftg80")
+items = Array[ExtResource("2_ftg80")]([ExtResource("3_hdjn2"), ExtResource("4_k5oni")])
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=104778990]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Image" type="Sprite2D" parent="." unique_id=1356842247]
+position = Vector2(186.00002, 115.00001)
+scale = Vector2(0.1989418, 0.23498422)
+texture = ExtResource("6_hdjn2")
+
+[node name="InventarioSlot" type="Panel" parent="." unique_id=851919116]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 157.0
+offset_right = -254.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 4
-size_flags_vertical = 0
-
-[node name="InventarioSlot" type="Panel" parent="HBoxContainer" unique_id=851919116]
-layout_mode = 2
 script = ExtResource("1_rkrsp")
-item_data = SubResource("Resource_x7tyv")
 
-[node name="Casilla" type="TextureRect" parent="HBoxContainer/InventarioSlot" unique_id=906568026]
+[node name="VBoxContainer" type="VBoxContainer" parent="InventarioSlot" unique_id=170167109]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("2_nttg7")
-expand_mode = 2
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 72.0
+offset_bottom = 25.0
 
-[node name="Icono" type="TextureRect" parent="HBoxContainer/InventarioSlot" unique_id=1779124006]
-unique_name_in_owner = true
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("2_nttg7")
-expand_mode = 2
+[node name="Piedra" type="Sprite2D" parent="InventarioSlot/VBoxContainer" unique_id=1063340439]
+position = Vector2(3.0000005, 4.5000067)
+scale = Vector2(0.0546875, 0.07031244)
+texture = ExtResource("7_k5oni")
 
-[node name="Label" type="Label" parent="HBoxContainer/InventarioSlot" unique_id=857493552]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 5.0
-offset_top = -33.0
-offset_right = 15.0
-offset_bottom = -19.0
-grow_vertical = 0
-theme_override_font_sizes/font_size = 10
+[node name="piedra_txt" type="Label" parent="InventarioSlot/VBoxContainer/Piedra" unique_id=1968183534]
+offset_left = 91.428566
+offset_top = -47.99994
+offset_right = 274.2857
+offset_bottom = 71.46674
 
-[node name="Label2" type="Label" parent="HBoxContainer/InventarioSlot" unique_id=756883494]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 5.0
-offset_top = -33.0
-offset_right = 15.0
-offset_bottom = -19.0
-grow_vertical = 0
-theme_override_font_sizes/font_size = 10
+[node name="Piedra2" type="Sprite2D" parent="InventarioSlot/VBoxContainer" unique_id=1293813691]
+position = Vector2(27, 4.0000067)
+scale = Vector2(0.05859376, 0.07031244)
+texture = ExtResource("7_k5oni")
+
+[node name="piedra_txt" type="Label" parent="InventarioSlot/VBoxContainer/Piedra2" unique_id=555923346]
+offset_left = 91.428566
+offset_top = -47.99994
+offset_right = 274.2857
+offset_bottom = 71.46674
+
+[node name="Piedra3" type="Sprite2D" parent="InventarioSlot/VBoxContainer" unique_id=190559169]
+position = Vector2(3, 16.000008)
+scale = Vector2(0.0546875, 0.07031244)
+texture = ExtResource("7_k5oni")
+
+[node name="piedra_txt" type="Label" parent="InventarioSlot/VBoxContainer/Piedra3" unique_id=212964619]
+offset_left = 91.428566
+offset_top = -47.99994
+offset_right = 274.2857
+offset_bottom = 71.46674
+
+[node name="Piedra4" type="Sprite2D" parent="InventarioSlot/VBoxContainer" unique_id=1848155721]
+position = Vector2(27, 16.000008)
+scale = Vector2(0.0546875, 0.07031244)
+texture = ExtResource("7_k5oni")
+
+[node name="piedra_txt" type="Label" parent="InventarioSlot/VBoxContainer/Piedra4" unique_id=476747762]
+offset_left = 91.428566
+offset_top = -47.99994
+offset_right = 274.2857
+offset_bottom = 71.46674
