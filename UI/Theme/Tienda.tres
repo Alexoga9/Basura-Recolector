@@ -48,6 +48,12 @@ texture_margin_right = 4.0
 texture_margin_bottom = 6.0
 modulate_color = Color(0.9999991, 0.9906611, 0.51251674, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ce683"]
+bg_color = Color(0.78774184, 0.40709773, 0.93499106, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_op4kc"]
+bg_color = Color(0, 0.7155045, 0.40739343, 1)
+
 [sub_resource type="Gradient" id="Gradient_vehtn"]
 offsets = PackedFloat32Array(0.014344262, 1)
 colors = PackedColorArray(0.88356674, 3.783077e-05, 0.64343673, 1, 1, 1, 1, 1)
@@ -61,8 +67,7 @@ region = Rect2(0, 48, 16, 16)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xfnce"]
 texture = SubResource("AtlasTexture_vehtn")
-texture_margin_top = 17.0
-region_rect = Rect2(0, 0, 16, 16)
+texture_margin_top = 15.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wo7b4"]
 atlas = ExtResource("3_c2bmj")
@@ -72,29 +77,18 @@ region = Rect2(16, 48, 16, 16)
 texture = SubResource("AtlasTexture_wo7b4")
 texture_margin_top = 17.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cbejd"]
-atlas = ExtResource("3_c2bmj")
-region = Rect2(16, 0, 16, 48)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c2bmj"]
+content_margin_right = 16.0
+bg_color = Color(0.32156864, 0.2, 0.24705882, 1)
+corner_detail = 1
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1o38l"]
-texture = SubResource("AtlasTexture_cbejd")
-texture_margin_left = 8.0
-texture_margin_right = 8.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cbejd"]
-bg_color = Color(0.079085626, 0.6847406, 0.6854681, 1)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xf2eu"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_sn432"]
 atlas = ExtResource("3_c2bmj")
 region = Rect2(0, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ak11l"]
 atlas = ExtResource("3_c2bmj")
 region = Rect2(16, 48, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xfnce"]
-atlas = ExtResource("3_c2bmj")
-region = Rect2(16, 0, 16, 48)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wo7b4"]
 bg_color = Color(0.32156864, 0.2, 0.24705882, 1)
@@ -112,14 +106,14 @@ Button/styles/normal = SubResource("StyleBoxTexture_be048")
 Button/styles/pressed = SubResource("StyleBoxTexture_ak11l")
 Label/font_sizes/font_size = 16
 Label/fonts/font = ExtResource("1_ce683")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_ce683")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_op4kc")
 ScrollContainer/icons/scroll_hint_vertical = SubResource("GradientTexture1D_xf2eu")
 VScrollBar/styles/grabber = SubResource("StyleBoxTexture_xfnce")
 VScrollBar/styles/grabber_highlight = SubResource("StyleBoxTexture_8ucro")
 VScrollBar/styles/grabber_pressed = SubResource("StyleBoxTexture_8ucro")
-VScrollBar/styles/scroll = SubResource("StyleBoxTexture_1o38l")
-VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_cbejd")
-VSlider/icons/grabber = SubResource("AtlasTexture_xf2eu")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_c2bmj")
+VSlider/icons/grabber = SubResource("AtlasTexture_sn432")
 VSlider/icons/grabber_highlight = SubResource("AtlasTexture_ak11l")
-VSlider/icons/tick = SubResource("AtlasTexture_xfnce")
 VSlider/styles/grabber_area = SubResource("StyleBoxFlat_wo7b4")
 VSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_8ucro")
