@@ -6,3 +6,5 @@ res://UI/Theme/Tienda.tres
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
 res://UI/Tienda/Tienda_ui.tscn
 res://Commons/Componentes/Core/EnergiaComponente.gd
+res://Entidades/Maquina Expendedora/maquina_expendedora.gd
+res://Entidades/Maquina Expendedora/MaquinaExpendedora.tscn

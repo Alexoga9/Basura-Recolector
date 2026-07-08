@@ -1,5 +1,6 @@
 extends StaticBody2D
 
+@export var precio: int = 50
 @export var consumible: PackedScene
 var jugador
 @onready var audio = %audio
@@ -25,10 +26,12 @@ func _on_trigger_jugador_body_exited(body):
 
 func dispensar():
 	if Input.is_action_just_pressed("Interaccion") and jugador != null:
-		spawnear()
-		audio.play()
+		if Dinero.dinero >= precio:
+			spawnear()
+			audio.play()
+			Dinero.gastar(precio)
 
-		print("Toma we")
+			print("Te costo el honguito we, te queda "+ str(Dinero.dinero))
 
 
 func spawnear():
