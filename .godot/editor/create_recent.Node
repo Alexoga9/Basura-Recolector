@@ -1,9 +1,9 @@
+Timer
 Logica_Mejora
 HBoxContainer
 Control
 NinePatchRect
 TextureRect
-Timer
 AudioStreamPlayer
 Sprite2D
 CollisionShape2D

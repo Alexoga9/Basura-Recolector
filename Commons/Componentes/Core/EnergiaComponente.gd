@@ -5,6 +5,7 @@ class_name EnergiaComponente extends Node
 signal cansado
 signal valor_energia_cambiado(nuevo_valor: float)
 signal valor_maximo_energia_cambiado(nuevo_max: float)
+@onready var recarga_lenta: Timer = %"Recarga lenta"
 
 @export var es_jugador: bool = false
 
@@ -40,6 +41,7 @@ func _ready():
 	_inicializado = true
 	# NO emitir señales aquí, usar call_deferred para dar tiempo a que todo se conecte
 	call_deferred("_emitir_valores_iniciales")
+	cansado.connect(activar_timer)
 
 	energia = energia_maxima
 
@@ -95,3 +97,14 @@ func frames_de_energia_inagotable():
 
 func _on_hurtbox_agotamiento_recibido(agotamiento: float):
 	agotar(agotamiento)
+
+
+func activar_timer():
+	recarga_lenta.start()
+
+
+func _on_recarga_lenta_timeout():
+	if energia < 2:
+		recuperar_por_segundo(1)
+	elif energia == 2:
+		recarga_lenta.stop()

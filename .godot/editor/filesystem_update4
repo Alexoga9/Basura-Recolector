@@ -5,3 +5,4 @@ res://Entidades/Jugador/Jugador.tscn
 res://UI/Theme/Tienda.tres
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
 res://UI/Tienda/Tienda_ui.tscn
+res://Commons/Componentes/Core/EnergiaComponente.gd

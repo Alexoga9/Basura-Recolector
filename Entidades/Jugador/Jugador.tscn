@@ -175,11 +175,16 @@ unique_name_in_owner = true
 unique_name_in_owner = true
 script = ExtResource("1_b2vdw")
 es_jugador = true
+energia = 0.0
 
 [node name="Agotamiento" type="Node" parent="Componentes/EnergiaComponente" unique_id=1343825619 node_paths=PackedStringArray("vida")]
 script = ExtResource("4_qtgc7")
 vida = NodePath("..")
 metadata/_custom_type_script = "uid://c313hyi3lxct"
+
+[node name="Recarga lenta" type="Timer" parent="Componentes/EnergiaComponente" unique_id=1022858401]
+unique_name_in_owner = true
+wait_time = 3.0
 
 [node name="InputComponente" type="Node" parent="Componentes" unique_id=391097747]
 unique_name_in_owner = true
@@ -242,6 +247,7 @@ unique_name_in_owner = true
 wait_time = 3.0
 one_shot = true
 
+[connection signal="timeout" from="Componentes/EnergiaComponente/Recarga lenta" to="Componentes/EnergiaComponente" method="_on_recarga_lenta_timeout"]
 [connection signal="area_entered" from="LootAtractor" to="LootAtractor" method="_on_area_entered"]
 [connection signal="area_entered" from="Loot Collector" to="Loot Collector" method="_on_area_entered"]
 [connection signal="body_entered" from="Recoge BASURA" to="Recoge BASURA" method="_on_body_entered"]
