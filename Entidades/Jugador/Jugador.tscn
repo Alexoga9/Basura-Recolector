@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://dcfdk4qx3vf0b" path="res://Commons/Componentes/Utilidades/Loot/loot_collector.gd" id="9_6pwru"]
 [ext_resource type="Script" uid="uid://dqiir7o6l4sjy" path="res://Commons/Componentes/Radares/RadarComponente.gd" id="9_y6klq"]
 [ext_resource type="Script" uid="uid://rkib0lob5g81" path="res://Entidades/Jugador/RadarBasura.gd" id="9_yyjpx"]
+[ext_resource type="Shape2D" uid="uid://d1kdw32chtrdq" path="res://Entidades/Jugador/colision recoger basura/circulo_recoge_basura.tres" id="10_yyjpx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b35yh"]
 radius = 4.0
@@ -150,9 +151,6 @@ radius = 12.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_yyjpx"]
 radius = 44.102154
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_y6klq"]
-radius = 22.203604
-
 [node name="Jugador" type="CharacterBody2D" unique_id=1030727379 groups=["Jugador"]]
 collision_mask = 24
 motion_mode = 1
@@ -234,9 +232,10 @@ collision_layer = 0
 collision_mask = 4
 script = ExtResource("9_yyjpx")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Recoge BASURA" unique_id=1853582416]
+[node name="BasuraCollider" type="CollisionShape2D" parent="Recoge BASURA" unique_id=1853582416]
+unique_name_in_owner = true
 position = Vector2(0, 3)
-shape = SubResource("CircleShape2D_y6klq")
+shape = ExtResource("10_yyjpx")
 
 [node name="Timer" type="Timer" parent="Recoge BASURA" unique_id=2060239449]
 unique_name_in_owner = true

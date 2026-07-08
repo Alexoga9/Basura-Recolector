@@ -1,1 +1,7 @@
 res://Entidades/Trituradora/trituradora.gd
+res://UI/Tienda/mejora_rango.gd
+res://Entidades/Jugador/RadarBasura.gd
+res://Entidades/Jugador/Jugador.tscn
+res://UI/Theme/Tienda.tres
+res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
+res://UI/Tienda/Tienda_ui.tscn

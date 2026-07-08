@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://b7q2wajcrdolk" path="res://UI/Tienda/mejoras de habilidades/mejora_resistencia.gd" id="3_7a1nm"]
 [ext_resource type="Script" uid="uid://dxsan7lcfsr3y" path="res://Recursos/DatosHabilidades.gd" id="4_mnc04"]
 [ext_resource type="Script" uid="uid://wjs1ybjpn3rn" path="res://UI/Tienda/mejora_cooldown.gd" id="6_53afc"]
+[ext_resource type="Script" uid="uid://dw1nixlpaty2e" path="res://UI/Tienda/mejora_rango.gd" id="7_mnc04"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6dplc"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -34,6 +35,19 @@ descripcion = "Disminuye el tiempo
 del cooldown"
 precio = 5
 imagen = SubResource("AtlasTexture_65riy")
+metadata/_custom_type_script = "uid://dxsan7lcfsr3y"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_53afc"]
+atlas = ExtResource("3_6dplc")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="Resource" id="Resource_65riy"]
+script = ExtResource("4_mnc04")
+nombre = "Resistencia"
+descripcion = "Mejora el rango de
+recogida de la basura"
+precio = 5
+imagen = SubResource("AtlasTexture_53afc")
 metadata/_custom_type_script = "uid://dxsan7lcfsr3y"
 
 [node name="TiendaUi" type="Control" unique_id=1611773581]
@@ -88,8 +102,14 @@ logica_mejora = NodePath("MejoraCooldown")
 script = ExtResource("6_53afc")
 metadata/_custom_type_script = "uid://cp267s1mgfxd1"
 
-[node name="Panel Tienda3" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1737779067 instance=ExtResource("1_d2rrg")]
+[node name="Rango" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1737779067 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
 layout_mode = 2
+mejora = SubResource("Resource_65riy")
+logica_mejora = NodePath("Mejora Rango")
+
+[node name="Mejora Rango" type="Node" parent="MarginContainer/ScrollContainer/VBoxContainer/Rango" unique_id=848660148]
+script = ExtResource("7_mnc04")
+metadata/_custom_type_script = "uid://cp267s1mgfxd1"
 
 [node name="Panel Tienda4" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1425991459 instance=ExtResource("1_d2rrg")]
 layout_mode = 2

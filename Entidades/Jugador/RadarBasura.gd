@@ -3,6 +3,7 @@ class_name RadarComponenteBasura extends Area2D
 var cuerpos: Array[Basura]
 @onready var jugador: Jugador = $".."
 @onready var timer: Timer = %Timer
+@onready var basura_collider:CollisionShape2D = %BasuraCollider
 
 @export var cooldown_tiempo: float = 3
 var cooldown_activo: bool = false
