@@ -1,5 +1,5 @@
-res://UI/Tienda/Tienda_ui.tscn
-res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
-res://UI/Tienda/mejoras de habilidades/logica_mejora.gd
 res://UI/Tienda/panel_tienda.tscn
+res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
 res://Assets/TileMap/new_tile_set.tres
+res://UI/Theme/tipografia tienda.tres
+res://UI/Tienda/Tienda_ui.tscn

@@ -14,7 +14,8 @@ region = Rect2(48, 64, 16, 16)
 [sub_resource type="Resource" id="Resource_p2tmy"]
 script = ExtResource("4_mnc04")
 nombre = "Resistencia"
-descripcion = "Mejora la cantidad de energia maxima"
+descripcion = "Mejora la cantidad la
+de energia maxima"
 precio = 5
 imagen = SubResource("AtlasTexture_6dplc")
 metadata/_custom_type_script = "uid://dxsan7lcfsr3y"
@@ -26,7 +27,8 @@ region = Rect2(48, 32, 16, 16)
 [sub_resource type="Resource" id="Resource_upi7f"]
 script = ExtResource("4_mnc04")
 nombre = "Cooldown"
-descripcion = "Disminuye el tiempo de cooldown entre recogidas"
+descripcion = "Disminuye el tiempo 
+del cooldown"
 precio = 5
 imagen = SubResource("AtlasTexture_65riy")
 metadata/_custom_type_script = "uid://dxsan7lcfsr3y"
@@ -49,10 +51,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 60
-theme_override_constants/margin_top = 50
-theme_override_constants/margin_right = 60
-theme_override_constants/margin_bottom = 50
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 25
 
 [node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer" unique_id=751276087]
 layout_mode = 2

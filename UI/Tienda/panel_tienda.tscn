@@ -5,6 +5,52 @@
 [ext_resource type="Texture2D" uid="uid://cbgbirmqb5755" path="res://Assets/marco tienda.png" id="2_3e1ft"]
 [ext_resource type="Resource" uid="uid://dklrgm0gwnvn1" path="res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres" id="2_pgqec"]
 [ext_resource type="Texture2D" uid="uid://due6mtxcwadhu" path="res://Assets/Inventario/Items.png" id="4_wcpre"]
+[ext_resource type="LabelSettings" uid="uid://crqcrwgjb38h3" path="res://UI/Theme/tipografia tienda.tres" id="6_ahgl1"]
+[ext_resource type="FontFile" uid="uid://b0npykajpdagi" path="res://Assets/HexFont16pix.ttf" id="7_be048"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vehtn"]
+load_path = "res://.godot/imported/marco tienda.png-44704895ee92af5e2e32ada2f35bf46f.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xf2eu"]
+content_margin_top = 0.0
+texture = SubResource("CompressedTexture2D_vehtn")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+modulate_color = Color(0.43211025, 0.43211025, 0.4321102, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_be048"]
+load_path = "res://.godot/imported/marco tienda.png-44704895ee92af5e2e32ada2f35bf46f.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vehtn"]
+content_margin_top = 0.0
+texture = SubResource("CompressedTexture2D_be048")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+modulate_color = Color(0.6645207, 0.66387045, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_be048"]
+content_margin_top = 0.0
+texture = ExtResource("2_3e1ft")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xf2eu"]
+load_path = "res://.godot/imported/marco tienda.png-44704895ee92af5e2e32ada2f35bf46f.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ak11l"]
+content_margin_top = 0.0
+texture = SubResource("CompressedTexture2D_xf2eu")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+modulate_color = Color(0.9999991, 0.9906611, 0.51251674, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ahgl1"]
 texture = ExtResource("2_3e1ft")
@@ -14,8 +60,13 @@ expand_margin_right = 4.0
 expand_margin_bottom = 6.0
 
 [sub_resource type="Theme" id="Theme_6k6d4"]
+Button/constants/outline_size = 2
 Button/font_sizes/font_size = 16
 Button/fonts/font = ExtResource("1_3e1ft")
+Button/styles/disabled = SubResource("StyleBoxTexture_xf2eu")
+Button/styles/hover = SubResource("StyleBoxTexture_vehtn")
+Button/styles/normal = SubResource("StyleBoxTexture_be048")
+Button/styles/pressed = SubResource("StyleBoxTexture_ak11l")
 Label/font_sizes/font_size = 16
 Label/fonts/font = ExtResource("1_3e1ft")
 Panel/styles/panel = SubResource("StyleBoxTexture_ahgl1")
@@ -29,26 +80,40 @@ atlas = ExtResource("4_wcpre")
 region = Rect2(96, 0, 16, 16)
 
 [node name="Panel Tienda" type="Control" unique_id=1195401960]
-custom_minimum_size = Vector2(0, 80)
+custom_minimum_size = Vector2(0, 64)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
 theme = SubResource("Theme_6k6d4")
 script = ExtResource("1_6k6d4")
 mejora = ExtResource("2_pgqec")
 
-[node name="Panel" type="Panel" parent="." unique_id=1594233160]
+[node name="Panel" type="Control" parent="." unique_id=1753668937]
+custom_minimum_size = Vector2(112, 64)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Panel" unique_id=1602948107]
+custom_minimum_size = Vector2(112, 64)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_3e1ft")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 6
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=658394005]
 layout_mode = 1
@@ -57,105 +122,182 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 70
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 70
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer" unique_id=581737212]
+layout_direction = 4
 layout_mode = 2
 size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 10
 alignment = 1
 
 [node name="imagen" type="TextureRect" parent="Panel/MarginContainer/HBoxContainer" unique_id=1419358289]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture = SubResource("AtlasTexture_wcpre")
 stretch_mode = 3
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="Panel/MarginContainer/HBoxContainer" unique_id=715673161]
+custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
 alignment = 1
 
 [node name="nombre" type="Label" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer3" unique_id=124324113]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 0
 text = "Nombre"
+label_settings = ExtResource("6_ahgl1")
 
 [node name="linea" type="ColorRect" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer3" unique_id=209486722]
 unique_name_in_owner = true
+visible = false
 custom_minimum_size = Vector2(0, 1)
 layout_mode = 2
 
-[node name="descripcion" type="Label" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer3" unique_id=1624348241]
-unique_name_in_owner = true
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer3" unique_id=1190870895]
 layout_mode = 2
+size_flags_vertical = 3
+
+[node name="descripcion" type="Label" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer2" unique_id=1624348241]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("7_be048")
 text = "Descricion
 Aqui
+aaaa"
+label_settings = ExtResource("6_ahgl1")
 
-
-"
+[node name="nivel" type="Label" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer2" unique_id=2044466936]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.98039216, 1, 0.17254902, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("7_be048")
+theme_override_font_sizes/font_size = 16
+text = "Nivel 1"
+horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer3" unique_id=1245556182]
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/separation = 1
 
 [node name="barra" type="ProgressBar" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer" unique_id=1135561093]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 5)
+custom_minimum_size = Vector2(120, 5)
 layout_mode = 2
 size_flags_horizontal = 3
 max_value = 10.0
 step = 1.0
+page = 0.735
+value = 8.0
 show_percentage = false
-
-[node name="nivel" type="Label" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer" unique_id=1984587817]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Nivel 1"
-horizontal_alignment = 1
 
 [node name="Control" type="Control" parent="Panel/MarginContainer/HBoxContainer" unique_id=1890556930]
 visible = false
 layout_mode = 2
-size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.58
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/HBoxContainer" unique_id=2022160989]
 layout_mode = 2
 size_flags_vertical = 4
+theme_override_constants/separation = 5
 
 [node name="precio" type="Label" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer" unique_id=95191658]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 4
 text = "Nombre"
+label_settings = ExtResource("6_ahgl1")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="boton" type="Button" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer" unique_id=257881978]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Button"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="Panel/MarginContainer/HBoxContainer" unique_id=1979427470]
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_constants/separation = 1
 
 [node name="Beneficio" type="Label" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=1402109072]
 layout_mode = 2
+size_flags_horizontal = 4
 text = "Nombre"
+label_settings = ExtResource("6_ahgl1")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=48060192]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture = SubResource("AtlasTexture_3e1ft")
 
 [node name="Actual" type="Label" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=1462804594]
 layout_mode = 2
+size_flags_horizontal = 4
 text = "Nombre"
+label_settings = ExtResource("6_ahgl1")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="NinePatchRect3" type="NinePatchRect" parent="." unique_id=30537437]
+visible = false
+custom_minimum_size = Vector2(112, 64)
+layout_mode = 0
+offset_left = 76.0
+offset_top = 75.0
+offset_right = 283.0
+offset_bottom = 143.0
+texture = ExtResource("2_3e1ft")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 6
+
+[node name="NinePatchRect4" type="NinePatchRect" parent="." unique_id=1578096268]
+visible = false
+custom_minimum_size = Vector2(112, 64)
+layout_mode = 0
+offset_left = 77.0
+offset_top = 146.0
+offset_right = 284.0
+offset_bottom = 214.0
+texture = ExtResource("2_3e1ft")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 6
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="." unique_id=322995021]
+visible = false
+custom_minimum_size = Vector2(112, 64)
+layout_mode = 0
+offset_left = 126.0
+offset_top = 105.0
+offset_right = 238.0
+offset_bottom = 173.0
+texture = ExtResource("2_3e1ft")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 6
 
 [connection signal="pressed" from="Panel/MarginContainer/HBoxContainer/VBoxContainer/boton" to="." method="_on_boton_pressed"]

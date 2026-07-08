@@ -1,4 +1,6 @@
 HBoxContainer
+Control
+NinePatchRect
 TextureRect
 Logica_Mejora
 Timer
@@ -10,6 +12,3 @@ Node
 VBoxContainer
 BarraDeProgreso
 MarginContainer
-CenterContainer
-Panel
-Control
