@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="LootDefinicion" format=3 uid="uid://gi5lwe4ui2dd"]
+
+[ext_resource type="AudioStream" uid="uid://dr7bho43atgf6" path="res://Assets/tornado audio.mp3" id="1_42msy"]
+[ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="2_dekud"]
+[ext_resource type="Texture2D" uid="uid://dut0438runrb" path="res://Assets/Inventario/caja.png" id="3_a6rso"]
+
+[resource]
+script = ExtResource("2_dekud")
+id = "Basura"
+nombre = "Basura"
+audio = ExtResource("1_42msy")
+sprite = ExtResource("3_a6rso")
+cantidad_maxima = 3
+valor = 100
+metadata/_custom_type_script = "uid://dnu2r5yw53pto"

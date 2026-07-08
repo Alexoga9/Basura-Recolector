@@ -1,12 +1,8 @@
-res://Entidades/Trituradora/trituradora.gd
-res://UI/Tienda/mejora_rango.gd
-res://Entidades/Jugador/RadarBasura.gd
-res://Entidades/Jugador/Jugador.tscn
+res://UI/Tienda/Tienda_ui.tscn
 res://UI/Theme/Tienda.tres
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
-res://UI/Tienda/Tienda_ui.tscn
-res://Commons/Componentes/Core/EnergiaComponente.gd
-res://Entidades/Maquina Expendedora/maquina_expendedora.gd
-res://Entidades/Maquina Expendedora/MaquinaExpendedora.tscn
-res://UI/HUD/barras_hud.tscn
-res://Commons/Componentes/Utilidades/Inventario/Inventario.tscn
+res://UI/Tienda/mejora_peso.gd
+res://Escenarios/mundo.tscn
+res://Entidades/Basura/basura_data.tres
+res://Entidades/Basura/Basura.tscn
+res://Entidades/Jugador/RadarBasura.gd

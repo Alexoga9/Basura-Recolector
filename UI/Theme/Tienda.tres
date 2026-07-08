@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://dryil6kc3yx5s" path="res://Assets/DobleHex2.ttf" id="1_ce683"]
 [ext_resource type="Texture2D" uid="uid://cbgbirmqb5755" path="res://Assets/marco tienda.png" id="2_op4kc"]
-[ext_resource type="Texture2D" uid="uid://bufyh2pfyydu4" path="res://Assets/jugador/sliders.png" id="3_c2bmj"]
+[ext_resource type="Texture2D" uid="uid://bufyh2pfyydu4" path="res://Assets/jugador/sliders.png" id="3_ce683"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vehtn"]
 load_path = "res://.godot/imported/marco tienda.png-44704895ee92af5e2e32ada2f35bf46f.ctex"
@@ -61,16 +61,18 @@ colors = PackedColorArray(0.88356674, 3.783077e-05, 0.64343673, 1, 1, 1, 1, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_xf2eu"]
 gradient = SubResource("Gradient_vehtn")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vehtn"]
-atlas = ExtResource("3_c2bmj")
+[sub_resource type="AtlasTexture" id="AtlasTexture_op4kc"]
+atlas = ExtResource("3_ce683")
 region = Rect2(0, 48, 16, 16)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xfnce"]
-texture = SubResource("AtlasTexture_vehtn")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ebfya"]
+texture = SubResource("AtlasTexture_op4kc")
 texture_margin_top = 15.0
+texture_margin_bottom = 15.0
+draw_center = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wo7b4"]
-atlas = ExtResource("3_c2bmj")
+atlas = ExtResource("3_ce683")
 region = Rect2(16, 48, 16, 16)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ucro"]
@@ -83,11 +85,9 @@ bg_color = Color(0.32156864, 0.2, 0.24705882, 1)
 corner_detail = 1
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sn432"]
-atlas = ExtResource("3_c2bmj")
 region = Rect2(0, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ak11l"]
-atlas = ExtResource("3_c2bmj")
 region = Rect2(16, 48, 16, 16)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wo7b4"]
@@ -109,7 +109,7 @@ Label/fonts/font = ExtResource("1_ce683")
 ProgressBar/styles/background = SubResource("StyleBoxFlat_ce683")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_op4kc")
 ScrollContainer/icons/scroll_hint_vertical = SubResource("GradientTexture1D_xf2eu")
-VScrollBar/styles/grabber = SubResource("StyleBoxTexture_xfnce")
+VScrollBar/styles/grabber = SubResource("StyleBoxTexture_ebfya")
 VScrollBar/styles/grabber_highlight = SubResource("StyleBoxTexture_8ucro")
 VScrollBar/styles/grabber_pressed = SubResource("StyleBoxTexture_8ucro")
 VScrollBar/styles/scroll = SubResource("StyleBoxFlat_c2bmj")

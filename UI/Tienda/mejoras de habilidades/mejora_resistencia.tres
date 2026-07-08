@@ -5,12 +5,13 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_65riy"]
 atlas = ExtResource("1_cxbg5")
-region = Rect2(48, 32, 16, 16)
+region = Rect2(96, 32, 16, 16)
 
 [resource]
 script = ExtResource("1_7673l")
-nombre = "Resistencia"
-descripcion = "Mejora la cantidad de energia maxima"
+nombre = "Peso"
+descripcion = "Aumenta cuantas 
+basuras puedes recoger"
 precio = 5
 imagen = SubResource("AtlasTexture_65riy")
 metadata/_custom_type_script = "uid://dxsan7lcfsr3y"

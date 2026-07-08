@@ -7,6 +7,8 @@
 [ext_resource type="Script" uid="uid://dxsan7lcfsr3y" path="res://Recursos/DatosHabilidades.gd" id="4_mnc04"]
 [ext_resource type="Script" uid="uid://wjs1ybjpn3rn" path="res://UI/Tienda/mejora_cooldown.gd" id="6_53afc"]
 [ext_resource type="Script" uid="uid://dw1nixlpaty2e" path="res://UI/Tienda/mejora_rango.gd" id="7_mnc04"]
+[ext_resource type="Script" uid="uid://6b1v5c13s27u" path="res://UI/Tienda/mejora_peso.gd" id="8_53afc"]
+[ext_resource type="Resource" uid="uid://gi5lwe4ui2dd" path="res://Entidades/Basura/basura_data.tres" id="9_65riy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6dplc"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -43,7 +45,7 @@ region = Rect2(16, 32, 16, 16)
 
 [sub_resource type="Resource" id="Resource_65riy"]
 script = ExtResource("4_mnc04")
-nombre = "Resistencia"
+nombre = "Rango"
 descripcion = "Mejora el rango de
 recogida de la basura"
 precio = 5
@@ -79,6 +81,7 @@ size_flags_horizontal = 3
 theme_override_colors/scroll_hint_vertical_color = Color(0.6399598, 1.2032688e-06, 0.37516186, 1)
 theme_override_colors/scroll_hint_horizontal_color = Color(8.856058e-06, 0.8675042, 0.71538323, 1)
 theme_override_styles/panel = SubResource("StyleBoxFlat_6dplc")
+scroll_deadzone = 70
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer" unique_id=1078019514]
 layout_mode = 2
@@ -111,8 +114,14 @@ logica_mejora = NodePath("Mejora Rango")
 script = ExtResource("7_mnc04")
 metadata/_custom_type_script = "uid://cp267s1mgfxd1"
 
-[node name="Panel Tienda4" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1425991459 instance=ExtResource("1_d2rrg")]
+[node name="Peso" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1425991459 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
 layout_mode = 2
+logica_mejora = NodePath("MejoraPeso")
+
+[node name="MejoraPeso" type="Node" parent="MarginContainer/ScrollContainer/VBoxContainer/Peso" unique_id=311806662]
+script = ExtResource("8_53afc")
+data_basura = ExtResource("9_65riy")
+metadata/_custom_type_script = "uid://cp267s1mgfxd1"
 
 [node name="Panel Tienda5" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=265702065 instance=ExtResource("1_d2rrg")]
 layout_mode = 2
