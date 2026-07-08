@@ -1,75 +1,11 @@
 [gd_scene format=3 uid="uid://birp1rvjh205r"]
 
-[ext_resource type="FontFile" uid="uid://dryil6kc3yx5s" path="res://Assets/DobleHex2.ttf" id="1_3e1ft"]
 [ext_resource type="Script" uid="uid://chu2pujc70x6e" path="res://UI/Tienda/panel_tienda.gd" id="1_6k6d4"]
 [ext_resource type="Texture2D" uid="uid://cbgbirmqb5755" path="res://Assets/marco tienda.png" id="2_3e1ft"]
 [ext_resource type="Resource" uid="uid://dklrgm0gwnvn1" path="res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres" id="2_pgqec"]
 [ext_resource type="Texture2D" uid="uid://due6mtxcwadhu" path="res://Assets/Inventario/Items.png" id="4_wcpre"]
 [ext_resource type="LabelSettings" uid="uid://crqcrwgjb38h3" path="res://UI/Theme/tipografia tienda.tres" id="6_ahgl1"]
 [ext_resource type="FontFile" uid="uid://b0npykajpdagi" path="res://Assets/HexFont16pix.ttf" id="7_be048"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vehtn"]
-load_path = "res://.godot/imported/marco tienda.png-44704895ee92af5e2e32ada2f35bf46f.ctex"
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xf2eu"]
-content_margin_top = 0.0
-texture = SubResource("CompressedTexture2D_vehtn")
-texture_margin_left = 4.0
-texture_margin_top = 4.0
-texture_margin_right = 4.0
-texture_margin_bottom = 6.0
-modulate_color = Color(0.43211025, 0.43211025, 0.4321102, 1)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_be048"]
-load_path = "res://.godot/imported/marco tienda.png-44704895ee92af5e2e32ada2f35bf46f.ctex"
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vehtn"]
-content_margin_top = 0.0
-texture = SubResource("CompressedTexture2D_be048")
-texture_margin_left = 4.0
-texture_margin_top = 4.0
-texture_margin_right = 4.0
-texture_margin_bottom = 6.0
-modulate_color = Color(0.6645207, 0.66387045, 0, 1)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_be048"]
-content_margin_top = 0.0
-texture = ExtResource("2_3e1ft")
-texture_margin_left = 4.0
-texture_margin_top = 4.0
-texture_margin_right = 4.0
-texture_margin_bottom = 6.0
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xf2eu"]
-load_path = "res://.godot/imported/marco tienda.png-44704895ee92af5e2e32ada2f35bf46f.ctex"
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ak11l"]
-content_margin_top = 0.0
-texture = SubResource("CompressedTexture2D_xf2eu")
-texture_margin_left = 4.0
-texture_margin_top = 4.0
-texture_margin_right = 4.0
-texture_margin_bottom = 6.0
-modulate_color = Color(0.9999991, 0.9906611, 0.51251674, 1)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ahgl1"]
-texture = ExtResource("2_3e1ft")
-expand_margin_left = 4.0
-expand_margin_top = 4.0
-expand_margin_right = 4.0
-expand_margin_bottom = 6.0
-
-[sub_resource type="Theme" id="Theme_6k6d4"]
-Button/constants/outline_size = 2
-Button/font_sizes/font_size = 16
-Button/fonts/font = ExtResource("1_3e1ft")
-Button/styles/disabled = SubResource("StyleBoxTexture_xf2eu")
-Button/styles/hover = SubResource("StyleBoxTexture_vehtn")
-Button/styles/normal = SubResource("StyleBoxTexture_be048")
-Button/styles/pressed = SubResource("StyleBoxTexture_ak11l")
-Label/font_sizes/font_size = 16
-Label/fonts/font = ExtResource("1_3e1ft")
-Panel/styles/panel = SubResource("StyleBoxTexture_ahgl1")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wcpre"]
 atlas = ExtResource("4_wcpre")
@@ -87,7 +23,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_6k6d4")
 script = ExtResource("1_6k6d4")
 mejora = ExtResource("2_pgqec")
 

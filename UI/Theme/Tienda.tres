@@ -1,0 +1,125 @@
+[gd_resource type="Theme" format=3 uid="uid://ccuc20xm80owq"]
+
+[ext_resource type="FontFile" uid="uid://dryil6kc3yx5s" path="res://Assets/DobleHex2.ttf" id="1_ce683"]
+[ext_resource type="Texture2D" uid="uid://cbgbirmqb5755" path="res://Assets/marco tienda.png" id="2_op4kc"]
+[ext_resource type="Texture2D" uid="uid://bufyh2pfyydu4" path="res://Assets/jugador/sliders.png" id="3_c2bmj"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vehtn"]
+load_path = "res://.godot/imported/marco tienda.png-44704895ee92af5e2e32ada2f35bf46f.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xf2eu"]
+content_margin_top = 0.0
+texture = SubResource("CompressedTexture2D_vehtn")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+modulate_color = Color(0.43211025, 0.43211025, 0.4321102, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_be048"]
+load_path = "res://.godot/imported/marco tienda.png-44704895ee92af5e2e32ada2f35bf46f.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vehtn"]
+content_margin_top = 0.0
+texture = SubResource("CompressedTexture2D_be048")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+modulate_color = Color(0.6645207, 0.66387045, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_be048"]
+content_margin_top = 0.0
+texture = ExtResource("2_op4kc")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xf2eu"]
+load_path = "res://.godot/imported/marco tienda.png-44704895ee92af5e2e32ada2f35bf46f.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ak11l"]
+content_margin_top = 0.0
+texture = SubResource("CompressedTexture2D_xf2eu")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+modulate_color = Color(0.9999991, 0.9906611, 0.51251674, 1)
+
+[sub_resource type="Gradient" id="Gradient_vehtn"]
+offsets = PackedFloat32Array(0.014344262, 1)
+colors = PackedColorArray(0.88356674, 3.783077e-05, 0.64343673, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_xf2eu"]
+gradient = SubResource("Gradient_vehtn")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vehtn"]
+atlas = ExtResource("3_c2bmj")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xfnce"]
+texture = SubResource("AtlasTexture_vehtn")
+texture_margin_top = 17.0
+region_rect = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wo7b4"]
+atlas = ExtResource("3_c2bmj")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ucro"]
+texture = SubResource("AtlasTexture_wo7b4")
+texture_margin_top = 17.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cbejd"]
+atlas = ExtResource("3_c2bmj")
+region = Rect2(16, 0, 16, 48)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1o38l"]
+texture = SubResource("AtlasTexture_cbejd")
+texture_margin_left = 8.0
+texture_margin_right = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cbejd"]
+bg_color = Color(0.079085626, 0.6847406, 0.6854681, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xf2eu"]
+atlas = ExtResource("3_c2bmj")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ak11l"]
+atlas = ExtResource("3_c2bmj")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfnce"]
+atlas = ExtResource("3_c2bmj")
+region = Rect2(16, 0, 16, 48)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wo7b4"]
+bg_color = Color(0.32156864, 0.2, 0.24705882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ucro"]
+bg_color = Color(0.7411765, 0.41568628, 0.38431373, 1)
+
+[resource]
+Button/constants/outline_size = 2
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("1_ce683")
+Button/styles/disabled = SubResource("StyleBoxTexture_xf2eu")
+Button/styles/hover = SubResource("StyleBoxTexture_vehtn")
+Button/styles/normal = SubResource("StyleBoxTexture_be048")
+Button/styles/pressed = SubResource("StyleBoxTexture_ak11l")
+Label/font_sizes/font_size = 16
+Label/fonts/font = ExtResource("1_ce683")
+ScrollContainer/icons/scroll_hint_vertical = SubResource("GradientTexture1D_xf2eu")
+VScrollBar/styles/grabber = SubResource("StyleBoxTexture_xfnce")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxTexture_8ucro")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxTexture_8ucro")
+VScrollBar/styles/scroll = SubResource("StyleBoxTexture_1o38l")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_cbejd")
+VSlider/icons/grabber = SubResource("AtlasTexture_xf2eu")
+VSlider/icons/grabber_highlight = SubResource("AtlasTexture_ak11l")
+VSlider/icons/tick = SubResource("AtlasTexture_xfnce")
+VSlider/styles/grabber_area = SubResource("StyleBoxFlat_wo7b4")
+VSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_8ucro")

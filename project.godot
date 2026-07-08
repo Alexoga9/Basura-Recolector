@@ -50,6 +50,11 @@ folder_colors={
 "res://Utilidades/": "purple"
 }
 
+[gui]
+
+theme/custom="uid://ccuc20xm80owq"
+theme/custom_font="uid://dryil6kc3yx5s"
+
 [input]
 
 arriba={

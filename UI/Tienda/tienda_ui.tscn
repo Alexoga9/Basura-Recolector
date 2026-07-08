@@ -7,6 +7,9 @@
 [ext_resource type="Script" uid="uid://dxsan7lcfsr3y" path="res://Recursos/DatosHabilidades.gd" id="4_mnc04"]
 [ext_resource type="Script" uid="uid://wjs1ybjpn3rn" path="res://UI/Tienda/mejora_cooldown.gd" id="6_53afc"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6dplc"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_6dplc"]
 atlas = ExtResource("3_6dplc")
 region = Rect2(48, 64, 16, 16)
@@ -59,6 +62,9 @@ theme_override_constants/margin_bottom = 25
 [node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer" unique_id=751276087]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/scroll_hint_vertical_color = Color(0.6399598, 1.2032688e-06, 0.37516186, 1)
+theme_override_colors/scroll_hint_horizontal_color = Color(8.856058e-06, 0.8675042, 0.71538323, 1)
+theme_override_styles/panel = SubResource("StyleBoxFlat_6dplc")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer" unique_id=1078019514]
 layout_mode = 2
