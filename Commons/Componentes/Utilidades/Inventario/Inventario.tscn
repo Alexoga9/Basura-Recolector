@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://bxxsc2sciuuu3"]
 
 [ext_resource type="Script" uid="uid://d2f0m5j1ciuls" path="res://Utilidades/Autoloads/inventario.gd" id="1_ftg80"]
-[ext_resource type="Script" uid="uid://cvdailrt3pbqn" path="res://Commons/Componentes/Utilidades/Inventario/InventarioSlot.gd" id="1_rkrsp"]
 [ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="2_ftg80"]
 [ext_resource type="Resource" uid="uid://dmky67t6umj3u" path="res://Entidades/Loot/loots/rs_piedra.tres" id="3_hdjn2"]
 [ext_resource type="Resource" uid="uid://5k76mbciamak" path="res://Entidades/Loot/loots/re_madera.tres" id="4_k5oni"]
 [ext_resource type="Texture2D" uid="uid://q5jrk63qij1t" path="res://Assets/image.png" id="6_hdjn2"]
-[ext_resource type="Texture2D" uid="uid://gqtxmyvoyday" path="res://Assets/Inventario/heno.png" id="7_jjjfg"]
+[ext_resource type="PackedScene" uid="uid://ca3oktj6ebp0n" path="res://Commons/Componentes/Utilidades/Inventario/slot_de_inventario.tscn" id="7_l1s3s"]
 [ext_resource type="PackedScene" uid="uid://mn8abrepyvev" path="res://UI/HUD/barras_hud.tscn" id="8_2kcwo"]
-[ext_resource type="LabelSettings" uid="uid://crqcrwgjb38h3" path="res://UI/Theme/tipografia tienda.tres" id="8_l1s3s"]
+[ext_resource type="PackedScene" uid="uid://d2fe2drk13sjm" path="res://Commons/Componentes/Utilidades/Inventario/slot_de_dinero.tscn" id="9_2kcwo"]
+[ext_resource type="Texture2D" uid="uid://cj67bs1scsaiw" path="res://Assets/Inventario/moneda.png" id="10_l1s3s"]
 
 [node name="Inventario" type="Control" unique_id=615073819]
 layout_mode = 3
@@ -17,10 +17,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_ftg80")
 items = Array[ExtResource("2_ftg80")]([ExtResource("3_hdjn2"), ExtResource("4_k5oni")])
 
 [node name="Referencia" type="Sprite2D" parent="." unique_id=1356842247]
+visible = false
 position = Vector2(186.00002, 115.00001)
 scale = Vector2(0.1989418, 0.23498422)
 texture = ExtResource("6_hdjn2")
@@ -39,7 +41,6 @@ offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
-script = ExtResource("1_rkrsp")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="InventarioSlot" unique_id=170167109]
 layout_mode = 1
@@ -53,68 +54,28 @@ theme_override_constants/separation = 10
 [node name="HBoxContainer" type="HBoxContainer" parent="InventarioSlot/VBoxContainer" unique_id=98750735]
 layout_mode = 2
 
-[node name="Contenedor" type="HBoxContainer" parent="InventarioSlot/VBoxContainer/HBoxContainer" unique_id=1938198506]
+[node name="SlotDeInventario" parent="InventarioSlot/VBoxContainer/HBoxContainer" unique_id=780189116 instance=ExtResource("7_l1s3s")]
 layout_mode = 2
+id_a_recibir = "piedra"
 
-[node name="TextureRect" type="TextureRect" parent="InventarioSlot/VBoxContainer/HBoxContainer/Contenedor" unique_id=1078608498]
+[node name="SlotDeInventario2" parent="InventarioSlot/VBoxContainer/HBoxContainer" unique_id=26183003 instance=ExtResource("7_l1s3s")]
 layout_mode = 2
-texture = ExtResource("7_jjjfg")
-
-[node name="Label" type="Label" parent="InventarioSlot/VBoxContainer/HBoxContainer/Contenedor" unique_id=1359459983]
-layout_mode = 2
-text = "94"
-label_settings = ExtResource("8_l1s3s")
-
-[node name="Contenedor2" type="HBoxContainer" parent="InventarioSlot/VBoxContainer/HBoxContainer" unique_id=316051610]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="InventarioSlot/VBoxContainer/HBoxContainer/Contenedor2" unique_id=89801839]
-layout_mode = 2
-texture = ExtResource("7_jjjfg")
-
-[node name="Label" type="Label" parent="InventarioSlot/VBoxContainer/HBoxContainer/Contenedor2" unique_id=890496484]
-layout_mode = 2
-text = "94"
-label_settings = ExtResource("8_l1s3s")
+id_a_recibir = "madera"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="InventarioSlot/VBoxContainer" unique_id=1953262084]
 layout_mode = 2
 
-[node name="Contenedor" type="HBoxContainer" parent="InventarioSlot/VBoxContainer/HBoxContainer2" unique_id=613466750]
+[node name="SlotDeInventario" parent="InventarioSlot/VBoxContainer/HBoxContainer2" unique_id=1457160244 instance=ExtResource("7_l1s3s")]
+visible = false
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="InventarioSlot/VBoxContainer/HBoxContainer2/Contenedor" unique_id=1261546726]
-layout_mode = 2
-texture = ExtResource("7_jjjfg")
-
-[node name="Label" type="Label" parent="InventarioSlot/VBoxContainer/HBoxContainer2/Contenedor" unique_id=524293303]
-layout_mode = 2
-text = "94"
-label_settings = ExtResource("8_l1s3s")
-
-[node name="Contenedor2" type="HBoxContainer" parent="InventarioSlot/VBoxContainer/HBoxContainer2" unique_id=1123309123]
+[node name="SlotDeInventario2" parent="InventarioSlot/VBoxContainer/HBoxContainer2" unique_id=1514962989 instance=ExtResource("7_l1s3s")]
+visible = false
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="InventarioSlot/VBoxContainer/HBoxContainer2/Contenedor2" unique_id=618073608]
+[node name="SlotDeInventario3" parent="InventarioSlot/VBoxContainer/HBoxContainer2" unique_id=1678040771 instance=ExtResource("7_l1s3s")]
+visible = false
 layout_mode = 2
-texture = ExtResource("7_jjjfg")
-
-[node name="Label" type="Label" parent="InventarioSlot/VBoxContainer/HBoxContainer2/Contenedor2" unique_id=263719253]
-layout_mode = 2
-text = "94"
-label_settings = ExtResource("8_l1s3s")
-
-[node name="Contenedor3" type="HBoxContainer" parent="InventarioSlot/VBoxContainer/HBoxContainer2" unique_id=641213658]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="InventarioSlot/VBoxContainer/HBoxContainer2/Contenedor3" unique_id=1583791991]
-layout_mode = 2
-texture = ExtResource("7_jjjfg")
-
-[node name="Label" type="Label" parent="InventarioSlot/VBoxContainer/HBoxContainer2/Contenedor3" unique_id=768399823]
-layout_mode = 2
-text = "94"
-label_settings = ExtResource("8_l1s3s")
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="InventarioSlot/VBoxContainer" unique_id=638117693]
 layout_mode = 2
@@ -124,15 +85,6 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Contenedor" type="HBoxContainer" parent="InventarioSlot/VBoxContainer/HBoxContainer3" unique_id=1659590310]
+[node name="SlotDeDinero" parent="InventarioSlot/VBoxContainer/HBoxContainer3" unique_id=927491836 instance=ExtResource("9_2kcwo")]
 layout_mode = 2
-size_flags_horizontal = 8
-
-[node name="TextureRect" type="TextureRect" parent="InventarioSlot/VBoxContainer/HBoxContainer3/Contenedor" unique_id=14492682]
-layout_mode = 2
-texture = ExtResource("7_jjjfg")
-
-[node name="Label" type="Label" parent="InventarioSlot/VBoxContainer/HBoxContainer3/Contenedor" unique_id=1547106280]
-layout_mode = 2
-text = "94"
-label_settings = ExtResource("8_l1s3s")
+textura = ExtResource("10_l1s3s")

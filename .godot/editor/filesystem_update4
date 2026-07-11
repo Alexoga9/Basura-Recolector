@@ -1,10 +1,6 @@
-res://UI/HUD/barra_energia.gd
-res://UI/HUD/barras_hud.tscn
+res://Assets/TileMap/Map.tscn
 res://UI/Theme/Tienda.tres
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
-res://UI/HUD/barra_de_progreso.gd
-res://Entidades/Jugador/Jugador.tscn
-res://Entidades/Basura/bolsa_de_basura.tres
-res://Commons/Componentes/Movimiento/InputComponente.gd
-res://Entidades/Jugador/lanza_basura.gd
-res://Entidades/Trituradora/trituradora.gd
+res://Commons/Componentes/Utilidades/Inventario/Inventario.tscn
+res://Escenarios/mundo.tscn
+res://Entidades/Maquina Expendedora/MaquinaExpendedora.tscn

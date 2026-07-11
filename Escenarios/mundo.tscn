@@ -9,12 +9,15 @@
 [ext_resource type="PackedScene" uid="uid://dqw5d3i3m8nac" path="res://UI/Tienda/Tienda_ui.tscn" id="7_8njad"]
 [ext_resource type="PackedScene" uid="uid://bujsrbbq0elhi" path="res://Entidades/Tienda/tienda.tscn" id="8_8njad"]
 [ext_resource type="PackedScene" uid="uid://b8u0pprb4t2sj" path="res://Entidades/Trituradora/trituradora.tscn" id="8_u72it"]
-[ext_resource type="PackedScene" uid="uid://mn8abrepyvev" path="res://UI/HUD/barras_hud.tscn" id="8_yw7ml"]
+[ext_resource type="PackedScene" uid="uid://cpdgtf2pq7lh" path="res://Assets/TileMap/Map.tscn" id="11_qc3uw"]
 [ext_resource type="PackedScene" uid="uid://cjlmg6cpg7g6g" path="res://Entidades/Maquina Expendedora/MaquinaExpendedora.tscn" id="11_tyb7f"]
 
 [node name="Mundo" type="Node" unique_id=283243708]
 
+[node name="Map" parent="." unique_id=1847593572 instance=ExtResource("11_qc3uw")]
+
 [node name="Icon" type="Sprite2D" parent="." unique_id=1884187704]
+visible = false
 modulate = Color(0.39283404, 0.39437628, 0.40885204, 1)
 position = Vector2(583, 329.5)
 scale = Vector2(9.09375, 5.1328125)
@@ -103,14 +106,12 @@ position = Vector2(746, 238)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2010886703]
 
-[node name="Barras HUD" parent="CanvasLayer" unique_id=2073494253 instance=ExtResource("8_yw7ml")]
-offset_right = -281.0
-offset_bottom = -135.0
-
 [node name="TiendaUi" parent="CanvasLayer" unique_id=1611773581 instance=ExtResource("7_8njad")]
-
-[node name="Control" parent="CanvasLayer" unique_id=615073819 instance=ExtResource("1_vttfp")]
 visible = false
+z_index = 1
+
+[node name="Inventario" parent="CanvasLayer" unique_id=2011210485 instance=ExtResource("1_vttfp")]
+z_index = -1
 
 [node name="Trituradora" parent="." unique_id=1291557497 instance=ExtResource("8_u72it")]
 position = Vector2(577, 239)

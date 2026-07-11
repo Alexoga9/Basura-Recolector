@@ -1,3 +1,5 @@
+res://Assets/TileMap/
+res://Commons/Componentes/Utilidades/Inventario/
 res://Entidades/Basura/
 res://Entidades/Jugador/colision recoger basura/
 res://UI/Theme/
@@ -12,6 +14,5 @@ res://Commons/Componentes/Core/dinero/
 res://Entidades/Trituradora/
 res://
 res://Entidades/Loot/loots/
-res://Commons/Componentes/Utilidades/Inventario/
 res://Utilidades/Autoloads/
 res://Entidades/

@@ -11,8 +11,12 @@
 			"uuid": "a8023536-47a3-4b86-9150-4fafd96ed043",
 			"title": "Todo",
 			"tasks": [
-				"826eae76-0772-4561-a1b9-3657036c180b",
-				"5e8ba825-4e4d-448a-9533-1a793c6081de"
+				"4d3cfc3a-6b1d-4483-83c9-ee3a46fc8a7a",
+				"070b51e4-ea31-4cd9-ae93-246a7c406f1e",
+				"ad010e5c-8ec7-40d6-b87d-5144234c048e",
+				"b5e5166f-10ee-4c60-bc29-d9d67d310514",
+				"9fed1db0-afb5-45cc-9cde-6f076186a6cd",
+				"f172b404-a88b-4c17-a8fa-b4a63cfeb45a"
 			]
 		},
 		{
@@ -23,7 +27,10 @@
 		{
 			"uuid": "b6d91be5-1b3d-4729-b29f-c1aa7cd8f974",
 			"title": "Done",
-			"tasks": []
+			"tasks": [
+				"826eae76-0772-4561-a1b9-3657036c180b",
+				"5e8ba825-4e4d-448a-9533-1a793c6081de"
+			]
 		}
 	],
 	"tasks": [
@@ -37,6 +44,48 @@
 		{
 			"uuid": "5e8ba825-4e4d-448a-9533-1a793c6081de",
 			"title": "Acceder a valor desde el diccionario del inventario",
+			"description": "",
+			"category": "c247e7a7-19bd-4ff3-b436-039cb216ea7a",
+			"steps": []
+		},
+		{
+			"uuid": "4d3cfc3a-6b1d-4483-83c9-ee3a46fc8a7a",
+			"title": "auto tile",
+			"description": "",
+			"category": "c247e7a7-19bd-4ff3-b436-039cb216ea7a",
+			"steps": []
+		},
+		{
+			"uuid": "070b51e4-ea31-4cd9-ae93-246a7c406f1e",
+			"title": "obstaculo",
+			"description": "",
+			"category": "c247e7a7-19bd-4ff3-b436-039cb216ea7a",
+			"steps": []
+		},
+		{
+			"uuid": "ad010e5c-8ec7-40d6-b87d-5144234c048e",
+			"title": "mejorar lanzamiento",
+			"description": "",
+			"category": "c247e7a7-19bd-4ff3-b436-039cb216ea7a",
+			"steps": []
+		},
+		{
+			"uuid": "b5e5166f-10ee-4c60-bc29-d9d67d310514",
+			"title": "skin maquina expendedora",
+			"description": "",
+			"category": "c247e7a7-19bd-4ff3-b436-039cb216ea7a",
+			"steps": []
+		},
+		{
+			"uuid": "9fed1db0-afb5-45cc-9cde-6f076186a6cd",
+			"title": "sistema de interaccion de sprites",
+			"description": "",
+			"category": "c247e7a7-19bd-4ff3-b436-039cb216ea7a",
+			"steps": []
+		},
+		{
+			"uuid": "f172b404-a88b-4c17-a8fa-b4a63cfeb45a",
+			"title": "mejora de basura",
 			"description": "",
 			"category": "c247e7a7-19bd-4ff3-b436-039cb216ea7a",
 			"steps": []
