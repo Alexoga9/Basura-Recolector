@@ -1,14 +1,6 @@
 extends StaticBody2D
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+@onready var audio = %audio
 
 
 func recibir_basura_jugador():
@@ -21,6 +13,7 @@ func recibir_basura_jugador():
 		Dinero.ganar(valor_de_venta)
 		print(str(Dinero.dinero))
 		Inventario.remove_item("Basura", cantidad_basura)
+		audio.play()
 
 
 func recibir_basura_fisica():
@@ -37,3 +30,4 @@ func _on_trigger_basura_body_entered(body):
 	if body.is_in_group("Basura"):
 		Dinero.ganar(body.valor)
 		body.collect()
+		audio.play()

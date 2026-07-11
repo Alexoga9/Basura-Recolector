@@ -8,6 +8,7 @@ extends Control
 @onready var barra = %barra
 @onready var boton = %boton
 @onready var label_precio = %precio
+@onready var audio = %audio
 
 @export var mejora: DatosHabilidades
 @export var logica_mejora: Logica_Mejora
@@ -66,3 +67,4 @@ func _actualizar_barra_de_progreso():
 
 func _on_boton_pressed():
 	_comprar_mejora()
+	audio.play()

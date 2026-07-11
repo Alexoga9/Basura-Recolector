@@ -2,3 +2,8 @@ res://Entidades/Maquina Expendedora/MaquinaExpendedora.tscn
 res://UI/Theme/Tienda.tres
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
 res://Entidades/Maquina Expendedora/maquina_expendedora.gd
+res://Escenarios/mundo.tscn
+res://Entidades/Trituradora/trituradora.tscn
+res://Entidades/Trituradora/trituradora.gd
+res://UI/Tienda/panel_tienda.tscn
+res://UI/Tienda/panel_tienda.gd

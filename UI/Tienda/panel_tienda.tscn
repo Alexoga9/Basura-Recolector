@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://due6mtxcwadhu" path="res://Assets/Inventario/Items.png" id="4_wcpre"]
 [ext_resource type="LabelSettings" uid="uid://crqcrwgjb38h3" path="res://UI/Theme/tipografia tienda.tres" id="6_ahgl1"]
 [ext_resource type="FontFile" uid="uid://b0npykajpdagi" path="res://Assets/HexFont16pix.ttf" id="7_be048"]
+[ext_resource type="AudioStream" uid="uid://cjghok5vlof2n" path="res://Assets/drop-coin.mp3" id="7_vehtn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wcpre"]
 atlas = ExtResource("4_wcpre")
@@ -165,6 +166,10 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Button"
 
+[node name="audio" type="AudioStreamPlayer" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/boton" unique_id=1129363895]
+unique_name_in_owner = true
+stream = ExtResource("7_vehtn")
+
 [node name="VBoxContainer2" type="VBoxContainer" parent="Panel/MarginContainer/HBoxContainer" unique_id=1979427470]
 layout_mode = 2
 size_flags_horizontal = 4
@@ -192,47 +197,5 @@ text = "Nombre"
 label_settings = ExtResource("6_ahgl1")
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="NinePatchRect3" type="NinePatchRect" parent="." unique_id=30537437]
-visible = false
-custom_minimum_size = Vector2(112, 64)
-layout_mode = 0
-offset_left = 76.0
-offset_top = 75.0
-offset_right = 283.0
-offset_bottom = 143.0
-texture = ExtResource("2_3e1ft")
-patch_margin_left = 4
-patch_margin_top = 4
-patch_margin_right = 4
-patch_margin_bottom = 6
-
-[node name="NinePatchRect4" type="NinePatchRect" parent="." unique_id=1578096268]
-visible = false
-custom_minimum_size = Vector2(112, 64)
-layout_mode = 0
-offset_left = 77.0
-offset_top = 146.0
-offset_right = 284.0
-offset_bottom = 214.0
-texture = ExtResource("2_3e1ft")
-patch_margin_left = 4
-patch_margin_top = 4
-patch_margin_right = 4
-patch_margin_bottom = 6
-
-[node name="NinePatchRect2" type="NinePatchRect" parent="." unique_id=322995021]
-visible = false
-custom_minimum_size = Vector2(112, 64)
-layout_mode = 0
-offset_left = 126.0
-offset_top = 105.0
-offset_right = 238.0
-offset_bottom = 173.0
-texture = ExtResource("2_3e1ft")
-patch_margin_left = 4
-patch_margin_top = 4
-patch_margin_right = 4
-patch_margin_bottom = 6
 
 [connection signal="pressed" from="Panel/MarginContainer/HBoxContainer/VBoxContainer/boton" to="." method="_on_boton_pressed"]
