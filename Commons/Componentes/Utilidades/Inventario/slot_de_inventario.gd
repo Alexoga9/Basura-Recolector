@@ -19,6 +19,8 @@ func actualizar_slot(item_id: String, cantidad: int):
 			show()
 			icono.texture = item.sprite
 			label.text = str(cantidad)
+		elif item_id != id_a_recibir:
+			return
 
 		if item.cantidad_maxima == cantidad:
 			label.modulate = Color.RED
