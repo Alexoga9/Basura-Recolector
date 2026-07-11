@@ -4,6 +4,7 @@ extends StaticBody2D
 @export var consumible: PackedScene
 var jugador
 @onready var audio = %audio
+@onready var sprite = %Sprite2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -18,10 +19,12 @@ func _process(delta):
 
 func _on_trigger_jugador_body_entered(body):
 	jugador = body
+	sprite.frame = 1
 
 
 func _on_trigger_jugador_body_exited(body):
 	jugador = null
+	sprite.frame = 0
 
 
 func dispensar():

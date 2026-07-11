@@ -1,6 +1,4 @@
-res://Assets/TileMap/Map.tscn
+res://Entidades/Maquina Expendedora/MaquinaExpendedora.tscn
 res://UI/Theme/Tienda.tres
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
-res://Commons/Componentes/Utilidades/Inventario/Inventario.tscn
-res://Escenarios/mundo.tscn
-res://Entidades/Maquina Expendedora/MaquinaExpendedora.tscn
+res://Entidades/Maquina Expendedora/maquina_expendedora.gd

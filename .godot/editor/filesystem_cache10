@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1783789915
+::res://::1783802181
 ::res://addons/::1781049200
 default_env.tres::Environment::-1::1773270161::0::1::::<><><>0<>0<><>::
 ridiculous.png::CompressedTexture2D::4698160805014417687::1773270161::1780616388::1::::<><><>0<>0<>9282b53936cb6b34a12affb14154bdbd<>res://.godot/imported/ridiculous.png-4135992b2ab7447190f13a701c3cfe63.ctex::
@@ -268,9 +268,9 @@ piedra.png::CompressedTexture2D::9101718874597353264::1783122924::1783122924::1:
 Basic character v1.png::CompressedTexture2D::526278685011328171::1783122924::1783122924::1::::<><><>0<>0<>581e37274f76004a266437e61c3677d5<>res://.godot/imported/Basic character v1.png-f8d1241d1b951e5f7fbb33f916a32b99.ctex::
 sliders.png::CompressedTexture2D::3801990595170493809::1783479673::1783549771::1::::<><><>0<>0<>b7cac0db9afacf47e88dcb8fb59658cb<>res://.godot/imported/sliders.png-b961797776cf7e29278ba920f32301ba.ctex::
 Spring 2 v1.png::CompressedTexture2D::1449256098587669792::1783122924::1783122924::1::::<><><>0<>0<>132b5586608ca018d53cee9e673a3d02<>res://.godot/imported/Spring 2 v1.png-f8a74662dfee74ee8f5d045f8a862918.ctex::
-::res://Assets/TileMap/::1783789904
+::res://Assets/TileMap/::1783791586
 Basic Tiles 1.0.png::CompressedTexture2D::6838493166075043494::1783522703::1783522781::1::::<><><>0<>0<>c533f89b354c70ba7d8c534754084eff<>res://.godot/imported/Basic Tiles 1.0.png-aaddfd2f5a43650feb8497c043b47a65.ctex::
-Map.tscn::PackedScene::171537226243832717::1783789904::0::1::::<><><>0<>0<><>::uid://c4ou8oy02r2og::::res://Assets/TileMap/Basic Tiles 1.0.png
+Map.tscn::PackedScene::171537226243832717::1783791586::0::1::::<><><>0<>0<><>::uid://c4ou8oy02r2og::::res://Assets/TileMap/Basic Tiles 1.0.png
 ::res://Commons/::1781049200
 ::res://Commons/Componentes/::1781552462
 ::res://Commons/Componentes/Core/::1783528111
@@ -290,10 +290,9 @@ PerseguirComponente.gd::GDScript::2863738881846781718::1779556500::0::1::::Perse
 RadarComponente.gd::GDScript::8299316369557639690::1783288023::0::1::::RadarComponente<>Area2D<>res://addons/iconos/Radar.svg<>0<>0<><>::
 ::res://Commons/Componentes/UI/::1776606787
 ::res://Commons/Componentes/Utilidades/::1782076884
-::res://Commons/Componentes/Utilidades/Inventario/::1783782841
+::res://Commons/Componentes/Utilidades/Inventario/::1783791119
 cogerItems.tscn::PackedScene::6078204535362672871::1783122924::0::1::::<><><>0<>0<><>::res://Commons/Componentes/Utilidades/Inventario/coger_items.gd<>uid://e7kokadv3aib::::res://Assets/icon.svg
-Inventario.tscn::PackedScene::4049342699208131700::1783782841::0::1::::<><><>0<>0<><>::uid://d2f0m5j1ciuls::::res://Utilidades/Autoloads/inventario.gd<>uid://cvdailrt3pbqn::::res://Commons/Componentes/Utilidades/Inventario/InventarioSlot.gd<>uid://dnu2r5yw53pto::::res://Recursos/LootDefinicion.gd<>uid://dmky67t6umj3u::::res://Entidades/Loot/loots/rs_piedra.tres<>uid://5k76mbciamak::::res://Entidades/Loot/loots/re_madera.tres<>uid://q5jrk63qij1t::::res://Assets/image.png<>uid://ca3oktj6ebp0n::::res://Commons/Componentes/Utilidades/Inventario/slot_de_inventario.tscn<>uid://mn8abrepyvev::::res://UI/HUD/barras_hud.tscn<>uid://d2fe2drk13sjm::::res://Commons/Componentes/Utilidades/Inventario/slot_de_dinero.tscn<>uid://cj67bs1scsaiw::::res://Assets/Inventario/moneda.png
-InventarioSlot.gd::GDScript::6253015108318109065::1783522703::0::1::::<>Panel<><>0<>0<><>::
+Inventario.tscn::PackedScene::4049342699208131700::1783791119::0::1::::<><><>0<>0<><>::uid://d2f0m5j1ciuls::::res://Utilidades/Autoloads/inventario.gd<>uid://dnu2r5yw53pto::::res://Recursos/LootDefinicion.gd<>uid://dmky67t6umj3u::::res://Entidades/Loot/loots/rs_piedra.tres<>uid://5k76mbciamak::::res://Entidades/Loot/loots/re_madera.tres<>uid://q5jrk63qij1t::::res://Assets/image.png<>uid://ca3oktj6ebp0n::::res://Commons/Componentes/Utilidades/Inventario/slot_de_inventario.tscn<>uid://mn8abrepyvev::::res://UI/HUD/barras_hud.tscn<>uid://d2fe2drk13sjm::::res://Commons/Componentes/Utilidades/Inventario/slot_de_dinero.tscn<>uid://cj67bs1scsaiw::::res://Assets/Inventario/moneda.png
 material_ui.tscn::PackedScene::3618755220809666875::1783522779::0::1::::<><><>0<>0<><>::uid://e7kokadv3aib::::res://Assets/icon.svg
 slot_de_dinero.gd::GDScript::4553595799270267255::1783782755::0::1::::<>HBoxContainer<><>0<>0<><>::
 slot_de_dinero.tscn::PackedScene::9064973986804920582::1783782433::0::1::::<><><>0<>0<><>::uid://b542b7q8e2jp4::::res://Commons/Componentes/Utilidades/Inventario/slot_de_dinero.gd<>uid://cj67bs1scsaiw::::res://Assets/Inventario/moneda.png<>uid://crqcrwgjb38h3::::res://UI/Theme/tipografia tienda.tres
@@ -326,8 +325,8 @@ Loot_Item.gd::GDScript::8984853550903457978::1783122924::0::1::::Loot<>Area2D<>r
 ::res://Entidades/Loot/loots/::1783122924
 re_madera.tres::Resource/LootDefinicion::2128308021987729466::1783122924::0::1::::<><><>0<>0<><>::uid://dnu2r5yw53pto::::res://Recursos/LootDefinicion.gd<>uid://dr7bho43atgf6::::res://Assets/tornado audio.mp3<>uid://d0v6krou2ook8::::res://Assets/Inventario/madera.png
 rs_piedra.tres::Resource/LootDefinicion::8023686231247932848::1783122924::0::1::::<><><>0<>0<><>::uid://dr7bho43atgf6::::res://Assets/tornado audio.mp3<>uid://dnu2r5yw53pto::::res://Recursos/LootDefinicion.gd<>uid://d2w68k8llr4oi::::res://Assets/Inventario/piedra.png
-::res://Entidades/Maquina Expendedora/::1783530546
-MaquinaExpendedora.tscn::PackedScene::5427990066104056444::1783530546::0::1::::<><><>0<>0<><>::uid://bqf61t5aq5kig::::res://Entidades/Maquina Expendedora/maquina_expendedora.gd<>uid://e7kokadv3aib::::res://Assets/icon.svg<>uid://bgn5c32aqoq6c::::res://Entidades/Consumible/consumible.tscn<>uid://cjghok5vlof2n::::res://Assets/drop-coin.mp3
+::res://Entidades/Maquina Expendedora/::1783791888
+MaquinaExpendedora.tscn::PackedScene::5427990066104056444::1783791888::0::1::::<><><>0<>0<><>::uid://bqf61t5aq5kig::::res://Entidades/Maquina Expendedora/maquina_expendedora.gd<>uid://bgn5c32aqoq6c::::res://Entidades/Consumible/consumible.tscn<>uid://cra4a88lx8lwj::::res://Assets/maquina expendedora.png<>uid://cjghok5vlof2n::::res://Assets/drop-coin.mp3
 maquina_expendedora.gd::GDScript::3521693772399563310::1783530513::0::1::::<>StaticBody2D<><>0<>0<><>::
 ::res://Entidades/Obstaculo/::1783124321
 obstaculo.tscn::PackedScene::4393728681693472393::1783124321::0::1::::<><><>0<>0<><>::uid://bml0qixvj7x5l::::res://Assets/Inventario/hierro.png
@@ -337,8 +336,8 @@ tienda.tscn::PackedScene::3809900275435166226::1783122924::0::1::::<><><>0<>0<><
 ::res://Entidades/Trituradora/::1783780623
 trituradora.gd::GDScript::2430004919788532310::1783780623::0::1::::<>StaticBody2D<><>0<>0<><>::
 trituradora.tscn::PackedScene::4745485604753995297::1783122924::0::1::::<><><>0<>0<><>::uid://e7kokadv3aib::::res://Assets/icon.svg<>uid://bavd3c4essg3w::::res://Entidades/Trituradora/trituradora.gd
-::res://Escenarios/::1783782806
-mundo.tscn::PackedScene::1237652422123070963::1783782806::0::1::::<><><>0<>0<><>::uid://e7kokadv3aib::::res://Assets/icon.svg<>uid://bxxsc2sciuuu3::::res://Commons/Componentes/Utilidades/Inventario/Inventario.tscn<>uid://e856quj4lvvn::::res://Entidades/Jugador/Jugador.tscn<>uid://cd6lygsc501ww::::res://Entidades/Loot/Loot.tscn<>uid://dmky67t6umj3u::::res://Entidades/Loot/loots/rs_piedra.tres<>uid://boa7rlwdurt22::::res://Entidades/Basura/Basura.tscn<>uid://dqw5d3i3m8nac::::res://UI/Tienda/Tienda_ui.tscn<>uid://bujsrbbq0elhi::::res://Entidades/Tienda/tienda.tscn<>uid://b8u0pprb4t2sj::::res://Entidades/Trituradora/trituradora.tscn<>uid://cjlmg6cpg7g6g::::res://Entidades/Maquina Expendedora/MaquinaExpendedora.tscn
+::res://Escenarios/::1783791603
+mundo.tscn::PackedScene::1237652422123070963::1783791603::0::1::::<><><>0<>0<><>::uid://e7kokadv3aib::::res://Assets/icon.svg<>uid://bxxsc2sciuuu3::::res://Commons/Componentes/Utilidades/Inventario/Inventario.tscn<>uid://e856quj4lvvn::::res://Entidades/Jugador/Jugador.tscn<>uid://cd6lygsc501ww::::res://Entidades/Loot/Loot.tscn<>uid://dmky67t6umj3u::::res://Entidades/Loot/loots/rs_piedra.tres<>uid://boa7rlwdurt22::::res://Entidades/Basura/Basura.tscn<>uid://dqw5d3i3m8nac::::res://UI/Tienda/Tienda_ui.tscn<>uid://bujsrbbq0elhi::::res://Entidades/Tienda/tienda.tscn<>uid://b8u0pprb4t2sj::::res://Entidades/Trituradora/trituradora.tscn<>uid://cpdgtf2pq7lh::::res://Assets/TileMap/Map.tscn<>uid://cjlmg6cpg7g6g::::res://Entidades/Maquina Expendedora/MaquinaExpendedora.tscn
 ::res://Recursos/::1783171383
 DatosHabilidades.gd::GDScript::8810789167486221428::1783171383::0::1::::DatosHabilidades<>Resource<><>0<>0<><>::
 LootDefinicion.gd::GDScript::8114675904572595664::1783124190::0::1::::LootDefinicion<>Resource<><>0<>0<><>::
@@ -349,9 +348,9 @@ Barras HUD.gd::GDScript::5575234343782752598::1783773078::0::1::::<>Node<><>0<>0
 barras_hud.tscn::PackedScene::871106774208238689::1783778523::0::1::::<><><>0<>0<><>::uid://b5i5gom2yxj0b::::res://UI/HUD/barra_energia.gd<>uid://cloxkbehvaa2q::::res://UI/HUD/Barras HUD.gd<>uid://d3ixr7t11n000::::res://UI/HUD/barra_de_progreso.gd
 barra_de_progreso.gd::GDScript::9142493255621795031::1783777819::0::1::::BarraDeProgreso<>ProgressBar<><>0<>1<><>::
 barra_energia.gd::GDScript::4510433994537272847::1783779155::0::1::::<>BarraDeProgreso<><>0<>0<><>::
-::res://UI/Theme/::1783776954
+::res://UI/Theme/::1783790497
 base_theme.tres::Theme::5021198197035958341::1782076884::0::1::::<><><>0<>0<><>::
-Tienda.tres::Theme::4954677609369006412::1783776954::0::1::::<><><>0<>0<><>::uid://dryil6kc3yx5s::::res://Assets/DobleHex2.ttf<>uid://cbgbirmqb5755::::res://Assets/marco tienda.png<>uid://bufyh2pfyydu4::::res://Assets/jugador/sliders.png
+Tienda.tres::Theme::4954677609369006412::1783790496::0::1::::<><><>0<>0<><>::uid://dryil6kc3yx5s::::res://Assets/DobleHex2.ttf<>uid://cbgbirmqb5755::::res://Assets/marco tienda.png<>uid://bufyh2pfyydu4::::res://Assets/jugador/sliders.png
 tipografia tienda.tres::LabelSettings::5999234710973548958::1783477516::0::1::::<><><>0<>0<><>::
 ::res://UI/Tienda/::1783553095
 mejora_cooldown.gd::GDScript::1563874558869289719::1783288023::0::1::::<>Logica_Mejora<><>0<>0<><>::
@@ -361,10 +360,10 @@ panel_tienda.gd::GDScript::5307118038151778758::1783200366::0::1::::<>Control<><
 panel_tienda.tscn::PackedScene::2983983965906610073::1783517554::0::1::::<><><>0<>0<><>::uid://chu2pujc70x6e::::res://UI/Tienda/panel_tienda.gd<>uid://cbgbirmqb5755::::res://Assets/marco tienda.png<>uid://dklrgm0gwnvn1::::res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres<>uid://due6mtxcwadhu::::res://Assets/Inventario/Items.png<>uid://crqcrwgjb38h3::::res://UI/Theme/tipografia tienda.tres<>uid://b0npykajpdagi::::res://Assets/HexFont16pix.ttf
 tienda_ui.gd::GDScript::6200222963407648002::1783200203::0::1::::<>Control<><>0<>0<><>::
 Tienda_ui.tscn::PackedScene::8329528211343624318::1783553095::0::1::::<><><>0<>0<><>::uid://culo1b5mj4hha::::res://UI/Tienda/tienda_ui.gd<>uid://birp1rvjh205r::::res://UI/Tienda/panel_tienda.tscn<>uid://due6mtxcwadhu::::res://Assets/Inventario/Items.png<>uid://b7q2wajcrdolk::::res://UI/Tienda/mejoras de habilidades/mejora_resistencia.gd<>uid://dxsan7lcfsr3y::::res://Recursos/DatosHabilidades.gd<>uid://wjs1ybjpn3rn::::res://UI/Tienda/mejora_cooldown.gd<>uid://dw1nixlpaty2e::::res://UI/Tienda/mejora_rango.gd<>uid://6b1v5c13s27u::::res://UI/Tienda/mejora_peso.gd<>uid://gi5lwe4ui2dd::::res://Entidades/Basura/basura_data.tres
-::res://UI/Tienda/mejoras de habilidades/::1783776954
+::res://UI/Tienda/mejoras de habilidades/::1783790497
 logica_mejora.gd::GDScript::5883352579635702628::1783452910::0::1::::Logica_Mejora<>Node<><>0<>0<><>::
 mejora_resistencia.gd::GDScript::4667172384462658784::1783202447::0::1::::<>Logica_Mejora<><>0<>0<><>::
-mejora_resistencia.tres::Resource/DatosHabilidades::7884902215597603568::1783776954::0::1::::<><><>0<>0<><>::uid://dxsan7lcfsr3y::::res://Recursos/DatosHabilidades.gd<>uid://due6mtxcwadhu::::res://Assets/Inventario/Items.png
+mejora_resistencia.tres::Resource/DatosHabilidades::7884902215597603568::1783790497::0::1::::<><><>0<>0<><>::uid://dxsan7lcfsr3y::::res://Recursos/DatosHabilidades.gd<>uid://due6mtxcwadhu::::res://Assets/Inventario/Items.png
 ::res://UI/UI_Scripts/::1782076884
 baseButton.gd::GDScript::4327873489012833886::1782076884::0::1::::<>Control<><>0<>0<><>::
 ::res://Utilidades/::1783261680
