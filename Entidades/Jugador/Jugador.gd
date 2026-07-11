@@ -4,6 +4,7 @@ class_name Jugador extends CharacterBody2D
 @onready var input_componente: InputComponente = %InputComponente
 @onready var movimiento_componente: MovimientoComponente = %MovimientoComponente
 @onready var recoge_basura: RadarComponenteBasura = %"Recoge BASURA"
+@onready var lanza_basura: LanzaBasura = %"Lanza Basura"
 
 # In Game
 @onready var energia_componente: EnergiaComponente = %EnergiaComponente

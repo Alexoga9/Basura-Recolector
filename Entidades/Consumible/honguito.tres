@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DataConsumible" format=3 uid="uid://bwbt2o3gbm3gu"]
+
+[ext_resource type="Script" uid="uid://be8jkvhdpdvny" path="res://Entidades/Consumible/data_consumible.gd" id="1_drjxs"]
+
+[resource]
+script = ExtResource("1_drjxs")
+recuperar_energia = 3
+metadata/_custom_type_script = "uid://be8jkvhdpdvny"

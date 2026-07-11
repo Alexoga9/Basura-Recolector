@@ -2,13 +2,14 @@
 
 [ext_resource type="Script" uid="uid://bagf6atsln2se" path="res://Entidades/Consumible/consumible.gd" id="1_dmsku"]
 [ext_resource type="Texture2D" uid="uid://due6mtxcwadhu" path="res://Assets/Inventario/Items.png" id="1_u5i48"]
+[ext_resource type="Resource" uid="uid://bwbt2o3gbm3gu" path="res://Entidades/Consumible/honguito.tres" id="2_uityb"]
 [ext_resource type="AudioStream" uid="uid://dr7bho43atgf6" path="res://Assets/tornado audio.mp3" id="3_si0yx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dmsku"]
 
 [node name="Consumible" type="Area2D" unique_id=1748902439]
 script = ExtResource("1_dmsku")
-recuperar_energia = 3
+data = ExtResource("2_uityb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1473103185]
 unique_name_in_owner = true

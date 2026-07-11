@@ -1,11 +1,11 @@
-extends Node
+class_name LanzaBasura extends Node
 
 @export var bolsa_de_basura: PackedScene
 @export var data_template: LootDefinicion
 
 var direccion_lanzamiento: Vector2 = Vector2.UP
-var fuerza_lanzamiento: float = 100.0 # Velocidad de vuelo (píxeles por segundo)
-var distancia_vuelo: float = 50.0 # Qué tan lejos volará antes de desaparecer o chocar
+@export var fuerza_lanzamiento: float = 100.0 # Velocidad de vuelo (píxeles por segundo)
+@export var distancia_vuelo: float = 50.0 # Qué tan lejos volará antes de desaparecer o chocar
 
 
 func _process(delta):

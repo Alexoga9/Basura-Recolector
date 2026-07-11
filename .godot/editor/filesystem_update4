@@ -1,13 +1,5 @@
-res://Entidades/Maquina Expendedora/MaquinaExpendedora.tscn
+res://UI/Tienda/Tienda_ui.tscn
 res://UI/Theme/Tienda.tres
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
-res://Entidades/Maquina Expendedora/maquina_expendedora.gd
-res://Escenarios/mundo.tscn
-res://Entidades/Trituradora/trituradora.tscn
-res://Entidades/Trituradora/trituradora.gd
-res://UI/Tienda/panel_tienda.tscn
-res://UI/Tienda/panel_tienda.gd
-res://Entidades/Jugador/lanza_basura.gd
-res://Entidades/Jugador/Jugador.tscn
-res://movimiento_basura.gd
-res://Entidades/Basura/BasuraMovimeinto.tscn
+res://UI/Tienda/mejora_honguitos.gd
+res://Entidades/Consumible/consumible.tscn
