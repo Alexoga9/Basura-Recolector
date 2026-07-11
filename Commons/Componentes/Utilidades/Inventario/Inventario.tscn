@@ -68,6 +68,7 @@ layout_mode = 2
 [node name="SlotDeInventario" parent="InventarioSlot/VBoxContainer/HBoxContainer2" unique_id=1457160244 instance=ExtResource("7_l1s3s")]
 visible = false
 layout_mode = 2
+id_a_recibir = "Basura"
 
 [node name="SlotDeInventario2" parent="InventarioSlot/VBoxContainer/HBoxContainer2" unique_id=1514962989 instance=ExtResource("7_l1s3s")]
 visible = false

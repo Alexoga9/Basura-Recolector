@@ -12,7 +12,18 @@ func _ready():
 
 
 func actualizar_slot(item_id: String, cantidad: int):
-	if item_id == id_a_recibir:
-		show()
-		icono.texture = Inventario.get_item_resource(item_id).sprite
-		label.text = str(cantidad)
+	var item = Inventario.get_item_resource(item_id)
+
+	if item != null:
+		if item_id == id_a_recibir:
+			show()
+			icono.texture = item.sprite
+			label.text = str(cantidad)
+
+		if item.cantidad_maxima == cantidad:
+			label.modulate = Color.RED
+		else:
+			label.modulate = Color.WHITE
+	else:
+		label.text = str(0)
+		label.modulate = Color.WHITE
