@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cri2avej8l3wf"]
+
+[ext_resource type="Script" uid="uid://brtovmk13difv" path="res://movimiento_basura.gd" id="1_ool2i"]
+[ext_resource type="Script" uid="uid://bnt3655fcthcm" path="res://Commons/Componentes/Movimiento/Vectores/MovimientoComponente.gd" id="2_oeumj"]
+
+[node name="MovimientoBasura" type="Node" unique_id=1282808821]
+script = ExtResource("1_ool2i")
+
+[node name="MovimientoComponente" type="Node" parent="." unique_id=1164023654]
+unique_name_in_owner = true
+script = ExtResource("2_oeumj")
+tipo_cuerpo = 1
+metadata/_custom_type_script = "uid://bnt3655fcthcm"
+
+[node name="Timer" type="Timer" parent="." unique_id=1757854119]
+unique_name_in_owner = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

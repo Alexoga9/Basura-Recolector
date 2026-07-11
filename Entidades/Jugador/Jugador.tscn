@@ -252,7 +252,7 @@ one_shot = true
 [node name="Lanza Basura" type="Node" parent="." unique_id=797480683]
 script = ExtResource("11_8xsec")
 bolsa_de_basura = ExtResource("12_qtgc7")
-data = ExtResource("13_orci8")
+data_template = ExtResource("13_orci8")
 
 [connection signal="timeout" from="Componentes/EnergiaComponente/Recarga lenta" to="Componentes/EnergiaComponente" method="_on_recarga_lenta_timeout"]
 [connection signal="area_entered" from="LootAtractor" to="LootAtractor" method="_on_area_entered"]
