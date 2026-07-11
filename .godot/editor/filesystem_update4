@@ -1,8 +1,5 @@
-res://UI/Tienda/Tienda_ui.tscn
+res://UI/HUD/barra_energia.gd
+res://UI/HUD/barras_hud.tscn
 res://UI/Theme/Tienda.tres
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
-res://UI/Tienda/mejora_peso.gd
-res://Escenarios/mundo.tscn
-res://Entidades/Basura/basura_data.tres
-res://Entidades/Basura/Basura.tscn
-res://Entidades/Jugador/RadarBasura.gd
+res://UI/HUD/barra_de_progreso.gd

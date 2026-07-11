@@ -1,4 +1,4 @@
-extends Control
+extends Node
 
 @onready var barra_energia = %BarraEnergia
 @onready var barra_basura = %BarraBasura

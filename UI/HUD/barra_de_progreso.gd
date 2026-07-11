@@ -16,6 +16,7 @@ var valor_faltante: float
 
 func _ready():
 	actualizar_barra()
+	datos_barra_secundaria()
 
 
 func valor_cambiado(nuevo_valor: float):
@@ -37,3 +38,7 @@ func actualizar_barra():
 
 		# Debug
 		#print("Barra actualizada - Actual: ", valor_actual, " Max: ", valor_max, " %: ", value)
+
+
+func datos_barra_secundaria():
+	pass

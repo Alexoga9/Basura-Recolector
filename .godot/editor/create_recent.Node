@@ -1,14 +1,14 @@
+Node
+Timer
+ProgressBar
 Logica_Mejora
 HBoxContainer
 Label
 TextureRect
-Timer
 Control
 NinePatchRect
 AudioStreamPlayer
 Sprite2D
 CollisionShape2D
 Area2D
-Node
 VBoxContainer
-BarraDeProgreso
