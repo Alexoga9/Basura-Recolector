@@ -10,6 +10,9 @@
 [ext_resource type="Script" uid="uid://dqiir7o6l4sjy" path="res://Commons/Componentes/Radares/RadarComponente.gd" id="9_y6klq"]
 [ext_resource type="Script" uid="uid://rkib0lob5g81" path="res://Entidades/Jugador/RadarBasura.gd" id="9_yyjpx"]
 [ext_resource type="Shape2D" uid="uid://d1kdw32chtrdq" path="res://Entidades/Jugador/colision recoger basura/circulo_recoge_basura.tres" id="10_yyjpx"]
+[ext_resource type="Script" uid="uid://n5y5s26fj4li" path="res://Entidades/Jugador/lanza_basura.gd" id="11_8xsec"]
+[ext_resource type="PackedScene" uid="uid://boa7rlwdurt22" path="res://Entidades/Basura/Basura.tscn" id="12_qtgc7"]
+[ext_resource type="Resource" uid="uid://besidf7otrxpl" path="res://Entidades/Basura/bolsa_de_basura.tres" id="13_orci8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b35yh"]
 radius = 4.0
@@ -175,7 +178,6 @@ unique_name_in_owner = true
 unique_name_in_owner = true
 script = ExtResource("1_b2vdw")
 es_jugador = true
-energia = 0.0
 
 [node name="Agotamiento" type="Node" parent="Componentes/EnergiaComponente" unique_id=1343825619 node_paths=PackedStringArray("vida")]
 script = ExtResource("4_qtgc7")
@@ -246,6 +248,11 @@ shape = ExtResource("10_yyjpx")
 unique_name_in_owner = true
 wait_time = 3.0
 one_shot = true
+
+[node name="Lanza Basura" type="Node" parent="." unique_id=797480683]
+script = ExtResource("11_8xsec")
+bolsa_de_basura = ExtResource("12_qtgc7")
+data = ExtResource("13_orci8")
 
 [connection signal="timeout" from="Componentes/EnergiaComponente/Recarga lenta" to="Componentes/EnergiaComponente" method="_on_recarga_lenta_timeout"]
 [connection signal="area_entered" from="LootAtractor" to="LootAtractor" method="_on_area_entered"]

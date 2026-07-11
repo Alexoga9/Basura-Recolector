@@ -21,9 +21,7 @@ func input_recoger_basura_automatica() -> bool:
 		return presionado
 	else:
 		return false
-		
-	
-	
+
 
 
 func input_ataque():

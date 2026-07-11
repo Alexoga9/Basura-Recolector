@@ -33,3 +33,7 @@ func _on_trigger_basura_body_entered(body):
 		recibir_basura_jugador()
 		pass
 		# inventario.backpack[basura](0)
+
+	if body.is_in_group("Basura"):
+		Dinero.ganar(body.valor)
+		body.collect()
