@@ -2,8 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bqf61t5aq5kig" path="res://Entidades/Maquina Expendedora/maquina_expendedora.gd" id="1_j4evy"]
 [ext_resource type="PackedScene" uid="uid://bgn5c32aqoq6c" path="res://Entidades/Consumible/consumible.tscn" id="2_cglwt"]
-[ext_resource type="Texture2D" uid="uid://cra4a88lx8lwj" path="res://Assets/maquina expendedora.png" id="3_cglwt"]
+[ext_resource type="Texture2D" uid="uid://dubikj5qcbplp" path="res://Assets/maquina expendedora2.png" id="3_ev2gr"]
 [ext_resource type="AudioStream" uid="uid://cjghok5vlof2n" path="res://Assets/drop-coin.mp3" id="4_ev2gr"]
+[ext_resource type="Texture2D" uid="uid://g715raymahea" path="res://Assets/maquina expendedora sombra.png" id="5_fq4of"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0bwxm"]
 size = Vector2(72, 60)
@@ -27,7 +28,7 @@ debug_color = Color(0.65120107, 0.0018948114, 0.8419935, 0.41960785)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1781763865]
 unique_name_in_owner = true
-texture = ExtResource("3_cglwt")
+texture = ExtResource("3_ev2gr")
 hframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=144946869]
@@ -38,6 +39,10 @@ debug_color = Color(0.26880014, 0.2435346, 0.23927382, 0.41960785)
 [node name="audio" type="AudioStreamPlayer" parent="." unique_id=186736399]
 unique_name_in_owner = true
 stream = ExtResource("4_ev2gr")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=33363273]
+position = Vector2(0, 23)
+texture = ExtResource("5_fq4of")
 
 [connection signal="body_entered" from="Trigger Jugador" to="." method="_on_trigger_jugador_body_entered"]
 [connection signal="body_exited" from="Trigger Jugador" to="." method="_on_trigger_jugador_body_exited"]

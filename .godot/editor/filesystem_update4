@@ -1,7 +1,0 @@
-res://UI/Tienda/Tienda_ui.tscn
-res://UI/Theme/Tienda.tres
-res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
-res://UI/Tienda/mejora_honguitos.gd
-res://Entidades/Consumible/consumible.tscn
-res://Commons/Componentes/Utilidades/Inventario/Inventario.tscn
-res://Commons/Componentes/Utilidades/Inventario/slot_de_inventario.gd
