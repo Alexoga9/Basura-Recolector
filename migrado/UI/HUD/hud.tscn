@@ -17,6 +17,7 @@ script = ExtResource("1_ia7gp")
 panel_pausa = NodePath("Pausa")
 
 [node name="HudJuego" type="MarginContainer" parent="." unique_id=812148606]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

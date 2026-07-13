@@ -1,6 +1,7 @@
 extends Control
 
 @export var panel_pausa: Control
+@onready var hud_juego = %HudJuego
 
 
 func _ready():
@@ -17,4 +18,4 @@ func _on_pausa_pressed():
 
 
 func mostrar():
-	$HudJuego.show()
+	hud_juego.show()

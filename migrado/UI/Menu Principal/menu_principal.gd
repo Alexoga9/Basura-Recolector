@@ -1,5 +1,8 @@
 extends Control
 
+@onready var menu: Control = %Menu
+@onready var opciones: Control = %Opciones
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,10 +16,10 @@ func _on_jugar_pressed():
 
 
 func _on_opciones_pressed():
-	$Menu.hide()
-	$Opciones.show()
+	menu.hide()
+	opciones.show()
 
 
 func mostrar_menu_principal():
-	$Menu.show()
+	menu.show()
 	print("se muestra el menu principal")

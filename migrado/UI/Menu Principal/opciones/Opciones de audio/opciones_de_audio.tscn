@@ -57,6 +57,7 @@ size_flags_horizontal = 4
 text = "Master"
 
 [node name="MasterSlider" parent="MarginContainer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=748427830 instance=ExtResource("2_okawx")]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 bus_name = "Master"
@@ -73,6 +74,7 @@ size_flags_horizontal = 4
 text = "Música"
 
 [node name="MusicaSlider" parent="MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2" unique_id=1564595856 instance=ExtResource("2_okawx")]
+unique_name_in_owner = true
 layout_mode = 2
 bus_name = "Musica"
 
@@ -88,6 +90,7 @@ size_flags_horizontal = 4
 text = "SFX"
 
 [node name="SfxSlider" parent="MarginContainer/PanelContainer/VBoxContainer/HBoxContainer3" unique_id=422034552 instance=ExtResource("2_okawx")]
+unique_name_in_owner = true
 layout_mode = 2
 bus_name = "SFX"
 
@@ -97,3 +100,6 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 4.25
 
 [connection signal="pressed" from="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/Atras" to="." method="_on_atras_pressed"]
+[connection signal="value_changed" from="MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/MasterSlider" to="." method="_on_master_slider_value_changed"]
+[connection signal="value_changed" from="MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/MusicaSlider" to="." method="_on_musica_slider_value_changed"]
+[connection signal="value_changed" from="MarginContainer/PanelContainer/VBoxContainer/HBoxContainer3/SfxSlider" to="." method="_on_sfx_slider_value_changed"]

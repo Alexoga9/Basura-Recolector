@@ -1,17 +1,1 @@
-res://migrado/UI/Pausa/Pausa.tscn
-res://UI/Theme/Tienda.tres
-res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
-res://migrado/UI/HUD/hud.gd
-res://Utilidades/Autoloads/Signal_Bus.gd
-res://migrado/UI/HUD/hud.tscn
-res://migrado/UI/HUD/pausa/pausa.tscn
-res://Escenarios/mundo.tscn
-res://migrado/UI/Menu Principal/menu_principal.tscn
-res://migrado/UI/Menu Principal/opciones/opciones.tscn
-res://migrado/UI/Menu Principal/opciones/Opciones de audio/opciones_de_audio.tscn
-res://migrado/UI/Menu Principal/opciones/creditos/creditos.tscn
-res://migrado/UI/Menu Principal/opciones/salir/salir.tscn
-res://migrado/UI/Menu Principal/menu_principal.gd
-res://migrado/UI/Menu Principal/opciones/opciones.gd
-res://default_bus_layout.tres
-res://UI/HUD/Barras HUD.gd
+res://migrado/UI/Menu Principal/opciones/Opciones de audio/opciones_de_audio.gd
