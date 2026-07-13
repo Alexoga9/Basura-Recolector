@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1c88cbt0hvf5"]
+
+[ext_resource type="Script" uid="uid://ckxlpw7f0qsr0" path="res://Common/VolumeSlider/volume_slider.gd" id="1_ohat3"]
+
+[node name="VolumeSlider" type="HSlider"]
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.001
+script = ExtResource("1_ohat3")

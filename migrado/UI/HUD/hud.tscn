@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bqxfu5knf0pw2"]
+
+[ext_resource type="Script" uid="uid://cf03u1gcofqth" path="res://migrado/UI/HUD/hud.gd" id="1_ia7gp"]
+[ext_resource type="PackedScene" uid="uid://c60fm7nwe6rer" path="res://migrado/UI/HUD/pausa/pausa.tscn" id="6_dhie7"]
+
+[node name="HUD" type="Control" unique_id=67010398 node_paths=PackedStringArray("panel_pausa")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+script = ExtResource("1_ia7gp")
+panel_pausa = NodePath("Pausa")
+
+[node name="HudJuego" type="MarginContainer" parent="." unique_id=812148606]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 5
+
+[node name="pausa" type="Button" parent="HudJuego" unique_id=885807864]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 0
+text = "Pausa"
+
+[node name="Pausa" parent="." unique_id=1451484787 instance=ExtResource("6_dhie7")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="HudJuego/pausa" to="." method="_on_pausa_pressed"]

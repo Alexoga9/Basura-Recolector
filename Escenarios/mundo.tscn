@@ -6,9 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://cd6lygsc501ww" path="res://Entidades/Loot/Loot.tscn" id="3_tgroa"]
 [ext_resource type="Resource" uid="uid://dmky67t6umj3u" path="res://Entidades/Loot/loots/rs_piedra.tres" id="4_2fd2i"]
 [ext_resource type="PackedScene" uid="uid://boa7rlwdurt22" path="res://Entidades/Basura/Basura.tscn" id="6_2fd2i"]
-[ext_resource type="PackedScene" uid="uid://dqw5d3i3m8nac" path="res://UI/Tienda/Tienda_ui.tscn" id="7_8njad"]
+[ext_resource type="PackedScene" uid="uid://br4shbrxkwxgj" path="res://UI/Tienda/tienda_ui.tscn" id="7_8njad"]
 [ext_resource type="PackedScene" uid="uid://bujsrbbq0elhi" path="res://Entidades/Tienda/tienda.tscn" id="8_8njad"]
 [ext_resource type="PackedScene" uid="uid://b8u0pprb4t2sj" path="res://Entidades/Trituradora/trituradora.tscn" id="8_u72it"]
+[ext_resource type="PackedScene" uid="uid://bqxfu5knf0pw2" path="res://migrado/UI/HUD/hud.tscn" id="10_qc3uw"]
+[ext_resource type="PackedScene" uid="uid://kyb4e7wfvufr" path="res://migrado/UI/Menu Principal/menu_principal.tscn" id="11_a5bk4"]
 [ext_resource type="PackedScene" uid="uid://cpdgtf2pq7lh" path="res://Assets/TileMap/Map.tscn" id="11_qc3uw"]
 [ext_resource type="PackedScene" uid="uid://cjlmg6cpg7g6g" path="res://Entidades/Maquina Expendedora/MaquinaExpendedora.tscn" id="11_tyb7f"]
 
@@ -113,6 +115,10 @@ z_index = 1
 
 [node name="Inventario" parent="CanvasLayer" unique_id=2011210485 instance=ExtResource("1_vttfp")]
 z_index = -1
+
+[node name="HUD" parent="CanvasLayer" unique_id=67010398 instance=ExtResource("10_qc3uw")]
+
+[node name="MenuPrincipal" parent="CanvasLayer" unique_id=1428838178 instance=ExtResource("11_a5bk4")]
 
 [node name="Trituradora" parent="." unique_id=1291557497 instance=ExtResource("8_u72it")]
 position = Vector2(577, 239)

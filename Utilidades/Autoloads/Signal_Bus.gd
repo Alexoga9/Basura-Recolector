@@ -6,14 +6,6 @@ signal energia_jugador_cambiada(valor)
 signal energia_maxima_jugador_cambiada(valor)
 signal murio_jugador
 
-# experiencia del jugador
-signal valor_xp_cambiado(valor)
-signal valor_xp_maximo_cambiado(valor)
-signal subir_de_nivel(valor)
-
-# wave manager
-signal enemigo_matado
-
 # Jugador
 signal jugador_listo
 signal input_movimiento
@@ -24,6 +16,19 @@ signal recoger_basura_automatica(bool)
 # Basura
 signal basura_recogida
 
-# Tienda 
+# UI
+# # Tienda 
 signal mostrar_tienda
 signal ocultar_tienda
+
+# # Pausa 
+signal juego_pausado
+signal juego_reanudado
+
+# # HUD
+signal mostrar_hud
+
+# # Menu Principal
+signal mostrar_menu_principal
+
+# # Opciones

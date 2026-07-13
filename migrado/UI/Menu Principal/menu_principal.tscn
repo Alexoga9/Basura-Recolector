@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://kyb4e7wfvufr"]
+
+[ext_resource type="Script" uid="uid://ddorvnkqdqkvg" path="res://migrado/UI/Menu Principal/menu_principal.gd" id="1_u2r14"]
+[ext_resource type="PackedScene" uid="uid://cyosjufx0xt31" path="res://migrado/UI/Menu Principal/opciones/opciones.tscn" id="3_ggg3k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lt0ek"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u2r14"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nxkad"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pi268"]
+
+[node name="MenuPrincipal" type="Control" unique_id=1428838178]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_behavior_recursive = 1
+script = ExtResource("1_u2r14")
+
+[node name="Menu" type="VBoxContainer" parent="." unique_id=1733746022]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_behavior_recursive = 1
+
+[node name="Label" type="Label" parent="Menu" unique_id=361180555]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 32
+text = "Menu principal"
+
+[node name="Jugar" type="Button" parent="Menu" unique_id=1282465543]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 20.0
+focus_behavior_recursive = 1
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lt0ek")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_u2r14")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nxkad")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pi268")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu" unique_id=120950094]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.2
+focus_behavior_recursive = 1
+alignment = 1
+
+[node name="Control4" type="Control" parent="Menu/HBoxContainer" unique_id=1280883815]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_behavior_recursive = 1
+
+[node name="Control" type="Control" parent="Menu/HBoxContainer" unique_id=1673268318]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_behavior_recursive = 1
+
+[node name="opciones" type="Button" parent="Menu/HBoxContainer" unique_id=1086592573]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.59
+focus_behavior_recursive = 1
+text = "Opciones"
+
+[node name="Control2" type="Control" parent="Menu/HBoxContainer" unique_id=533442111]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_behavior_recursive = 1
+
+[node name="Control3" type="Control" parent="Menu/HBoxContainer" unique_id=371718516]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_behavior_recursive = 1
+
+[node name="Control5" type="Control" parent="Menu" unique_id=1648209579]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_behavior_recursive = 1
+
+[node name="Opciones" parent="." unique_id=1511520291 instance=ExtResource("3_ggg3k")]
+visible = false
+layout_mode = 1
+focus_behavior_recursive = 1
+
+[connection signal="pressed" from="Menu/Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="Menu/HBoxContainer/opciones" to="." method="_on_opciones_pressed"]

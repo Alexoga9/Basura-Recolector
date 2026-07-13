@@ -1,0 +1,113 @@
+[gd_scene format=3 uid="uid://cyosjufx0xt31"]
+
+[ext_resource type="Script" uid="uid://btoxy437uvye1" path="res://migrado/UI/Menu Principal/opciones/opciones.gd" id="1_pcrob"]
+[ext_resource type="PackedScene" uid="uid://d0p871ccdly2t" path="res://migrado/UI/Menu Principal/opciones/Opciones de audio/opciones_de_audio.tscn" id="2_egtol"]
+[ext_resource type="PackedScene" uid="uid://dr04jwhce10ns" path="res://migrado/UI/Menu Principal/opciones/salir/salir.tscn" id="3_74tjs"]
+[ext_resource type="PackedScene" uid="uid://c4my3d7q6t5wa" path="res://migrado/UI/Menu Principal/opciones/creditos/creditos.tscn" id="4_hj841"]
+
+[node name="Opciones" type="Control" unique_id=248209814 node_paths=PackedStringArray("panel_opciones", "panel_audio", "panel_salir", "panel_creditos")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pcrob")
+panel_opciones = NodePath("PanelMenu")
+panel_audio = NodePath("Opciones de Audio")
+panel_salir = NodePath("Salir")
+panel_creditos = NodePath("Creditos")
+
+[node name="PanelMenu" type="MarginContainer" parent="." unique_id=409833730]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelMenu" unique_id=389177060]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelMenu/PanelContainer" unique_id=1313532353]
+layout_mode = 2
+theme_override_constants/separation = 5
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelMenu/PanelContainer/VBoxContainer" unique_id=918652664]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+
+[node name="Atras" type="Button" parent="PanelMenu/PanelContainer/VBoxContainer/MarginContainer" unique_id=1850336596]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+text = "atras"
+
+[node name="Opciones" type="Label" parent="PanelMenu/PanelContainer/VBoxContainer" unique_id=1896696041]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 32
+text = "Opciones"
+
+[node name="Control2" type="Control" parent="PanelMenu/PanelContainer/VBoxContainer" unique_id=723942575]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="juego" type="Button" parent="PanelMenu/PanelContainer/VBoxContainer" unique_id=139876074]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Juego"
+
+[node name="estadisticas" type="Button" parent="PanelMenu/PanelContainer/VBoxContainer" unique_id=1460307946]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "estadisticas"
+
+[node name="audio" type="Button" parent="PanelMenu/PanelContainer/VBoxContainer" unique_id=1183923814]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Audio"
+
+[node name="creditos" type="Button" parent="PanelMenu/PanelContainer/VBoxContainer" unique_id=1354120650]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Creditos"
+
+[node name="salir" type="Button" parent="PanelMenu/PanelContainer/VBoxContainer" unique_id=2086573992]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Salir"
+
+[node name="Opciones de Audio" parent="." unique_id=1587807512 node_paths=PackedStringArray("panel_opciones") instance=ExtResource("2_egtol")]
+visible = false
+layout_mode = 1
+panel_opciones = NodePath("../PanelMenu")
+
+[node name="Creditos" parent="." unique_id=411757980 node_paths=PackedStringArray("panel_opciones") instance=ExtResource("4_hj841")]
+visible = false
+layout_mode = 1
+panel_opciones = NodePath("../PanelMenu")
+
+[node name="Salir" parent="." unique_id=1784180907 node_paths=PackedStringArray("panel_opciones") instance=ExtResource("3_74tjs")]
+visible = false
+layout_mode = 1
+panel_opciones = NodePath("../PanelMenu")
+
+[connection signal="pressed" from="PanelMenu/PanelContainer/VBoxContainer/MarginContainer/Atras" to="." method="_on_atras_pressed"]
+[connection signal="pressed" from="PanelMenu/PanelContainer/VBoxContainer/audio" to="." method="_on_audio_pressed"]
+[connection signal="pressed" from="PanelMenu/PanelContainer/VBoxContainer/creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="PanelMenu/PanelContainer/VBoxContainer/salir" to="." method="_on_salir_pressed"]
