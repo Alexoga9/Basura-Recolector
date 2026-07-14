@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="LootDefinicion" format=3 uid="uid://5k76mbciamak"]
 
 [ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="1_hemhm"]
-[ext_resource type="AudioStream" uid="uid://dr7bho43atgf6" path="res://Assets/tornado audio.mp3" id="1_re0x1"]
+[ext_resource type="AudioStream" uid="uid://dr7bho43atgf6" path="res://Assets/audio/tornado audio.mp3" id="1_re0x1"]
 [ext_resource type="Texture2D" uid="uid://d0v6krou2ook8" path="res://Assets/Inventario/madera.png" id="2_re0x1"]
 
 [resource]

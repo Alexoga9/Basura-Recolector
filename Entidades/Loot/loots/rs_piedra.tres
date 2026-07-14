@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="LootDefinicion" format=3 uid="uid://dmky67t6umj3u"]
 
-[ext_resource type="AudioStream" uid="uid://dr7bho43atgf6" path="res://Assets/tornado audio.mp3" id="1_hy68u"]
+[ext_resource type="AudioStream" uid="uid://dr7bho43atgf6" path="res://Assets/audio/tornado audio.mp3" id="1_hy68u"]
 [ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="2_tjehu"]
 [ext_resource type="Texture2D" uid="uid://d2w68k8llr4oi" path="res://Assets/Inventario/piedra.png" id="3_x1moo"]
 

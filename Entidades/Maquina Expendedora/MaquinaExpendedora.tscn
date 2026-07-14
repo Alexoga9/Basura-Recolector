@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bqf61t5aq5kig" path="res://Entidades/Maquina Expendedora/maquina_expendedora.gd" id="1_j4evy"]
 [ext_resource type="PackedScene" uid="uid://bgn5c32aqoq6c" path="res://Entidades/Consumible/consumible.tscn" id="2_cglwt"]
 [ext_resource type="Texture2D" uid="uid://dubikj5qcbplp" path="res://Assets/maquina expendedora2.png" id="3_ev2gr"]
-[ext_resource type="AudioStream" uid="uid://cjghok5vlof2n" path="res://Assets/drop-coin.mp3" id="4_ev2gr"]
+[ext_resource type="AudioStream" uid="uid://cjghok5vlof2n" path="res://Assets/audio/drop-coin.mp3" id="4_ev2gr"]
 [ext_resource type="Texture2D" uid="uid://g715raymahea" path="res://Assets/maquina expendedora sombra.png" id="5_fq4of"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0bwxm"]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://rvr7pqnbebp8"]
 
 [ext_resource type="Texture2D" uid="uid://e7kokadv3aib" path="res://Assets/icon.svg" id="1_lgngo"]
-[ext_resource type="PackedScene" uid="uid://bxxsc2sciuuu3" path="res://Commons/Componentes/Utilidades/Inventario/Inventario.tscn" id="1_vttfp"]
+[ext_resource type="PackedScene" uid="uid://bxxsc2sciuuu3" path="res://UI/HUD/Inventario/Inventario.tscn" id="1_vttfp"]
 [ext_resource type="PackedScene" uid="uid://e856quj4lvvn" path="res://Entidades/Jugador/Jugador.tscn" id="2_fw4w5"]
 [ext_resource type="PackedScene" uid="uid://cd6lygsc501ww" path="res://Entidades/Loot/Loot.tscn" id="3_tgroa"]
 [ext_resource type="Resource" uid="uid://dmky67t6umj3u" path="res://Entidades/Loot/loots/rs_piedra.tres" id="4_2fd2i"]
@@ -9,9 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://br4shbrxkwxgj" path="res://UI/Tienda/tienda_ui.tscn" id="7_8njad"]
 [ext_resource type="PackedScene" uid="uid://bujsrbbq0elhi" path="res://Entidades/Tienda/tienda.tscn" id="8_8njad"]
 [ext_resource type="PackedScene" uid="uid://b8u0pprb4t2sj" path="res://Entidades/Trituradora/trituradora.tscn" id="8_u72it"]
-[ext_resource type="PackedScene" uid="uid://bqxfu5knf0pw2" path="res://migrado/UI/HUD/hud.tscn" id="10_qc3uw"]
-[ext_resource type="PackedScene" uid="uid://kyb4e7wfvufr" path="res://migrado/UI/Menu Principal/menu_principal.tscn" id="11_a5bk4"]
-[ext_resource type="PackedScene" uid="uid://cpdgtf2pq7lh" path="res://Assets/TileMap/Map.tscn" id="11_qc3uw"]
+[ext_resource type="PackedScene" uid="uid://bqxfu5knf0pw2" path="res://UI/HUD/hud.tscn" id="10_qc3uw"]
+[ext_resource type="PackedScene" uid="uid://kyb4e7wfvufr" path="res://UI/Menu Principal/menu_principal.tscn" id="11_a5bk4"]
+[ext_resource type="PackedScene" uid="uid://cpdgtf2pq7lh" path="res://Escenarios/TileMap/Map.tscn" id="11_qc3uw"]
 [ext_resource type="PackedScene" uid="uid://cjlmg6cpg7g6g" path="res://Entidades/Maquina Expendedora/MaquinaExpendedora.tscn" id="11_tyb7f"]
 
 [node name="Mundo" type="Node" unique_id=283243708]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://e7kokadv3aib" path="res://Assets/icon.svg" id="1_0bwxm"]
 [ext_resource type="Script" uid="uid://bavd3c4essg3w" path="res://Entidades/Trituradora/trituradora.gd" id="1_we1hm"]
-[ext_resource type="AudioStream" uid="uid://cjghok5vlof2n" path="res://Assets/drop-coin.mp3" id="3_k24a0"]
+[ext_resource type="AudioStream" uid="uid://cjghok5vlof2n" path="res://Assets/audio/drop-coin.mp3" id="3_k24a0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1wau7"]
 size = Vector2(19, 6)

@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://mn8abrepyvev"]
+
+[ext_resource type="Script" uid="uid://b5i5gom2yxj0b" path="res://UI/Barras/barra_energia.gd" id="1_hihnk"]
+[ext_resource type="Script" uid="uid://cloxkbehvaa2q" path="res://UI/Barras/Barras HUD.gd" id="1_wa467"]
+[ext_resource type="Script" uid="uid://d3ixr7t11n000" path="res://UI/Barras/barra_de_progreso.gd" id="2_hihnk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7ek3s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ia0pd"]
+bg_color = Color(0.05462537, 0.5519311, 9.62615e-07, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ftjpt"]
+bg_color = Color(0.24115604, 0.24115607, 0.24115595, 1)
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+shadow_color = Color(0, 0, 0, 0.27450982)
+shadow_offset = Vector2(0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ssq3e"]
+bg_color = Color(0.99646384, 0.99646395, 0.99646395, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" unique_id=376441717]
+custom_minimum_size = Vector2(40, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="BarraEnergia" type="ProgressBar" parent="." unique_id=937398990]
+unique_name_in_owner = true
+z_index = 1
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxEmpty_7ek3s")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ia0pd")
+step = 1.0
+value = 10.0
+show_percentage = false
+script = ExtResource("1_hihnk")
+valor_max = null
+valor_actual = null
+metadata/_custom_type_script = "uid://d3ixr7t11n000"
+
+[node name="Barra secundaria energia" type="ProgressBar" parent="BarraEnergia" unique_id=1161429240]
+unique_name_in_owner = true
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_ftjpt")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ssq3e")
+step = 1.0
+show_percentage = false
+
+[node name="Timer" type="Timer" parent="BarraEnergia" unique_id=921424741]
+unique_name_in_owner = true
+one_shot = true
+
+[node name="Timer lineal" type="Timer" parent="BarraEnergia" unique_id=2065489714]
+unique_name_in_owner = true
+one_shot = true
+
+[node name="BarraCooldown" type="ProgressBar" parent="." unique_id=953963724]
+unique_name_in_owner = true
+modulate = Color(0.96014315, 0.56177855, 3.85046e-07, 1)
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+show_percentage = false
+script = ExtResource("2_hihnk")
+metadata/_custom_type_script = "uid://d3ixr7t11n000"
+
+[node name="BarraBasura" type="ProgressBar" parent="." unique_id=1966912099]
+unique_name_in_owner = true
+visible = false
+modulate = Color(0, 0.76755, 0.76803166, 1)
+layout_mode = 2
+show_percentage = false
+script = ExtResource("2_hihnk")
+metadata/_custom_type_script = "uid://d3ixr7t11n000"
+
+[node name="Barras HUD" type="Node" parent="." unique_id=25264740]
+script = ExtResource("1_wa467")
+
+[connection signal="changed" from="BarraEnergia" to="BarraEnergia" method="_on_changed"]
+[connection signal="value_changed" from="BarraEnergia" to="BarraEnergia" method="_on_value_changed"]
+[connection signal="timeout" from="BarraEnergia/Timer" to="BarraEnergia" method="_on_timer_timeout"]
+[connection signal="timeout" from="BarraEnergia/Timer lineal" to="BarraEnergia" method="_on_timer_lineal_timeout"]

@@ -1,8 +1,8 @@
 [gd_resource type="Theme" format=3 uid="uid://ccuc20xm80owq"]
 
-[ext_resource type="FontFile" uid="uid://dryil6kc3yx5s" path="res://Assets/DobleHex2.ttf" id="1_ce683"]
-[ext_resource type="Texture2D" uid="uid://cbgbirmqb5755" path="res://Assets/marco tienda.png" id="2_op4kc"]
-[ext_resource type="Texture2D" uid="uid://bufyh2pfyydu4" path="res://Assets/jugador/sliders.png" id="3_ce683"]
+[ext_resource type="FontFile" uid="uid://dryil6kc3yx5s" path="res://Assets/tipografia/DobleHex2.ttf" id="1_ce683"]
+[ext_resource type="Texture2D" uid="uid://cbgbirmqb5755" path="res://Assets/UI/marco tienda.png" id="2_op4kc"]
+[ext_resource type="Texture2D" uid="uid://bufyh2pfyydu4" path="res://Assets/UI/sliders.png" id="3_c2bmj"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vehtn"]
 load_path = "res://.godot/imported/marco tienda.png-44704895ee92af5e2e32ada2f35bf46f.ctex"
@@ -62,7 +62,7 @@ colors = PackedColorArray(0.88356674, 3.783077e-05, 0.64343673, 1, 1, 1, 1, 1)
 gradient = SubResource("Gradient_vehtn")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_op4kc"]
-atlas = ExtResource("3_ce683")
+atlas = ExtResource("3_c2bmj")
 region = Rect2(0, 48, 16, 16)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ebfya"]
@@ -72,7 +72,7 @@ texture_margin_bottom = 15.0
 draw_center = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wo7b4"]
-atlas = ExtResource("3_ce683")
+atlas = ExtResource("3_c2bmj")
 region = Rect2(16, 48, 16, 16)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ucro"]

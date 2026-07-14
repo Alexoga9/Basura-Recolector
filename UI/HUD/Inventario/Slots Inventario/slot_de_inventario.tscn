@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://ca3oktj6ebp0n"]
+
+[ext_resource type="Script" uid="uid://ckh416p3y1ubx" path="res://UI/HUD/Inventario/Slots Inventario/slot_de_inventario.gd" id="1_m7cpl"]
+[ext_resource type="Texture2D" uid="uid://gqtxmyvoyday" path="res://Assets/Inventario/heno.png" id="1_u6ism"]
+[ext_resource type="LabelSettings" uid="uid://crqcrwgjb38h3" path="res://UI/Theme/tipografia tienda.tres" id="2_m7cpl"]
+
+[node name="SlotDeInventario" type="HBoxContainer" unique_id=780189116]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m7cpl")
+
+[node name="Icono" type="TextureRect" parent="." unique_id=843434725]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("1_u6ism")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="." unique_id=785871455]
+unique_name_in_owner = true
+layout_mode = 2
+text = "94"
+label_settings = ExtResource("2_m7cpl")
