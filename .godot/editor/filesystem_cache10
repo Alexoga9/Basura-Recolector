@@ -251,7 +251,7 @@ image.png::CompressedTexture2D::1185530216677930155::1783971416::1783971416::1::
 ::res://Assets/audio/::1784062738
 drop-coin.mp3::AudioStreamMP3::5417377819263920503::1783288023::1784062738::1::::<><><>0<>0<>9761ba7a44852b5db1ec87e24d6bb0e3<>res://.godot/imported/drop-coin.mp3-d50fe914aa59fc262bca6068145bdfe0.mp3str::
 tornado audio.mp3::AudioStreamMP3::8418606480005043129::1783122924::1784062738::1::::<><><>0<>0<>7e0fac714385be5e676cbf1d6b993d89<>res://.godot/imported/tornado audio.mp3-d54d347e8af588ebc473f64644c95b7c.mp3str::
-::res://Assets/entidades/::1784145208
+::res://Assets/entidades/::1784145209
 basura completa.png::CompressedTexture2D::7106330250220134144::1784145208::1784145209::1::::<><><>0<>0<>2c4ea38c947a7c8cf5607ff7ff6da706<>res://.godot/imported/basura completa.png-69f80f33d571a76f30c07bf1145ac803.ctex::
 maquina expendedora2.png::CompressedTexture2D::8565607415259171561::1783971416::1784145194::1::::<><><>0<>0<>e6996e12d946389478fe95d77597fd28<>res://.godot/imported/maquina expendedora2.png-498ac165f9cd4355e328fcec89f4e180.ctex::
 maquina expendedora sombra.png::CompressedTexture2D::488826259590628964::1783971416::1784145194::1::::<><><>0<>0<>c3f546ef17f0f2b7d83a3b06e37235d8<>res://.godot/imported/maquina expendedora sombra.png-6d84a590b796fc2adc1e3853012ba2b8.ctex::
@@ -273,9 +273,13 @@ Spring 2 v1.png::CompressedTexture2D::1449256098587669792::1783122924::178312292
 ::res://Assets/tipografia/::1784062711
 DobleHex2.ttf::FontFile::8402524482499531690::1783453507::1784062711::1::::<><><>0<>0<>b73746674aedbf8a41653b9c1ebd1ff5<>res://.godot/imported/DobleHex2.ttf-a36ea65b65da0d401a78603f9058538c.fontdata::
 HexFont16pix.ttf::FontFile::4168932825054485628::1783478494::1784062711::1::::<><><>0<>0<>74bf8dfd5cdb2074725d372e23463c63<>res://.godot/imported/HexFont16pix.ttf-e5bba9c91cfe309cba5be5d967835da9.fontdata::
-::res://Assets/UI/::1784062776
+::res://Assets/UI/::1784146790
 marco tienda.png::CompressedTexture2D::4855492393056724506::1783453514::1784062760::1::::<><><>0<>0<>364901bd9da7435677b209ebedbbbfd6<>res://.godot/imported/marco tienda.png-587a2ce395a1b1d6de66e3c6a07106c0.ctex::
 sliders.png::CompressedTexture2D::3801990595170493809::1783479673::1784062776::1::::<><><>0<>0<>191f7f594b0638ada1499bb9e70342ef<>res://.godot/imported/sliders.png-91434a4362cbc38ae9ccc0d6dc2e96e3.ctex::
+::res://Assets/UI/barra/::1784146797
+barras.png::CompressedTexture2D::7202387914444098691::1784146797::1784146798::1::::<><><>0<>0<>34344b65c7450de6bad72bd3090bffad<>res://.godot/imported/barras.png-4a80219611d372fa2e756a33b57a0644.ctex::
+icono basura barra.png::CompressedTexture2D::7136581458891818539::1784146797::1784146798::1::::<><><>0<>0<>05cc1790051a45d7beb386e6ee59455e<>res://.godot/imported/icono basura barra.png-db3c3e1108d592777445245dcde07405.ctex::
+icono energia barra.png::CompressedTexture2D::4077028606299632088::1784146797::1784146798::1::::<><><>0<>0<>d2fc25fa3705d9d3b376e66733e64bcd<>res://.godot/imported/icono energia barra.png-aeb56dc539969bf4b6ebe136cd628298.ctex::
 ::res://Commons/::1781049200
 ::res://Commons/Componentes/::1784063637
 ::res://Commons/Componentes/Core/::1784063459
@@ -291,21 +295,22 @@ movimiento_basura.gd::GDScript::3619742389384632311::1783971417::0::1::::Movimie
 ::res://Commons/Componentes/Movimiento/Vectores/::1783122924
 MovimientoComponente.gd::GDScript::3339855885998412100::1783122924::0::1::::MovimientoComponente<>Node<><>0<>0<><>::
 PerseguirComponente.gd::GDScript::2863738881846781718::1779556500::0::1::::PerseguirComponente<>Node<><>0<>0<><>::
-::res://Commons/Componentes/Radares/::1784144836
-RadarBasura.gd::GDScript::1214342971838406548::1784144836::0::1::::RadarComponenteBasura<>Area2D<><>0<>0<><>::
+::res://Commons/Componentes/Radares/::1784146260
+RadarBasura.gd::GDScript::1214342971838406548::1784146260::0::1::::RadarComponenteBasura<>Area2D<><>0<>0<><>::
 RadarComponente.gd::GDScript::8299316369557639690::1783288023::0::1::::RadarComponente<>Area2D<><>0<>0<><>::
 ::res://Commons/Componentes/Utilidades/::1784144791
 ::res://Commons/Componentes/Utilidades/Feedback/::1784144796
-::res://Commons/Componentes/Utilidades/Feedback/Resaltado/::1784145004
-ResaltadoComponente.gd::GDScript::6085682091305782788::1784145004::0::1::::ResaltadoComponente<>Node<><>0<>0<><>::
+::res://Commons/Componentes/Utilidades/Feedback/Resaltado/::1784145514
+ResaltadoComponente.gd::GDScript::6085682091305782788::1784145514::0::1::::ResaltadoComponente<>Node<><>0<>0<><>::
 ::res://Commons/Componentes/Utilidades/Loot/::1783971417
 LootComponente.gd::GDScript::8009989860672201178::1781480087::0::1::::LootComponente<>Node<><>0<>0<><>::
 loot_collector.gd::GDScript::7310163185020304175::1783971417::0::1::::<>Area2D<><>0<>0<><>::
 ::res://Entidades/::1784063963
-::res://Entidades/Basura/::1784143592
-Basura.tscn::PackedScene::3371038408796737317::1784115666::0::1::::<><>res://addons/iconos/basura.svg<>0<>0<><>::uid://b8xyvx6fjldhd::::res://Entidades/Basura/Basura_item.gd<>uid://gi5lwe4ui2dd::::res://Entidades/Basura/basura_data.tres
-basura_data.tres::Resource/LootDefinicion::439490400414240885::1784062737::0::1::::<><><>0<>0<><>::uid://dr7bho43atgf6::::res://Assets/audio/tornado audio.mp3<>uid://dnu2r5yw53pto::::res://Recursos/LootDefinicion.gd<>uid://dut0438runrb::::res://Assets/Inventario/caja.png
-Basura_item.gd::GDScript::4751629177755572933::1784143592::0::1::::Basura<>RigidBody2D<><>0<>0<><>::
+::res://Entidades/Basura/::1784146260
+Basura.tscn::PackedScene::3371038408796737317::1784146260::0::1::::<><>res://addons/iconos/basura.svg<>0<>0<><>::uid://b8xyvx6fjldhd::::res://Entidades/Basura/Basura_item.gd<>uid://gi5lwe4ui2dd::::res://Entidades/Basura/basura_data.tres<>uid://cwxixlurvo8rb::::res://Entidades/Basura/resaltado_basura.gd<>uid://c8imhrpes1oxk::::res://Assets/entidades/basura completa.png
+basura_data.tres::Resource/LootDefinicion::439490400414240885::1784145405::0::1::::<><><>0<>0<><>::uid://dr7bho43atgf6::::res://Assets/audio/tornado audio.mp3<>uid://dnu2r5yw53pto::::res://Recursos/LootDefinicion.gd<>uid://c8imhrpes1oxk::::res://Assets/entidades/basura completa.png
+Basura_item.gd::GDScript::4751629177755572933::1784146244::0::1::::Basura<>RigidBody2D<><>0<>0<><>::
+resaltado_basura.gd::GDScript::6365004034422227879::1784146101::0::1::::<>ResaltadoComponente<><>0<>0<><>::
 ::res://Entidades/Basura/Bolsa de Basura/::1784063772
 bolsa_de_basura.tres::Resource/LootDefinicion::2704826263854826589::1784062737::0::1::::<><><>0<>0<><>::uid://dr7bho43atgf6::::res://Assets/audio/tornado audio.mp3<>uid://dnu2r5yw53pto::::res://Recursos/LootDefinicion.gd<>uid://bml0qixvj7x5l::::res://Assets/Inventario/hierro.png
 ::res://Entidades/Consumible/::1784064039
