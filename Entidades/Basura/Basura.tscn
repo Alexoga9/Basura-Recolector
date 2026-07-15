@@ -12,6 +12,7 @@ size = Vector2(16, 16)
 [node name="Basura" type="RigidBody2D" unique_id=1091806052 groups=["Basura"]]
 collision_layer = 4
 collision_mask = 13
+input_pickable = true
 gravity_scale = 0.0
 lock_rotation = true
 linear_damp = 20.0
@@ -39,4 +40,4 @@ bus = &"SFX"
 shape = SubResource("RectangleShape2D_peotj")
 
 [connection signal="finished" from="sonido" to="." method="_on_sonido_finished"]
-[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

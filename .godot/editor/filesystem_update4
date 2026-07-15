@@ -1,1 +1,5 @@
-res://UI/Menu Principal/Opciones/Opciones de audio/VolumeSlider/VolumeSlider.tscn
+res://Commons/Componentes/Radares/RadarBasura.gd
+res://Entidades/Basura/Basura_item.gd
+res://Entidades/Jugador/Jugador.tscn
+res://UI/Theme/Tienda.tres
+res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres

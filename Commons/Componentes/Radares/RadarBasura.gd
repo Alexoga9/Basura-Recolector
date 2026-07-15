@@ -10,6 +10,7 @@ var cooldown_activo: bool = false
 
 
 func _ready():
+	SignalBus.click_basura.connect(click_en_basura)
 	timer.wait_time = cooldown_tiempo
 
 
@@ -39,31 +40,6 @@ func get_entidad_aleatoria() -> Basura:
 
 
 func recoger_basura():
-	#if Input.is_action_just_pressed("Interaccion"):
-		#if Inventario.get_count("Basura") == 0:
-			#accion_de_recogida()
-			#print(str(Inventario.get_item_resource("Basura").cantidad_maxima))
-#
-		#if Inventario.get_count("Basura") <= Inventario.get_item_resource("Basura").cantidad_maxima:
-			#accion_de_recogida()
-			#print("AUN ESPACIO")
-#
-		#elif Inventario.get_count("Basura") == Inventario.get_item_resource("Basura").cantidad_maxima:
-			#print("ta lleno")
-
-	#if Input.is_action_just_pressed("Interaccion"):
-		#if Inventario.get_count("Basura") == null:
-			#print("VACIO")
-			#accion_de_recogida()
-#
-		#if Inventario.get_item_resource("Basura") != null:
-			#if Inventario.get_count("Basura") !=null and Inventario.get_count("Basura") == Inventario.get_item_resource("Basura").cantidad_maxima:
-				#print("ta lleno")
-#
-		#else:
-			#accion_de_recogida()
-			#print("AUN ESPACIO")
-
 	if Input.is_action_just_pressed("Interaccion"):
 		# 1. Obtenemos los datos del ítem "Basura" (puede ser null)
 		var recurso_basura = Inventario.get_item_resource("Basura")
@@ -99,3 +75,14 @@ func accion_de_recogida():
 func _on_timer_timeout():
 	cooldown_activo = false
 	print("Cooldown terminado")
+
+
+func click_en_basura(objeto):
+	
+	if cuerpos.has(objeto) and jugador.energia_componente.energia > 0 and !cooldown_activo:
+		timer.wait_time = cooldown_tiempo
+		timer.start()
+		cooldown_activo = true
+		print("Cooldown activo")
+		objeto.collect()
+		jugador.energia_componente.agotar(1)

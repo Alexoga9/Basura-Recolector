@@ -15,6 +15,7 @@ signal recoger_basura_automatica(bool)
 
 # Basura
 signal basura_recogida
+signal click_basura(objeto)
 
 # UI
 # # Tienda 

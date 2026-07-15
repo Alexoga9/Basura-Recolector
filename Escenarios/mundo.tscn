@@ -117,8 +117,10 @@ z_index = 1
 z_index = -1
 
 [node name="HUD" parent="CanvasLayer" unique_id=67010398 instance=ExtResource("10_qc3uw")]
+visible = false
 
 [node name="MenuPrincipal" parent="CanvasLayer" unique_id=1428838178 instance=ExtResource("11_a5bk4")]
+visible = false
 
 [node name="Trituradora" parent="." unique_id=1291557497 instance=ExtResource("8_u72it")]
 position = Vector2(577, 239)
