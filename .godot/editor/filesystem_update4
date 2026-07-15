@@ -3,3 +3,9 @@ res://Entidades/Basura/Basura_item.gd
 res://Entidades/Jugador/Jugador.tscn
 res://UI/Theme/Tienda.tres
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
+res://Utilidades/Autoloads/Signal_Bus.gd
+res://Escenarios/mundo.tscn
+res://Commons/Componentes/Utilidades/Feedback/Resaltado/ResaltadoComponente.gd
+res://Entidades/Basura/Basura.tscn
+res://Entidades/Basura/basura_data.tres
+res://Entidades/Basura/resaltado_basura.gd

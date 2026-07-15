@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cra4a88lx8lwj"
-path="res://.godot/imported/maquina expendedora.png-80e6f81123d8b2f1a257fcb14d5d3f94.ctex"
+uid="uid://g715raymahea"
+path="res://.godot/imported/maquina expendedora sombra.png-6d84a590b796fc2adc1e3853012ba2b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/maquina expendedora.png"
-dest_files=["res://.godot/imported/maquina expendedora.png-80e6f81123d8b2f1a257fcb14d5d3f94.ctex"]
+source_file="res://Assets/entidades/maquina expendedora sombra.png"
+dest_files=["res://.godot/imported/maquina expendedora sombra.png-6d84a590b796fc2adc1e3853012ba2b8.ctex"]
 
 [params]
 

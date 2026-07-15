@@ -1,9 +1,10 @@
-Label
 Sprite2D
+ResaltadoComponente
+Node
+Label
 Logica_Mejora
 Timer
 MovimientoComponente
-Node
 TileMapLayer
 ProgressBar
 HBoxContainer
@@ -11,4 +12,3 @@ TextureRect
 Control
 NinePatchRect
 AudioStreamPlayer
-CollisionShape2D

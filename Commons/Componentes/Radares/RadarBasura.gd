@@ -10,7 +10,6 @@ var cooldown_activo: bool = false
 
 
 func _ready():
-	SignalBus.click_basura.connect(click_en_basura)
 	timer.wait_time = cooldown_tiempo
 
 
@@ -18,15 +17,18 @@ func _process(delta):
 	recoger_basura()
 
 
-func _on_body_entered(body):
+func _on_body_entered(body: Basura):
 	print("Basura aqui")
 	if body.is_in_group("Basura"):
+		body.en_area_jugador = true
 		cuerpos.append(body)
 		print(cuerpos)
 
 
-func _on_body_exited(body):
+func _on_body_exited(body: Basura):
 	if body.is_in_group("Basura"):
+		body.en_area_jugador = false
+		body.resaltado_componente.al_mouse_salir()
 		cuerpos.erase(body)
 		print(cuerpos)
 
@@ -78,7 +80,7 @@ func _on_timer_timeout():
 
 
 func click_en_basura(objeto):
-	
+
 	if cuerpos.has(objeto) and jugador.energia_componente.energia > 0 and !cooldown_activo:
 		timer.wait_time = cooldown_tiempo
 		timer.start()

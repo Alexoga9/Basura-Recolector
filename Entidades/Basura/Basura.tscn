@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://b8xyvx6fjldhd" path="res://Entidades/Basura/Basura_item.gd" id="1_6qpr3"]
 [ext_resource type="Resource" uid="uid://gi5lwe4ui2dd" path="res://Entidades/Basura/basura_data.tres" id="2_6qpr3"]
+[ext_resource type="Script" uid="uid://cwxixlurvo8rb" path="res://Entidades/Basura/resaltado_basura.gd" id="3_peotj"]
+[ext_resource type="Texture2D" uid="uid://c8imhrpes1oxk" path="res://Assets/entidades/basura completa.png" id="4_peotj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e042u"]
 size = Vector2(14, 5)
@@ -27,6 +29,7 @@ debug_color = Color(0.98978466, 0, 0.27423584, 0.41960785)
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1161258588]
 unique_name_in_owner = true
+hframes = 2
 
 [node name="sonido" type="AudioStreamPlayer" parent="." unique_id=1004405695]
 unique_name_in_owner = true
@@ -39,5 +42,19 @@ bus = &"SFX"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=527528103]
 shape = SubResource("RectangleShape2D_peotj")
 
+[node name="ResaltadoComponente" type="Node" parent="." unique_id=1217323380 node_paths=PackedStringArray("sprite", "area")]
+unique_name_in_owner = true
+script = ExtResource("3_peotj")
+sprite = NodePath("../Sprite")
+area = NodePath("../Area2D")
+metadata/_custom_type_script = "uid://csx7ka6k5q7bc"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=934080948]
+texture = ExtResource("4_peotj")
+hframes = 3
+frame = 2
+
 [connection signal="finished" from="sonido" to="." method="_on_sonido_finished"]
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="ResaltadoComponente" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="ResaltadoComponente" method="_on_area_2d_mouse_exited"]

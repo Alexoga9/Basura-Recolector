@@ -4,10 +4,12 @@ class_name Basura extends RigidBody2D
 @onready var sprite2d = %Sprite
 @onready var collision_shape_2d = %CollisionShape2D
 @onready var sonido = %sonido
+@onready var resaltado_componente: ResaltadoComponente = %ResaltadoComponente
 
 @export var data: LootDefinicion
 
 var objetivo = null
+var en_area_jugador: bool = false
 var input_recibido: bool = false
 var velocidad: int = -1
 

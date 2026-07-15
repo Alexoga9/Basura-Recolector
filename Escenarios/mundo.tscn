@@ -111,7 +111,7 @@ position = Vector2(746, 238)
 
 [node name="TiendaUi" parent="CanvasLayer" unique_id=1611773581 instance=ExtResource("7_8njad")]
 visible = false
-z_index = 1
+z_index = 3
 
 [node name="Inventario" parent="CanvasLayer" unique_id=2011210485 instance=ExtResource("1_vttfp")]
 z_index = -1
