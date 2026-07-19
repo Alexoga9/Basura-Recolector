@@ -26,20 +26,9 @@ func _ready():
 	SignalBus.recoger_basura_automatica.connect(recibir_input)
 
 
-#func _process(delta):
-	#if input_recibido:
-		#perseguir_jugador(delta)
-
-
 func recibir_input():
 	input_recibido = true
 	print("Input recibido")
-
-
-#func perseguir_jugador(delta):
-	#if objetivo != null:
-		#global_position = global_position.move_toward(objetivo.global_position, velocidad)
-		#velocidad += 2 * delta
 
 
 func collect():

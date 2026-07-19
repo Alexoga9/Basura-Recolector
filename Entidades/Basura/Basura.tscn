@@ -40,6 +40,7 @@ bus = &"SFX"
 [node name="Area2D" type="Area2D" parent="." unique_id=392840213]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=527528103]
+visible = false
 shape = SubResource("RectangleShape2D_peotj")
 
 [node name="ResaltadoComponente" type="Node" parent="." unique_id=1217323380 node_paths=PackedStringArray("sprite", "area")]

@@ -7,3 +7,5 @@ res://Entidades/Basura/basura_data.tres
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
 res://Commons/Componentes/Radares/RadarBasura.gd
 res://Entidades/genericos/e_sprite.tscn
+res://Entidades/Basura/Basura.tscn
+res://Entidades/Basura/Basura_item.gd
