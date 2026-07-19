@@ -99,7 +99,7 @@ position = Vector2(716, 302)
 position = Vector2(715, 325)
 
 [node name="Loot18" parent="Node/Basuras" unique_id=1328225134 instance=ExtResource("6_2fd2i")]
-position = Vector2(715, 325)
+position = Vector2(716, 342)
 
 [node name="Loot4" parent="Node/Basuras" unique_id=165001272 instance=ExtResource("6_2fd2i")]
 position = Vector2(630, 347)
@@ -114,10 +114,10 @@ visible = false
 z_index = 3
 
 [node name="Inventario" parent="CanvasLayer" unique_id=2011210485 instance=ExtResource("1_vttfp")]
+process_mode = 4
 z_index = -1
 
 [node name="HUD" parent="CanvasLayer" unique_id=67010398 instance=ExtResource("10_qc3uw")]
-visible = false
 
 [node name="MenuPrincipal" parent="CanvasLayer" unique_id=1428838178 instance=ExtResource("11_a5bk4")]
 visible = false

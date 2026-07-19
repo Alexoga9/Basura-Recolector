@@ -28,7 +28,6 @@ func _ready():
 
 func recibir_input():
 	input_recibido = true
-	print("Input recibido")
 
 
 func collect():
@@ -54,7 +53,6 @@ func iniciar_valores():
 	nombre = data.nombre
 
 	tipo_de_basura = int(data.tipo_de_basura)
-	#print(TipoLoot)
 	valor = data.valor
 #	tags = data.tags
 	sonido.stream = data.audio

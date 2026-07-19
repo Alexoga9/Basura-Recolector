@@ -98,14 +98,9 @@ grow_vertical = 2
 theme_override_styles/background = SubResource("StyleBoxTexture_yvp2q")
 theme_override_styles/fill = SubResource("StyleBoxTexture_6sjcf")
 step = 1.0
-value = 20.0
 show_percentage = false
 
 [node name="Timer energia" type="Timer" parent="HBoxContainer/BarraEnergia" unique_id=921424741]
-unique_name_in_owner = true
-one_shot = true
-
-[node name="Timer lineal" type="Timer" parent="HBoxContainer/BarraEnergia" unique_id=2065489714]
 unique_name_in_owner = true
 one_shot = true
 
@@ -135,6 +130,7 @@ metadata/_custom_type_script = "uid://d3ixr7t11n000"
 [node name="Barra secundaria basura" type="ProgressBar" parent="HBoxContainer2/BarraBasura" unique_id=413225452]
 unique_name_in_owner = true
 z_index = -1
+clip_contents = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -154,7 +150,6 @@ one_shot = true
 [connection signal="changed" from="HBoxContainer/BarraEnergia" to="HBoxContainer/BarraEnergia" method="_on_changed"]
 [connection signal="value_changed" from="HBoxContainer/BarraEnergia" to="HBoxContainer/BarraEnergia" method="_on_value_changed"]
 [connection signal="timeout" from="HBoxContainer/BarraEnergia/Timer energia" to="HBoxContainer/BarraEnergia" method="_on_timer_timeout"]
-[connection signal="timeout" from="HBoxContainer/BarraEnergia/Timer lineal" to="HBoxContainer/BarraEnergia" method="_on_timer_lineal_timeout"]
 [connection signal="changed" from="HBoxContainer2/BarraBasura" to="HBoxContainer2/BarraBasura" method="_on_changed"]
 [connection signal="value_changed" from="HBoxContainer2/BarraBasura" to="HBoxContainer2/BarraBasura" method="_on_value_changed"]
 [connection signal="timeout" from="HBoxContainer2/BarraBasura/Timer basura" to="HBoxContainer2/BarraBasura" method="_on_timer_timeout"]

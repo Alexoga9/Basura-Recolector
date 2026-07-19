@@ -15,7 +15,7 @@ func _on_value_changed(nombre, value):
 
 func _on_timer_timeout():
 	#timer_lineal.start()
-	barra_secundaria_energia.value = value
+	barra_secundaria_energia.value = valor_actual
 
 
 func _on_changed():

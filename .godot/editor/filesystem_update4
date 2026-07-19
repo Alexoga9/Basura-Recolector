@@ -13,3 +13,8 @@ res://Entidades/Jugador/Jugador.tscn
 res://Entidades/Jugador/barra_cooldown.gd
 res://UI/Barras/Barras HUD.gd
 res://UI/Barras/barras_hud.tscn
+res://Escenarios/mundo.tscn
+res://UI/Barras/barra_energia.gd
+res://UI/Barras/barra_basura.gd
+res://UI/HUD/Inventario/Inventario.tscn
+res://UI/HUD/hud.tscn

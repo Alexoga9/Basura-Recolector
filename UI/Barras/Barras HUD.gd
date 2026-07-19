@@ -9,6 +9,7 @@ var jugador: Jugador
 func _ready():
 	await get_tree().process_frame
 	jugador = Global.jugador
+	jugador.energia_componente.valor_energia_cambiado.connect(igualar_barra_energia)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
