@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://dubikj5qcbplp" path="res://Assets/entidades/maquina expendedora2.png" id="3_ev2gr"]
 [ext_resource type="AudioStream" uid="uid://cjghok5vlof2n" path="res://Assets/audio/drop-coin.mp3" id="4_ev2gr"]
 [ext_resource type="Texture2D" uid="uid://g715raymahea" path="res://Assets/entidades/maquina expendedora sombra.png" id="5_fq4of"]
+[ext_resource type="Script" uid="uid://cu3gqs1trstbq" path="res://Entidades/Maquina Expendedora/resaltado_maquina_expendedora.gd" id="6_fq4of"]
+[ext_resource type="PackedScene" uid="uid://b4nutgd65x10o" path="res://Entidades/genericos/e_sprite.tscn" id="7_ojreo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0bwxm"]
 size = Vector2(72, 60)
@@ -44,5 +46,17 @@ stream = ExtResource("4_ev2gr")
 position = Vector2(0, 23)
 texture = ExtResource("5_fq4of")
 
+[node name="E sprite" parent="." unique_id=1769269337 instance=ExtResource("7_ojreo")]
+visible = false
+position = Vector2(0, -38)
+
+[node name="ResaltadoComponente" type="Node" parent="." unique_id=472666808 node_paths=PackedStringArray("sprite", "e_sprite")]
+script = ExtResource("6_fq4of")
+sprite = NodePath("../Sprite2D")
+e_sprite = NodePath("../E sprite")
+metadata/_custom_type_script = "uid://csx7ka6k5q7bc"
+
 [connection signal="body_entered" from="Trigger Jugador" to="." method="_on_trigger_jugador_body_entered"]
+[connection signal="body_entered" from="Trigger Jugador" to="ResaltadoComponente" method="_on_trigger_jugador_body_entered"]
 [connection signal="body_exited" from="Trigger Jugador" to="." method="_on_trigger_jugador_body_exited"]
+[connection signal="body_exited" from="Trigger Jugador" to="ResaltadoComponente" method="_on_trigger_jugador_body_exited"]

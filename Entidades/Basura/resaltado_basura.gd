@@ -5,8 +5,8 @@ extends ResaltadoComponente
 
 func _on_area_2d_mouse_entered():
 	if basura.en_area_jugador:
-		al_mouse_entrar()
+		resaltado()
 
 
 func _on_area_2d_mouse_exited():
-	al_mouse_salir()
+	no_resaltado()

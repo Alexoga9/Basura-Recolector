@@ -28,7 +28,7 @@ func _on_body_entered(body: Basura):
 func _on_body_exited(body: Basura):
 	if body.is_in_group("Basura"):
 		body.en_area_jugador = false
-		body.resaltado_componente.al_mouse_salir()
+		body.resaltado_componente.resaltado()
 		cuerpos.erase(body)
 		print(cuerpos)
 

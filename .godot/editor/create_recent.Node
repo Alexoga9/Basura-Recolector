@@ -1,7 +1,8 @@
-HBoxContainer
-TextureRect
+AnimatedSprite2D
 Sprite2D
 ResaltadoComponente
+HBoxContainer
+TextureRect
 Node
 Label
 Logica_Mejora
