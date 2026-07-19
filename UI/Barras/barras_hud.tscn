@@ -4,7 +4,6 @@
 [ext_resource type="Script" uid="uid://b5i5gom2yxj0b" path="res://UI/Barras/barra_energia.gd" id="1_hihnk"]
 [ext_resource type="Script" uid="uid://cloxkbehvaa2q" path="res://UI/Barras/Barras HUD.gd" id="1_wa467"]
 [ext_resource type="Texture2D" uid="uid://dau5jn3gssk00" path="res://Assets/UI/barra/barras.png" id="2_4x5sh"]
-[ext_resource type="Script" uid="uid://d3ixr7t11n000" path="res://UI/Barras/barra_de_progreso.gd" id="2_hihnk"]
 [ext_resource type="Script" uid="uid://dmdfmna6o8ndc" path="res://UI/Barras/barra_basura.gd" id="5_yvp2q"]
 [ext_resource type="Texture2D" uid="uid://c8xapo1ps5pwt" path="res://Assets/UI/barra/icono basura barra.png" id="6_6sjcf"]
 
@@ -109,15 +108,6 @@ one_shot = true
 [node name="Timer lineal" type="Timer" parent="HBoxContainer/BarraEnergia" unique_id=2065489714]
 unique_name_in_owner = true
 one_shot = true
-
-[node name="BarraCooldown" type="ProgressBar" parent="." unique_id=953963724]
-unique_name_in_owner = true
-modulate = Color(0.96014315, 0.56177855, 3.85046e-07, 1)
-custom_minimum_size = Vector2(0, 5)
-layout_mode = 2
-show_percentage = false
-script = ExtResource("2_hihnk")
-metadata/_custom_type_script = "uid://d3ixr7t11n000"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="." unique_id=316316451]
 layout_mode = 2

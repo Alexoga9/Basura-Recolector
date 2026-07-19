@@ -9,3 +9,7 @@ res://Commons/Componentes/Radares/RadarBasura.gd
 res://Entidades/genericos/e_sprite.tscn
 res://Entidades/Basura/Basura.tscn
 res://Entidades/Basura/Basura_item.gd
+res://Entidades/Jugador/Jugador.tscn
+res://Entidades/Jugador/barra_cooldown.gd
+res://UI/Barras/Barras HUD.gd
+res://UI/Barras/barras_hud.tscn
