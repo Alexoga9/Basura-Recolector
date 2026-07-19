@@ -1,21 +1,14 @@
-res://Entidades/Maquina Expendedora/resaltado_maquina_expendedora.gd
-res://Commons/Componentes/Utilidades/Feedback/Resaltado/ResaltadoComponente.gd
-res://Entidades/Basura/resaltado_basura.gd
-res://Entidades/Maquina Expendedora/MaquinaExpendedora.tscn
+res://Escenarios/mundo.tscn
 res://UI/Theme/Tienda.tres
 res://Entidades/Basura/basura_data.tres
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
-res://Commons/Componentes/Radares/RadarBasura.gd
-res://Entidades/genericos/e_sprite.tscn
-res://Entidades/Basura/Basura.tscn
-res://Entidades/Basura/Basura_item.gd
-res://Entidades/Jugador/Jugador.tscn
-res://Entidades/Jugador/barra_cooldown.gd
-res://UI/Barras/Barras HUD.gd
-res://UI/Barras/barras_hud.tscn
-res://Escenarios/mundo.tscn
-res://UI/Barras/barra_energia.gd
-res://UI/Barras/barra_basura.gd
-res://UI/HUD/Inventario/Inventario.tscn
-res://UI/HUD/hud.tscn
-res://Utilidades/Autoloads/inventario.gd
+res://UI/Tienda/mejoras de habilidades/mejoras/mejora_cooldown.gd
+res://UI/Tienda/Panel tienda/panel_tienda.tscn
+res://UI/Theme/tipografia tienda.tres
+res://UI/Tienda/Panel tienda/panel_tienda.gd
+res://UI/Tienda/mejoras de habilidades/logica_mejora.gd
+res://UI/Tienda/mejoras de habilidades/mejoras/mejora_resistencia.gd
+res://UI/Tienda/mejoras de habilidades/mejoras/mejora_rango.gd
+res://UI/Tienda/mejoras de habilidades/mejoras/mejora_lanzamiento.gd
+res://UI/Tienda/mejoras de habilidades/mejoras/mejora_peso.gd
+res://UI/Tienda/mejoras de habilidades/mejoras/mejora_honguitos.gd

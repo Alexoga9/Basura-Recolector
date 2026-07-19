@@ -1,19 +1,20 @@
-extends Control
+class_name PanelTienda extends Control
 
-@onready var imagen = %imagen
-@onready var nombre = %nombre
-@onready var linea = %linea
-@onready var descripcion = %descripcion
-@onready var label_nivel = %nivel
-@onready var barra = %barra
-@onready var boton = %boton
-@onready var label_precio = %precio
-@onready var audio = %audio
+@onready var imagen: TextureRect = %imagen
+@onready var nombre: Label = %nombre
+@onready var descripcion: Label = %descripcion
+@onready var label_nivel: Label = %nivel
+@onready var barra: ProgressBar = %barra
+@onready var boton: Button = %boton
+@onready var label_precio: Label = %precio
+@onready var audio: AudioStreamPlayer = %audio
+@onready var beneficio: Label = %Beneficio
+@onready var actual: Label = %Actual
 
 @export var mejora: DatosHabilidades
 @export var logica_mejora: Logica_Mejora
 
-var nivel: int = 0
+var nivel: int = 1
 var precio: int = 0
 
 
@@ -51,6 +52,7 @@ func _comprar_mejora():
 	logica_mejora.aplicar_mejora()
 	Dinero.dinero -= precio #Cambiar por el base
 	nivel += 1
+	label_nivel.text = ("Nivel " + str(nivel))
 	_actualizar_barra_de_progreso()
 	_actualizar_precio()
 
@@ -68,3 +70,8 @@ func _actualizar_barra_de_progreso():
 func _on_boton_pressed():
 	_comprar_mejora()
 	audio.play()
+
+
+func estadisticas(ahora: float, buff: float):
+	beneficio.text = str(ahora)
+	actual.text = str(buff)

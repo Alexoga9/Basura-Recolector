@@ -12,9 +12,21 @@
 atlas = ExtResource("4_wcpre")
 region = Rect2(48, 48, 16, 16)
 
+[sub_resource type="LabelSettings" id="LabelSettings_ts0p1"]
+line_spacing = -4.0
+font_color = Color(0.44794613, 0.8752649, 0, 1)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_3e1ft"]
 atlas = ExtResource("4_wcpre")
 region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wbqoc"]
+line_spacing = -4.0
+font_color = Color(0.9999077, 0.0430504, 0.24974328, 1)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Panel Tienda" type="Control" unique_id=1195401960]
 custom_minimum_size = Vector2(0, 64)
@@ -89,12 +101,6 @@ size_flags_horizontal = 0
 text = "Nombre"
 label_settings = ExtResource("6_ahgl1")
 
-[node name="linea" type="ColorRect" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer3" unique_id=209486722]
-unique_name_in_owner = true
-visible = false
-custom_minimum_size = Vector2(0, 1)
-layout_mode = 2
-
 [node name="HBoxContainer2" type="HBoxContainer" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer3" unique_id=1190870895]
 layout_mode = 2
 size_flags_vertical = 3
@@ -137,7 +143,6 @@ size_flags_horizontal = 3
 max_value = 10.0
 step = 1.0
 page = 0.735
-value = 8.0
 show_percentage = false
 
 [node name="Control" type="Control" parent="Panel/MarginContainer/HBoxContainer" unique_id=1890556930]
@@ -177,24 +182,26 @@ size_flags_vertical = 4
 theme_override_constants/separation = 1
 
 [node name="Beneficio" type="Label" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=1402109072]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Nombre"
-label_settings = ExtResource("6_ahgl1")
+label_settings = SubResource("LabelSettings_ts0p1")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=48060192]
+[node name="Flechita" type="TextureRect" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=48060192]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = SubResource("AtlasTexture_3e1ft")
 
 [node name="Actual" type="Label" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=1462804594]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Nombre"
-label_settings = ExtResource("6_ahgl1")
+label_settings = SubResource("LabelSettings_wbqoc")
 horizontal_alignment = 1
 vertical_alignment = 1
 

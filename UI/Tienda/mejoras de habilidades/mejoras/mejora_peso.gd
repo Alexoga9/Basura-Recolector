@@ -9,3 +9,8 @@ func _ready():
 
 func aplicar_mejora():
 	data_basura.cantidad_maxima += 2
+	actualizar_datos()
+
+
+func actualizar_datos():
+	panel.estadisticas(data_basura.cantidad_maxima, data_basura.cantidad_maxima + 2)

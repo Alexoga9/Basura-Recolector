@@ -1,23 +1,20 @@
 class_name Logica_Mejora extends Node
 
 var jugador: Jugador
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
+var panel: PanelTienda
 
 
 func iniciar():
 	await get_tree().process_frame
 	jugador = Global.jugador
-	#print("Esta el " + jugador.name)
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+	panel = get_parent()
+	actualizar_datos()
 
 
 func aplicar_mejora():
+	actualizar_datos()
+	pass
+
+
+func actualizar_datos():
 	pass
