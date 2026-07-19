@@ -24,14 +24,9 @@ func igualar_barra_energia():
 
 
 func igualar_barra_basura():
-	if Inventario.get_count("Basura") == null or Inventario.get_count("Basura") <= 0:
-		return
-
 	var cantidad_basura: int = Inventario.get_count("Basura")
 	var recurso_basura = Inventario.get_item_resource("Basura")
 
-	if recurso_basura == null:
-		barra_basura.valor_actual = 0
-
-	barra_basura.valor_max = recurso_basura.cantidad_maxima
-	barra_basura.valor_actual = cantidad_basura
+	if Inventario.get_item_resource("Basura") != null:
+		barra_basura.valor_max = recurso_basura.cantidad_maxima
+		barra_basura.valor_actual = cantidad_basura

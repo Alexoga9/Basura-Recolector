@@ -109,18 +109,17 @@ position = Vector2(746, 238)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2010886703]
 
-[node name="TiendaUi" parent="CanvasLayer" unique_id=1611773581 instance=ExtResource("7_8njad")]
+[node name="MenuPrincipal" parent="CanvasLayer" unique_id=1428838178 instance=ExtResource("11_a5bk4")]
 visible = false
-z_index = 3
 
 [node name="Inventario" parent="CanvasLayer" unique_id=2011210485 instance=ExtResource("1_vttfp")]
-process_mode = 4
 z_index = -1
 
 [node name="HUD" parent="CanvasLayer" unique_id=67010398 instance=ExtResource("10_qc3uw")]
 
-[node name="MenuPrincipal" parent="CanvasLayer" unique_id=1428838178 instance=ExtResource("11_a5bk4")]
+[node name="TiendaUi" parent="CanvasLayer" unique_id=1611773581 instance=ExtResource("7_8njad")]
 visible = false
+z_index = 4
 
 [node name="Trituradora" parent="." unique_id=1291557497 instance=ExtResource("8_u72it")]
 position = Vector2(577, 239)

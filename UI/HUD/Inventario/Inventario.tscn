@@ -1,9 +1,5 @@
 [gd_scene format=3 uid="uid://bxxsc2sciuuu3"]
 
-[ext_resource type="Script" uid="uid://d2f0m5j1ciuls" path="res://Utilidades/Autoloads/inventario.gd" id="1_ftg80"]
-[ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="2_ftg80"]
-[ext_resource type="Resource" uid="uid://dmky67t6umj3u" path="res://Entidades/Loot/loots/rs_piedra.tres" id="3_hdjn2"]
-[ext_resource type="Resource" uid="uid://5k76mbciamak" path="res://Entidades/Loot/loots/re_madera.tres" id="4_k5oni"]
 [ext_resource type="Texture2D" uid="uid://q5jrk63qij1t" path="res://Assets/image.png" id="6_hdjn2"]
 [ext_resource type="PackedScene" uid="uid://ca3oktj6ebp0n" path="res://UI/HUD/Inventario/Slots Inventario/slot_de_inventario.tscn" id="7_l1s3s"]
 [ext_resource type="PackedScene" uid="uid://mn8abrepyvev" path="res://UI/Barras/barras_hud.tscn" id="8_2kcwo"]
@@ -18,8 +14,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-script = ExtResource("1_ftg80")
-items = Array[ExtResource("2_ftg80")]([ExtResource("3_hdjn2"), ExtResource("4_k5oni")])
 
 [node name="Referencia" type="Sprite2D" parent="." unique_id=1356842247]
 visible = false

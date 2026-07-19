@@ -22,9 +22,9 @@ buses/default_bus_layout="res://Utilidades/AudioBus/default_bus_layout.tres"
 [autoload]
 
 Global="*uid://50g7q8nvqdp2"
-Inventario="*uid://bxxsc2sciuuu3"
-Dinero="*uid://ch8alg1k4awm0"
 SignalBus="*uid://de1hm7ggjo12u"
+Dinero="*uid://ch8alg1k4awm0"
+Inventario="*uid://d2f0m5j1ciuls"
 
 [debug]
 

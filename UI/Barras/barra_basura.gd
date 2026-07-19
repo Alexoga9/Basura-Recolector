@@ -1,6 +1,6 @@
 extends BarraDeProgreso
 
-@onready var barra_secundaria_energia: ProgressBar = %"Barra secundaria energia"
+@onready var barra_secundaria_basura = %"Barra secundaria basura"
 @onready var timer: Timer = %"Timer basura"
 
 
@@ -15,13 +15,13 @@ func _on_value_changed(nombre, value):
 
 func _on_timer_timeout():
 	#timer_lineal.start()
-	barra_secundaria_energia.value = valor_actual
+	barra_secundaria_basura.value = valor_actual
 
 
 func _on_changed():
-	barra_secundaria_energia.max_value = valor_max
+	barra_secundaria_basura.max_value = valor_max
 
 
 func datos_barra_secundaria():
-	barra_secundaria_energia.value = valor_actual
-	barra_secundaria_energia.max_value = valor_max
+	barra_secundaria_basura.value = valor_actual
+	barra_secundaria_basura.max_value = valor_max

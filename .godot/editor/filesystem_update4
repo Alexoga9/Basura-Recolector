@@ -18,3 +18,4 @@ res://UI/Barras/barra_energia.gd
 res://UI/Barras/barra_basura.gd
 res://UI/HUD/Inventario/Inventario.tscn
 res://UI/HUD/hud.tscn
+res://Utilidades/Autoloads/inventario.gd

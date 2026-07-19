@@ -1,4 +1,4 @@
-extends Control
+extends Node
 
 signal slot_updated(item_id: String, new_count: int)
 
