@@ -1,15 +1,14 @@
 extends BarraDeProgreso
 
 @onready var barra_secundaria_energia: ProgressBar = %"Barra secundaria energia"
-@onready var timer: Timer = %"Timer energia"
-@onready var timer_lineal = %"Timer lineal"
+@onready var timer: Timer = %"Timer basura"
 
 
 func _ready():
-	pass
+	Inventario.slot_updated.connect(_on_value_changed)
 
 
-func _on_value_changed(value):
+func _on_value_changed(nombre, value):
 	print("timer iniciado")
 	timer.start()
 
@@ -26,7 +25,3 @@ func _on_changed():
 func datos_barra_secundaria():
 	barra_secundaria_energia.value = valor_actual
 	barra_secundaria_energia.max_value = valor_max
-
-
-func _on_timer_lineal_timeout():
-	pass # Replace with function body.

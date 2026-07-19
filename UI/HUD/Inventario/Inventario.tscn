@@ -31,12 +31,11 @@ texture = ExtResource("6_hdjn2")
 self_modulate = Color(1, 1, 1, 0.2901961)
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.72700006
-anchor_right = 0.31
+anchor_top = 0.60400003
+anchor_right = 0.395
 anchor_bottom = 1.0
-offset_left = 2.0
-offset_top = -0.03201294
-offset_right = -0.08000183
+offset_top = 0.5359955
+offset_right = 0.6399994
 offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -68,7 +67,6 @@ layout_mode = 2
 [node name="SlotDeInventario" parent="InventarioSlot/VBoxContainer/HBoxContainer2" unique_id=1457160244 instance=ExtResource("7_l1s3s")]
 visible = false
 layout_mode = 2
-id_a_recibir = "Basura"
 
 [node name="SlotDeInventario2" parent="InventarioSlot/VBoxContainer/HBoxContainer2" unique_id=1514962989 instance=ExtResource("7_l1s3s")]
 visible = false
@@ -88,4 +86,9 @@ size_flags_horizontal = 3
 
 [node name="SlotDeDinero" parent="InventarioSlot/VBoxContainer/HBoxContainer3" unique_id=927491836 instance=ExtResource("9_2kcwo")]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 textura = ExtResource("10_l1s3s")
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="InventarioSlot/VBoxContainer" unique_id=1354787719]
+layout_mode = 2

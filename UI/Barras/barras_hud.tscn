@@ -5,6 +5,8 @@
 [ext_resource type="Script" uid="uid://cloxkbehvaa2q" path="res://UI/Barras/Barras HUD.gd" id="1_wa467"]
 [ext_resource type="Texture2D" uid="uid://dau5jn3gssk00" path="res://Assets/UI/barra/barras.png" id="2_4x5sh"]
 [ext_resource type="Script" uid="uid://d3ixr7t11n000" path="res://UI/Barras/barra_de_progreso.gd" id="2_hihnk"]
+[ext_resource type="Script" uid="uid://dmdfmna6o8ndc" path="res://UI/Barras/barra_basura.gd" id="5_yvp2q"]
+[ext_resource type="Texture2D" uid="uid://c8xapo1ps5pwt" path="res://Assets/UI/barra/icono basura barra.png" id="6_6sjcf"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7ek3s"]
 
@@ -30,6 +32,26 @@ region = Rect2(8, 64, 72, 16)
 texture = SubResource("AtlasTexture_yvp2q")
 modulate_color = Color(1, 0.4132895, 0.5624667, 1)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6sjcf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuoc7"]
+atlas = ExtResource("2_4x5sh")
+region = Rect2(8, 80, 72, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2orqm"]
+texture = SubResource("AtlasTexture_tuoc7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_22mrk"]
+texture = SubResource("AtlasTexture_bb6df")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dptl3"]
+atlas = ExtResource("2_4x5sh")
+region = Rect2(8, 80, 72, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6250p"]
+texture = SubResource("AtlasTexture_dptl3")
+modulate_color = Color(0, 0.5505359, 0.92170787, 1)
+
 [node name="VBoxContainer" type="VBoxContainer" unique_id=376441717]
 custom_minimum_size = Vector2(40, 0)
 anchors_preset = 15
@@ -38,6 +60,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
+
+[node name="Barras HUD" type="Node" parent="." unique_id=25264740]
+script = ExtResource("1_wa467")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=328620206]
 layout_mode = 2
@@ -60,8 +85,6 @@ theme_override_styles/fill = SubResource("StyleBoxTexture_bb6df")
 step = 1.0
 show_percentage = false
 script = ExtResource("1_hihnk")
-valor_max = null
-valor_actual = null
 metadata/_custom_type_script = "uid://d3ixr7t11n000"
 
 [node name="Barra secundaria energia" type="ProgressBar" parent="HBoxContainer/BarraEnergia" unique_id=1161429240]
@@ -79,7 +102,7 @@ step = 1.0
 value = 20.0
 show_percentage = false
 
-[node name="Timer" type="Timer" parent="HBoxContainer/BarraEnergia" unique_id=921424741]
+[node name="Timer energia" type="Timer" parent="HBoxContainer/BarraEnergia" unique_id=921424741]
 unique_name_in_owner = true
 one_shot = true
 
@@ -96,25 +119,52 @@ show_percentage = false
 script = ExtResource("2_hihnk")
 metadata/_custom_type_script = "uid://d3ixr7t11n000"
 
-[node name="BarraBasura" type="ProgressBar" parent="." unique_id=1966912099]
+[node name="HBoxContainer2" type="HBoxContainer" parent="." unique_id=316316451]
+layout_mode = 2
+theme_override_constants/separation = -5
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer2" unique_id=43621861]
+z_index = 2
+layout_mode = 2
+texture = ExtResource("6_6sjcf")
+
+[node name="BarraBasura" type="ProgressBar" parent="HBoxContainer2" unique_id=1966912099]
 unique_name_in_owner = true
-visible = false
 z_index = 1
 custom_minimum_size = Vector2(0, 16)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 8
-theme_override_styles/background = SubResource("StyleBoxEmpty_7ek3s")
-theme_override_styles/fill = SubResource("StyleBoxTexture_bb6df")
+theme_override_styles/background = SubResource("StyleBoxEmpty_6sjcf")
+theme_override_styles/fill = SubResource("StyleBoxTexture_2orqm")
 step = 1.0
 show_percentage = false
-script = ExtResource("2_hihnk")
+script = ExtResource("5_yvp2q")
 metadata/_custom_type_script = "uid://d3ixr7t11n000"
 
-[node name="Barras HUD" type="Node" parent="." unique_id=25264740]
-script = ExtResource("1_wa467")
+[node name="Barra secundaria basura" type="ProgressBar" parent="HBoxContainer2/BarraBasura" unique_id=413225452]
+unique_name_in_owner = true
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxTexture_22mrk")
+theme_override_styles/fill = SubResource("StyleBoxTexture_6250p")
+step = 1.0
+value = 20.0
+show_percentage = false
+
+[node name="Timer basura" type="Timer" parent="HBoxContainer2/BarraBasura" unique_id=1810799188]
+unique_name_in_owner = true
+one_shot = true
 
 [connection signal="changed" from="HBoxContainer/BarraEnergia" to="HBoxContainer/BarraEnergia" method="_on_changed"]
 [connection signal="value_changed" from="HBoxContainer/BarraEnergia" to="HBoxContainer/BarraEnergia" method="_on_value_changed"]
-[connection signal="timeout" from="HBoxContainer/BarraEnergia/Timer" to="HBoxContainer/BarraEnergia" method="_on_timer_timeout"]
+[connection signal="timeout" from="HBoxContainer/BarraEnergia/Timer energia" to="HBoxContainer/BarraEnergia" method="_on_timer_timeout"]
 [connection signal="timeout" from="HBoxContainer/BarraEnergia/Timer lineal" to="HBoxContainer/BarraEnergia" method="_on_timer_lineal_timeout"]
+[connection signal="changed" from="HBoxContainer2/BarraBasura" to="HBoxContainer2/BarraBasura" method="_on_changed"]
+[connection signal="value_changed" from="HBoxContainer2/BarraBasura" to="HBoxContainer2/BarraBasura" method="_on_value_changed"]
+[connection signal="timeout" from="HBoxContainer2/BarraBasura/Timer basura" to="HBoxContainer2/BarraBasura" method="_on_timer_timeout"]

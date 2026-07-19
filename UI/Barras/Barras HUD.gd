@@ -17,6 +17,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	igualar_barra_energia()
+	igualar_barra_basura()
 
 
 func igualar_barra_energia():
@@ -25,3 +26,17 @@ func igualar_barra_energia():
 
 	barra_cooldown.valor_max = jugador.recoge_basura.timer.wait_time
 	barra_cooldown.valor_actual = jugador.recoge_basura.timer.time_left
+
+
+func igualar_barra_basura():
+	if Inventario.get_count("Basura") == null or Inventario.get_count("Basura") <= 0:
+		return
+
+	var cantidad_basura: int = Inventario.get_count("Basura")
+	var recurso_basura = Inventario.get_item_resource("Basura")
+
+	if recurso_basura == null:
+		barra_basura.valor_actual = 0
+
+	barra_basura.valor_max = recurso_basura.cantidad_maxima
+	barra_basura.valor_actual = cantidad_basura
