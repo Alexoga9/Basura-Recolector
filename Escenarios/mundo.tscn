@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://rvr7pqnbebp8"]
 
-[ext_resource type="Texture2D" uid="uid://e7kokadv3aib" path="res://Assets/icon.svg" id="1_lgngo"]
 [ext_resource type="PackedScene" uid="uid://bxxsc2sciuuu3" path="res://UI/HUD/Inventario/Inventario.tscn" id="1_vttfp"]
 [ext_resource type="PackedScene" uid="uid://e856quj4lvvn" path="res://Entidades/Jugador/Jugador.tscn" id="2_fw4w5"]
 [ext_resource type="PackedScene" uid="uid://cd6lygsc501ww" path="res://Entidades/Loot/Loot.tscn" id="3_tgroa"]
@@ -16,95 +15,102 @@
 
 [node name="Mundo" type="Node" unique_id=283243708]
 
-[node name="Map" parent="." unique_id=1847593572 instance=ExtResource("11_qc3uw")]
+[node name="Objetos Ambientales" type="Node2D" parent="." unique_id=744996491]
+y_sort_enabled = true
+
+[node name="Map" parent="Objetos Ambientales" unique_id=1847593572 instance=ExtResource("11_qc3uw")]
 metadata/_edit_lock_ = true
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=1884187704]
-visible = false
-modulate = Color(0.39283404, 0.39437628, 0.40885204, 1)
-position = Vector2(583, 329.5)
-scale = Vector2(9.09375, 5.1328125)
-texture = ExtResource("1_lgngo")
-metadata/_edit_lock_ = true
+[node name="Jugador" parent="Objetos Ambientales" unique_id=1030727379 instance=ExtResource("2_fw4w5")]
+position = Vector2(739, 262)
 
-[node name="Jugador" parent="." unique_id=1030727379 instance=ExtResource("2_fw4w5")]
-position = Vector2(596, 315)
+[node name="Entiddaes" type="Node2D" parent="Objetos Ambientales" unique_id=358230563]
 
-[node name="Node" type="Node" parent="." unique_id=665496197]
+[node name="Loots" type="Node2D" parent="Objetos Ambientales/Entiddaes" unique_id=1048744522]
 
-[node name="Loot5" parent="Node" unique_id=1738087845 instance=ExtResource("3_tgroa")]
+[node name="Loot5" parent="Objetos Ambientales/Entiddaes/Loots" unique_id=1738087845 instance=ExtResource("3_tgroa")]
 position = Vector2(535, 364)
 data = ExtResource("4_2fd2i")
 
-[node name="Loot6" parent="Node" unique_id=919298538 instance=ExtResource("3_tgroa")]
+[node name="Loot6" parent="Objetos Ambientales/Entiddaes/Loots" unique_id=919298538 instance=ExtResource("3_tgroa")]
 position = Vector2(535, 336)
 
-[node name="Loot" parent="Node" unique_id=1883567907 instance=ExtResource("3_tgroa")]
+[node name="Loot" parent="Objetos Ambientales/Entiddaes/Loots" unique_id=1883567907 instance=ExtResource("3_tgroa")]
 position = Vector2(535, 308)
 data = ExtResource("4_2fd2i")
 
-[node name="Loot3" parent="Node" unique_id=1841113591 instance=ExtResource("3_tgroa")]
+[node name="Loot3" parent="Objetos Ambientales/Entiddaes/Loots" unique_id=1841113591 instance=ExtResource("3_tgroa")]
 position = Vector2(535, 281)
 
-[node name="Loot7" parent="Node" unique_id=1782321174 instance=ExtResource("3_tgroa")]
+[node name="Loot7" parent="Objetos Ambientales/Entiddaes/Loots" unique_id=1782321174 instance=ExtResource("3_tgroa")]
 position = Vector2(504, 364)
 data = ExtResource("4_2fd2i")
 
-[node name="Loot8" parent="Node" unique_id=1459569408 instance=ExtResource("3_tgroa")]
+[node name="Loot8" parent="Objetos Ambientales/Entiddaes/Loots" unique_id=1459569408 instance=ExtResource("3_tgroa")]
 position = Vector2(504, 336)
 
-[node name="Loot2" parent="Node" unique_id=1284606587 instance=ExtResource("3_tgroa")]
+[node name="Loot2" parent="Objetos Ambientales/Entiddaes/Loots" unique_id=1284606587 instance=ExtResource("3_tgroa")]
 position = Vector2(504, 308)
 data = ExtResource("4_2fd2i")
 
-[node name="Loot4" parent="Node" unique_id=1821437375 instance=ExtResource("3_tgroa")]
+[node name="Loot4" parent="Objetos Ambientales/Entiddaes/Loots" unique_id=1821437375 instance=ExtResource("3_tgroa")]
 position = Vector2(504, 281)
 
-[node name="Basuras" type="Node" parent="Node" unique_id=1174743801]
+[node name="Basuras" type="Node2D" parent="Objetos Ambientales/Entiddaes" unique_id=543078528]
+y_sort_enabled = true
 
-[node name="Loot2" parent="Node/Basuras" unique_id=1091806052 instance=ExtResource("6_2fd2i")]
+[node name="Loot2" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1091806052 instance=ExtResource("6_2fd2i")]
 position = Vector2(664, 326)
 
-[node name="Loot7" parent="Node/Basuras" unique_id=1276343682 instance=ExtResource("6_2fd2i")]
+[node name="Loot7" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1276343682 instance=ExtResource("6_2fd2i")]
 position = Vector2(654, 351)
 
-[node name="Loot8" parent="Node/Basuras" unique_id=1079077092 instance=ExtResource("6_2fd2i")]
+[node name="Loot8" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1079077092 instance=ExtResource("6_2fd2i")]
 position = Vector2(639, 325)
 
-[node name="Loot9" parent="Node/Basuras" unique_id=1716104005 instance=ExtResource("6_2fd2i")]
+[node name="Loot9" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1716104005 instance=ExtResource("6_2fd2i")]
 position = Vector2(651, 307)
 
-[node name="Loot10" parent="Node/Basuras" unique_id=2070967356 instance=ExtResource("6_2fd2i")]
+[node name="Loot10" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=2070967356 instance=ExtResource("6_2fd2i")]
 position = Vector2(639, 364)
 
-[node name="Loot11" parent="Node/Basuras" unique_id=456136626 instance=ExtResource("6_2fd2i")]
+[node name="Loot11" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=456136626 instance=ExtResource("6_2fd2i")]
 position = Vector2(672, 369)
 
-[node name="Loot12" parent="Node/Basuras" unique_id=329021941 instance=ExtResource("6_2fd2i")]
+[node name="Loot12" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=329021941 instance=ExtResource("6_2fd2i")]
 position = Vector2(686, 356)
 
-[node name="Loot13" parent="Node/Basuras" unique_id=1395442083 instance=ExtResource("6_2fd2i")]
+[node name="Loot13" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1395442083 instance=ExtResource("6_2fd2i")]
 position = Vector2(692, 332)
 
-[node name="Loot14" parent="Node/Basuras" unique_id=698021777 instance=ExtResource("6_2fd2i")]
+[node name="Loot14" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=698021777 instance=ExtResource("6_2fd2i")]
 position = Vector2(699, 314)
 
-[node name="Loot15" parent="Node/Basuras" unique_id=1307620334 instance=ExtResource("6_2fd2i")]
+[node name="Loot15" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1307620334 instance=ExtResource("6_2fd2i")]
 position = Vector2(681, 302)
 
-[node name="Loot16" parent="Node/Basuras" unique_id=521582679 instance=ExtResource("6_2fd2i")]
+[node name="Loot16" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=521582679 instance=ExtResource("6_2fd2i")]
 position = Vector2(716, 302)
 
-[node name="Loot17" parent="Node/Basuras" unique_id=1392906129 instance=ExtResource("6_2fd2i")]
+[node name="Loot17" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1392906129 instance=ExtResource("6_2fd2i")]
 position = Vector2(715, 325)
 
-[node name="Loot18" parent="Node/Basuras" unique_id=1328225134 instance=ExtResource("6_2fd2i")]
+[node name="Loot18" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1328225134 instance=ExtResource("6_2fd2i")]
 position = Vector2(716, 342)
 
-[node name="Loot4" parent="Node/Basuras" unique_id=165001272 instance=ExtResource("6_2fd2i")]
+[node name="Loot4" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=165001272 instance=ExtResource("6_2fd2i")]
 position = Vector2(630, 347)
 
-[node name="MaquinaExpendedora" parent="Node" unique_id=578851082 instance=ExtResource("11_tyb7f")]
+[node name="Puestos" type="Node2D" parent="Objetos Ambientales" unique_id=889237100]
+y_sort_enabled = true
+
+[node name="Tienda" parent="Objetos Ambientales/Puestos" unique_id=1450673076 instance=ExtResource("8_8njad")]
+position = Vector2(666, 238)
+
+[node name="Trituradora" parent="Objetos Ambientales/Puestos" unique_id=1291557497 instance=ExtResource("8_u72it")]
+position = Vector2(577, 239)
+
+[node name="MaquinaExpendedora" parent="Objetos Ambientales/Puestos" unique_id=578851082 instance=ExtResource("11_tyb7f")]
 position = Vector2(746, 238)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2010886703]
@@ -119,9 +125,3 @@ z_index = -1
 [node name="TiendaUi" parent="CanvasLayer" unique_id=1611773581 instance=ExtResource("7_8njad")]
 visible = false
 z_index = 4
-
-[node name="Trituradora" parent="." unique_id=1291557497 instance=ExtResource("8_u72it")]
-position = Vector2(577, 239)
-
-[node name="Tienda" parent="Trituradora" unique_id=1450673076 instance=ExtResource("8_8njad")]
-position = Vector2(89, -1)

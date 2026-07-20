@@ -164,6 +164,7 @@ bg_color = Color(0.54497427, 0.5449743, 0.5449741, 1)
 bg_color = Color(0.83975405, 0.8397541, 0.8397539, 1)
 
 [node name="Jugador" type="CharacterBody2D" unique_id=1030727379 groups=["Jugador"]]
+y_sort_enabled = true
 collision_mask = 24
 motion_mode = 1
 script = ExtResource("1_5k27j")
@@ -201,7 +202,7 @@ bolsa_de_basura = ExtResource("12_qtgc7")
 data_template = ExtResource("13_orci8")
 
 [node name="Cuerpo" type="CollisionShape2D" parent="." unique_id=925831003]
-position = Vector2(0, 9)
+position = Vector2(-1, 0)
 shape = SubResource("CircleShape2D_b35yh")
 debug_color = Color(1.3536774e-07, 0.102459945, 0.126971, 0.41960785)
 
@@ -209,6 +210,7 @@ debug_color = Color(1.3536774e-07, 0.102459945, 0.126971, 0.41960785)
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_i0bg8")
 animation = &"Idle"
+offset = Vector2(0, -11.015)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=664749476 groups=["Camara"]]
 unique_name_in_owner = true
@@ -269,9 +271,9 @@ one_shot = true
 [node name="BarraCooldown" type="ProgressBar" parent="." unique_id=1271422914]
 unique_name_in_owner = true
 offset_left = -11.0
-offset_top = -7.0
+offset_top = -21.0
 offset_right = 10.0
-offset_bottom = -4.0
+offset_bottom = -18.0
 theme_override_styles/background = SubResource("StyleBoxFlat_8xsec")
 theme_override_styles/fill = SubResource("StyleBoxFlat_qtgc7")
 show_percentage = false

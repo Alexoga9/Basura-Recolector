@@ -2,13 +2,6 @@ res://Escenarios/mundo.tscn
 res://UI/Theme/Tienda.tres
 res://Entidades/Basura/basura_data.tres
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
-res://UI/Tienda/mejoras de habilidades/mejoras/mejora_cooldown.gd
-res://UI/Tienda/Panel tienda/panel_tienda.tscn
-res://UI/Theme/tipografia tienda.tres
-res://UI/Tienda/Panel tienda/panel_tienda.gd
-res://UI/Tienda/mejoras de habilidades/logica_mejora.gd
-res://UI/Tienda/mejoras de habilidades/mejoras/mejora_resistencia.gd
-res://UI/Tienda/mejoras de habilidades/mejoras/mejora_rango.gd
-res://UI/Tienda/mejoras de habilidades/mejoras/mejora_lanzamiento.gd
-res://UI/Tienda/mejoras de habilidades/mejoras/mejora_peso.gd
-res://UI/Tienda/mejoras de habilidades/mejoras/mejora_honguitos.gd
+res://Entidades/Maquina Expendedora/MaquinaExpendedora.tscn
+res://Entidades/Jugador/Jugador.tscn
+res://Entidades/Basura/Basura.tscn

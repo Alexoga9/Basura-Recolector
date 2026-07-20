@@ -30,7 +30,10 @@ debug_color = Color(0.65120107, 0.0018948114, 0.8419935, 0.41960785)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1781763865]
 unique_name_in_owner = true
+y_sort_enabled = true
+position = Vector2(0, 23)
 texture = ExtResource("3_ev2gr")
+offset = Vector2(0, -22.6)
 hframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=144946869]
