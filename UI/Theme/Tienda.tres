@@ -3,6 +3,7 @@
 [ext_resource type="FontFile" uid="uid://dryil6kc3yx5s" path="res://Assets/tipografia/DobleHex2.ttf" id="1_ce683"]
 [ext_resource type="Texture2D" uid="uid://cbgbirmqb5755" path="res://Assets/UI/marco tienda.png" id="2_op4kc"]
 [ext_resource type="Texture2D" uid="uid://bufyh2pfyydu4" path="res://Assets/UI/sliders.png" id="3_c2bmj"]
+[ext_resource type="FontFile" uid="uid://b0npykajpdagi" path="res://Assets/tipografia/HexFont16pix.ttf" id="4_op4kc"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vehtn"]
 load_path = "res://.godot/imported/marco tienda.png-44704895ee92af5e2e32ada2f35bf46f.ctex"
@@ -96,7 +97,11 @@ bg_color = Color(0.32156864, 0.2, 0.24705882, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ucro"]
 bg_color = Color(0.7411765, 0.41568628, 0.38431373, 1)
 
+[sub_resource type="FontVariation" id="FontVariation_c2bmj"]
+base_font = ExtResource("4_op4kc")
+
 [resource]
+default_font = SubResource("FontVariation_c2bmj")
 Button/constants/outline_size = 2
 Button/font_sizes/font_size = 16
 Button/fonts/font = ExtResource("1_ce683")

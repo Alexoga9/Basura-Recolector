@@ -1,6 +1,9 @@
 [gd_resource type="LabelSettings" format=3 uid="uid://crqcrwgjb38h3"]
 
+[ext_resource type="FontVariation" uid="uid://ch3sj7u8tc2me" path="res://Assets/tipografia/FuenteOffset.tres" id="1_wynta"]
+
 [resource]
 line_spacing = -4.0
+font = ExtResource("1_wynta")
 outline_size = 2
 outline_color = Color(0, 0, 0, 1)

@@ -1,7 +1,5 @@
-res://Escenarios/mundo.tscn
+res://UI/Tienda/Panel tienda/panel_tienda.tscn
 res://UI/Theme/Tienda.tres
+res://UI/Theme/tipografia tienda.tres
 res://Entidades/Basura/basura_data.tres
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
-res://Entidades/Maquina Expendedora/MaquinaExpendedora.tscn
-res://Entidades/Jugador/Jugador.tscn
-res://Entidades/Basura/Basura.tscn

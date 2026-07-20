@@ -1,0 +1,7 @@
+[gd_resource type="FontVariation" format=3 uid="uid://ch3sj7u8tc2me"]
+
+[ext_resource type="FontFile" uid="uid://dryil6kc3yx5s" path="res://Assets/tipografia/DobleHex2.ttf" id="1_eacqs"]
+
+[resource]
+base_font = ExtResource("1_eacqs")
+baseline_offset = -0.2

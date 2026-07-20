@@ -7,14 +7,24 @@
 [ext_resource type="LabelSettings" uid="uid://crqcrwgjb38h3" path="res://UI/Theme/tipografia tienda.tres" id="6_ahgl1"]
 [ext_resource type="FontFile" uid="uid://b0npykajpdagi" path="res://Assets/tipografia/HexFont16pix.ttf" id="7_be048"]
 [ext_resource type="AudioStream" uid="uid://cjghok5vlof2n" path="res://Assets/audio/drop-coin.mp3" id="7_vehtn"]
+[ext_resource type="FontVariation" uid="uid://ch3sj7u8tc2me" path="res://Assets/tipografia/FuenteOffset.tres" id="7_wbqoc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wcpre"]
 atlas = ExtResource("4_wcpre")
 region = Rect2(48, 48, 16, 16)
 
-[sub_resource type="LabelSettings" id="LabelSettings_ts0p1"]
+[sub_resource type="LabelSettings" id="LabelSettings_rs542"]
 line_spacing = -4.0
-font_color = Color(0.44794613, 0.8752649, 0, 1)
+font = ExtResource("7_wbqoc")
+font_size = 8
+font_color = Color(1, 1, 0.1254902, 1)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_y73xl"]
+line_spacing = -4.0
+font = ExtResource("7_wbqoc")
+font_color = Color(2.5509298e-06, 0.8523314, 0.2960147, 1)
 outline_size = 2
 outline_color = Color(0, 0, 0, 1)
 
@@ -22,9 +32,10 @@ outline_color = Color(0, 0, 0, 1)
 atlas = ExtResource("4_wcpre")
 region = Rect2(96, 0, 16, 16)
 
-[sub_resource type="LabelSettings" id="LabelSettings_wbqoc"]
+[sub_resource type="LabelSettings" id="LabelSettings_6rtv5"]
 line_spacing = -4.0
-font_color = Color(0.9999077, 0.0430504, 0.24974328, 1)
+font = ExtResource("7_wbqoc")
+font_color = Color(0.9999997, 0.16316366, 0.25265014, 1)
 outline_size = 2
 outline_color = Color(0, 0, 0, 1)
 
@@ -127,6 +138,7 @@ theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("7_be048")
 theme_override_font_sizes/font_size = 16
 text = "Nivel 1"
+label_settings = SubResource("LabelSettings_rs542")
 horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer3" unique_id=1245556182]
@@ -186,7 +198,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Nombre"
-label_settings = SubResource("LabelSettings_ts0p1")
+label_settings = SubResource("LabelSettings_y73xl")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -201,7 +213,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Nombre"
-label_settings = SubResource("LabelSettings_wbqoc")
+label_settings = SubResource("LabelSettings_6rtv5")
 horizontal_alignment = 1
 vertical_alignment = 1
 
