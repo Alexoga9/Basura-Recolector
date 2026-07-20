@@ -4,6 +4,7 @@ class_name Loot extends Area2D
 @onready var sprite2d = %Sprite
 @onready var collision_shape_2d = %CollisionShape2D
 @onready var sonido = %sonido
+@onready var t_recogida: TRecogida = %TRecogida
 
 @export var data: LootDefinicion
 

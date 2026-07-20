@@ -5,6 +5,7 @@ class_name Basura extends RigidBody2D
 @onready var collision_shape_2d = %CollisionShape2D
 @onready var sonido = %sonido
 @onready var resaltado_componente: ResaltadoComponente = %ResaltadoComponente
+@onready var t_recogida: TRecogida = %TRecogida
 
 @export var data: LootDefinicion
 
@@ -31,10 +32,12 @@ func recibir_input():
 
 
 func collect():
+	t_recogida.tween()
 	sonido.play()
 	collision_shape_2d.call_deferred("set", "disabled", true)
-	sprite2d.visible = false
+
 	Inventario.add_item(data)
+	#sprite2d.visible = false
 	return data
 
 

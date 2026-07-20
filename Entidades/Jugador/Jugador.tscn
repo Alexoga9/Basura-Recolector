@@ -210,7 +210,7 @@ debug_color = Color(1.3536774e-07, 0.102459945, 0.126971, 0.41960785)
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_i0bg8")
 animation = &"Idle"
-offset = Vector2(0, -11.015)
+offset = Vector2(0, -10)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=664749476 groups=["Camara"]]
 unique_name_in_owner = true

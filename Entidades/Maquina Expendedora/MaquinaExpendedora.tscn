@@ -15,6 +15,7 @@ size = Vector2(72, 60)
 size = Vector2(32, 6)
 
 [node name="MaquinaExpendedora" type="StaticBody2D" unique_id=578851082]
+y_sort_enabled = true
 collision_layer = 16
 collision_mask = 0
 script = ExtResource("1_j4evy")
@@ -31,9 +32,9 @@ debug_color = Color(0.65120107, 0.0018948114, 0.8419935, 0.41960785)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1781763865]
 unique_name_in_owner = true
 y_sort_enabled = true
-position = Vector2(0, 23)
+position = Vector2(0, 16)
 texture = ExtResource("3_ev2gr")
-offset = Vector2(0, -22.6)
+offset = Vector2(0, -16.5)
 hframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=144946869]
@@ -46,8 +47,9 @@ unique_name_in_owner = true
 stream = ExtResource("4_ev2gr")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=33363273]
-position = Vector2(0, 23)
+position = Vector2(0, 18)
 texture = ExtResource("5_fq4of")
+offset = Vector2(0, 4.605)
 
 [node name="E sprite" parent="." unique_id=1769269337 instance=ExtResource("7_ojreo")]
 visible = false

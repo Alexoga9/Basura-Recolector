@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://due6mtxcwadhu" path="res://Assets/Inventario/Items.png" id="1_u5i48"]
 [ext_resource type="Resource" uid="uid://bwbt2o3gbm3gu" path="res://Entidades/Consumible/Tipos de Consumibles/honguito.tres" id="2_uityb"]
 [ext_resource type="AudioStream" uid="uid://dr7bho43atgf6" path="res://Assets/audio/tornado audio.mp3" id="3_si0yx"]
+[ext_resource type="Script" uid="uid://beooi4cmwyrr8" path="res://Commons/Componentes/Tweens/T_deslizar.gd" id="5_o3r7i"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dmsku"]
 
@@ -26,6 +27,11 @@ unique_name_in_owner = true
 stream = ExtResource("3_si0yx")
 volume_db = -10.0
 pitch_scale = 1.5
+
+[node name="TDeslizar" type="Node" parent="." unique_id=1686133618]
+unique_name_in_owner = true
+script = ExtResource("5_o3r7i")
+metadata/_custom_type_script = "uid://beooi4cmwyrr8"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="finished" from="sonido" to="." method="_on_sonido_finished"]

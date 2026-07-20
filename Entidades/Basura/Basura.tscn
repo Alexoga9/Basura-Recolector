@@ -4,6 +4,7 @@
 [ext_resource type="Resource" uid="uid://gi5lwe4ui2dd" path="res://Entidades/Basura/basura_data.tres" id="2_6qpr3"]
 [ext_resource type="Script" uid="uid://cwxixlurvo8rb" path="res://Entidades/Basura/resaltado_basura.gd" id="3_peotj"]
 [ext_resource type="Texture2D" uid="uid://c8imhrpes1oxk" path="res://Assets/entidades/basura completa.png" id="4_peotj"]
+[ext_resource type="Script" uid="uid://bubqfvtslgafd" path="res://Commons/Componentes/Tweens/T_recogida.gd" id="5_mq21f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e042u"]
 size = Vector2(14, 5)
@@ -56,6 +57,11 @@ metadata/_custom_type_script = "uid://csx7ka6k5q7bc"
 texture = ExtResource("4_peotj")
 hframes = 3
 frame = 2
+
+[node name="TRecogida" type="Node" parent="." unique_id=1191241314]
+unique_name_in_owner = true
+script = ExtResource("5_mq21f")
+metadata/_custom_type_script = "uid://bubqfvtslgafd"
 
 [connection signal="finished" from="sonido" to="." method="_on_sonido_finished"]
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

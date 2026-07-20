@@ -38,6 +38,7 @@ func dispensar():
 
 
 func spawnear():
-	var nuevo = consumible.instantiate()
-	nuevo.global_position = self.global_position + Vector2(0, 50)
+	var nuevo: Consumible = consumible.instantiate()
+
+	nuevo.global_position = self.global_position #+ Vector2(0, 50)
 	get_tree().current_scene.add_child(nuevo)

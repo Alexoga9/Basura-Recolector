@@ -1,3 +1,5 @@
+TRecogida
+TDeslizar
 Node2D
 Node
 AnimatedSprite2D
@@ -10,5 +12,3 @@ Logica_Mejora
 Timer
 MovimientoComponente
 TileMapLayer
-ProgressBar
-Control

@@ -3,3 +3,14 @@ res://UI/Theme/Tienda.tres
 res://UI/Theme/tipografia tienda.tres
 res://Entidades/Basura/basura_data.tres
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
+res://Commons/Componentes/Tweens/T_deslizar.gd
+res://Entidades/Consumible/consumible.tscn
+res://Entidades/Consumible/consumible.gd
+res://Entidades/Maquina Expendedora/maquina_expendedora.gd
+res://Entidades/Maquina Expendedora/MaquinaExpendedora.tscn
+res://Entidades/Jugador/Jugador.tscn
+res://Commons/Componentes/Tweens/T_recogida.gd
+res://Entidades/Basura/Basura_item.gd
+res://Entidades/Basura/Basura.tscn
+res://Entidades/Loot/Loot.tscn
+res://Entidades/Loot/Loot_Item.gd

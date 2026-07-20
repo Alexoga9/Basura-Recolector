@@ -4,6 +4,7 @@ class_name Consumible extends Area2D
 @onready var sonido = %sonido
 @onready var collision_shape_2d = %CollisionShape2D
 @onready var sprite_2d = %Sprite2D
+@onready var t_deslizar: TDeslizar = %TDeslizar
 
 
 func _on_body_entered(body:Jugador):
