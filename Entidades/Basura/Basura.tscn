@@ -13,6 +13,7 @@ size = Vector2(14, 5)
 size = Vector2(16, 16)
 
 [node name="Basura" type="RigidBody2D" unique_id=1091806052 groups=["Basura"]]
+y_sort_enabled = true
 collision_layer = 4
 collision_mask = 13
 input_pickable = true
@@ -31,7 +32,7 @@ debug_color = Color(0.98978466, 0, 0.27423584, 0.41960785)
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1161258588]
 unique_name_in_owner = true
 position = Vector2(0, 5)
-offset = Vector2(0, -6.45)
+offset = Vector2(0, -6)
 hframes = 2
 
 [node name="sonido" type="AudioStreamPlayer" parent="." unique_id=1004405695]
