@@ -8,7 +8,7 @@ func _process(delta):
 
 	if Input.is_action_just_pressed("Interaccion"):
 		interaccion_del_jugador = !interaccion_del_jugador
-		print(interaccion_del_jugador)
+		#print(interaccion_del_jugador)
 
 	mostrar_ocultar_tienda()
 

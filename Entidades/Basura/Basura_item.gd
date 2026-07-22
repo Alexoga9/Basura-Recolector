@@ -6,6 +6,7 @@ class_name Basura extends RigidBody2D
 @onready var sonido = %sonido
 @onready var resaltado_componente: ResaltadoComponente = %ResaltadoComponente
 @onready var t_recogida: TRecogida = %TRecogida
+@onready var ray_cast_2d: RayCast2D = %RayCast2D
 
 @export var data: LootDefinicion
 
@@ -66,3 +67,17 @@ func _on_area_2d_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			Global.jugador.recoge_basura.click_en_basura(self)
+
+
+func apilar_basura():
+	var objeto
+	ray_cast_2d.collide_with_bodies
+	objeto = ray_cast_2d.is_colliding()
+
+	if objeto == Basura:
+		z_index = objeto.z_index + 1
+		collision_shape_2d.disabled = true
+
+	else:
+		z_index = 0
+		collision_shape_2d.disabled = false

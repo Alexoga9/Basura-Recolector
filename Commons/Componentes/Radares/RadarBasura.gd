@@ -18,11 +18,11 @@ func _process(delta):
 
 
 func _on_body_entered(body: Basura):
-	print("Basura aqui")
+	#print("Basura aqui")
 	if body.is_in_group("Basura"):
 		body.en_area_jugador = true
 		cuerpos.append(body)
-		print(cuerpos)
+		#print(cuerpos)
 
 
 func _on_body_exited(body: Basura):
@@ -30,7 +30,7 @@ func _on_body_exited(body: Basura):
 		body.en_area_jugador = false
 		body.resaltado_componente.no_resaltado()
 		cuerpos.erase(body)
-		print(cuerpos)
+		#print(cuerpos)
 
 
 func get_entidad_aleatoria() -> Basura:
@@ -50,13 +50,13 @@ func recoger_basura():
 		# CASO 1: NO EXISTE LA BASURA EN EL INVENTARIO
 		# (Si recurso_basura es null, significa que ni siquiera hay una ranura para basura)
 		if recurso_basura == null:
-			print("VACIO - No existe el ítem, recogiendo por primera vez")
+			#print("VACIO - No existe el ítem, recogiendo por primera vez")
 			accion_de_recogida()
 
 		# CASO 2: YA EXISTE LA BASURA, PERO NO ESTÁ LLENO
 		# (Ya sabemos que existe, así que podemos preguntar cuánto tiene sin peligro)
 		elif cantidad_actual < recurso_basura.cantidad_maxima:
-			print("AUN ESPACIO - Recogiendo más basura")
+			#print("AUN ESPACIO - Recogiendo más basura")
 			accion_de_recogida()
 
 		# CASO 3: YA EXISTE LA BASURA Y ESTÁ COMPLETAMENTE LLENO

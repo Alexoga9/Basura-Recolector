@@ -22,4 +22,4 @@ func _on_opciones_pressed():
 
 func mostrar_menu_principal():
 	menu.show()
-	print("se muestra el menu principal")
+	#print("se muestra el menu principal")

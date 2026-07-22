@@ -6,3 +6,16 @@ res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
 res://Escenarios/Tilesets/TS_Terrenos.tres
 res://Entidades/Jugador/Jugador.tscn
 res://Escenarios/mundo.tscn
+res://Entidades/Basura/Basura_item.gd
+res://Entidades/Basura/Basura.tscn
+res://UI/Barras/barra_basura.gd
+res://UI/Barras/barra_energia.gd
+res://Commons/Componentes/Input/InputComponente.gd
+res://Entidades/Loot/Loot_Item.gd
+res://Entidades/Maquina Expendedora/maquina_expendedora.gd
+res://UI/Tienda/mejoras de habilidades/mejoras/mejora_resistencia.gd
+res://UI/Menu Principal/menu_principal.gd
+res://Commons/Componentes/Radares/RadarBasura.gd
+res://Commons/Componentes/Radares/RadarComponente.gd
+res://Entidades/Tienda/tienda.gd
+res://Entidades/Trituradora/trituradora.gd

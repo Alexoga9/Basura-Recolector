@@ -10,7 +10,7 @@ func _ready():
 
 
 func _on_value_changed(value):
-	print("timer iniciado")
+	#print("timer iniciado")
 
 	if barra_secundaria_energia.value != valor_actual:
 		timer.start()

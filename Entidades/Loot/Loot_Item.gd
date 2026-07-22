@@ -32,7 +32,7 @@ func _process(delta):
 
 func recibir_input():
 	input_recibido = true
-	print("Input recibido")
+	#print("Input recibido")
 
 
 func perseguir_jugador(delta):

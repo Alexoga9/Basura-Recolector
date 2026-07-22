@@ -34,7 +34,7 @@ func dispensar():
 			audio.play()
 			Dinero.gastar(precio)
 
-			print("Te costo el honguito we, te queda "+ str(Dinero.dinero))
+			#print("Te costo el honguito we, te queda "+ str(Dinero.dinero))
 
 
 func spawnear():

@@ -20,7 +20,7 @@ func entidad_dentro_de_radar(area: Loot):
 	#print(area.get_parent().name + " Ha entrado en el radar")
 	entidades.append(area)
 	area.objetivo = Global.jugador
-	print(str(area.objetivo))
+	#print(str(area.objetivo))
 
 
 func entidad_fuera_de_radar(area: Loot):

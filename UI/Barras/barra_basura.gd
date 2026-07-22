@@ -9,7 +9,7 @@ func _ready():
 
 
 func _on_value_changed(nombre, value):
-	print("timer iniciado")
+	#print("timer iniciado")
 	timer.start()
 
 

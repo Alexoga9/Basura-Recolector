@@ -17,7 +17,7 @@ func input_recoger_basura_automatica() -> bool:
 	if Input.is_action_just_pressed("Interaccion"):
 		presionado = true
 		SignalBus.recoger_basura_automatica.emit()
-		print("E")
+		#print("E")
 		return presionado
 	else:
 		return false
