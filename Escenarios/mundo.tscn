@@ -555,6 +555,7 @@ y_sort_enabled = true
 position = Vector2(213, 97)
 
 [node name="Entiddaes" type="Node2D" parent="Objetos Ambientales" unique_id=358230563]
+y_sort_enabled = true
 position = Vector2(-572, -229)
 
 [node name="Loots" type="Node2D" parent="Objetos Ambientales/Entiddaes" unique_id=1048744522]
@@ -626,17 +627,17 @@ position = Vector2(672, 369)
 [node name="Loot12" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=329021941 instance=ExtResource("6_2fd2i")]
 position = Vector2(686, 356)
 
-[node name="Loot14" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=698021777 instance=ExtResource("6_2fd2i")]
-position = Vector2(696, 302)
+[node name="Loot13" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1395442083 instance=ExtResource("6_2fd2i")]
+position = Vector2(739, 310)
 
-[node name="Loot13" parent="Objetos Ambientales/Entiddaes/Basuras/Loot14" unique_id=1395442083 instance=ExtResource("6_2fd2i")]
-position = Vector2(0, -7)
+[node name="Loot14" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=698021777 instance=ExtResource("6_2fd2i")]
+position = Vector2(732, 316)
 
 [node name="Loot15" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1307620334 instance=ExtResource("6_2fd2i")]
 position = Vector2(681, 302)
 
 [node name="Loot16" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=521582679 instance=ExtResource("6_2fd2i")]
-position = Vector2(716, 302)
+position = Vector2(746, 316)
 
 [node name="Loot17" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1392906129 instance=ExtResource("6_2fd2i")]
 position = Vector2(715, 325)

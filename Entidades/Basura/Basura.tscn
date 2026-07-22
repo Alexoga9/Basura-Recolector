@@ -12,14 +12,11 @@ size = Vector2(14, 5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_peotj"]
 size = Vector2(16, 16)
 
-[node name="Basura" type="RigidBody2D" unique_id=1091806052 groups=["Basura"]]
+[node name="Basura" type="StaticBody2D" unique_id=529520627 groups=["Basura"]]
 y_sort_enabled = true
 collision_layer = 4
 collision_mask = 13
 input_pickable = true
-gravity_scale = 0.0
-lock_rotation = true
-linear_damp = 20.0
 script = ExtResource("1_6qpr3")
 data = ExtResource("2_6qpr3")
 

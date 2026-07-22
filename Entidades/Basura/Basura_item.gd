@@ -1,5 +1,5 @@
 @icon("res://addons/iconos/basura.svg")
-class_name Basura extends RigidBody2D
+class_name Basura extends StaticBody2D
 
 @onready var sprite2d = %Sprite
 @onready var collision_shape_2d = %CollisionShape2D

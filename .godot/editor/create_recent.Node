@@ -1,6 +1,7 @@
+TileMapLayer
+StaticBody2D
 RayCast2D
 Node2D
-TileMapLayer
 TRecogida
 TDeslizar
 Node
@@ -11,5 +12,3 @@ HBoxContainer
 TextureRect
 Label
 Logica_Mejora
-Timer
-MovimientoComponente

@@ -19,3 +19,5 @@ res://Commons/Componentes/Radares/RadarBasura.gd
 res://Commons/Componentes/Radares/RadarComponente.gd
 res://Entidades/Tienda/tienda.gd
 res://Entidades/Trituradora/trituradora.gd
+res://Entidades/Jugador/barra_cooldown.gd
+res://Commons/Componentes/Tweens/T_deslizar.gd
