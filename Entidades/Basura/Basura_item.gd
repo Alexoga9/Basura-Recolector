@@ -39,6 +39,7 @@ func collect():
 
 	Inventario.add_item(data)
 	#sprite2d.visible = false
+	SignalBus.basura_recogida.emit()
 	return data
 
 

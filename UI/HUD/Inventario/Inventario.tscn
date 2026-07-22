@@ -1,10 +1,29 @@
 [gd_scene format=3 uid="uid://bxxsc2sciuuu3"]
 
-[ext_resource type="Texture2D" uid="uid://q5jrk63qij1t" path="res://Assets/image.png" id="6_hdjn2"]
+[ext_resource type="Script" uid="uid://dncwo2l5jfbkd" path="res://Escenarios/ContadorBasuras.gd" id="5_1l1l3"]
+[ext_resource type="Texture2D" uid="uid://cg40f2x5atd3o" path="res://Assets/UI/barra completado nivel.png" id="5_30hd7"]
 [ext_resource type="PackedScene" uid="uid://ca3oktj6ebp0n" path="res://UI/HUD/Inventario/Slots Inventario/slot_de_inventario.tscn" id="7_l1s3s"]
 [ext_resource type="PackedScene" uid="uid://mn8abrepyvev" path="res://UI/Barras/barras_hud.tscn" id="8_2kcwo"]
 [ext_resource type="PackedScene" uid="uid://d2fe2drk13sjm" path="res://UI/HUD/Inventario/Slots Inventario/slot_de_dinero.tscn" id="9_2kcwo"]
 [ext_resource type="Texture2D" uid="uid://cj67bs1scsaiw" path="res://Assets/Inventario/moneda.png" id="10_l1s3s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vvi4h"]
+atlas = ExtResource("5_30hd7")
+region = Rect2(0, 0, 42, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lx5vd"]
+atlas = ExtResource("5_30hd7")
+region = Rect2(1, 21, 40, 5)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vvi4h"]
+texture = SubResource("AtlasTexture_lx5vd")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_30hd7"]
+atlas = ExtResource("5_30hd7")
+region = Rect2(1, 11, 40, 5)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lx5vd"]
+texture = SubResource("AtlasTexture_30hd7")
 
 [node name="Inventario" type="Control" unique_id=615073819]
 layout_mode = 3
@@ -15,14 +34,8 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Referencia" type="Sprite2D" parent="." unique_id=1356842247]
-visible = false
-position = Vector2(186.00002, 115.00001)
-scale = Vector2(0.1989418, 0.23498422)
-texture = ExtResource("6_hdjn2")
-
 [node name="InventarioSlot" type="Panel" parent="." unique_id=851919116]
-self_modulate = Color(1, 1, 1, 0.2901961)
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.60400003
@@ -72,7 +85,7 @@ layout_mode = 2
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="InventarioSlot/VBoxContainer" unique_id=638117693]
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_vertical = 10
 
 [node name="Barras HUD" parent="InventarioSlot/VBoxContainer/HBoxContainer3" unique_id=2073494253 instance=ExtResource("8_2kcwo")]
 layout_mode = 2
@@ -86,3 +99,41 @@ textura = ExtResource("10_l1s3s")
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="InventarioSlot/VBoxContainer" unique_id=1354787719]
 layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=178839997]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer" unique_id=1152943884]
+custom_minimum_size = Vector2(78, 13.795)
+layout_mode = 2
+size_flags_vertical = 3
+texture = SubResource("AtlasTexture_vvi4h")
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/TextureRect" unique_id=577320274]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxTexture_vvi4h")
+theme_override_styles/fill = SubResource("StyleBoxTexture_lx5vd")
+value = 62.55
+show_percentage = false
+script = ExtResource("5_1l1l3")
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1753380368]
+layout_mode = 2
+text = "Main Entrance"
+
+[node name="Cleared" type="Label" parent="VBoxContainer" unique_id=1713816082]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Cleared"
