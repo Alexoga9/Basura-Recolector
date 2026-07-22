@@ -1,6 +1,7 @@
+Node2D
+TileMapLayer
 TRecogida
 TDeslizar
-Node2D
 Node
 AnimatedSprite2D
 Sprite2D
@@ -11,4 +12,3 @@ Label
 Logica_Mejora
 Timer
 MovimientoComponente
-TileMapLayer

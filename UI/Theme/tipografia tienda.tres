@@ -5,5 +5,8 @@
 [resource]
 line_spacing = -4.0
 font = ExtResource("1_wynta")
-outline_size = 2
+outline_size = 3
 outline_color = Color(0, 0, 0, 1)
+stacked_shadow_count = 1
+stacked_shadow_0/offset = Vector2(0, 1)
+stacked_shadow_0/outline_size = 3

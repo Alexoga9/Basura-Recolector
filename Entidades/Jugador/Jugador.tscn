@@ -164,7 +164,6 @@ bg_color = Color(0.54497427, 0.5449743, 0.5449741, 1)
 bg_color = Color(0.83975405, 0.8397541, 0.8397539, 1)
 
 [node name="Jugador" type="CharacterBody2D" unique_id=1030727379 groups=["Jugador"]]
-y_sort_enabled = true
 collision_mask = 24
 motion_mode = 1
 script = ExtResource("1_5k27j")

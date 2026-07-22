@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://birp1rvjh205r"]
 
 [ext_resource type="Script" uid="uid://chu2pujc70x6e" path="res://UI/Tienda/Panel tienda/panel_tienda.gd" id="1_6k6d4"]
+[ext_resource type="Shader" uid="uid://wawo2i181e0n" path="res://Assets/cuadrabilidad.gdshader" id="1_rs542"]
 [ext_resource type="Texture2D" uid="uid://cbgbirmqb5755" path="res://Assets/UI/marco tienda.png" id="2_3e1ft"]
 [ext_resource type="Resource" uid="uid://dklrgm0gwnvn1" path="res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres" id="2_pgqec"]
 [ext_resource type="Texture2D" uid="uid://due6mtxcwadhu" path="res://Assets/Inventario/Items.png" id="4_wcpre"]
@@ -8,6 +9,12 @@
 [ext_resource type="FontFile" uid="uid://b0npykajpdagi" path="res://Assets/tipografia/HexFont16pix.ttf" id="7_be048"]
 [ext_resource type="AudioStream" uid="uid://cjghok5vlof2n" path="res://Assets/audio/drop-coin.mp3" id="7_vehtn"]
 [ext_resource type="FontVariation" uid="uid://ch3sj7u8tc2me" path="res://Assets/tipografia/FuenteOffset.tres" id="7_wbqoc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y73xl"]
+shader = ExtResource("1_rs542")
+shader_parameter/clr = Color(0, 0, 0, 1)
+shader_parameter/type = 2
+shader_parameter/thickness = 11.87
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wcpre"]
 atlas = ExtResource("4_wcpre")
@@ -40,6 +47,7 @@ outline_size = 2
 outline_color = Color(0, 0, 0, 1)
 
 [node name="Panel Tienda" type="Control" unique_id=1195401960]
+material = SubResource("ShaderMaterial_y73xl")
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 3
 anchors_preset = 15
