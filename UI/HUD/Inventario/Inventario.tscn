@@ -125,7 +125,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/background = SubResource("StyleBoxTexture_vvi4h")
 theme_override_styles/fill = SubResource("StyleBoxTexture_lx5vd")
-value = 62.55
 show_percentage = false
 script = ExtResource("5_1l1l3")
 

@@ -1,8 +1,8 @@
-res://UI/HUD/Inventario/Inventario.tscn
+res://Entidades/Tienda/tienda.tscn
 res://UI/Theme/Tienda.tres
 res://Entidades/Basura/basura_data.tres
 res://Escenarios/Tilesets/TS_Terrenos.tres
-res://Assets/cuadrabilidad.gdshader
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
-res://Escenarios/mundo.tscn
-res://Escenarios/ContadorBasuras.gd
+res://Commons/Componentes/Utilidades/Feedback/Resaltado/ResaltadoComponente.gd
+res://Entidades/Tienda/Tienda_resaltado.gd
+res://Entidades/Tienda/resaltadoTiend.gd

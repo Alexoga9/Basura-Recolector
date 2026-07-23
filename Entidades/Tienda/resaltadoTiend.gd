@@ -1,27 +1,13 @@
-class_name ResaltadoComponente extends Node
+extends Node
 
-@export var sprite: Sprite2D
-@export var animated_sprite: AnimatedSprite2D
-#@export var area: Area2D
 @export var material: Material
 
 @export var e_sprite: AnimatedSprite2D
 
 
-func resaltado():
-	pass
-
-
-func no_resaltado():
-	pass
-
-
-func sprite_1():
-	sprite.frame = 1
-
-
-func sprite_0():
-	sprite.frame = 0
+func _ready():
+	outline_off()
+	ocutlar_e()
 
 
 func outline_on():
@@ -40,3 +26,13 @@ func mostrar_e():
 func ocutlar_e():
 	if e_sprite != null:
 		e_sprite.visible = false
+
+
+func _on_trigger_jugador_body_entered(body):
+	outline_on()
+	mostrar_e()
+
+
+func _on_trigger_jugador_body_exited(body):
+	outline_off()
+	ocutlar_e()

@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dy8jul72maxm7"]
+
+[ext_resource type="Shader" uid="uid://dcyqbs10t1i1b" path="res://Entidades/Tienda/Outline.gdshader" id="1_53ct1"]
+
+[resource]
+shader = ExtResource("1_53ct1")
+shader_parameter/outline_width = 1.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/texture_region = Vector4(0, 50, 0, 0)

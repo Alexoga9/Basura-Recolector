@@ -1,7 +1,74 @@
 [gd_scene format=3 uid="uid://bujsrbbq0elhi"]
 
 [ext_resource type="Script" uid="uid://bai51lktwjuxh" path="res://Entidades/Tienda/tienda.gd" id="1_lvgju"]
-[ext_resource type="Texture2D" uid="uid://e7kokadv3aib" path="res://Assets/icon.svg" id="2_1ylso"]
+[ext_resource type="Script" uid="uid://dn4y66lee8nf6" path="res://Entidades/Tienda/Tienda_resaltado.gd" id="3_4lxt0"]
+[ext_resource type="Texture2D" uid="uid://eupvw7bec3ri" path="res://Assets/entidades/tienda img.png" id="3_eppcm"]
+[ext_resource type="PackedScene" uid="uid://b4nutgd65x10o" path="res://Entidades/genericos/e_sprite.tscn" id="4_4lxt0"]
+[ext_resource type="Script" uid="uid://3lhjxmmhe7r7" path="res://Entidades/Tienda/resaltadoTiend.gd" id="4_eppcm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjenl"]
+atlas = ExtResource("3_eppcm")
+region = Rect2(0, 0, 57, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38ep3"]
+atlas = ExtResource("3_eppcm")
+region = Rect2(57, 0, 57, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ovabu"]
+atlas = ExtResource("3_eppcm")
+region = Rect2(114, 0, 57, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5if1j"]
+atlas = ExtResource("3_eppcm")
+region = Rect2(171, 0, 57, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6i3n"]
+atlas = ExtResource("3_eppcm")
+region = Rect2(228, 0, 57, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmhwi"]
+atlas = ExtResource("3_eppcm")
+region = Rect2(285, 0, 57, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g8los"]
+atlas = ExtResource("3_eppcm")
+region = Rect2(342, 0, 57, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ny0v5"]
+atlas = ExtResource("3_eppcm")
+region = Rect2(399, 0, 57, 45)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jpx43"]
+animations = [{
+"frames": [{
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_xjenl")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_38ep3")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_ovabu")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_5if1j")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_x6i3n")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_qmhwi")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_g8los")
+}, {
+"duration": 30.0,
+"texture": SubResource("AtlasTexture_ny0v5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1wau7"]
 size = Vector2(19, 6)
@@ -14,10 +81,17 @@ collision_layer = 16
 collision_mask = 0
 script = ExtResource("1_lvgju")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1781763865]
-modulate = Color(0.5254902, 0.52156866, 0, 1)
-scale = Vector2(0.15625, 0.15625)
-texture = ExtResource("2_1ylso")
+[node name="SpriteAnimated2D" type="AnimatedSprite2D" parent="." unique_id=763804110]
+sprite_frames = SubResource("SpriteFrames_jpx43")
+autoplay = "default"
+
+[node name="ResaltadoComponente" type="Node" parent="SpriteAnimated2D" unique_id=1846370862 node_paths=PackedStringArray("e_sprite")]
+script = ExtResource("3_4lxt0")
+e_sprite = NodePath("../../E sprite")
+metadata/_custom_type_script = "uid://csx7ka6k5q7bc"
+
+[node name="Node" type="Node" parent="SpriteAnimated2D" unique_id=312278816]
+script = ExtResource("4_eppcm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=144946869]
 position = Vector2(0, 7)
@@ -25,6 +99,7 @@ shape = SubResource("RectangleShape2D_1wau7")
 debug_color = Color(0.26880014, 0.2435346, 0.23927382, 0.41960785)
 
 [node name="Trigger Jugador" type="Area2D" parent="." unique_id=1733789509]
+visible = false
 collision_layer = 8
 collision_mask = 5
 
@@ -32,5 +107,14 @@ collision_mask = 5
 shape = SubResource("RectangleShape2D_0bwxm")
 debug_color = Color(0.4745098, 0.4509804, 0, 0.41960785)
 
+[node name="E sprite" parent="." unique_id=1797379794 instance=ExtResource("4_4lxt0")]
+visible = false
+position = Vector2(0, -38)
+frame_progress = 0.0
+
 [connection signal="body_entered" from="Trigger Jugador" to="." method="_on_trigger_jugador_body_entered"]
+[connection signal="body_entered" from="Trigger Jugador" to="SpriteAnimated2D/ResaltadoComponente" method="_on_trigger_jugador_body_entered"]
+[connection signal="body_entered" from="Trigger Jugador" to="SpriteAnimated2D/Node" method="_on_trigger_jugador_body_entered"]
 [connection signal="body_exited" from="Trigger Jugador" to="." method="_on_trigger_jugador_body_exited"]
+[connection signal="body_exited" from="Trigger Jugador" to="SpriteAnimated2D/ResaltadoComponente" method="_on_trigger_jugador_body_exited"]
+[connection signal="body_exited" from="Trigger Jugador" to="SpriteAnimated2D/Node" method="_on_trigger_jugador_body_exited"]
