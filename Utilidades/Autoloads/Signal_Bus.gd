@@ -9,6 +9,7 @@ signal murio_jugador
 # Jugador
 signal jugador_listo
 signal input_movimiento
+signal interaccion
 
 # Input
 signal recoger_basura_automatica(bool)

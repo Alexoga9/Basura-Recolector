@@ -17,19 +17,8 @@ func input_recoger_basura_automatica() -> bool:
 	if Input.is_action_just_pressed("Interaccion"):
 		presionado = true
 		SignalBus.recoger_basura_automatica.emit()
+		SignalBus.interaccion.emit()
 		#print("E")
 		return presionado
 	else:
 		return false
-
-
-
-func input_ataque():
-	if Input.get_action_strength("Ulti"):
-		pass
-
-	if Input.get_action_strength("Ataque secundario"):
-		pass
-
-	if Input.get_action_strength("Alternar modo de movimiento"):
-		pass

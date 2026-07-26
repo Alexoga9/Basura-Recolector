@@ -299,10 +299,8 @@ consumible = ExtResource("2_cglwt")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=626759674]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_0jb4e")
-animation = &"Dispensar"
+animation = &"Idle"
 autoplay = "Idle"
-frame = 11
-frame_progress = 1.0
 offset = Vector2(0, -16.5)
 
 [node name="ResaltadoComponente" type="Node" parent="AnimatedSprite2D" unique_id=472666808 node_paths=PackedStringArray("e_sprite")]

@@ -4,3 +4,5 @@ res://Entidades/Basura/basura_data.tres
 res://Escenarios/Tilesets/TS_Terrenos.tres
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
 res://Entidades/Maquina Expendedora/maquina_expendedora.gd
+res://Commons/Componentes/Input/InputComponente.gd
+res://Utilidades/Autoloads/Signal_Bus.gd
