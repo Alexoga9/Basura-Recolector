@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dncwo2l5jfbkd" path="res://Escenarios/ContadorBasuras.gd" id="5_1l1l3"]
 [ext_resource type="Texture2D" uid="uid://cg40f2x5atd3o" path="res://Assets/UI/barra completado nivel.png" id="5_30hd7"]
 [ext_resource type="PackedScene" uid="uid://ca3oktj6ebp0n" path="res://UI/HUD/Inventario/Slots Inventario/slot_de_inventario.tscn" id="7_l1s3s"]
+[ext_resource type="LabelSettings" uid="uid://crqcrwgjb38h3" path="res://UI/Theme/tipografia tienda.tres" id="7_lx5vd"]
 [ext_resource type="PackedScene" uid="uid://mn8abrepyvev" path="res://UI/Barras/barras_hud.tscn" id="8_2kcwo"]
 [ext_resource type="PackedScene" uid="uid://d2fe2drk13sjm" path="res://UI/HUD/Inventario/Slots Inventario/slot_de_dinero.tscn" id="9_2kcwo"]
 [ext_resource type="Texture2D" uid="uid://cj67bs1scsaiw" path="res://Assets/Inventario/moneda.png" id="10_l1s3s"]
@@ -131,8 +132,10 @@ script = ExtResource("5_1l1l3")
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=1753380368]
 layout_mode = 2
 text = "Main Entrance"
+label_settings = ExtResource("7_lx5vd")
 
 [node name="Cleared" type="Label" parent="VBoxContainer" unique_id=1713816082]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Cleared"
+label_settings = ExtResource("7_lx5vd")

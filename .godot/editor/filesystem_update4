@@ -6,3 +6,7 @@ res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
 res://Entidades/Maquina Expendedora/maquina_expendedora.gd
 res://Commons/Componentes/Input/InputComponente.gd
 res://Utilidades/Autoloads/Signal_Bus.gd
+res://Entidades/Trituradora/trituradora.tscn
+res://Entidades/Tienda/tienda.tscn
+res://UI/HUD/Inventario/Inventario.tscn
+res://UI/HUD/hud.tscn

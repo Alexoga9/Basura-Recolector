@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://bavd3c4essg3w" path="res://Entidades/Trituradora/trituradora.gd" id="1_we1hm"]
 [ext_resource type="Texture2D" uid="uid://1xnuabl3r2ig" path="res://Assets/entidades/trituradora/la trituradora.png" id="2_28ur8"]
-[ext_resource type="Script" uid="uid://csx7ka6k5q7bc" path="res://Commons/Componentes/Utilidades/Feedback/Resaltado/ResaltadoComponente.gd" id="2_k24a0"]
 [ext_resource type="AudioStream" uid="uid://cjghok5vlof2n" path="res://Assets/audio/drop-coin.mp3" id="3_k24a0"]
 [ext_resource type="Texture2D" uid="uid://bcw4h077d08et" path="res://Assets/entidades/trituradora/Hove trituradora.png" id="4_mipmb"]
 
@@ -163,7 +162,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1wau7"]
-size = Vector2(19, 6)
+size = Vector2(46, 18)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0bwxm"]
 size = Vector2(72, 60)
@@ -179,16 +178,12 @@ animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.083998516
 
-[node name="ResaltadoComponente" type="Node" parent="AnimatedSprite2D" unique_id=927422851]
-script = ExtResource("2_k24a0")
-metadata/_custom_type_script = "uid://csx7ka6k5q7bc"
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=17179445]
 sprite_frames = SubResource("SpriteFrames_52bhe")
 frame_progress = 0.2062437
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=144946869]
-position = Vector2(0, 7)
+position = Vector2(0, 9)
 shape = SubResource("RectangleShape2D_1wau7")
 debug_color = Color(0.26880014, 0.2435346, 0.23927382, 0.41960785)
 

@@ -71,7 +71,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1wau7"]
-size = Vector2(19, 6)
+size = Vector2(54, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0bwxm"]
 size = Vector2(72, 60)
@@ -82,8 +82,11 @@ collision_mask = 0
 script = ExtResource("1_lvgju")
 
 [node name="SpriteAnimated2D" type="AnimatedSprite2D" parent="." unique_id=763804110]
+position = Vector2(0, 16)
 sprite_frames = SubResource("SpriteFrames_jpx43")
 autoplay = "default"
+frame_progress = 0.7154506
+offset = Vector2(0, -16)
 
 [node name="ResaltadoComponente" type="Node" parent="SpriteAnimated2D" unique_id=1846370862 node_paths=PackedStringArray("e_sprite")]
 script = ExtResource("3_4lxt0")
@@ -92,7 +95,7 @@ e_sprite = NodePath("../../E sprite")
 metadata/_custom_type_script = "uid://csx7ka6k5q7bc"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=144946869]
-position = Vector2(0, 7)
+position = Vector2(0, 10)
 shape = SubResource("RectangleShape2D_1wau7")
 debug_color = Color(0.26880014, 0.2435346, 0.23927382, 0.41960785)
 

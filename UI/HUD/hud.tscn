@@ -28,8 +28,9 @@ theme_override_constants/margin_top = 5
 
 [node name="pausa" type="Button" parent="HudJuego" unique_id=885807864]
 layout_mode = 2
-size_flags_horizontal = 6
+size_flags_horizontal = 2
 size_flags_vertical = 0
+theme_override_font_sizes/font_size = 8
 text = "Pausa"
 
 [node name="Pausa" parent="." unique_id=1451484787 instance=ExtResource("6_dhie7")]
