@@ -191,12 +191,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0bwxm"]
-size = Vector2(72, 60)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1wau7"]
-size = Vector2(32, 6)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_vkww6"]
 atlas = ExtResource("9_riqe1")
 region = Rect2(0, 0, 38, 7)
@@ -284,10 +278,16 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yykl8")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
-"speed": 5.0
+"speed": 16.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0bwxm"]
+size = Vector2(72, 60)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1wau7"]
+size = Vector2(32, 15)
 
 [node name="MaquinaExpendedora" type="StaticBody2D" unique_id=578851082]
 y_sort_enabled = true
@@ -299,9 +299,11 @@ consumible = ExtResource("2_cglwt")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=626759674]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_0jb4e")
-animation = &"Idle"
+animation = &"Dispensar"
 autoplay = "Idle"
-offset = Vector2(0, -16.5)
+frame = 11
+frame_progress = 1.0
+offset = Vector2(0, -16)
 
 [node name="ResaltadoComponente" type="Node" parent="AnimatedSprite2D" unique_id=472666808 node_paths=PackedStringArray("e_sprite")]
 script = ExtResource("5_riqe1")
@@ -312,6 +314,13 @@ metadata/_custom_type_script = "uid://csx7ka6k5q7bc"
 [node name="E sprite" parent="AnimatedSprite2D" unique_id=1769269337 instance=ExtResource("7_ojreo")]
 visible = false
 position = Vector2(0, -51)
+
+[node name="Sombra animada" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=851477226]
+unique_name_in_owner = true
+position = Vector2(0, 13)
+sprite_frames = SubResource("SpriteFrames_6op0o")
+frame = 11
+frame_progress = 1.0
 
 [node name="Trigger Jugador" type="Area2D" parent="." unique_id=1733789509]
 unique_name_in_owner = true
@@ -324,17 +333,13 @@ shape = SubResource("RectangleShape2D_0bwxm")
 debug_color = Color(0.65120107, 0.0018948114, 0.8419935, 0.41960785)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=144946869]
-position = Vector2(0, 16)
+position = Vector2(0, 2.5)
 shape = SubResource("RectangleShape2D_1wau7")
 debug_color = Color(0.26880014, 0.2435346, 0.23927382, 0.41960785)
 
 [node name="audio" type="AudioStreamPlayer" parent="." unique_id=186736399]
 unique_name_in_owner = true
 stream = ExtResource("4_ev2gr")
-
-[node name="Sombra animada" type="AnimatedSprite2D" parent="." unique_id=851477226]
-position = Vector2(0, 11)
-sprite_frames = SubResource("SpriteFrames_6op0o")
 
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
 [connection signal="body_entered" from="Trigger Jugador" to="." method="_on_trigger_jugador_body_entered"]

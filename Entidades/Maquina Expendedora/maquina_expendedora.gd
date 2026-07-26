@@ -5,6 +5,7 @@ extends StaticBody2D
 var jugador
 @onready var audio = %audio
 @onready var animacion: AnimatedSprite2D = %AnimatedSprite2D
+@onready var sombra_animada: AnimatedSprite2D = %"Sombra animada"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -24,6 +25,7 @@ func dispensar():
 	if jugador != null and animacion.animation == "Idle":
 		if Dinero.dinero >= precio:
 			animacion.play("Dispensar")
+			sombra_animada.play()
 			Dinero.gastar(precio)
 
 
@@ -38,9 +40,6 @@ func _on_animated_sprite_2d_frame_changed():
 	if animacion == null:
 		return # Seguridad para evitar el error
 
-	if animacion.animation != "Dispensar":
-		return
-
 	if animacion.animation == "Dispensar" and animacion.frame == 3:
 		spawnear()
 		audio.play()
@@ -48,3 +47,4 @@ func _on_animated_sprite_2d_frame_changed():
 
 func _on_audio_finished():
 	animacion.play("Idle")
+	sombra_animada.stop()
