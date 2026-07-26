@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c8imhrpes1oxk" path="res://Assets/entidades/basura completa.png" id="4_peotj"]
 [ext_resource type="Script" uid="uid://bubqfvtslgafd" path="res://Commons/Componentes/Tweens/T_recogida.gd" id="5_mq21f"]
 [ext_resource type="Material" uid="uid://dy8jul72maxm7" path="res://Assets/entidades/OutlineMaterial.tres" id="5_sshtx"]
+[ext_resource type="Script" uid="uid://bnu0umged2ipg" path="res://Commons/Componentes/Utilidades/Apilable/ComponenteApilable.gd" id="8_bws82"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e042u"]
 size = Vector2(14, 5)
@@ -84,6 +85,13 @@ unique_name_in_owner = true
 z_index = 1
 target_position = Vector2(0, -11.235)
 collision_mask = 4
+
+[node name="ComponenteApilable" type="Node" parent="." unique_id=1754680189 node_paths=PackedStringArray("ray_cast_abajo", "ray_cast_arriba")]
+unique_name_in_owner = true
+script = ExtResource("8_bws82")
+ray_cast_abajo = NodePath("../RayCast2D")
+ray_cast_arriba = NodePath("../RayCastArriba")
+metadata/_custom_type_script = "uid://bnu0umged2ipg"
 
 [connection signal="finished" from="sonido" to="." method="_on_sonido_finished"]
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

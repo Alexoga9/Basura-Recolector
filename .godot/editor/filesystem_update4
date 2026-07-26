@@ -5,3 +5,4 @@ res://Escenarios/Tilesets/TS_Terrenos.tres
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
 res://Entidades/Basura/Basura_item.gd
 res://Escenarios/mundo.tscn
+res://Commons/Componentes/Utilidades/Apilable/ComponenteApilable.gd
