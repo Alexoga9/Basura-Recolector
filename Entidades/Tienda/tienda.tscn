@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dn4y66lee8nf6" path="res://Entidades/Tienda/Tienda_resaltado.gd" id="3_4lxt0"]
 [ext_resource type="Texture2D" uid="uid://eupvw7bec3ri" path="res://Assets/entidades/tienda img.png" id="3_eppcm"]
 [ext_resource type="PackedScene" uid="uid://b4nutgd65x10o" path="res://Entidades/genericos/e_sprite.tscn" id="4_4lxt0"]
+[ext_resource type="Material" uid="uid://dy8jul72maxm7" path="res://Assets/entidades/OutlineMaterial.tres" id="4_5cjg1"]
 [ext_resource type="Script" uid="uid://3lhjxmmhe7r7" path="res://Entidades/Tienda/resaltadoTiend.gd" id="4_eppcm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xjenl"]
@@ -87,10 +88,12 @@ autoplay = "default"
 
 [node name="ResaltadoComponente" type="Node" parent="SpriteAnimated2D" unique_id=1846370862 node_paths=PackedStringArray("e_sprite")]
 script = ExtResource("3_4lxt0")
+material_outline = ExtResource("4_5cjg1")
 e_sprite = NodePath("../../E sprite")
 metadata/_custom_type_script = "uid://csx7ka6k5q7bc"
 
 [node name="Node" type="Node" parent="SpriteAnimated2D" unique_id=312278816]
+process_mode = 4
 script = ExtResource("4_eppcm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=144946869]
@@ -99,6 +102,7 @@ shape = SubResource("RectangleShape2D_1wau7")
 debug_color = Color(0.26880014, 0.2435346, 0.23927382, 0.41960785)
 
 [node name="Trigger Jugador" type="Area2D" parent="." unique_id=1733789509]
+unique_name_in_owner = true
 visible = false
 collision_layer = 8
 collision_mask = 5
@@ -113,8 +117,4 @@ position = Vector2(0, -38)
 frame_progress = 0.0
 
 [connection signal="body_entered" from="Trigger Jugador" to="." method="_on_trigger_jugador_body_entered"]
-[connection signal="body_entered" from="Trigger Jugador" to="SpriteAnimated2D/ResaltadoComponente" method="_on_trigger_jugador_body_entered"]
-[connection signal="body_entered" from="Trigger Jugador" to="SpriteAnimated2D/Node" method="_on_trigger_jugador_body_entered"]
 [connection signal="body_exited" from="Trigger Jugador" to="." method="_on_trigger_jugador_body_exited"]
-[connection signal="body_exited" from="Trigger Jugador" to="SpriteAnimated2D/ResaltadoComponente" method="_on_trigger_jugador_body_exited"]
-[connection signal="body_exited" from="Trigger Jugador" to="SpriteAnimated2D/Node" method="_on_trigger_jugador_body_exited"]

@@ -1,24 +1,20 @@
 extends ResaltadoComponente
 
-
-#func _ready():
-	#no_resaltado()
-	#ocutlar_e()
+@onready var trigger_area = %"Trigger Jugador"
 
 
-func resaltado():
-	outline_on()
-	mostrar_e()
+func _ready():
 
-
-func no_resaltado():
-	outline_off()
-	ocutlar_e()
+	# Ahora conectamos correctamente
+	trigger_area.body_entered.connect(_on_trigger_jugador_body_entered)
+	trigger_area.body_exited.connect(_on_trigger_jugador_body_exited)
 
 
 func _on_trigger_jugador_body_entered(body):
-	resaltado()
+	if body.is_in_group("Jugador"):
+		resaltado()
 
 
 func _on_trigger_jugador_body_exited(body):
-	no_resaltado()
+	if body.is_in_group("Jugador"):
+		no_resaltado()
