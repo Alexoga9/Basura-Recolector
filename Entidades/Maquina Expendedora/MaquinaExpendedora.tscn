@@ -145,7 +145,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_liyo4")
 }],
-"loop": true,
+"loop": false,
 "name": &"Dispensar",
 "speed": 16.0
 }, {
@@ -301,7 +301,8 @@ unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_0jb4e")
 animation = &"Dispensar"
 autoplay = "Idle"
-frame_progress = 0.9402846
+frame = 11
+frame_progress = 1.0
 offset = Vector2(0, -16.5)
 
 [node name="ResaltadoComponente" type="Node" parent="AnimatedSprite2D" unique_id=472666808 node_paths=PackedStringArray("e_sprite")]
@@ -342,3 +343,4 @@ sprite_frames = SubResource("SpriteFrames_6op0o")
 [connection signal="body_entered" from="Trigger Jugador" to="AnimatedSprite2D/ResaltadoComponente" method="_on_trigger_jugador_body_entered"]
 [connection signal="body_exited" from="Trigger Jugador" to="." method="_on_trigger_jugador_body_exited"]
 [connection signal="body_exited" from="Trigger Jugador" to="AnimatedSprite2D/ResaltadoComponente" method="_on_trigger_jugador_body_exited"]
+[connection signal="finished" from="audio" to="." method="_on_audio_finished"]
