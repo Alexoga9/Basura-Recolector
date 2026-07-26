@@ -1,12 +1,7 @@
-res://Entidades/Maquina Expendedora/MaquinaExpendedora.tscn
+res://Entidades/Basura/Basura.tscn
 res://UI/Theme/Tienda.tres
 res://Entidades/Basura/basura_data.tres
 res://Escenarios/Tilesets/TS_Terrenos.tres
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
-res://Entidades/Maquina Expendedora/maquina_expendedora.gd
-res://Commons/Componentes/Input/InputComponente.gd
-res://Utilidades/Autoloads/Signal_Bus.gd
-res://Entidades/Trituradora/trituradora.tscn
-res://Entidades/Tienda/tienda.tscn
-res://UI/HUD/Inventario/Inventario.tscn
-res://UI/HUD/hud.tscn
+res://Entidades/Basura/Basura_item.gd
+res://Escenarios/mundo.tscn

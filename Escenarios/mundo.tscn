@@ -5239,7 +5239,16 @@ position = Vector2(732, 316)
 position = Vector2(681, 302)
 
 [node name="Loot16" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=521582679 instance=ExtResource("6_2fd2i")]
-position = Vector2(746, 316)
+position = Vector2(755, 314)
+
+[node name="Loot24" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=529520627 instance=ExtResource("6_2fd2i")]
+position = Vector2(755, 309)
+
+[node name="Loot25" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1810151032 instance=ExtResource("6_2fd2i")]
+position = Vector2(755, 304)
+
+[node name="Loot26" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1091051326 instance=ExtResource("6_2fd2i")]
+position = Vector2(755, 300)
 
 [node name="Loot17" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1392906129 instance=ExtResource("6_2fd2i")]
 position = Vector2(715, 325)
@@ -5273,6 +5282,7 @@ tile_map_data = PackedByteArray("AAAAAAYAAQAhAAAAAAARAAcAAQAPAAAAAAAKAAIAAQAYAAQ
 tile_set = SubResource("TileSet_ugrph")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2010886703]
+visible = false
 
 [node name="Inventario" parent="CanvasLayer" unique_id=2011210485 instance=ExtResource("1_vttfp")]
 z_index = -1
