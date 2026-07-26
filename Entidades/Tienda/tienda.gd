@@ -4,13 +4,17 @@ var interaccion_del_jugador: bool = false
 var jugador_en_area: bool = false
 
 
+func _ready():
+	SignalBus.interaccion.connect(interaccion_recibida)
+
+
 func _process(delta):
 
-	if Input.is_action_just_pressed("Interaccion"):
-		interaccion_del_jugador = !interaccion_del_jugador
-		#print(interaccion_del_jugador)
-
 	mostrar_ocultar_tienda()
+
+
+func interaccion_recibida():
+	interaccion_del_jugador = !interaccion_del_jugador
 
 
 func _on_trigger_jugador_body_entered(body):

@@ -5282,7 +5282,6 @@ tile_map_data = PackedByteArray("AAAAAAYAAQAhAAAAAAARAAcAAQAPAAAAAAAKAAIAAQAYAAQ
 tile_set = SubResource("TileSet_ugrph")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2010886703]
-visible = false
 
 [node name="Inventario" parent="CanvasLayer" unique_id=2011210485 instance=ExtResource("1_vttfp")]
 z_index = -1
