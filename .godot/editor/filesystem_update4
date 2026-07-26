@@ -1,8 +1,6 @@
-res://Entidades/Tienda/Tienda_resaltado.gd
-res://Entidades/Tienda/tienda.tscn
+res://Entidades/Maquina Expendedora/MaquinaExpendedora.tscn
 res://UI/Theme/Tienda.tres
 res://Entidades/Basura/basura_data.tres
 res://Escenarios/Tilesets/TS_Terrenos.tres
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
-res://Commons/Componentes/Utilidades/Feedback/Resaltado/ResaltadoComponente.gd
-res://Assets/entidades/OutlineMaterial.tres
+res://Entidades/Maquina Expendedora/maquina_expendedora.gd
