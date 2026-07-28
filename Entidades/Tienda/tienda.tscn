@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://eupvw7bec3ri" path="res://Assets/entidades/tienda img.png" id="3_eppcm"]
 [ext_resource type="PackedScene" uid="uid://b4nutgd65x10o" path="res://Entidades/genericos/e_sprite.tscn" id="4_4lxt0"]
 [ext_resource type="Material" uid="uid://dy8jul72maxm7" path="res://Assets/entidades/OutlineMaterial.tres" id="4_5cjg1"]
+[ext_resource type="Texture2D" uid="uid://bxcs2mj0pk81w" path="res://Assets/entidades/sombra tienda.png" id="6_4lxt0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xjenl"]
 atlas = ExtResource("3_eppcm")
@@ -41,33 +42,33 @@ region = Rect2(399, 0, 57, 45)
 [sub_resource type="SpriteFrames" id="SpriteFrames_jpx43"]
 animations = [{
 "frames": [{
-"duration": 0.5,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_xjenl")
 }, {
-"duration": 0.5,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_38ep3")
 }, {
-"duration": 0.5,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_ovabu")
 }, {
-"duration": 0.5,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_5if1j")
 }, {
-"duration": 0.5,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_x6i3n")
 }, {
-"duration": 0.5,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_qmhwi")
 }, {
-"duration": 0.5,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_g8los")
 }, {
-"duration": 30.0,
+"duration": 20.0,
 "texture": SubResource("AtlasTexture_ny0v5")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1wau7"]
@@ -77,15 +78,17 @@ size = Vector2(54, 20)
 size = Vector2(72, 60)
 
 [node name="Tienda" type="StaticBody2D" unique_id=578851082]
+y_sort_enabled = true
 collision_layer = 16
 collision_mask = 0
 script = ExtResource("1_lvgju")
 
 [node name="SpriteAnimated2D" type="AnimatedSprite2D" parent="." unique_id=763804110]
+y_sort_enabled = true
 position = Vector2(0, 16)
 sprite_frames = SubResource("SpriteFrames_jpx43")
 autoplay = "default"
-frame_progress = 0.7154506
+frame_progress = 0.36935726
 offset = Vector2(0, -16)
 
 [node name="ResaltadoComponente" type="Node" parent="SpriteAnimated2D" unique_id=1846370862 node_paths=PackedStringArray("e_sprite")]
@@ -113,6 +116,10 @@ debug_color = Color(0.4745098, 0.4509804, 0, 0.41960785)
 visible = false
 position = Vector2(0, -38)
 frame_progress = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=373327850]
+position = Vector2(0, 23)
+texture = ExtResource("6_4lxt0")
 
 [connection signal="body_entered" from="Trigger Jugador" to="." method="_on_trigger_jugador_body_entered"]
 [connection signal="body_exited" from="Trigger Jugador" to="." method="_on_trigger_jugador_body_exited"]

@@ -57,11 +57,10 @@ collision_mask = 4
 position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_peotj")
 
-[node name="ResaltadoComponente" type="Node" parent="." unique_id=1217323380 node_paths=PackedStringArray("e_sprite")]
+[node name="ResaltadoComponente" type="Node" parent="." unique_id=1217323380]
 unique_name_in_owner = true
 script = ExtResource("3_peotj")
 material_outline = ExtResource("5_sshtx")
-e_sprite = NodePath("")
 metadata/_custom_type_script = "uid://csx7ka6k5q7bc"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=934080948]

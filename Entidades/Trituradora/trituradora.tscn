@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://1xnuabl3r2ig" path="res://Assets/entidades/trituradora/la trituradora.png" id="2_28ur8"]
 [ext_resource type="AudioStream" uid="uid://cjghok5vlof2n" path="res://Assets/audio/drop-coin.mp3" id="3_k24a0"]
 [ext_resource type="Texture2D" uid="uid://bcw4h077d08et" path="res://Assets/entidades/trituradora/Hove trituradora.png" id="4_mipmb"]
+[ext_resource type="Texture2D" uid="uid://ddnp87ghptd17" path="res://Assets/entidades/trituradora/sombra trituradora.png" id="5_28ur8"]
+[ext_resource type="Texture2D" uid="uid://cpgyvjxpoja7v" path="res://Assets/entidades/trituradora/particulas de trituradora.png" id="6_mipmb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_omklb"]
 atlas = ExtResource("2_28ur8")
@@ -71,9 +73,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_p8cax")
 }],
-"loop": true,
+"loop": false,
 "name": &"idle",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iawrn"]
@@ -153,12 +155,12 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xkol8")
 }, {
-"duration": 1.0,
+"duration": 20.0,
 "texture": SubResource("AtlasTexture_yjhtm")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1wau7"]
@@ -166,6 +168,10 @@ size = Vector2(46, 18)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0bwxm"]
 size = Vector2(72, 60)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_omklb"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
 
 [node name="Trituradora" type="StaticBody2D" unique_id=578851082]
 collision_layer = 16
@@ -175,12 +181,12 @@ script = ExtResource("1_we1hm")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1173047163]
 sprite_frames = SubResource("SpriteFrames_gfsxt")
 animation = &"idle"
-autoplay = "idle"
-frame_progress = 0.083998516
+frame = 8
+frame_progress = 1.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=17179445]
 sprite_frames = SubResource("SpriteFrames_52bhe")
-frame_progress = 0.2062437
+frame_progress = 0.8636837
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=144946869]
 position = Vector2(0, 9)
@@ -199,5 +205,15 @@ debug_color = Color(0.4739082, 0.167575, 0, 0.41960785)
 [node name="audio" type="AudioStreamPlayer" parent="." unique_id=1237359968]
 unique_name_in_owner = true
 stream = ExtResource("3_k24a0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1747734625]
+position = Vector2(0, 21)
+texture = ExtResource("5_28ur8")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=623438214]
+visible = false
+amount = 1
+texture = ExtResource("6_mipmb")
+process_material = SubResource("ParticleProcessMaterial_omklb")
 
 [connection signal="body_entered" from="Trigger Basura" to="." method="_on_trigger_basura_body_entered"]

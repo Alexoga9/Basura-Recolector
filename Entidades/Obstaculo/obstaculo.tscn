@@ -1,14 +1,79 @@
-[gd_scene format=3 uid="uid://b3umcmj5fb6un"]
+[gd_scene format=3 uid="uid://d2r5u0lpmux3m"]
 
-[ext_resource type="Texture2D" uid="uid://bml0qixvj7x5l" path="res://Assets/Inventario/hierro.png" id="1_ltxf4"]
+[ext_resource type="Script" uid="uid://crrl837qbcxyi" path="res://Entidades/Obstaculo/Obstaculo_item.gd" id="1_456b4"]
+[ext_resource type="Texture2D" uid="uid://dut0438runrb" path="res://Assets/Inventario/caja.png" id="3_g5txv"]
+[ext_resource type="Script" uid="uid://cwxixlurvo8rb" path="res://Entidades/Basura/resaltado_basura.gd" id="4_ybytb"]
+[ext_resource type="Material" uid="uid://dy8jul72maxm7" path="res://Assets/entidades/OutlineMaterial.tres" id="5_ejn1b"]
+[ext_resource type="Texture2D" uid="uid://c8imhrpes1oxk" path="res://Assets/entidades/basura completa.png" id="6_7otf1"]
+[ext_resource type="Script" uid="uid://bubqfvtslgafd" path="res://Commons/Componentes/Tweens/T_recogida.gd" id="7_o5idx"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1uaaj"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e042u"]
+size = Vector2(14, 5)
 
-[node name="Obstaculo" type="StaticBody2D" unique_id=785359298]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_peotj"]
+size = Vector2(12, 6)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1636948673]
-scale = Vector2(2.005, 2.005)
-texture = ExtResource("1_ltxf4")
+[node name="Basura" type="StaticBody2D" unique_id=529520627 groups=["Obstaculo"]]
+y_sort_enabled = true
+collision_layer = 4
+collision_mask = 13
+input_pickable = true
+script = ExtResource("1_456b4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=723372471]
-shape = SubResource("RectangleShape2D_1uaaj")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1608053603]
+unique_name_in_owner = true
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_e042u")
+debug_color = Color(0.98978466, 0, 0.27423584, 0.41960785)
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1161258588]
+unique_name_in_owner = true
+position = Vector2(0, 2.875)
+texture = ExtResource("3_g5txv")
+offset = Vector2(0, -6)
+hframes = 2
+
+[node name="sonido" type="AudioStreamPlayer" parent="." unique_id=1004405695]
+unique_name_in_owner = true
+volume_db = -10.0
+pitch_scale = 1.5
+bus = &"SFX"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=392840213]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=527528103]
+visible = false
+shape = SubResource("RectangleShape2D_peotj")
+
+[node name="DetectorCajas" type="Area2D" parent="." unique_id=459621710]
+unique_name_in_owner = true
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectorCajas" unique_id=1464594226]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_peotj")
+
+[node name="ResaltadoComponente" type="Node" parent="." unique_id=1217323380]
+unique_name_in_owner = true
+script = ExtResource("4_ybytb")
+material_outline = ExtResource("5_ejn1b")
+metadata/_custom_type_script = "uid://csx7ka6k5q7bc"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=934080948]
+position = Vector2(0, -2)
+texture = ExtResource("6_7otf1")
+hframes = 3
+frame = 2
+
+[node name="TRecogida" type="Node" parent="." unique_id=1191241314]
+unique_name_in_owner = true
+script = ExtResource("7_o5idx")
+metadata/_custom_type_script = "uid://bubqfvtslgafd"
+
+[connection signal="finished" from="sonido" to="." method="_on_sonido_finished"]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="ResaltadoComponente" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="ResaltadoComponente" method="_on_area_2d_mouse_exited"]
+[connection signal="body_entered" from="DetectorCajas" to="." method="_on_detector_body_entered"]
+[connection signal="body_exited" from="DetectorCajas" to="." method="_on_detector_body_exited"]

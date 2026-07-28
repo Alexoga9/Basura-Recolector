@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://cpdgtf2pq7lh"]
 
-[ext_resource type="TileSet" uid="uid://bjiaj40sxwfmk" path="res://Escenarios/Tilesets/TS_Terrenos.tres" id="1_3ghf3"]
+[ext_resource type="TileSet" uid="uid://bjiaj40sxwfmk" path="res://Escenarios/Tilesets/TS_Primavera.tres" id="1_3ghf3"]
 [ext_resource type="Texture2D" uid="uid://4083rudm87vs" path="res://Escenarios/TileMap/All tiles Spring.png" id="2_3ghf3"]
 [ext_resource type="Texture2D" uid="uid://dkd4oh565jsrg" path="res://Escenarios/TileMap/Basic Tiles 4 (Trees & Bushes, no shadow).png" id="2_tr1lg"]
 

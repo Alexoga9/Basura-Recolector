@@ -147,7 +147,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Dispensar",
-"speed": 16.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -183,12 +183,12 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_vo4km")
 }, {
-"duration": 1.0,
+"duration": 20.0,
 "texture": SubResource("AtlasTexture_hcons")
 }],
 "loop": true,
 "name": &"Idle",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vkww6"]
@@ -299,10 +299,9 @@ consumible = ExtResource("2_cglwt")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=626759674]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_0jb4e")
-animation = &"Dispensar"
+animation = &"Idle"
 autoplay = "Idle"
-frame = 11
-frame_progress = 1.0
+frame_progress = 0.72995543
 offset = Vector2(0, -16)
 
 [node name="ResaltadoComponente" type="Node" parent="AnimatedSprite2D" unique_id=472666808 node_paths=PackedStringArray("e_sprite")]
