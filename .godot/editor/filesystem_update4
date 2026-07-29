@@ -14,3 +14,5 @@ res://Entidades/Basura/Basura.tscn
 res://Entidades/Obstaculo/Obstaculo.tscn
 res://Commons/Componentes/Tweens/Tween_aparecer.gd
 res://Entidades/genericos/e_sprite.tscn
+res://UI/Barras/barras_hud.tscn
+res://UI/HUD/Inventario/Inventario.tscn
