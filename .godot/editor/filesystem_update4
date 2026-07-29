@@ -1,8 +1,6 @@
-res://Entidades/Trituradora/trituradora.tscn
+res://Escenarios/mundo.tscn
 res://UI/Theme/Tienda.tres
 res://Entidades/Basura/basura_data.tres
-res://Escenarios/Tilesets/TS_Terrenos.tres
-res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
-res://Escenarios/mundo.tscn
-res://Escenarios/TileMap/Map.tscn
 res://Escenarios/Otoño/TS_Otoño.tres
+res://Escenarios/Tilesets/TS_Primavera.tres
+res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
