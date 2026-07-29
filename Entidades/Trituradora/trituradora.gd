@@ -1,6 +1,7 @@
 extends StaticBody2D
 
 @onready var audio = %audio
+@onready var sierras = %Sierras
 
 
 func recibir_basura_jugador():
@@ -14,20 +15,20 @@ func recibir_basura_jugador():
 		#print(str(Dinero.dinero))
 		Inventario.remove_item("Basura", cantidad_basura)
 		audio.play()
+		sierras.play()
 
 
-func recibir_basura_fisica():
-	pass
+func recibir_basura_fisica(body):
+	Dinero.ganar(body.valor)
+	body.collect()
+	audio.play()
+	sierras.play()
 
 
 func _on_trigger_basura_body_entered(body):
 	#print("Area")
-	if body.is_in_group("Jugador"):
+	if body.is_in_group("Jugador") and Inventario.get_count("Basura") > 0:
 		recibir_basura_jugador()
-		pass
-		# inventario.backpack[basura](0)
 
 	if body.is_in_group("Basura"):
-		Dinero.ganar(body.valor)
-		body.collect()
-		audio.play()
+		recibir_basura_fisica(body)

@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://cwxixlurvo8rb" path="res://Entidades/Basura/resaltado_basura.gd" id="4_ybytb"]
 [ext_resource type="Material" uid="uid://dy8jul72maxm7" path="res://Assets/entidades/OutlineMaterial.tres" id="5_ejn1b"]
 [ext_resource type="Texture2D" uid="uid://c8imhrpes1oxk" path="res://Assets/entidades/basura completa.png" id="6_7otf1"]
-[ext_resource type="Script" uid="uid://bubqfvtslgafd" path="res://Commons/Componentes/Tweens/T_recogida.gd" id="7_o5idx"]
+[ext_resource type="Script" uid="uid://bubqfvtslgafd" path="res://Commons/Componentes/Tweens/Tween_recogida.gd" id="7_o5idx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e042u"]
 size = Vector2(14, 5)

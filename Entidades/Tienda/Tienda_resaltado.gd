@@ -1,7 +1,5 @@
 extends ResaltadoComponente
 
-@onready var trigger_area = %"Trigger Jugador"
-
 
 func _ready():
 

@@ -393,6 +393,7 @@ y_sort_enabled = true
 position = Vector2(213, 97)
 
 [node name="Entiddaes" type="Node2D" parent="Objetos Ambientales" unique_id=358230563]
+visible = false
 y_sort_enabled = true
 position = Vector2(-572, -229)
 
@@ -512,7 +513,7 @@ position = Vector2(-5, -40)
 
 [node name="Arboles" type="TileMapLayer" parent="Objetos Ambientales" unique_id=1521611397]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAAAAYAAQAhAAAAAAARAAcAAQAPAAAAAAD6/wwAAQADAAQAAAD+/wwAAQAYAAAAAAAHAAcAAQASABEAAAAIAAcAAQAUABEAAAAEAAoAAQATAA8AAAAMAAcAAQATAA8AAAATAAsAAQATAA8AAAD5/wMAAQATAA8AAAADAAMAAQATAA8AAAAFAAcAAQARABEAAAAGAAcAAQATABEAAAD6/wEAAQAVAAQAAAA=")
+tile_map_data = PackedByteArray("AAAAAAYAAQAhAAAAAAD6/wwAAQADAAQAAAD+/wwAAQAYAAAAAAAHAAcAAQASABEAAAAIAAcAAQAUABEAAAAEAAoAAQATAA8AAAAMAAcAAQATAA8AAAATAAsAAQATAA8AAAD5/wMAAQATAA8AAAADAAMAAQATAA8AAAAFAAcAAQARABEAAAAGAAcAAQATABEAAAD6/wEAAQAVAAQAAAAKAAsAAQAYAAgAAAAEAPn/AQAYAAAAAAD7//3/AQAYAAAAAAA=")
 tile_set = SubResource("TileSet_sexdp")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2010886703]

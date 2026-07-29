@@ -3,8 +3,10 @@
 [ext_resource type="Script" uid="uid://bavd3c4essg3w" path="res://Entidades/Trituradora/trituradora.gd" id="1_we1hm"]
 [ext_resource type="Texture2D" uid="uid://1xnuabl3r2ig" path="res://Assets/entidades/trituradora/la trituradora.png" id="2_28ur8"]
 [ext_resource type="AudioStream" uid="uid://cjghok5vlof2n" path="res://Assets/audio/drop-coin.mp3" id="3_k24a0"]
+[ext_resource type="Script" uid="uid://dn4y66lee8nf6" path="res://Entidades/Tienda/Tienda_resaltado.gd" id="4_fkswi"]
 [ext_resource type="Texture2D" uid="uid://bcw4h077d08et" path="res://Assets/entidades/trituradora/Hove trituradora.png" id="4_mipmb"]
 [ext_resource type="Texture2D" uid="uid://ddnp87ghptd17" path="res://Assets/entidades/trituradora/sombra trituradora.png" id="5_28ur8"]
+[ext_resource type="Material" uid="uid://dy8jul72maxm7" path="res://Assets/entidades/OutlineMaterial.tres" id="5_rnive"]
 [ext_resource type="Texture2D" uid="uid://cpgyvjxpoja7v" path="res://Assets/entidades/trituradora/particulas de trituradora.png" id="6_mipmb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_omklb"]
@@ -74,7 +76,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_p8cax")
 }],
 "loop": false,
-"name": &"idle",
+"name": &"Triturar",
 "speed": 10.0
 }]
 
@@ -178,27 +180,35 @@ collision_layer = 16
 collision_mask = 0
 script = ExtResource("1_we1hm")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1173047163]
+[node name="Sierras" type="AnimatedSprite2D" parent="." unique_id=1173047163]
+unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_gfsxt")
-animation = &"idle"
+animation = &"Triturar"
 frame = 8
 frame_progress = 1.0
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=17179445]
+[node name="Cartel" type="AnimatedSprite2D" parent="Sierras" unique_id=17179445]
 sprite_frames = SubResource("SpriteFrames_52bhe")
-frame_progress = 0.8636837
+autoplay = "default"
+frame_progress = 0.5193152
+
+[node name="ResaltadoComponente" type="Node" parent="Sierras" unique_id=968144546 node_paths=PackedStringArray("trigger_area")]
+script = ExtResource("4_fkswi")
+trigger_area = NodePath("../../Trigger Jugador")
+material_outline = ExtResource("5_rnive")
+metadata/_custom_type_script = "uid://csx7ka6k5q7bc"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=144946869]
 position = Vector2(0, 9)
 shape = SubResource("RectangleShape2D_1wau7")
 debug_color = Color(0.26880014, 0.2435346, 0.23927382, 0.41960785)
 
-[node name="Trigger Basura" type="Area2D" parent="." unique_id=1733789509]
+[node name="Trigger Jugador" type="Area2D" parent="." unique_id=1733789509]
 visible = false
 collision_layer = 8
 collision_mask = 5
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger Basura" unique_id=588954144]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger Jugador" unique_id=588954144]
 shape = SubResource("RectangleShape2D_0bwxm")
 debug_color = Color(0.4739082, 0.167575, 0, 0.41960785)
 
@@ -216,4 +226,5 @@ amount = 1
 texture = ExtResource("6_mipmb")
 process_material = SubResource("ParticleProcessMaterial_omklb")
 
-[connection signal="body_entered" from="Trigger Basura" to="." method="_on_trigger_basura_body_entered"]
+[connection signal="body_entered" from="Trigger Jugador" to="." method="_on_trigger_basura_body_entered"]
+[connection signal="body_entered" from="Trigger Jugador" to="Sierras/ResaltadoComponente" method="_on_trigger_jugador_body_entered"]

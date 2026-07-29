@@ -1,9 +1,9 @@
+Node
+ResaltadoComponente
 GPUParticles2D
 Sprite2D
 ComponenteApilable
-ResaltadoComponente
 AnimatedSprite2D
-Node
 TextureRect
 Label
 VBoxContainer
@@ -12,4 +12,3 @@ ProgressBar
 TileMapLayer
 StaticBody2D
 RayCast2D
-Node2D

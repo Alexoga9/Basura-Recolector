@@ -1,7 +1,8 @@
 class_name ResaltadoComponente extends Node
 
+@export var trigger_area: Area2D
 @export var material_outline: Material
-@export var e_sprite: AnimatedSprite2D
+@export var e_sprite: TweenAparecer
 var estado_original_material: Material = null
 
 
@@ -25,8 +26,8 @@ func resaltado():
 
 func no_resaltado():
 	if not is_inside_tree(): return
-	_outline_off()
 	_ocutlar_e()
+	_outline_off()
 
 
 func _outline_on():
@@ -43,8 +44,16 @@ func _outline_off():
 func _mostrar_e():
 	if e_sprite:
 		e_sprite.visible = true
+		e_sprite.aparecer()
 
 
 func _ocutlar_e():
 	if e_sprite:
+	# 1. Guardamos el Tween que devuelve esconder()
+		var tween = e_sprite.esconder()
+
+		# 2. ESPERAMOS a que el Tween termine
+		await tween.finished
+
+		# 3. Ahora que el Tween terminó, ocultamos el sprite
 		e_sprite.visible = false
