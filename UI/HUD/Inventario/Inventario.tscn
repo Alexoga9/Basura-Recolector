@@ -35,89 +35,87 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="InventarioSlot" type="Panel" parent="." unique_id=851919116]
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.60400003
-anchor_right = 0.395
-anchor_bottom = 1.0
-offset_top = 0.5359955
-offset_right = 0.6399994
-offset_bottom = -1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-
-[node name="HBoxContainer4" type="HBoxContainer" parent="InventarioSlot" unique_id=1354787719]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1593978202]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="InventarioSlot/HBoxContainer4" unique_id=170167109]
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer" unique_id=1354787719]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer4" unique_id=170167109]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 8
 theme_override_constants/separation = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="InventarioSlot/HBoxContainer4/VBoxContainer" unique_id=98750735]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer4/VBoxContainer" unique_id=98750735]
 layout_mode = 2
 size_flags_vertical = 10
 
-[node name="SlotDeInventario" parent="InventarioSlot/HBoxContainer4/VBoxContainer/HBoxContainer" unique_id=780189116 instance=ExtResource("7_l1s3s")]
+[node name="SlotDeInventario" parent="MarginContainer/HBoxContainer4/VBoxContainer/HBoxContainer" unique_id=780189116 instance=ExtResource("7_l1s3s")]
 layout_mode = 2
 id_a_recibir = "piedra"
 
-[node name="SlotDeInventario2" parent="InventarioSlot/HBoxContainer4/VBoxContainer/HBoxContainer" unique_id=26183003 instance=ExtResource("7_l1s3s")]
+[node name="SlotDeInventario2" parent="MarginContainer/HBoxContainer4/VBoxContainer/HBoxContainer" unique_id=26183003 instance=ExtResource("7_l1s3s")]
 layout_mode = 2
 id_a_recibir = "madera"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="InventarioSlot/HBoxContainer4/VBoxContainer" unique_id=1953262084]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/HBoxContainer4/VBoxContainer" unique_id=1953262084]
 layout_mode = 2
 size_flags_vertical = 10
 
-[node name="SlotDeInventario" parent="InventarioSlot/HBoxContainer4/VBoxContainer/HBoxContainer2" unique_id=1457160244 instance=ExtResource("7_l1s3s")]
+[node name="SlotDeInventario" parent="MarginContainer/HBoxContainer4/VBoxContainer/HBoxContainer2" unique_id=1457160244 instance=ExtResource("7_l1s3s")]
 layout_mode = 2
 
-[node name="SlotDeInventario2" parent="InventarioSlot/HBoxContainer4/VBoxContainer/HBoxContainer2" unique_id=1514962989 instance=ExtResource("7_l1s3s")]
+[node name="SlotDeInventario2" parent="MarginContainer/HBoxContainer4/VBoxContainer/HBoxContainer2" unique_id=1514962989 instance=ExtResource("7_l1s3s")]
 layout_mode = 2
 
-[node name="SlotDeInventario3" parent="InventarioSlot/HBoxContainer4/VBoxContainer/HBoxContainer2" unique_id=1678040771 instance=ExtResource("7_l1s3s")]
+[node name="SlotDeInventario3" parent="MarginContainer/HBoxContainer4/VBoxContainer/HBoxContainer2" unique_id=1678040771 instance=ExtResource("7_l1s3s")]
 layout_mode = 2
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="InventarioSlot/HBoxContainer4/VBoxContainer" unique_id=638117693]
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/HBoxContainer4/VBoxContainer" unique_id=638117693]
 layout_mode = 2
 size_flags_vertical = 10
 
-[node name="Barras HUD" parent="InventarioSlot/HBoxContainer4/VBoxContainer/HBoxContainer3" unique_id=2073494253 instance=ExtResource("8_2kcwo")]
+[node name="Barras HUD" parent="MarginContainer/HBoxContainer4/VBoxContainer/HBoxContainer3" unique_id=2073494253 instance=ExtResource("8_2kcwo")]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="SlotDeDinero" parent="InventarioSlot/HBoxContainer4" unique_id=927491836 instance=ExtResource("9_2kcwo")]
+[node name="SlotDeDinero" parent="MarginContainer/HBoxContainer4" unique_id=927491836 instance=ExtResource("9_2kcwo")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 textura = ExtResource("10_l1s3s")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=178839997]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -40.0
-offset_bottom = 40.0
-grow_horizontal = 0
-
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer" unique_id=1152943884]
-custom_minimum_size = Vector2(78, 13.795)
+[node name="InventarioSlot" type="Panel" parent="MarginContainer" unique_id=851919116]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=178839997]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=1152943884]
+custom_minimum_size = Vector2(41.945, 8)
+layout_mode = 2
+size_flags_horizontal = 8
 size_flags_vertical = 3
 texture = SubResource("AtlasTexture_vvi4h")
 
-[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/TextureRect" unique_id=577320274]
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/VBoxContainer/TextureRect" unique_id=577320274]
 z_index = -1
 layout_mode = 1
 anchors_preset = 15
@@ -130,12 +128,12 @@ theme_override_styles/fill = SubResource("StyleBoxTexture_lx5vd")
 show_percentage = false
 script = ExtResource("5_1l1l3")
 
-[node name="Label" type="Label" parent="VBoxContainer" unique_id=1753380368]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1753380368]
 layout_mode = 2
 text = "Main Entrance"
 label_settings = ExtResource("7_lx5vd")
 
-[node name="Cleared" type="Label" parent="VBoxContainer" unique_id=1713816082]
+[node name="Cleared" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1713816082]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Cleared"

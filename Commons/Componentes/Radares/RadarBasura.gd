@@ -21,6 +21,7 @@ func _on_body_entered(body: Basura):
 	#print("Basura aqui")
 	if body.is_in_group("Basura"):
 		body.en_area_jugador = true
+		body.resaltado_componente.resaltado()
 		cuerpos.append(body)
 		#print(cuerpos)
 

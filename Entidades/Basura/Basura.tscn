@@ -36,6 +36,12 @@ texture = ExtResource("3_bws82")
 offset = Vector2(0, -6)
 hframes = 2
 
+[node name="ResaltadoComponente" type="Node" parent="Sprite" unique_id=1217323380]
+unique_name_in_owner = true
+script = ExtResource("3_peotj")
+material_outline = ExtResource("5_sshtx")
+metadata/_custom_type_script = "uid://csx7ka6k5q7bc"
+
 [node name="sonido" type="AudioStreamPlayer" parent="." unique_id=1004405695]
 unique_name_in_owner = true
 volume_db = -10.0
@@ -56,12 +62,6 @@ collision_mask = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectorCajas" unique_id=1464594226]
 position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_peotj")
-
-[node name="ResaltadoComponente" type="Node" parent="." unique_id=1217323380]
-unique_name_in_owner = true
-script = ExtResource("3_peotj")
-material_outline = ExtResource("5_sshtx")
-metadata/_custom_type_script = "uid://csx7ka6k5q7bc"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=934080948]
 position = Vector2(0, -2)
@@ -94,7 +94,7 @@ metadata/_custom_type_script = "uid://bnu0umged2ipg"
 
 [connection signal="finished" from="sonido" to="." method="_on_sonido_finished"]
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
-[connection signal="mouse_entered" from="Area2D" to="ResaltadoComponente" method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Area2D" to="ResaltadoComponente" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="Area2D" to="Sprite/ResaltadoComponente" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="Sprite/ResaltadoComponente" method="_on_area_2d_mouse_exited"]
 [connection signal="body_entered" from="DetectorCajas" to="." method="_on_detector_body_entered"]
 [connection signal="body_exited" from="DetectorCajas" to="." method="_on_detector_body_exited"]

@@ -1,9 +1,10 @@
 extends ResaltadoComponente
 
-@onready var basura: Basura = $".."
+@onready var basura: Basura =$"../.."
 
 
 func _on_area_2d_mouse_entered():
+	print("MOUSE")
 	if basura.en_area_jugador:
 		resaltado()
 
