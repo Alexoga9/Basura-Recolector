@@ -1,9 +1,6 @@
-res://Escenarios/mundo.tscn
+res://Commons/Componentes/Tweens/Tween_deslizar.gd
+res://Entidades/Consumible/consumible.tscn
 res://UI/Theme/Tienda.tres
 res://Entidades/Basura/basura_data.tres
 res://Escenarios/Otoño/TS_Otoño.tres
-res://Escenarios/Tilesets/TS_Primavera.tres
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
-res://Entidades/Basura/Basura.tscn
-res://Commons/Componentes/Radares/RadarBasura.gd
-res://Entidades/Basura/resaltado_basura.gd
