@@ -44,9 +44,6 @@ func collect():
 	return data
 
 
-func _on_area_entered(area):
-	if area.is_in_group("Radar_Loot"):
-		objetivo = area
 
 
 func _on_sonido_finished():

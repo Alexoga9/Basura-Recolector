@@ -278,7 +278,7 @@ one_shot = true
 unique_name_in_owner = true
 visible = false
 collision_layer = 0
-collision_mask = 4
+collision_mask = 32
 script = ExtResource("14_orci8")
 
 [node name="BasuraCollider" type="CollisionShape2D" parent="Recoge OBSTACULOS" unique_id=1338125419]

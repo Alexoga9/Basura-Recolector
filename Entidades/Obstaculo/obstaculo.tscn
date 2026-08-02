@@ -23,6 +23,7 @@ sprite = SubResource("AtlasTexture_xkutv")
 tipo_de_elemento = 3
 tiene_requisito = true
 tipo_de_requisito = 1
+nivel_de_requisito = 1
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e042u"]
