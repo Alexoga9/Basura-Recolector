@@ -1,6 +1,7 @@
-res://Commons/Componentes/Tweens/Tween_deslizar.gd
-res://Entidades/Consumible/consumible.tscn
+res://Entidades/Trituradora/trituradora.tscn
 res://UI/Theme/Tienda.tres
 res://Entidades/Basura/basura_data.tres
 res://Escenarios/Otoño/TS_Otoño.tres
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
+res://Entidades/Trituradora/trituradora.gd
+res://Escenarios/mundo.tscn

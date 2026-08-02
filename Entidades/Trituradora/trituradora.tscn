@@ -171,19 +171,97 @@ size = Vector2(46, 18)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0bwxm"]
 size = Vector2(72, 60)
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fkswi"]
-particles_animation = true
-particles_anim_h_frames = 1
-particles_anim_v_frames = 3
-particles_anim_loop = true
+[sub_resource type="AtlasTexture" id="AtlasTexture_gfsxt"]
+atlas = ExtResource("6_mipmb")
+region = Rect2(0, 0, 62, 15)
 
-[sub_resource type="Curve" id="Curve_rnive"]
-_data = [Vector2(0, 0.42026526), 0.0, 0.0, 0, 0]
-point_count = 1
+[sub_resource type="AtlasTexture" id="AtlasTexture_52bhe"]
+atlas = ExtResource("6_mipmb")
+region = Rect2(62, 0, 62, 15)
 
-[sub_resource type="Curve" id="Curve_p8w4y"]
-_data = [Vector2(0.021582738, 0.2221281), 0.0, 0.0, 0, 0]
-point_count = 1
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6fxr"]
+atlas = ExtResource("6_mipmb")
+region = Rect2(0, 15, 62, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aylx2"]
+atlas = ExtResource("6_mipmb")
+region = Rect2(62, 15, 62, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbms5"]
+atlas = ExtResource("6_mipmb")
+region = Rect2(0, 30, 62, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xon40"]
+atlas = ExtResource("6_mipmb")
+region = Rect2(62, 30, 62, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t61jo"]
+atlas = ExtResource("6_mipmb")
+region = Rect2(0, 45, 62, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ryeuv"]
+atlas = ExtResource("6_mipmb")
+region = Rect2(62, 45, 62, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4pbh1"]
+atlas = ExtResource("6_mipmb")
+region = Rect2(0, 60, 62, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nox31"]
+atlas = ExtResource("6_mipmb")
+region = Rect2(62, 60, 62, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_msijf"]
+atlas = ExtResource("6_mipmb")
+region = Rect2(0, 75, 62, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mfno1"]
+atlas = ExtResource("6_mipmb")
+region = Rect2(62, 75, 62, 15)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jm7t7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gfsxt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_52bhe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6fxr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aylx2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbms5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xon40")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t61jo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ryeuv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4pbh1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nox31")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_msijf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mfno1")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
 
 [node name="Trituradora" type="StaticBody2D" unique_id=578851082]
 collision_layer = 16
@@ -230,36 +308,11 @@ stream = ExtResource("3_k24a0")
 position = Vector2(0, 21)
 texture = ExtResource("5_28ur8")
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1638881486]
-visible = false
-material = SubResource("CanvasItemMaterial_fkswi")
-amount = 1
-texture = ExtResource("6_mipmb")
-gravity = Vector2(0, 0)
-anim_speed_min = 1.0
-anim_speed_max = 1.0
-anim_offset_min = 1.0
-anim_offset_max = 1.0
-
-[node name="CPUParticles2D2" type="CPUParticles2D" parent="." unique_id=2104141523]
-emitting = false
-amount = 5
-speed_scale = 3.39
-explosiveness = 0.52
-emission_shape = 2
-emission_sphere_radius = 20.15
-direction = Vector2(0, 50)
-spread = 0.0
-gravity = Vector2(0, -980)
-radial_accel_min = 100.0
-radial_accel_max = 100.0
-tangential_accel_min = 100.0
-tangential_accel_max = 100.0
-scale_amount_min = 31.61
-scale_amount_max = 31.61
-split_scale = true
-scale_curve_x = SubResource("Curve_rnive")
-scale_curve_y = SubResource("Curve_p8w4y")
+[node name="Chispas" type="AnimatedSprite2D" parent="." unique_id=2076967284]
+unique_name_in_owner = true
+position = Vector2(0, -18)
+sprite_frames = SubResource("SpriteFrames_jm7t7")
 
 [connection signal="body_entered" from="Trigger Jugador" to="." method="_on_trigger_basura_body_entered"]
 [connection signal="body_entered" from="Trigger Jugador" to="Sierras/ResaltadoComponente" method="_on_trigger_jugador_body_entered"]
+[connection signal="animation_finished" from="Chispas" to="." method="_on_chispas_animation_finished"]

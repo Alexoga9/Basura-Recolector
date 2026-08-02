@@ -2,6 +2,7 @@ extends StaticBody2D
 
 @onready var audio = %audio
 @onready var sierras = %Sierras
+@onready var chispas = %Chispas
 
 
 func recibir_basura_jugador():
@@ -16,6 +17,7 @@ func recibir_basura_jugador():
 		Inventario.remove_item("Basura", cantidad_basura)
 		audio.play()
 		sierras.play()
+		chispas.play()
 
 
 func recibir_basura_fisica(body):
@@ -23,6 +25,7 @@ func recibir_basura_fisica(body):
 	body.collect()
 	audio.play()
 	sierras.play()
+	chispas.play()
 
 
 func _on_trigger_basura_body_entered(body):
@@ -32,3 +35,7 @@ func _on_trigger_basura_body_entered(body):
 
 	if body.is_in_group("Basura"):
 		recibir_basura_fisica(body)
+
+
+func _on_chispas_animation_finished():
+	chispas.frame = 0

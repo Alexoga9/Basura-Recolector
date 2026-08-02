@@ -28,13 +28,9 @@ stream = ExtResource("3_si0yx")
 volume_db = -10.0
 pitch_scale = 1.5
 
-[node name="TDeslizar" type="Node2D" parent="." unique_id=297690176 node_paths=PackedStringArray("padre")]
+[node name="TDeslizar" type="Node" parent="." unique_id=2040438150]
 unique_name_in_owner = true
 script = ExtResource("5_o3r7i")
-padre = NodePath("..")
-lado = 32.0
-base_triangulo = 50.0
-velocidad_tween = 0.1
 metadata/_custom_type_script = "uid://beooi4cmwyrr8"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

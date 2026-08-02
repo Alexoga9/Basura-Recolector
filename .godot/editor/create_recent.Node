@@ -1,3 +1,5 @@
+AnimatedSprite2D
+TDeslizar
 Node2D
 Polygon2D
 MarginContainer
@@ -7,8 +9,6 @@ ResaltadoComponente
 GPUParticles2D
 Sprite2D
 ComponenteApilable
-AnimatedSprite2D
 TextureRect
 Label
 VBoxContainer
-HBoxContainer
