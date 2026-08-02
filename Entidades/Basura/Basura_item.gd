@@ -28,11 +28,6 @@ func _ready():
 	SignalBus.recoger_basura_automatica.connect(recibir_input)
 
 
-func _process(delta):
-	# 📌 El componente gestiona la caída automáticamente.
-	# No necesitamos hacer nada aquí, solo asegurarnos de que el componente existe.
-	pass
-
 
 func recibir_input():
 	input_recibido = true

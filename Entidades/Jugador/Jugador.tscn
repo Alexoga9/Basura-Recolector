@@ -7,12 +7,14 @@
 [ext_resource type="Script" uid="uid://bnt3655fcthcm" path="res://Commons/Componentes/Movimiento/Vectores/MovimientoComponente.gd" id="3_30dg6"]
 [ext_resource type="Script" uid="uid://c313hyi3lxct" path="res://Commons/Componentes/Core/Agotamiento.gd" id="4_qtgc7"]
 [ext_resource type="Script" uid="uid://dcfdk4qx3vf0b" path="res://Commons/Componentes/Utilidades/Loot/loot_collector.gd" id="9_6pwru"]
+[ext_resource type="Script" uid="uid://d0ghf1yof2o0g" path="res://Commons/Componentes/Core/EstadisticasComponente.gd" id="9_qtgc7"]
 [ext_resource type="Script" uid="uid://dqiir7o6l4sjy" path="res://Commons/Componentes/Radares/RadarComponente.gd" id="9_y6klq"]
 [ext_resource type="Script" uid="uid://rkib0lob5g81" path="res://Commons/Componentes/Radares/RadarBasura.gd" id="9_yyjpx"]
 [ext_resource type="Script" uid="uid://n5y5s26fj4li" path="res://Commons/Componentes/Input/lanza_basura.gd" id="11_8xsec"]
 [ext_resource type="PackedScene" uid="uid://boa7rlwdurt22" path="res://Entidades/Basura/Basura.tscn" id="12_qtgc7"]
 [ext_resource type="Script" uid="uid://b1prp2tpnsf1h" path="res://Entidades/Jugador/barra_cooldown.gd" id="13_8xsec"]
 [ext_resource type="Resource" uid="uid://besidf7otrxpl" path="res://Entidades/Basura/Bolsa de Basura/bolsa_de_basura.tres" id="13_orci8"]
+[ext_resource type="Script" uid="uid://chk3xfnml16to" path="res://Entidades/Jugador/recoge_obstaculos.gd" id="14_orci8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b35yh"]
 radius = 4.0
@@ -164,7 +166,7 @@ bg_color = Color(0.54509807, 0.54509807, 0.54509807, 0.49803922)
 bg_color = Color(0.8392157, 0.8392157, 0.8392157, 0.49803922)
 
 [node name="Jugador" type="CharacterBody2D" unique_id=1030727379 groups=["Jugador"]]
-collision_mask = 28
+collision_mask = 60
 motion_mode = 1
 script = ExtResource("1_5k27j")
 
@@ -199,6 +201,11 @@ unique_name_in_owner = true
 script = ExtResource("11_8xsec")
 bolsa_de_basura = ExtResource("12_qtgc7")
 data_template = ExtResource("13_orci8")
+
+[node name="EstadisticasComponente" type="Node" parent="Componentes" unique_id=384667304]
+unique_name_in_owner = true
+script = ExtResource("9_qtgc7")
+metadata/_custom_type_script = "uid://d0ghf1yof2o0g"
 
 [node name="Cuerpo" type="CollisionShape2D" parent="." unique_id=925831003]
 position = Vector2(-1, 0)
@@ -267,6 +274,21 @@ unique_name_in_owner = true
 wait_time = 3.0
 one_shot = true
 
+[node name="Recoge OBSTACULOS" type="Area2D" parent="." unique_id=2030381451]
+unique_name_in_owner = true
+visible = false
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("14_orci8")
+
+[node name="BasuraCollider" type="CollisionShape2D" parent="Recoge OBSTACULOS" unique_id=1338125419]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_iv1dc")
+
+[node name="Timer" type="Timer" parent="Recoge OBSTACULOS" unique_id=1185692104]
+wait_time = 3.0
+one_shot = true
+
 [node name="BarraCooldown" type="ProgressBar" parent="." unique_id=1271422914]
 unique_name_in_owner = true
 offset_left = -11.0
@@ -285,3 +307,6 @@ metadata/_custom_type_script = "uid://d3ixr7t11n000"
 [connection signal="body_entered" from="Recoge BASURA" to="Recoge BASURA" method="_on_body_entered"]
 [connection signal="body_exited" from="Recoge BASURA" to="Recoge BASURA" method="_on_body_exited"]
 [connection signal="timeout" from="Recoge BASURA/Timer" to="Recoge BASURA" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Recoge OBSTACULOS" to="Recoge OBSTACULOS" method="_on_body_entered"]
+[connection signal="body_exited" from="Recoge OBSTACULOS" to="Recoge OBSTACULOS" method="_on_body_exited"]
+[connection signal="timeout" from="Recoge OBSTACULOS/Timer" to="Recoge OBSTACULOS" method="_on_timer_timeout"]

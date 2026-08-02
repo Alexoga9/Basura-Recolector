@@ -18,20 +18,16 @@ var input_recibido: bool = false
 
 var id: String
 var nombre: String
-enum TipoBasura {BASICO, PESADO, PAQUETE}
-var tipo_de_basura: TipoBasura
+var requisito: bool
+enum tipo_de_requisito_Enum {RECOGIDA, FUERZA}
+var tipo_de_requisito: tipo_de_requisito_Enum
+var nivel_requisito: int
 var valor: int
 
 
 func _ready():
 	iniciar_valores()
 	SignalBus.recoger_basura_automatica.connect(recibir_input)
-
-
-func _process(delta):
-	# 📌 El componente gestiona la caída automáticamente.
-	# No necesitamos hacer nada aquí, solo asegurarnos de que el componente existe.
-	pass
 
 
 func recibir_input():
@@ -60,7 +56,9 @@ func _on_sonido_finished():
 func iniciar_valores():
 	id = data.id
 	nombre = data.nombre
-	tipo_de_basura = int(data.tipo_de_basura)
+	requisito = data.tiene_requisito
+	tipo_de_requisito = int(data.tipo_de_requisito)
+	nivel_requisito = data.nivel_de_requisito
 	valor = data.valor
 	sonido.stream = data.audio
 	sprite2d.texture = data.sprite

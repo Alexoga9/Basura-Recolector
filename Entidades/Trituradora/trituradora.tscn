@@ -169,7 +169,7 @@ animations = [{
 size = Vector2(46, 18)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0bwxm"]
-size = Vector2(72, 60)
+size = Vector2(70, 70)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gfsxt"]
 atlas = ExtResource("6_mipmb")
@@ -297,6 +297,7 @@ collision_layer = 8
 collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger Jugador" unique_id=588954144]
+position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_0bwxm")
 debug_color = Color(0.4739082, 0.167575, 0, 0.41960785)
 

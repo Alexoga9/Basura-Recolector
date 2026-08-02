@@ -109,6 +109,7 @@ Lanzar_Basura={
 2d_physics/layer_3="Basura"
 2d_physics/layer_4="Trituradora"
 2d_physics/layer_5="Muros"
+2d_physics/layer_6="Obstaculo"
 
 [physics]
 

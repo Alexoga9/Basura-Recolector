@@ -1,7 +1,13 @@
-res://Entidades/Trituradora/trituradora.tscn
+res://Entidades/Obstaculo/Obstaculo.tscn
 res://UI/Theme/Tienda.tres
 res://Entidades/Basura/basura_data.tres
 res://Escenarios/Otoño/TS_Otoño.tres
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
-res://Entidades/Trituradora/trituradora.gd
 res://Escenarios/mundo.tscn
+res://Entidades/Obstaculo/resaltado_obstaculo.gd
+res://Entidades/Jugador/Jugador.tscn
+res://Commons/Componentes/Core/EstadisticasComponente.gd
+res://Entidades/Jugador/Jugador.gd
+res://Entidades/Basura/Basura_item.gd
+res://Entidades/Obstaculo/Obstaculo_item.gd
+res://Entidades/Jugador/recoge_obstaculos.gd
