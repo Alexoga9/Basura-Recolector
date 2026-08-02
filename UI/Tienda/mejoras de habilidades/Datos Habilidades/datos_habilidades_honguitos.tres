@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="DatosHabilidades" format=3 uid="uid://dfyvee0widefa"]
+
+[ext_resource type="Script" uid="uid://dxsan7lcfsr3y" path="res://Recursos/DatosHabilidades.gd" id="1_gy8hw"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4u377"]
+load_path = "res://.godot/imported/Items.png-25e6b9c465b490096982c9e191a3cf7f.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0lgm"]
+atlas = SubResource("CompressedTexture2D_4u377")
+region = Rect2(64, 32, 16, 16)
+
+[resource]
+script = ExtResource("1_gy8hw")
+nombre = "Honguitos"
+descripcion = "Aumenta la energia 
+recuperada por hongos"
+precio = 5
+imagen = SubResource("AtlasTexture_u0lgm")
+metadata/_custom_type_script = "uid://dxsan7lcfsr3y"

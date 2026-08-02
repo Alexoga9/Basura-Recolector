@@ -11,3 +11,6 @@ res://Entidades/Jugador/Jugador.gd
 res://Entidades/Basura/Basura_item.gd
 res://Entidades/Obstaculo/Obstaculo_item.gd
 res://Entidades/Jugador/recoge_obstaculos.gd
+res://UI/Tienda/MejoraFuerza.gd
+res://UI/Tienda/tienda_ui.tscn
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres

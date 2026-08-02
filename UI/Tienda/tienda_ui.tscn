@@ -3,113 +3,24 @@
 [ext_resource type="Script" uid="uid://culo1b5mj4hha" path="res://UI/Tienda/tienda_ui.gd" id="1_6namq"]
 [ext_resource type="PackedScene" uid="uid://birp1rvjh205r" path="res://UI/Tienda/Panel tienda/panel_tienda.tscn" id="1_d2rrg"]
 [ext_resource type="Script" uid="uid://b7q2wajcrdolk" path="res://UI/Tienda/mejoras de habilidades/mejoras/mejora_resistencia.gd" id="3_7a1nm"]
-[ext_resource type="Script" uid="uid://dxsan7lcfsr3y" path="res://Recursos/DatosHabilidades.gd" id="4_mnc04"]
+[ext_resource type="Resource" uid="uid://hfuty07xa4r6" path="res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_resistencia.tres" id="3_wwgnn"]
+[ext_resource type="Resource" uid="uid://chqbg2cu7hybd" path="res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_cooldown.tres" id="5_52q4a"]
 [ext_resource type="Script" uid="uid://wjs1ybjpn3rn" path="res://UI/Tienda/mejoras de habilidades/mejoras/mejora_cooldown.gd" id="6_53afc"]
+[ext_resource type="Resource" uid="uid://b8xn0orrtqj6s" path="res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_rango.tres" id="7_3fi5j"]
 [ext_resource type="Script" uid="uid://dw1nixlpaty2e" path="res://UI/Tienda/mejoras de habilidades/mejoras/mejora_rango.gd" id="7_mnc04"]
 [ext_resource type="Script" uid="uid://6b1v5c13s27u" path="res://UI/Tienda/mejoras de habilidades/mejoras/mejora_peso.gd" id="8_53afc"]
 [ext_resource type="Resource" uid="uid://gi5lwe4ui2dd" path="res://Entidades/Basura/basura_data.tres" id="9_65riy"]
+[ext_resource type="Resource" uid="uid://fmtqlytfb15i" path="res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.tres" id="9_ng6pv"]
 [ext_resource type="Script" uid="uid://do66icfihy641" path="res://UI/Tienda/mejoras de habilidades/mejoras/mejora_lanzamiento.gd" id="10_p2tmy"]
 [ext_resource type="Script" uid="uid://pe2yywnrv3m7" path="res://UI/Tienda/mejoras de habilidades/mejoras/mejora_honguitos.gd" id="10_upi7f"]
 [ext_resource type="Resource" uid="uid://bwbt2o3gbm3gu" path="res://Entidades/Consumible/Tipos de Consumibles/honguito.tres" id="11_upi7f"]
+[ext_resource type="Script" uid="uid://b58afgr65p6fg" path="res://UI/Tienda/MejoraFuerza.gd" id="12_2icyj"]
+[ext_resource type="Resource" uid="uid://dpdy87aeige8s" path="res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres" id="12_72a65"]
+[ext_resource type="Resource" uid="uid://dfyvee0widefa" path="res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres" id="14_iqrif"]
+[ext_resource type="Resource" uid="uid://dkh4b2om6688o" path="res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres" id="17_0x7iy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6dplc"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7465i"]
-load_path = "res://.godot/imported/Items.png-25e6b9c465b490096982c9e191a3cf7f.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mog8t"]
-atlas = SubResource("CompressedTexture2D_7465i")
-region = Rect2(48, 64, 16, 16)
-
-[sub_resource type="Resource" id="Resource_dijh8"]
-script = ExtResource("4_mnc04")
-nombre = "Resistencia"
-descripcion = "Mejora la cantidad la
-de energia maxima"
-precio = 5
-imagen = SubResource("AtlasTexture_mog8t")
-metadata/_custom_type_script = "uid://dxsan7lcfsr3y"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ippla"]
-load_path = "res://.godot/imported/Items.png-25e6b9c465b490096982c9e191a3cf7f.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3pq3l"]
-atlas = SubResource("CompressedTexture2D_ippla")
-region = Rect2(48, 32, 16, 16)
-
-[sub_resource type="Resource" id="Resource_nvg3p"]
-script = ExtResource("4_mnc04")
-nombre = "Cooldown"
-descripcion = "Disminuye el tiempo 
-del cooldown"
-precio = 5
-imagen = SubResource("AtlasTexture_3pq3l")
-metadata/_custom_type_script = "uid://dxsan7lcfsr3y"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_81m3p"]
-load_path = "res://.godot/imported/Items.png-25e6b9c465b490096982c9e191a3cf7f.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8wdyf"]
-atlas = SubResource("CompressedTexture2D_81m3p")
-region = Rect2(16, 48, 16, 16)
-
-[sub_resource type="Resource" id="Resource_ntpva"]
-script = ExtResource("4_mnc04")
-nombre = "Rango"
-descripcion = "Mejora el rango de
-recogida de la basura"
-precio = 5
-imagen = SubResource("AtlasTexture_8wdyf")
-metadata/_custom_type_script = "uid://dxsan7lcfsr3y"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_y55wd"]
-load_path = "res://.godot/imported/Items.png-25e6b9c465b490096982c9e191a3cf7f.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_anbx6"]
-atlas = SubResource("CompressedTexture2D_y55wd")
-region = Rect2(16, 32, 16, 16)
-
-[sub_resource type="Resource" id="Resource_x2p6q"]
-script = ExtResource("4_mnc04")
-nombre = "Peso"
-descripcion = "Aumenta cuantas 
-basuras puedes recoger"
-precio = 5
-imagen = SubResource("AtlasTexture_anbx6")
-metadata/_custom_type_script = "uid://dxsan7lcfsr3y"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_n1f56"]
-load_path = "res://.godot/imported/Items.png-25e6b9c465b490096982c9e191a3cf7f.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4pge6"]
-atlas = SubResource("CompressedTexture2D_n1f56")
-region = Rect2(16, 80, 16, 16)
-
-[sub_resource type="Resource" id="Resource_8hrge"]
-script = ExtResource("4_mnc04")
-nombre = "Lanzamiento"
-descripcion = "Aumenta la distancia 
-del lanzamiento"
-precio = 5
-imagen = SubResource("AtlasTexture_4pge6")
-metadata/_custom_type_script = "uid://dxsan7lcfsr3y"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4u377"]
-load_path = "res://.godot/imported/Items.png-25e6b9c465b490096982c9e191a3cf7f.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_u0lgm"]
-atlas = SubResource("CompressedTexture2D_4u377")
-region = Rect2(64, 32, 16, 16)
-
-[sub_resource type="Resource" id="Resource_cet4i"]
-script = ExtResource("4_mnc04")
-nombre = "Honguitos"
-descripcion = "Aumenta la energia 
-recuperada por hongos"
-precio = 5
-imagen = SubResource("AtlasTexture_u0lgm")
-metadata/_custom_type_script = "uid://dxsan7lcfsr3y"
 
 [node name="TiendaUi" type="Control" unique_id=1611773581]
 layout_mode = 3
@@ -149,7 +60,7 @@ size_flags_vertical = 3
 
 [node name="Resistencia" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1967462824 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
 layout_mode = 2
-mejora = SubResource("Resource_dijh8")
+mejora = ExtResource("3_wwgnn")
 logica_mejora = NodePath("MejoraResistencia")
 
 [node name="MejoraResistencia" type="Node" parent="MarginContainer/ScrollContainer/VBoxContainer/Resistencia" unique_id=1497121177]
@@ -157,7 +68,7 @@ script = ExtResource("3_7a1nm")
 
 [node name="Cooldown" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1143511343 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
 layout_mode = 2
-mejora = SubResource("Resource_nvg3p")
+mejora = ExtResource("5_52q4a")
 logica_mejora = NodePath("MejoraCooldown")
 
 [node name="MejoraCooldown" type="Node" parent="MarginContainer/ScrollContainer/VBoxContainer/Cooldown" unique_id=1193635210]
@@ -166,7 +77,7 @@ metadata/_custom_type_script = "uid://cp267s1mgfxd1"
 
 [node name="Rango" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1737779067 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
 layout_mode = 2
-mejora = SubResource("Resource_ntpva")
+mejora = ExtResource("7_3fi5j")
 logica_mejora = NodePath("Mejora Rango")
 
 [node name="Mejora Rango" type="Node" parent="MarginContainer/ScrollContainer/VBoxContainer/Rango" unique_id=848660148]
@@ -175,7 +86,7 @@ metadata/_custom_type_script = "uid://cp267s1mgfxd1"
 
 [node name="Peso" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1425991459 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
 layout_mode = 2
-mejora = SubResource("Resource_x2p6q")
+mejora = ExtResource("9_ng6pv")
 logica_mejora = NodePath("MejoraPeso")
 
 [node name="MejoraPeso" type="Node" parent="MarginContainer/ScrollContainer/VBoxContainer/Peso" unique_id=311806662]
@@ -185,7 +96,7 @@ metadata/_custom_type_script = "uid://cp267s1mgfxd1"
 
 [node name="Lanzamiento" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=265702065 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
 layout_mode = 2
-mejora = SubResource("Resource_8hrge")
+mejora = ExtResource("12_72a65")
 logica_mejora = NodePath("Mejora Lanzamiento")
 
 [node name="Mejora Lanzamiento" type="Node" parent="MarginContainer/ScrollContainer/VBoxContainer/Lanzamiento" unique_id=824670956]
@@ -194,10 +105,19 @@ metadata/_custom_type_script = "uid://cp267s1mgfxd1"
 
 [node name="Honguitos" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1081041739 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
 layout_mode = 2
-mejora = SubResource("Resource_cet4i")
+mejora = ExtResource("14_iqrif")
 logica_mejora = NodePath("MejoraHonguitos")
 
 [node name="MejoraHonguitos" type="Node" parent="MarginContainer/ScrollContainer/VBoxContainer/Honguitos" unique_id=250525938]
 script = ExtResource("10_upi7f")
 honguito = ExtResource("11_upi7f")
+metadata/_custom_type_script = "uid://cp267s1mgfxd1"
+
+[node name="Fuerza" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1195401960 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
+layout_mode = 2
+mejora = ExtResource("17_0x7iy")
+logica_mejora = NodePath("MejoraFuerza")
+
+[node name="MejoraFuerza" type="Node" parent="MarginContainer/ScrollContainer/VBoxContainer/Fuerza" unique_id=447245579]
+script = ExtResource("12_2icyj")
 metadata/_custom_type_script = "uid://cp267s1mgfxd1"

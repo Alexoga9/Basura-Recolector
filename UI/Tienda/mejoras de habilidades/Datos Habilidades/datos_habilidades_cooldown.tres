@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="DatosHabilidades" format=3 uid="uid://chqbg2cu7hybd"]
+
+[ext_resource type="Script" uid="uid://dxsan7lcfsr3y" path="res://Recursos/DatosHabilidades.gd" id="1_i8gi1"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ippla"]
+load_path = "res://.godot/imported/Items.png-25e6b9c465b490096982c9e191a3cf7f.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pq3l"]
+atlas = SubResource("CompressedTexture2D_ippla")
+region = Rect2(48, 32, 16, 16)
+
+[resource]
+script = ExtResource("1_i8gi1")
+nombre = "Cooldown"
+descripcion = "Disminuye el tiempo 
+del cooldown"
+precio = 5
+imagen = SubResource("AtlasTexture_3pq3l")
+metadata/_custom_type_script = "uid://dxsan7lcfsr3y"
