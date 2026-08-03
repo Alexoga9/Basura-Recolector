@@ -1,3 +1,4 @@
+@icon("res://addons/iconos/tween.svg")
 class_name TDeslizar extends Node
 
 var padre: Node2D

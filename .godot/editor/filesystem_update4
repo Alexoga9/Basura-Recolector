@@ -1,16 +1,14 @@
-res://Entidades/Obstaculo/Obstaculo.tscn
+res://Entidades/Tienda/tienda.tscn
 res://UI/Theme/Tienda.tres
 res://Entidades/Basura/basura_data.tres
+res://Entidades/Basura/Bolsa de Basura/bolsa_de_basura.tres
 res://Escenarios/Otoño/TS_Otoño.tres
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
-res://Escenarios/mundo.tscn
-res://Entidades/Obstaculo/resaltado_obstaculo.gd
-res://Entidades/Jugador/Jugador.tscn
-res://Commons/Componentes/Core/EstadisticasComponente.gd
-res://Entidades/Jugador/Jugador.gd
-res://Entidades/Basura/Basura_item.gd
-res://Entidades/Obstaculo/Obstaculo_item.gd
-res://Entidades/Jugador/recoge_obstaculos.gd
-res://UI/Tienda/MejoraFuerza.gd
-res://UI/Tienda/tienda_ui.tscn
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_resistencia.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_cooldown.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_rango.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
+res://Entidades/Maquina Expendedora/MaquinaExpendedora.tscn

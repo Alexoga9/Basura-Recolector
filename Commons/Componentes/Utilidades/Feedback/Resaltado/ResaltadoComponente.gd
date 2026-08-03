@@ -1,3 +1,4 @@
+@icon("res://addons/iconos/highlighter.svg")
 class_name ResaltadoComponente extends Node
 
 @export var trigger_area: Area2D

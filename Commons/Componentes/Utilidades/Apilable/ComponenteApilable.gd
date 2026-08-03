@@ -1,3 +1,4 @@
+@icon("res://addons/iconos/apilable.svg")
 class_name ComponenteApilable extends Node
 
 # 📌 Exportamos los RayCasts (los arrastras desde el Inspector)

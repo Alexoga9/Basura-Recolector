@@ -1,5 +1,6 @@
 @icon("res://addons/iconos/Input.svg")
 class_name InputComponente extends Node
+## Componente que se encarga de las interaciones del jugador
 
 var mov: Vector2 = Vector2.ZERO
 

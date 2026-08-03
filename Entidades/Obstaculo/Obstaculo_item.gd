@@ -1,4 +1,4 @@
-@icon("res://addons/iconos/basura.svg")
+@icon("res://addons/iconos/obstaculo.svg")
 class_name Obstaculo extends StaticBody2D
 
 @onready var sprite2d = %Sprite
@@ -42,8 +42,6 @@ func collect():
 	Inventario.add_item(data)
 	SignalBus.basura_recogida.emit()
 	return data
-
-
 
 
 func _on_sonido_finished():

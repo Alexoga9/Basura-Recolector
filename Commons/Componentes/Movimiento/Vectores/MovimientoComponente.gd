@@ -7,12 +7,13 @@ enum TipoCuerpo {CHARACTER_BODY, AREA}
 @export_category("Movimiento")
 @export var velocidad_movimiento: float = 40.0
 @export var velocidad_rotacion: float = (TAU * 2)
-@onready var animated_sprite_2d: AnimatedSprite2D = %AnimatedSprite2D
+
 @export_category("Referencias")
 @export var body_character: CharacterBody2D
 @export var body: Node2D
 @export var sprite: Sprite2D
 
+@onready var animated_sprite_2d: AnimatedSprite2D = %AnimatedSprite2D
 var ultimo_movimiento = Vector2.RIGHT
 
 

@@ -1,4 +1,7 @@
+@icon("res://addons/iconos/mejora.svg")
 class_name Logica_Mejora extends Node
+## Acompañado de un PanelTienda, funciona para ejecutar codigo
+## con la intención de mejorar habilidades u objetos del jugador
 
 var jugador: Jugador
 var panel: PanelTienda

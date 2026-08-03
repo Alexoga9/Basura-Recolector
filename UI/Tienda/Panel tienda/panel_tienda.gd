@@ -1,4 +1,7 @@
+@icon("res://addons/iconos/panel_tienda.svg")
 class_name PanelTienda extends Control
+## Multinodo que se encarga de funcionar para presentar una
+## compra, necesita un LogicaMejora
 
 @onready var imagen: TextureRect = %imagen
 @onready var nombre: Label = %nombre

@@ -29,7 +29,7 @@ func revisar_espacio_inventario():
 	if Input.is_action_just_pressed("Interaccion"):
 		# 1. Obtenemos los datos del ítem "Obstaculo" (puede ser null)
 		var recurso_Obstaculo = Inventario.get_item_resource("Obstaculo")
-		var cantidad_actual = Inventario.get_count("Obstaculo")
+		var cantidad_actual = Inventario.get_count("Basura")
 
 		# CASO 1: NO EXISTE Obstaculo EN EL INVENTARIO
 		if recurso_Obstaculo == null:

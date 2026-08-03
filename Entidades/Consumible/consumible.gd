@@ -1,3 +1,4 @@
+@icon("res://addons/iconos/chocolate.svg")
 class_name Consumible extends Area2D
 
 @export var data: DataConsumible

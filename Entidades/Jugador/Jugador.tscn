@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://hq6y6n4uabd8" path="res://Assets/jugador/Basic character v1.png" id="2_1ibpt"]
 [ext_resource type="Script" uid="uid://ddrnbgxm8522b" path="res://Commons/Componentes/Input/InputComponente.gd" id="2_30dg6"]
 [ext_resource type="Script" uid="uid://bnt3655fcthcm" path="res://Commons/Componentes/Movimiento/Vectores/MovimientoComponente.gd" id="3_30dg6"]
-[ext_resource type="Script" uid="uid://c313hyi3lxct" path="res://Commons/Componentes/Core/Agotamiento.gd" id="4_qtgc7"]
 [ext_resource type="Script" uid="uid://dcfdk4qx3vf0b" path="res://Commons/Componentes/Utilidades/Loot/loot_collector.gd" id="9_6pwru"]
 [ext_resource type="Script" uid="uid://d0ghf1yof2o0g" path="res://Commons/Componentes/Core/EstadisticasComponente.gd" id="9_qtgc7"]
 [ext_resource type="Script" uid="uid://dqiir7o6l4sjy" path="res://Commons/Componentes/Radares/RadarComponente.gd" id="9_y6klq"]
@@ -177,11 +176,6 @@ unique_name_in_owner = true
 script = ExtResource("1_b2vdw")
 es_jugador = true
 
-[node name="Agotamiento" type="Node" parent="Componentes/EnergiaComponente" unique_id=1343825619 node_paths=PackedStringArray("vida")]
-script = ExtResource("4_qtgc7")
-vida = NodePath("..")
-metadata/_custom_type_script = "uid://c313hyi3lxct"
-
 [node name="Recarga lenta" type="Timer" parent="Componentes/EnergiaComponente" unique_id=1022858401]
 unique_name_in_owner = true
 wait_time = 3.0
@@ -219,7 +213,6 @@ animation = &"Idle"
 offset = Vector2(0, -10)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=664749476 groups=["Camara"]]
-unique_name_in_owner = true
 
 [node name="LootAtractor" type="Area2D" parent="." unique_id=919355164 groups=["Radar_Loot"]]
 editor_description = "Viene siendo un area de reconocimiento"
@@ -245,6 +238,7 @@ shape = SubResource("CircleShape2D_1ibpt")
 debug_color = Color(0.2517849, 0.6236958, 0.3297198, 0.41960785)
 
 [node name="RadarComponente" type="Area2D" parent="." unique_id=1555040956]
+process_mode = 4
 editor_description = "Reconoce las entidades a su al rededor, administrandolas en un Array.
 
 Permite elegir si quieres un enemigo aleatorio, cercano o lejano"

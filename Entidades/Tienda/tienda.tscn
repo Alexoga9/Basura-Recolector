@@ -7,6 +7,9 @@
 [ext_resource type="Material" uid="uid://dy8jul72maxm7" path="res://Assets/entidades/OutlineMaterial.tres" id="4_5cjg1"]
 [ext_resource type="Texture2D" uid="uid://bxcs2mj0pk81w" path="res://Assets/entidades/sombra tienda.png" id="6_4lxt0"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1wau7"]
+size = Vector2(54, 20)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_xjenl"]
 atlas = ExtResource("3_eppcm")
 region = Rect2(0, 0, 57, 45)
@@ -71,9 +74,6 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1wau7"]
-size = Vector2(54, 20)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0bwxm"]
 size = Vector2(72, 60)
 
@@ -82,6 +82,11 @@ y_sort_enabled = true
 collision_layer = 16
 collision_mask = 0
 script = ExtResource("1_lvgju")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=144946869]
+position = Vector2(0, 10)
+shape = SubResource("RectangleShape2D_1wau7")
+debug_color = Color(0.26880014, 0.2435346, 0.23927382, 0.41960785)
 
 [node name="SpriteAnimated2D" type="AnimatedSprite2D" parent="." unique_id=763804110]
 y_sort_enabled = true
@@ -95,13 +100,13 @@ offset = Vector2(0, -16)
 script = ExtResource("3_4lxt0")
 trigger_area = NodePath("../../Trigger Jugador")
 material_outline = ExtResource("4_5cjg1")
-e_sprite = NodePath("../../E sprite")
+e_sprite = NodePath("../E sprite")
 metadata/_custom_type_script = "uid://csx7ka6k5q7bc"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=144946869]
-position = Vector2(0, 10)
-shape = SubResource("RectangleShape2D_1wau7")
-debug_color = Color(0.26880014, 0.2435346, 0.23927382, 0.41960785)
+[node name="E sprite" parent="SpriteAnimated2D" unique_id=1797379794 instance=ExtResource("4_4lxt0")]
+visible = false
+position = Vector2(0, -54)
+frame_progress = 0.0
 
 [node name="Trigger Jugador" type="Area2D" parent="." unique_id=1733789509]
 unique_name_in_owner = true
@@ -113,12 +118,7 @@ collision_mask = 5
 shape = SubResource("RectangleShape2D_0bwxm")
 debug_color = Color(0.4745098, 0.4509804, 0, 0.41960785)
 
-[node name="E sprite" parent="." unique_id=1797379794 instance=ExtResource("4_4lxt0")]
-visible = false
-position = Vector2(0, -38)
-frame_progress = 0.0
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=373327850]
+[node name="Sombra" type="Sprite2D" parent="." unique_id=373327850]
 position = Vector2(0, 23)
 texture = ExtResource("6_4lxt0")
 

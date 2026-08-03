@@ -461,7 +461,7 @@ position = Vector2(710, 370)
 y_sort_enabled = true
 position = Vector2(-297, -195)
 
-[node name="Basura" parent="Objetos Ambientales/Entiddaes/Obstaculos" unique_id=185057527 instance=ExtResource("6_a5bk4")]
+[node name="Obstaculo" parent="Objetos Ambientales/Entiddaes/Obstaculos" unique_id=185057527 instance=ExtResource("6_a5bk4")]
 position = Vector2(505, 266)
 
 [node name="Puestos" type="Node2D" parent="Objetos Ambientales" unique_id=889237100]

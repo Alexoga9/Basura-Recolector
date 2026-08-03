@@ -1,3 +1,4 @@
+@icon("res://addons/iconos/tween.svg")
 class_name TRecogida extends Node
 
 var padre: Node2D

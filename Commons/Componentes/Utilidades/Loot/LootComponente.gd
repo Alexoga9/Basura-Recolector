@@ -11,8 +11,7 @@ func si_muerto():
 
 
 func spawn_loot_drop():
-	var drop = loot.instantiate() #loot_unico.escena.instantiate()
-	#loot_unico.settear_valores_del_loot(drop, body)
+	var drop = loot.instantiate()
 	drop.data = loot_unico
 	drop.global_position = get_parent().global_position
 

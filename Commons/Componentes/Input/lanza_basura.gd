@@ -1,3 +1,4 @@
+@icon("res://addons/iconos/lanzar.svg")
 class_name LanzaBasura extends Node
 
 @export var bolsa_de_basura: PackedScene
