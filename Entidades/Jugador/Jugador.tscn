@@ -251,7 +251,7 @@ metadata/_custom_type_script = "uid://dqiir7o6l4sjy"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RadarComponente" unique_id=1726165650]
 shape = SubResource("CircleShape2D_yyjpx")
 
-[node name="Recoge BASURA" type="Area2D" parent="." unique_id=1673868854]
+[node name="Recoge BASURA" type="Area2D" parent="." unique_id=1673868854 groups=["Radar Basura"]]
 unique_name_in_owner = true
 position = Vector2(0, -8)
 collision_mask = 4

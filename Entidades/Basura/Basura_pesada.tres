@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="LootDefinicion" format=3 uid="uid://dd3e44dslqngq"]
+
+[ext_resource type="AudioStream" uid="uid://dr7bho43atgf6" path="res://Assets/audio/tornado audio.mp3" id="1_0hqyb"]
+[ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="2_ui5uu"]
+[ext_resource type="Texture2D" uid="uid://c8imhrpes1oxk" path="res://Assets/entidades/basura completa.png" id="3_m17lu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_42msy"]
+atlas = ExtResource("3_m17lu")
+region = Rect2(0, 0, 16, 17)
+
+[resource]
+script = ExtResource("2_ui5uu")
+id = "Basura"
+nombre = "Basura"
+audio = ExtResource("1_0hqyb")
+sprite = SubResource("AtlasTexture_42msy")
+cantidad_maxima = 3
+valor = 100
+veces_a_golpear = 3
+metadata/_custom_type_script = "uid://dnu2r5yw53pto"

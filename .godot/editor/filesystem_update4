@@ -20,3 +20,5 @@ res://Entidades/Basura/resaltado_basura.gd
 res://Entidades/Jugador/Jugador.tscn
 res://Entidades/Maquina Expendedora/MaquinaExpendedora.tscn
 res://Assets/entidades/OutlineMaterial.tres
+res://Commons/Componentes/Radares/RadarBasura.gd
+res://Entidades/Basura/Basura_pesada.tres

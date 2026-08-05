@@ -14,24 +14,7 @@ func _ready():
 
 
 func _process(delta):
-	recoger_basura()
-
-
-func _on_body_entered(body: Basura):
-	#print("Basura aqui")
-	if body.is_in_group("Basura"):
-		body.en_area_jugador = true
-		body.resaltado_componente.resaltado()
-		cuerpos.append(body)
-		#print(cuerpos)
-
-
-func _on_body_exited(body: Basura):
-	if body.is_in_group("Basura"):
-		body.en_area_jugador = false
-		body.resaltado_componente.no_resaltado()
-		cuerpos.erase(body)
-		#print(cuerpos)
+	revisar_espacio_inventario()
 
 
 func get_entidad_aleatoria() -> Basura:
@@ -42,50 +25,66 @@ func get_entidad_aleatoria() -> Basura:
 	return cuerpos[indice]
 
 
-func recoger_basura():
+func revisar_espacio_inventario():
 	if Input.is_action_just_pressed("Interaccion"):
 		# 1. Obtenemos los datos del ítem "Basura" (puede ser null)
 		var recurso_basura = Inventario.get_item_resource("Basura")
 		var cantidad_actual = Inventario.get_count("Basura")
 
 		# CASO 1: NO EXISTE LA BASURA EN EL INVENTARIO
-		# (Si recurso_basura es null, significa que ni siquiera hay una ranura para basura)
 		if recurso_basura == null:
-			#print("VACIO - No existe el ítem, recogiendo por primera vez")
-			accion_de_recogida()
+			revisar_tipo_de_basura()
 
 		# CASO 2: YA EXISTE LA BASURA, PERO NO ESTÁ LLENO
-		# (Ya sabemos que existe, así que podemos preguntar cuánto tiene sin peligro)
 		elif cantidad_actual < recurso_basura.cantidad_maxima:
-			#print("AUN ESPACIO - Recogiendo más basura")
-			accion_de_recogida()
+			revisar_tipo_de_basura()
 
 		# CASO 3: YA EXISTE LA BASURA Y ESTÁ COMPLETAMENTE LLENO
-		else: # Si no se cumplió lo de arriba, significa que cantidad_actual >= cantidad_maxima
+		else:
 			print("ta lleno - No se puede recoger más")
 
 
-func accion_de_recogida():
-	if get_entidad_aleatoria() != null and jugador.energia_componente.energia > 0 and !cooldown_activo:
-				timer.wait_time = cooldown_tiempo
-				timer.start()
-				cooldown_activo = true
-				print("Cooldown activo")
-				get_entidad_aleatoria().collect()
-				jugador.energia_componente.agotar(1)
+func revisar_tipo_de_basura():
+	var body = get_entidad_aleatoria()
+
+	if body != null and jugador.energia_componente.energia > 0 and !cooldown_activo:
+		if body.data.veces_a_golpear > 0:
+			print("Basura pesada")
+			body.data.veces_a_golpear -= 1
+
+		elif body.data.veces_a_golpear == 0:
+			recolectar_basura(body)
+
+
+func recolectar_basura(basura: Basura):
+	timer.wait_time = cooldown_tiempo
+	timer.start()
+	cooldown_activo = true
+	print("Cooldown activo")
+	basura.collect()
+	jugador.energia_componente.agotar(1)
+
+
+func click_en_basura(objeto):
+	if cuerpos.has(objeto) and jugador.energia_componente.energia > 0 and !cooldown_activo:
+		recolectar_basura(objeto)
+
+
+func _on_body_entered(body: Basura):
+	#print("Basura aqui")
+	if body.is_in_group("Basura"):
+		body.en_area_jugador = true
+		body.resaltado_componente.resaltado()
+		cuerpos.append(body)
+
+
+func _on_body_exited(body: Basura):
+	if body.is_in_group("Basura"):
+		body.en_area_jugador = false
+		body.resaltado_componente.no_resaltado()
+		cuerpos.erase(body)
 
 
 func _on_timer_timeout():
 	cooldown_activo = false
 	print("Cooldown terminado")
-
-
-func click_en_basura(objeto):
-
-	if cuerpos.has(objeto) and jugador.energia_componente.energia > 0 and !cooldown_activo:
-		timer.wait_time = cooldown_tiempo
-		timer.start()
-		cooldown_activo = true
-		print("Cooldown activo")
-		objeto.collect()
-		jugador.energia_componente.agotar(1)

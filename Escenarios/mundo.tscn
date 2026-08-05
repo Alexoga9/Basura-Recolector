@@ -7,6 +7,7 @@
 [ext_resource type="Resource" uid="uid://dmky67t6umj3u" path="res://Entidades/Loot/loots/rs_piedra.tres" id="4_2fd2i"]
 [ext_resource type="PackedScene" uid="uid://boa7rlwdurt22" path="res://Entidades/Basura/Basura.tscn" id="6_2fd2i"]
 [ext_resource type="PackedScene" uid="uid://d2r5u0lpmux3m" path="res://Entidades/Obstaculo/Obstaculo.tscn" id="6_a5bk4"]
+[ext_resource type="Resource" uid="uid://dd3e44dslqngq" path="res://Entidades/Basura/Basura_pesada.tres" id="6_qmk2e"]
 [ext_resource type="PackedScene" uid="uid://br4shbrxkwxgj" path="res://UI/Tienda/tienda_ui.tscn" id="7_8njad"]
 [ext_resource type="PackedScene" uid="uid://bujsrbbq0elhi" path="res://Entidades/Tienda/tienda.tscn" id="8_8njad"]
 [ext_resource type="PackedScene" uid="uid://b8u0pprb4t2sj" path="res://Entidades/Trituradora/trituradora.tscn" id="8_u72it"]
@@ -433,8 +434,9 @@ position = Vector2(739, 310)
 [node name="Loot14" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=698021777 instance=ExtResource("6_2fd2i")]
 position = Vector2(732, 316)
 
-[node name="Loot15" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1307620334 instance=ExtResource("6_2fd2i")]
-position = Vector2(709, 325)
+[node name="Basura pesada" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1307620334 instance=ExtResource("6_2fd2i")]
+position = Vector2(557, 342)
+data = ExtResource("6_qmk2e")
 
 [node name="Loot16" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=521582679 instance=ExtResource("6_2fd2i")]
 position = Vector2(755, 314)
@@ -490,6 +492,7 @@ tile_map_data = PackedByteArray("AAD+/wwAAQAYAAAAAAAEAAoAAQATAA8AAAD6/wEAAQAVAAQ
 tile_set = ExtResource("2_qmk2e")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2010886703]
+visible = false
 
 [node name="Inventario" parent="CanvasLayer" unique_id=2011210485 instance=ExtResource("1_vttfp")]
 z_index = -1

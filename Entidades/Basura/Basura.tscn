@@ -49,7 +49,13 @@ trigger_area = NodePath("../../Area2D")
 material_outline = ExtResource("5_sshtx")
 metadata/_custom_type_script = "uid://csx7ka6k5q7bc"
 
-[node name="sonido" type="AudioStreamPlayer" parent="." unique_id=1004405695]
+[node name="sonido_recogida" type="AudioStreamPlayer" parent="." unique_id=1004405695]
+unique_name_in_owner = true
+volume_db = -10.0
+pitch_scale = 1.5
+bus = &"SFX"
+
+[node name="sonido_romper" type="AudioStreamPlayer" parent="." unique_id=471225445]
 unique_name_in_owner = true
 volume_db = -10.0
 pitch_scale = 1.5
@@ -100,7 +106,7 @@ ray_cast_abajo = NodePath("../RayCast2D")
 ray_cast_arriba = NodePath("../RayCastArriba")
 metadata/_custom_type_script = "uid://bnu0umged2ipg"
 
-[connection signal="finished" from="sonido" to="." method="_on_sonido_finished"]
+[connection signal="finished" from="sonido_recogida" to="." method="_on_sonido_finished"]
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Area2D" to="Sprite/ResaltadoComponente" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="Sprite/ResaltadoComponente" method="_on_area_2d_mouse_exited"]
