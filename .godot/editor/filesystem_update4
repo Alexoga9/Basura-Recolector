@@ -14,3 +14,5 @@ res://Entidades/BolsaDeBasura/BolsaDeBasura_resaltado.gd
 res://Entidades/BolsaDeBasura/bolsa_de_basura.gd
 res://Commons/Componentes/Input/lanza_basura.gd
 res://Entidades/Jugador/Jugador.tscn
+res://Recursos/LootDefinicion.gd
+res://Entidades/Basura/Bolsa de Basura/bolsa_de_basura.tres

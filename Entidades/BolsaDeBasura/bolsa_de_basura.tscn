@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cmfxtadp1d8pf" path="res://Entidades/BolsaDeBasura/bolsa_de_basura.gd" id="1_4huo8"]
 [ext_resource type="Texture2D" uid="uid://c8xapo1ps5pwt" path="res://Assets/UI/barra/icono basura barra.png" id="1_a3l6q"]
+[ext_resource type="Resource" uid="uid://besidf7otrxpl" path="res://Entidades/Basura/Bolsa de Basura/bolsa_de_basura.tres" id="2_haedb"]
 [ext_resource type="Script" uid="uid://b8rbqb3ls3wun" path="res://Entidades/BolsaDeBasura/BolsaDeBasura_resaltado.gd" id="3_8gexj"]
 [ext_resource type="Material" uid="uid://dy8jul72maxm7" path="res://Assets/entidades/OutlineMaterial.tres" id="4_haedb"]
 [ext_resource type="PackedScene" uid="uid://b4nutgd65x10o" path="res://Entidades/genericos/e_sprite.tscn" id="5_4lkkk"]
@@ -13,6 +14,7 @@ radius = 11.0
 
 [node name="BolsaDeBasura" type="RigidBody2D" unique_id=385812566 groups=["BolsaDeBasura"]]
 script = ExtResource("1_4huo8")
+data = ExtResource("2_haedb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1613936438]
 position = Vector2(0, -0.5)
