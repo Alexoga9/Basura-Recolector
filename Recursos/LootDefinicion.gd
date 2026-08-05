@@ -12,7 +12,8 @@ enum TipoElemento {BASURA,
 MATERIAL,
 COFRE,
 OBSTACULO,
-BOLSA_DE_BASURA}
+BOLSA_DE_BASURA,
+COLECCIONABLE}
 @export var tipo_de_elemento: TipoElemento
 enum TipoBasura {BASICO, PESADO}
 

@@ -1,8 +1,9 @@
-res://Entidades/BolsaDeBasura/bolsa_de_basura.gd
-res://Entidades/BolsaDeBasura/bolsa_de_basura.tscn
+res://Escenarios/mundo.tscn
 res://UI/Theme/Tienda.tres
+res://Entidades/Basura/Bolsa de Basura/bolsa_de_basura.tres
 res://Escenarios/Otoño/TS_Otoño.tres
 res://Entidades/Basura/basura_data.tres
+res://Entidades/Basura/Basura_pesada.tres
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_resistencia.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_cooldown.tres
@@ -11,16 +12,3 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
-res://Entidades/Trituradora/trituradora.tscn
-res://Escenarios/mundo.tscn
-res://Entidades/Trituradora/trituradora.gd
-res://Recursos/LootDefinicion.gd
-res://Entidades/Basura/Basura.tscn
-res://Entidades/Basura/resaltado_basura.gd
-res://Entidades/Jugador/Jugador.tscn
-res://Entidades/Maquina Expendedora/MaquinaExpendedora.tscn
-res://Assets/entidades/OutlineMaterial.tres
-res://Commons/Componentes/Radares/RadarBasura.gd
-res://Entidades/Basura/Basura_pesada.tres
-res://Commons/Componentes/Tweens/Tween_rebote.gd
-res://Entidades/Basura/Basura_item.gd

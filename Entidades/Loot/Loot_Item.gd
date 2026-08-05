@@ -16,28 +16,19 @@ var nombre: String
 enum TipoBasura {BASICO, PESADO}
 var tipo_de_basura: TipoBasura
 var valor: int
-var tags: String
 
 
 func _ready():
 	iniciar_valores()
-	SignalBus.recoger_basura_automatica.connect(recibir_input)
 
 
-func _process(delta):
-	if input_recibido:
-		perseguir_jugador(delta)
-
-
-func recibir_input():
-	input_recibido = true
-	#print("Input recibido")
-
-
-func perseguir_jugador(delta):
-	if objetivo != null:
-		global_position = global_position.move_toward(objetivo.global_position, velocidad)
-		velocidad += 2 * delta
+func iniciar_valores():
+	id = data.id
+	nombre = data.nombre
+	tipo_de_basura = int(data.tipo_de_basura)
+	valor = data.valor
+	sonido.stream = data.audio
+	sprite2d.texture = data.sprite
 
 
 func collect():
@@ -54,16 +45,3 @@ func _on_area_entered(area):
 
 func _on_sonido_finished():
 	queue_free()
-
-
-func iniciar_valores():
-
-	id = data.id
-	nombre = data.nombre
-
-	tipo_de_basura = int(data.tipo_de_basura)
-	#print(TipoLoot)
-	valor = data.valor
-	#tags = data.tags
-	sonido.stream = data.audio
-	sprite2d.texture = data.sprite
