@@ -22,3 +22,5 @@ res://Entidades/Maquina Expendedora/MaquinaExpendedora.tscn
 res://Assets/entidades/OutlineMaterial.tres
 res://Commons/Componentes/Radares/RadarBasura.gd
 res://Entidades/Basura/Basura_pesada.tres
+res://Commons/Componentes/Tweens/Tween_rebote.gd
+res://Entidades/Basura/Basura_item.gd

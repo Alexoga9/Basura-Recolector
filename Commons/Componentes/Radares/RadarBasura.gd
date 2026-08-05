@@ -50,7 +50,7 @@ func revisar_tipo_de_basura():
 	if body != null and jugador.energia_componente.energia > 0 and !cooldown_activo:
 		if body.data.veces_a_golpear > 0:
 			print("Basura pesada")
-			body.data.veces_a_golpear -= 1
+			body.romper()
 
 		elif body.data.veces_a_golpear == 0:
 			recolectar_basura(body)
