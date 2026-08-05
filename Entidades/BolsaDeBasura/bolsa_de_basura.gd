@@ -1,5 +1,5 @@
 @icon("res://addons/iconos/obstaculo.svg")
-class_name BolsaDeBasura extends StaticBody2D
+class_name BolsaDeBasura extends RigidBody2D
 
 @onready var sprite2d = %Sprite
 @onready var collision_shape_2d = %CollisionShape2D

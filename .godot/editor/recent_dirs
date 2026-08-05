@@ -1,3 +1,4 @@
+res://Entidades/Basura/
 res://Entidades/BolsaDeBasura/
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/
 res://Assets/entidades/trituradora/
@@ -6,7 +7,6 @@ res://Escenarios/Tilesets/
 res://Assets/entidades/maquina expendedora/
 res://Assets/entidades/
 res://Escenarios/TileMap/
-res://Entidades/Basura/
 res://Assets/tipografia/
 res://Utilidades/Autoloads/
 res://Assets/UI/

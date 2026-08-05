@@ -1,10 +1,8 @@
 class_name LootDefinicion extends Resource
 
 @export_group("Escena")
-#@export var escena: PackedScene
 @export var id: String
 @export var nombre: String
-#@export var tags: String
 @export var audio: AudioStream
 @export var sprite: Texture2D
 @export var cantidad_maxima: int
@@ -21,6 +19,9 @@ enum TipoBasura {BASICO, PESADO}
 @export_subgroup("Si es basura")
 @export var tipo_de_basura: TipoBasura
 @export var valor: int
+
+@export_subgroup("Si es basura pesada")
+@export var veces_a_golpear: int
 
 @export_group("Requisitos")
 @export var tiene_requisito: bool = false

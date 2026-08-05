@@ -253,8 +253,7 @@ shape = SubResource("CircleShape2D_yyjpx")
 
 [node name="Recoge BASURA" type="Area2D" parent="." unique_id=1673868854]
 unique_name_in_owner = true
-visible = false
-collision_layer = 0
+position = Vector2(0, -8)
 collision_mask = 4
 script = ExtResource("9_yyjpx")
 
@@ -270,12 +269,13 @@ one_shot = true
 
 [node name="Recoge OBSTACULOS" type="Area2D" parent="." unique_id=2030381451]
 unique_name_in_owner = true
-visible = false
+position = Vector2(0, -8)
 collision_layer = 0
 collision_mask = 32
 script = ExtResource("14_orci8")
 
-[node name="BasuraCollider" type="CollisionShape2D" parent="Recoge OBSTACULOS" unique_id=1338125419]
+[node name="ObstaculoCollider" type="CollisionShape2D" parent="Recoge OBSTACULOS" unique_id=1338125419]
+unique_name_in_owner = true
 position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_iv1dc")
 

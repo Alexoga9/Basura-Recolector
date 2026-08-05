@@ -331,7 +331,6 @@ frame_progress = 1.0
 unique_name_in_owner = true
 visible = false
 collision_layer = 8
-collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger Jugador" unique_id=588954144]
 shape = SubResource("RectangleShape2D_0bwxm")

@@ -464,6 +464,8 @@ position = Vector2(-297, -195)
 [node name="Obstaculo" parent="Objetos Ambientales/Entiddaes/Obstaculos" unique_id=185057527 instance=ExtResource("6_a5bk4")]
 position = Vector2(505, 266)
 
+[node name="Bolsas de basura" type="Node" parent="Objetos Ambientales/Entiddaes" unique_id=300767396 groups=["Bolsas de Basura Pool"]]
+
 [node name="Puestos" type="Node2D" parent="Objetos Ambientales" unique_id=889237100]
 y_sort_enabled = true
 position = Vector2(168, -3)
@@ -488,7 +490,6 @@ tile_map_data = PackedByteArray("AAD+/wwAAQAYAAAAAAAEAAoAAQATAA8AAAD6/wEAAQAVAAQ
 tile_set = ExtResource("2_qmk2e")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2010886703]
-visible = false
 
 [node name="Inventario" parent="CanvasLayer" unique_id=2011210485 instance=ExtResource("1_vttfp")]
 z_index = -1

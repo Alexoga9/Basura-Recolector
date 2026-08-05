@@ -6,6 +6,11 @@
 [ext_resource type="Script" uid="uid://b8rbqb3ls3wun" path="res://Entidades/BolsaDeBasura/BolsaDeBasura_resaltado.gd" id="3_8gexj"]
 [ext_resource type="Material" uid="uid://dy8jul72maxm7" path="res://Assets/entidades/OutlineMaterial.tres" id="4_haedb"]
 [ext_resource type="PackedScene" uid="uid://b4nutgd65x10o" path="res://Entidades/genericos/e_sprite.tscn" id="5_4lkkk"]
+[ext_resource type="Script" uid="uid://bubqfvtslgafd" path="res://Commons/Componentes/Tweens/Tween_recogida.gd" id="7_4lkkk"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4lkkk"]
+rough = true
+absorbent = true
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g3mt3"]
 
@@ -13,23 +18,35 @@
 radius = 11.0
 
 [node name="BolsaDeBasura" type="RigidBody2D" unique_id=385812566 groups=["BolsaDeBasura"]]
+y_sort_enabled = true
+collision_layer = 64
+collision_mask = 117
+physics_material_override = SubResource("PhysicsMaterial_4lkkk")
+gravity_scale = 0.0
+linear_damp_mode = 1
+linear_damp = 97.287
 script = ExtResource("1_4huo8")
 data = ExtResource("2_haedb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1613936438]
+unique_name_in_owner = true
 position = Vector2(0, -0.5)
 shape = SubResource("CircleShape2D_g3mt3")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=801985236]
+[node name="Sprite" type="Sprite2D" parent="." unique_id=801985236]
+unique_name_in_owner = true
+y_sort_enabled = true
 texture = ExtResource("1_a3l6q")
 
-[node name="ResaltadoComponente" type="Node" parent="Sprite2D" unique_id=1985107626 node_paths=PackedStringArray("e_sprite")]
+[node name="ResaltadoComponente" type="Node" parent="Sprite" unique_id=1985107626 node_paths=PackedStringArray("trigger_area", "e_sprite")]
+unique_name_in_owner = true
 script = ExtResource("3_8gexj")
+trigger_area = NodePath("../../Area2D")
 material_outline = ExtResource("4_haedb")
 e_sprite = NodePath("../E sprite")
 metadata/_custom_type_script = "uid://csx7ka6k5q7bc"
 
-[node name="E sprite" parent="Sprite2D" unique_id=1797379794 instance=ExtResource("5_4lkkk")]
+[node name="E sprite" parent="Sprite" unique_id=1797379794 instance=ExtResource("5_4lkkk")]
 visible = false
 position = Vector2(0, -13.000002)
 scale = Vector2(0.40098155, 0.40098155)
@@ -39,3 +56,11 @@ frame_progress = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=343960139]
 shape = SubResource("CircleShape2D_7j55v")
+
+[node name="sonido" type="AudioStreamPlayer" parent="." unique_id=2043020526]
+unique_name_in_owner = true
+
+[node name="TRecogida" type="Node" parent="." unique_id=1859687642]
+unique_name_in_owner = true
+script = ExtResource("7_4lkkk")
+metadata/_custom_type_script = "uid://bubqfvtslgafd"

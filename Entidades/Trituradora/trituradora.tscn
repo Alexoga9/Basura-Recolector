@@ -294,7 +294,7 @@ debug_color = Color(0.26880014, 0.2435346, 0.23927382, 0.41960785)
 [node name="Trigger Jugador" type="Area2D" parent="." unique_id=1733789509]
 visible = false
 collision_layer = 8
-collision_mask = 5
+collision_mask = 69
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger Jugador" unique_id=588954144]
 position = Vector2(0, 2)

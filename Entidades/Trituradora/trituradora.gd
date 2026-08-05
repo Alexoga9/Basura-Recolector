@@ -33,7 +33,7 @@ func _on_trigger_basura_body_entered(body):
 	if body.is_in_group("Jugador") and Inventario.get_count("Basura") > 0:
 		recibir_basura_jugador()
 
-	if body.is_in_group("Basura"):
+	if body.is_in_group("BolsaDeBasura"):
 		recibir_basura_fisica(body)
 
 

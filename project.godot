@@ -54,6 +54,10 @@ folder_colors={
 "res://Utilidades/": "purple"
 }
 
+[global_group]
+
+"Bolsas de Basura Pool"="Aqui es donde se spawnearan todas las bolsas de basura"
+
 [gui]
 
 theme/custom="uid://ccuc20xm80owq"
@@ -110,6 +114,7 @@ Lanzar_Basura={
 2d_physics/layer_4="Trituradora"
 2d_physics/layer_5="Muros"
 2d_physics/layer_6="Obstaculo"
+2d_physics/layer_7="Bolsa de Basura"
 
 [physics]
 
