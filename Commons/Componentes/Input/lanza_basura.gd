@@ -7,6 +7,7 @@ class_name LanzaBasura extends Node
 var direccion_lanzamiento: Vector2 = Vector2.UP
 @export var fuerza_lanzamiento: float = 100.0 # Velocidad de vuelo (píxeles por segundo)
 @export var distancia_vuelo: float = 50.0 # Qué tan lejos volará antes de desaparecer o chocar
+@onready var jugador: Jugador = $"../.."
 
 
 func _process(delta):
@@ -43,7 +44,7 @@ func spawnear(datos_bolsa: LootDefinicion):
 	nuevo.data = datos_bolsa
 
 	# Posición inicial: Justo delante del jugador
-	var posicion_inicial = $"..".global_position
+	var posicion_inicial = jugador.global_position
 	var offset_inicial: float = 30.0 # Para que no explote dentro del jugador
 	nuevo.global_position = posicion_inicial + (direccion_lanzamiento * offset_inicial)
 

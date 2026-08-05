@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://begam5f412ueo"]
+
+[ext_resource type="Script" uid="uid://cmfxtadp1d8pf" path="res://Entidades/BolsaDeBasura/bolsa_de_basura.gd" id="1_4huo8"]
+[ext_resource type="Texture2D" uid="uid://c8xapo1ps5pwt" path="res://Assets/UI/barra/icono basura barra.png" id="1_a3l6q"]
+[ext_resource type="Script" uid="uid://b8rbqb3ls3wun" path="res://Entidades/BolsaDeBasura/BolsaDeBasura_resaltado.gd" id="3_8gexj"]
+[ext_resource type="Material" uid="uid://dy8jul72maxm7" path="res://Assets/entidades/OutlineMaterial.tres" id="4_haedb"]
+[ext_resource type="PackedScene" uid="uid://b4nutgd65x10o" path="res://Entidades/genericos/e_sprite.tscn" id="5_4lkkk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g3mt3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7j55v"]
+radius = 11.0
+
+[node name="BolsaDeBasura" type="RigidBody2D" unique_id=385812566 groups=["BolsaDeBasura"]]
+script = ExtResource("1_4huo8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1613936438]
+position = Vector2(0, -0.5)
+shape = SubResource("CircleShape2D_g3mt3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=801985236]
+texture = ExtResource("1_a3l6q")
+
+[node name="ResaltadoComponente" type="Node" parent="Sprite2D" unique_id=1985107626 node_paths=PackedStringArray("e_sprite")]
+script = ExtResource("3_8gexj")
+material_outline = ExtResource("4_haedb")
+e_sprite = NodePath("../E sprite")
+metadata/_custom_type_script = "uid://csx7ka6k5q7bc"
+
+[node name="E sprite" parent="Sprite2D" unique_id=1797379794 instance=ExtResource("5_4lkkk")]
+visible = false
+position = Vector2(0, -13.000002)
+scale = Vector2(0.40098155, 0.40098155)
+frame_progress = 0.0
+
+[node name="Area2D" type="Area2D" parent="." unique_id=932870450]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=343960139]
+shape = SubResource("CircleShape2D_7j55v")

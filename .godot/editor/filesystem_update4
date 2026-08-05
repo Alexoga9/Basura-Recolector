@@ -1,7 +1,6 @@
-res://Entidades/Tienda/tienda.tscn
+res://Entidades/BolsaDeBasura/bolsa_de_basura.tscn
 res://UI/Theme/Tienda.tres
 res://Entidades/Basura/basura_data.tres
-res://Entidades/Basura/Bolsa de Basura/bolsa_de_basura.tres
 res://Escenarios/Otoño/TS_Otoño.tres
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_resistencia.tres
@@ -11,4 +10,7 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
-res://Entidades/Maquina Expendedora/MaquinaExpendedora.tscn
+res://Entidades/BolsaDeBasura/BolsaDeBasura_resaltado.gd
+res://Entidades/BolsaDeBasura/bolsa_de_basura.gd
+res://Commons/Componentes/Input/lanza_basura.gd
+res://Entidades/Jugador/Jugador.tscn

@@ -1,3 +1,8 @@
+CollisionShape2D
+Area2D
+ResaltadoComponente
+Sprite2D
+RigidBody2D
 PanelTienda
 Logica_Mejora
 EstadisticasComponente
@@ -7,9 +12,3 @@ TDeslizar
 Polygon2D
 MarginContainer
 CPUParticles2D
-Node
-ResaltadoComponente
-GPUParticles2D
-Sprite2D
-ComponenteApilable
-TextureRect
