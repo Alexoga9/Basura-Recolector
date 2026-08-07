@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://3ibfxmhonqlb"]
+
+[ext_resource type="Script" uid="uid://dvg1lacufgml8" path="res://Utilidades/Sistemas/spawner.gd" id="1_pfpmd"]
+[ext_resource type="PackedScene" uid="uid://boa7rlwdurt22" path="res://Entidades/Basura/Basura.tscn" id="2_judia"]
+[ext_resource type="Script" uid="uid://cbqagfs1m71r5" path="res://Utilidades/Sistemas/visualizador_spawner.gd" id="3_leywa"]
+
+[node name="Spawner" type="Node2D" unique_id=598117939]
+script = ExtResource("1_pfpmd")
+prefab = ExtResource("2_judia")
+
+[node name="Visualizador Spawner" type="Node2D" parent="." unique_id=1896386039]
+top_level = true
+script = ExtResource("3_leywa")

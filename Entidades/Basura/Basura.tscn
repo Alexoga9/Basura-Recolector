@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b8xyvx6fjldhd" path="res://Entidades/Basura/Basura_item.gd" id="1_6qpr3"]
 [ext_resource type="Resource" uid="uid://gi5lwe4ui2dd" path="res://Entidades/Basura/basura_data.tres" id="2_6qpr3"]
+[ext_resource type="Texture2D" uid="uid://ba5umi21uw05m" path="res://Assets/entidades/caja bonita.png" id="3_5gi75"]
 [ext_resource type="Script" uid="uid://cwxixlurvo8rb" path="res://Entidades/Basura/resaltado_basura.gd" id="3_peotj"]
 [ext_resource type="Texture2D" uid="uid://c8imhrpes1oxk" path="res://Assets/entidades/basura completa.png" id="4_peotj"]
 [ext_resource type="Script" uid="uid://bubqfvtslgafd" path="res://Commons/Componentes/Tweens/Tween_recogida.gd" id="5_mq21f"]
@@ -11,17 +12,17 @@
 [ext_resource type="Script" uid="uid://d3f11xq7ly0e4" path="res://Commons/Componentes/Tweens/Tween_rebote.gd" id="9_5gi75"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e042u"]
-size = Vector2(14, 5)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ilkmk"]
-atlas = ExtResource("4_peotj")
-region = Rect2(0, 0, 16, 17)
+size = Vector2(14, 4.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ilkmk"]
 size = Vector2(18, 14)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_peotj"]
 size = Vector2(12, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rw4v2"]
+atlas = ExtResource("4_peotj")
+region = Rect2(32, 0, 16, 17)
 
 [node name="Basura" type="StaticBody2D" unique_id=529520627 groups=["Basura"]]
 y_sort_enabled = true
@@ -33,7 +34,7 @@ data = ExtResource("2_6qpr3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1608053603]
 unique_name_in_owner = true
-position = Vector2(0, 3)
+position = Vector2(0, 2.75)
 shape = SubResource("RectangleShape2D_e042u")
 debug_color = Color(0.98978466, 0, 0.27423584, 0.41960785)
 
@@ -41,7 +42,7 @@ debug_color = Color(0.98978466, 0, 0.27423584, 0.41960785)
 unique_name_in_owner = true
 y_sort_enabled = true
 position = Vector2(0, 3)
-texture = SubResource("AtlasTexture_ilkmk")
+texture = ExtResource("3_5gi75")
 offset = Vector2(0, -6)
 
 [node name="ResaltadoComponente" type="Node" parent="Sprite" unique_id=1217323380 node_paths=PackedStringArray("trigger_area")]
@@ -82,9 +83,8 @@ position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_peotj")
 
 [node name="Sombra" type="Sprite2D" parent="." unique_id=934080948]
-visible = false
 position = Vector2(0, -2)
-hframes = 3
+texture = SubResource("AtlasTexture_rw4v2")
 
 [node name="TRecogida" type="Node" parent="." unique_id=1191241314]
 unique_name_in_owner = true
