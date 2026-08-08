@@ -1,5 +1,7 @@
 extends Node2D
 
+@export var cantidad_a_spawnear: int
+
 @export var point_1: Marker2D
 @export var point_2: Marker2D
 
@@ -8,12 +10,7 @@ extends Node2D
 
 func _ready():
 	randomize() #this function ensures every playthrough is different
-
-
-func _process(_delta):
-	#Every time we press the left mouse button, we spawn a powerup.
-	if Input.is_action_just_pressed("Click"):
-		spawn_prefab()
+	loop_de_spawneo()
 
 
 func get_random_point_inside(p1: Vector2, p2: Vector2) -> Vector2:
@@ -38,3 +35,9 @@ func spawn_prefab():
 	var spawn_location: Vector2 = get_random_point_inside(point_1.global_position, point_2.global_position)
 	#Sets the position to the random spawn location
 	prefab_instancia.set_position(spawn_location)
+
+
+func loop_de_spawneo():
+	for i in cantidad_a_spawnear:
+		spawn_prefab()
+		print("Spawn")

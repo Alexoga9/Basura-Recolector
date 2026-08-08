@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://bubqfvtslgafd" path="res://Commons/Componentes/Tweens/Tween_recogida.gd" id="5_mq21f"]
 [ext_resource type="Material" uid="uid://dy8jul72maxm7" path="res://Assets/entidades/OutlineMaterial.tres" id="5_sshtx"]
 [ext_resource type="AudioStream" uid="uid://sahbu26hpnvx" path="res://Assets/audio/Hit.wav" id="6_sshtx"]
+[ext_resource type="Script" uid="uid://cdkdjciti2gnu" path="res://Entidades/Basura/detector_colisiones.gd" id="7_rw4v2"]
 [ext_resource type="Script" uid="uid://bnu0umged2ipg" path="res://Commons/Componentes/Utilidades/Apilable/ComponenteApilable.gd" id="8_bws82"]
 [ext_resource type="Script" uid="uid://d3f11xq7ly0e4" path="res://Commons/Componentes/Tweens/Tween_rebote.gd" id="9_5gi75"]
 
@@ -18,7 +19,7 @@ size = Vector2(14, 4.5)
 size = Vector2(18, 14)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_peotj"]
-size = Vector2(12, 6)
+size = Vector2(13.5, 4.52025)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rw4v2"]
 atlas = ExtResource("4_peotj")
@@ -34,6 +35,8 @@ data = ExtResource("2_6qpr3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1608053603]
 unique_name_in_owner = true
+visible = false
+top_level = true
 position = Vector2(0, 2.75)
 shape = SubResource("RectangleShape2D_e042u")
 debug_color = Color(0.98978466, 0, 0.27423584, 0.41960785)
@@ -48,7 +51,7 @@ offset = Vector2(0, -6)
 [node name="ResaltadoComponente" type="Node" parent="Sprite" unique_id=1217323380 node_paths=PackedStringArray("trigger_area")]
 unique_name_in_owner = true
 script = ExtResource("3_peotj")
-trigger_area = NodePath("../../Area2D")
+trigger_area = NodePath("../../Mouse Detector")
 material_outline = ExtResource("5_sshtx")
 metadata/_custom_type_script = "uid://csx7ka6k5q7bc"
 
@@ -65,21 +68,21 @@ volume_db = -10.0
 pitch_scale = 1.5
 bus = &"SFX"
 
-[node name="Area2D" type="Area2D" parent="." unique_id=392840213]
+[node name="Mouse Detector" type="Area2D" parent="." unique_id=392840213]
 visible = false
 collision_layer = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=527528103]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mouse Detector" unique_id=527528103]
 shape = SubResource("RectangleShape2D_ilkmk")
 
-[node name="DetectorCajas" type="Area2D" parent="." unique_id=459621710]
+[node name="DetectorColisiones" type="Area2D" parent="." unique_id=459621710 groups=["Colision Caja"]]
 unique_name_in_owner = true
-visible = false
 collision_layer = 4
 collision_mask = 4
+script = ExtResource("7_rw4v2")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectorCajas" unique_id=1464594226]
-position = Vector2(0, 3)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectorColisiones" unique_id=1464594226]
+position = Vector2(0.25, 2.739875)
 shape = SubResource("RectangleShape2D_peotj")
 
 [node name="Sombra" type="Sprite2D" parent="." unique_id=934080948]
@@ -115,8 +118,6 @@ script = ExtResource("9_5gi75")
 metadata/_custom_type_script = "uid://d3f11xq7ly0e4"
 
 [connection signal="finished" from="sonido_recogida" to="." method="_on_sonido_finished"]
-[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
-[connection signal="mouse_entered" from="Area2D" to="Sprite/ResaltadoComponente" method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Area2D" to="Sprite/ResaltadoComponente" method="_on_area_2d_mouse_exited"]
-[connection signal="body_entered" from="DetectorCajas" to="." method="_on_detector_body_entered"]
-[connection signal="body_exited" from="DetectorCajas" to="." method="_on_detector_body_exited"]
+[connection signal="input_event" from="Mouse Detector" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Mouse Detector" to="Sprite/ResaltadoComponente" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Mouse Detector" to="Sprite/ResaltadoComponente" method="_on_area_2d_mouse_exited"]
