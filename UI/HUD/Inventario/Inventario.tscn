@@ -5,8 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://ca3oktj6ebp0n" path="res://UI/HUD/Inventario/Slots Inventario/slot_de_inventario.tscn" id="7_l1s3s"]
 [ext_resource type="LabelSettings" uid="uid://crqcrwgjb38h3" path="res://UI/Theme/tipografia tienda.tres" id="7_lx5vd"]
 [ext_resource type="PackedScene" uid="uid://mn8abrepyvev" path="res://UI/Barras/barras_hud.tscn" id="8_2kcwo"]
+[ext_resource type="FontVariation" uid="uid://ch3sj7u8tc2me" path="res://Assets/tipografia/FuenteOffset.tres" id="8_vvi4h"]
 [ext_resource type="PackedScene" uid="uid://d2fe2drk13sjm" path="res://UI/HUD/Inventario/Slots Inventario/slot_de_dinero.tscn" id="9_2kcwo"]
-[ext_resource type="Texture2D" uid="uid://cj67bs1scsaiw" path="res://Assets/Inventario/moneda.png" id="10_l1s3s"]
+[ext_resource type="Texture2D" uid="uid://cj67bs1scsaiw" path="res://Assets/Inventario/Moneda.png" id="10_l1s3s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vvi4h"]
 atlas = ExtResource("5_30hd7")
@@ -25,6 +26,9 @@ region = Rect2(1, 11, 40, 5)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lx5vd"]
 texture = SubResource("AtlasTexture_2h4ip")
+
+[sub_resource type="LabelSettings" id="LabelSettings_lx5vd"]
+font = ExtResource("8_vvi4h")
 
 [node name="Inventario" type="Control" unique_id=615073819]
 layout_mode = 3
@@ -137,4 +141,4 @@ label_settings = ExtResource("7_lx5vd")
 unique_name_in_owner = true
 layout_mode = 2
 text = "Cleared"
-label_settings = ExtResource("7_lx5vd")
+label_settings = SubResource("LabelSettings_lx5vd")

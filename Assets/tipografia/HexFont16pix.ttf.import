@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/HexFont16pix.ttf-e5bba9c91cfe309cba5be5d96783
 [params]
 
 Rendering=null
-antialiasing=1
+antialiasing=0
 generate_mipmaps=false
 disable_embedded_bitmaps=true
 multichannel_signed_distance_field=false

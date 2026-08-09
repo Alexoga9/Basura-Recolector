@@ -11,9 +11,9 @@ func recibir_basura_jugador():
 	if Inventario.get_count("Basura") > 0:
 		var cantidad_basura: int = Inventario.get_count("Basura")
 		var valor_basura: int = Inventario.get_item_resource("Basura").valor
-		var valor_de_venta: int = cantidad_basura*valor_basura
+		var valor_de_venta: int = cantidad_basura * valor_basura
 		Dinero.ganar(valor_de_venta)
-		#print(str(Dinero.dinero))
+		#print(str(cantidad_basura))
 		Inventario.remove_item("Basura", cantidad_basura)
 		audio.play()
 		sierras.play()
@@ -29,7 +29,7 @@ func recibir_basura_fisica(body):
 
 
 func _on_trigger_basura_body_entered(body):
-	#print("Area")
+	#print("Area") puede que cuado este en el area del basudero presione una tecla para que sea mas interactivo
 	if body.is_in_group("Jugador") and Inventario.get_count("Basura") > 0:
 		recibir_basura_jugador()
 
