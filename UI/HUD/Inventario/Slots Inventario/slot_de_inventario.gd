@@ -16,13 +16,14 @@ func actualizar_slot(item_id: String, cantidad: int):
 	if item_id != id_a_recibir:
 		return
 
-	# 2. Si la cantidad es 0 o menor, ocultamos el slot y cortamos la ejecución.
+	# Si la cantidad es 0 o menor
 	if cantidad <= 0:
 		hide()
 		label.text = str(0)
 		label.modulate = Color.WHITE
 		return
 
+	# Obtenemos el recurso y actualizamos la UI
 	var item = Inventario.get_item_resource(item_id)
 
 	if item != null:
