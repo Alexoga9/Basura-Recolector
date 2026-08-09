@@ -7,6 +7,8 @@ extends Node2D
 
 @export var prefab: PackedScene
 
+var objetos_spawneados: Array = []
+
 
 func _ready():
 	randomize() #this function ensures every playthrough is different
@@ -14,15 +16,9 @@ func _ready():
 
 
 func get_random_point_inside(p1: Vector2, p2: Vector2) -> Vector2:
-#region Part 2a: Getting Random x-values and y-values
-	var x_value: float = randf_range(p1.x, p2.x)
-	var y_value: float = randf_range(p1.y, p2.y)
-#endregion
-
-# Putting Together the Point
-	var random_point_inside: Vector2 = Vector2(x_value, y_value)
-
-	return(random_point_inside)
+	var x = randf_range(p1.x, p2.x)
+	var y = randf_range(p1.y, p2.y)
+	return Vector2(x, y)
 
 
 func spawn_prefab():
@@ -33,11 +29,36 @@ func spawn_prefab():
 
 	#Uses our function to generate a random spawn location
 	var spawn_location: Vector2 = get_random_point_inside(point_1.global_position, point_2.global_position)
-	#Sets the position to the random spawn location
-	prefab_instancia.set_position(spawn_location)
+# 🔥 3. Preguntamos: ¿Esta posición está demasiado cerca de otra ya spawneada?
+	var distancia_minima = 4.5 # Ajusta este número al tamaño de tu objeto (ej: 32, 50, 64)
+	var posicion_valida = true
+
+	for objeto in objetos_spawneados:
+		if objeto.global_position.distance_to(spawn_location) < distancia_minima:
+			posicion_valida = false
+			break
+
+	# 🔥 4. Si la posición no es válida, buscamos otra aleatoria
+	while not posicion_valida:
+		spawn_location = get_random_point_inside(point_1.global_position, point_2.global_position)
+
+		# Volvemos a revisar con la nueva posición
+		posicion_valida = true
+
+		for objeto in objetos_spawneados:
+			if objeto.global_position.distance_to(spawn_location) < distancia_minima:
+				posicion_valida = false
+				break
+
+	# 📌 5. Cuando encontramos una posición válida, spawneamos
+	add_child(prefab_instancia)
+	prefab_instancia.global_position = spawn_location
+
+	# 📌 6. Guardamos el objeto en la lista para futuras comprobaciones
+	objetos_spawneados.append(prefab_instancia)
 
 
 func loop_de_spawneo():
-	for i in cantidad_a_spawnear:
+	for i in range(cantidad_a_spawnear):
 		spawn_prefab()
-		print("Spawn")
+		print("Spawn ", i+1)

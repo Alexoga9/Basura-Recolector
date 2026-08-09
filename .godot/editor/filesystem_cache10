@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1786227898
+::res://::1786307258
 export_presets.cfg::TextFile::-1::1783816801::0::1::::<><><>0<>0<><>::
 ::res://addons/::1781049200
 default_env.tres::Environment::-1::1773270161::0::1::::<><><>0<>0<><>::
@@ -342,12 +342,12 @@ ResaltadoComponente.gd::GDScript::6085682091305782788::1785720343::0::1::::Resal
 LootComponente.gd::GDScript::8009989860672201178::1785712202::0::1::::LootComponente<>Node<>res://addons/iconos/gems.svg<>0<>0<><>::
 loot_collector.gd::GDScript::7310163185020304175::1783971417::0::1::::<>Area2D<>res://addons/iconos/PickUp.svg<>0<>0<><>::
 ::res://Entidades/::1785882901
-::res://Entidades/Basura/::1786203710
+::res://Entidades/Basura/::1786228933
 Basura.tscn::PackedScene::3371038408796737317::1786203527::0::1::::<><><>0<>0<><>::uid://b8xyvx6fjldhd::::res://Entidades/Basura/Basura_item.gd<>uid://gi5lwe4ui2dd::::res://Entidades/Basura/basura_data.tres<>uid://ba5umi21uw05m::::res://Assets/entidades/caja bonita.png<>uid://cwxixlurvo8rb::::res://Entidades/Basura/resaltado_basura.gd<>uid://c8imhrpes1oxk::::res://Assets/entidades/basura completa.png<>uid://bubqfvtslgafd::::res://Commons/Componentes/Tweens/Tween_recogida.gd<>uid://dy8jul72maxm7::::res://Assets/entidades/OutlineMaterial.tres<>uid://sahbu26hpnvx::::res://Assets/audio/Hit.wav<>uid://cdkdjciti2gnu::::res://Entidades/Basura/detector_colisiones.gd<>uid://bnu0umged2ipg::::res://Commons/Componentes/Utilidades/Apilable/ComponenteApilable.gd<>uid://d3f11xq7ly0e4::::res://Commons/Componentes/Tweens/Tween_rebote.gd
 basura_data.tres::Resource/LootDefinicion::439490400414240885::1785959363::0::1::::<><><>0<>0<><>::uid://dr7bho43atgf6::::res://Assets/audio/tornado audio.mp3<>uid://dnu2r5yw53pto::::res://Recursos/LootDefinicion.gd<>uid://ba5umi21uw05m::::res://Assets/entidades/caja bonita.png
 Basura_item.gd::GDScript::4751629177755572933::1786201230::0::1::::Basura<>StaticBody2D<>res://addons/iconos/basura.svg<>0<>0<><>::
 Basura_pesada.tres::Resource/LootDefinicion::7427927343746130752::1786201841::0::1::::<><><>0<>0<><>::uid://dr7bho43atgf6::::res://Assets/audio/tornado audio.mp3<>uid://dnu2r5yw53pto::::res://Recursos/LootDefinicion.gd<>uid://c8imhrpes1oxk::::res://Assets/entidades/basura completa.png
-detector_colisiones.gd::GDScript::5004250017244508446::1786203710::0::1::::<>Area2D<><>0<>0<><>::
+detector_colisiones.gd::GDScript::5004250017244508446::1786228933::0::1::::<>Area2D<><>0<>0<><>::
 resaltado_basura.gd::GDScript::6365004034422227879::1785945052::0::1::::<>ResaltadoComponente<><>0<>0<><>::
 ::res://Entidades/Basura/Bolsa de Basura/::1785957543
 bolsa_de_basura.tres::Resource/LootDefinicion::2704826263854826589::1785957543::0::1::::<><><>0<>0<><>::uid://dr7bho43atgf6::::res://Assets/audio/tornado audio.mp3<>uid://dnu2r5yw53pto::::res://Recursos/LootDefinicion.gd<>uid://c8xapo1ps5pwt::::res://Assets/UI/barra/icono basura barra.png
@@ -485,7 +485,7 @@ inventario.gd::GDScript::9066223663210572472::1784475548::0::1::::<>Node<><>0<>0
 Signal_Bus.gd::GDScript::7494139386014462802::1785073793::0::1::::<>Node<><>0<>1<><>::
 ::res://Utilidades/Autoloads/Dinero/::1783122924
 dinero.gd::GDScript::5332307738267504793::1783122924::0::1::::<>Node<><>0<>0<><>::
-::res://Utilidades/Sistemas/::1786201260
-spawner.gd::GDScript::8647212323552472903::1786201260::0::1::::<>Node2D<><>0<>0<><>::
+::res://Utilidades/Sistemas/::1786229914
+spawner.gd::GDScript::8647212323552472903::1786229914::0::1::::<>Node2D<><>0<>0<><>::
 spawner.tscn::PackedScene::1981873516771668703::1786198962::0::1::::<><><>0<>0<><>::uid://dvg1lacufgml8::::res://Utilidades/Sistemas/spawner.gd<>uid://boa7rlwdurt22::::res://Entidades/Basura/Basura.tscn<>uid://cbqagfs1m71r5::::res://Utilidades/Sistemas/visualizador_spawner.gd
 visualizador_spawner.gd::GDScript::4876071261474495944::1786142163::0::1::::<>Node2D<><>0<>0<><>::
