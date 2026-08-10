@@ -1,3 +1,6 @@
+CollisionShape2D
+Area2D
+Label
 Marker2D
 Node2D
 Control
@@ -5,10 +8,7 @@ TweenRebote
 Node
 TRecogida
 AudioStreamPlayer
-CollisionShape2D
-Area2D
 ResaltadoComponente
 Sprite2D
 RigidBody2D
 PanelTienda
-Logica_Mejora
