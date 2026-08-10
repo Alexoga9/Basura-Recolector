@@ -1,5 +1,6 @@
 res://UI/HUD/Inventario/Inventario.tscn
 res://UI/Theme/Tienda.tres
+res://UI/Theme/tipografia tienda.tres
 res://Escenarios/Otoño/TS_Otoño.tres
 res://Entidades/Basura/Basura_pesada.tres
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
@@ -10,6 +11,6 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
-res://UI/HUD/Inventario/Slots Inventario/slot_de_inventario.gd
-res://Escenarios/mundo.tscn
-res://Entidades/Trituradora/trituradora.gd
+res://Entidades/Tienda/Outline.gdshader
+res://UI/Theme/shaders/label.gdshader
+res://Assets/entidades/OutlineMaterial.tres

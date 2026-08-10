@@ -1,3 +1,5 @@
+res://UI/Theme/shaders/
+res://UI/Theme/
 res://Assets/tipografia/
 res://Utilidades/Sistemas/
 res://Entidades/Basura/
@@ -14,9 +16,7 @@ res://Assets/UI/
 res://Entidades/genericos/
 res://UI/Menu Principal/Opciones/Opciones de audio/VolumeSlider/
 res://Entidades/Consumible/
-res://UI/Theme/
 res://Assets/
 res://UI/HUD/
 res://UI/Tienda/mejoras de habilidades/
 res://UI/Tienda/
-res://Entidades/Obstaculo/
