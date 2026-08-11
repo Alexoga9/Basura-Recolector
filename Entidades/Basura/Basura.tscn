@@ -26,7 +26,7 @@ region = Rect2(32, 0, 16, 17)
 [node name="Basura" type="StaticBody2D" unique_id=529520627 groups=["Basura"]]
 y_sort_enabled = true
 collision_layer = 4
-collision_mask = 13
+collision_mask = 5
 input_pickable = true
 script = ExtResource("1_6qpr3")
 data = ExtResource("2_6qpr3")

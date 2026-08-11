@@ -11,3 +11,6 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanza
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
 res://Entidades/Basura/Basura.tscn
+res://Utilidades/Sistemas/spawner.tscn
+res://Utilidades/Sistemas/area_fantasma.gd
+res://Utilidades/Sistemas/spawner.gd
