@@ -34,6 +34,7 @@ gdscript/warnings/enable=false
 
 window/size/viewport_width=368
 window/size/viewport_height=216
+window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 

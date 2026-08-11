@@ -1,5 +1,8 @@
 [gd_resource type="LabelSettings" format=3 uid="uid://crqcrwgjb38h3"]
 
+[ext_resource type="FontFile" uid="uid://dryil6kc3yx5s" path="res://Assets/tipografia/DobleHex2.ttf" id="1_wynta"]
+
 [resource]
-outline_size = 9
-outline_color = Color(0, 0, 0, 1)
+font = ExtResource("1_wynta")
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(0.22, 1)

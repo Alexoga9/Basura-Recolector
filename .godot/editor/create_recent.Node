@@ -1,3 +1,7 @@
+Label
+ColorRect
+TextureRect
+Sprite2D
 Label3D
 Marker2D
 Node2D
@@ -9,7 +13,3 @@ AudioStreamPlayer
 CollisionShape2D
 Area2D
 ResaltadoComponente
-Sprite2D
-RigidBody2D
-PanelTienda
-Logica_Mejora
