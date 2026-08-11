@@ -1,3 +1,4 @@
+res://Utilidades/Sistemas/spawner.gd
 res://Escenarios/mundo.tscn
 res://UI/Theme/Tienda.tres
 res://Escenarios/Otoño/TS_Otoño.tres
@@ -10,7 +11,6 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
-res://Entidades/Basura/Basura.tscn
 res://Utilidades/Sistemas/spawner.tscn
-res://Utilidades/Sistemas/area_fantasma.gd
-res://Utilidades/Sistemas/spawner.gd
+res://Entidades/Basura/Basura.tscn
+res://Entidades/Basura/Caja/caja_shape_2d.tres

@@ -59,13 +59,22 @@ func spawn_prefab():
 		# Movemos el área fantasma a la posición candidata
 		area_fantasma.global_position = spawn_location
 		await get_tree().physics_frame # Espera a que las físicas se actualicen
+		area_fantasma.force_update_transform()
+
+		print("🔍 Buscando en capa 1...")
+		var cuerpos = area_fantasma.get_overlapping_bodies()
+		print("Cuerpos encontrados: ", cuerpos)
+		for cuerpo in cuerpos:
+			print(" - Nombre: ", cuerpo.name)
 
 		var cuerpos_solapados = area_fantasma.has_overlapping_bodies()
 		# Si no hay nada, ¡posición libre!
 		if !cuerpos_solapados:
 			espacio_disponible = true
+			print("Cuerpos detectados en ", spawn_location, ": ", area_fantasma.get_overlapping_bodies().size())
 		else:
 			espacio_disponible = false
+			print("Cuerpos detectados en ", spawn_location, ": ", area_fantasma.get_overlapping_bodies().size())
 			#break
 
 		# Si está ocupada, generamos otra posición y aumentamos el contador
