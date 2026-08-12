@@ -1,4 +1,5 @@
 CollisionShape2D
+RigidBody2D
 Area2D
 Label
 Marker2D
@@ -10,5 +11,4 @@ TRecogida
 AudioStreamPlayer
 ResaltadoComponente
 Sprite2D
-RigidBody2D
 PanelTienda

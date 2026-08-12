@@ -57,6 +57,7 @@ folder_colors={
 [global_group]
 
 "Bolsas de Basura Pool"="Aqui es donde se spawnearan todas las bolsas de basura"
+EntidadesBasuras=""
 
 [gui]
 
