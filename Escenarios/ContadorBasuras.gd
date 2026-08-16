@@ -40,5 +40,5 @@ func contar_basura():
 
 
 func añadir_basura():
-	basuras_actuales += 40
+	basuras_actuales += 1
 	contar_basura()
