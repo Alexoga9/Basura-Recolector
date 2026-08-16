@@ -1,4 +1,4 @@
-res://UI/HUD/Inventario/Inventario.tscn
+res://Escenarios/prueba de cambio de sprite/cambioSprite.tscn
 res://UI/Theme/Tienda.tres
 res://Entidades/Tienda/Outline.gdshader
 res://Escenarios/Otoño/TS_Otoño.tres
@@ -12,4 +12,4 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanza
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
 res://UI/Theme/shaders/label.gdshader
-res://Utilidades/Autoloads/Signal_Bus.gd
+res://Escenarios/prueba de cambio de sprite/spriteRestauracion.gd
