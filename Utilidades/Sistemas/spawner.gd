@@ -35,16 +35,21 @@ func conseguir_collishion_shape_2D():
 	prefab_temporal.queue_free()
 
 
+func loop_de_spawneo():
+
+	for i in range(cantidad_a_spawnear):
+		print(i)
+		if i == (cantidad_a_spawnear - 1):
+			todas_las_instancias_agotadas = true
+			print("Ya no hay nada más para spawnear")
+		else:
+			decidir_si_spawnear_prefab()
+
+
 func conseguir_vector_aleatorio(p1: Vector2, p2: Vector2) -> Vector2:
 	var x = randf_range(p1.x, p2.x)
 	var y = randf_range(p1.y, p2.y)
 	return Vector2(x, y)
-
-
-func loop_de_spawneo():
-
-	for i in range(cantidad_a_spawnear):
-		decidir_si_spawnear_prefab()
 
 
 func decidir_si_spawnear_prefab():
@@ -69,9 +74,16 @@ func reposicionar_objeto(spawn_location: Vector2):
 		area_fantasma.force_update_transform()
 		await get_tree().physics_frame # Espera a que las físicas se actualicen
 
-		if not espacio_disponible:
+	var cuerpos = area_fantasma.get_overlapping_bodies()
+
+		if cuerpos.size() == 0: # No hay nadie, está libre
+			espacio_disponible = true
+			break
+
+		if not espacio_disponible and not todas_las_instancias_agotadas:
 			intentos += 1
 			print("❌ Spawn abortado (no hay espacio libre después de ", intentos, " intentos)")
+			espacio_disponible = true
 			#print("Cuerpos detectados en ", spawn_location, ": ", area_fantasma.get_overlapping_bodies().size())
 
 
@@ -85,4 +97,3 @@ func spawnear(prefab_instancia: Node2D, spawn_location: Vector2):
 
 func _on_area_fantasma_body_entered(body):
 	espacio_disponible = false
-	print(body.name)
