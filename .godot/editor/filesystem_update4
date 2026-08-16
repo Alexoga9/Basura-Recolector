@@ -12,4 +12,14 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanza
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
 res://UI/Theme/shaders/label.gdshader
-res://Escenarios/prueba de cambio de sprite/spriteRestauracion.gd
+res://Escenarios/ContadorBasuras.gd
+res://Utilidades/Autoloads/Signal_Bus.gd
+res://Escenarios/prueba de cambio de sprite/valla.gd
+res://Entidades/Jugador/Jugador.tscn
+res://Entidades/Obstaculo/obstaculo.tscn
+res://Escenarios/prueba de cambio de sprite/Valla.tscn
+res://Escenarios/mundo.tscn
+res://UI/HUD/Inventario/Inventario.tscn
+res://UI/Barras/barras_hud.tscn
+res://UI/Barras/barra_basura.gd
+res://UI/Barras/Barras HUD.gd

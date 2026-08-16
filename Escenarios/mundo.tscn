@@ -6,15 +6,16 @@
 [ext_resource type="PackedScene" uid="uid://cd6lygsc501ww" path="res://Entidades/Loot/Loot.tscn" id="3_tgroa"]
 [ext_resource type="Resource" uid="uid://dmky67t6umj3u" path="res://Entidades/Loot/loots/rs_piedra.tres" id="4_2fd2i"]
 [ext_resource type="PackedScene" uid="uid://boa7rlwdurt22" path="res://Entidades/Basura/Basura.tscn" id="6_2fd2i"]
-[ext_resource type="PackedScene" uid="uid://b3umcmj5fb6un" path="res://Entidades/Obstaculo/obstaculo.tscn" id="6_a5bk4"]
+[ext_resource type="PackedScene" uid="uid://d2r5u0lpmux3m" path="res://Entidades/Obstaculo/obstaculo.tscn" id="6_a5bk4"]
 [ext_resource type="Resource" uid="uid://dd3e44dslqngq" path="res://Entidades/Basura/Basura_pesada.tres" id="6_qmk2e"]
-[ext_resource type="PackedScene" uid="uid://dqw5d3i3m8nac" path="res://UI/Tienda/tienda_ui.tscn" id="7_8njad"]
+[ext_resource type="PackedScene" uid="uid://br4shbrxkwxgj" path="res://UI/Tienda/tienda_ui.tscn" id="7_8njad"]
 [ext_resource type="PackedScene" uid="uid://bujsrbbq0elhi" path="res://Entidades/Tienda/tienda.tscn" id="8_8njad"]
 [ext_resource type="PackedScene" uid="uid://b8u0pprb4t2sj" path="res://Entidades/Trituradora/trituradora.tscn" id="8_u72it"]
 [ext_resource type="Texture2D" uid="uid://dmge206god5ho" path="res://Escenarios/Otoño/Basic Tiles 4 (Trees & Bushes).png" id="10_a5bk4"]
 [ext_resource type="PackedScene" uid="uid://bqxfu5knf0pw2" path="res://UI/HUD/hud.tscn" id="10_qc3uw"]
 [ext_resource type="PackedScene" uid="uid://cjlmg6cpg7g6g" path="res://Entidades/Maquina Expendedora/MaquinaExpendedora.tscn" id="11_tyb7f"]
 [ext_resource type="PackedScene" uid="uid://3ibfxmhonqlb" path="res://Utilidades/Sistemas/spawner.tscn" id="12_sexdp"]
+[ext_resource type="PackedScene" uid="uid://c1kcmjbhf62q1" path="res://Escenarios/prueba de cambio de sprite/Valla.tscn" id="13_cr5ey"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qmk2e"]
 texture = ExtResource("10_a5bk4")
@@ -504,6 +505,10 @@ point_2 = NodePath("Marker2D2")
 
 [node name="Marker2D2" type="Marker2D" parent="Objetos Ambientales/Spawners/Spawner" unique_id=388028956]
 position = Vector2(91, 96)
+
+[node name="Valla" parent="Objetos Ambientales" unique_id=1538247553 instance=ExtResource("13_cr5ey")]
+position = Vector2(-420, -249)
+scale = Vector2(3.7199998, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2010886703]
 

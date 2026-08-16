@@ -36,15 +36,9 @@ func contar_basura():
 	cleared.text = "Cleared " + str(porcentaje) + "%"
 	print("Porcentaje actual: ", porcentaje)
 
-	if basuras_actuales >= cantidad_de_basuras:
-		activar_restauracion()
+	SignalBus.zona_limpida.emit(porcentaje)
 
 
 func añadir_basura():
-	basuras_actuales += 1
+	basuras_actuales += 40
 	contar_basura()
-
-
-func activar_restauracion():
-	# Agregar una que otra funcion aqui
-	SignalBus.zona_limpia.emit()
