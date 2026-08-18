@@ -1,8 +1,10 @@
-Label
 CollisionShape2D
 Area2D
+ResaltadoComponente
 Sprite2D
 StaticBody2D
+Node
+Label
 RigidBody2D
 Button
 TileMapLayer
@@ -10,5 +12,3 @@ ColorRect
 TextureRect
 Label3D
 Marker2D
-Node2D
-Control
