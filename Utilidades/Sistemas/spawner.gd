@@ -18,6 +18,10 @@ var espacio_disponible: bool = true
 var todas_las_instancias_agotadas: bool = false
 
 
+func _init():
+	pass
+
+
 func _ready():
 	randomize()
 	conseguir_collishion_shape_2D()
@@ -37,7 +41,7 @@ func conseguir_collishion_shape_2D():
 func loop_de_spawneo():
 
 	for i in range(cantidad_a_spawnear):
-		print(i)
+		#print(i)
 		if i == (cantidad_a_spawnear - 1):
 			todas_las_instancias_agotadas = true
 		else:
@@ -62,25 +66,31 @@ func decidir_si_spawnear_prefab():
 
 
 func reposicionar_objeto(spawn_location: Vector2):
-# Movemos el área fantasma a la posición candidata
-	#while intentos < intentos_maximos and not todas_las_instancias_agotadas:
-		#area_fantasma.global_position = spawn_location
-		#area_fantasma.force_update_transform()
-		#await get_tree().physics_frame # Espera a que las físicas se actualicen
+	# Primero, ponemos espacio_disponible en true (por defecto)
+	espacio_disponible = true
 
+	while intentos < intentos_maximos and not todas_las_instancias_agotadas:
+		area_fantasma.global_position = spawn_location
+		area_fantasma.force_update_transform()
+		await get_tree().process_frame
+
+		# Ahora preguntamos
 		var cuerpos = area_fantasma.get_overlapping_bodies()
 
-		if cuerpos.size() == 0: # No hay nadie, está libre
+		if cuerpos.size() == 0:
+			# Si no hay cuerpos, la posición está libre
 			espacio_disponible = true
-			print("BODIES" + str(cuerpos.size()))
-			#break
-
+			print("✅ Posición libre encontrada")
+			break # Salimos del bucle
 		else:
+			# Si hay cuerpos, la posición está ocupada
 			intentos += 1
-			print("❌ cambiando posicion")
+			print("❌ Ocupado. Intentos: ", intentos)
+			espacio_disponible = false
+			# Generamos nueva posición y seguimos el bucle
 			spawn_location = conseguir_vector_aleatorio(
-			point_1.global_position,
-			point_2.global_position)
+				point_1.global_position,
+				point_2.global_position)
 
 
 func spawnear(prefab_instancia: Node2D, spawn_location: Vector2):
@@ -91,5 +101,5 @@ func spawnear(prefab_instancia: Node2D, spawn_location: Vector2):
 		print("✅ Spawn exitoso en ", spawn_location)
 
 
-#func _on_area_fantasma_body_entered(body):
-	#espacio_disponible = false
+func _on_area_fantasma_body_entered(body):
+	print("AAAAAAAAA")
