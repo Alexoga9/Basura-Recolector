@@ -61,17 +61,17 @@ func decidir_si_spawnear_prefab():
 		point_1.global_position,
 		point_2.global_position)
 
-	reposicionar_objeto(spawn_location)
-	spawnear(prefab_instancia, spawn_location)
+	reposicionar_objeto(spawn_location, prefab_instancia)
+	
 
 
-func reposicionar_objeto(spawn_location: Vector2):
+func reposicionar_objeto(spawn_location: Vector2, prefab_instancia):
 	# Primero, ponemos espacio_disponible en true (por defecto)
 	espacio_disponible = true
 
 	while intentos < intentos_maximos and not todas_las_instancias_agotadas:
 		area_fantasma.global_position = spawn_location
-		area_fantasma.force_update_transform()
+		#area_fantasma.force_update_transform()
 		await get_tree().process_frame
 
 		# Ahora preguntamos
@@ -80,6 +80,7 @@ func reposicionar_objeto(spawn_location: Vector2):
 		if cuerpos.size() == 0:
 			# Si no hay cuerpos, la posición está libre
 			espacio_disponible = true
+			spawnear(prefab_instancia, spawn_location)
 			print("✅ Posición libre encontrada")
 			break # Salimos del bucle
 		else:
