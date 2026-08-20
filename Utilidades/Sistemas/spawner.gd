@@ -12,8 +12,7 @@ extends Node2D
 
 var objetos_spawneados: Array = []
 
-# 📌 3. Configuración del límite
-var intentos_maximos: int = 30 # Ajusta este número a tu gusto
+var intentos_maximos: int = 30
 var intentos: int = 0
 var espacio_disponible: bool = true
 var todas_las_instancias_agotadas: bool = false
@@ -41,7 +40,6 @@ func loop_de_spawneo():
 		print(i)
 		if i == (cantidad_a_spawnear - 1):
 			todas_las_instancias_agotadas = true
-			print("Ya no hay nada más para spawnear")
 		else:
 			decidir_si_spawnear_prefab()
 
@@ -55,45 +53,43 @@ func conseguir_vector_aleatorio(p1: Vector2, p2: Vector2) -> Vector2:
 func decidir_si_spawnear_prefab():
 	var prefab_instancia = prefab.instantiate()
 
-	# 📌 5. Generamos una posición aleatoria
 	var spawn_location: Vector2 = conseguir_vector_aleatorio(
 		point_1.global_position,
 		point_2.global_position)
 
-	# 📌 6. Intentamos encontrar una posición libre (con límite de intentos)
 	reposicionar_objeto(spawn_location)
 	spawnear(prefab_instancia, spawn_location)
 
 
-# hacer que funcione el codigo con pocas instancias
 func reposicionar_objeto(spawn_location: Vector2):
+# Movemos el área fantasma a la posición candidata
+	#while intentos < intentos_maximos and not todas_las_instancias_agotadas:
+		#area_fantasma.global_position = spawn_location
+		#area_fantasma.force_update_transform()
+		#await get_tree().physics_frame # Espera a que las físicas se actualicen
 
-	while intentos < intentos_maximos and not todas_las_instancias_agotadas:
-		# Movemos el área fantasma a la posición candidata
-		area_fantasma.global_position = spawn_location
-		area_fantasma.force_update_transform()
-		await get_tree().physics_frame # Espera a que las físicas se actualicen
-
-	var cuerpos = area_fantasma.get_overlapping_bodies()
+		var cuerpos = area_fantasma.get_overlapping_bodies()
 
 		if cuerpos.size() == 0: # No hay nadie, está libre
 			espacio_disponible = true
-			break
+			print("BODIES" + str(cuerpos.size()))
+			#break
 
-		if not espacio_disponible and not todas_las_instancias_agotadas:
+		else:
 			intentos += 1
-			print("❌ Spawn abortado (no hay espacio libre después de ", intentos, " intentos)")
-			espacio_disponible = true
-			#print("Cuerpos detectados en ", spawn_location, ": ", area_fantasma.get_overlapping_bodies().size())
+			print("❌ cambiando posicion")
+			spawn_location = conseguir_vector_aleatorio(
+			point_1.global_position,
+			point_2.global_position)
 
 
 func spawnear(prefab_instancia: Node2D, spawn_location: Vector2):
-	if espacio_disponible: # 🔥 Posición válida encontrada: spawneamos
+	if espacio_disponible:
 		get_tree().get_first_node_in_group("EntidadesBasuras").add_child(prefab_instancia)
 		prefab_instancia.global_position = spawn_location
 		objetos_spawneados.append(prefab_instancia)
 		print("✅ Spawn exitoso en ", spawn_location)
 
 
-func _on_area_fantasma_body_entered(body):
-	espacio_disponible = false
+#func _on_area_fantasma_body_entered(body):
+	#espacio_disponible = false

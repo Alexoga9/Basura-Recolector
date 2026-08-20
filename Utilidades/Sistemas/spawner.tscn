@@ -9,10 +9,6 @@
 script = ExtResource("1_pfpmd")
 prefab = ExtResource("2_judia")
 
-[node name="Visualizador Spawner" type="Node2D" parent="." unique_id=1896386039]
-top_level = true
-script = ExtResource("3_leywa")
-
 [node name="AreaFantasma" type="Area2D" parent="." unique_id=358352683]
 unique_name_in_owner = true
 collision_layer = 0
@@ -21,6 +17,10 @@ script = ExtResource("4_judia")
 
 [node name="ColisionFantasma" type="CollisionShape2D" parent="AreaFantasma" unique_id=1127008137]
 unique_name_in_owner = true
+
+[node name="Visualizador Spawner" type="Node2D" parent="." unique_id=1896386039]
+top_level = true
+script = ExtResource("3_leywa")
 
 [connection signal="area_entered" from="AreaFantasma" to="AreaFantasma" method="_on_area_entered"]
 [connection signal="body_entered" from="AreaFantasma" to="." method="_on_area_fantasma_body_entered"]

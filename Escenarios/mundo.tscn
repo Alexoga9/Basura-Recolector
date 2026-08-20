@@ -493,17 +493,20 @@ tile_map_data = PackedByteArray("AAD+/wwAAQAYAAAAAAAEAAoAAQATAA8AAAD6/wEAAQAVAAQ
 tile_set = ExtResource("2_qmk2e")
 
 [node name="Spawners" type="Node2D" parent="Objetos Ambientales" unique_id=221637244]
+y_sort_enabled = true
 
 [node name="Spawner" parent="Objetos Ambientales/Spawners" unique_id=598117939 node_paths=PackedStringArray("point_1", "point_2") instance=ExtResource("12_sexdp")]
+y_sort_enabled = true
 position = Vector2(136, 68)
-cantidad_a_spawnear = 500
+cantidad_a_spawnear = 100
 point_1 = NodePath("Marker2D")
 point_2 = NodePath("Marker2D2")
 
 [node name="Marker2D" type="Marker2D" parent="Objetos Ambientales/Spawners/Spawner" unique_id=721902853]
+position = Vector2(-27, 21)
 
 [node name="Marker2D2" type="Marker2D" parent="Objetos Ambientales/Spawners/Spawner" unique_id=388028956]
-position = Vector2(91, 96)
+position = Vector2(52, 64)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2010886703]
 
