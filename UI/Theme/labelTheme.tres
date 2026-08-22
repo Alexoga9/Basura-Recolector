@@ -1,0 +1,11 @@
+[gd_resource type="Theme" format=3 uid="uid://bn55q8kwfdi5t"]
+
+[ext_resource type="FontFile" uid="uid://dryil6kc3yx5s" path="res://Assets/tipografia/DobleHex2.ttf" id="1_ncei0"]
+
+[resource]
+default_font = ExtResource("1_ncei0")
+Label/colors/font_shadow_color = Color(0.22745098, 0.13725491, 0.22745098, 1)
+Label/constants/shadow_offset_x = 0
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 0
+Label/fonts/font = ExtResource("1_ncei0")

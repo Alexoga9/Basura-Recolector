@@ -4,4 +4,5 @@
 
 [resource]
 base_font = ExtResource("1_eacqs")
+variation_transform = Transform2D(1.025, 0, 0, 1, 0, 0)
 baseline_offset = -0.2

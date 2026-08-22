@@ -1,13 +1,8 @@
 [gd_resource type="LabelSettings" format=3 uid="uid://crqcrwgjb38h3"]
 
-[ext_resource type="FontVariation" uid="uid://ch3sj7u8tc2me" path="res://Assets/tipografia/FuenteOffset.tres" id="1_wynta"]
+[ext_resource type="FontFile" uid="uid://dryil6kc3yx5s" path="res://Assets/tipografia/DobleHex2.ttf" id="1_wynta"]
 
 [resource]
-line_spacing = -4.0
 font = ExtResource("1_wynta")
-outline_size = 5
-outline_color = Color(0.23921569, 0.16078432, 0.21176471, 1)
-stacked_shadow_count = 1
-stacked_shadow_0/offset = Vector2(0, 1)
-stacked_shadow_0/color = Color(0.23921569, 0.16078432, 0.21176471, 1)
-stacked_shadow_0/outline_size = 5
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(0.22, 1)

@@ -12,20 +12,26 @@ func _ready():
 
 
 func actualizar_slot(item_id: String, cantidad: int):
+	# Filtramos inmediatamente si la señal no es para este slot.
+	if item_id != id_a_recibir:
+		return
+
+	# Si la cantidad es 0 o menor
+	if cantidad <= 0:
+		hide()
+		label.text = str(0)
+		label.modulate = Color.WHITE
+		return
+
+	# Obtenemos el recurso y actualizamos la UI
 	var item = Inventario.get_item_resource(item_id)
 
 	if item != null:
-		if item_id == id_a_recibir:
-			show()
-			icono.texture = item.sprite
-			label.text = str(cantidad)
-		elif item_id != id_a_recibir:
-			return
+		show()
+		icono.texture = item.sprite
+		label.text = str(cantidad)
 
 		if item.cantidad_maxima == cantidad:
 			label.modulate = Color.RED
 		else:
 			label.modulate = Color.WHITE
-	else:
-		label.text = str(0)
-		label.modulate = Color.WHITE
