@@ -39,9 +39,7 @@ func conseguir_collishion_shape_2D():
 
 
 func loop_de_spawneo():
-
 	for i in range(cantidad_a_spawnear):
-		#print(i)
 		if i == (cantidad_a_spawnear - 1):
 			todas_las_instancias_agotadas = true
 		else:
@@ -62,36 +60,37 @@ func decidir_si_spawnear_prefab():
 		point_2.global_position)
 
 	reposicionar_objeto(spawn_location, prefab_instancia)
-	
 
 
 func reposicionar_objeto(spawn_location: Vector2, prefab_instancia):
-	# Primero, ponemos espacio_disponible en true (por defecto)
-	espacio_disponible = true
+	espacio_disponible = not await actualizar_posición_area(spawn_location)
 
-	while intentos < intentos_maximos and not todas_las_instancias_agotadas:
-		area_fantasma.global_position = spawn_location
-		#area_fantasma.force_update_transform()
-		await get_tree().process_frame
-
-		# Ahora preguntamos
-		var cuerpos = area_fantasma.get_overlapping_bodies()
-
-		if cuerpos.size() == 0:
-			# Si no hay cuerpos, la posición está libre
-			espacio_disponible = true
+	print(espacio_disponible)
+	if espacio_disponible: # Si no hay cuerpos, la posición está libre
 			spawnear(prefab_instancia, spawn_location)
 			print("✅ Posición libre encontrada")
-			break # Salimos del bucle
-		else:
-			# Si hay cuerpos, la posición está ocupada
+
+	elif not espacio_disponible: # Si hay cuerpos, la posición está ocupada
+		for intentos in range(intentos_maximos):
 			intentos += 1
 			print("❌ Ocupado. Intentos: ", intentos)
-			espacio_disponible = false
-			# Generamos nueva posición y seguimos el bucle
+
 			spawn_location = conseguir_vector_aleatorio(
 				point_1.global_position,
 				point_2.global_position)
+
+			espacio_disponible = await actualizar_posición_area(spawn_location)
+
+
+func actualizar_posición_area(spawn_location: Vector2) -> bool:
+	area_fantasma.global_position = spawn_location
+	area_fantasma.force_update_transform()
+
+	await get_tree().process_frame
+	await get_tree().physics_frame
+
+	var cuerpos: bool = area_fantasma.has_overlapping_bodies()
+	return cuerpos
 
 
 func spawnear(prefab_instancia: Node2D, spawn_location: Vector2):
@@ -100,7 +99,3 @@ func spawnear(prefab_instancia: Node2D, spawn_location: Vector2):
 		prefab_instancia.global_position = spawn_location
 		objetos_spawneados.append(prefab_instancia)
 		print("✅ Spawn exitoso en ", spawn_location)
-
-
-func _on_area_fantasma_body_entered(body):
-	print("AAAAAAAAA")

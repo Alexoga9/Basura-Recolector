@@ -23,5 +23,3 @@ top_level = true
 script = ExtResource("3_leywa")
 
 [connection signal="area_entered" from="AreaFantasma" to="AreaFantasma" method="_on_area_entered"]
-[connection signal="body_entered" from="AreaFantasma" to="." method="_on_area_fantasma_body_entered"]
-[connection signal="body_shape_entered" from="AreaFantasma" to="AreaFantasma" method="_on_body_shape_entered"]

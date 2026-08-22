@@ -498,7 +498,7 @@ y_sort_enabled = true
 [node name="Spawner" parent="Objetos Ambientales/Spawners" unique_id=598117939 node_paths=PackedStringArray("point_1", "point_2") instance=ExtResource("12_sexdp")]
 y_sort_enabled = true
 position = Vector2(95, 59)
-cantidad_a_spawnear = 10
+cantidad_a_spawnear = 100
 point_1 = NodePath("Marker2D")
 point_2 = NodePath("Marker2D2")
 

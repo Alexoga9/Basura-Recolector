@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cqy1h84a2yeu1"]
+
+[ext_resource type="Script" path="res://area_2d.gd" id="1_hp3ht"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i3vva"]
+
+[node name="Testeo bodys" type="Area2D" unique_id=1922801957]
+collision_layer = 0
+collision_mask = 255
+script = ExtResource("1_hp3ht")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=221111943]
+shape = SubResource("RectangleShape2D_i3vva")
