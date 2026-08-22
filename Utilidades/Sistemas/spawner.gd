@@ -64,31 +64,26 @@ func decidir_si_spawnear_prefab():
 
 func reposicionar_objeto(spawn_location: Vector2, prefab_instancia):
 	espacio_disponible = not await actualizar_posición_area(spawn_location)
-
 	print(espacio_disponible)
+	
 	if espacio_disponible: # Si no hay cuerpos, la posición está libre
 			spawnear(prefab_instancia, spawn_location)
 			print("✅ Posición libre encontrada")
-
+		
 	elif not espacio_disponible: # Si hay cuerpos, la posición está ocupada
 		for intentos in range(intentos_maximos):
 			intentos += 1
 			print("❌ Ocupado. Intentos: ", intentos)
-
 			spawn_location = conseguir_vector_aleatorio(
 				point_1.global_position,
 				point_2.global_position)
-
 			espacio_disponible = await actualizar_posición_area(spawn_location)
 
 
 func actualizar_posición_area(spawn_location: Vector2) -> bool:
 	area_fantasma.global_position = spawn_location
 	area_fantasma.force_update_transform()
-
-	await get_tree().process_frame
 	await get_tree().physics_frame
-
 	var cuerpos: bool = area_fantasma.has_overlapping_bodies()
 	return cuerpos
 

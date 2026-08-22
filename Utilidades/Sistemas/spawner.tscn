@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://boa7rlwdurt22" path="res://Entidades/Basura/Basura.tscn" id="2_judia"]
 [ext_resource type="Script" uid="uid://cbqagfs1m71r5" path="res://Utilidades/Sistemas/visualizador_spawner.gd" id="3_leywa"]
 [ext_resource type="Script" uid="uid://b8q62fa14fw0o" path="res://Utilidades/Sistemas/area_fantasma.gd" id="4_judia"]
+[ext_resource type="Shape2D" uid="uid://dlja217geqf6y" path="res://Entidades/Basura/Caja/caja_shape_2d.tres" id="5_leywa"]
 
 [node name="Spawner" type="Node2D" unique_id=598117939]
 script = ExtResource("1_pfpmd")
@@ -11,6 +12,7 @@ prefab = ExtResource("2_judia")
 
 [node name="AreaFantasma" type="Area2D" parent="." unique_id=358352683]
 unique_name_in_owner = true
+process_mode = 4
 collision_layer = 0
 collision_mask = 255
 script = ExtResource("4_judia")
@@ -21,5 +23,10 @@ unique_name_in_owner = true
 [node name="Visualizador Spawner" type="Node2D" parent="." unique_id=1896386039]
 top_level = true
 script = ExtResource("3_leywa")
+
+[node name="ShapeCast2D" type="ShapeCast2D" parent="." unique_id=699430934]
+unique_name_in_owner = true
+shape = ExtResource("5_leywa")
+target_position = Vector2(0, 0)
 
 [connection signal="area_entered" from="AreaFantasma" to="AreaFantasma" method="_on_area_entered"]
