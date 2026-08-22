@@ -12,7 +12,6 @@ prefab = ExtResource("2_judia")
 
 [node name="AreaFantasma" type="Area2D" parent="." unique_id=358352683]
 unique_name_in_owner = true
-process_mode = 4
 collision_layer = 0
 collision_mask = 255
 script = ExtResource("4_judia")
@@ -26,6 +25,7 @@ script = ExtResource("3_leywa")
 
 [node name="ShapeCast2D" type="ShapeCast2D" parent="." unique_id=699430934]
 unique_name_in_owner = true
+process_mode = 4
 shape = ExtResource("5_leywa")
 target_position = Vector2(0, 0)
 
