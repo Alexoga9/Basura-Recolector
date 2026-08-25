@@ -504,10 +504,10 @@ point_1 = NodePath("Marker2D")
 point_2 = NodePath("Marker2D2")
 
 [node name="Marker2D" type="Marker2D" parent="Objetos Ambientales/Spawners/Spawner" unique_id=721902853]
-position = Vector2(-505, -261)
+position = Vector2(-44, -47)
 
 [node name="Marker2D2" type="Marker2D" parent="Objetos Ambientales/Spawners/Spawner" unique_id=388028956]
-position = Vector2(589, 366)
+position = Vector2(272, 143)
 
 [node name="Valla" parent="Objetos Ambientales" unique_id=1538247553 instance=ExtResource("13_cr5ey")]
 position = Vector2(-420, -249)

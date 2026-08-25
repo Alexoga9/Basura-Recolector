@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://b8q62fa14fw0o" path="res://Utilidades/Sistemas/area_fantasma.gd" id="4_judia"]
 [ext_resource type="Shape2D" uid="uid://dlja217geqf6y" path="res://Entidades/Basura/Caja/caja_shape_2d.tres" id="5_leywa"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_leywa"]
+
 [node name="Spawner" type="Node2D" unique_id=598117939]
 script = ExtResource("1_pfpmd")
 prefab = ExtResource("2_judia")
@@ -18,6 +20,7 @@ script = ExtResource("4_judia")
 
 [node name="ColisionFantasma" type="CollisionShape2D" parent="AreaFantasma" unique_id=1127008137]
 unique_name_in_owner = true
+shape = SubResource("RectangleShape2D_leywa")
 
 [node name="Visualizador Spawner" type="Node2D" parent="." unique_id=1896386039]
 top_level = true
