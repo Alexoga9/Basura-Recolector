@@ -112,7 +112,6 @@ frame_progress = 0.0
 unique_name_in_owner = true
 visible = false
 collision_layer = 8
-collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger Jugador" unique_id=588954144]
 shape = SubResource("RectangleShape2D_0bwxm")
@@ -123,4 +122,6 @@ position = Vector2(0, 23)
 texture = ExtResource("6_4lxt0")
 
 [connection signal="body_entered" from="Trigger Jugador" to="." method="_on_trigger_jugador_body_entered"]
+[connection signal="body_entered" from="Trigger Jugador" to="SpriteAnimated2D/ResaltadoComponente" method="_on_trigger_jugador_body_entered"]
 [connection signal="body_exited" from="Trigger Jugador" to="." method="_on_trigger_jugador_body_exited"]
+[connection signal="body_exited" from="Trigger Jugador" to="SpriteAnimated2D/ResaltadoComponente" method="_on_trigger_jugador_body_exited"]

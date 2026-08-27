@@ -1,3 +1,4 @@
+TextureRect
 ShapeCast2D
 Button
 Area2D
@@ -11,5 +12,3 @@ Control
 TweenRebote
 Node
 TRecogida
-AudioStreamPlayer
-ResaltadoComponente
