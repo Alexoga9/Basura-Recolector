@@ -1,9 +1,71 @@
 [gd_scene format=3 uid="uid://ddmkbldfr3fiv"]
 
+[ext_resource type="PackedScene" uid="uid://b0dgesesasocr" path="res://UI/HUD/Menu Coleccionables/casilla_coleccionable.tscn" id="1_bwl53"]
+[ext_resource type="Texture2D" uid="uid://cbgbirmqb5755" path="res://Assets/UI/marco tienda.png" id="1_j0bk1"]
+[ext_resource type="Script" uid="uid://dqin1ym6b2vmv" path="res://UI/HUD/Menu Coleccionables/menu_coleccionables.gd" id="1_j2pqr"]
+
 [node name="Menu Coleccionables" type="Control" unique_id=990696473]
+visible = false
+z_index = 2
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_j2pqr")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1961391445]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_j0bk1")
+region_rect = Rect2(1, 1, 18, 18)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=496398985]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer" unique_id=2033293229]
+layout_mode = 2
+columns = 3
+
+[node name="Casilla Coleccionable" parent="MarginContainer/GridContainer" unique_id=917467084 instance=ExtResource("1_bwl53")]
+layout_mode = 2
+
+[node name="Casilla Coleccionable2" parent="MarginContainer/GridContainer" unique_id=599982414 instance=ExtResource("1_bwl53")]
+layout_mode = 2
+
+[node name="Casilla Coleccionable3" parent="MarginContainer/GridContainer" unique_id=1970228553 instance=ExtResource("1_bwl53")]
+layout_mode = 2
+
+[node name="Casilla Coleccionable4" parent="MarginContainer/GridContainer" unique_id=1118126518 instance=ExtResource("1_bwl53")]
+layout_mode = 2
+
+[node name="Casilla Coleccionable5" parent="MarginContainer/GridContainer" unique_id=225780490 instance=ExtResource("1_bwl53")]
+layout_mode = 2
+
+[node name="Casilla Coleccionable6" parent="MarginContainer/GridContainer" unique_id=628815208 instance=ExtResource("1_bwl53")]
+layout_mode = 2
+
+[node name="Casilla Coleccionable7" parent="MarginContainer/GridContainer" unique_id=576759486 instance=ExtResource("1_bwl53")]
+layout_mode = 2
+
+[node name="Casilla Coleccionable8" parent="MarginContainer/GridContainer" unique_id=1541189959 instance=ExtResource("1_bwl53")]
+layout_mode = 2
+
+[node name="Casilla Coleccionable9" parent="MarginContainer/GridContainer" unique_id=1805221379 instance=ExtResource("1_bwl53")]
+layout_mode = 2

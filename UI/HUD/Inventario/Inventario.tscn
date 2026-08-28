@@ -3,9 +3,10 @@
 [ext_resource type="Script" uid="uid://dncwo2l5jfbkd" path="res://Escenarios/ContadorBasuras.gd" id="5_1l1l3"]
 [ext_resource type="Texture2D" uid="uid://cg40f2x5atd3o" path="res://Assets/UI/barra completado nivel.png" id="5_30hd7"]
 [ext_resource type="PackedScene" uid="uid://ca3oktj6ebp0n" path="res://UI/HUD/Inventario/Slots Inventario/slot_de_inventario.tscn" id="7_l1s3s"]
+[ext_resource type="PackedScene" uid="uid://ddmkbldfr3fiv" path="res://UI/HUD/Menu Coleccionables/menu_coleccionables.tscn" id="7_lx5vd"]
 [ext_resource type="PackedScene" uid="uid://mn8abrepyvev" path="res://UI/Barras/barras_hud.tscn" id="8_2kcwo"]
 [ext_resource type="PackedScene" uid="uid://d2fe2drk13sjm" path="res://UI/HUD/Inventario/Slots Inventario/slot_de_dinero.tscn" id="9_2kcwo"]
-[ext_resource type="Texture2D" uid="uid://cj67bs1scsaiw" path="res://Assets/Inventario/Moneda.png" id="10_l1s3s"]
+[ext_resource type="Texture2D" uid="uid://cj67bs1scsaiw" path="res://Assets/Inventario/moneda.png" id="10_l1s3s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vvi4h"]
 atlas = ExtResource("5_30hd7")
@@ -186,3 +187,6 @@ offset_top = -1.0
 offset_right = 43.0
 offset_bottom = 11.0
 text = "Cleared"
+
+[node name="Menu Coleccionables" parent="MarginContainer" unique_id=990696473 instance=ExtResource("7_lx5vd")]
+layout_mode = 2

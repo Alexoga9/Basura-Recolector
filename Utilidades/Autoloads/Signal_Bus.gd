@@ -12,7 +12,7 @@ signal input_movimiento
 signal interaccion
 
 # Input
-signal recoger_basura_automatica(bool)
+signal input_tab
 
 # Basura
 signal basura_recogida

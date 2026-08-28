@@ -10,3 +10,14 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
+res://UI/HUD/Menu Coleccionables/casilla_coleccionable.tscn
+res://Escenarios/mundo.tscn
+res://UI/HUD/Menu Coleccionables/menu_coleccionables.tscn
+res://Commons/Componentes/Input/InputComponente.gd
+res://Utilidades/Autoloads/Signal_Bus.gd
+res://UI/HUD/Menu Coleccionables/menu_coleccionables.gd
+res://UI/HUD/Inventario/Inventario.tscn
+res://Entidades/Basura/Basura_item.gd
+res://Entidades/BolsaDeBasura/bolsa_de_basura.gd
+res://Entidades/Jugador/Jugador.gd
+res://Entidades/Obstaculo/Obstaculo_item.gd

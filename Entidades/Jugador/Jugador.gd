@@ -20,4 +20,3 @@ func _ready():
 
 func _physics_process(delta):
 	movimiento_componente.movimiento(input_componente.input_movimiento(), delta)
-	input_componente.input_recoger_basura_automatica()

@@ -28,7 +28,7 @@ var valor: int
 
 func _ready():
 	iniciar_valores()
-	SignalBus.recoger_basura_automatica.connect(recibir_input)
+	SignalBus.interaccion.connect(recibir_input)
 
 
 func iniciar_valores():
