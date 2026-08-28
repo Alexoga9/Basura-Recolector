@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b0dgesesasocr" path="res://UI/HUD/Menu Coleccionables/casilla_coleccionable.tscn" id="1_bwl53"]
 [ext_resource type="Texture2D" uid="uid://cbgbirmqb5755" path="res://Assets/UI/marco tienda.png" id="1_j0bk1"]
 [ext_resource type="Script" uid="uid://dqin1ym6b2vmv" path="res://UI/HUD/Menu Coleccionables/menu_coleccionables.gd" id="1_j2pqr"]
+[ext_resource type="Texture2D" uid="uid://byc7chx2gort5" path="res://Assets/UI/barra/icono energia barra.png" id="4_3g63i"]
 
 [node name="Menu Coleccionables" type="Control" unique_id=990696473]
 visible = false
@@ -45,6 +46,8 @@ columns = 3
 
 [node name="Casilla Coleccionable" parent="MarginContainer/GridContainer" unique_id=917467084 instance=ExtResource("1_bwl53")]
 layout_mode = 2
+nombre = "coleccionable"
+imagen = ExtResource("4_3g63i")
 
 [node name="Casilla Coleccionable2" parent="MarginContainer/GridContainer" unique_id=599982414 instance=ExtResource("1_bwl53")]
 layout_mode = 2
