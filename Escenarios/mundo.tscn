@@ -5,6 +5,7 @@
 [ext_resource type="TileSet" uid="uid://cicmnmruhpe23" path="res://Escenarios/Otoño/TS_Otoño.tres" id="2_qmk2e"]
 [ext_resource type="PackedScene" uid="uid://cd6lygsc501ww" path="res://Entidades/Loot/Loot.tscn" id="3_tgroa"]
 [ext_resource type="Resource" uid="uid://dmky67t6umj3u" path="res://Entidades/Loot/loots/rs_piedra.tres" id="4_2fd2i"]
+[ext_resource type="Resource" uid="uid://5k76mbciamak" path="res://Entidades/Loot/loots/re_madera.tres" id="5_f4ey0"]
 [ext_resource type="PackedScene" uid="uid://boa7rlwdurt22" path="res://Entidades/Basura/Basura.tscn" id="6_2fd2i"]
 [ext_resource type="PackedScene" uid="uid://d2r5u0lpmux3m" path="res://Entidades/Obstaculo/Obstaculo.tscn" id="6_a5bk4"]
 [ext_resource type="Resource" uid="uid://dd3e44dslqngq" path="res://Entidades/Basura/Basura_pesada.tres" id="6_qmk2e"]
@@ -397,10 +398,11 @@ position = Vector2(535, 281)
 
 [node name="Basura5" parent="Objetos Ambientales/Entiddaes/Loots" unique_id=1782321174 instance=ExtResource("3_tgroa")]
 position = Vector2(504, 364)
-data = ExtResource("4_2fd2i")
+data = ExtResource("5_f4ey0")
 
 [node name="Basura6" parent="Objetos Ambientales/Entiddaes/Loots" unique_id=1459569408 instance=ExtResource("3_tgroa")]
 position = Vector2(504, 336)
+data = ExtResource("5_f4ey0")
 
 [node name="Basura7" parent="Objetos Ambientales/Entiddaes/Loots" unique_id=1284606587 instance=ExtResource("3_tgroa")]
 position = Vector2(504, 308)

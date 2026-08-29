@@ -6,18 +6,14 @@
 [ext_resource type="Script" uid="uid://pqkfc017cxy6" path="res://Recursos/materiales_necesarios.gd" id="3_kr500"]
 [ext_resource type="Script" uid="uid://fj133hmdtuh3" path="res://Entidades/Estaciones/Estación Rota/estacion_rota_resaltado.gd" id="3_ycxac"]
 [ext_resource type="PackedScene" uid="uid://b4nutgd65x10o" path="res://Entidades/genericos/e_sprite.tscn" id="4_7rl7f"]
-[ext_resource type="Texture2D" uid="uid://d0v6krou2ook8" path="res://Assets/Inventario/madera.png" id="4_wako1"]
+[ext_resource type="Resource" uid="uid://cn42hyavquied" path="res://Entidades/Estaciones/Estación Rota/Requisitos de materiales/Estacion_rota_requisitos_madera.tres" id="5_483ev"]
 [ext_resource type="Material" uid="uid://dy8jul72maxm7" path="res://Assets/entidades/OutlineMaterial.tres" id="5_o666a"]
 [ext_resource type="Texture2D" uid="uid://d2w68k8llr4oi" path="res://Assets/Inventario/piedra.png" id="5_uxqpp"]
-
-[sub_resource type="Resource" id="Resource_wako1"]
-script = ExtResource("3_kr500")
-imagen = ExtResource("4_wako1")
-metadata/_custom_type_script = "uid://pqkfc017cxy6"
 
 [sub_resource type="Resource" id="Resource_uxqpp"]
 script = ExtResource("3_kr500")
 tipo_de_elemento = 1
+cantidad_necesaria = 1
 imagen = ExtResource("5_uxqpp")
 metadata/_custom_type_script = "uid://pqkfc017cxy6"
 
@@ -36,7 +32,7 @@ y_sort_enabled = true
 collision_layer = 8
 script = ExtResource("1_fqxgv")
 estacion = ExtResource("2_m1bcd")
-materiales = Array[ExtResource("3_kr500")]([SubResource("Resource_wako1"), SubResource("Resource_uxqpp")])
+materiales = Array[ExtResource("3_kr500")]([SubResource("Resource_uxqpp"), ExtResource("5_483ev")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=951699094]
 position = Vector2(0, -0.5)

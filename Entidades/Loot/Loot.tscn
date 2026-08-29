@@ -1,19 +1,7 @@
 [gd_scene format=3 uid="uid://cd6lygsc501ww"]
 
 [ext_resource type="Script" uid="uid://d1alhwontnr3g" path="res://Entidades/Loot/Loot_Item.gd" id="1_yo54l"]
-[ext_resource type="AudioStream" uid="uid://dr7bho43atgf6" path="res://Assets/audio/tornado audio.mp3" id="2_jbgvj"]
-[ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="3_6uotn"]
-[ext_resource type="Texture2D" uid="uid://byc7chx2gort5" path="res://Assets/UI/barra/icono energia barra.png" id="4_4bqrs"]
-
-[sub_resource type="Resource" id="Resource_uavl2"]
-script = ExtResource("3_6uotn")
-id = "coleccionable"
-nombre = "trofeo 1"
-audio = ExtResource("2_jbgvj")
-sprite = ExtResource("4_4bqrs")
-cantidad_maxima = 1
-tipo_de_elemento = 5
-metadata/_custom_type_script = "uid://dnu2r5yw53pto"
+[ext_resource type="Resource" uid="uid://0x2ppftnrk74" path="res://Entidades/Loot/coleccionables/loot_coleccionable.tres" id="2_4wyng"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_si7tl"]
 radius = 3.0
@@ -22,7 +10,7 @@ radius = 3.0
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_yo54l")
-data = SubResource("Resource_uavl2")
+data = ExtResource("2_4wyng")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1608053603]
 unique_name_in_owner = true
