@@ -8,16 +8,17 @@
 [ext_resource type="PackedScene" uid="uid://b4nutgd65x10o" path="res://Entidades/genericos/e_sprite.tscn" id="4_7rl7f"]
 [ext_resource type="Texture2D" uid="uid://d0v6krou2ook8" path="res://Assets/Inventario/madera.png" id="4_wako1"]
 [ext_resource type="Material" uid="uid://dy8jul72maxm7" path="res://Assets/entidades/OutlineMaterial.tres" id="5_o666a"]
+[ext_resource type="Texture2D" uid="uid://d2w68k8llr4oi" path="res://Assets/Inventario/piedra.png" id="5_uxqpp"]
 
 [sub_resource type="Resource" id="Resource_wako1"]
 script = ExtResource("3_kr500")
-cantidad_necesaria = 5
 imagen = ExtResource("4_wako1")
 metadata/_custom_type_script = "uid://pqkfc017cxy6"
 
 [sub_resource type="Resource" id="Resource_uxqpp"]
 script = ExtResource("3_kr500")
 tipo_de_elemento = 1
+imagen = ExtResource("5_uxqpp")
 metadata/_custom_type_script = "uid://pqkfc017cxy6"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fqxgv"]
@@ -62,5 +63,7 @@ metadata/_custom_type_script = "uid://csx7ka6k5q7bc"
 visible = false
 position = Vector2(0, -58)
 
+[connection signal="body_entered" from="Trigger Jugador" to="." method="_on_trigger_jugador_body_entered"]
 [connection signal="body_entered" from="Trigger Jugador" to="Sprite2D/ResaltadoComponente" method="_on_trigger_jugador_body_entered"]
+[connection signal="body_exited" from="Trigger Jugador" to="." method="_on_trigger_jugador_body_exited"]
 [connection signal="body_exited" from="Trigger Jugador" to="Sprite2D/ResaltadoComponente" method="_on_trigger_jugador_body_exited"]
