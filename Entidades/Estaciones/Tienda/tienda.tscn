@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bujsrbbq0elhi"]
 
-[ext_resource type="Script" uid="uid://bai51lktwjuxh" path="res://Entidades/Tienda/tienda.gd" id="1_lvgju"]
-[ext_resource type="Script" uid="uid://dn4y66lee8nf6" path="res://Entidades/Tienda/Tienda_resaltado.gd" id="3_4lxt0"]
+[ext_resource type="Script" uid="uid://bai51lktwjuxh" path="res://Entidades/Estaciones/Tienda/tienda.gd" id="1_lvgju"]
+[ext_resource type="Script" uid="uid://dn4y66lee8nf6" path="res://Entidades/Estaciones/Tienda/Tienda_resaltado.gd" id="3_4lxt0"]
 [ext_resource type="Texture2D" uid="uid://eupvw7bec3ri" path="res://Assets/entidades/tienda img.png" id="3_eppcm"]
 [ext_resource type="PackedScene" uid="uid://b4nutgd65x10o" path="res://Entidades/genericos/e_sprite.tscn" id="4_4lxt0"]
 [ext_resource type="Material" uid="uid://dy8jul72maxm7" path="res://Assets/entidades/OutlineMaterial.tres" id="4_5cjg1"]

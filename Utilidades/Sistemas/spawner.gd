@@ -18,7 +18,7 @@ var area_spawn_rect: Rect2
 func _ready():
 	calcular_radio_deteccion()
 	calcular_area_spawn()
-	SignalBus.interaccion.connect(loop_de_spawneo)
+	loop_de_spawneo()
 
 
 func calcular_radio_deteccion():

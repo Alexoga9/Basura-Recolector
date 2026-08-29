@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://b8u0pprb4t2sj"]
 
-[ext_resource type="Script" uid="uid://bavd3c4essg3w" path="res://Entidades/Trituradora/trituradora.gd" id="1_we1hm"]
+[ext_resource type="Script" uid="uid://bavd3c4essg3w" path="res://Entidades/Estaciones/Trituradora/trituradora.gd" id="1_we1hm"]
 [ext_resource type="Texture2D" uid="uid://1xnuabl3r2ig" path="res://Assets/entidades/trituradora/la trituradora.png" id="2_28ur8"]
 [ext_resource type="AudioStream" uid="uid://cjghok5vlof2n" path="res://Assets/audio/drop-coin.mp3" id="3_k24a0"]
-[ext_resource type="Script" uid="uid://dn4y66lee8nf6" path="res://Entidades/Tienda/Tienda_resaltado.gd" id="4_fkswi"]
+[ext_resource type="Script" uid="uid://dn4y66lee8nf6" path="res://Entidades/Estaciones/Tienda/Tienda_resaltado.gd" id="4_fkswi"]
 [ext_resource type="Texture2D" uid="uid://bcw4h077d08et" path="res://Assets/entidades/trituradora/Hove trituradora.png" id="4_mipmb"]
 [ext_resource type="Texture2D" uid="uid://ddnp87ghptd17" path="res://Assets/entidades/trituradora/sombra trituradora.png" id="5_28ur8"]
 [ext_resource type="Material" uid="uid://dy8jul72maxm7" path="res://Assets/entidades/OutlineMaterial.tres" id="5_rnive"]

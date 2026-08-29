@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cjlmg6cpg7g6g"]
 
-[ext_resource type="Script" uid="uid://bqf61t5aq5kig" path="res://Entidades/Maquina Expendedora/maquina_expendedora.gd" id="1_j4evy"]
+[ext_resource type="Script" uid="uid://bqf61t5aq5kig" path="res://Entidades/Estaciones/Maquina Expendedora/maquina_expendedora.gd" id="1_j4evy"]
 [ext_resource type="PackedScene" uid="uid://bgn5c32aqoq6c" path="res://Entidades/Consumible/consumible.tscn" id="2_cglwt"]
 [ext_resource type="Texture2D" uid="uid://drov3nkhokldn" path="res://Assets/entidades/maquina expendedora/maquina expendedora animacion.png" id="3_1j2q8"]
 [ext_resource type="AudioStream" uid="uid://cjghok5vlof2n" path="res://Assets/audio/drop-coin.mp3" id="4_ev2gr"]
-[ext_resource type="Script" uid="uid://dn4y66lee8nf6" path="res://Entidades/Tienda/Tienda_resaltado.gd" id="5_riqe1"]
+[ext_resource type="Script" uid="uid://dn4y66lee8nf6" path="res://Entidades/Estaciones/Tienda/Tienda_resaltado.gd" id="5_riqe1"]
 [ext_resource type="Material" uid="uid://dy8jul72maxm7" path="res://Assets/entidades/OutlineMaterial.tres" id="6_1j2q8"]
 [ext_resource type="PackedScene" uid="uid://b4nutgd65x10o" path="res://Entidades/genericos/e_sprite.tscn" id="7_ojreo"]
 [ext_resource type="Texture2D" uid="uid://c10pt8bm1jt67" path="res://Assets/entidades/maquina expendedora/maquina expendedora idle.png" id="8_uxkcs"]

@@ -1,4 +1,4 @@
-res://UI/HUD/Menu Coleccionables/casilla_coleccionable.tscn
+res://Escenarios/mundo.tscn
 res://UI/Theme/Tienda.tres
 res://Entidades/Tienda/Outline.gdshader
 res://Escenarios/Otoño/TS_Otoño.tres
@@ -11,5 +11,9 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
-res://UI/HUD/Menu Coleccionables/casilla_coleccionable.gd
-res://UI/HUD/Menu Coleccionables/menu_coleccionables.tscn
+res://Entidades/Estaciones/Estación Rota/estación_rota.gd
+res://Entidades/Estaciones/Estación Rota/estación_rota.tscn
+res://Utilidades/Sistemas/spawner.gd
+res://Entidades/Estaciones/Tienda/tienda.tscn
+res://Entidades/Estaciones/Tienda/Tienda_resaltado.gd
+res://Entidades/Estaciones/Estación Rota/estacion_rota_resaltado.gd

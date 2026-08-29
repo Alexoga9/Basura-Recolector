@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://dkwgdyg1ccod6"]
+
+[ext_resource type="Script" uid="uid://d027wx1ml6tju" path="res://Entidades/Estaciones/Estación Rota/estación_rota.gd" id="1_fqxgv"]
+[ext_resource type="Texture2D" uid="uid://cra4a88lx8lwj" path="res://Assets/entidades/maquina expendedora.png" id="1_jkh5c"]
+[ext_resource type="PackedScene" uid="uid://cjlmg6cpg7g6g" path="res://Entidades/Estaciones/Maquina Expendedora/MaquinaExpendedora.tscn" id="2_m1bcd"]
+[ext_resource type="Script" uid="uid://fj133hmdtuh3" path="res://Entidades/Estaciones/Estación Rota/estacion_rota_resaltado.gd" id="3_ycxac"]
+[ext_resource type="PackedScene" uid="uid://b4nutgd65x10o" path="res://Entidades/genericos/e_sprite.tscn" id="4_7rl7f"]
+[ext_resource type="Material" uid="uid://dy8jul72maxm7" path="res://Assets/entidades/OutlineMaterial.tres" id="5_o666a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fqxgv"]
+size = Vector2(32, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ycxac"]
+size = Vector2(114, 102)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7rl7f"]
+atlas = ExtResource("1_jkh5c")
+region = Rect2(4, 31, 40, 32)
+
+[node name="Estación Rota" type="StaticBody2D" unique_id=121739820]
+y_sort_enabled = true
+collision_layer = 8
+script = ExtResource("1_fqxgv")
+estacion = ExtResource("2_m1bcd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=951699094]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_fqxgv")
+
+[node name="Trigger Jugador" type="Area2D" parent="." unique_id=1992289934]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger Jugador" unique_id=1682131691]
+shape = SubResource("RectangleShape2D_ycxac")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=499963391]
+y_sort_enabled = true
+texture = SubResource("AtlasTexture_7rl7f")
+
+[node name="ResaltadoComponente" type="Node" parent="Sprite2D" unique_id=376452972 node_paths=PackedStringArray("trigger_area", "e_sprite")]
+script = ExtResource("3_ycxac")
+trigger_area = NodePath("../../Trigger Jugador")
+material_outline = ExtResource("5_o666a")
+e_sprite = NodePath("../E sprite")
+metadata/_custom_type_script = "uid://csx7ka6k5q7bc"
+
+[node name="E sprite" parent="Sprite2D" unique_id=1797379794 instance=ExtResource("4_7rl7f")]
+visible = false
+position = Vector2(0, -58)
+
+[connection signal="body_entered" from="Trigger Jugador" to="Sprite2D/ResaltadoComponente" method="_on_trigger_jugador_body_entered"]
+[connection signal="body_exited" from="Trigger Jugador" to="Sprite2D/ResaltadoComponente" method="_on_trigger_jugador_body_exited"]
