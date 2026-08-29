@@ -1,6 +1,8 @@
-res://Escenarios/mundo.tscn
+res://Entidades/Estaciones/Estación Rota/estación_rota.gd
+res://Recursos/materiales_necesarios.gd
+res://Entidades/Estaciones/Estación Rota/estación_rota.tscn
 res://UI/Theme/Tienda.tres
-res://Entidades/Tienda/Outline.gdshader
+res://Entidades/Estaciones/Tienda/Outline.gdshader
 res://Escenarios/Otoño/TS_Otoño.tres
 res://Entidades/Basura/Basura_pesada.tres
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
@@ -11,9 +13,3 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
-res://Entidades/Estaciones/Estación Rota/estación_rota.gd
-res://Entidades/Estaciones/Estación Rota/estación_rota.tscn
-res://Utilidades/Sistemas/spawner.gd
-res://Entidades/Estaciones/Tienda/tienda.tscn
-res://Entidades/Estaciones/Tienda/Tienda_resaltado.gd
-res://Entidades/Estaciones/Estación Rota/estacion_rota_resaltado.gd
