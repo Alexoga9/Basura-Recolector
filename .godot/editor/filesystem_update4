@@ -1,5 +1,7 @@
-res://Entidades/Jugador/Jugador.tscn
+res://UI/Theme/shaders/label_personalizado.gd
+res://UI/Theme/shaders/label_personalizado.tscn
 res://UI/Theme/Tienda.tres
+res://UI/Theme/shaders/label2.gdshader
 res://Entidades/Estaciones/Tienda/Outline.gdshader
 res://Escenarios/Otoño/TS_Otoño.tres
 res://Entidades/Basura/Basura_pesada.tres
@@ -11,8 +13,3 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
-res://Escenarios/mundo.tscn
-res://Entidades/Estaciones/Estación Rota/panel_de_requisitos_de_materiales.gd
-res://Entidades/Estaciones/Estación Rota/estación_rota.tscn
-res://Recursos/materiales_necesarios.gd
-res://Entidades/Estaciones/Estación Rota/estación_rota.gd
