@@ -13,3 +13,6 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
+res://UI/HUD/Inventario/Slots Inventario/slot_de_inventario.tscn
+res://UI/HUD/Inventario/Inventario.tscn
+res://UI/HUD/Inventario/Slots Inventario/slot_de_inventario.gd

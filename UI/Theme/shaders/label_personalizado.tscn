@@ -7,7 +7,7 @@
 base_font = ExtResource("1_31r7t")
 variation_embolden = 2.0
 spacing_glyph = -1
-spacing_bottom = -2
+spacing_top = 3
 
 [node name="Label Con Sombreado" type="Label" unique_id=2006444608]
 anchors_preset = 15
@@ -15,12 +15,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Como tan muchacho"
+text = "Avisanos porfa"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("1_n8nvt")
 
 [node name="Label" type="Label" parent="." unique_id=355488560]
+unique_name_in_owner = true
 show_behind_parent = true
 layout_mode = 1
 anchors_preset = 15
@@ -29,8 +30,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = SubResource("FontVariation_n8nvt")
-theme_override_font_sizes/font_size = 17
-text = "Como tan muchacho"
 horizontal_alignment = 1
 vertical_alignment = 1
