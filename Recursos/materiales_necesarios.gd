@@ -5,7 +5,8 @@ enum Tipo_de_Material {
 MADERA,
 PIEDRA,
 HIERRO,
-ORO
+ORO,
+DINERO
 }
 @export var tipo_de_elemento: Tipo_de_Material
 

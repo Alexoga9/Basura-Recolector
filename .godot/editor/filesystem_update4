@@ -14,3 +14,5 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerz
 res://Escenarios/mundo.tscn
 res://Entidades/Estaciones/Estación Rota/panel_de_requisitos_de_materiales.gd
 res://Entidades/Estaciones/Estación Rota/estación_rota.tscn
+res://Recursos/materiales_necesarios.gd
+res://Entidades/Estaciones/Estación Rota/estación_rota.gd

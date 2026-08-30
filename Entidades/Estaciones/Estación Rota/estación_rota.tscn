@@ -9,6 +9,7 @@
 [ext_resource type="Resource" uid="uid://cn42hyavquied" path="res://Entidades/Estaciones/Estación Rota/Requisitos de materiales/Estacion_rota_requisitos_madera.tres" id="5_483ev"]
 [ext_resource type="Material" uid="uid://dy8jul72maxm7" path="res://Assets/entidades/OutlineMaterial.tres" id="5_o666a"]
 [ext_resource type="Texture2D" uid="uid://d2w68k8llr4oi" path="res://Assets/Inventario/piedra.png" id="5_uxqpp"]
+[ext_resource type="Texture2D" uid="uid://cj67bs1scsaiw" path="res://Assets/Inventario/moneda.png" id="6_dgkfw"]
 [ext_resource type="Script" uid="uid://dnw7f1laruuul" path="res://Entidades/Estaciones/Estación Rota/panel_de_requisitos_de_materiales.gd" id="10_hmxfw"]
 [ext_resource type="PackedScene" uid="uid://slwb7rie8b2q" path="res://Entidades/Estaciones/Estación Rota/Requisitos de materiales/UI Requisitos Materiales/casilla_de_requisito_materiales.tscn" id="11_dgkfw"]
 
@@ -17,6 +18,13 @@ script = ExtResource("3_kr500")
 tipo_de_elemento = 1
 cantidad_necesaria = 1
 imagen = ExtResource("5_uxqpp")
+metadata/_custom_type_script = "uid://pqkfc017cxy6"
+
+[sub_resource type="Resource" id="Resource_kur0t"]
+script = ExtResource("3_kr500")
+tipo_de_elemento = 4
+cantidad_necesaria = 200
+imagen = ExtResource("6_dgkfw")
 metadata/_custom_type_script = "uid://pqkfc017cxy6"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fqxgv"]
@@ -34,7 +42,7 @@ y_sort_enabled = true
 collision_layer = 8
 script = ExtResource("1_fqxgv")
 estacion = ExtResource("2_m1bcd")
-materiales = Array[ExtResource("3_kr500")]([SubResource("Resource_uxqpp"), ExtResource("5_483ev"), ExtResource("5_483ev")])
+materiales = Array[ExtResource("3_kr500")]([SubResource("Resource_uxqpp"), ExtResource("5_483ev"), ExtResource("5_483ev"), SubResource("Resource_kur0t")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=951699094]
 position = Vector2(0, -0.5)

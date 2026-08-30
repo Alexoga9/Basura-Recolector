@@ -34,6 +34,9 @@ func matchear_enum(posicion_array: int):
 		material.Tipo_de_Material.HIERRO:
 			comprar_reparacion("hierro", posicion_array)
 
+		material.Tipo_de_Material.DINERO:
+			comprar(posicion_array)
+
 
 ## Busca reducir a 0 los requisitos necesarios para la reparacion
 func comprar_reparacion(ID:String, posicion_array:int):
@@ -49,6 +52,14 @@ func comprar_reparacion(ID:String, posicion_array:int):
 		print("ya compraste " + ID)
 	else:
 		print("Necesitas "+ str(costo_materiales) + " de " +ID)
+
+
+func comprar(posicion_array: int):
+	var costo_materiales = materiales[posicion_array].cantidad_necesaria
+
+	if Dinero.dinero >= costo_materiales and costo_materiales != 0:
+		Dinero.gastar(materiales[posicion_array].cantidad_necesaria)
+		materiales[posicion_array].cantidad_necesaria = 0
 
 
 ## revisa si se cumplen las condiciones para reparar
