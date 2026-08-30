@@ -9,6 +9,8 @@
 [ext_resource type="Resource" uid="uid://cn42hyavquied" path="res://Entidades/Estaciones/Estación Rota/Requisitos de materiales/Estacion_rota_requisitos_madera.tres" id="5_483ev"]
 [ext_resource type="Material" uid="uid://dy8jul72maxm7" path="res://Assets/entidades/OutlineMaterial.tres" id="5_o666a"]
 [ext_resource type="Texture2D" uid="uid://d2w68k8llr4oi" path="res://Assets/Inventario/piedra.png" id="5_uxqpp"]
+[ext_resource type="Script" uid="uid://dnw7f1laruuul" path="res://Entidades/Estaciones/Estación Rota/panel_de_requisitos_de_materiales.gd" id="10_hmxfw"]
+[ext_resource type="PackedScene" uid="uid://slwb7rie8b2q" path="res://Entidades/Estaciones/Estación Rota/Requisitos de materiales/UI Requisitos Materiales/casilla_de_requisito_materiales.tscn" id="11_dgkfw"]
 
 [sub_resource type="Resource" id="Resource_uxqpp"]
 script = ExtResource("3_kr500")
@@ -32,7 +34,7 @@ y_sort_enabled = true
 collision_layer = 8
 script = ExtResource("1_fqxgv")
 estacion = ExtResource("2_m1bcd")
-materiales = Array[ExtResource("3_kr500")]([SubResource("Resource_uxqpp"), ExtResource("5_483ev")])
+materiales = Array[ExtResource("3_kr500")]([SubResource("Resource_uxqpp"), ExtResource("5_483ev"), ExtResource("5_483ev")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=951699094]
 position = Vector2(0, -0.5)
@@ -58,6 +60,26 @@ metadata/_custom_type_script = "uid://csx7ka6k5q7bc"
 [node name="E sprite" parent="Sprite2D" unique_id=1797379794 instance=ExtResource("4_7rl7f")]
 visible = false
 position = Vector2(0, -58)
+
+[node name="Panel de requisitos de materiales" type="Panel" parent="." unique_id=58083873 node_paths=PackedStringArray("estacion_rota")]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+offset_left = -58.0
+offset_top = -92.0
+offset_right = 57.0
+offset_bottom = -52.0
+script = ExtResource("10_hmxfw")
+estacion_rota = NodePath("..")
+casilla = ExtResource("11_dgkfw")
+
+[node name="Contenedor" type="HBoxContainer" parent="Panel de requisitos de materiales" unique_id=1646004722]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [connection signal="body_entered" from="Trigger Jugador" to="." method="_on_trigger_jugador_body_entered"]
 [connection signal="body_entered" from="Trigger Jugador" to="Sprite2D/ResaltadoComponente" method="_on_trigger_jugador_body_entered"]

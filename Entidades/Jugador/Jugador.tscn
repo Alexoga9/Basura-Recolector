@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://ctb6hc0tn7yig" path="res://Commons/Componentes/Core/EnergiaComponente.gd" id="1_b2vdw"]
 [ext_resource type="Texture2D" uid="uid://hq6y6n4uabd8" path="res://Assets/jugador/Basic character v1.png" id="2_1ibpt"]
 [ext_resource type="Script" uid="uid://ddrnbgxm8522b" path="res://Commons/Componentes/Input/InputComponente.gd" id="2_30dg6"]
+[ext_resource type="Texture2D" uid="uid://kkc0qlspsxxo" path="res://Assets/jugador/Shadow.png" id="2_orci8"]
 [ext_resource type="Script" uid="uid://bnt3655fcthcm" path="res://Commons/Componentes/Movimiento/Vectores/MovimientoComponente.gd" id="3_30dg6"]
 [ext_resource type="PackedScene" uid="uid://begam5f412ueo" path="res://Entidades/BolsaDeBasura/bolsa_de_basura.tscn" id="6_qtgc7"]
 [ext_resource type="Script" uid="uid://dcfdk4qx3vf0b" path="res://Commons/Componentes/Utilidades/Loot/loot_collector.gd" id="9_6pwru"]
@@ -169,6 +170,11 @@ collision_mask = 60
 motion_mode = 1
 script = ExtResource("1_5k27j")
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1329384721]
+self_modulate = Color(1, 1, 1, 0.39215687)
+position = Vector2(-1, 2)
+texture = ExtResource("2_orci8")
+
 [node name="Componentes" type="Node" parent="." unique_id=6844626]
 
 [node name="EnergiaComponente" type="Node" parent="Componentes" unique_id=851066434]
@@ -202,6 +208,7 @@ script = ExtResource("9_qtgc7")
 metadata/_custom_type_script = "uid://d0ghf1yof2o0g"
 
 [node name="Cuerpo" type="CollisionShape2D" parent="." unique_id=925831003]
+visible = false
 position = Vector2(-1, 0)
 shape = SubResource("CircleShape2D_b35yh")
 debug_color = Color(1.3536774e-07, 0.102459945, 0.126971, 0.41960785)
@@ -253,6 +260,7 @@ shape = SubResource("CircleShape2D_yyjpx")
 
 [node name="Recoge BASURA" type="Area2D" parent="." unique_id=1673868854 groups=["Radar Basura"]]
 unique_name_in_owner = true
+visible = false
 position = Vector2(0, -8)
 collision_mask = 4
 script = ExtResource("9_yyjpx")
@@ -269,6 +277,7 @@ one_shot = true
 
 [node name="Recoge OBSTACULOS" type="Area2D" parent="." unique_id=2030381451]
 unique_name_in_owner = true
+visible = false
 position = Vector2(0, -8)
 collision_layer = 0
 collision_mask = 32

@@ -18,6 +18,9 @@ signal input_tab
 signal basura_recogida
 signal zona_limpida(porcentaje: int)
 
+# Recogibles
+signal material_recogido
+
 # UI
 # # Tienda 
 signal mostrar_tienda
@@ -34,3 +37,6 @@ signal mostrar_hud
 signal mostrar_menu_principal
 
 # # Opciones
+
+# # Estacion Rota
+signal actualizar_estacion_rota

@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://b0dgesesasocr"]
 
 [ext_resource type="Script" uid="uid://6q206qv4yu65" path="res://UI/HUD/Menu Coleccionables/casilla_coleccionable.gd" id="1_gnmw0"]
-[ext_resource type="Texture2D" uid="uid://cbgbirmqb5755" path="res://Assets/UI/marco tienda.png" id="1_nr7ma"]
 [ext_resource type="Texture2D" uid="uid://cj67bs1scsaiw" path="res://Assets/Inventario/moneda.png" id="2_ix4j6"]
 [ext_resource type="Texture2D" uid="uid://c8xapo1ps5pwt" path="res://Assets/UI/barra/icono basura barra.png" id="2_nr7ma"]
 
@@ -16,15 +15,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_gnmw0")
 imagen = ExtResource("2_ix4j6")
-
-[node name="Marco Coleccionable" type="TextureRect" parent="." unique_id=1145220488]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_nr7ma")
 
 [node name="Imagen Coleccionable" type="TextureRect" parent="." unique_id=1984001935]
 unique_name_in_owner = true

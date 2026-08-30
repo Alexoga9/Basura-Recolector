@@ -1,4 +1,4 @@
-extends StaticBody2D
+class_name EstacionRota extends StaticBody2D
 
 @export var estacion: PackedScene
 @export var materiales: Array[MaterialesNecesarios]
@@ -59,6 +59,7 @@ func comprobar_materiales_restantes():
 		if materiales[i].cantidad_necesaria == 0:
 			comprados += 1
 			print("Se completo la compra de " + str(comprados))
+			SignalBus.actualizar_estacion_rota.emit()
 
 	if comprados == materiales.size():
 		print("Ya todo comprado, toma tu estacion")

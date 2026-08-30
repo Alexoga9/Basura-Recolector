@@ -1,6 +1,4 @@
-res://Entidades/Estaciones/Estación Rota/estación_rota.gd
-res://Recursos/materiales_necesarios.gd
-res://Entidades/Estaciones/Estación Rota/estación_rota.tscn
+res://Entidades/Jugador/Jugador.tscn
 res://UI/Theme/Tienda.tres
 res://Entidades/Estaciones/Tienda/Outline.gdshader
 res://Escenarios/Otoño/TS_Otoño.tres
@@ -14,6 +12,5 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanza
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
 res://Escenarios/mundo.tscn
-res://Entidades/Loot/loots/rs_piedra.tres
-res://Entidades/Estaciones/Estación Rota/Requisitos de materiales/Estacion_rota_requisitos_madera.tres
-res://Entidades/Loot/Loot.tscn
+res://Entidades/Estaciones/Estación Rota/panel_de_requisitos_de_materiales.gd
+res://Entidades/Estaciones/Estación Rota/estación_rota.tscn

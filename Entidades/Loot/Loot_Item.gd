@@ -35,6 +35,7 @@ func collect():
 	sonido.play()
 	collision_shape_2d.call_deferred("set", "disabled", true)
 	sprite2d.visible = false
+	SignalBus.material_recogido.emit()
 	return data
 
 
