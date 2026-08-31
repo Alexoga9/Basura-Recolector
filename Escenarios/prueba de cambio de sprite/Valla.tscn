@@ -1,23 +1,44 @@
 [gd_scene format=3 uid="uid://c1kcmjbhf62q1"]
 
 [ext_resource type="Script" uid="uid://blac7dgmr1hd7" path="res://Escenarios/prueba de cambio de sprite/valla.gd" id="1_c32ja"]
-[ext_resource type="Texture2D" uid="uid://bxcs2mj0pk81w" path="res://Assets/entidades/sombra tienda.png" id="2_bag1r"]
+[ext_resource type="Texture2D" uid="uid://d3r43nmrn4esl" path="res://Assets/entidades/Valla/Ya.png" id="2_qcp71"]
 [ext_resource type="PackedScene" uid="uid://b4nutgd65x10o" path="res://Entidades/genericos/e_sprite.tscn" id="3_bag1r"]
 [ext_resource type="Script" uid="uid://dunrj315vwhow" path="res://Escenarios/prueba de cambio de sprite/valla_resaltado_componente.gd" id="4_qcp71"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qcp71"]
-size = Vector2(367, 19)
+size = Vector2(170.83247, 20)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8dg2v"]
-size = Vector2(697.4966, 11)
+[sub_resource type="AtlasTexture" id="AtlasTexture_wt0fl"]
+atlas = ExtResource("2_qcp71")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ob1kn"]
+atlas = ExtResource("2_qcp71")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qcp71"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wt0fl")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ob1kn")
+}],
+"loop": true,
+"name": &"puerta_abierta",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ob1kn"]
-size = Vector2(54.87501, 13.679487)
+size = Vector2(6.459553, 7.897436)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wt0fl"]
-size = Vector2(54.92518, 7.2258077)
-
-[node name="Valla" type="StaticBody2D" unique_id=1538247553]
+[node name="puerta_Valla" type="StaticBody2D" unique_id=1538247553]
 position = Vector2(165, 0)
 scale = Vector2(0.2400012, 1)
 collision_layer = 4
@@ -25,47 +46,37 @@ collision_mask = 0
 script = ExtResource("1_c32ja")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=426368289]
-position = Vector2(183.5, 9.5)
+position = Vector2(168.74915, 17)
 shape = SubResource("RectangleShape2D_qcp71")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=299182645]
-position = Vector2(183.25, 9.25)
-scale = Vector2(6.681818, 2.7857141)
-texture = ExtResource("2_bag1r")
+[node name="puerta" type="AnimatedSprite2D" parent="." unique_id=1851487843]
+unique_name_in_owner = true
+position = Vector2(170.83249, 7.0000005)
+scale = Vector2(4.1510525, 1)
+sprite_frames = SubResource("SpriteFrames_qcp71")
+animation = &"idle"
 
-[node name="E sprite" parent="Sprite2D" unique_id=1797379794 instance=ExtResource("3_bag1r")]
+[node name="E sprite" parent="puerta" unique_id=1797379794 instance=ExtResource("3_bag1r")]
 visible = false
-position = Vector2(-0.61125183, -4.0384617)
-scale = Vector2(0.59593505, 0.31570512)
+position = Vector2(3.8720173e-06, -11)
+scale = Vector2(0.62170035, 0.58505356)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/E sprite" unique_id=723442885]
-position = Vector2(-338.7483, 4.5)
-shape = SubResource("RectangleShape2D_8dg2v")
-
-[node name="ResaltadoComponente" type="Node" parent="Sprite2D" unique_id=1465628742 node_paths=PackedStringArray("trigger_area", "e_sprite")]
+[node name="ResaltadoComponente" type="Node" parent="puerta" unique_id=1465628742 node_paths=PackedStringArray("trigger_area", "e_sprite")]
 script = ExtResource("4_qcp71")
 trigger_area = NodePath("../Trigger Jugador")
 e_sprite = NodePath("../E sprite")
 metadata/_custom_type_script = "uid://csx7ka6k5q7bc"
 
-[node name="Trigger Jugador" type="Area2D" parent="Sprite2D" unique_id=816342261]
+[node name="Trigger Jugador" type="Area2D" parent="puerta" unique_id=816342261]
+unique_name_in_owner = true
+position = Vector2(-0.24993896, -0.25)
+scale = Vector2(6.6818185, 2.7857141)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Trigger Jugador" unique_id=786454062]
-position = Vector2(0.012329102, 3.1602557)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puerta/Trigger Jugador" unique_id=786454062]
+position = Vector2(-0.037698746, 3.6794872)
 shape = SubResource("RectangleShape2D_ob1kn")
 
-[node name="msj" type="Label" parent="." unique_id=1309480909]
-unique_name_in_owner = true
-offset_left = 183.25
-offset_top = 7.25
-offset_right = 223.25
-offset_bottom = 19.25
-
-[node name="Area2D" type="Area2D" parent="." unique_id=387843546]
-unique_name_in_owner = true
-position = Vector2(183.25, 7.25)
-scale = Vector2(6.681818, 2.2142856)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1392612041]
-position = Vector2(0.037418365, 3.951613)
-shape = SubResource("RectangleShape2D_wt0fl")
+[connection signal="body_entered" from="puerta/Trigger Jugador" to="." method="_on_trigger_jugador_body_entered"]
+[connection signal="body_entered" from="puerta/Trigger Jugador" to="puerta/ResaltadoComponente" method="_on_trigger_jugador_body_entered"]
+[connection signal="body_exited" from="puerta/Trigger Jugador" to="." method="_on_trigger_jugador_body_exited"]
+[connection signal="body_exited" from="puerta/Trigger Jugador" to="puerta/ResaltadoComponente" method="_on_trigger_jugador_body_exited"]

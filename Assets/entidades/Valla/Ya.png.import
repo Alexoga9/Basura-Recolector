@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cj67bs1scsaiw"
-path="res://.godot/imported/Moneda.png-8f0d2feafff47a4dbe24a22cc95c9dab.ctex"
+uid="uid://d3r43nmrn4esl"
+path="res://.godot/imported/Ya.png-520e746eee680c591e9e4698044d5135.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Inventario/Moneda.png"
-dest_files=["res://.godot/imported/Moneda.png-8f0d2feafff47a4dbe24a22cc95c9dab.ctex"]
+source_file="res://Assets/entidades/Valla/Ya.png"
+dest_files=["res://.godot/imported/Ya.png-520e746eee680c591e9e4698044d5135.ctex"]
 
 [params]
 
