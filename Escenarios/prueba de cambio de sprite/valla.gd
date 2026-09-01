@@ -47,7 +47,6 @@ func _al_interactuar() -> void:
 		abrir_paso()
 
 
-# --- DESBLOQUEO ---
 func abrir_paso() -> void:
 	SignalBus.zona_limpida.disconnect(_actualizar_progreso)
 	SignalBus.interaccion.disconnect(_al_interactuar)

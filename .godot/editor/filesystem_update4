@@ -10,8 +10,4 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
-res://Escenarios/prueba de cambio de sprite/valla.gd
-res://Escenarios/prueba de cambio de sprite/valla_resaltado_componente.gd
 res://Escenarios/mundo.tscn
-res://Entidades/Maquina Expendedora/MaquinaExpendedora.tscn
-res://Entidades/Jugador/Jugador.tscn
