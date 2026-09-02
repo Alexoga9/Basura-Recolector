@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cd6lygsc501ww" path="res://Entidades/Loot/Loot.tscn" id="3_tgroa"]
 [ext_resource type="Resource" uid="uid://dmky67t6umj3u" path="res://Entidades/Loot/loots/rs_piedra.tres" id="4_2fd2i"]
 [ext_resource type="PackedScene" uid="uid://boa7rlwdurt22" path="res://Entidades/Basura/Basura.tscn" id="6_2fd2i"]
-[ext_resource type="PackedScene" uid="uid://d2r5u0lpmux3m" path="res://Entidades/Obstaculo/obstaculo.tscn" id="6_a5bk4"]
+[ext_resource type="PackedScene" uid="uid://d2r5u0lpmux3m" path="res://Entidades/Obstaculo/Obstaculo.tscn" id="6_a5bk4"]
 [ext_resource type="Resource" uid="uid://dd3e44dslqngq" path="res://Entidades/Basura/Basura_pesada.tres" id="6_qmk2e"]
 [ext_resource type="PackedScene" uid="uid://br4shbrxkwxgj" path="res://UI/Tienda/tienda_ui.tscn" id="7_8njad"]
 [ext_resource type="PackedScene" uid="uid://bujsrbbq0elhi" path="res://Entidades/Tienda/tienda.tscn" id="8_8njad"]
@@ -561,10 +561,8 @@ position = Vector2(-44, -47)
 [node name="Marker2D2" type="Marker2D" parent="Objetos Ambientales/Spawners/Spawner" unique_id=388028956]
 position = Vector2(272, 143)
 
-[node name="Valla" parent="Objetos Ambientales" unique_id=1538247553 instance=ExtResource("13_cr5ey")]
-y_sort_enabled = true
-position = Vector2(135, -230)
-collision_mask = 0
+[node name="puerta_Valla" parent="Objetos Ambientales" unique_id=1538247553 instance=ExtResource("13_cr5ey")]
+position = Vector2(176, -224)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2010886703]
 

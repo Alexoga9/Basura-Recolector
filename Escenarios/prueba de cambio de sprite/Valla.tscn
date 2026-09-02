@@ -6,10 +6,10 @@
 [ext_resource type="Script" uid="uid://dunrj315vwhow" path="res://Escenarios/prueba de cambio de sprite/valla_resaltado_componente.gd" id="4_qcp71"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qcp71"]
-size = Vector2(141.66592, 5)
+size = Vector2(30, 7)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ob1kn"]
-size = Vector2(6.459553, 7.897436)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wt0fl"]
+size = Vector2(7.9317603, 43.794876)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wt0fl"]
 atlas = ExtResource("2_qcp71")
@@ -39,30 +39,24 @@ animations = [{
 }]
 
 [node name="puerta_Valla" type="StaticBody2D" unique_id=1538247553]
-position = Vector2(165, 0)
-scale = Vector2(0.2400012, 1)
 collision_layer = 4
 script = ExtResource("1_c32ja")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=426368289]
-position = Vector2(170.83258, 16.5)
+position = Vector2(0, 7.5)
 shape = SubResource("RectangleShape2D_qcp71")
-debug_color = Color(0, 0.5285387, 0.6158817, 0)
 
 [node name="Trigger Jugador" type="Area2D" parent="." unique_id=816342261]
 unique_name_in_owner = true
 visible = false
-position = Vector2(169.79504, 6.7500005)
 scale = Vector2(27.736586, 2.7857141)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger Jugador" unique_id=786454062]
-position = Vector2(-0.037698746, 3.6794872)
-shape = SubResource("RectangleShape2D_ob1kn")
+scale = Vector2(1.0000002, 1)
+shape = SubResource("RectangleShape2D_wt0fl")
 
 [node name="puerta" type="AnimatedSprite2D" parent="." unique_id=1851487843]
 unique_name_in_owner = true
-position = Vector2(170.83249, 6)
-scale = Vector2(4.4270616, 1)
 sprite_frames = SubResource("SpriteFrames_qcp71")
 animation = &"idle"
 
@@ -77,19 +71,17 @@ trigger_area = NodePath("../../Trigger Jugador")
 e_sprite = NodePath("../E sprite")
 metadata/_custom_type_script = "uid://csx7ka6k5q7bc"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1857512453]
-
-[node name="vallatext" type="Label" parent="CanvasLayer" unique_id=1567618126]
+[node name="vallatext" type="Label" parent="." unique_id=1567618126]
 unique_name_in_owner = true
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -84.0
-offset_top = -52.0
-offset_right = 49.0
-offset_bottom = -38.0
+offset_left = -72.0
+offset_top = -51.0
+offset_right = 61.0
+offset_bottom = -37.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 8

@@ -15,3 +15,8 @@ shader_parameter/center = Vector2(3.045, -1.87)
 material = SubResource("ShaderMaterial_t3nrl")
 position = Vector2(230, 117)
 texture = ExtResource("2_3rriv")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1688472258]
+material = SubResource("ShaderMaterial_t3nrl")
+position = Vector2(230, 117)
+texture = ExtResource("2_3rriv")
