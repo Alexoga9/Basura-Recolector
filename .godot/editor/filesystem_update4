@@ -17,3 +17,4 @@ res://Entidades/Estaciones/Estación Rota/estación_rota.tscn
 res://Assets/entidades/OutlineMaterial.tres
 res://Escenarios/mundo.tscn
 res://Entidades/Jugador/Jugador.tscn
+res://Commons/Componentes/Movimiento/Vectores/MovimientoComponente.gd
