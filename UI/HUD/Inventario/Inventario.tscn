@@ -135,6 +135,7 @@ show_percentage = false
 script = ExtResource("5_1l1l3")
 
 [node name="Label Con Sombreado" parent="MarginContainer/VBoxContainer" unique_id=2006444608 instance=ExtResource("8_2h4ip")]
+visible = false
 layout_mode = 2
 text = "Main Entrance"
 
@@ -194,6 +195,7 @@ offset_bottom = 11.0
 text = "Cleared"
 
 [node name="Label Con Sombreado" parent="MarginContainer/VBoxContainer/Cleared" unique_id=1172047457 instance=ExtResource("8_2h4ip")]
+visible = false
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0

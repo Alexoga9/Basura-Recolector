@@ -104,7 +104,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Idle",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -144,7 +144,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walk",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_frfy0"]
@@ -216,7 +216,7 @@ debug_color = Color(1.3536774e-07, 0.102459945, 0.126971, 0.41960785)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1128054079]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_i0bg8")
-animation = &"Idle"
+animation = &"Walk"
 offset = Vector2(0, -10)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=664749476 groups=["Camara"]]
