@@ -563,7 +563,7 @@ position = Vector2(272, 143)
 
 [node name="Valla" parent="Objetos Ambientales" unique_id=1538247553 instance=ExtResource("13_cr5ey")]
 y_sort_enabled = true
-position = Vector2(135, -231)
+position = Vector2(135, -230)
 collision_mask = 0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2010886703]

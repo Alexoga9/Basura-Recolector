@@ -10,4 +10,7 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
+res://Escenarios/prueba de cambio de sprite/valla.gd
 res://Escenarios/mundo.tscn
+res://Escenarios/shine/shining.tscn
+res://Escenarios/shine/shining.gdshader

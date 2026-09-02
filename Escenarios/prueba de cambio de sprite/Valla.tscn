@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://dunrj315vwhow" path="res://Escenarios/prueba de cambio de sprite/valla_resaltado_componente.gd" id="4_qcp71"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qcp71"]
-size = Vector2(116.666046, 5)
+size = Vector2(141.66592, 5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ob1kn"]
 size = Vector2(6.459553, 7.897436)
@@ -62,7 +62,7 @@ shape = SubResource("RectangleShape2D_ob1kn")
 [node name="puerta" type="AnimatedSprite2D" parent="." unique_id=1851487843]
 unique_name_in_owner = true
 position = Vector2(170.83249, 6)
-scale = Vector2(4.1510525, 1)
+scale = Vector2(4.4270616, 1)
 sprite_frames = SubResource("SpriteFrames_qcp71")
 animation = &"idle"
 
@@ -76,6 +76,24 @@ script = ExtResource("4_qcp71")
 trigger_area = NodePath("../../Trigger Jugador")
 e_sprite = NodePath("../E sprite")
 metadata/_custom_type_script = "uid://csx7ka6k5q7bc"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1857512453]
+
+[node name="vallatext" type="Label" parent="CanvasLayer" unique_id=1567618126]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.0
+offset_top = -52.0
+offset_right = 49.0
+offset_bottom = -38.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 1
 
 [connection signal="body_entered" from="Trigger Jugador" to="." method="_on_trigger_jugador_body_entered"]
 [connection signal="body_entered" from="Trigger Jugador" to="puerta/ResaltadoComponente" method="_on_trigger_jugador_body_entered"]

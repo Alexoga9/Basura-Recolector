@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://hwx6xjgctfqk"]
+
+[ext_resource type="Shader" uid="uid://dpxr3nn226xrs" path="res://Escenarios/shine/shining.gdshader" id="1_uw6n0"]
+[ext_resource type="Texture2D" uid="uid://e7kokadv3aib" path="res://Assets/icon.svg" id="2_3rriv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t3nrl"]
+shader = ExtResource("1_uw6n0")
+shader_parameter/angle = -0.74
+shader_parameter/thickness = 0.3
+shader_parameter/center = Vector2(3.045, -1.87)
+
+[node name="Shining" type="Node2D" unique_id=1294372062]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1082745254]
+material = SubResource("ShaderMaterial_t3nrl")
+position = Vector2(230, 117)
+texture = ExtResource("2_3rriv")
