@@ -173,6 +173,7 @@ show_percentage = false
 
 [node name="Timer energia" type="Timer" parent="Energia/BarraEnergia" unique_id=921424741]
 unique_name_in_owner = true
+wait_time = 2.0
 one_shot = true
 
 [node name="TextureRect2" type="TextureRect" parent="Energia" unique_id=890730327]

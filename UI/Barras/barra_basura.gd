@@ -4,11 +4,12 @@ extends BarraDeProgreso
 @onready var timer: Timer = %"Timer basura"
 
 
-func _ready():
-	Inventario.slot_updated.connect(_on_value_changed)
+#func _ready():
+	#Inventario.slot_updated.connect(_on_value_changed)
 
 
-func _on_value_changed(nombre, value):
+# argumento: nombre
+func _on_value_changed(value):
 	#print("timer iniciado")
 	timer.start()
 

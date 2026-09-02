@@ -18,3 +18,8 @@ res://Assets/entidades/OutlineMaterial.tres
 res://Escenarios/mundo.tscn
 res://Entidades/Jugador/Jugador.tscn
 res://Commons/Componentes/Movimiento/Vectores/MovimientoComponente.gd
+res://UI/Barras/barras_hud.tscn
+res://UI/Barras/barra_de_progreso.gd
+res://UI/Barras/barra_basura.gd
+res://UI/Barras/Barras HUD.gd
+res://UI/Barras/barra_energia.gd
