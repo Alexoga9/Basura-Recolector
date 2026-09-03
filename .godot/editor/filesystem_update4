@@ -1,4 +1,5 @@
-res://UI/HUD/Inventario/Slots Inventario/slot_de_inventario.tscn
+res://UI/Barras/Barras HUD.gd
+res://UI/Barras/barras_hud.tscn
 res://UI/Theme/Tienda.tres
 res://UI/Theme/shaders/label2.gdshader
 res://Entidades/Estaciones/Tienda/Outline.gdshader
@@ -12,14 +13,5 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
-res://UI/HUD/Inventario/Inventario.tscn
-res://Entidades/Estaciones/Estación Rota/estación_rota.tscn
-res://Assets/entidades/OutlineMaterial.tres
-res://Escenarios/mundo.tscn
-res://Entidades/Jugador/Jugador.tscn
-res://Commons/Componentes/Movimiento/Vectores/MovimientoComponente.gd
-res://UI/Barras/barras_hud.tscn
-res://UI/Barras/barra_de_progreso.gd
-res://UI/Barras/barra_basura.gd
-res://UI/Barras/Barras HUD.gd
 res://UI/Barras/barra_energia.gd
+res://UI/Barras/barra_basura.gd

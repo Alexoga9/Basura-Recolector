@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://dmdfmna6o8ndc" path="res://UI/Barras/barra_basura.gd" id="5_yvp2q"]
 [ext_resource type="Texture2D" uid="uid://c8xapo1ps5pwt" path="res://Assets/UI/barra/icono basura barra.png" id="6_6sjcf"]
 [ext_resource type="Texture2D" uid="uid://cg40f2x5atd3o" path="res://Assets/UI/barra completado nivel.png" id="6_tuoc7"]
+[ext_resource type="Script" uid="uid://d3ixr7t11n000" path="res://UI/Barras/barra_de_progreso.gd" id="8_tuoc7"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6sjcf"]
 
@@ -107,7 +108,7 @@ show_percentage = false
 script = ExtResource("5_yvp2q")
 metadata/_custom_type_script = "uid://d3ixr7t11n000"
 
-[node name="Barra secundaria basura" type="ProgressBar" parent="Basura/BarraBasura" unique_id=413225452]
+[node name="Barra secundaria basura" type="ProgressBar" parent="Basura/BarraBasura" unique_id=305095055]
 unique_name_in_owner = true
 z_index = -1
 clip_contents = true
@@ -121,6 +122,8 @@ theme_override_styles/background = SubResource("StyleBoxTexture_22mrk")
 theme_override_styles/fill = SubResource("StyleBoxTexture_6250p")
 step = 1.0
 show_percentage = false
+script = ExtResource("8_tuoc7")
+metadata/_custom_type_script = "uid://d3ixr7t11n000"
 
 [node name="Timer basura" type="Timer" parent="Basura/BarraBasura" unique_id=1810799188]
 unique_name_in_owner = true
@@ -157,7 +160,7 @@ show_percentage = false
 script = ExtResource("1_hihnk")
 metadata/_custom_type_script = "uid://d3ixr7t11n000"
 
-[node name="Barra secundaria energia" type="ProgressBar" parent="Energia/BarraEnergia" unique_id=1161429240]
+[node name="Barra secundaria energia" type="ProgressBar" parent="Energia/BarraEnergia" unique_id=415167305]
 unique_name_in_owner = true
 z_index = -1
 layout_mode = 1
@@ -168,8 +171,9 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/background = SubResource("StyleBoxTexture_dptl3")
 theme_override_styles/fill = SubResource("StyleBoxTexture_6sjcf")
-step = 1.0
 show_percentage = false
+script = ExtResource("8_tuoc7")
+metadata/_custom_type_script = "uid://d3ixr7t11n000"
 
 [node name="Timer energia" type="Timer" parent="Energia/BarraEnergia" unique_id=921424741]
 unique_name_in_owner = true

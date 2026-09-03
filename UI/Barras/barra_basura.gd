@@ -1,6 +1,6 @@
 extends BarraDeProgreso
 
-@onready var barra_secundaria_basura = %"Barra secundaria basura"
+@onready var barra_secundaria_basura: BarraDeProgreso = %"Barra secundaria basura"
 @onready var timer: Timer = %"Timer basura"
 
 
@@ -24,5 +24,6 @@ func _on_changed():
 
 
 func datos_barra_secundaria():
-	barra_secundaria_basura.value = valor_actual
-	barra_secundaria_basura.max_value = valor_max
+	#await get_tree().create_timer(2.0).timeout
+	barra_secundaria_basura.valor_actual = lerp(barra_secundaria_basura.valor_actual, valor_actual, 0.5)
+	barra_secundaria_basura.valor_max = lerp(barra_secundaria_basura.valor_max, valor_max, 0.5)

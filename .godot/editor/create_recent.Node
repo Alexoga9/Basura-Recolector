@@ -1,3 +1,4 @@
+BarraDeProgreso
 Label
 Sprite2D
 NinePatchRect
@@ -11,4 +12,3 @@ ResaltadoComponente
 CollisionShape2D
 Area2D
 StaticBody2D
-MarginContainer
