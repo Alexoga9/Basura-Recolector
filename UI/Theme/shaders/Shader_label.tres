@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dew1tge6q1bnv"]
+
+[ext_resource type="Shader" uid="uid://cd2fx6ghp51t" path="res://UI/Theme/shaders/label2.gdshader" id="1_dwf11"]
+
+[resource]
+shader = ExtResource("1_dwf11")
+shader_parameter/outline_color = Color(0, 0, 0, 1)

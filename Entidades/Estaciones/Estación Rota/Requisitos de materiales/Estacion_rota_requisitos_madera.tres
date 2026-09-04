@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MaterialesNecesarios" format=3 uid="uid://cn42hyavquied"]
+
+[ext_resource type="Texture2D" uid="uid://d0v6krou2ook8" path="res://Assets/Inventario/madera.png" id="1_45q6g"]
+[ext_resource type="Script" uid="uid://pqkfc017cxy6" path="res://Recursos/materiales_necesarios.gd" id="2_gq3i5"]
+
+[resource]
+script = ExtResource("2_gq3i5")
+cantidad_necesaria = 2
+imagen = ExtResource("1_45q6g")
+metadata/_custom_type_script = "uid://pqkfc017cxy6"

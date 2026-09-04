@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://dmdfmna6o8ndc" path="res://UI/Barras/barra_basura.gd" id="5_yvp2q"]
 [ext_resource type="Texture2D" uid="uid://c8xapo1ps5pwt" path="res://Assets/UI/barra/icono basura barra.png" id="6_6sjcf"]
 [ext_resource type="Texture2D" uid="uid://cg40f2x5atd3o" path="res://Assets/UI/barra completado nivel.png" id="6_tuoc7"]
+[ext_resource type="Script" uid="uid://d3ixr7t11n000" path="res://UI/Barras/barra_de_progreso.gd" id="8_tuoc7"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6sjcf"]
 
@@ -16,6 +17,7 @@ region = Rect2(8, 80, 72, 16)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2orqm"]
 texture = SubResource("AtlasTexture_tuoc7")
+region_rect = Rect2(0, 0.1829853, 72, 13.767824)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bb6df"]
 atlas = ExtResource("2_4x5sh")
@@ -30,7 +32,7 @@ region = Rect2(8, 80, 72, 16)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6250p"]
 texture = SubResource("AtlasTexture_dptl3")
-region_rect = Rect2(0, 0, 72, 19)
+region_rect = Rect2(0, 0.17003727, 72, 13.818254)
 modulate_color = Color(0, 0.5505359, 0.92170787, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_22mrk"]
@@ -41,10 +43,11 @@ region = Rect2(0, 0, 42, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4x5sh"]
 atlas = ExtResource("2_4x5sh")
-region = Rect2(8, 64, 72, 16)
+region = Rect2(8, 64.98008, 72, 11.021248)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bb6df"]
 texture = SubResource("AtlasTexture_4x5sh")
+region_rect = Rect2(0, -1.2075214, 72, 14.221708)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6sjcf"]
 load_path = "res://.godot/imported/barras.png-4a80219611d372fa2e756a33b57a0644.ctex"
@@ -62,7 +65,7 @@ region = Rect2(8, 64, 72, 16)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6sjcf"]
 texture = SubResource("AtlasTexture_yvp2q")
-region_rect = Rect2(0, 0, 72, 16)
+region_rect = Rect2(0, -0.2697258, 72, 14.324356)
 modulate_color = Color(1, 0.4132895, 0.5624667, 1)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yvp2q"]
@@ -102,12 +105,11 @@ size_flags_horizontal = 3
 size_flags_vertical = 8
 theme_override_styles/background = SubResource("StyleBoxEmpty_6sjcf")
 theme_override_styles/fill = SubResource("StyleBoxTexture_2orqm")
-step = 1.0
 show_percentage = false
 script = ExtResource("5_yvp2q")
 metadata/_custom_type_script = "uid://d3ixr7t11n000"
 
-[node name="Barra secundaria basura" type="ProgressBar" parent="Basura/BarraBasura" unique_id=413225452]
+[node name="Barra secundaria basura" type="ProgressBar" parent="Basura/BarraBasura" unique_id=305095055]
 unique_name_in_owner = true
 z_index = -1
 clip_contents = true
@@ -119,8 +121,9 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/background = SubResource("StyleBoxTexture_22mrk")
 theme_override_styles/fill = SubResource("StyleBoxTexture_6250p")
-step = 1.0
 show_percentage = false
+script = ExtResource("8_tuoc7")
+metadata/_custom_type_script = "uid://d3ixr7t11n000"
 
 [node name="Timer basura" type="Timer" parent="Basura/BarraBasura" unique_id=1810799188]
 unique_name_in_owner = true
@@ -152,12 +155,11 @@ size_flags_horizontal = 3
 size_flags_vertical = 8
 theme_override_styles/background = SubResource("StyleBoxEmpty_7ek3s")
 theme_override_styles/fill = SubResource("StyleBoxTexture_bb6df")
-step = 1.0
 show_percentage = false
 script = ExtResource("1_hihnk")
 metadata/_custom_type_script = "uid://d3ixr7t11n000"
 
-[node name="Barra secundaria energia" type="ProgressBar" parent="Energia/BarraEnergia" unique_id=1161429240]
+[node name="Barra secundaria energia" type="ProgressBar" parent="Energia/BarraEnergia" unique_id=415167305]
 unique_name_in_owner = true
 z_index = -1
 layout_mode = 1
@@ -168,11 +170,13 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/background = SubResource("StyleBoxTexture_dptl3")
 theme_override_styles/fill = SubResource("StyleBoxTexture_6sjcf")
-step = 1.0
 show_percentage = false
+script = ExtResource("8_tuoc7")
+metadata/_custom_type_script = "uid://d3ixr7t11n000"
 
 [node name="Timer energia" type="Timer" parent="Energia/BarraEnergia" unique_id=921424741]
 unique_name_in_owner = true
+wait_time = 2.0
 one_shot = true
 
 [node name="TextureRect2" type="TextureRect" parent="Energia" unique_id=890730327]

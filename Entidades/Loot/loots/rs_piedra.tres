@@ -11,5 +11,6 @@ nombre = "piedra"
 audio = ExtResource("1_hy68u")
 sprite = ExtResource("3_x1moo")
 cantidad_maxima = 10
+tipo_de_elemento = 1
 valor = 1
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"

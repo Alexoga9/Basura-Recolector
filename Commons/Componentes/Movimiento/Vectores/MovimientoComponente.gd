@@ -6,6 +6,8 @@ enum TipoCuerpo {CHARACTER_BODY, AREA}
 
 @export_category("Movimiento")
 @export var velocidad_movimiento: float = 40.0
+@export var aceleracion: float = 12.5
+@export var friccion: float = 4.5
 @export var velocidad_rotacion: float = (TAU * 2)
 
 @export_category("Referencias")
@@ -50,15 +52,16 @@ func movimiento(direccion: Vector2, delta: float):
 	# Aplicar movimiento según el tipo de cuerpo
 	match tipo_cuerpo:
 		TipoCuerpo.CHARACTER_BODY:
-			mover_character_body(direccion)
+			mover_character_body(direccion, delta)
 
 		TipoCuerpo.AREA:
 			mover_con_delta(direccion, delta)
 
 
-func mover_character_body(direccion: Vector2):
+func mover_character_body(direccion: Vector2, delta:float):
 	if body_character:
-		body_character.velocity = direccion.normalized() * velocidad_movimiento
+		var peso_de_velocidad: float = delta * (aceleracion if direccion else friccion)
+		body_character.velocity = lerp(body_character.velocity, (direccion.normalized() * velocidad_movimiento), peso_de_velocidad)
 		body_character.move_and_slide()
 
 

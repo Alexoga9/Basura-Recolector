@@ -14,13 +14,15 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	igualar_barra_energia()
+	igualar_barra_energia(null)
 	igualar_barra_basura()
 
 
-func igualar_barra_energia():
+func igualar_barra_energia(_energia):
 	barra_energia.valor_max = jugador.energia_componente.energia_maxima
 	barra_energia.valor_actual = jugador.energia_componente.energia
+	#await get_tree().create_timer(1.5).timeout
+	barra_energia.datos_barra_secundaria()
 
 
 func igualar_barra_basura():

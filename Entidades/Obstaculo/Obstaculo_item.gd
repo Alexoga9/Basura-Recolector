@@ -8,7 +8,7 @@ class_name Obstaculo extends StaticBody2D
 @onready var t_recogida: TRecogida = %TRecogida
 
 # 📌 EL COMPONENTE DE APILAMIENTO
-@onready var componente_apilable: ComponenteApilable = %ComponenteApilable
+#@onready var componente_apilable: ComponenteApilable = %ComponenteApilable
 
 @export var data: LootDefinicion
 
@@ -27,7 +27,7 @@ var valor: int
 
 func _ready():
 	iniciar_valores()
-	SignalBus.recoger_basura_automatica.connect(recibir_input)
+	SignalBus.interaccion.connect(recibir_input)
 
 
 func recibir_input():

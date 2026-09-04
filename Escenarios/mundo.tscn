@@ -5,15 +5,17 @@
 [ext_resource type="TileSet" uid="uid://cicmnmruhpe23" path="res://Escenarios/Otoño/TS_Otoño.tres" id="2_qmk2e"]
 [ext_resource type="PackedScene" uid="uid://cd6lygsc501ww" path="res://Entidades/Loot/Loot.tscn" id="3_tgroa"]
 [ext_resource type="Resource" uid="uid://dmky67t6umj3u" path="res://Entidades/Loot/loots/rs_piedra.tres" id="4_2fd2i"]
+[ext_resource type="Resource" uid="uid://5k76mbciamak" path="res://Entidades/Loot/loots/re_madera.tres" id="5_f4ey0"]
 [ext_resource type="PackedScene" uid="uid://boa7rlwdurt22" path="res://Entidades/Basura/Basura.tscn" id="6_2fd2i"]
 [ext_resource type="PackedScene" uid="uid://d2r5u0lpmux3m" path="res://Entidades/Obstaculo/Obstaculo.tscn" id="6_a5bk4"]
 [ext_resource type="Resource" uid="uid://dd3e44dslqngq" path="res://Entidades/Basura/Basura_pesada.tres" id="6_qmk2e"]
 [ext_resource type="PackedScene" uid="uid://br4shbrxkwxgj" path="res://UI/Tienda/tienda_ui.tscn" id="7_8njad"]
-[ext_resource type="PackedScene" uid="uid://bujsrbbq0elhi" path="res://Entidades/Tienda/tienda.tscn" id="8_8njad"]
-[ext_resource type="PackedScene" uid="uid://b8u0pprb4t2sj" path="res://Entidades/Trituradora/trituradora.tscn" id="8_u72it"]
+[ext_resource type="PackedScene" uid="uid://bujsrbbq0elhi" path="res://Entidades/Estaciones/Tienda/tienda.tscn" id="8_8njad"]
+[ext_resource type="PackedScene" uid="uid://b8u0pprb4t2sj" path="res://Entidades/Estaciones/Trituradora/trituradora.tscn" id="8_u72it"]
 [ext_resource type="Texture2D" uid="uid://dmge206god5ho" path="res://Escenarios/Otoño/Basic Tiles 4 (Trees & Bushes).png" id="10_a5bk4"]
 [ext_resource type="PackedScene" uid="uid://bqxfu5knf0pw2" path="res://UI/HUD/hud.tscn" id="10_qc3uw"]
-[ext_resource type="PackedScene" uid="uid://cjlmg6cpg7g6g" path="res://Entidades/Maquina Expendedora/MaquinaExpendedora.tscn" id="11_tyb7f"]
+[ext_resource type="PackedScene" uid="uid://cjlmg6cpg7g6g" path="res://Entidades/Estaciones/Maquina Expendedora/MaquinaExpendedora.tscn" id="11_tyb7f"]
+[ext_resource type="PackedScene" uid="uid://dkwgdyg1ccod6" path="res://Entidades/Estaciones/Estación Rota/estación_rota.tscn" id="11_yq6pm"]
 [ext_resource type="PackedScene" uid="uid://3ibfxmhonqlb" path="res://Utilidades/Sistemas/spawner.tscn" id="12_sexdp"]
 [ext_resource type="PackedScene" uid="uid://c1kcmjbhf62q1" path="res://Escenarios/prueba de cambio de sprite/Valla.tscn" id="13_cr5ey"]
 [ext_resource type="TileSet" uid="uid://bp6rx8j03kyjv" path="res://Escenarios/Oficial/TileMapOficial.tres" id="17_yq6pm"]
@@ -397,10 +399,11 @@ position = Vector2(535, 281)
 
 [node name="Basura5" parent="Objetos Ambientales/Entiddaes/Loots" unique_id=1782321174 instance=ExtResource("3_tgroa")]
 position = Vector2(504, 364)
-data = ExtResource("4_2fd2i")
+data = ExtResource("5_f4ey0")
 
 [node name="Basura6" parent="Objetos Ambientales/Entiddaes/Loots" unique_id=1459569408 instance=ExtResource("3_tgroa")]
 position = Vector2(504, 336)
+data = ExtResource("5_f4ey0")
 
 [node name="Basura7" parent="Objetos Ambientales/Entiddaes/Loots" unique_id=1284606587 instance=ExtResource("3_tgroa")]
 position = Vector2(504, 308)
@@ -471,18 +474,21 @@ position = Vector2(505, 266)
 
 [node name="Bolsas de basura" type="Node" parent="Objetos Ambientales/Entiddaes" unique_id=300767396 groups=["Bolsas de Basura Pool"]]
 
-[node name="Puestos" type="Node2D" parent="Objetos Ambientales" unique_id=889237100]
+[node name="Estaciones" type="Node2D" parent="Objetos Ambientales" unique_id=889237100 groups=["Estaciones"]]
 y_sort_enabled = true
 position = Vector2(168, -3)
 
-[node name="Tienda" parent="Objetos Ambientales/Puestos" unique_id=1450673076 instance=ExtResource("8_8njad")]
+[node name="Tienda" parent="Objetos Ambientales/Estaciones" unique_id=1450673076 instance=ExtResource("8_8njad")]
 position = Vector2(-91, -48)
 
-[node name="Trituradora" parent="Objetos Ambientales/Puestos" unique_id=1291557497 instance=ExtResource("8_u72it")]
+[node name="Trituradora" parent="Objetos Ambientales/Estaciones" unique_id=1291557497 instance=ExtResource("8_u72it")]
 position = Vector2(78, -52)
 
-[node name="MaquinaExpendedora" parent="Objetos Ambientales/Puestos" unique_id=578851082 instance=ExtResource("11_tyb7f")]
+[node name="MaquinaExpendedora" parent="Objetos Ambientales/Estaciones" unique_id=578851082 instance=ExtResource("11_tyb7f")]
 position = Vector2(-5, -40)
+
+[node name="Estación Rota" parent="Objetos Ambientales/Estaciones" unique_id=121739820 instance=ExtResource("11_yq6pm")]
+position = Vector2(-216, 3)
 
 [node name="Arboles" type="TileMapLayer" parent="Objetos Ambientales" unique_id=1521611397]
 y_sort_enabled = true
@@ -500,7 +506,6 @@ y_sort_enabled = true
 [node name="Spawner" parent="Objetos Ambientales/Spawners" unique_id=598117939 node_paths=PackedStringArray("point_1", "point_2") instance=ExtResource("12_sexdp")]
 y_sort_enabled = true
 position = Vector2(95, 59)
-cantidad_a_spawnear = 200
 point_1 = NodePath("Marker2D")
 point_2 = NodePath("Marker2D2")
 

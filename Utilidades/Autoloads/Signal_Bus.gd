@@ -12,11 +12,14 @@ signal input_movimiento
 signal interaccion
 
 # Input
-signal recoger_basura_automatica(bool)
+signal input_tab
 
 # Basura
 signal basura_recogida
 signal zona_limpida(porcentaje: int)
+
+# Recogibles
+signal material_recogido
 
 # UI
 # # Tienda 
@@ -34,3 +37,6 @@ signal mostrar_hud
 signal mostrar_menu_principal
 
 # # Opciones
+
+# # Estacion Rota
+signal actualizar_estacion_rota
