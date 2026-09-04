@@ -1,3 +1,5 @@
+TileMapLayer
+Node2D
 ShapeCast2D
 Button
 Area2D
@@ -6,10 +8,8 @@ CollisionShape2D
 RigidBody2D
 Label
 Marker2D
-Node2D
 Control
 TweenRebote
 Node
 TRecogida
 AudioStreamPlayer
-ResaltadoComponente

@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://cjlmg6cpg7g6g" path="res://Entidades/Maquina Expendedora/MaquinaExpendedora.tscn" id="11_tyb7f"]
 [ext_resource type="PackedScene" uid="uid://3ibfxmhonqlb" path="res://Utilidades/Sistemas/spawner.tscn" id="12_sexdp"]
 [ext_resource type="PackedScene" uid="uid://c1kcmjbhf62q1" path="res://Escenarios/prueba de cambio de sprite/Valla.tscn" id="13_cr5ey"]
+[ext_resource type="TileSet" uid="uid://bp6rx8j03kyjv" path="res://Escenarios/Oficial/TileMapOficial.tres" id="17_yq6pm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qmk2e"]
 texture = ExtResource("10_a5bk4")
@@ -523,3 +524,8 @@ z_index = -1
 [node name="TiendaUi" parent="CanvasLayer" unique_id=1611773581 instance=ExtResource("7_8njad")]
 visible = false
 z_index = 4
+
+[node name="Capa Suelo Oficial" type="Node2D" parent="." unique_id=1085137541]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Capa Suelo Oficial" unique_id=2089658221]
+tile_set = ExtResource("17_yq6pm")

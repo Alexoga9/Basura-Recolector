@@ -10,3 +10,7 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
+res://Escenarios/Oficial/TileMapOficial.tres
+res://Entidades/Maquina Expendedora/MaquinaExpendedora.tscn
+res://Assets/entidades/OutlineMaterial.tres
+res://Utilidades/Sistemas/spawner.gd
