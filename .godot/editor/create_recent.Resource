@@ -1,3 +1,4 @@
+Resource
 ShaderMaterial
 Shader
 LootDefinicion

@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://dunrj315vwhow" path="res://Escenarios/prueba de cambio de sprite/valla_resaltado_componente.gd" id="4_qcp71"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qcp71"]
-size = Vector2(30, 7)
+size = Vector2(32, 7)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wt0fl"]
 size = Vector2(7.9317603, 43.794876)
@@ -73,18 +73,15 @@ metadata/_custom_type_script = "uid://csx7ka6k5q7bc"
 
 [node name="vallatext" type="Label" parent="." unique_id=1567618126]
 unique_name_in_owner = true
-anchors_preset = 8
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -72.0
-offset_top = -51.0
-offset_right = 61.0
-offset_bottom = -37.0
+offset_left = -66.0
+offset_top = -56.0
+offset_right = 67.0
+offset_bottom = -42.0
 grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 8
+size_flags_horizontal = 4
 size_flags_vertical = 1
 
 [connection signal="body_entered" from="Trigger Jugador" to="." method="_on_trigger_jugador_body_entered"]

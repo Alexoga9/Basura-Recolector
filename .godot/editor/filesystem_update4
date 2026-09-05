@@ -1,7 +1,5 @@
-res://Escenarios/mundo.tscn
+res://Escenarios/prueba de cambio de sprite/Valla.tscn
 res://UI/Theme/Tienda.tres
-res://UI/Theme/shaders/label2.gdshader
-res://Entidades/Estaciones/Tienda/Outline.gdshader
 res://Escenarios/Otoño/TS_Otoño.tres
 res://Entidades/Basura/Basura_pesada.tres
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
@@ -12,24 +10,11 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
-res://Assets/entidades/OutlineMaterial.tres
-res://Commons/Componentes/Input/InputComponente.gd
-res://Commons/Componentes/Movimiento/Vectores/MovimientoComponente.gd
-res://Entidades/Basura/Basura_item.gd
-res://Entidades/BolsaDeBasura/bolsa_de_basura.gd
-res://Entidades/Jugador/Jugador.gd
-res://Entidades/Loot/Loot_Item.gd
-res://Entidades/Loot/loots/rs_piedra.tres
-res://Entidades/Obstaculo/Obstaculo_item.gd
-res://Escenarios/prueba de cambio de sprite/valla.gd
-res://UI/Barras/barras_hud.tscn
-res://UI/Barras/barra_basura.gd
-res://UI/Barras/barra_de_progreso.gd
-res://UI/Barras/barra_energia.gd
-res://UI/HUD/Inventario/Slots Inventario/slot_de_inventario.gd
-res://UI/HUD/Inventario/Slots Inventario/slot_de_inventario.tscn
-res://Utilidades/Autoloads/Signal_Bus.gd
-res://Utilidades/Sistemas/spawner.gd
-res://Escenarios/prueba de cambio de sprite/Valla.tscn
-res://Escenarios/shine/shining.tscn
 res://Escenarios/shine/shining.gdshader
+res://Escenarios/mundo.tscn
+res://Escenarios/prueba de cambio de sprite/valla_resaltado_componente.gd
+res://Escenarios/prueba de cambio de sprite/ObjetoRestaurable.tscn
+res://Escenarios/prueba de cambio de sprite/objeto_restaurable.gd
+res://Escenarios/prueba de cambio de sprite/valla.gd
+res://Escenarios/prueba de cambio de sprite/cambioSprite.tscn
+res://Escenarios/prueba de cambio de sprite/spriteRestauracion.gd

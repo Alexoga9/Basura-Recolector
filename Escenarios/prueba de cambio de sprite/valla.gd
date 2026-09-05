@@ -37,7 +37,6 @@ func _al_alejarse(body: Node2D) -> void:
 		vallatext.hide()
 
 
-# 
 func _actualizar_progreso(nuevo_porcentaje: int) -> void:
 	porcentaje_actual = nuevo_porcentaje
 
