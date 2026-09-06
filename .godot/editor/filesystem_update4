@@ -40,3 +40,18 @@ res://UI/Theme/shaders/label_personalizado.tscn
 res://UI/Theme/shaders/Shader_label.tres
 res://Utilidades/Autoloads/Signal_Bus.gd
 res://Utilidades/Sistemas/spawner.gd
+res://Escenarios/mundo.tscn
+res://UI/Theme/Tienda.tres
+res://Entidades/Basura/Basura_pesada.tres
+res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_resistencia.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_cooldown.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_rango.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
+res://Escenarios/Otoño/TS_Otoño.tres
+res://Escenarios/prueba de cambio de sprite/Valla.tscn
+res://Escenarios/prueba de cambio de sprite/spriteRestauracion.gd
+res://Escenarios/prueba de cambio de sprite/valla.gd
