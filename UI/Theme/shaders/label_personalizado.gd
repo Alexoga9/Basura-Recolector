@@ -6,6 +6,7 @@ var hijo: Label
 
 func _ready():
 	label.text = text
+	float(2)
 
 
 func actualizar_labels(texto):

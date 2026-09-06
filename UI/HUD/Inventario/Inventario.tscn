@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://24iow8nw606a" path="res://UI/Theme/shaders/label_personalizado.tscn" id="8_2h4ip"]
 [ext_resource type="PackedScene" uid="uid://mn8abrepyvev" path="res://UI/Barras/barras_hud.tscn" id="8_2kcwo"]
 [ext_resource type="PackedScene" uid="uid://d2fe2drk13sjm" path="res://UI/HUD/Inventario/Slots Inventario/slot_de_dinero.tscn" id="9_2kcwo"]
+[ext_resource type="LabelSettings" uid="uid://crqcrwgjb38h3" path="res://UI/Theme/tipografia tienda.tres" id="9_8wy0j"]
 [ext_resource type="Texture2D" uid="uid://cj67bs1scsaiw" path="res://Assets/Inventario/moneda.png" id="10_l1s3s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vvi4h"]
@@ -127,10 +128,6 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1.0
-offset_top = -1.0
-offset_right = 1.0
-offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/background = SubResource("StyleBoxTexture_vvi4h")
@@ -188,6 +185,7 @@ unique_name_in_owner = true
 material = ExtResource("7_vvi4h")
 layout_mode = 2
 text = "Cleared"
+label_settings = ExtResource("9_8wy0j")
 
 [node name="Cleared" type="Label" parent="MarginContainer/VBoxContainer/Cleared" unique_id=1710346643]
 visible = false

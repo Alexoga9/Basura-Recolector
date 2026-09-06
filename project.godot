@@ -61,6 +61,10 @@ EntidadesBasuras=""
 
 [gui]
 
+theme/default_font_antialiasing=0
+theme/default_font_subpixel_positioning=0
+theme/default_font_multichannel_signed_distance_field=true
+theme/default_font_generate_mipmaps=true
 theme/custom="uid://ccuc20xm80owq"
 theme/custom_font="uid://dryil6kc3yx5s"
 
