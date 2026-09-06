@@ -53,71 +53,72 @@ theme_override_colors/scroll_hint_horizontal_color = Color(8.856058e-06, 0.86750
 theme_override_styles/panel = SubResource("StyleBoxFlat_6dplc")
 scroll_deadzone = 70
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer" unique_id=1078019514]
+[node name="Caja de compras" type="VBoxContainer" parent="MarginContainer/ScrollContainer" unique_id=1078019514]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Resistencia" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1967462824 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
+[node name="Resistencia" parent="MarginContainer/ScrollContainer/Caja de compras" unique_id=1967462824 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
 layout_mode = 2
 mejora = ExtResource("3_wwgnn")
 logica_mejora = NodePath("MejoraResistencia")
 
-[node name="MejoraResistencia" type="Node" parent="MarginContainer/ScrollContainer/VBoxContainer/Resistencia" unique_id=1497121177]
+[node name="MejoraResistencia" type="Node" parent="MarginContainer/ScrollContainer/Caja de compras/Resistencia" unique_id=1497121177]
 script = ExtResource("3_7a1nm")
 
-[node name="Cooldown" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1143511343 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
+[node name="Cooldown" parent="MarginContainer/ScrollContainer/Caja de compras" unique_id=1143511343 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
 layout_mode = 2
 mejora = ExtResource("5_52q4a")
 logica_mejora = NodePath("MejoraCooldown")
 
-[node name="MejoraCooldown" type="Node" parent="MarginContainer/ScrollContainer/VBoxContainer/Cooldown" unique_id=1193635210]
+[node name="MejoraCooldown" type="Node" parent="MarginContainer/ScrollContainer/Caja de compras/Cooldown" unique_id=1193635210]
 script = ExtResource("6_53afc")
 metadata/_custom_type_script = "uid://cp267s1mgfxd1"
 
-[node name="Rango" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1737779067 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
+[node name="Rango" parent="MarginContainer/ScrollContainer/Caja de compras" unique_id=1737779067 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
 layout_mode = 2
 mejora = ExtResource("7_3fi5j")
 logica_mejora = NodePath("Mejora Rango")
 
-[node name="Mejora Rango" type="Node" parent="MarginContainer/ScrollContainer/VBoxContainer/Rango" unique_id=848660148]
+[node name="Mejora Rango" type="Node" parent="MarginContainer/ScrollContainer/Caja de compras/Rango" unique_id=848660148]
 script = ExtResource("7_mnc04")
 metadata/_custom_type_script = "uid://cp267s1mgfxd1"
 
-[node name="Peso" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1425991459 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
+[node name="Peso" parent="MarginContainer/ScrollContainer/Caja de compras" unique_id=1425991459 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
 layout_mode = 2
 mejora = ExtResource("9_ng6pv")
 logica_mejora = NodePath("MejoraPeso")
 
-[node name="MejoraPeso" type="Node" parent="MarginContainer/ScrollContainer/VBoxContainer/Peso" unique_id=311806662]
+[node name="MejoraPeso" type="Node" parent="MarginContainer/ScrollContainer/Caja de compras/Peso" unique_id=311806662]
 script = ExtResource("8_53afc")
 data_basura = ExtResource("9_65riy")
 metadata/_custom_type_script = "uid://cp267s1mgfxd1"
 
-[node name="Lanzamiento" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=265702065 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
+[node name="Lanzamiento" parent="MarginContainer/ScrollContainer/Caja de compras" unique_id=265702065 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
 layout_mode = 2
 mejora = ExtResource("12_72a65")
 logica_mejora = NodePath("Mejora Lanzamiento")
 
-[node name="Mejora Lanzamiento" type="Node" parent="MarginContainer/ScrollContainer/VBoxContainer/Lanzamiento" unique_id=824670956]
+[node name="Mejora Lanzamiento" type="Node" parent="MarginContainer/ScrollContainer/Caja de compras/Lanzamiento" unique_id=824670956]
 script = ExtResource("10_p2tmy")
 metadata/_custom_type_script = "uid://cp267s1mgfxd1"
 
-[node name="Honguitos" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1081041739 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
+[node name="Honguitos" parent="MarginContainer/ScrollContainer/Caja de compras" unique_id=1081041739 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
 layout_mode = 2
 mejora = ExtResource("14_iqrif")
 logica_mejora = NodePath("MejoraHonguitos")
 
-[node name="MejoraHonguitos" type="Node" parent="MarginContainer/ScrollContainer/VBoxContainer/Honguitos" unique_id=250525938]
+[node name="MejoraHonguitos" type="Node" parent="MarginContainer/ScrollContainer/Caja de compras/Honguitos" unique_id=250525938]
 script = ExtResource("10_upi7f")
 honguito = ExtResource("11_upi7f")
 metadata/_custom_type_script = "uid://cp267s1mgfxd1"
 
-[node name="Fuerza" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1195401960 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
+[node name="Fuerza" parent="MarginContainer/ScrollContainer/Caja de compras" unique_id=1195401960 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
 layout_mode = 2
 mejora = ExtResource("17_0x7iy")
 logica_mejora = NodePath("MejoraFuerza")
 
-[node name="MejoraFuerza" type="Node" parent="MarginContainer/ScrollContainer/VBoxContainer/Fuerza" unique_id=447245579]
+[node name="MejoraFuerza" type="Node" parent="MarginContainer/ScrollContainer/Caja de compras/Fuerza" unique_id=447245579]
 script = ExtResource("12_2icyj")
 metadata/_custom_type_script = "uid://cp267s1mgfxd1"

@@ -1,5 +1,6 @@
-extends Control
+class_name TiendaUi extends Control
 
+@onready var caja_de_compras = %"Caja de compras"
 
 func _ready():
 	SignalBus.mostrar_tienda.connect(mostrar_tienda)
