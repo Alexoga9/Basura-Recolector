@@ -9,6 +9,7 @@
 [ext_resource type="FontFile" uid="uid://b0npykajpdagi" path="res://Assets/tipografia/HexFont16pix.ttf" id="7_be048"]
 [ext_resource type="AudioStream" uid="uid://cjghok5vlof2n" path="res://Assets/audio/drop-coin.mp3" id="7_vehtn"]
 [ext_resource type="FontVariation" uid="uid://ch3sj7u8tc2me" path="res://Assets/tipografia/FuenteOffset.tres" id="7_wbqoc"]
+[ext_resource type="FontFile" uid="uid://dryil6kc3yx5s" path="res://Assets/tipografia/DobleHex2.ttf" id="9_y73xl"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_y73xl"]
 shader = ExtResource("1_rs542")
@@ -27,6 +28,23 @@ font_size = 8
 font_color = Color(1, 1, 0.1254902, 1)
 outline_size = 2
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jb2wh"]
+font = ExtResource("9_y73xl")
+outline_color = Color(0, 0, 0, 1)
+stacked_outline_count = 1
+stacked_shadow_count = 5
+stacked_outline_0/size = 4
+stacked_outline_0/color = Color(0.23921569, 0.16078432, 0.21176471, 1)
+stacked_shadow_0/offset = Vector2(1, 1)
+stacked_shadow_0/color = Color(0.23921569, 0.16078432, 0.21176471, 1)
+stacked_shadow_1/offset = Vector2(1, -1)
+stacked_shadow_1/color = Color(0.23921569, 0.16078432, 0.21176471, 1)
+stacked_shadow_2/offset = Vector2(-1, 1)
+stacked_shadow_2/color = Color(0.23921569, 0.16078432, 0.21176471, 1)
+stacked_shadow_3/offset = Vector2(-1, -1)
+stacked_shadow_3/color = Color(0.23921569, 0.16078432, 0.21176471, 1)
+stacked_shadow_4/offset = Vector2(1, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_y73xl"]
 line_spacing = -4.0
@@ -188,10 +206,23 @@ vertical_alignment = 1
 
 [node name="boton" type="Button" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer" unique_id=257881978]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 15)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-text = "Button"
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/boton" unique_id=1385938127]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -21.0
+offset_right = 21.0
+offset_bottom = 12.0
+grow_horizontal = 2
+text = "Comprar"
+label_settings = SubResource("LabelSettings_jb2wh")
+horizontal_alignment = 1
 
 [node name="audio" type="AudioStreamPlayer" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/boton" unique_id=1129363895]
 unique_name_in_owner = true

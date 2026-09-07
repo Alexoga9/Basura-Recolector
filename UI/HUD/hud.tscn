@@ -1,7 +1,26 @@
 [gd_scene format=3 uid="uid://bqxfu5knf0pw2"]
 
 [ext_resource type="Script" uid="uid://cf03u1gcofqth" path="res://UI/HUD/hud.gd" id="1_ia7gp"]
+[ext_resource type="FontFile" uid="uid://dryil6kc3yx5s" path="res://Assets/tipografia/DobleHex2.ttf" id="2_te8l2"]
 [ext_resource type="PackedScene" uid="uid://c60fm7nwe6rer" path="res://UI/HUD/Pausa/pausa.tscn" id="6_dhie7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qdh7y"]
+font = ExtResource("2_te8l2")
+font_size = 8
+outline_color = Color(0, 0, 0, 1)
+stacked_outline_count = 1
+stacked_shadow_count = 5
+stacked_outline_0/size = 4
+stacked_outline_0/color = Color(0.23921569, 0.16078432, 0.21176471, 1)
+stacked_shadow_0/offset = Vector2(1, 1)
+stacked_shadow_0/color = Color(0.23921569, 0.16078432, 0.21176471, 1)
+stacked_shadow_1/offset = Vector2(1, -1)
+stacked_shadow_1/color = Color(0.23921569, 0.16078432, 0.21176471, 1)
+stacked_shadow_2/offset = Vector2(-1, 1)
+stacked_shadow_2/color = Color(0.23921569, 0.16078432, 0.21176471, 1)
+stacked_shadow_3/offset = Vector2(-1, -1)
+stacked_shadow_3/color = Color(0.23921569, 0.16078432, 0.21176471, 1)
+stacked_shadow_4/offset = Vector2(1, 1)
 
 [node name="HUD" type="Control" unique_id=67010398 node_paths=PackedStringArray("panel_pausa")]
 layout_mode = 3
@@ -27,11 +46,23 @@ grow_vertical = 2
 theme_override_constants/margin_top = 5
 
 [node name="pausa" type="Button" parent="HudJuego" unique_id=885807864]
+custom_minimum_size = Vector2(23.925, 11.865)
 layout_mode = 2
 size_flags_horizontal = 2
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 8
+
+[node name="Label" type="Label" parent="HudJuego/pausa" unique_id=739312230]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -7.5
+offset_right = 7.5
+offset_bottom = 7.0
+grow_horizontal = 2
 text = "Pausa"
+label_settings = SubResource("LabelSettings_qdh7y")
 
 [node name="Pausa" parent="." unique_id=1451484787 instance=ExtResource("6_dhie7")]
 visible = false

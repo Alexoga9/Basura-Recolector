@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://bgn5c32aqoq6c" path="res://Entidades/Consumible/consumible.tscn" id="2_cglwt"]
 [ext_resource type="AudioStream" uid="uid://cjghok5vlof2n" path="res://Assets/audio/drop-coin.mp3" id="4_ev2gr"]
 [ext_resource type="Texture2D" uid="uid://i2ox5ksvvper" path="res://Escenarios/Oficial/Tilesheet Oficial.png" id="4_pv4qb"]
+[ext_resource type="Material" uid="uid://dh8ldak1ngnox" path="res://Assets/Shaders/Shader nuevo ajustable correctamente.tres" id="5_pprbo"]
 [ext_resource type="Script" uid="uid://dn4y66lee8nf6" path="res://Entidades/Estaciones/Tienda/Tienda_resaltado.gd" id="5_riqe1"]
-[ext_resource type="Material" uid="uid://dy8jul72maxm7" path="res://Assets/entidades/OutlineMaterial.tres" id="6_1j2q8"]
 [ext_resource type="PackedScene" uid="uid://b4nutgd65x10o" path="res://Entidades/genericos/e_sprite.tscn" id="7_ojreo"]
 [ext_resource type="Texture2D" uid="uid://ducslhwdi22ke" path="res://Assets/entidades/maquina expendedora/maquina expendedora sombra.png" id="9_riqe1"]
 
@@ -313,7 +313,7 @@ offset = Vector2(0, -16)
 [node name="ResaltadoComponente" type="Node" parent="AnimatedSprite2D" unique_id=472666808 node_paths=PackedStringArray("trigger_area", "e_sprite")]
 script = ExtResource("5_riqe1")
 trigger_area = NodePath("../../Trigger Jugador")
-material_outline = ExtResource("6_1j2q8")
+material_outline = ExtResource("5_pprbo")
 e_sprite = NodePath("../E sprite")
 metadata/_custom_type_script = "uid://csx7ka6k5q7bc"
 

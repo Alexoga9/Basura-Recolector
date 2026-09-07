@@ -13,3 +13,13 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerz
 res://Escenarios/Oficial/TileMapOficial.tres
 res://Escenarios/Otoño/TS_Otoño.tres
 res://Entidades/Jugador/Jugador.tscn
+res://Entidades/Estaciones/Maquina Expendedora/MaquinaExpendedora.tscn
+res://Assets/entidades/OutlineMaterial.tres
+res://Entidades/Estaciones/Maquina Expendedora/OtroShader otuline.gdshader
+res://Assets/Shaders/Shader nuevo ajustable correctamente.tres
+res://Escenarios/mundo.tscn
+res://UI/HUD/Inventario/Inventario.tscn
+res://UI/HUD/hud.tscn
+res://UI/Theme/tipografia tienda.tres
+res://UI/Theme/labelTheme.tres
+res://UI/Tienda/Panel tienda/panel_tienda.tscn
