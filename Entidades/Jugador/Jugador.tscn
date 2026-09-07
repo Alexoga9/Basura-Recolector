@@ -193,7 +193,7 @@ script = ExtResource("2_30dg6")
 [node name="MovimientoComponente" type="Node" parent="Componentes" unique_id=1645268274 node_paths=PackedStringArray("body_character")]
 unique_name_in_owner = true
 script = ExtResource("3_30dg6")
-velocidad_movimiento = 150.0
+velocidad_movimiento = 120.0
 friccion = 10.0
 body_character = NodePath("../..")
 
