@@ -2,6 +2,7 @@ class_name TiendaUi extends Control
 
 @onready var caja_de_compras = %"Caja de compras"
 
+
 func _ready():
 	SignalBus.mostrar_tienda.connect(mostrar_tienda)
 	SignalBus.ocultar_tienda.connect(ocultar_tienda)

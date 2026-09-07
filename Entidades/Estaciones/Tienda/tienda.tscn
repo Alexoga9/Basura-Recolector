@@ -90,6 +90,7 @@ debug_color = Color(0.26880014, 0.2435346, 0.23927382, 0.41960785)
 
 [node name="SpriteAnimated2D" type="AnimatedSprite2D" parent="." unique_id=763804110]
 y_sort_enabled = true
+material = ExtResource("4_5cjg1")
 position = Vector2(0, 16)
 sprite_frames = SubResource("SpriteFrames_jpx43")
 autoplay = "default"

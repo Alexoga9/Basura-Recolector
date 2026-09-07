@@ -64,21 +64,21 @@ gradient = SubResource("Gradient_vehtn")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_op4kc"]
 atlas = ExtResource("3_c2bmj")
-region = Rect2(0, 48, 16, 16)
+region = Rect2(37.009644, 3.9951653, 6.0153427, 40.023052)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ebfya"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_op4kc"]
 texture = SubResource("AtlasTexture_op4kc")
-texture_margin_top = 15.0
-texture_margin_bottom = 15.0
-draw_center = false
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wo7b4"]
-atlas = ExtResource("3_c2bmj")
-region = Rect2(16, 48, 16, 16)
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c2bmj"]
+load_path = "res://.godot/imported/sliders.png-91434a4362cbc38ae9ccc0d6dc2e96e3.ctex"
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ucro"]
-texture = SubResource("AtlasTexture_wo7b4")
-texture_margin_top = 17.0
+[sub_resource type="AtlasTexture" id="AtlasTexture_pc5ro"]
+atlas = SubResource("CompressedTexture2D_c2bmj")
+region = Rect2(37.009644, 3.9951653, 6.0153427, 40.023052)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yfof6"]
+texture = SubResource("AtlasTexture_pc5ro")
+modulate_color = Color(1, 1, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c2bmj"]
 content_margin_right = 16.0
@@ -114,9 +114,9 @@ Label/fonts/font = ExtResource("1_ce683")
 ProgressBar/styles/background = SubResource("StyleBoxFlat_ce683")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_op4kc")
 ScrollContainer/icons/scroll_hint_vertical = SubResource("GradientTexture1D_xf2eu")
-VScrollBar/styles/grabber = SubResource("StyleBoxTexture_ebfya")
-VScrollBar/styles/grabber_highlight = SubResource("StyleBoxTexture_8ucro")
-VScrollBar/styles/grabber_pressed = SubResource("StyleBoxTexture_8ucro")
+VScrollBar/styles/grabber = SubResource("StyleBoxTexture_op4kc")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxTexture_yfof6")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxTexture_yfof6")
 VScrollBar/styles/scroll = SubResource("StyleBoxFlat_c2bmj")
 VSlider/icons/grabber = SubResource("AtlasTexture_sn432")
 VSlider/icons/grabber_highlight = SubResource("AtlasTexture_ak11l")

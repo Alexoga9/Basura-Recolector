@@ -1,5 +1,6 @@
-res://UI/Tienda/Panel tienda/panel_tienda.tscn
+res://UI/Tienda/tienda_ui.tscn
 res://UI/Theme/Tienda.tres
+res://Entidades/Estaciones/Tienda/Outline.gdshader
 res://Entidades/Basura/Basura_pesada.tres
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_resistencia.tres
@@ -11,5 +12,4 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_hongu
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
 res://Escenarios/Oficial/TileMapOficial.tres
 res://Escenarios/Otoño/TS_Otoño.tres
-res://UI/Tienda/tienda_ui.tscn
-res://UI/Tienda/tienda_ui.gd
+res://Entidades/Jugador/Jugador.tscn
