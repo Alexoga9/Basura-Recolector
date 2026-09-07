@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://d3r43nmrn4esl" path="res://Assets/entidades/Valla/Ya.png" id="12_yq6pm"]
 [ext_resource type="PackedScene" uid="uid://c1kcmjbhf62q1" path="res://Escenarios/prueba de cambio de sprite/Valla.tscn" id="13_cr5ey"]
 [ext_resource type="TileSet" uid="uid://bp6rx8j03kyjv" path="res://Escenarios/Oficial/TileMapOficial.tres" id="17_yq6pm"]
+[ext_resource type="Script" uid="uid://bvc2tljjdumg8" path="res://Escenarios/save_game.gd" id="20_dyaad"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f4ey0"]
 texture = ExtResource("12_yq6pm")
@@ -257,3 +258,22 @@ offset_bottom = 6.0
 [node name="TiendaUi" parent="CanvasLayer" unique_id=1611773581 instance=ExtResource("7_8njad")]
 visible = false
 z_index = 4
+
+[node name="save" type="Button" parent="CanvasLayer" unique_id=842500442]
+offset_top = 43.0
+offset_right = 41.0
+offset_bottom = 61.0
+text = "Save"
+
+[node name="loand" type="Button" parent="CanvasLayer" unique_id=10865798]
+offset_top = 64.0
+offset_right = 38.0
+offset_bottom = 82.0
+text = "loand"
+
+[node name="Save_Game" type="Node" parent="." unique_id=901521549 node_paths=PackedStringArray("player")]
+script = ExtResource("20_dyaad")
+player = NodePath("../Objetos Ambientales/Jugador")
+
+[connection signal="button_down" from="CanvasLayer/save" to="Save_Game" method="Save_Game"]
+[connection signal="button_down" from="CanvasLayer/loand" to="Save_Game" method="Loand_Game"]

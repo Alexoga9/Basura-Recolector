@@ -1,4 +1,4 @@
-extends ProgressBar
+class_name Contador extends ProgressBar
 
 var cantidad_de_basuras: int
 var basuras_actuales: int

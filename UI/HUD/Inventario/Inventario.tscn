@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://24iow8nw606a" path="res://UI/Theme/shaders/label_personalizado.tscn" id="8_2h4ip"]
 [ext_resource type="PackedScene" uid="uid://mn8abrepyvev" path="res://UI/Barras/barras_hud.tscn" id="8_2kcwo"]
 [ext_resource type="PackedScene" uid="uid://d2fe2drk13sjm" path="res://UI/HUD/Inventario/Slots Inventario/slot_de_dinero.tscn" id="9_2kcwo"]
-[ext_resource type="Texture2D" uid="uid://cj67bs1scsaiw" path="res://Assets/Inventario/moneda.png" id="10_l1s3s"]
+[ext_resource type="Texture2D" uid="uid://cj67bs1scsaiw" path="res://Assets/Inventario/Moneda.png" id="10_l1s3s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vvi4h"]
 atlas = ExtResource("5_30hd7")
