@@ -7,4 +7,4 @@ extends Resource
 @export var Pbasura: int
 @export var Penergia: int
 @export var CantidadBasura: int
-@export var LotDefinicion: LootDefinicion
+@export var GuardadoInventario: Dictionary = {}

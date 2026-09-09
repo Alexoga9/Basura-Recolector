@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bxxsc2sciuuu3"]
 
-[ext_resource type="Script" uid="uid://dncwo2l5jfbkd" path="res://Escenarios/ContadorBasuras.gd" id="5_1l1l3"]
+[ext_resource type="Script" uid="uid://dncwo2l5jfbkd" path="res://Escenarios/ContadorUI.gd" id="5_1l1l3"]
 [ext_resource type="Texture2D" uid="uid://cg40f2x5atd3o" path="res://Assets/UI/barra completado nivel.png" id="5_30hd7"]
 [ext_resource type="PackedScene" uid="uid://ca3oktj6ebp0n" path="res://UI/HUD/Inventario/Slots Inventario/slot_de_inventario.tscn" id="7_l1s3s"]
 [ext_resource type="PackedScene" uid="uid://ddmkbldfr3fiv" path="res://UI/HUD/Menu Coleccionables/menu_coleccionables.tscn" id="7_lx5vd"]

@@ -1,4 +1,4 @@
-extends Node
+class_name inventario extends Node
 
 signal slot_updated(item_id: String, new_count: int)
 
@@ -59,3 +59,23 @@ func get_item_resource(item_id: String) -> LootDefinicion:
 		return backpack[item_id][1]
 
 	return null
+
+
+func get_backpack_data() -> Dictionary:
+	var data := {}
+
+	for item_id in backpack.keys():
+		data[item_id] = {
+			"cantidad": backpack[item_id][0],
+			"resource": backpack[item_id][1]
+		}
+
+	return data
+
+
+func load_backpack_data(data: Dictionary) -> void:
+	backpack.clear()
+	for item_id in data.keys():
+		var entry = data[item_id]
+		backpack[item_id] = [entry["cantidad"], entry["resource"]]
+		slot_updated.emit(item_id, entry["cantidad"])

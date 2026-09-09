@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://d0ghf1yof2o0g" path="res://Commons/Componentes/Core/EstadisticasComponente.gd" id="9_qtgc7"]
 [ext_resource type="Script" uid="uid://dqiir7o6l4sjy" path="res://Commons/Componentes/Radares/RadarComponente.gd" id="9_y6klq"]
 [ext_resource type="Script" uid="uid://rkib0lob5g81" path="res://Commons/Componentes/Radares/RadarBasura.gd" id="9_yyjpx"]
+[ext_resource type="Script" uid="uid://cb0k0n6eyh661" path="res://Commons/Componentes/Core/ContadorComponente.gd" id="10_8j4j1"]
 [ext_resource type="Script" uid="uid://n5y5s26fj4li" path="res://Commons/Componentes/Input/lanza_basura.gd" id="11_8xsec"]
 [ext_resource type="Script" uid="uid://b1prp2tpnsf1h" path="res://Entidades/Jugador/barra_cooldown.gd" id="13_8xsec"]
 [ext_resource type="Resource" uid="uid://besidf7otrxpl" path="res://Entidades/Basura/Bolsa de Basura/bolsa_de_basura.tres" id="13_orci8"]
@@ -206,6 +207,11 @@ data_template = ExtResource("13_orci8")
 unique_name_in_owner = true
 script = ExtResource("9_qtgc7")
 metadata/_custom_type_script = "uid://d0ghf1yof2o0g"
+
+[node name="ContadorComponente" type="Node" parent="Componentes" unique_id=1981039504]
+unique_name_in_owner = true
+script = ExtResource("10_8j4j1")
+metadata/_custom_type_script = "uid://cb0k0n6eyh661"
 
 [node name="Cuerpo" type="CollisionShape2D" parent="." unique_id=925831003]
 visible = false

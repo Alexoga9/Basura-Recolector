@@ -1,4 +1,4 @@
-extends Node2D
+class_name spawner extends Node2D
 
 @export var cantidad_a_spawnear: int = 10
 @export var point_1: Marker2D

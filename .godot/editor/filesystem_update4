@@ -1,0 +1,18 @@
+res://UI/HUD/Inventario/Inventario.tscn
+res://UI/Theme/Tienda.tres
+res://Escenarios/Otoño/TS_Otoño.tres
+res://Entidades/Basura/Basura_pesada.tres
+res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_resistencia.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_cooldown.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_rango.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
+res://Escenarios/Oficial/TileMapOficial.tres
+res://Commons/Componentes/Core/ContadorComponente.gd
+res://Escenarios/save_game.gd
+res://Utilidades/Autoloads/inventario.gd
+res://Recursos/save_data.gd
+res://Escenarios/mundo.tscn

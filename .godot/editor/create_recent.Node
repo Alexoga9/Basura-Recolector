@@ -1,5 +1,6 @@
-Button
+ContadorComponente
 Node
+Button
 Node2D
 TileMap
 BarraDeProgreso
@@ -11,4 +12,3 @@ VBoxContainer
 HBoxContainer
 OpenXRInteractionProfileEditor
 Control
-Panel
