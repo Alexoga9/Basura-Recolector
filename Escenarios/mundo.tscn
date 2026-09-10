@@ -84,6 +84,7 @@ tile_map_data = PackedByteArray("AAD4//7/AQAuAA0AAAD4//3/AQAuAAwAAAD4//z/AQAuAAw
 tile_set = ExtResource("17_yq6pm")
 
 [node name="TileMapLayer3" type="TileMapLayer" parent="Layers Oficiales/Terreno" unique_id=1319993932]
+visible = false
 tile_set = ExtResource("17_yq6pm")
 
 [node name="Objetos Ambientales" type="Node2D" parent="." unique_id=744996491]

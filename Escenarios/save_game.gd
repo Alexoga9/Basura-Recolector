@@ -12,14 +12,16 @@ func _ready() -> void:
 
 func Save_Game() -> void:
 	var data = SaveData.new()
-	var Spawner = spawner.new()
+	#var Spawner = spawner.new()
 
+	data.GuadarDinero = Dinero.dinero
 	data.playerPosition = player.global_position
 	data.Plimpieza = Porcentaje_Limpieza
 	data.GuardadoInventario = Inventario.get_backpack_data()
 	data.Penergia = jugador.energia_componente.energia
 	data.Plimpieza = jugador.contador_componente.basuras_actuales
-	data.CantidadBasura = Spawner.cantidad_a_spawnear
+
+	#data.CantidadBasura = Spawner.cantidad_a_spawnear
 
 	#Para cuando se actulize la cantida de basura que hay en el juego
 	#data.CantidadBasura = jugador.contador_componente.cantidad_de_basuras
@@ -39,10 +41,10 @@ func Loand_Game() -> void:
 
 		jugador.energia_componente.energia = data.Penergia
 		jugador.contador_componente.set_limpieza(data.Plimpieza)
+		Dinero.dinero = data.GuadarDinero
 
-		Spawner.cantidad_a_spawnear = data.CantidadBasura
+		#Spawner.cantidad_a_spawnear = data.CantidadBasura
 
 
 func obtener_limpieza(limpieza: int) -> void:
 	Porcentaje_Limpieza = limpieza
-	print(str(Porcentaje_Limpieza))
