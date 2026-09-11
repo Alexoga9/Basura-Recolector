@@ -21,9 +21,18 @@ var input_recibido: bool = false
 
 var id: String
 var nombre: String
+var valor: int
+
 enum TipoBasura {BASICO, PESADO, PAQUETE}
 var tipo_de_basura: TipoBasura
-var valor: int
+
+enum tipo_de_requisito_Enum {RECOGIDA, FUERZA}
+var tipo_de_requisito: tipo_de_requisito_Enum
+
+enum TipoElemento {BASURA,
+OBSTACULO,
+}
+var tipo_de_elemento: TipoElemento
 
 
 func _ready():
@@ -35,9 +44,20 @@ func iniciar_valores():
 	id = data.id
 	nombre = data.nombre
 	tipo_de_basura = int(data.tipo_de_basura)
+	tipo_de_requisito = int(data.tipo_de_requisito)
+	tipo_de_elemento = int(data.tipo_de_elemento)
 	valor = data.valor
 	sonido.stream = data.audio
 	sprite2d.texture = data.sprite
+
+
+func grupo():
+	match tipo_de_elemento:
+		TipoElemento.BASURA:
+			self.add_to_group("Basura")
+
+		TipoElemento.OBSTACULO:
+			self.add_to_group("Obstaculo")
 
 
 func recibir_input():

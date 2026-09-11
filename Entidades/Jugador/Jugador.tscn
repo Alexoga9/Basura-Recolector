@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://b1prp2tpnsf1h" path="res://Entidades/Jugador/barra_cooldown.gd" id="13_8xsec"]
 [ext_resource type="Resource" uid="uid://besidf7otrxpl" path="res://Entidades/Basura/Bolsa de Basura/bolsa_de_basura.tres" id="13_orci8"]
 [ext_resource type="Script" uid="uid://chk3xfnml16to" path="res://Entidades/Jugador/recoge_obstaculos.gd" id="14_orci8"]
+[ext_resource type="Script" uid="uid://ccn4v8e1f186" path="res://Entidades/Jugador/el_super_radar.gd" id="16_8j4j1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b35yh"]
 radius = 4.0
@@ -154,7 +155,7 @@ radius = 30.066593
 radius = 12.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yyjpx"]
-radius = 44.102154
+radius = 48.8
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iv1dc"]
 radius = 20.0
@@ -164,6 +165,8 @@ bg_color = Color(0.54509807, 0.54509807, 0.54509807, 0.49803922)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qtgc7"]
 bg_color = Color(0.8392157, 0.8392157, 0.8392157, 0.49803922)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_54am8"]
 
 [node name="Jugador" type="CharacterBody2D" unique_id=1030727379 groups=["Jugador"]]
 collision_mask = 60
@@ -245,14 +248,12 @@ position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_1ibpt")
 debug_color = Color(0.2517849, 0.6236958, 0.3297198, 0.41960785)
 
-[node name="RadarComponente" type="Area2D" parent="." unique_id=1555040956]
-process_mode = 4
+[node name="RadarComponente" type="Area2D" parent="." unique_id=1555040956 groups=["Radar Basura"]]
 editor_description = "Reconoce las entidades a su al rededor, administrandolas en un Array.
 
 Permite elegir si quieres un enemigo aleatorio, cercano o lejano"
-visible = false
 collision_layer = 0
-collision_mask = 12
+collision_mask = 36
 script = ExtResource("9_y6klq")
 metadata/_custom_type_script = "uid://dqiir7o6l4sjy"
 
@@ -261,6 +262,7 @@ shape = SubResource("CircleShape2D_yyjpx")
 
 [node name="Recoge BASURA" type="Area2D" parent="." unique_id=1673868854 groups=["Radar Basura"]]
 unique_name_in_owner = true
+process_mode = 4
 visible = false
 position = Vector2(0, -8)
 collision_mask = 4
@@ -278,6 +280,7 @@ one_shot = true
 
 [node name="Recoge OBSTACULOS" type="Area2D" parent="." unique_id=2030381451]
 unique_name_in_owner = true
+process_mode = 4
 visible = false
 position = Vector2(0, -8)
 collision_layer = 0
@@ -305,9 +308,19 @@ show_percentage = false
 script = ExtResource("13_8xsec")
 metadata/_custom_type_script = "uid://d3ixr7t11n000"
 
+[node name="EL SUPER RADAR" type="Area2D" parent="." unique_id=256559925]
+visible = false
+script = ExtResource("16_8j4j1")
+metadata/_custom_type_script = "uid://dqiir7o6l4sjy"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EL SUPER RADAR" unique_id=1246066841]
+shape = SubResource("CircleShape2D_54am8")
+
 [connection signal="timeout" from="Componentes/EnergiaComponente/Recarga lenta" to="Componentes/EnergiaComponente" method="_on_recarga_lenta_timeout"]
 [connection signal="area_entered" from="LootAtractor" to="LootAtractor" method="_on_area_entered"]
 [connection signal="area_entered" from="Loot Collector" to="Loot Collector" method="_on_area_entered"]
+[connection signal="body_entered" from="RadarComponente" to="RadarComponente" method="_on_body_entered"]
+[connection signal="body_exited" from="RadarComponente" to="RadarComponente" method="_on_body_exited"]
 [connection signal="body_entered" from="Recoge BASURA" to="Recoge BASURA" method="_on_body_entered"]
 [connection signal="body_exited" from="Recoge BASURA" to="Recoge BASURA" method="_on_body_exited"]
 [connection signal="timeout" from="Recoge BASURA/Timer" to="Recoge BASURA" method="_on_timer_timeout"]

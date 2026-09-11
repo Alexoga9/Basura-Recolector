@@ -1,30 +1,12 @@
 [gd_scene format=3 uid="uid://d2r5u0lpmux3m"]
 
 [ext_resource type="Script" uid="uid://crrl837qbcxyi" path="res://Entidades/Obstaculo/Obstaculo_item.gd" id="1_456b4"]
-[ext_resource type="AudioStream" uid="uid://dr7bho43atgf6" path="res://Assets/audio/tornado audio.mp3" id="2_hhc5v"]
-[ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="2_slu53"]
+[ext_resource type="Resource" uid="uid://dkoxwvu2yrs81" path="res://Entidades/Basura/Obstaculo prueba.tres" id="2_slu53"]
 [ext_resource type="Texture2D" uid="uid://dut0438runrb" path="res://Assets/Inventario/caja.png" id="3_g5txv"]
-[ext_resource type="Texture2D" uid="uid://due6mtxcwadhu" path="res://Assets/Inventario/Items.png" id="4_wm0kd"]
 [ext_resource type="Material" uid="uid://dy8jul72maxm7" path="res://Assets/entidades/OutlineMaterial.tres" id="5_ejn1b"]
 [ext_resource type="Texture2D" uid="uid://c8imhrpes1oxk" path="res://Assets/entidades/basura completa.png" id="6_7otf1"]
 [ext_resource type="Script" uid="uid://mp0wi601qo8d" path="res://Entidades/Obstaculo/resaltado_obstaculo.gd" id="6_8swad"]
 [ext_resource type="Script" uid="uid://bubqfvtslgafd" path="res://Commons/Componentes/Tweens/Tween_recogida.gd" id="7_o5idx"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xkutv"]
-atlas = ExtResource("4_wm0kd")
-region = Rect2(48, 81, 16, 14)
-
-[sub_resource type="Resource" id="Resource_8swad"]
-script = ExtResource("2_slu53")
-id = "Peñon"
-nombre = "Peñon"
-audio = ExtResource("2_hhc5v")
-sprite = SubResource("AtlasTexture_xkutv")
-tipo_de_elemento = 3
-tiene_requisito = true
-tipo_de_requisito = 1
-nivel_de_requisito = 1
-metadata/_custom_type_script = "uid://dnu2r5yw53pto"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e042u"]
 size = Vector2(14, 5)
@@ -37,7 +19,7 @@ y_sort_enabled = true
 collision_layer = 32
 input_pickable = true
 script = ExtResource("1_456b4")
-data = SubResource("Resource_8swad")
+data = ExtResource("2_slu53")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1608053603]
 unique_name_in_owner = true

@@ -12,3 +12,10 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerz
 res://Assets/Shaders/Shader nuevo ajustable correctamente.tres
 res://Escenarios/Oficial/TileMapOficial.tres
 res://Entidades/Estaciones/Maquina Expendedora/OtroShader otuline.gdshader
+res://Entidades/Jugador/Jugador.tscn
+res://Entidades/Loot/loots/re_madera.tres
+res://Commons/Componentes/Radares/RadarComponente.gd
+res://Escenarios/mundo.tscn
+res://Entidades/Basura/Basura.tscn
+res://Entidades/Basura/Basura_item.gd
+res://Entidades/Obstaculo/Obstaculo.tscn

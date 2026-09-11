@@ -1,3 +1,5 @@
+CollisionShape2D
+RadarComponente
 Label
 PanelTienda
 MeshInstance2D
@@ -11,4 +13,3 @@ TextureRect
 VBoxContainer
 HBoxContainer
 OpenXRInteractionProfileEditor
-Control
