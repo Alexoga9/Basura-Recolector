@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://btd5uqlhigp1i"]
+
+[ext_resource type="LabelSettings" uid="uid://crqcrwgjb38h3" path="res://UI/Theme/tipografia tienda.tres" id="1_8qwdh"]
+
+[node name="Texto de nota recogible" type="Control" unique_id=238381988]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=913968731]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "asdasdsadsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+asdsadasd
+asdasd
+sasddasd
+asdasd"
+label_settings = ExtResource("1_8qwdh")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
