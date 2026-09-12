@@ -16,7 +16,7 @@ signal input_tab
 
 # Basura
 signal basura_recogida
-signal zona_limpida(porcentaje: int)
+# signal limpieza_actualizada(porcentaje: int)
 
 # Recogibles
 signal material_recogido

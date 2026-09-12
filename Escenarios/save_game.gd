@@ -7,7 +7,7 @@ var Porcentaje_Limpieza: int
 
 func _ready() -> void:
 	jugador = Global.jugador
-	SignalBus.zona_limpida.connect(obtener_limpieza)
+	
 
 
 func Save_Game() -> void:

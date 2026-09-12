@@ -12,7 +12,7 @@ var timer_mensaje: Timer
 
 func _ready() -> void:
 	# Escuchamos el progreso y el botón de interacción
-	SignalBus.zona_limpida.connect(_actualizar_progreso)
+	Global.jugador.contador_componente.limpieza_actualizada.connect(_actualizar_progreso)
 	SignalBus.interaccion.connect(_al_interactuar)
 
 	vallatext.hide()
@@ -50,6 +50,7 @@ func _al_interactuar() -> void:
 	else:
 		vallatext.show()
 		vallatext.text = "Tienes que limpiar el " + str(porcentaje_requerido) +" % "
+		print(str(porcentaje_actual))
 
 
 func abrir_paso() -> void:
