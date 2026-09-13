@@ -1,4 +1,4 @@
-extends Node
+class_name Restauracion extends Node
 
 @onready var sprite_sucio = $Cesped
 @onready var sprite_limpio = $"Cesped Oscuro"
@@ -12,8 +12,7 @@ const UMBRAL_FLASH := 80
 
 
 func _ready() -> void:
-	sprite_limpio.modulate.a = 0.0
-
+	sprite_limpio.hide()
 	SignalBus.zona_limpida.connect(_actualizar_progress,1)
 
 	# Asigna el shader a ambos sprites (o hazlo desde el editor y quita estas 2 líneas)
@@ -23,17 +22,20 @@ func _ready() -> void:
 	sprite_limpio.material.shader = preload("res://Escenarios/shine/hit_flash.gdshader")
 
 
-func _actualizar_progress(nuevo_porcentaje: int):
+func _actualizar_progress(nuevo_porcentaje: int) -> void:
 	porcentaje_actual = nuevo_porcentaje
-	_animar_transicion()
 
+
+func flashing()-> void:
 	if porcentaje_actual >= UMBRAL_FLASH and not ya_flasheo:
 		ya_flasheo = true
+		_animar_transicion()
 		_hit_flash()
+		await get_tree().create_timer(0.2).timeout
+		sprite_limpio.show()
+		sprite_sucio.hide()
 	elif porcentaje_actual < UMBRAL_FLASH:
 		ya_flasheo = false
-
-	return null
 
 
 func _animar_transicion() -> void:
@@ -45,6 +47,7 @@ func _animar_transicion() -> void:
 	tween_activo.set_parallel(true)
 	tween_activo.tween_property(sprite_sucio, "modulate:a", alpha_objetivo, 0.5)
 	tween_activo.tween_property(sprite_limpio, "modulate:a", float(porcentaje_actual) / 100.0, 0.5)
+	print(str(alpha_objetivo))
 
 
 func _hit_flash() -> void:

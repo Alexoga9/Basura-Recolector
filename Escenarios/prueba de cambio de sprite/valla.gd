@@ -4,6 +4,7 @@ class_name pueta_valla extends StaticBody2D
 @onready var area_deteccion = %"Trigger Jugador"
 @onready var APuerta: AnimatedSprite2D = %puerta
 @export var porcentaje_requerido: int = 80
+@onready var sprite_restauracion: Restauracion = %Terreno
 
 var jugador_cerca: bool = false
 static var porcentaje_actual: int = 0
@@ -12,6 +13,7 @@ var timer_mensaje: Timer
 
 func _ready() -> void:
 	# Escuchamos el progreso y el botón de interacción
+
 	Global.jugador.contador_componente.limpieza_actualizada.connect(_actualizar_progreso)
 	SignalBus.interaccion.connect(_al_interactuar)
 
@@ -56,5 +58,7 @@ func _al_interactuar() -> void:
 func abrir_paso() -> void:
 	Global.jugador.contador_componente.limpieza_actualizada.disconnect(_actualizar_progreso)
 	SignalBus.interaccion.disconnect(_al_interactuar)
+	sprite_restauracion.flashing()
+
 	APuerta.play("puerta_abierta")
 	$CollisionShape2D.disabled = true
