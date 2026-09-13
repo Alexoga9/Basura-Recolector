@@ -33,3 +33,4 @@ func get_porcentaje() -> int:
 
 func _emitir_porcentaje() -> void:
 	limpieza_actualizada.emit(get_porcentaje())
+	SignalBus.zona_limpida.emit(get_porcentaje())

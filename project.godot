@@ -25,6 +25,7 @@ Global="*uid://50g7q8nvqdp2"
 SignalBus="*uid://de1hm7ggjo12u"
 Dinero="*uid://ch8alg1k4awm0"
 Inventario="*uid://d2f0m5j1ciuls"
+SaveGame="*uid://bvc2tljjdumg8"
 
 [debug]
 

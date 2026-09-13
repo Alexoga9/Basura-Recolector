@@ -1,4 +1,4 @@
-res://Entidades/Jugador/Jugador.tscn
+res://Escenarios/mundo.tscn
 res://UI/Theme/Tienda.tres
 res://Escenarios/shine/hit_flash.gdshader
 res://Escenarios/Otoño/TS_Otoño.tres
@@ -12,9 +12,8 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanza
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
 res://Escenarios/Oficial/TileMapOficial.tres
-res://Escenarios/prueba de cambio de sprite/spriteRestauracion.gd
-res://Escenarios/mundo.tscn
 res://Escenarios/prueba de cambio de sprite/valla.gd
-res://Utilidades/Autoloads/Signal_Bus.gd
-res://Commons/Componentes/Core/ContadorComponente.gd
+res://Escenarios/prueba de cambio de sprite/spriteRestauracion.gd
 res://Escenarios/save_game.gd
+res://Commons/Componentes/Core/ContadorComponente.gd
+res://Utilidades/Autoloads/Signal_Bus.gd

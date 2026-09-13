@@ -7,7 +7,6 @@ var Porcentaje_Limpieza: int
 
 func _ready() -> void:
 	jugador = Global.jugador
-	
 
 
 func Save_Game() -> void:
@@ -30,7 +29,7 @@ func Save_Game() -> void:
 
 
 func Loand_Game() -> void:
-	var Spawner = spawner.new()
+	# var Spawner = spawner.new()
 
 	if ResourceLoader.exists("user://save.res"):
 		var data = load("user://save.res")

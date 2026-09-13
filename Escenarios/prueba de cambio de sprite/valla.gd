@@ -54,7 +54,7 @@ func _al_interactuar() -> void:
 
 
 func abrir_paso() -> void:
-	SignalBus.zona_limpida.disconnect(_actualizar_progreso)
+	Global.jugador.contador_componente.limpieza_actualizada.disconnect(_actualizar_progreso)
 	SignalBus.interaccion.disconnect(_al_interactuar)
 	APuerta.play("puerta_abierta")
 	$CollisionShape2D.disabled = true

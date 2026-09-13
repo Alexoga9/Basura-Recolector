@@ -4,16 +4,17 @@ extends Node
 @onready var sprite_limpio = $"Cesped Oscuro"
 #@onready var sonido_limpieza = $SonidoLimpieza
 
-var porcentaje_actual := 0
+var porcentaje_actual: int
 var tween_activo: Tween
-var ya_flasheo := false  # evita que se repita en cada frame sobre 80%
-
+var ya_flasheo := false  
 const UMBRAL_FLASH := 80
+ 
 
 
 func _ready() -> void:
 	sprite_limpio.modulate.a = 0.0
-#	Global.jugador.contador_componente.limpieza_actualizada.connect(_actualizar_progreso)
+
+	SignalBus.zona_limpida.connect(_actualizar_progress,1)
 
 	# Asigna el shader a ambos sprites (o hazlo desde el editor y quita estas 2 líneas)
 	sprite_sucio.material = ShaderMaterial.new()
@@ -22,7 +23,7 @@ func _ready() -> void:
 	sprite_limpio.material.shader = preload("res://Escenarios/shine/hit_flash.gdshader")
 
 
-func _actualizar_progreso(nuevo_porcentaje: int) -> void:
+func _actualizar_progress(nuevo_porcentaje: int):
 	porcentaje_actual = nuevo_porcentaje
 	_animar_transicion()
 
@@ -30,7 +31,9 @@ func _actualizar_progreso(nuevo_porcentaje: int) -> void:
 		ya_flasheo = true
 		_hit_flash()
 	elif porcentaje_actual < UMBRAL_FLASH:
-		ya_flasheo = false # permite que vuelva a flashear si baja y sube de nuevo
+		ya_flasheo = false
+
+	return null
 
 
 func _animar_transicion() -> void:
