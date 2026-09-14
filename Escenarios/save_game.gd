@@ -45,5 +45,16 @@ func Loand_Game() -> void:
 		#Spawner.cantidad_a_spawnear = data.CantidadBasura
 
 
+func deletefile() -> void:
+	if ResourceLoader.exists("user://save.res"):
+		Dinero.dinero = 0
+		player.global_position = Vector2(153.0, 41)
+		Porcentaje_Limpieza = 0
+		jugador.contador_componente.set_limpieza(Porcentaje_Limpieza)
+		Inventario.reset()
+		jugador.energia_componente.energia = 0
+		jugador.contador_componente.basuras_actuales = 0
+
+
 func obtener_limpieza(limpieza: int) -> void:
 	Porcentaje_Limpieza = limpieza

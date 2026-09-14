@@ -79,3 +79,7 @@ func load_backpack_data(data: Dictionary) -> void:
 		var entry = data[item_id]
 		backpack[item_id] = [entry["cantidad"], entry["resource"]]
 		slot_updated.emit(item_id, entry["cantidad"])
+
+
+func reset() -> void:
+	backpack.clear()

@@ -269,10 +269,10 @@ tile_set = ExtResource("17_yq6pm")
 z_index = -1
 
 [node name="HUD" parent="CanvasLayer" unique_id=67010398 instance=ExtResource("10_qc3uw")]
-offset_left = -1.0
-offset_top = 6.0
-offset_right = -1.0
-offset_bottom = 6.0
+offset_left = -3.0
+offset_top = 2.0
+offset_right = -3.0
+offset_bottom = 2.0
 
 [node name="TiendaUi" parent="CanvasLayer" unique_id=1611773581 instance=ExtResource("7_8njad")]
 visible = false
@@ -290,6 +290,12 @@ offset_right = 38.0
 offset_bottom = 82.0
 text = "loand"
 
+[node name="Delete file" type="Button" parent="CanvasLayer" unique_id=423649284]
+offset_top = 86.0
+offset_right = 38.0
+offset_bottom = 104.0
+text = "Delete file"
+
 [node name="Save_Game" type="Node" parent="." unique_id=901521549 node_paths=PackedStringArray("player")]
 script = ExtResource("20_dyaad")
 player = NodePath("../Objetos Ambientales/Jugador")
@@ -301,3 +307,4 @@ texture = ExtResource("22_wkr86")
 
 [connection signal="button_down" from="CanvasLayer/save" to="Save_Game" method="Save_Game"]
 [connection signal="button_down" from="CanvasLayer/loand" to="Save_Game" method="Loand_Game"]
+[connection signal="pressed" from="CanvasLayer/Delete file" to="Save_Game" method="deletefile"]

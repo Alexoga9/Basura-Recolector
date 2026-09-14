@@ -12,7 +12,5 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanza
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
 res://Escenarios/Oficial/TileMapOficial.tres
-res://Escenarios/prueba de cambio de sprite/spriteRestauracion.gd
-res://Escenarios/prueba de cambio de sprite/Valla.tscn
-res://Escenarios/prueba de cambio de sprite/valla.gd
-res://UI/HUD/Inventario/Inventario.tscn
+res://Utilidades/Autoloads/inventario.gd
+res://Escenarios/save_game.gd
