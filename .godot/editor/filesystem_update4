@@ -1,5 +1,8 @@
+res://Entidades/Basura/Basura_item.gd
+res://Escenarios/Mundos/chunk_1.tscn
 res://UI/Theme/Tienda.tres
 res://Entidades/Estaciones/Tienda/Outline.gdshader
+res://Entidades/Basura/basura_data.tres
 res://Entidades/Basura/Basura_pesada.tres
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_resistencia.tres
@@ -12,3 +15,8 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerz
 res://Assets/Shaders/Shader nuevo ajustable correctamente.tres
 res://Escenarios/Oficial/TileMapOficial.tres
 res://Entidades/Estaciones/Maquina Expendedora/OtroShader otuline.gdshader
+res://Escenarios/mundo.tscn
+res://Entidades/Estaciones/Trituradora/trituradora.tscn
+res://Entidades/Estaciones/Tienda/tienda.tscn
+res://Entidades/Estaciones/Tienda/Tienda_resaltado.gd
+res://UI/Tienda/Panel tienda/panel_tienda.tscn

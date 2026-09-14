@@ -1,8 +1,9 @@
+Node2D
+Node
 Label
 PanelTienda
 MeshInstance2D
 Label3D
-Node2D
 TileMap
 BarraDeProgreso
 Sprite2D
@@ -11,4 +12,3 @@ TextureRect
 VBoxContainer
 HBoxContainer
 OpenXRInteractionProfileEditor
-Control

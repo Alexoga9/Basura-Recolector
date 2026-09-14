@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Basura recolector"
-run/main_scene="uid://rvr7pqnbebp8"
+run/main_scene="uid://cbesogarip1ji"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 
@@ -58,6 +58,7 @@ folder_colors={
 
 "Bolsas de Basura Pool"="Aqui es donde se spawnearan todas las bolsas de basura"
 EntidadesBasuras=""
+Obstaculo=""
 
 [gui]
 

@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://d2r5u0lpmux3m"]
+[gd_scene format=3 uid="uid://bm1w0rloqd6df"]
 
 [ext_resource type="Script" uid="uid://crrl837qbcxyi" path="res://Entidades/Obstaculo/Obstaculo_item.gd" id="1_456b4"]
 [ext_resource type="AudioStream" uid="uid://dr7bho43atgf6" path="res://Assets/audio/tornado audio.mp3" id="2_hhc5v"]

@@ -1,11 +1,14 @@
+res://Assets/
+res://Escenarios/Oficial/
+res://Entidades/Prefabs colocables/
+res://Escenarios/Mundos/
+res://Entidades/Basura/
 res://Entidades/Notas recogibles/
 res://Assets/Shaders/
 res://
 res://Escenarios/Otoño/
-res://Escenarios/Oficial/
 res://Entidades/Basura/Caja/
 res://Utilidades/Sistemas/
-res://Entidades/Basura/
 res://Entidades/BolsaDeBasura/
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/
 res://Assets/entidades/trituradora/
@@ -17,7 +20,4 @@ res://Assets/tipografia/
 res://Utilidades/Autoloads/
 res://Assets/UI/
 res://Entidades/genericos/
-res://UI/Menu Principal/Opciones/Opciones de audio/VolumeSlider/
 C:/Users/alexa/Documents/Exports/Basura 0.1/
-res://Entidades/Consumible/
-res://UI/Theme/

@@ -21,6 +21,12 @@ shader_parameter/thickness = 11.87
 atlas = ExtResource("4_wcpre")
 region = Rect2(32, 48, 16, 16)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y73xl"]
+bg_color = Color(0.9009459, 0.48532337, 3.272891e-06, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6rtv5"]
+bg_color = Color(0.5176471, 0.72156864, 0.25490198, 1)
+
 [sub_resource type="LabelSettings" id="LabelSettings_rs542"]
 line_spacing = -4.0
 font = ExtResource("7_wbqoc")
@@ -167,6 +173,8 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(120, 5)
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_styles/background = SubResource("StyleBoxFlat_y73xl")
+theme_override_styles/fill = SubResource("StyleBoxFlat_6rtv5")
 max_value = 10.0
 step = 1.0
 page = 0.735

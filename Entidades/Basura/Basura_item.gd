@@ -28,6 +28,7 @@ var valor: int
 
 func _ready():
 	iniciar_valores()
+	sprite_aleatorio()
 	SignalBus.interaccion.connect(recibir_input)
 
 
@@ -70,5 +71,11 @@ func _on_area_2d_input_event(viewport, event, shape_idx):
 			Global.jugador.recoge_basura.click_en_basura(self)
 
 
-#func detectar_colision():
-	#
+func sprite_aleatorio():
+	var ramdom: int = randi_range(0,2)
+
+	if tipo_de_basura == 3:
+		sprite2d.texture.set_region_rect(48, 32, 16, 16)
+
+	#else:
+		#sprite2d.texture.Texture2D.atlas.set_region_rect(0 + (ramdom * 16), 32, 16, 16)
