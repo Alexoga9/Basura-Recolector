@@ -6,5 +6,6 @@ extends Resource
 @export var Plimpieza: int
 @export var GuadarDinero: int
 @export var Penergia: int
+@export var SceneName: String = " "
 #@export var CantidadBasura: int
 @export var GuardadoInventario: Dictionary = {}

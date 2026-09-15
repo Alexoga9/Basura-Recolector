@@ -13,3 +13,10 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_hongu
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
 res://Escenarios/Oficial/TileMapOficial.tres
 res://Escenarios/save_game.gd
+res://Escenarios/prueba de cambio de sprite/Valla.tscn
+res://Escenarios/prueba de cambio de sprite/valla.gd
+res://Recursos/save_data.gd
+res://Escenarios/prueba de cambio de sprite/valla_resaltado_componente.gd
+res://Escenarios/pueba.tscn
+res://Escenarios/Prueba.tscn
+res://Escenarios/prueba de cambio de sprite/spriteRestauracion.gd

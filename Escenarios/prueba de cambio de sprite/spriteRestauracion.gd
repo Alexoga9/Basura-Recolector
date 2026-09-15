@@ -2,9 +2,11 @@ class_name Restauracion extends Node
 
 @onready var sprite_sucio = $Cesped
 @onready var sprite_limpio = $"Cesped Oscuro"
+
 #@onready var sonido_limpieza = $SonidoLimpieza
 
 var porcentaje_actual: int
+
 var tween_activo: Tween
 var ya_flasheo := false  
 const UMBRAL_FLASH := 80
