@@ -12,5 +12,4 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanza
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
 res://Escenarios/Oficial/TileMapOficial.tres
-res://Utilidades/Autoloads/inventario.gd
 res://Escenarios/save_game.gd

@@ -54,6 +54,7 @@ func deletefile() -> void:
 		Inventario.reset()
 		jugador.energia_componente.energia = 0
 		jugador.contador_componente.basuras_actuales = 0
+		DirAccess.remove_absolute("user://save.res")
 
 
 func obtener_limpieza(limpieza: int) -> void:
