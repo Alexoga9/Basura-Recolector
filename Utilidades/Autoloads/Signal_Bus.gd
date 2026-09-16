@@ -13,6 +13,7 @@ signal interaccion
 
 # Input
 signal input_tab
+signal input_click
 
 # Basura
 signal basura_recogida

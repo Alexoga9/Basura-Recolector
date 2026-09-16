@@ -25,3 +25,7 @@ func input_interaccion_E():
 func input_tab():
 	if Input.is_action_just_pressed("Tab"):
 		SignalBus.input_tab.emit()
+
+func input_click():
+	if Input.is_action_just_pressed("Click"):
+		SignalBus.input_click.emit()

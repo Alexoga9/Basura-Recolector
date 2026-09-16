@@ -170,7 +170,7 @@ collision_mask = 60
 motion_mode = 1
 script = ExtResource("1_5k27j")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1329384721]
+[node name="Sombra" type="Sprite2D" parent="." unique_id=1329384721]
 self_modulate = Color(1, 1, 1, 0.39215687)
 position = Vector2(-1, 2)
 texture = ExtResource("2_orci8")

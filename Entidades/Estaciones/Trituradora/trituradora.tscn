@@ -329,12 +329,14 @@ sprite_frames = SubResource("SpriteFrames_gfsxt")
 animation = &"Triturar"
 frame = 8
 frame_progress = 1.0
+offset = Vector2(0, -6)
 
 [node name="Cartel" type="AnimatedSprite2D" parent="Sierras" unique_id=17179445]
 position = Vector2(0, 1)
 sprite_frames = SubResource("SpriteFrames_52bhe")
 autoplay = "default"
 frame_progress = 0.7598028
+offset = Vector2(0, -6)
 
 [node name="ResaltadoComponente" type="Node" parent="Sierras" unique_id=968144546 node_paths=PackedStringArray("trigger_area")]
 script = ExtResource("4_fkswi")

@@ -23,3 +23,8 @@ res://Entidades/Consumible/Tipos de Consumibles/honguito.tres
 res://Entidades/Consumible/consumible.gd
 res://Recursos/data_consumible.gd
 res://Entidades/Consumible/Tipos de Consumibles/animacion lata consumible.tres
+res://Entidades/Jugador/Jugador.tscn
+res://Commons/Componentes/Input/InputComponente.gd
+res://Utilidades/Autoloads/Signal_Bus.gd
+res://Entidades/Estaciones/Trituradora/trituradora.tscn
+res://Escenarios/mundo.tscn

@@ -198,7 +198,7 @@ position = Vector2(168, -3)
 position = Vector2(-91, -48)
 
 [node name="Trituradora" parent="Objetos Ambientales/Estaciones" unique_id=1291557497 instance=ExtResource("8_u72it")]
-position = Vector2(78, -52)
+position = Vector2(78, -45)
 
 [node name="MaquinaExpendedora" parent="Objetos Ambientales/Estaciones" unique_id=578851082 instance=ExtResource("11_tyb7f")]
 position = Vector2(-5, -40)

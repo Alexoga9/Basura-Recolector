@@ -220,6 +220,7 @@ position = Vector2(168, -3)
 position = Vector2(-91, -48)
 
 [node name="Trituradora" parent="Objetos Ambientales/Estaciones" unique_id=429918730 instance=ExtResource("5_c2e4j")]
+visibility_layer = 2
 position = Vector2(78, -52)
 
 [node name="MaquinaExpendedora" parent="Objetos Ambientales/Estaciones" unique_id=869111144 instance=ExtResource("6_isstk")]

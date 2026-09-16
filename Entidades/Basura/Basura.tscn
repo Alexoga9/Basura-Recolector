@@ -66,8 +66,7 @@ pitch_scale = 1.5
 bus = &"SFX"
 
 [node name="Mouse Detector" type="Area2D" parent="." unique_id=392840213]
-visible = false
-collision_layer = 0
+collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mouse Detector" unique_id=527528103]
 shape = SubResource("RectangleShape2D_ilkmk")
