@@ -38,7 +38,7 @@ func iniciar_valores():
 	tipo_de_basura = int(data.tipo_de_basura)
 	valor = data.valor
 	sonido.stream = data.audio
-	sprite2d.texture = data.sprite
+	sprite_aleatorio()
 
 
 func recibir_input():
@@ -72,10 +72,9 @@ func _on_area_2d_input_event(viewport, event, shape_idx):
 
 
 func sprite_aleatorio():
-	var ramdom: int = randi_range(0,2)
+	var random: int = randi_range(0,2)
 
-	if tipo_de_basura == 3:
-		sprite2d.texture.set_region_rect(48, 32, 16, 16)
-
-	#else:
-		#sprite2d.texture.Texture2D.atlas.set_region_rect(0 + (ramdom * 16), 32, 16, 16)
+	if data.conjunto_de_sprites:
+		sprite2d.texture = data.conjunto_de_sprites[random]
+	else:
+		sprite2d.texture = data.sprite

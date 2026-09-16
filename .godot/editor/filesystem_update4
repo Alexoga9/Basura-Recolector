@@ -1,5 +1,4 @@
-res://Entidades/Basura/Basura_item.gd
-res://Escenarios/Mundos/chunk_1.tscn
+res://UI/Tienda/Panel tienda/panel_tienda.tscn
 res://UI/Theme/Tienda.tres
 res://Entidades/Estaciones/Tienda/Outline.gdshader
 res://Entidades/Basura/basura_data.tres
@@ -15,8 +14,12 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerz
 res://Assets/Shaders/Shader nuevo ajustable correctamente.tres
 res://Escenarios/Oficial/TileMapOficial.tres
 res://Entidades/Estaciones/Maquina Expendedora/OtroShader otuline.gdshader
-res://Escenarios/mundo.tscn
-res://Entidades/Estaciones/Trituradora/trituradora.tscn
-res://Entidades/Estaciones/Tienda/tienda.tscn
-res://Entidades/Estaciones/Tienda/Tienda_resaltado.gd
-res://UI/Tienda/Panel tienda/panel_tienda.tscn
+res://Entidades/Basura/Basura_item.gd
+res://Recursos/LootDefinicion.gd
+res://Entidades/Basura/Basura.tscn
+res://Escenarios/Mundos/chunk_1.tscn
+res://Entidades/Consumible/consumible.tscn
+res://Entidades/Consumible/Tipos de Consumibles/honguito.tres
+res://Entidades/Consumible/consumible.gd
+res://Recursos/data_consumible.gd
+res://Entidades/Consumible/Tipos de Consumibles/animacion lata consumible.tres

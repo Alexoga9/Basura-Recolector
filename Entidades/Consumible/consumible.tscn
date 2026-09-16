@@ -1,12 +1,17 @@
 [gd_scene format=3 uid="uid://bgn5c32aqoq6c"]
 
 [ext_resource type="Script" uid="uid://bagf6atsln2se" path="res://Entidades/Consumible/consumible.gd" id="1_dmsku"]
-[ext_resource type="Texture2D" uid="uid://due6mtxcwadhu" path="res://Assets/Inventario/Items.png" id="1_u5i48"]
 [ext_resource type="Resource" uid="uid://bwbt2o3gbm3gu" path="res://Entidades/Consumible/Tipos de Consumibles/honguito.tres" id="2_uityb"]
+[ext_resource type="Texture2D" uid="uid://b2b1h2jh4bfuy" path="res://Assets/lata.png" id="3_o3r7i"]
 [ext_resource type="AudioStream" uid="uid://dr7bho43atgf6" path="res://Assets/audio/tornado audio.mp3" id="3_si0yx"]
 [ext_resource type="Script" uid="uid://beooi4cmwyrr8" path="res://Commons/Componentes/Tweens/Tween_deslizar.gd" id="5_o3r7i"]
+[ext_resource type="SpriteFrames" uid="uid://diw0v8gesvfyt" path="res://Entidades/Consumible/Tipos de Consumibles/animacion lata consumible.tres" id="6_3oxff"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dmsku"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3oxff"]
+atlas = ExtResource("3_o3r7i")
+region = Rect2(0, 0, 32, 16)
 
 [node name="Consumible" type="Area2D" unique_id=1748902439]
 script = ExtResource("1_dmsku")
@@ -14,13 +19,14 @@ data = ExtResource("2_uityb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1473103185]
 unique_name_in_owner = true
+visible = false
 shape = SubResource("CircleShape2D_dmsku")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1573797598]
 unique_name_in_owner = true
-texture = ExtResource("1_u5i48")
-region_enabled = true
-region_rect = Rect2(64, 0, 16, 16)
+visible = false
+texture = SubResource("AtlasTexture_3oxff")
+hframes = 2
 
 [node name="sonido" type="AudioStreamPlayer" parent="." unique_id=1248281561]
 unique_name_in_owner = true
@@ -32,6 +38,12 @@ pitch_scale = 1.5
 unique_name_in_owner = true
 script = ExtResource("5_o3r7i")
 metadata/_custom_type_script = "uid://beooi4cmwyrr8"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=608482968]
+unique_name_in_owner = true
+sprite_frames = ExtResource("6_3oxff")
+animation = &"Verde"
+frame_progress = 0.621689
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="finished" from="sonido" to="." method="_on_sonido_finished"]

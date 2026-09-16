@@ -1,8 +1,10 @@
 [gd_resource type="Resource" script_class="DataConsumible" format=3 uid="uid://bwbt2o3gbm3gu"]
 
+[ext_resource type="SpriteFrames" uid="uid://diw0v8gesvfyt" path="res://Entidades/Consumible/Tipos de Consumibles/animacion lata consumible.tres" id="1_cfauu"]
 [ext_resource type="Script" uid="uid://be8jkvhdpdvny" path="res://Recursos/data_consumible.gd" id="1_drjxs"]
 
 [resource]
 script = ExtResource("1_drjxs")
 recuperar_energia = 3
+conjunto_de_sprites = ExtResource("1_cfauu")
 metadata/_custom_type_script = "uid://be8jkvhdpdvny"

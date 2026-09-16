@@ -4,6 +4,18 @@
 [ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="2_dekud"]
 [ext_resource type="Texture2D" uid="uid://syxbc1c047yk" path="res://Assets/Variedad de cajas.png" id="3_42msy"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_42msy"]
+atlas = ExtResource("3_42msy")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a6rso"]
+atlas = ExtResource("3_42msy")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0orq"]
+atlas = ExtResource("3_42msy")
+region = Rect2(32, 32, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_dekud"]
 atlas = ExtResource("3_42msy")
 region = Rect2(0, 32, 16, 16)
@@ -14,6 +26,7 @@ id = "Basura"
 nombre = "Basura"
 audio = ExtResource("1_42msy")
 sprite = SubResource("AtlasTexture_dekud")
+conjunto_de_sprites = Array[Texture2D]([SubResource("AtlasTexture_42msy"), SubResource("AtlasTexture_a6rso"), SubResource("AtlasTexture_r0orq")])
 cantidad_maxima = 3
 valor = 100
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"

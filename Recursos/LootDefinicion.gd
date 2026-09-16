@@ -5,6 +5,7 @@ class_name LootDefinicion extends Resource
 @export var nombre: String
 @export var audio: AudioStream
 @export var sprite: Texture2D
+@export var conjunto_de_sprites: Array[Texture2D]
 @export var cantidad_maxima: int
 
 @export_group("Tipo de objeto")
