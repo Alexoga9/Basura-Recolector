@@ -1,21 +1,63 @@
-extends Node
+class_name Restauracion extends Node
 
-@onready var sprite_sucio = %sucio
-@onready var sprite_limpio = %limpio
+@onready var sprite_sucio = $Cesped
+@onready var sprite_limpio = $"Cesped Oscuro"
+
+#@onready var sonido_limpieza = $SonidoLimpieza
+
+var porcentaje_actual: int
+
+var tween_activo: Tween
+var ya_flasheo := false  
+const UMBRAL_FLASH := 80
+ 
 
 
 func _ready() -> void:
-	var tween = create_tween()
-	tween.tween_property(sprite_limpio, "modulate:a", 0, 0)
+	sprite_limpio.hide()
+	SignalBus.zona_limpida.connect(_actualizar_progress,1)
 
-	SignalBus.zona_limpida.connect(zonas_limpias)
-
-
-func zonas_limpias():
-	var tween = create_tween()
-	tween.tween_property(sprite_sucio, "modulate:a", 0.0, 1.5)
-	tween.tween_property(sprite_limpio, "modulate:a", 1.0, 1.5)
+	# Asigna el shader a ambos sprites (o hazlo desde el editor y quita estas 2 líneas)
+	sprite_sucio.material = ShaderMaterial.new()
+	sprite_sucio.material.shader = preload("res://Escenarios/shine/hit_flash.gdshader")
+	sprite_limpio.material = ShaderMaterial.new()
+	sprite_limpio.material.shader = preload("res://Escenarios/shine/hit_flash.gdshader")
 
 
-func _on_button_pressed() -> void:
-	SignalBus.zona_limpida.emit()
+func _actualizar_progress(nuevo_porcentaje: int) -> void:
+	porcentaje_actual = nuevo_porcentaje
+
+
+func flashing()-> void:
+	if porcentaje_actual >= UMBRAL_FLASH and not ya_flasheo:
+		ya_flasheo = true
+		_animar_transicion()
+		_hit_flash()
+		await get_tree().create_timer(0.2).timeout
+		sprite_limpio.show()
+		sprite_sucio.hide()
+	elif porcentaje_actual < UMBRAL_FLASH:
+		ya_flasheo = false
+
+
+func _animar_transicion() -> void:
+	if tween_activo and tween_activo.is_valid():
+		tween_activo.kill()
+
+	var alpha_objetivo = 1.0 - (float(porcentaje_actual) / 100.0)
+	tween_activo = create_tween()
+	tween_activo.set_parallel(true)
+	tween_activo.tween_property(sprite_sucio, "modulate:a", alpha_objetivo, 0.5)
+	tween_activo.tween_property(sprite_limpio, "modulate:a", float(porcentaje_actual) / 100.0, 0.5)
+	print(str(alpha_objetivo))
+
+
+func _hit_flash() -> void:
+	var flash_tween = create_tween()
+	flash_tween.tween_method(_set_flash_amount, 0.0, 1.0, 0.08)
+	flash_tween.tween_method(_set_flash_amount, 1.0, 0.0, 0.15)
+
+
+func _set_flash_amount(valor: float) -> void:
+	sprite_sucio.material.set_shader_parameter("flash_amount", valor)
+	sprite_limpio.material.set_shader_parameter("flash_amount", valor)

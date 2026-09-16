@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d2fe2drk13sjm"]
 
 [ext_resource type="Script" uid="uid://b542b7q8e2jp4" path="res://UI/HUD/Inventario/Slots Inventario/slot_de_dinero.gd" id="1_8cb0u"]
-[ext_resource type="Texture2D" uid="uid://cj67bs1scsaiw" path="res://Assets/Inventario/moneda.png" id="2_8cb0u"]
+[ext_resource type="Texture2D" uid="uid://cj67bs1scsaiw" path="res://Assets/Inventario/Moneda.png" id="2_8cb0u"]
 [ext_resource type="LabelSettings" uid="uid://crqcrwgjb38h3" path="res://UI/Theme/tipografia tienda.tres" id="3_qtbmx"]
 
 [node name="SlotDeDinero" type="HBoxContainer" unique_id=927491836]
