@@ -254,7 +254,6 @@ tile_set = SubResource("TileSet_onpbi")
 metadata/_edit_lock_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=364297038]
-visible = false
 
 [node name="Inventario" parent="CanvasLayer" unique_id=615073819 instance=ExtResource("10_0yexf")]
 z_index = -1

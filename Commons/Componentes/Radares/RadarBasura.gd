@@ -36,7 +36,7 @@ func revisar_espacio_inventario():
 			revisar_tipo_de_basura()
 
 		# CASO 2: YA EXISTE LA BASURA, PERO NO ESTÁ LLENO
-		elif cantidad_actual < recurso_basura.cantidad_maxima:
+		elif cantidad_actual < Inventario.peso:
 			revisar_tipo_de_basura()
 
 		# CASO 3: YA EXISTE LA BASURA Y ESTÁ COMPLETAMENTE LLENO

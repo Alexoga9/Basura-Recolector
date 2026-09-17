@@ -30,7 +30,7 @@ func igualar_barra_basura():
 	var recurso_basura = Inventario.get_item_resource("Basura")
 
 	if Inventario.get_item_resource("Basura") != null:
-		barra_basura.valor_max = recurso_basura.cantidad_maxima
+		barra_basura.valor_max = Inventario.peso
 		barra_basura.valor_actual = cantidad_basura
 
 	if cantidad_basura == 0:

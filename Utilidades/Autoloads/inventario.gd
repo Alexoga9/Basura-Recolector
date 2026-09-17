@@ -4,6 +4,7 @@ signal slot_updated(item_id: String, new_count: int)
 
 @export var items: Array[LootDefinicion]
 
+var peso: int = 3
 var backpack: Dictionary = {}
 
 
