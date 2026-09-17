@@ -8,6 +8,8 @@ var mov: Vector2 = Vector2.ZERO
 func _process(delta):
 	input_tab()
 	input_interaccion_E()
+	input_tab()
+	input_click()
 
 
 func input_movimiento() -> Vector2:
@@ -25,6 +27,7 @@ func input_interaccion_E():
 func input_tab():
 	if Input.is_action_just_pressed("Tab"):
 		SignalBus.input_tab.emit()
+
 
 func input_click():
 	if Input.is_action_just_pressed("Click"):
