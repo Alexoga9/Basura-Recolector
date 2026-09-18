@@ -10,14 +10,9 @@ class_name Basura extends StaticBody2D
 @onready var t_recogida: TRecogida = %TRecogida
 @onready var tween_rebote:TweenRebote = %TweenRebote
 
-# 📌 EL COMPONENTE DE APILAMIENTO
 @onready var componente_apilable: ComponenteApilable = %ComponenteApilable
 
 @export var data: LootDefinicion
-
-var objetivo = null
-var en_area_jugador: bool = false
-var input_recibido: bool = false
 
 var id: String
 var nombre: String
@@ -37,7 +32,7 @@ var tipo_de_elemento: TipoElemento
 
 func _ready():
 	iniciar_valores()
-	SignalBus.interaccion.connect(recibir_input)
+	asignacion_automatica_de_grupo()
 
 
 func iniciar_valores():
@@ -51,17 +46,13 @@ func iniciar_valores():
 	sprite2d.texture = data.sprite
 
 
-func grupo():
+func asignacion_automatica_de_grupo():
 	match tipo_de_elemento:
 		TipoElemento.BASURA:
 			self.add_to_group("Basura")
 
 		TipoElemento.OBSTACULO:
 			self.add_to_group("Obstaculo")
-
-
-func recibir_input():
-	input_recibido = true
 
 
 func collect():
@@ -88,7 +79,3 @@ func _on_area_2d_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			Global.jugador.recoge_basura.click_en_basura(self)
-
-
-#func detectar_colision():
-	#

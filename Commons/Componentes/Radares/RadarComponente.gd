@@ -22,15 +22,12 @@ func revisar_espacio_inventario():
 	var recurso_Obstaculo = Inventario.get_item_resource("Obstaculo")
 	var cantidad_actual = Inventario.get_count("Basura")
 
-	# CASO 1: NO EXISTE LA BASURA EN EL INVENTARIO
-	if recurso_basura == null or recurso_Obstaculo == null:
+	# CASO 1: Hay espacio en el inventario
+	if Inventario.peso_maximo > peso:
 		revisar_tipo_de_basura()
 
-	# CASO 2: YA EXISTE LA BASURA, PERO NO ESTÁ LLENO
-	elif cantidad_actual < recurso_basura.cantidad_maxima:
-		revisar_tipo_de_basura()
 
-	# CASO 3: YA EXISTE LA BASURA Y ESTÁ COMPLETAMENTE LLENO
+	# CASO 2: Inventario lleno
 	else:
 		print("ta lleno - No se puede recoger más")
 
@@ -38,15 +35,15 @@ func revisar_espacio_inventario():
 func revisar_tipo_de_basura():
 	var body = get_entidad_mas_cercana()
 	
-	if body == Basur
+	if body == Basura:
 
-	if body != null and jugador.energia_componente.energia > 0 and !cooldown_activo:
-		if body.data.veces_a_golpear > 0:
-			print("Basura pesada")
-			body.romper()
+		if body != null and jugador.energia_componente.energia > 0 and !cooldown_activo:
+			if body.data.veces_a_golpear > 0:
+				print("Basura pesada")
+				body.romper()
 
-		elif body.data.veces_a_golpear == 0:
-			recolectar_basura(body)
+			elif body.data.veces_a_golpear == 0:
+				recolectar_basura(body)
 
 
 func revisar_tipo_de_requisito():
