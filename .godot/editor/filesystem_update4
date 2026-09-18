@@ -1,25 +1,33 @@
-res://Escenarios/mundo.tscn
+res://Commons/Componentes/Input/InputComponente.gd
+res://Commons/Componentes/Radares/RadarBasura.gd
+res://Commons/Componentes/Radares/RadarComponente.gd
+res://Entidades/Basura/Basura_item.gd
+res://Entidades/Consumible/consumible.gd
+res://Entidades/Jugador/Jugador.gd
+res://Entidades/Jugador/recoge_obstaculos.gd
+res://Escenarios/prueba de cambio de sprite/valla.gd
+res://Escenarios/prueba de cambio de sprite/valla_resaltado_componente.gd
+res://Recursos/data_consumible.gd
+res://Recursos/LootDefinicion.gd
+res://UI/Barras/Barras HUD.gd
+res://UI/Tienda/mejoras de habilidades/mejoras/mejora_peso.gd
+res://Utilidades/Autoloads/inventario.gd
+res://Utilidades/Autoloads/Signal_Bus.gd
+res://Utilidades/Sistemas/spawner.gd
+res://Escenarios/Mundos/chunk_1.tscn
 res://UI/Theme/Tienda.tres
 res://Entidades/Estaciones/Tienda/Outline.gdshader
+res://Assets/Shaders/Shader nuevo ajustable correctamente.tres
+res://Entidades/Estaciones/Maquina Expendedora/OtroShader otuline.gdshader
+res://Escenarios/Oficial/TileMapOficial.tres
 res://Entidades/Basura/basura_data.tres
-res://Entidades/Basura/Basura_pesada.tres
+res://Entidades/Consumible/Tipos de Consumibles/animacion lata consumible.tres
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_resistencia.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_cooldown.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_rango.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.tres
-res://Entidades/Consumible/Tipos de Consumibles/animacion lata consumible.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
-res://Assets/Shaders/Shader nuevo ajustable correctamente.tres
-res://Escenarios/Oficial/TileMapOficial.tres
-res://Entidades/Estaciones/Maquina Expendedora/OtroShader otuline.gdshader
-res://Utilidades/Autoloads/inventario.gd
-res://Entidades/Basura/Basura.tscn
-res://UI/Barras/Barras HUD.gd
-res://Recursos/LootDefinicion.gd
-res://UI/Tienda/mejoras de habilidades/mejoras/mejora_peso.gd
-res://Commons/Componentes/Radares/RadarBasura.gd
-res://Entidades/Jugador/recoge_obstaculos.gd
-res://Escenarios/Mundos/chunk_1.tscn
+res://Escenarios/prueba de cambio de sprite/Valla.tscn

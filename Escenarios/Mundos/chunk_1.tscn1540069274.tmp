@@ -1,7 +1,6 @@
 [gd_scene format=4 uid="uid://cbesogarip1ji"]
 
 [ext_resource type="TileSet" uid="uid://bp6rx8j03kyjv" path="res://Escenarios/Oficial/TileMapOficial.tres" id="1_f8k6w"]
-[ext_resource type="Script" uid="uid://clfxttjs56cw8" path="res://Escenarios/prueba de cambio de sprite/spriteRestauracion.gd" id="1_tl5id"]
 [ext_resource type="PackedScene" uid="uid://e856quj4lvvn" path="res://Entidades/Jugador/Jugador.tscn" id="2_1o2ys"]
 [ext_resource type="PackedScene" uid="uid://boa7rlwdurt22" path="res://Entidades/Basura/Basura.tscn" id="3_dahfg"]
 [ext_resource type="PackedScene" uid="uid://bujsrbbq0elhi" path="res://Entidades/Estaciones/Tienda/tienda.tscn" id="4_h2r1t"]
@@ -129,8 +128,6 @@ y_sort_enabled = true
 metadata/_edit_lock_ = true
 
 [node name="Terreno" type="Node2D" parent="Layers Oficiales" unique_id=562179808]
-unique_name_in_owner = true
-script = ExtResource("1_tl5id")
 metadata/_edit_lock_ = true
 
 [node name="Cesped" type="TileMapLayer" parent="Layers Oficiales/Terreno" unique_id=275439214]

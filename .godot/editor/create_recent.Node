@@ -1,6 +1,6 @@
+Node2D
 AnimatedSprite2D
 Sprite2D
-Node2D
 Node
 Label
 PanelTienda
@@ -12,4 +12,3 @@ NinePatchRect
 TextureRect
 VBoxContainer
 HBoxContainer
-OpenXRInteractionProfileEditor
