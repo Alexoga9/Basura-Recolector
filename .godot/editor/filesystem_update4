@@ -21,3 +21,11 @@ res://Escenarios/mundo.tscn
 res://Escenarios/Mundos/chunk_3.tscn
 res://Escenarios/Mundos/chunk_1.tscn
 res://Entidades/Jugador/Jugador.tscn
+res://Commons/Componentes/Radares/RadarBasura.gd
+res://Entidades/Jugador/recoge_obstaculos.gd
+res://UI/Barras/Barras HUD.gd
+res://UI/Tienda/mejoras de habilidades/mejoras/mejora_peso.gd
+res://Utilidades/Autoloads/inventario.gd
+res://Escenarios/prueba de cambio de sprite/spriteRestauracion.gd
+res://Escenarios/prueba de cambio de sprite/valla.gd
+res://Escenarios/Sprite_sucio/Tile sucio.tres
