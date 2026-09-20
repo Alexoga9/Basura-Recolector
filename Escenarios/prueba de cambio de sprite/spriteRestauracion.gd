@@ -1,16 +1,16 @@
 class_name Restauracion extends Node
 
-@onready var sprite_sucio = $Cesped
-@onready var sprite_limpio = $"Cesped Oscuro"
+@onready var sprite_sucio = $"Cesped Oscuro"
+@onready var sprite_limpio = $Cesped
 
-#@onready var sonido_limpieza = $SonidoLimpieza
-
+# @onready var sonido_limpieza = $SonidoLimpieza
+ 
 var porcentaje_actual: int
-
 var tween_activo: Tween
 var ya_flasheo := false  
-const UMBRAL_FLASH := 80
+const UMBRAL_FLASH := 12
  
+# RECORDAR QUE SI CAMBIAS LA VARIABLE porcentaje_actual tambien tienes que cambiar UMBRAL_FLASH
 
 
 func _ready() -> void:
@@ -24,6 +24,11 @@ func _ready() -> void:
 	sprite_limpio.material.shader = preload("res://Escenarios/shine/hit_flash.gdshader")
 
 
+func _process(delta: float) -> void:
+	if porcentaje_actual >= UMBRAL_FLASH:
+		flashing()
+
+
 func _actualizar_progress(nuevo_porcentaje: int) -> void:
 	porcentaje_actual = nuevo_porcentaje
 
@@ -33,7 +38,6 @@ func flashing()-> void:
 		ya_flasheo = true
 		_animar_transicion()
 		_hit_flash()
-		await get_tree().create_timer(0.2).timeout
 		sprite_limpio.show()
 		sprite_sucio.hide()
 	elif porcentaje_actual < UMBRAL_FLASH:
@@ -44,12 +48,10 @@ func _animar_transicion() -> void:
 	if tween_activo and tween_activo.is_valid():
 		tween_activo.kill()
 
-	var alpha_objetivo = 1.0 - (float(porcentaje_actual) / 100.0)
 	tween_activo = create_tween()
 	tween_activo.set_parallel(true)
-	tween_activo.tween_property(sprite_sucio, "modulate:a", alpha_objetivo, 0.5)
-	tween_activo.tween_property(sprite_limpio, "modulate:a", float(porcentaje_actual) / 100.0, 0.5)
-	print(str(alpha_objetivo))
+	tween_activo.tween_property(sprite_sucio, "modulate:a", 00, 0.5)
+	tween_activo.tween_property(sprite_limpio, "modulate:a", 1, 1)
 
 
 func _hit_flash() -> void:
