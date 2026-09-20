@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://clfxttjs56cw8" path="res://Escenarios/prueba de cambio de sprite/spriteRestauracion.gd" id="1_c0e6r"]
 [ext_resource type="TileSet" uid="uid://bp6rx8j03kyjv" path="res://Escenarios/Oficial/TileMapOficial.tres" id="2_f7ndn"]
+[ext_resource type="TileSet" uid="uid://c14qxhc8cbhtd" path="res://Escenarios/Sprite_sucio/Tile sucio.tres" id="3_f7ndn"]
 [ext_resource type="PackedScene" uid="uid://e856quj4lvvn" path="res://Entidades/Jugador/Jugador.tscn" id="3_i5pp7"]
 [ext_resource type="PackedScene" uid="uid://boa7rlwdurt22" path="res://Entidades/Basura/Basura.tscn" id="4_yginr"]
 [ext_resource type="AudioStream" uid="uid://dr7bho43atgf6" path="res://Assets/audio/tornado audio.mp3" id="5_4hfm7"]
@@ -147,6 +148,10 @@ tile_set = ExtResource("2_f7ndn")
 [node name="Motas" type="TileMapLayer" parent="Layers Oficiales/Terreno" unique_id=343316530]
 tile_map_data = PackedByteArray("AAD5/wsAAgAMAAwAAAD4/wsAAgAMAAwAAAD3/wsAAgAMAAwAAAD2/wsAAgAKAAwAAAD1/wsAAgALAAwAAAD0/wsAAgANAAwAAADz/wsAAgAJAAwAAADy/wsAAgAKAAwAAADx/wsAAgAJAAwAAADw/wsAAgAMAAwAAADv/wsAAgAOAAwAAADu/wsAAgAKAAwAAADt/wsAAgAMAAwAAADs/wsAAgAOAAwAAADr/wsAAgAPAAwAAAA=")
 tile_set = ExtResource("2_f7ndn")
+
+[node name="Sucio" type="TileMapLayer" parent="Layers Oficiales/Terreno" unique_id=552252056]
+tile_map_data = PackedByteArray("AAD5/wsAAgAMAAwAAAD4/wsAAgAMAAwAAAD3/wsAAgAMAAwAAAD2/wsAAgAKAAwAAAD1/wsAAgALAAwAAAD0/wsAAgANAAwAAADz/wsAAgAJAAwAAADy/wsAAgAKAAwAAADx/wsAAgAJAAwAAADw/wsAAgAMAAwAAADv/wsAAgAOAAwAAADu/wsAAgAKAAwAAADt/wsAAgAMAAwAAADs/wsAAgAOAAwAAADr/wsAAgAPAAwAAAA=")
+tile_set = ExtResource("3_f7ndn")
 
 [node name="Objetos Ambientales" type="Node2D" parent="." unique_id=594393213]
 y_sort_enabled = true
