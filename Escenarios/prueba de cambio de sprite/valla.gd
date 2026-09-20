@@ -5,7 +5,7 @@ class_name pueta_valla extends StaticBody2D
 @onready var APuerta: AnimatedSprite2D = %puerta
 @export var porcentaje_requerido: int = 80
 @export var next_scene: String
-@onready var sprite_restauracion: Restauracion = %Terreno
+@export var costo_puerta: int = 25
 
 var jugador_cerca: bool = false
 static var porcentaje_actual: int = 0
@@ -48,6 +48,7 @@ func _al_interactuar() -> void:
 	if not jugador_cerca:
 		return
 
+	#aplicar que si no tiene el dinero suficiente y/o pago pueda abrir la puerta
 	if porcentaje_actual >= porcentaje_requerido:
 		abrir_paso()
 	else:
@@ -56,12 +57,14 @@ func _al_interactuar() -> void:
 		print(str(porcentaje_actual))
 
 
+func deducción_de_costo():
+	Dinero.gastar(float(costo_puerta))
+
+
 func abrir_paso() -> void:
 	Global.jugador.contador_componente.limpieza_actualizada.disconnect(_actualizar_progreso)
 	SignalBus.interaccion.disconnect(_al_interactuar)
-	sprite_restauracion.flashing()
 	APuerta.play("puerta_abierta")
 	$CollisionShape2D.disabled = true
-	await get_tree().create_timer(0.5).timeout
-
-	get_tree().change_scene_to_file(next_scene)
+	deducción_de_costo()
+	# get_tree().change_scene_to_file(next_scene)
