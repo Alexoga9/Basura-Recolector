@@ -13,6 +13,7 @@ func _process(delta):
 
 
 func mostrar_tienda():
+	
 	show()
 
 

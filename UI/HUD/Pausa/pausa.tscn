@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bnuwtensy41ki" path="res://UI/HUD/Pausa/pausa.gd" id="1_tbmkw"]
 
 [node name="Pausa" type="Control" unique_id=1538665821]
-process_mode = 2
+process_mode = 3
 z_index = 10
 layout_mode = 3
 anchors_preset = 15
@@ -44,6 +44,7 @@ theme_override_font_sizes/font_size = 32
 text = "Pausa"
 
 [node name="Control2" type="Control" parent="MarginContainer/PanelContainer/VBoxContainer" unique_id=636267941]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
 
@@ -51,12 +52,14 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
+focus_neighbor_bottom = NodePath("../menu principal")
 text = "Continuar"
 
 [node name="menu principal" type="Button" parent="MarginContainer/PanelContainer/VBoxContainer" unique_id=896950974]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
+focus_neighbor_top = NodePath("../Continuar")
 text = "menu principal"
 
 [connection signal="pressed" from="MarginContainer/PanelContainer/VBoxContainer/Continuar" to="." method="_on_continuar_pressed"]

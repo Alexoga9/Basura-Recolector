@@ -1,3 +1,6 @@
+Button
+VBoxContainer
+Panel
 Node
 Node2D
 AnimatedSprite2D
@@ -9,6 +12,3 @@ Label3D
 TileMap
 BarraDeProgreso
 NinePatchRect
-TextureRect
-VBoxContainer
-HBoxContainer

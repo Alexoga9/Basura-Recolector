@@ -242,7 +242,6 @@ position = Vector2(272, 143)
 
 [node name="puerta_Valla" parent="Objetos Ambientales" unique_id=1538247553 instance=ExtResource("13_cr5ey")]
 position = Vector2(176, -224)
-next_scene = "res://Escenarios/Prueba.tscn"
 
 [node name="Props" type="Node2D" parent="Objetos Ambientales" unique_id=2081639432]
 y_sort_enabled = true
