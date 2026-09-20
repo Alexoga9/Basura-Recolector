@@ -7,7 +7,7 @@
 [ext_resource type="Resource" uid="uid://dmky67t6umj3u" path="res://Entidades/Loot/loots/rs_piedra.tres" id="4_2fd2i"]
 [ext_resource type="Resource" uid="uid://5k76mbciamak" path="res://Entidades/Loot/loots/re_madera.tres" id="5_f4ey0"]
 [ext_resource type="PackedScene" uid="uid://boa7rlwdurt22" path="res://Entidades/Basura/Basura.tscn" id="6_2fd2i"]
-[ext_resource type="PackedScene" uid="uid://bm1w0rloqd6df" path="res://Entidades/Obstaculo/obstaculo.tscn" id="6_a5bk4"]
+[ext_resource type="PackedScene" uid="uid://d2r5u0lpmux3m" path="res://Entidades/Obstaculo/obstaculo.tscn" id="6_a5bk4"]
 [ext_resource type="Resource" uid="uid://dd3e44dslqngq" path="res://Entidades/Basura/Basura_pesada.tres" id="6_qmk2e"]
 [ext_resource type="PackedScene" uid="uid://br4shbrxkwxgj" path="res://UI/Tienda/tienda_ui.tscn" id="7_8njad"]
 [ext_resource type="PackedScene" uid="uid://bujsrbbq0elhi" path="res://Entidades/Estaciones/Tienda/tienda.tscn" id="8_8njad"]
@@ -21,7 +21,6 @@
 [ext_resource type="TileSet" uid="uid://bp6rx8j03kyjv" path="res://Escenarios/Oficial/TileMapOficial.tres" id="17_yq6pm"]
 [ext_resource type="Script" uid="uid://bvc2tljjdumg8" path="res://Escenarios/save_game.gd" id="20_dyaad"]
 [ext_resource type="Shader" uid="uid://csthrwi3jxifq" path="res://Escenarios/shine/hit_flash.gdshader" id="21_y3gh0"]
-[ext_resource type="Texture2D" uid="uid://e7kokadv3aib" path="res://Assets/icon.svg" id="22_wkr86"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_y3gh0"]
 shader = ExtResource("21_y3gh0")
@@ -76,10 +75,6 @@ texture = ExtResource("12_yq6pm")
 physics_layer_0/collision_layer = 16
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_f4ey0")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_8ntnr"]
-shader = ExtResource("21_y3gh0")
-shader_parameter/flash_amount = 0.0
 
 [node name="Mundo" type="Node" unique_id=283243708]
 
@@ -300,11 +295,6 @@ text = "Delete file"
 [node name="Save_Game" type="Node" parent="." unique_id=901521549 node_paths=PackedStringArray("player")]
 script = ExtResource("20_dyaad")
 player = NodePath("../Objetos Ambientales/Jugador")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1383156790]
-material = SubResource("ShaderMaterial_8ntnr")
-position = Vector2(751, -484)
-texture = ExtResource("22_wkr86")
 
 [connection signal="button_down" from="CanvasLayer/save" to="Save_Game" method="Save_Game"]
 [connection signal="button_down" from="CanvasLayer/loand" to="Save_Game" method="Loand_Game"]

@@ -8,7 +8,6 @@ var mov: Vector2 = Vector2.ZERO
 func _process(delta):
 	input_tab()
 	input_interaccion_E()
-	input_tab()
 	input_click()
 
 
