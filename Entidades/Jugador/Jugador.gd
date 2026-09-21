@@ -10,6 +10,8 @@ class_name Jugador extends CharacterBody2D
 @onready var lanza_basura: LanzaBasura = %"Lanza Basura"
 @onready var estadisticas_componente: EstadisticasComponente = %EstadisticasComponente
 
+var canMove = true
+
 # In Game
 @onready var energia_componente: EnergiaComponente = %EnergiaComponente
 
@@ -19,5 +21,10 @@ func _ready():
 	SignalBus.jugador_listo.emit()
 
 
+func set_mument_enable(value):
+	canMove = value
+
+
 func _physics_process(delta):
-	movimiento_componente.movimiento(input_componente.input_movimiento(), delta)
+	if canMove == true:
+		movimiento_componente.movimiento(input_componente.input_movimiento(), delta)
