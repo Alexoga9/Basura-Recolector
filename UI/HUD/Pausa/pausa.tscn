@@ -31,9 +31,11 @@ layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer" unique_id=934416979]
 layout_mode = 2
+theme_override_constants/separation = -40
 alignment = 1
 
 [node name="Control3" type="Control" parent="MarginContainer/PanelContainer/VBoxContainer" unique_id=938035833]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
 
@@ -55,6 +57,13 @@ size_flags_horizontal = 4
 size_flags_vertical = 6
 focus_neighbor_bottom = NodePath("../menu principal")
 text = "Continuar"
+
+[node name="Continuar2" type="Button" parent="MarginContainer/PanelContainer/VBoxContainer" unique_id=1420667319]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+focus_neighbor_bottom = NodePath("../menu principal")
+text = "Save Game"
 
 [node name="menu principal" type="Button" parent="MarginContainer/PanelContainer/VBoxContainer" unique_id=896950974]
 layout_mode = 2

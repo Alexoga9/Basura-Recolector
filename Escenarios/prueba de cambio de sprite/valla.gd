@@ -7,6 +7,9 @@ class_name pueta_valla extends StaticBody2D
 @export var next_scene: String
 @export var costo_puerta: int = 25
 
+enum Condiccion_para_abrir {Abierta,Requisito}
+
+@export var condiccion_para_abrir: Condiccion_para_abrir
 var jugador_cerca: bool = false
 static var porcentaje_actual: int = 0
 var timer_mensaje: Timer
@@ -49,12 +52,16 @@ func _al_interactuar() -> void:
 		return
 
 	#aplicar que si no tiene el dinero suficiente y/o pago pueda abrir la puerta
-	if porcentaje_actual >= porcentaje_requerido:
+	if condiccion_para_abrir == Condiccion_para_abrir.Requisito:
+		if porcentaje_actual >= porcentaje_requerido:
+			abrir_paso()
+			deducción_de_costo()
+		else:
+			vallatext.show()
+			vallatext.text = "Tienes que limpiar el " + str(porcentaje_requerido) +" % "
+			print(str(porcentaje_actual))
+	elif condiccion_para_abrir == Condiccion_para_abrir.Abierta:
 		abrir_paso()
-	else:
-		vallatext.show()
-		vallatext.text = "Tienes que limpiar el " + str(porcentaje_requerido) +" % "
-		print(str(porcentaje_actual))
 
 
 func deducción_de_costo():
@@ -66,5 +73,4 @@ func abrir_paso() -> void:
 	SignalBus.interaccion.disconnect(_al_interactuar)
 	APuerta.play("puerta_abierta")
 	$CollisionShape2D.disabled = true
-	deducción_de_costo()
-	# get_tree().change_scene_to_file(next_scene)
+	get_tree().change_scene_to_file(next_scene)

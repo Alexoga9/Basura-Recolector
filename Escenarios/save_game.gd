@@ -1,5 +1,4 @@
-extends Node
-@export var player: Node2D
+class_name save_game extends Node
 var jugador:Jugador
 var baseScene: String
 #var spawer: spawner
@@ -16,7 +15,7 @@ func Save_Game() -> void:
 	#var Spawner = spawner.new()
 	data.SceneName = get_tree().current_scene.scene_file_path
 	data.GuadarDinero = Dinero.dinero
-	data.playerPosition = player.global_position
+	data.playerPosition = jugador.global_position
 	data.Plimpieza = Porcentaje_Limpieza
 	data.GuardadoInventario = Inventario.get_backpack_data()
 	data.Penergia = jugador.energia_componente.energia
@@ -33,7 +32,7 @@ func Loand_Game() -> void:
 
 	if ResourceLoader.exists("user://save.res"):
 		var data = load("user://save.res")
-		player.global_position = data.playerPosition
+		jugador.global_position = data.playerPosition
 
 		if data.SceneName != baseScene:
 			get_tree().change_scene_to_file(data.SceneName)
@@ -51,7 +50,7 @@ func Loand_Game() -> void:
 func deletefile() -> void:
 	if ResourceLoader.exists("user://save.res"):
 		Dinero.dinero = 0
-		player.global_position = Vector2(153.0, 41)
+		jugador.global_position = Vector2(153.0, 41)
 		Porcentaje_Limpieza = 0
 		jugador.contador_componente.set_limpieza(Porcentaje_Limpieza)
 		Inventario.reset()
