@@ -1,3 +1,5 @@
+objeto_guardable
+TileMapLayer
 save_game
 Button
 VBoxContainer
@@ -11,5 +13,3 @@ PanelTienda
 MeshInstance2D
 Label3D
 TileMap
-BarraDeProgreso
-NinePatchRect

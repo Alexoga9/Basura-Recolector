@@ -5,7 +5,7 @@ class_name pueta_valla extends StaticBody2D
 @onready var APuerta: AnimatedSprite2D = %puerta
 @export var porcentaje_requerido: int = 80
 @export var next_scene: String
-@export var costo_puerta: int = 25
+@export var costo_puerta: int = 500
 
 enum Condiccion_para_abrir {Abierta,Requisito}
 
@@ -73,4 +73,6 @@ func abrir_paso() -> void:
 	SignalBus.interaccion.disconnect(_al_interactuar)
 	APuerta.play("puerta_abierta")
 	$CollisionShape2D.disabled = true
+	SaveGame.guardar_estado_escena_actual()
 	get_tree().change_scene_to_file(next_scene)
+	SaveGame.cargar_estado_escena_actual()

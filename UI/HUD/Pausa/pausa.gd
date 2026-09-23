@@ -20,3 +20,11 @@ func _on_menu_principal_pressed():
 
 func saveGame():
 	SaveGame.Save_Game()
+	get_tree().paused = false
+	hide()
+
+
+func load_game() -> void:
+	SaveGame.Load_Game()
+	get_tree().paused = false
+	hide()

@@ -1,11 +1,10 @@
+extends Resource
 class_name SaveData
 
-extends Resource
-
+@export var SceneName: String
+@export var GuadarDinero: int
 @export var playerPosition: Vector2
 @export var Plimpieza: int
-@export var GuadarDinero: int
-@export var Penergia: int
-@export var SceneName: String = " "
-#@export var CantidadBasura: int
 @export var GuardadoInventario: Dictionary = {}
+@export var Penergia: float
+@export var datos_por_escenas: Dictionary = {}# nuevo

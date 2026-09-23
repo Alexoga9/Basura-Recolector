@@ -9,7 +9,6 @@ class_name Jugador extends CharacterBody2D
 
 @onready var lanza_basura: LanzaBasura = %"Lanza Basura"
 @onready var estadisticas_componente: EstadisticasComponente = %EstadisticasComponente
-
 var canMove = true
 
 # In Game

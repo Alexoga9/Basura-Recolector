@@ -22,7 +22,7 @@ size = Vector2(18, 14)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_peotj"]
 size = Vector2(13.5, 4.52025)
 
-[node name="Basura" type="StaticBody2D" unique_id=529520627 groups=["Basura"]]
+[node name="Basura" type="StaticBody2D" unique_id=529520627 groups=["Basura", "guardables"]]
 y_sort_enabled = true
 collision_layer = 4
 collision_mask = 5
