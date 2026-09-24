@@ -45,7 +45,7 @@ func Save_Game() -> void:
 	guardar_estado_escena_actual() # deja al día la escena actual antes de escribir
 
 	var data = SaveData.new()
-	data.SceneName = get_tree().current_scene.scene_file_path
+	# data.SceneName = get_tree().current_scene.scene_file_path
 	data.GuadarDinero = Dinero.dinero
 
 	jugador = Global.jugador

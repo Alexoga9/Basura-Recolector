@@ -7,7 +7,7 @@ class_name pueta_valla extends StaticBody2D
 @export var next_scene: String
 @export var costo_puerta: int = 500
 
-enum Condiccion_para_abrir {Abierta,Requisito}
+enum Condiccion_para_abrir {Abierta, Requisito}
 
 @export var condiccion_para_abrir: Condiccion_para_abrir
 var jugador_cerca: bool = false
@@ -51,7 +51,7 @@ func _al_interactuar() -> void:
 	if not jugador_cerca:
 		return
 
-	#aplicar que si no tiene el dinero suficiente y/o pago pueda abrir la puerta
+	# aplicar que si no tiene el dinero suficiente y/o pago pueda abrir la puerta
 	if condiccion_para_abrir == Condiccion_para_abrir.Requisito:
 		if porcentaje_actual >= porcentaje_requerido:
 			abrir_paso()
@@ -68,11 +68,19 @@ func deducción_de_costo():
 	Dinero.gastar(float(costo_puerta))
 
 
+func back() -> void:
+	Global.jugador.contador_componente.limpieza_actualizada.disconnect(_actualizar_progreso)
+	SignalBus.interaccion.disconnect(_al_interactuar)
+	APuerta.play("puerta_abierta")
+	$CollisionShape2D.disabled = true
+	get_tree().change_scene_to_file(next_scene)
+	SaveGame.Load_Game()
+
+
 func abrir_paso() -> void:
 	Global.jugador.contador_componente.limpieza_actualizada.disconnect(_actualizar_progreso)
 	SignalBus.interaccion.disconnect(_al_interactuar)
 	APuerta.play("puerta_abierta")
 	$CollisionShape2D.disabled = true
-	SaveGame.guardar_estado_escena_actual()
 	get_tree().change_scene_to_file(next_scene)
-	SaveGame.cargar_estado_escena_actual()
+	SaveGame.Save_Game()

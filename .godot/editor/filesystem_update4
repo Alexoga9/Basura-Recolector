@@ -1,7 +1,8 @@
-res://Escenarios/Mundos/chunk_3.tscn
+res://UI/HUD/Pausa/pausa.tscn
 res://UI/Theme/Tienda.tres
 res://Escenarios/shine/hit_flash.gdshader
 res://Escenarios/Oficial/TileMapOficial.tres
+res://Escenarios/Sprite_sucio/Tile sucio.tres
 res://Entidades/Basura/basura_data.tres
 res://Entidades/Consumible/Tipos de Consumibles/animacion lata consumible.tres
 res://Assets/Shaders/Shader nuevo ajustable correctamente.tres
@@ -13,21 +14,8 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
-res://Escenarios/Sprite_sucio/Tile sucio.tres
-res://Escenarios/Mundos/chunk_2.tscn
-res://Escenarios/Mundos/chunk_1.tscn
-res://Escenarios/prueba de cambio de sprite/spriteRestauracion.gd
-res://Escenarios/prueba de cambio de sprite/Valla.tscn
+res://Entidades/Basura/Basura_pesada.tres
 res://Escenarios/prueba de cambio de sprite/valla.gd
-res://Recursos/save_data.gd
+res://Escenarios/Mundos/chunk_2.tscn
 res://Escenarios/save_game.gd
 res://Escenarios/mundo.tscn
-res://Entidades/Basura/Basura_pesada.tres
-res://Entidades/Basura/Basura.tscn
-res://Entidades/Objetos Gardables/objeto_guardable.gd
-res://UI/Tienda/tienda_ui.tscn
-res://Entidades/Basura/Basura_item.gd
-res://UI/HUD/Pausa/pausa.tscn
-res://UI/HUD/Pausa/pausa.gd
-res://Entidades/Jugador/Jugador.gd
-res://Commons/Componentes/Movimiento/Vectores/MovimientoComponente.gd

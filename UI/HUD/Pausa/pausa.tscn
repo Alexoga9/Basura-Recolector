@@ -66,6 +66,7 @@ focus_neighbor_bottom = NodePath("../menu principal")
 text = "Save Game"
 
 [node name="load" type="Button" parent="MarginContainer/PanelContainer/VBoxContainer" unique_id=243639764]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6

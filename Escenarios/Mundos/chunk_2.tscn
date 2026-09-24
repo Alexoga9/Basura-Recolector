@@ -334,7 +334,7 @@ condiccion_para_abrir = 1
 
 [node name="puerta_Valla2" parent="Objetos Ambientales" unique_id=1037899940 instance=ExtResource("20_bv8wx")]
 position = Vector2(112, 288)
-next_scene = "uid://cbesogarip1ji"
+next_scene = "res://Escenarios/Mundos/chunk_1.tscn"
 
 [node name="vallas" type="TileMapLayer" parent="Objetos Ambientales" unique_id=1999314596]
 y_sort_enabled = true
