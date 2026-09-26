@@ -30,6 +30,7 @@ func _ready():
 	iniciar_valores()
 	sprite_aleatorio()
 	SignalBus.interaccion.connect(recibir_input)
+	add_to_group("guardables")
 
 
 func iniciar_valores():
@@ -78,3 +79,18 @@ func sprite_aleatorio():
 		sprite2d.texture = data.conjunto_de_sprites[random]
 	else:
 		sprite2d.texture = data.sprite
+
+
+func obtener_datos() -> Dictionary:
+	return {
+		"recogida": collision_shape_2d.disabled,
+		"veces_a_golpear": data.veces_a_golpear
+	}
+
+
+func aplicar_datos(datos: Dictionary) -> void:
+	if datos.get("recogida", false):
+		queue_free()
+		return
+
+	data.veces_a_golpear = datos.get("veces_a_golpear", data.veces_a_golpear)

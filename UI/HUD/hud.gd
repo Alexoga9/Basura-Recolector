@@ -1,6 +1,6 @@
 extends Control
 
-@export var panel_pausa: Control
+@export var panel_pausa: Pausa
 @onready var hud_juego = %HudJuego
 
 
@@ -15,6 +15,7 @@ func inicializar():
 
 func _on_pausa_pressed():
 	panel_pausa.show()
+	panel_pausa.continuar.grab_focus()
 	get_tree().paused = true
 
 

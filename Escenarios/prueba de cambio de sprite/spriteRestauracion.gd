@@ -1,6 +1,6 @@
 class_name Restauracion extends Node
 
-@onready var sprite_sucio = $"Cesped Oscuro"
+@onready var sprite_sucio = %"Map Oscuro"
 @onready var sprite_limpio = $Cesped
 
 # @onready var sonido_limpieza = $SonidoLimpieza
@@ -8,14 +8,14 @@ class_name Restauracion extends Node
 var porcentaje_actual: int
 var tween_activo: Tween
 var ya_flasheo := false  
-const UMBRAL_FLASH := 12
+const UMBRAL_FLASH := 100
  
 # RECORDAR QUE SI CAMBIAS LA VARIABLE porcentaje_actual tambien tienes que cambiar UMBRAL_FLASH
 
 
 func _ready() -> void:
 	sprite_limpio.hide()
-	SignalBus.zona_limpida.connect(_actualizar_progress,1)
+	SignalBus.zona_limpida.connect(actualizar_porcentaje)
 
 	# Asigna el shader a ambos sprites (o hazlo desde el editor y quita estas 2 líneas)
 	sprite_sucio.material = ShaderMaterial.new()
@@ -24,13 +24,13 @@ func _ready() -> void:
 	sprite_limpio.material.shader = preload("res://Escenarios/shine/hit_flash.gdshader")
 
 
+func actualizar_porcentaje(porcentaje: int) -> void:
+	porcentaje_actual = porcentaje
+
+
 func _process(delta: float) -> void:
 	if porcentaje_actual >= UMBRAL_FLASH:
 		flashing()
-
-
-func _actualizar_progress(nuevo_porcentaje: int) -> void:
-	porcentaje_actual = nuevo_porcentaje
 
 
 func flashing()-> void:

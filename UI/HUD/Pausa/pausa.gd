@@ -1,5 +1,6 @@
-extends Control
+class_name Pausa extends Control
 
+@onready var continuar: Button = $MarginContainer/PanelContainer/VBoxContainer/Continuar
 @export var hud: Control
 
 
@@ -15,3 +16,15 @@ func _on_continuar_pressed():
 func _on_menu_principal_pressed():
 	get_tree().paused = false
 	get_tree().reload_current_scene()
+
+
+func saveGame():
+	SaveGame.Save_Game()
+	get_tree().paused = false
+	hide()
+
+
+func load_game() -> void:
+	SaveGame.Load_Game()
+	get_tree().paused = false
+	hide()

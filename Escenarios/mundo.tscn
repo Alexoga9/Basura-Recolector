@@ -103,9 +103,6 @@ tile_set = ExtResource("17_yq6pm")
 [node name="Objetos Ambientales" type="Node2D" parent="." unique_id=744996491]
 y_sort_enabled = true
 
-[node name="Jugador" parent="Objetos Ambientales" unique_id=1030727379 instance=ExtResource("2_fw4w5")]
-position = Vector2(153, 41)
-
 [node name="Entiddaes" type="Node2D" parent="Objetos Ambientales" unique_id=358230563]
 y_sort_enabled = true
 
@@ -203,6 +200,9 @@ position = Vector2(505, 266)
 
 [node name="Bolsas de basura" type="Node" parent="Objetos Ambientales/Entiddaes" unique_id=300767396 groups=["Bolsas de Basura Pool"]]
 
+[node name="Jugador" parent="Objetos Ambientales/Entiddaes" unique_id=1030727379 instance=ExtResource("2_fw4w5")]
+position = Vector2(153, 41)
+
 [node name="Estaciones" type="Node2D" parent="Objetos Ambientales" unique_id=889237100 groups=["Estaciones"]]
 y_sort_enabled = true
 position = Vector2(168, -3)
@@ -292,9 +292,8 @@ offset_right = 38.0
 offset_bottom = 104.0
 text = "Delete file"
 
-[node name="Save_Game" type="Node" parent="." unique_id=901521549 node_paths=PackedStringArray("player")]
+[node name="Save_Game" type="Node" parent="." unique_id=901521549]
 script = ExtResource("20_dyaad")
-player = NodePath("../Objetos Ambientales/Jugador")
 
 [connection signal="button_down" from="CanvasLayer/save" to="Save_Game" method="Save_Game"]
 [connection signal="button_down" from="CanvasLayer/loand" to="Save_Game" method="Loand_Game"]

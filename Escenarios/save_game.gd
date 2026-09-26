@@ -1,65 +1,83 @@
-extends Node
-@export var player: Node2D
-var jugador:Jugador
-var baseScene: String
-#var spawer: spawner
+class_name save_game extends Node
+
+var jugador: Jugador
 var Porcentaje_Limpieza: int
+var datos_por_escenas: Dictionary = {}# vive en memoria durante toda la partida
 
 
-func _ready() -> void:
-	baseScene = "res://Escenarios/mundo.tscn"
-	jugador = Global.jugador
+func guardar_estado_escena_actual() -> void:
+	var escena_actual = get_tree().current_scene
+
+	if escena_actual == null:
+		push_warning("No hay escena actual, no se puede cargar estado.")
+		return
+
+	var ruta = escena_actual.scene_file_path
+	var estado := {}
+
+	for objeto in get_tree().get_nodes_in_group("guardables"):
+		estado[str(objeto.get_path())] = objeto.obtener_datos()
+
+	datos_por_escenas[ruta] = estado
+
+
+func cargar_estado_escena_actual() -> void:
+
+	var escena_actual = get_tree().current_scene
+
+	if escena_actual == null:
+		push_warning("No hay escena actual, no se puede cargar estado.")
+		return
+
+	var ruta = escena_actual.scene_file_path
+
+	if datos_por_escenas.has(ruta):
+		var estado = datos_por_escenas[ruta]
+
+		for objeto in get_tree().get_nodes_in_group("guardables"):
+			var clave = str(objeto.get_path())
+
+			if estado.has(clave):
+				objeto.aplicar_datos(estado[clave])
 
 
 func Save_Game() -> void:
+	guardar_estado_escena_actual() # deja al día la escena actual antes de escribir
+
 	var data = SaveData.new()
-	#var Spawner = spawner.new()
-	data.SceneName = get_tree().current_scene.scene_file_path
+	# data.SceneName = get_tree().current_scene.scene_file_path
 	data.GuadarDinero = Dinero.dinero
-	data.playerPosition = player.global_position
-	data.Plimpieza = Porcentaje_Limpieza
+
+	jugador = Global.jugador
+
+	data.playerPosition = jugador.movimiento_componente.body_character.global_position
 	data.GuardadoInventario = Inventario.get_backpack_data()
 	data.Penergia = jugador.energia_componente.energia
 	data.Plimpieza = jugador.contador_componente.basuras_actuales
+	data.datos_por_escenas = datos_por_escenas # el dict COMPLETO en memoria
 
-	#Para cuando se actulize la cantida de basura que hay en el juego
-	#data.CantidadBasura = jugador.contador_componente.cantidad_de_basuras
-
-	ResourceSaver.save(data, "user://save.res")
+	ResourceSaver.save(data, "user://save.res") # sobrescribe todo el archivo, siempre
 
 
-func Loand_Game() -> void:
-	# var Spawner = spawner.new()
+func Load_Game() -> void:
+	if not ResourceLoader.exists("user://save.res"):
+		return
 
-	if ResourceLoader.exists("user://save.res"):
-		var data = load("user://save.res")
-		player.global_position = data.playerPosition
+	var data: SaveData = load("user://save.res")
+	datos_por_escenas = data.datos_por_escenas # repuebla la memoria desde disco
 
-		if data.SceneName != baseScene:
-			get_tree().change_scene_to_file(data.SceneName)
+	if data.SceneName != get_tree().current_scene.scene_file_path:
+		get_tree().change_scene_to_file(data.SceneName)
+		await get_tree().process_frame
 
-		if data.GuardadoInventario != null:
-			Inventario.load_backpack_data(data.GuardadoInventario)
+	jugador = Global.jugador
+	jugador.movimiento_componente.body_character.global_position = data.playerPosition
 
-		jugador.energia_componente.energia = data.Penergia
-		jugador.contador_componente.set_limpieza(data.Plimpieza)
-		Dinero.dinero = data.GuadarDinero
+	if data.GuardadoInventario != null:
+		Inventario.load_backpack_data(data.GuardadoInventario)
 
-		#Spawner.cantidad_a_spawnear = data.CantidadBasura
+	jugador.energia_componente.energia = data.Penergia
+	jugador.contador_componente.set_limpieza(data.Plimpieza)
+	Dinero.dinero = data.GuadarDinero
 
-
-func deletefile() -> void:
-	if ResourceLoader.exists("user://save.res"):
-		Dinero.dinero = 0
-		player.global_position = Vector2(153.0, 41)
-		Porcentaje_Limpieza = 0
-		jugador.contador_componente.set_limpieza(Porcentaje_Limpieza)
-		Inventario.reset()
-		jugador.energia_componente.energia = 0.0
-		jugador.contador_componente.basuras_actuales = 0
-		get_tree().change_scene_to_file("res://Escenarios/mundo.tscn")
-		DirAccess.remove_absolute("user://save.res")
-
-
-func obtener_limpieza(limpieza: int) -> void:
-	Porcentaje_Limpieza = limpieza
+	cargar_estado_escena_actual()
