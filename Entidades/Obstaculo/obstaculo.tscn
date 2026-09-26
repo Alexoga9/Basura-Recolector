@@ -20,6 +20,7 @@ id = "Peñon"
 nombre = "Peñon"
 audio = ExtResource("2_hhc5v")
 sprite = SubResource("AtlasTexture_xkutv")
+cantidad_maxima = 10
 tipo_de_elemento = 3
 tiene_requisito = true
 tipo_de_requisito = 1

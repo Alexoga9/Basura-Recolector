@@ -8,7 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://dr7bho43atgf6" path="res://Assets/audio/tornado audio.mp3" id="5_4hfm7"]
 [ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="6_3fydg"]
 [ext_resource type="Texture2D" uid="uid://syxbc1c047yk" path="res://Assets/Variedad de cajas.png" id="7_qpreb"]
-[ext_resource type="PackedScene" uid="uid://d2r5u0lpmux3m" path="res://Entidades/Obstaculo/obstaculo.tscn" id="8_gpg3b"]
+[ext_resource type="PackedScene" uid="uid://bm1w0rloqd6df" path="res://Entidades/Obstaculo/obstaculo.tscn" id="8_gpg3b"]
 [ext_resource type="PackedScene" uid="uid://cd6lygsc501ww" path="res://Entidades/Loot/Loot.tscn" id="9_nbhen"]
 [ext_resource type="Resource" uid="uid://5k76mbciamak" path="res://Entidades/Loot/loots/re_madera.tres" id="10_7ghf4"]
 [ext_resource type="Resource" uid="uid://dmky67t6umj3u" path="res://Entidades/Loot/loots/rs_piedra.tres" id="11_ggcp5"]
@@ -286,7 +286,7 @@ position = Vector2(-370, -58)
 data = ExtResource("10_7ghf4")
 
 [node name="Loot4" parent="Objetos Ambientales/Entiddaes/Loot" unique_id=225709140 instance=ExtResource("9_nbhen")]
-position = Vector2(-392, -196)
+position = Vector2(52, 47)
 
 [node name="Estaciones" type="Node2D" parent="Objetos Ambientales" unique_id=302855396 groups=["Estaciones"]]
 y_sort_enabled = true
