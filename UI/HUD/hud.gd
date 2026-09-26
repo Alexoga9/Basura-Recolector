@@ -5,6 +5,7 @@ extends Control
 
 
 func _ready():
+	SignalBus.input_esc.connect(_on_pausa_pressed)
 	inicializar()
 
 
