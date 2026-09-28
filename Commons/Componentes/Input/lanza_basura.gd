@@ -21,10 +21,10 @@ func _process(delta):
 
 
 func datos_basura():
-	if Inventario.get_count("Basura") == null or Inventario.get_count("Basura") <= 0:
+	if Inventario.peso == null or Inventario.peso <= 0:
 		return
 
-	var cantidad_basura: int = Inventario.get_count("Basura")
+	var cantidad_basura: int = Inventario.peso
 	var recurso_basura = Inventario.get_item_resource("Basura")
 
 	if recurso_basura == null:

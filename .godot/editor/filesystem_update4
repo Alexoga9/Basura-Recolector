@@ -18,3 +18,10 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_hongu
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
 res://Entidades/Basura/Basura_item.gd
 res://Escenarios/Mundos/chunk_1.tscn
+res://UI/Barras/Barras HUD.gd
+res://Utilidades/Autoloads/inventario.gd
+res://Entidades/Jugador/Jugador.tscn
+res://Entidades/Jugador/barra_cooldown.gd
+res://Entidades/Estaciones/Trituradora/trituradora.gd
+res://Commons/Componentes/Input/lanza_basura.gd
+res://Entidades/Estaciones/Tienda/Outline.gdshader
