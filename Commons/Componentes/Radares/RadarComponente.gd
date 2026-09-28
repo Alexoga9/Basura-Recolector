@@ -29,34 +29,54 @@ func revisar_espacio_inventario():
 
 
 func revisar_tipo_de_basura(body: Basura):
-	if body != null and jugador.energia_componente.energia > 0 and !cooldown_activo:
-		print("analizando")
-		if body.data.veces_a_golpear > 0:
-			print("Basura pesada")
-			body.romper()
+	if body == null:
+		return
 
-		else:
-			revisar_tipo_de_requisito(body)
-			recolectar_basura(body)
+	if jugador.energia_componente.energia <= 0:
+		return
+
+	if cooldown_activo:
+		return
+
+	print("analizando")
+
+	if body.data.veces_a_golpear > 0:
+		print("Basura pesada")
+		body.romper()
+		return
+
+	# 🔑 AHORA SÍ: chequear requisito y salir si falla
+	if not revisar_tipo_de_requisito(body):
+		return
+
+	recolectar_basura(body)
 
 
-func revisar_tipo_de_requisito(body: Basura):
+## Devuelve true si se cumplen los requisitos (o no hay requisitos), false si no.
+func revisar_tipo_de_requisito(body: Basura) -> bool:
 	print("revisando requisito")
 
-	if body != null and jugador.energia_componente.energia > 0 and !cooldown_activo:
-		if body.requisito:
-			match body.tipo_de_requisito:
-				body.tipo_de_requisito_Enum.RECOGIDA:
-					pass
+	if body == null:
+		return false
 
-				body.tipo_de_requisito_Enum.FUERZA:
-					if body.nivel_requisito <= jugador.estadisticas_componente.fuerza:
-						pass
-					elif body.nivel_requisito > jugador.estadisticas_componente.fuerza:
-						print("Compra niveles de fuerza")
-						return
+	# Sin requisito → pasa
+	if not body.requisito:
+		return true
 
-	return
+	match body.tipo_de_requisito:
+		body.tipo_de_requisito_Enum.RECOGIDA:
+			# ¿Qué debe cumplir? Por ahora permitimos
+			return true
+
+		body.tipo_de_requisito_Enum.FUERZA:
+			if body.nivel_requisito <= jugador.estadisticas_componente.fuerza:
+				return true
+
+			print("Compra niveles de fuerza")
+			return false
+
+	# Si llega aquí, tipo de requisito desconocido
+	return false
 
 
 func recolectar_basura(basura: Basura):
