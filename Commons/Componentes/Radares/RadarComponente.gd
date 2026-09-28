@@ -1,7 +1,7 @@
 @icon("res://addons/iconos/Radar.svg")
 class_name RadarComponente extends Area2D
 
-var cuerpos: Array[Node2D]
+var cuerpos: Array[Basura] = []
 
 @onready var jugador: Jugador = $".."
 @onready var timer: Timer = %Timer
@@ -16,38 +16,32 @@ func _ready():
 
 
 func revisar_espacio_inventario():
-
-	# 1. Obtenemos los datos del ítem "Basura" (puede ser null)
-	var recurso_basura = Inventario.get_item_resource("Basura")
-	var recurso_Obstaculo = Inventario.get_item_resource("Obstaculo")
-	var cantidad_actual = Inventario.get_count("Basura")
+	var body = get_entidad_mas_cercana()
 
 	# CASO 1: Hay espacio en el inventario
-	if Inventario.peso_maximo > peso:
-		revisar_tipo_de_basura()
-
+	if Inventario.peso_maximo > Inventario.peso:
+		print("Revisando basura")
+		revisar_tipo_de_basura(body)
 
 	# CASO 2: Inventario lleno
 	else:
 		print("ta lleno - No se puede recoger más")
 
 
-func revisar_tipo_de_basura():
-	var body = get_entidad_mas_cercana()
-	
-	if body == Basura:
+func revisar_tipo_de_basura(body: Basura):
+	if body != null and jugador.energia_componente.energia > 0 and !cooldown_activo:
+		print("analizando")
+		if body.data.veces_a_golpear > 0:
+			print("Basura pesada")
+			body.romper()
 
-		if body != null and jugador.energia_componente.energia > 0 and !cooldown_activo:
-			if body.data.veces_a_golpear > 0:
-				print("Basura pesada")
-				body.romper()
-
-			elif body.data.veces_a_golpear == 0:
-				recolectar_basura(body)
+		else:
+			revisar_tipo_de_requisito(body)
+			recolectar_basura(body)
 
 
-func revisar_tipo_de_requisito():
-	var body = get_entidad_mas_cercana()
+func revisar_tipo_de_requisito(body: Basura):
+	print("revisando requisito")
 
 	if body != null and jugador.energia_componente.energia > 0 and !cooldown_activo:
 		if body.requisito:
@@ -57,12 +51,15 @@ func revisar_tipo_de_requisito():
 
 				body.tipo_de_requisito_Enum.FUERZA:
 					if body.nivel_requisito <= jugador.estadisticas_componente.fuerza:
-						recolectar_basura(get_entidad_mas_cercana())
+						pass
 					elif body.nivel_requisito > jugador.estadisticas_componente.fuerza:
 						print("Compra niveles de fuerza")
+						return
+
+	return
 
 
-func recolectar_basura(basura: Node2D):
+func recolectar_basura(basura: Basura):
 	timer.wait_time = cooldown_tiempo
 	timer.start()
 	cooldown_activo = true
@@ -71,32 +68,29 @@ func recolectar_basura(basura: Node2D):
 	jugador.energia_componente.agotar(1)
 
 
-func click_en_basura(objeto):
+func click_en_basura(objeto): # cambiarde forma que use revisar_tipo_de_basura()
 	if cuerpos.has(objeto) and jugador.energia_componente.energia > 0 and !cooldown_activo:
-		recolectar_basura(objeto)
+		revisar_espacio_inventario()
 
 
 ## Devuelve la última entidad que entró al radar (LIFO).
-func get_entidad_mas_cercana():
+func get_entidad_mas_cercana() -> Basura:
 	if cuerpos.is_empty():
 		return null
 
-	return cuerpos.back()
+	return cuerpos.pick_random()
 
 
 func _on_body_entered(body: Basura):
-	#print("Basura aqui")
-	if body.is_in_group("Basura"):
-		body.en_area_jugador = true
-		body.resaltado_componente.resaltado()
-		cuerpos.append(body)
+	body.en_area_jugador = true
+	body.resaltado_componente.resaltado()
+	cuerpos.append(body)
 
 
 func _on_body_exited(body: Basura):
-	if body.is_in_group("Basura"):
-		body.en_area_jugador = false
-		body.resaltado_componente.no_resaltado()
-		cuerpos.erase(body)
+	body.en_area_jugador = false
+	body.resaltado_componente.no_resaltado()
+	cuerpos.erase(body)
 
 
 func _on_timer_timeout():

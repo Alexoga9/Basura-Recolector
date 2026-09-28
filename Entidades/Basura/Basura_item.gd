@@ -25,10 +25,15 @@ enum TipoBasura {BASICO, PESADO, PAQUETE}
 var tipo_de_basura: TipoBasura
 var valor: int
 
+var requisito: bool
+enum tipo_de_requisito_Enum {RECOGIDA, FUERZA}
+var tipo_de_requisito: tipo_de_requisito_Enum
+var nivel_requisito: int
+
 
 func _ready():
 	iniciar_valores()
-	sprite_aleatorio()
+	decidir_grupo()
 	SignalBus.interaccion.connect(recibir_input)
 	add_to_group("guardables")
 
@@ -40,6 +45,18 @@ func iniciar_valores():
 	valor = data.valor
 	sonido.stream = data.audio
 	sprite_aleatorio()
+	requisito = data.tiene_requisito
+	tipo_de_requisito = int(data.tipo_de_requisito)
+	nivel_requisito = data.nivel_de_requisito
+
+
+func decidir_grupo():
+	match data.tipo_de_elemento:
+		data.TipoElemento.BASURA:
+			add_to_group("Basura")
+
+		data.TipoElemento.OBSTACULO:
+			add_to_group("Obstaculo")
 
 
 func recibir_input():
@@ -51,7 +68,8 @@ func collect():
 	sonido.play()
 	collision_shape_2d.call_deferred("set", "disabled", true)
 
-	Inventario.add_item(data)
+	#Inventario.add_item(data)
+	Inventario.peso += 1
 	SignalBus.basura_recogida.emit()
 	return data
 

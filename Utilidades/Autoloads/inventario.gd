@@ -4,10 +4,10 @@ signal slot_updated(item_id: String, new_count: int)
 
 @export var items: Array[LootDefinicion]
 
-var peso: int = 3
-var backpack: Dictionary = {}
-var peso_maximo = 3
 var peso: int = 0
+var peso_maximo = 3
+
+var backpack: Dictionary = {}
 
 
 func add_item(item: LootDefinicion, amount: int = 1) -> void:
