@@ -40,7 +40,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/SimpleFormatOnSave/plugin.cfg", "res://addons/kanban_tasks/plugin.cfg", "res://addons/script_splitter/plugin.cfg")
+enabled=PackedStringArray("res://addons/SimpleFormatOnSave/plugin.cfg", "res://addons/kanban_tasks/plugin.cfg", "res://addons/ridiculous_coding/plugin.cfg", "res://addons/script_splitter/plugin.cfg")
 
 [file_customization]
 
@@ -61,6 +61,7 @@ folder_colors={
 EntidadesBasuras=""
 Obstaculo=""
 guardables=""
+Basura=""
 
 [gui]
 

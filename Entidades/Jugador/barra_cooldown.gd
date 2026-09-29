@@ -1,6 +1,6 @@
 extends BarraDeProgreso
 
-@onready var recoge_basura: RadarComponenteBasura = %"Recoge BASURA"
+@onready var recoge_basura: RadarComponente = %RadarComponente
 
 
 func _process(delta):

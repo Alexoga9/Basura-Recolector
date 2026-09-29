@@ -1,65 +1,121 @@
 @icon("res://addons/iconos/Radar.svg")
 class_name RadarComponente extends Area2D
 
-var entidades: Array[Loot]
-var cuerpos: Array[Basura]
+var cuerpos: Array[Basura] = []
 
-var centro = global_position
+@onready var jugador: Jugador = $".."
+@onready var timer: Timer = %Timer
+@onready var basura_collider:CollisionShape2D = %basuraCollider
+
+@export var cooldown_tiempo: float = 3
+var cooldown_activo: bool = false
 
 
 func _ready():
-	# area
-	area_entered.connect(entidad_dentro_de_radar)
-	area_exited.connect(entidad_fuera_de_radar)
-	# body
-	#body_entered.connect(entidad_dentro_de_radar)
-	#body_exited.connect(entidad_fuera_de_radar)
+	SignalBus.interaccion.connect(revisar_espacio_inventario)
+	timer.wait_time = cooldown_tiempo
 
 
-func entidad_dentro_de_radar(area: Loot):
-	#print(area.get_parent().name + " Ha entrado en el radar")
-	entidades.append(area)
-	area.objetivo = Global.jugador
-	#print(str(area.objetivo))
+func revisar_espacio_inventario():
+	var body = get_entidad_mas_cercana()
+
+	# CASO 1: Hay espacio en el inventario
+	if Inventario.peso_maximo > Inventario.peso:
+		print("Revisando basura")
+		revisar_tipo_de_basura(body)
+
+	# CASO 2: Inventario lleno
+	else:
+		print("ta lleno - No se puede recoger más")
 
 
-func entidad_fuera_de_radar(area: Loot):
-	#print(area.get_parent().name + " Ha salido del radar")
-	entidades.erase(area)
+func revisar_tipo_de_basura(body: Basura):
+	if body == null:
+		return
+
+	if jugador.energia_componente.energia <= 0:
+		return
+
+	if cooldown_activo:
+		return
+
+	print("analizando")
+
+# 🔑 AHORA SÍ: chequear requisito y salir si falla
+	if not revisar_tipo_de_requisito(body):
+		return
+	
+	if body.data.veces_a_golpear > 0:
+		print("Basura pesada")
+		body.romper()
+		return
+
+	
+
+	recolectar_basura(body)
 
 
-# ironicamente, no da la entidad más cercana
-func get_entidad_mas_cercana() -> Loot:
-	var mas_cercana = null
-	var distancia_minima = INF
+## Devuelve true si se cumplen los requisitos (o no hay requisitos), false si no.
+func revisar_tipo_de_requisito(body: Basura) -> bool:
+	print("revisando requisito")
 
-	for area in entidades:
-		var distancia = centro.distance_to(area.global_position)
+	if body == null:
+		return false
 
-		if distancia < distancia_minima:
-			distancia_minima = distancia
-			mas_cercana = area
+	# Sin requisito → pasa
+	if not body.requisito:
+		return true
 
-	return mas_cercana
+	match body.tipo_de_requisito:
+		body.tipo_de_requisito_Enum.RECOGIDA:
+			# ¿Qué debe cumplir? Por ahora permitimos
+			return true
 
+		body.tipo_de_requisito_Enum.FUERZA:
+			if body.nivel_requisito <= jugador.estadisticas_componente.fuerza:
+				return true
 
-func get_entidad_mas_lejana() -> Loot:
-	var mas_lejana = null
-	var distancia_maxima = -1 # Empieza con -1 (cualquier distancia será mayor)
+			print("Compra niveles de fuerza")
+			return false
 
-	for entidad in entidades:
-		var distancia = centro.distance_to(entidad.global_position)
-
-		if distancia > distancia_maxima: # ← Cambias < por >
-			distancia_maxima = distancia
-			mas_lejana = entidad
-
-	return mas_lejana
+	# Si llega aquí, tipo de requisito desconocido
+	return false
 
 
-func get_entidad_aleatoria() -> Loot:
-	if entidades.is_empty():
+func recolectar_basura(basura: Basura):
+	timer.wait_time = cooldown_tiempo
+	timer.start()
+	cooldown_activo = true
+	print("Cooldown activo")
+	basura.collect()
+	jugador.energia_componente.agotar(1)
+
+
+func click_en_basura(objeto): # cambiarde forma que use revisar_tipo_de_basura()
+	if cuerpos.has(objeto) and jugador.energia_componente.energia > 0 and !cooldown_activo:
+		revisar_espacio_inventario()
+
+
+## Devuelve la última entidad que entró al radar (LIFO).
+func get_entidad_mas_cercana() -> Basura:
+	if cuerpos.is_empty():
 		return null
 
-	var indice = randi() % entidades.size() # usa % para conseguir un numero valido 
-	return entidades[indice]
+	return cuerpos.pick_random()
+
+
+func _on_body_entered(body: Basura):
+	body.en_area_jugador = true
+	body.resaltado_componente.resaltado()
+	cuerpos.append(body)
+
+
+func _on_body_exited(body: Basura):
+	body.en_area_jugador = false
+	body.resaltado_componente.no_resaltado()
+	cuerpos.erase(body)
+
+
+func _on_timer_timeout():
+	cooldown_activo = false
+	print("Cooldown terminado")

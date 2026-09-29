@@ -1,23 +1,45 @@
 [gd_scene format=3 uid="uid://btd5uqlhigp1i"]
 
 [ext_resource type="LabelSettings" uid="uid://crqcrwgjb38h3" path="res://UI/Theme/tipografia tienda.tres" id="1_8qwdh"]
+[ext_resource type="Script" uid="uid://dvupjhc33lqj1" path="res://Entidades/Notas recogibles/texto_de_nota_recogible.gd" id="1_v1bm6"]
+[ext_resource type="Script" uid="uid://brs2x5jqdp1tv" path="res://Recursos/data_notas.gd" id="2_66fwd"]
 
-[node name="Texto de nota recogible" type="Control" unique_id=238381988]
+[sub_resource type="Resource" id="Resource_ykfhj"]
+script = ExtResource("2_66fwd")
+metadata/_custom_type_script = "uid://brs2x5jqdp1tv"
+
+[node name="Texto de nota" type="Control" unique_id=238381988]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_v1bm6")
+data = SubResource("Resource_ykfhj")
 
-[node name="Label" type="Label" parent="." unique_id=913968731]
-unique_name_in_owner = true
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1231134136]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Titulo" type="Label" parent="VBoxContainer" unique_id=1195512345]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+text = "Titulo"
+label_settings = ExtResource("1_8qwdh")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="Texto" type="Label" parent="VBoxContainer" unique_id=913968731]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
 text = "asdasdsadsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
 asdsadasd
 asdasd

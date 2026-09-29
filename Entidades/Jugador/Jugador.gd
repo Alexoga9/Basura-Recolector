@@ -3,8 +3,8 @@ class_name Jugador extends CharacterBody2D
 # Funcionalidad
 @onready var input_componente: InputComponente = %InputComponente
 @onready var movimiento_componente: MovimientoComponente = %MovimientoComponente
-@onready var recoge_basura: RadarComponenteBasura = %"Recoge BASURA"
-@onready var recoge_obstaculos: RadarComponenteObstaculos = %"Recoge OBSTACULOS"
+@onready var radar_componente: RadarComponente = %RadarComponente
+
 @onready var contador_componente: ContadorComponente = %ContadorComponente
 
 @onready var lanza_basura: LanzaBasura = %"Lanza Basura"

@@ -7,9 +7,9 @@ func _ready():
 
 
 func aplicar_mejora():
-	jugador.recoge_basura.cooldown_tiempo -= 0.2
+	jugador.radar_componente.cooldown_tiempo -= 0.2
 	actualizar_datos()
 
 
 func actualizar_datos():
-	panel.estadisticas(jugador.recoge_basura.cooldown_tiempo, jugador.recoge_basura.cooldown_tiempo - 0.2)
+	panel.estadisticas(jugador.radar_componente.cooldown_tiempo, jugador.radar_componente.cooldown_tiempo - 0.2)
