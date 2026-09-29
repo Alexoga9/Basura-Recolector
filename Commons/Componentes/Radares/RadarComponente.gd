@@ -5,6 +5,7 @@ var cuerpos: Array[Basura] = []
 
 @onready var jugador: Jugador = $".."
 @onready var timer: Timer = %Timer
+@onready var basura_collider:CollisionShape2D = %basuraCollider
 
 @export var cooldown_tiempo: float = 3
 var cooldown_activo: bool = false
@@ -40,14 +41,16 @@ func revisar_tipo_de_basura(body: Basura):
 
 	print("analizando")
 
+# 🔑 AHORA SÍ: chequear requisito y salir si falla
+	if not revisar_tipo_de_requisito(body):
+		return
+	
 	if body.data.veces_a_golpear > 0:
 		print("Basura pesada")
 		body.romper()
 		return
 
-	# 🔑 AHORA SÍ: chequear requisito y salir si falla
-	if not revisar_tipo_de_requisito(body):
-		return
+	
 
 	recolectar_basura(body)
 

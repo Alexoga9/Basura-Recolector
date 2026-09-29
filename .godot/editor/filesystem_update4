@@ -1,9 +1,9 @@
-res://Commons/Componentes/Radares/RadarComponente.gd
-res://Entidades/Basura/Basura.tscn
+res://Entidades/Notas recogibles/texto_de_nota_recogible.tscn
 res://UI/Theme/Tienda.tres
+res://Entidades/Estaciones/Tienda/Outline.gdshader
+res://Entidades/Basura/basura_data.tres
 res://Escenarios/Oficial/TileMapOficial.tres
 res://Escenarios/shine/hit_flash.gdshader
-res://Entidades/Basura/basura_data.tres
 res://Escenarios/Sprite_sucio/Tile sucio.tres
 res://Entidades/Basura/Obstaculo prueba.tres
 res://Entidades/Consumible/Tipos de Consumibles/animacion lata consumible.tres
@@ -16,12 +16,10 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
-res://Entidades/Basura/Basura_item.gd
-res://Escenarios/Mundos/chunk_1.tscn
-res://UI/Barras/Barras HUD.gd
-res://Utilidades/Autoloads/inventario.gd
+res://Recursos/data_notas.gd
+res://Entidades/Notas recogibles/texto_de_nota_recogible.gd
 res://Entidades/Jugador/Jugador.tscn
-res://Entidades/Jugador/barra_cooldown.gd
-res://Entidades/Estaciones/Trituradora/trituradora.gd
-res://Commons/Componentes/Input/lanza_basura.gd
-res://Entidades/Estaciones/Tienda/Outline.gdshader
+res://Entidades/Jugador/Jugador.gd
+res://UI/Tienda/mejoras de habilidades/mejoras/mejora_cooldown.gd
+res://UI/Tienda/mejoras de habilidades/mejoras/mejora_rango.gd
+res://Commons/Componentes/Radares/RadarComponente.gd
