@@ -1,4 +1,4 @@
-res://UI/HUD/Pausa/pausa.tscn
+res://Escenarios/Mundos/chunk_1.tscn
 res://UI/Theme/Tienda.tres
 res://Escenarios/shine/hit_flash.gdshader
 res://Escenarios/Oficial/TileMapOficial.tres
@@ -15,7 +15,4 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanza
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
 res://Entidades/Basura/Basura_pesada.tres
-res://Escenarios/prueba de cambio de sprite/valla.gd
-res://Escenarios/Mundos/chunk_2.tscn
-res://Escenarios/save_game.gd
-res://Escenarios/mundo.tscn
+res://Utilidades/Sistemas/spawner.gd
