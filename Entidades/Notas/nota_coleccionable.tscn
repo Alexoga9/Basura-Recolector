@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://mummqqnve0vm"]
+
+[ext_resource type="Texture2D" uid="uid://cbgbirmqb5755" path="res://Assets/UI/marco tienda.png" id="1_naq1t"]
+[ext_resource type="Script" uid="uid://dd5khigu7tx36" path="res://Entidades/Notas/nota_coleccionable.gd" id="1_tivqb"]
+[ext_resource type="Script" uid="uid://brs2x5jqdp1tv" path="res://Recursos/data_notas.gd" id="2_bu514"]
+[ext_resource type="AudioStream" uid="uid://sahbu26hpnvx" path="res://Assets/audio/Hit.wav" id="4_jfmkk"]
+
+[sub_resource type="Resource" id="Resource_jfmkk"]
+script = ExtResource("2_bu514")
+titulo_nota = "Holi "
+texto_nota = ":3"
+metadata/_custom_type_script = "uid://brs2x5jqdp1tv"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tivqb"]
+radius = 11.045361
+
+[node name="Nota Coleccionable" type="Area2D" unique_id=2140338302]
+collision_layer = 0
+script = ExtResource("1_tivqb")
+data = SubResource("Resource_jfmkk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2034543150]
+unique_name_in_owner = true
+shape = SubResource("CircleShape2D_tivqb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=455835267]
+unique_name_in_owner = true
+texture = ExtResource("1_naq1t")
+
+[node name="sonido" type="AudioStreamPlayer" parent="." unique_id=1306875560]
+unique_name_in_owner = true
+stream = ExtResource("4_jfmkk")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="finished" from="sonido" to="." method="_on_sonido_finished"]

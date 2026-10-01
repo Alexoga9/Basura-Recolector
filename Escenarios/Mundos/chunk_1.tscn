@@ -24,6 +24,8 @@
 [ext_resource type="PackedScene" uid="uid://bqxfu5knf0pw2" path="res://UI/HUD/hud.tscn" id="11_0l1i7"]
 [ext_resource type="PackedScene" uid="uid://br4shbrxkwxgj" path="res://UI/Tienda/tienda_ui.tscn" id="12_u8set"]
 [ext_resource type="Script" uid="uid://pqkfc017cxy6" path="res://Recursos/materiales_necesarios.gd" id="15_iq5bc"]
+[ext_resource type="PackedScene" uid="uid://mummqqnve0vm" path="res://Entidades/Notas/nota_coleccionable.tscn" id="15_wre61"]
+[ext_resource type="Script" uid="uid://brs2x5jqdp1tv" path="res://Recursos/data_notas.gd" id="16_1mu81"]
 [ext_resource type="Texture2D" uid="uid://d2w68k8llr4oi" path="res://Assets/Inventario/piedra.png" id="16_wre61"]
 [ext_resource type="Resource" uid="uid://cn42hyavquied" path="res://Entidades/Estaciones/Estación Rota/Requisitos de materiales/Estacion_rota_requisitos_madera.tres" id="17_1mu81"]
 [ext_resource type="Texture2D" uid="uid://cj67bs1scsaiw" path="res://Assets/Inventario/moneda.png" id="18_bkx32"]
@@ -53,6 +55,12 @@ cantidad_maxima = 3
 valor = 100
 veces_a_golpear = 3
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"
+
+[sub_resource type="Resource" id="Resource_bkx32"]
+script = ExtResource("16_1mu81")
+titulo_nota = "Puto"
+texto_nota = "EL que lo lea :v"
+metadata/_custom_type_script = "uid://brs2x5jqdp1tv"
 
 [sub_resource type="Resource" id="Resource_uxqpp"]
 script = ExtResource("15_iq5bc")
@@ -310,6 +318,13 @@ data = ExtResource("9_4xlto")
 
 [node name="Loot4" parent="Objetos Ambientales/Entiddaes/Loot" unique_id=1476248809 instance=ExtResource("8_onpbi")]
 position = Vector2(-392, -196)
+
+[node name="Nota Coleccionable" parent="Objetos Ambientales/Entiddaes" unique_id=2140338302 instance=ExtResource("15_wre61")]
+position = Vector2(222, 70)
+
+[node name="Nota Coleccionable2" parent="Objetos Ambientales/Entiddaes" unique_id=633010157 instance=ExtResource("15_wre61")]
+position = Vector2(257, 70)
+data = SubResource("Resource_bkx32")
 
 [node name="Estaciones" type="Node2D" parent="Objetos Ambientales" unique_id=812052510 groups=["Estaciones"]]
 y_sort_enabled = true

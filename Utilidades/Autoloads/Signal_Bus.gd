@@ -35,6 +35,9 @@ signal juego_reanudado
 # # HUD
 signal mostrar_hud
 
+# # Notas Coleccionables
+signal notas_menu(DataNotas)
+
 # # Menu Principal
 signal mostrar_menu_principal
 

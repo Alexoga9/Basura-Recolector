@@ -1,3 +1,8 @@
+MarginContainer
+AudioStreamPlayer
+Sprite2D
+CollisionShape2D
+Area2D
 VBoxContainer
 Timer
 TileMapLayer
@@ -7,8 +12,4 @@ Panel
 Node
 Node2D
 AnimatedSprite2D
-Sprite2D
 Label
-PanelTienda
-MeshInstance2D
-Label3D

@@ -2,11 +2,7 @@
 
 [ext_resource type="LabelSettings" uid="uid://crqcrwgjb38h3" path="res://UI/Theme/tipografia tienda.tres" id="1_8qwdh"]
 [ext_resource type="Script" uid="uid://dvupjhc33lqj1" path="res://Entidades/Notas recogibles/texto_de_nota_recogible.gd" id="1_v1bm6"]
-[ext_resource type="Script" uid="uid://brs2x5jqdp1tv" path="res://Recursos/data_notas.gd" id="2_66fwd"]
-
-[sub_resource type="Resource" id="Resource_ykfhj"]
-script = ExtResource("2_66fwd")
-metadata/_custom_type_script = "uid://brs2x5jqdp1tv"
+[ext_resource type="Texture2D" uid="uid://cbgbirmqb5755" path="res://Assets/UI/marco tienda.png" id="2_66fwd"]
 
 [node name="Texto de nota" type="Control" unique_id=238381988]
 layout_mode = 3
@@ -16,17 +12,32 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_v1bm6")
-data = SubResource("Resource_ykfhj")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1231134136]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=511169485]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
 
-[node name="Titulo" type="Label" parent="VBoxContainer" unique_id=1195512345]
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer" unique_id=1094714609]
+custom_minimum_size = Vector2(112, 64)
+layout_mode = 2
+texture = ExtResource("2_66fwd")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1231134136]
+layout_mode = 2
+
+[node name="Titulo" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1195512345]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
@@ -36,7 +47,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 1
 
-[node name="Texto" type="Label" parent="VBoxContainer" unique_id=913968731]
+[node name="Texto" type="Label" parent="MarginContainer/VBoxContainer" unique_id=913968731]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
