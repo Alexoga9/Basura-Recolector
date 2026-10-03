@@ -8,7 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://dr7bho43atgf6" path="res://Assets/audio/tornado audio.mp3" id="5_sxtdg"]
 [ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="6_h87e8"]
 [ext_resource type="Texture2D" uid="uid://syxbc1c047yk" path="res://Assets/Variedad de cajas.png" id="7_4vi8s"]
-[ext_resource type="PackedScene" uid="uid://d2r5u0lpmux3m" path="res://Entidades/Obstaculo/obstaculo.tscn" id="8_fa8wx"]
+[ext_resource type="PackedScene" uid="uid://bm1w0rloqd6df" path="res://Entidades/Obstaculo/obstaculo.tscn" id="8_fa8wx"]
 [ext_resource type="PackedScene" uid="uid://cd6lygsc501ww" path="res://Entidades/Loot/Loot.tscn" id="9_qgf50"]
 [ext_resource type="Resource" uid="uid://5k76mbciamak" path="res://Entidades/Loot/loots/re_madera.tres" id="10_m57cy"]
 [ext_resource type="Resource" uid="uid://dmky67t6umj3u" path="res://Entidades/Loot/loots/rs_piedra.tres" id="11_75jin"]
@@ -162,7 +162,7 @@ tile_set = ExtResource("3_wl2gp")
 y_sort_enabled = true
 
 [node name="Jugador" parent="Objetos Ambientales" unique_id=1030727379 instance=ExtResource("3_rlhdu")]
-position = Vector2(153, 41)
+position = Vector2(113, 279)
 
 [node name="Entiddaes" type="Node2D" parent="Objetos Ambientales" unique_id=55972545]
 y_sort_enabled = true
@@ -327,7 +327,6 @@ tile_set = ExtResource("2_wl2gp")
 
 [node name="puerta_Valla" parent="Objetos Ambientales" unique_id=1538247553 instance=ExtResource("20_bv8wx")]
 position = Vector2(176, -224)
-porcentaje_requerido = 80
 next_scene = "uid://behp4qf87lumq"
 costo_puerta = 300
 condiccion_para_abrir = 1

@@ -3,7 +3,6 @@
 [ext_resource type="TileSet" uid="uid://bp6rx8j03kyjv" path="res://Escenarios/Oficial/TileMapOficial.tres" id="1_f8k6w"]
 [ext_resource type="Script" uid="uid://clfxttjs56cw8" path="res://Escenarios/prueba de cambio de sprite/spriteRestauracion.gd" id="1_tl5id"]
 [ext_resource type="PackedScene" uid="uid://e856quj4lvvn" path="res://Entidades/Jugador/Jugador.tscn" id="2_1o2ys"]
-[ext_resource type="Script" uid="uid://dvg1lacufgml8" path="res://Utilidades/Sistemas/spawner.gd" id="3_4xlto"]
 [ext_resource type="PackedScene" uid="uid://boa7rlwdurt22" path="res://Entidades/Basura/Basura.tscn" id="3_dahfg"]
 [ext_resource type="TileSet" uid="uid://c14qxhc8cbhtd" path="res://Escenarios/Sprite_sucio/Tile sucio.tres" id="3_onpbi"]
 [ext_resource type="PackedScene" uid="uid://bujsrbbq0elhi" path="res://Entidades/Estaciones/Tienda/tienda.tscn" id="4_h2r1t"]
@@ -26,7 +25,7 @@
 [ext_resource type="Script" uid="uid://pqkfc017cxy6" path="res://Recursos/materiales_necesarios.gd" id="15_iq5bc"]
 [ext_resource type="Texture2D" uid="uid://d2w68k8llr4oi" path="res://Assets/Inventario/piedra.png" id="16_wre61"]
 [ext_resource type="Resource" uid="uid://cn42hyavquied" path="res://Entidades/Estaciones/Estación Rota/Requisitos de materiales/Estacion_rota_requisitos_madera.tres" id="17_1mu81"]
-[ext_resource type="Texture2D" uid="uid://cj67bs1scsaiw" path="res://Assets/Inventario/moneda.png" id="18_bkx32"]
+[ext_resource type="Texture2D" uid="uid://cj67bs1scsaiw" path="res://Assets/Inventario/Moneda.png" id="18_bkx32"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ui5uu"]
 atlas = ExtResource("6_tl5id")
@@ -153,20 +152,6 @@ metadata/_edit_lock_ = true
 tile_map_data = PackedByteArray("AADs/wwAAgAMAAwAAAD+/xAAAgAKAAwAAAALABoAAgANAAwAAAAMABoAAgAMAAwAAAAKABQAAgANAAwAAAAKABMAAgALAAwAAAAJABMAAgANAAwAAAAJABIAAgALAAwAAAAJABEAAgANAAwAAAAIAA0AAgAJAAwAAAAHAAwAAgAOAAwAAAD9/wgAAgANAAwAAAD8/wgAAgAPAAwAAAD7/wgAAgANAAwAAAD6/wgAAgAPAAwAAAD6/wkAAgAOAAwAAAD5/wkAAgALAAwAAAD1/w4AAgAJAAwAAAD1/w8AAgAKAAwAAAD1/xAAAgAMAAwAAAD1/xEAAgANAAwAAAD2/xIAAgAJAAwAAAD2/xMAAgAMAAwAAAD2/xQAAgALAAwAAAAeABoAAgANAAwAAAAfABkAAgALAAwAAAAhABgAAgALAAwAAAAhABcAAgAMAAwAAAAiABYAAgAPAAwAAAAiABUAAgAMAAwAAAAjABQAAgAKAAwAAAAmAAwAAgAJAAwAAAAmAAsAAgAKAAwAAAAmAAoAAgAOAAwAAAAmAAkAAgAKAAwAAAAmAAgAAgAMAAwAAAAkAAMAAgAJAAwAAAAkAAIAAgALAAwAAAAkAAEAAgAOAAwAAAAjAAEAAgALAAwAAAAjAAAAAgAJAAwAAAAjAP7/AgAPAAwAAAAjAP3/AgAJAAwAAAAjAPz/AgAJAAwAAAAiAPz/AgAPAAwAAAAeAPj/AgALAAwAAAAdAPf/AgAKAAwAAAAcAPf/AgAPAAwAAAARAPr/AgAMAAwAAAAQAPr/AgANAAwAAAAQAPn/AgALAAwAAAAPAPr/AgAJAAwAAAAOAPn/AgALAAwAAAANAPj/AgAJAAwAAAALAPf/AgAOAAwAAAAEAPf/AgALAAwAAAADAPf/AgAKAAwAAAACAPj/AgAKAAwAAAAGAAMAAgALAAwAAAAHAAQAAgANAAwAAAAMAAYAAgAJAAwAAAAMAAcAAgALAAwAAAAMAA8AAgAPAAwAAAAMABIAAgAPAAwAAAAMABMAAgANAAwAAAARABUAAgAMAAwAAAATABYAAgAMAAwAAAAUABYAAgALAAwAAAAYABcAAgALAAwAAAAXABgAAgAOAAwAAAAWABgAAgAMAAwAAAAVABgAAgAPAAwAAAAJABkAAgAMAAwAAAAJABgAAgAPAAwAAAAIABgAAgANAAwAAAAHABgAAgAPAAwAAAAHABcAAgAMAAwAAAAGABcAAgAOAAwAAAAAABQAAgAJAAwAAAAAABMAAgAJAAwAAAD//w4AAgAJAAwAAAD//w0AAgAJAAwAAAAAAA0AAgAPAAwAAAAAAAwAAgAMAAwAAAABAAwAAgANAAwAAAADAAoAAgANAAwAAAAFAAwAAgAJAAwAAAAFAA0AAgALAAwAAAAFAA4AAgAJAAwAAAAFAA8AAgALAAwAAAAIABEAAgALAAwAAAAJABAAAgAOAAwAAAANAAkAAgAOAAwAAAANAAgAAgAPAAwAAAAOAAgAAgAMAAwAAAA=")
 tile_set = ExtResource("1_f8k6w")
 metadata/_edit_lock_ = true
-
-[node name="spawner" type="Node2D" parent="Layers Oficiales/Terreno" unique_id=756399777 node_paths=PackedStringArray("point_1", "point_2")]
-script = ExtResource("3_4xlto")
-point_1 = NodePath("Node2D2")
-point_2 = NodePath("Node2D3")
-prefab = ExtResource("3_dahfg")
-metadata/_custom_type_script = "uid://dvg1lacufgml8"
-
-[node name="Node2D2" type="Marker2D" parent="Layers Oficiales/Terreno/spawner" unique_id=1803499958]
-position = Vector2(319, -43)
-gizmo_extents = 372.7
-
-[node name="Node2D3" type="Marker2D" parent="Layers Oficiales/Terreno/spawner" unique_id=1268965831]
-position = Vector2(-8, 148)
 
 [node name="Map Oscuro" type="TileMapLayer" parent="." unique_id=520323362]
 unique_name_in_owner = true
@@ -332,6 +317,7 @@ materiales = Array[ExtResource("15_iq5bc")]([SubResource("Resource_uxqpp"), ExtR
 
 [node name="puerta_Valla" parent="Objetos Ambientales" unique_id=1538247553 instance=ExtResource("8_aqtp6")]
 position = Vector2(218, -224)
+porcentaje_requerido = 10
 next_scene = "res://Escenarios/Mundos/chunk_2.tscn"
 costo_puerta = 300
 condiccion_para_abrir = 1

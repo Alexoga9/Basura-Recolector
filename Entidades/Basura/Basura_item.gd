@@ -10,6 +10,7 @@ class_name Basura extends StaticBody2D
 @onready var t_recogida: TRecogida = %TRecogida
 @onready var tween_rebote:TweenRebote = %TweenRebote
 
+var id_guardado: String = ""
 # 📌 EL COMPONENTE DE APILAMIENTO
 @onready var componente_apilable: ComponenteApilable = %ComponenteApilable
 
@@ -36,6 +37,8 @@ func _ready():
 	decidir_grupo()
 	SignalBus.interaccion.connect(recibir_input)
 	add_to_group("guardables")
+	if id_guardado == "":
+		id_guardado = get_tree().current_scene.name + "_" + name
 
 
 func iniciar_valores():
@@ -68,9 +71,10 @@ func collect():
 	sonido.play()
 	collision_shape_2d.call_deferred("set", "disabled", true)
 
-	#Inventario.add_item(data)
 	Inventario.peso += 1
 	SignalBus.basura_recogida.emit()
+
+	SaveGame.registrar_item_destruido(id_guardado)
 	return data
 
 
@@ -87,7 +91,7 @@ func _on_sonido_finished():
 func _on_area_2d_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index == MOUSE_BUTTON_LEFT:
-			Global.jugador.recoge_basura.click_en_basura(self)
+			Global.jugador.radar_componente.click_en_basura(self)
 
 
 func sprite_aleatorio():
@@ -101,14 +105,16 @@ func sprite_aleatorio():
 
 func obtener_datos() -> Dictionary:
 	return {
-		"recogida": collision_shape_2d.disabled,
+		"global_position": global_position,
 		"veces_a_golpear": data.veces_a_golpear
 	}
 
 
 func aplicar_datos(datos: Dictionary) -> void:
-	if datos.get("recogida", false):
+	if datos.has("recogida") and datos["recogida"] == true:
 		queue_free()
-		return
 
-	data.veces_a_golpear = datos.get("veces_a_golpear", data.veces_a_golpear)
+
+func ser_recogida():
+	SaveGame.registrar_item_destruido(id_guardado)
+	queue_free()

@@ -15,6 +15,7 @@ const UMBRAL_FLASH := 100
 
 func _ready() -> void:
 	sprite_limpio.hide()
+	sprite_limpio.collision_enabled = false
 	SignalBus.zona_limpida.connect(actualizar_porcentaje)
 
 	# Asigna el shader a ambos sprites (o hazlo desde el editor y quita estas 2 líneas)
@@ -40,6 +41,7 @@ func flashing()-> void:
 		_hit_flash()
 		sprite_limpio.show()
 		sprite_sucio.hide()
+		sprite_limpio.collision_enabled = true
 	elif porcentaje_actual < UMBRAL_FLASH:
 		ya_flasheo = false
 

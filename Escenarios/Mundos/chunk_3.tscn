@@ -159,7 +159,7 @@ tile_set = ExtResource("3_f7ndn")
 y_sort_enabled = true
 
 [node name="Jugador" parent="Objetos Ambientales" unique_id=1030727379 instance=ExtResource("3_i5pp7")]
-position = Vector2(153, 41)
+position = Vector2(82, 277)
 
 [node name="Entiddaes" type="Node2D" parent="Objetos Ambientales" unique_id=606963256]
 y_sort_enabled = true
@@ -323,7 +323,6 @@ tile_set = ExtResource("2_f7ndn")
 
 [node name="puerta_Valla" parent="Objetos Ambientales" unique_id=1538247553 instance=ExtResource("20_ekfr6")]
 position = Vector2(176, -224)
-porcentaje_requerido = 80
 condiccion_para_abrir = 1
 metadata/_edit_lock_ = true
 

@@ -41,7 +41,6 @@ animations = [{
 [node name="puerta_Valla" type="StaticBody2D" unique_id=1538247553]
 collision_layer = 4
 script = ExtResource("1_c32ja")
-porcentaje_requerido = 12
 next_scene = "uid://bgd2waanh0qwk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=426368289]

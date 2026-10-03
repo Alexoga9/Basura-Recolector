@@ -4,14 +4,43 @@ class_name spawner extends Node2D
 @export var point_1: Marker2D
 @export var point_2: Marker2D
 @export var prefab: PackedScene
+@export var spawnear_al_iniciar: bool = true
 
 var objetos_spawneados: Array = []
 var area_spawn_rect: Rect2
 
 
 func _ready() -> void:
+	Global.Spawner = self
+
+	if spawnear_al_iniciar:
+		generar()
+
+
+func _exit_tree() -> void:
+	if Global.Spawner == self:
+		Global.Spawner = null
+
+
+# Función pública: se puede llamar desde otro script
+func generar(cantidad: int = -1) -> void:
+
+	if cantidad >= 0:
+		cantidad_a_spawnear = cantidad
+
+	limpiar()
 	calcular_area_spawn()
-	loop_de_spawneo()
+
+	for i in range(cantidad_a_spawnear):
+		spawnear(i)
+
+
+func limpiar() -> void:
+	for objeto in objetos_spawneados.duplicate():
+		if is_instance_valid(objeto):
+			objeto.queue_free()
+
+	objetos_spawneados.clear()
 
 
 func calcular_area_spawn() -> void:
@@ -23,11 +52,6 @@ func calcular_area_spawn() -> void:
 	area_spawn_rect = Rect2(min_x, min_y, max_x - min_x, max_y - min_y)
 
 
-func loop_de_spawneo() -> void:
-	for i in range(cantidad_a_spawnear):
-		spawnear(i)
-
-
 func spawnear(indice: int) -> void:
 	var contenedor = get_tree().get_first_node_in_group("EntidadesBasuras")
 
@@ -36,7 +60,10 @@ func spawnear(indice: int) -> void:
 		return
 
 	var nueva_instancia = prefab.instantiate()
-	#nueva_instancia = "%s_%d" % [name, indice] # ID estable para el guardado
+
+	# ESTO ES LO NUEVO: Fijamos el nombre del nodo y le damos un ID único
+	nueva_instancia.name = "Spawn_%s_%d" % [name, indice]
+	nueva_instancia.id_guardado = "%s_%s_%d" % [get_tree().current_scene.name, name, indice]
 
 	contenedor.add_child(nueva_instancia)
 	nueva_instancia.global_position = Vector2(
