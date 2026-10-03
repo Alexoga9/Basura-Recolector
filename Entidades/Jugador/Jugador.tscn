@@ -154,7 +154,7 @@ radius = 30.066593
 radius = 12.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yyjpx"]
-radius = 48.8
+radius = 24.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8xsec"]
 bg_color = Color(0.54509807, 0.54509807, 0.54509807, 0.49803922)
@@ -261,6 +261,7 @@ metadata/_custom_type_script = "uid://dqiir7o6l4sjy"
 
 [node name="basuraCollider" type="CollisionShape2D" parent="RadarComponente" unique_id=1726165650]
 unique_name_in_owner = true
+position = Vector2(0, -2)
 shape = SubResource("CircleShape2D_yyjpx")
 
 [node name="Timer" type="Timer" parent="RadarComponente" unique_id=318487114]
