@@ -9,11 +9,7 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	imagen_coleccionable.texture = imagen
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	revisar_coleccionable_en_inventario()
+	SignalBus.material_recogido.connect(revisar_coleccionable_en_inventario)
 
 
 func revisar_coleccionable_en_inventario():

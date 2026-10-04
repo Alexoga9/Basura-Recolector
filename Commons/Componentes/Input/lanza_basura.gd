@@ -25,17 +25,18 @@ func datos_basura():
 		return
 
 	var cantidad_basura: int = Inventario.peso
-	var recurso_basura = Inventario.get_item_resource("Basura")
+	#var recurso_basura = Inventario.get_item_resource("Basura")
 
-	if recurso_basura == null:
-		return
+	#if recurso_basura == null:
+		#return
 
-	var valor_total: int = cantidad_basura * recurso_basura.valor
+	var valor_total: int = cantidad_basura * 100
 
 	var datos_bolsa = data_template.duplicate()
 	datos_bolsa.valor = valor_total
 
-	Inventario.remove_item("Basura", cantidad_basura)
+	#Inventario.remove_item("Basura", cantidad_basura)
+	Inventario.peso = 0
 	spawnear(datos_bolsa)
 
 

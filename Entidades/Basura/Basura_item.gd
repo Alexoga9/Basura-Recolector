@@ -70,6 +70,7 @@ func collect():
 
 	#Inventario.add_item(data)
 	Inventario.peso += 1
+	Inventario.valor_de_basuras += valor
 	SignalBus.basura_recogida.emit()
 	return data
 

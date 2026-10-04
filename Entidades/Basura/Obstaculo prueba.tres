@@ -16,6 +16,7 @@ audio = ExtResource("1_7jxvw")
 sprite = SubResource("AtlasTexture_xkutv")
 cantidad_maxima = 9999
 tipo_de_elemento = 3
+valor = 333
 veces_a_golpear = 2
 tiene_requisito = true
 tipo_de_requisito = 1

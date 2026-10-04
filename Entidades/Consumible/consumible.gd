@@ -22,7 +22,13 @@ func _process(delta):
 
 
 func sprite_aleatorio():
-	var random: int = randi_range(0,2)
+	var random_frame: int = randi_range(0,5)
+	sprite_2d.frame = random_frame
+
+
+# Quite la animación porque no es lo que se necesita
+func animacion_aleatorio():
+
 	animacion.sprite_frames = data.conjunto_de_sprites
 
 	var numero_de_animaciones = data.conjunto_de_sprites.get_animation_names()
@@ -42,6 +48,7 @@ func collect():
 	sonido.play()
 	collision_shape_2d.call_deferred("set", "disabled", true)
 	animacion.visible = false
+	sprite_2d.visible = false
 	print("RECUPERO " + str(data.recuperar_energia))
 
 

@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dkwgdyg1ccod6"]
 
 [ext_resource type="Script" uid="uid://d027wx1ml6tju" path="res://Entidades/Estaciones/Estación Rota/estación_rota.gd" id="1_fqxgv"]
-[ext_resource type="Texture2D" uid="uid://cra4a88lx8lwj" path="res://Assets/entidades/maquina expendedora.png" id="1_jkh5c"]
 [ext_resource type="PackedScene" uid="uid://cjlmg6cpg7g6g" path="res://Entidades/Estaciones/Maquina Expendedora/MaquinaExpendedora.tscn" id="2_m1bcd"]
 [ext_resource type="Script" uid="uid://pqkfc017cxy6" path="res://Recursos/materiales_necesarios.gd" id="3_kr500"]
 [ext_resource type="Script" uid="uid://fj133hmdtuh3" path="res://Entidades/Estaciones/Estación Rota/estacion_rota_resaltado.gd" id="3_ycxac"]
@@ -10,6 +9,7 @@
 [ext_resource type="Material" uid="uid://dy8jul72maxm7" path="res://Assets/entidades/OutlineMaterial.tres" id="5_o666a"]
 [ext_resource type="Texture2D" uid="uid://d2w68k8llr4oi" path="res://Assets/Inventario/piedra.png" id="5_uxqpp"]
 [ext_resource type="Texture2D" uid="uid://cj67bs1scsaiw" path="res://Assets/Inventario/moneda.png" id="6_dgkfw"]
+[ext_resource type="Texture2D" uid="uid://d3grevrisjs14" path="res://Assets/maquina expendedora rota.png" id="7_dgkfw"]
 [ext_resource type="Script" uid="uid://dnw7f1laruuul" path="res://Entidades/Estaciones/Estación Rota/panel_de_requisitos_de_materiales.gd" id="10_hmxfw"]
 [ext_resource type="PackedScene" uid="uid://slwb7rie8b2q" path="res://Entidades/Estaciones/Estación Rota/Requisitos de materiales/UI Requisitos Materiales/casilla_de_requisito_materiales.tscn" id="11_dgkfw"]
 
@@ -33,10 +33,6 @@ size = Vector2(32, 11)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ycxac"]
 size = Vector2(114, 102)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7rl7f"]
-atlas = ExtResource("1_jkh5c")
-region = Rect2(4, 31, 40, 32)
-
 [node name="Estación Rota" type="StaticBody2D" unique_id=121739820]
 y_sort_enabled = true
 collision_layer = 8
@@ -55,8 +51,9 @@ collision_layer = 8
 shape = SubResource("RectangleShape2D_ycxac")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=499963391]
+unique_name_in_owner = true
 y_sort_enabled = true
-texture = SubResource("AtlasTexture_7rl7f")
+texture = ExtResource("7_dgkfw")
 
 [node name="ResaltadoComponente" type="Node" parent="Sprite2D" unique_id=376452972 node_paths=PackedStringArray("trigger_area", "e_sprite")]
 script = ExtResource("3_ycxac")

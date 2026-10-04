@@ -1,12 +1,15 @@
 class_name EstacionRota extends StaticBody2D
 
+@export var sprite: Texture2D
 @export var estacion: PackedScene
 @export var materiales: Array[MaterialesNecesarios]
 var jugador_en_area: bool
+@onready var sprite_2d: Sprite2D = %Sprite2D
 
 
 func _ready():
 	SignalBus.interaccion.connect(interaccion)
+	sprite_2d.texture = sprite
 
 
 ## Al precionar E, recibe la señal

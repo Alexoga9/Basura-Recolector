@@ -11,13 +11,14 @@ func recibir_basura_jugador():
 	if Inventario.peso > 0: #Inventario.get_count("Basura") > 0
 		#var cantidad_basura: int = Inventario.get_count("Basura")
 		#var valor_basura: int = Inventario.get_item_resource("Basura").valor
-		var valor_basura: int = 100
-		var valor_de_venta: int = Inventario.peso * valor_basura
+		#var valor_basura: int = 100
+		#var valor_de_venta: int = Inventario.peso * valor_basura
 
-		Dinero.ganar(valor_de_venta)
+		Dinero.ganar(Inventario.valor_de_basuras)
 		#print(str(cantidad_basura))
 		#Inventario.remove_item("Basura", cantidad_basura)
 		Inventario.peso = 0
+		Inventario.valor_de_basuras = 0
 		audio.play()
 		sierras.play()
 		chispas.play()

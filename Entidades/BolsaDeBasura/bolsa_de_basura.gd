@@ -27,11 +27,6 @@ var valor: int
 
 func _ready():
 	iniciar_valores()
-	SignalBus.interaccion.connect(recibir_input)
-
-
-func recibir_input():
-	input_recibido = true
 
 
 func collect():

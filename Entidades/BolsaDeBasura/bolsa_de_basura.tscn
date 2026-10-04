@@ -20,7 +20,8 @@ radius = 11.0
 [node name="BolsaDeBasura" type="RigidBody2D" unique_id=385812566 groups=["BolsaDeBasura"]]
 y_sort_enabled = true
 collision_layer = 64
-collision_mask = 117
+collision_mask = 116
+mass = 100.0
 physics_material_override = SubResource("PhysicsMaterial_4lkkk")
 gravity_scale = 0.0
 linear_damp_mode = 1

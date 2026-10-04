@@ -11,7 +11,6 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3oxff"]
 atlas = ExtResource("3_o3r7i")
-region = Rect2(0, 0, 32, 16)
 
 [node name="Consumible" type="Area2D" unique_id=1748902439]
 script = ExtResource("1_dmsku")
@@ -24,9 +23,9 @@ shape = SubResource("CircleShape2D_dmsku")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1573797598]
 unique_name_in_owner = true
-visible = false
 texture = SubResource("AtlasTexture_3oxff")
 hframes = 2
+vframes = 3
 
 [node name="sonido" type="AudioStreamPlayer" parent="." unique_id=1248281561]
 unique_name_in_owner = true
@@ -41,6 +40,7 @@ metadata/_custom_type_script = "uid://beooi4cmwyrr8"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=608482968]
 unique_name_in_owner = true
+visible = false
 sprite_frames = ExtResource("6_3oxff")
 animation = &"Verde"
 frame_progress = 0.621689
