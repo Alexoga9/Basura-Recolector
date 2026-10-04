@@ -12,6 +12,7 @@ class_name Basura extends StaticBody2D
 
 # 📌 EL COMPONENTE DE APILAMIENTO
 @onready var componente_apilable: ComponenteApilable = %ComponenteApilable
+@onready var componente_generador_loot: ComponenteGeneradorLoot = %ComponenteGeneradorLoot
 
 @export var data: LootDefinicion
 
@@ -67,6 +68,7 @@ func collect():
 	t_recogida.tween()
 	sonido.play()
 	collision_shape_2d.call_deferred("set", "disabled", true)
+	componente_generador_loot.spawnear_materiales()
 
 	#Inventario.add_item(data)
 	Inventario.peso += 1

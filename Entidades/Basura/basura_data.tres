@@ -29,4 +29,5 @@ sprite = SubResource("AtlasTexture_dekud")
 conjunto_de_sprites = Array[Texture2D]([SubResource("AtlasTexture_42msy"), SubResource("AtlasTexture_a6rso"), SubResource("AtlasTexture_r0orq")])
 cantidad_maxima = 3
 valor = 40
+materiales_dentro = Array[ExtResource("2_dekud")]([null])
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"

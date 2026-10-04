@@ -11,6 +11,8 @@
 [ext_resource type="Script" uid="uid://cdkdjciti2gnu" path="res://Entidades/Basura/detector_colisiones.gd" id="7_rw4v2"]
 [ext_resource type="Script" uid="uid://bnu0umged2ipg" path="res://Commons/Componentes/Utilidades/Apilable/ComponenteApilable.gd" id="8_bws82"]
 [ext_resource type="Script" uid="uid://d3f11xq7ly0e4" path="res://Commons/Componentes/Tweens/Tween_rebote.gd" id="9_5gi75"]
+[ext_resource type="Script" uid="uid://q8f1sx0wxqxd" path="res://Entidades/Basura/componente_generador_loot.gd" id="12_bikif"]
+[ext_resource type="PackedScene" uid="uid://cd6lygsc501ww" path="res://Entidades/Loot/Loot.tscn" id="13_3ynl3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rw4v2"]
 atlas = ExtResource("4_rw4v2")
@@ -112,6 +114,11 @@ metadata/_custom_type_script = "uid://bnu0umged2ipg"
 unique_name_in_owner = true
 script = ExtResource("9_5gi75")
 metadata/_custom_type_script = "uid://d3f11xq7ly0e4"
+
+[node name="ComponenteGeneradorLoot" type="Node" parent="." unique_id=1503639312]
+unique_name_in_owner = true
+script = ExtResource("12_bikif")
+loot = ExtResource("13_3ynl3")
 
 [connection signal="finished" from="sonido_recogida" to="." method="_on_sonido_finished"]
 [connection signal="input_event" from="Mouse Detector" to="." method="_on_area_2d_input_event"]

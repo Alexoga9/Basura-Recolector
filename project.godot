@@ -62,6 +62,7 @@ EntidadesBasuras=""
 Obstaculo=""
 guardables=""
 Basura=""
+EntidadesLoot="A donde van a parar todos los loots de la escena"
 
 [gui]
 

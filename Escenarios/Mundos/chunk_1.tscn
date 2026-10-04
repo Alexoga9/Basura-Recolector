@@ -20,7 +20,9 @@
 [ext_resource type="Texture2D" uid="uid://due6mtxcwadhu" path="res://Assets/Inventario/Items.png" id="9_iq5bc"]
 [ext_resource type="PackedScene" uid="uid://bxxsc2sciuuu3" path="res://UI/HUD/Inventario/Inventario.tscn" id="10_0yexf"]
 [ext_resource type="Resource" uid="uid://dmky67t6umj3u" path="res://Entidades/Loot/loots/rs_piedra.tres" id="10_18pdu"]
+[ext_resource type="AudioStream" uid="uid://sahbu26hpnvx" path="res://Assets/audio/Hit.wav" id="10_bgs43"]
 [ext_resource type="PackedScene" uid="uid://bqxfu5knf0pw2" path="res://UI/HUD/hud.tscn" id="11_0l1i7"]
+[ext_resource type="Texture2D" uid="uid://cbgbirmqb5755" path="res://Assets/UI/marco tienda.png" id="12_imjhf"]
 [ext_resource type="PackedScene" uid="uid://br4shbrxkwxgj" path="res://UI/Tienda/tienda_ui.tscn" id="12_u8set"]
 [ext_resource type="Script" uid="uid://pqkfc017cxy6" path="res://Recursos/materiales_necesarios.gd" id="15_iq5bc"]
 [ext_resource type="PackedScene" uid="uid://mummqqnve0vm" path="res://Entidades/Notas/nota_coleccionable.tscn" id="15_wre61"]
@@ -49,6 +51,17 @@ veces_a_golpear = 2
 tiene_requisito = true
 tipo_de_requisito = 1
 nivel_de_requisito = 2
+metadata/_custom_type_script = "uid://dnu2r5yw53pto"
+
+[sub_resource type="Resource" id="Resource_3lpn2"]
+script = ExtResource("5_isstk")
+id = "Paquete prueba"
+nombre = "Paquete prueba"
+audio = ExtResource("10_bgs43")
+sprite = ExtResource("12_imjhf")
+cantidad_maxima = 99
+tipo_de_elemento = 2
+materiales_dentro = Array[ExtResource("5_isstk")]([ExtResource("10_18pdu"), ExtResource("9_4xlto"), ExtResource("9_4xlto")])
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ui5uu"]
@@ -240,6 +253,10 @@ data = ExtResource("6_4xlto")
 position = Vector2(711, 554)
 data = SubResource("Resource_wre61")
 
+[node name="Basura6" parent="Objetos Ambientales/Entiddaes/Basuras/Pesadas" unique_id=1298947890 instance=ExtResource("3_dahfg")]
+position = Vector2(682, 490)
+data = SubResource("Resource_3lpn2")
+
 [node name="Basura2" parent="Objetos Ambientales/Entiddaes/Basuras/Pesadas" unique_id=2075281563 instance=ExtResource("3_dahfg")]
 position = Vector2(567, 416)
 data = SubResource("Resource_bgs43")
@@ -250,7 +267,7 @@ data = SubResource("Resource_imjhf")
 
 [node name="Bolsas de basura" type="Node" parent="Objetos Ambientales/Entiddaes" unique_id=1937090420 groups=["Bolsas de Basura Pool"]]
 
-[node name="Loot" type="Node2D" parent="Objetos Ambientales/Entiddaes" unique_id=1106672725]
+[node name="Loot" type="Node2D" parent="Objetos Ambientales/Entiddaes" unique_id=1106672725 groups=["EntidadesLoot"]]
 position = Vector2(-97, 32)
 
 [node name="Loot" parent="Objetos Ambientales/Entiddaes/Loot" unique_id=1738087845 instance=ExtResource("8_onpbi")]
