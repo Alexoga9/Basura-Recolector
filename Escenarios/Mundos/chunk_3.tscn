@@ -174,6 +174,16 @@ tile_set = ExtResource("3_f7ndn")
 tile_map_data = PackedByteArray("AAD7/wwAAAAHAAsAAAD4/wwAAAAGAAwAAAD5/wsAAAAFAAsAAAAQABEAAAAFAAsAAAAMABEAAAAIAAAAAAAVABEAAAAIAAAAAAAbAA4AAAAGAAAAAAAHAAoAAAAGAAAAAAAOAAIAAAAGAAAAAAAcAPz/AAAIAAAAAAAaAPb/AAAIAAAAAAAaAPX/AAAIAAAAAAAZAPb/AAAGAAAAAAAZAPX/AAAGAAAAAAAOAPX/AAAGAAAAAAAEAPX/AAAGAAAAAAACABAAAAAIAAAAAADw/xAAAAAGAAAAAADw/w8AAAAGAAAAAADv/woAAAAIAAAAAADq/wQAAAAIAAAAAAD0//b/AAAIAAQAAADx//v/AAAIAAQAAAA=")
 tile_set = ExtResource("3_f7ndn")
 
+[node name="puerta_Valla" parent="Layers Oficiales/Terreno" unique_id=1538247553 instance=ExtResource("20_ekfr6")]
+position = Vector2(176, -224)
+condiccion_para_abrir = 1
+metadata/_edit_lock_ = true
+
+[node name="puerta_Valla2" parent="Layers Oficiales/Terreno" unique_id=1060067379 instance=ExtResource("20_ekfr6")]
+position = Vector2(80, 288)
+next_scene = ""
+costo_puerta = 300
+
 [node name="Objetos Ambientales" type="Node2D" parent="." unique_id=594393213]
 y_sort_enabled = true
 
@@ -326,16 +336,6 @@ position = Vector2(-5, -40)
 [node name="Estación Rota" parent="Objetos Ambientales/Estaciones" unique_id=121739820 instance=ExtResource("15_46y7b")]
 position = Vector2(-514, -198)
 materiales = Array[ExtResource("16_movwp")]([SubResource("Resource_uxqpp"), ExtResource("18_eudr3"), SubResource("Resource_kur0t")])
-
-[node name="puerta_Valla" parent="Objetos Ambientales" unique_id=1538247553 instance=ExtResource("20_ekfr6")]
-position = Vector2(176, -224)
-condiccion_para_abrir = 1
-metadata/_edit_lock_ = true
-
-[node name="puerta_Valla2" parent="Objetos Ambientales" unique_id=1060067379 instance=ExtResource("20_ekfr6")]
-position = Vector2(80, 288)
-next_scene = ""
-costo_puerta = 300
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=463899435]
 
