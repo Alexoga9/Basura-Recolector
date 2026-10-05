@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://bxxsc2sciuuu3" path="res://UI/HUD/Inventario/Inventario.tscn" id="10_0yexf"]
 [ext_resource type="Resource" uid="uid://dmky67t6umj3u" path="res://Entidades/Loot/loots/rs_piedra.tres" id="10_18pdu"]
 [ext_resource type="AudioStream" uid="uid://sahbu26hpnvx" path="res://Assets/audio/Hit.wav" id="10_bgs43"]
+[ext_resource type="Texture2D" uid="uid://i2ox5ksvvper" path="res://Escenarios/Oficial/Tilesheet Oficial.png" id="10_imjhf"]
 [ext_resource type="PackedScene" uid="uid://bqxfu5knf0pw2" path="res://UI/HUD/hud.tscn" id="11_0l1i7"]
 [ext_resource type="Texture2D" uid="uid://cbgbirmqb5755" path="res://Assets/UI/marco tienda.png" id="12_imjhf"]
 [ext_resource type="PackedScene" uid="uid://br4shbrxkwxgj" path="res://UI/Tienda/tienda_ui.tscn" id="12_u8set"]
@@ -51,6 +52,26 @@ veces_a_golpear = 2
 tiene_requisito = true
 tipo_de_requisito = 1
 nivel_de_requisito = 2
+metadata/_custom_type_script = "uid://dnu2r5yw53pto"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3lpn2"]
+atlas = ExtResource("10_imjhf")
+region = Rect2(17, 152, 14, 22)
+
+[sub_resource type="Resource" id="Resource_tsijt"]
+script = ExtResource("5_isstk")
+id = "Arbol"
+nombre = "Arbol"
+audio = ExtResource("4_u8set")
+sprite = SubResource("AtlasTexture_3lpn2")
+cantidad_maxima = 9999
+tipo_de_elemento = 2
+valor = 500
+veces_a_golpear = 2
+tiene_requisito = true
+tipo_de_requisito = 1
+nivel_de_requisito = 2
+materiales_dentro = Array[ExtResource("5_isstk")]([ExtResource("9_4xlto"), ExtResource("9_4xlto")])
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"
 
 [sub_resource type="Resource" id="Resource_3lpn2"]
@@ -187,7 +208,7 @@ y_sort_enabled = true
 
 [node name="Arboles" type="TileMapLayer" parent="Layers Oficiales/Terreno/Cesped/Props" unique_id=731465486]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAYABEAAgADAAsAAAAaABEAAgABAAwAAAAWAPr/AgACAAwAAAAVAPr/AgABAAwAAAAUAPr/AgAEAAsAAAATAPr/AgABAAwAAAASAPr/AgACAAwAAAD7/wEAAgAMAAwAAAA=")
+tile_map_data = PackedByteArray("AAD7/wEAAgAMAAwAAAA=")
 tile_set = ExtResource("1_f8k6w")
 
 [node name="TileMapLayer3" type="TileMapLayer" parent="Layers Oficiales/Terreno/Cesped/Props" unique_id=1735853291]
@@ -252,6 +273,10 @@ data = ExtResource("6_4xlto")
 [node name="Basura5" parent="Objetos Ambientales/Entiddaes/Basuras/Pesadas" unique_id=696166597 instance=ExtResource("3_dahfg")]
 position = Vector2(711, 554)
 data = SubResource("Resource_wre61")
+
+[node name="Basura7" parent="Objetos Ambientales/Entiddaes/Basuras/Pesadas" unique_id=185417449 instance=ExtResource("3_dahfg")]
+position = Vector2(656, 587)
+data = SubResource("Resource_tsijt")
 
 [node name="Basura6" parent="Objetos Ambientales/Entiddaes/Basuras/Pesadas" unique_id=1298947890 instance=ExtResource("3_dahfg")]
 position = Vector2(682, 490)

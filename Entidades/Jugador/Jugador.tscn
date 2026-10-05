@@ -148,7 +148,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_frfy0"]
-radius = 30.066593
+radius = 24.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1ibpt"]
 radius = 12.0
@@ -228,11 +228,11 @@ offset = Vector2(0, -10)
 
 [node name="LootAtractor" type="Area2D" parent="." unique_id=919355164 groups=["Radar_Loot"]]
 editor_description = "Viene siendo un area de reconocimiento"
-visible = false
 collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LootAtractor" unique_id=635740052]
+position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_frfy0")
 debug_color = Color(0.63369, 0.5259296, 0.0091273235, 0.41960785)
 
@@ -261,7 +261,7 @@ metadata/_custom_type_script = "uid://dqiir7o6l4sjy"
 
 [node name="basuraCollider" type="CollisionShape2D" parent="RadarComponente" unique_id=1726165650]
 unique_name_in_owner = true
-position = Vector2(0, -2)
+position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_yyjpx")
 
 [node name="Timer" type="Timer" parent="RadarComponente" unique_id=318487114]

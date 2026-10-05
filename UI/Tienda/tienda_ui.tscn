@@ -18,9 +18,25 @@
 [ext_resource type="Resource" uid="uid://dpdy87aeige8s" path="res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres" id="12_72a65"]
 [ext_resource type="Resource" uid="uid://dfyvee0widefa" path="res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres" id="14_iqrif"]
 [ext_resource type="Resource" uid="uid://dkh4b2om6688o" path="res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres" id="17_0x7iy"]
+[ext_resource type="Script" uid="uid://byubgof7ym1vf" path="res://UI/Tienda/golpe_mejora.gd" id="19_52q4a"]
+[ext_resource type="Texture2D" uid="uid://due6mtxcwadhu" path="res://Assets/Inventario/Items.png" id="19_ng6pv"]
+[ext_resource type="Script" uid="uid://dxsan7lcfsr3y" path="res://Recursos/DatosHabilidades.gd" id="20_72a65"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6dplc"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqrif"]
+atlas = ExtResource("19_ng6pv")
+region = Rect2(1, 65, 14, 14)
+
+[sub_resource type="Resource" id="Resource_0x7iy"]
+script = ExtResource("20_72a65")
+nombre = "Golpes"
+descripcion = "Aumenta la intensidad 
+de tus golpes "
+precio = 6
+imagen = SubResource("AtlasTexture_iqrif")
+metadata/_custom_type_script = "uid://dxsan7lcfsr3y"
 
 [node name="TiendaUi" type="Control" unique_id=1611773581 node_paths=PackedStringArray("panelTienda")]
 layout_mode = 3
@@ -131,4 +147,14 @@ logica_mejora = NodePath("MejoraFuerza")
 
 [node name="MejoraFuerza" type="Node" parent="MarginContainer/ScrollContainer/Caja de compras/Fuerza" unique_id=447245579]
 script = ExtResource("12_2icyj")
+metadata/_custom_type_script = "uid://cp267s1mgfxd1"
+
+[node name="Golpe" parent="MarginContainer/ScrollContainer/Caja de compras" unique_id=1790802493 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
+layout_mode = 2
+focus_neighbor_top = NodePath("../Honguitos")
+mejora = SubResource("Resource_0x7iy")
+logica_mejora = NodePath("Golpe_Mejora")
+
+[node name="Golpe_Mejora" type="Node" parent="MarginContainer/ScrollContainer/Caja de compras/Golpe" unique_id=166266606]
+script = ExtResource("19_52q4a")
 metadata/_custom_type_script = "uid://cp267s1mgfxd1"

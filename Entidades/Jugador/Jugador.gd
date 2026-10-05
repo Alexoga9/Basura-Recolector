@@ -15,6 +15,7 @@ var canMove = true
 @onready var energia_componente: EnergiaComponente = %EnergiaComponente
 
 
+
 func _ready():
 	Global.set_jugador(self)
 	SignalBus.jugador_listo.emit()

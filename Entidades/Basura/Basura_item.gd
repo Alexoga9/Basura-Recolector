@@ -78,7 +78,8 @@ func collect():
 
 
 func romper():
-	data.veces_a_golpear -= 1
+	print("Golpeas " + str(Global.jugador.estadisticas_componente.golpe))
+	data.veces_a_golpear -= Global.jugador.estadisticas_componente.golpe
 	sonido_romper.play()
 	tween_rebote.tween()
 

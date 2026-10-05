@@ -1,4 +1,4 @@
-res://Entidades/Estaciones/Estación Rota/estación_rota.tscn
+res://Escenarios/Mundos/chunk_1.tscn
 res://UI/Theme/Tienda.tres
 res://Entidades/Estaciones/Tienda/Outline.gdshader
 res://Escenarios/Oficial/TileMapOficial.tres
@@ -16,11 +16,4 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
-res://Entidades/Estaciones/Estación Rota/estación_rota.gd
-res://Escenarios/Mundos/chunk_1.tscn
-res://Entidades/Basura/Basura.tscn
-res://Recursos/LootDefinicion.gd
-res://Entidades/Loot/coleccionables/loot_coleccionable.tres
-res://Entidades/Basura/componente_generador_loot.gd
 res://Entidades/Basura/Basura_item.gd
-res://Commons/Componentes/Tweens/Tween_deslizar.gd
