@@ -28,3 +28,9 @@ func load_game() -> void:
 	SaveGame.Load_Game()
 	get_tree().paused = false
 	hide()
+
+
+func reset() -> void:
+	get_tree().paused = false
+	SaveGame.Reset_Game()
+	hide()

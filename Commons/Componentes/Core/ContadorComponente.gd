@@ -7,6 +7,7 @@ var cantidad_de_basuras: int = 1 # evita división entre 0
 
 
 func _ready() -> void:
+	await get_tree().process_frame
 	cantidad_de_basuras = get_tree().get_node_count_in_group("Basura")
 
 	if cantidad_de_basuras <= 0:
@@ -28,7 +29,9 @@ func set_limpieza(porcentaje_guardado: int) -> void:
 
 
 func get_porcentaje() -> int:
-	return int((float(basuras_actuales) / cantidad_de_basuras) * 100)
+	var result = int((float(basuras_actuales) / cantidad_de_basuras) * 100)
+	print(str(result))
+	return result
 
 
 func _emitir_porcentaje() -> void:
