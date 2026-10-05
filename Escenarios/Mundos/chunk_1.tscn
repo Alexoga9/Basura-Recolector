@@ -317,7 +317,6 @@ materiales = Array[ExtResource("15_iq5bc")]([SubResource("Resource_uxqpp"), ExtR
 
 [node name="puerta_Valla" parent="Objetos Ambientales" unique_id=1538247553 instance=ExtResource("8_aqtp6")]
 position = Vector2(218, -224)
-porcentaje_requerido = 10
 next_scene = "res://Escenarios/Mundos/chunk_2.tscn"
 costo_puerta = 300
 condiccion_para_abrir = 1

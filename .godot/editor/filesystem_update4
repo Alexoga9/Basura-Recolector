@@ -1,4 +1,4 @@
-res://Entidades/Basura/Basura.tscn
+res://Escenarios/Mundos/chunk_3.tscn
 res://UI/Theme/Tienda.tres
 res://Entidades/Estaciones/Tienda/Outline.gdshader
 res://Entidades/Basura/basura_data.tres
@@ -16,9 +16,5 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
-res://Entidades/Basura/Basura_item.gd
-res://Commons/Componentes/Core/ContadorComponente.gd
 res://Escenarios/Mundos/chunk_1.tscn
-res://Escenarios/Mundos/chunk_2.tscn
-res://Escenarios/Mundos/chunk_3.tscn
-res://Escenarios/prueba de cambio de sprite/spriteRestauracion.gd
+res://Escenarios/prueba de cambio de sprite/valla.gd
