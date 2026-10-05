@@ -18,7 +18,7 @@ var timer_mensaje: Timer
 func _ready() -> void:
 	# Escuchamos el progreso y el botón de interacción
 
-	Global.jugador.contador_componente.limpieza_actualizada.connect(_actualizar_progreso)
+	SignalBus.zona_limpida.connect(_actualizar_progreso)
 	SignalBus.interaccion.connect(_al_interactuar)
 
 	vallatext.hide()
@@ -82,4 +82,4 @@ func abrir_paso() -> void:
 	SignalBus.interaccion.disconnect(_al_interactuar)
 	APuerta.play("puerta_abierta")
 	$CollisionShape2D.disabled = true
-	SaveGame.cambiar_escena(next_scene)
+	get_tree().change_scene_to_file(next_scene)
