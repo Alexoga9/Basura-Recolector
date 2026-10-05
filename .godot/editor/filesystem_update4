@@ -18,3 +18,4 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_hongu
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
 res://Escenarios/prueba de cambio de sprite/valla.gd
 res://Commons/Componentes/Core/ContadorComponente.gd
+res://Escenarios/save_game.gd

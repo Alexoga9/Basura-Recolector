@@ -89,28 +89,6 @@ func Load_Game() -> void:
 	cargar_estado_escena_actual()
 
 
-func cambiar_escena(ruta: String, autoguardar: bool = true) -> void:
-	guardar_estado_escena_actual() # 1. Guarda la escena actual antes de salir
-
-	get_tree().change_scene_to_file(ruta)
-
-	# 2. Espera a que la escena nueva y el jugador estén completamente cargados
-	await get_tree().process_frame
-	while get_tree().current_scene == null \
-	or not is_instance_valid(Global.jugador) \
-	or not Global.jugador.is_inside_tree():
-		await get_tree().process_frame
-
-	jugador = Global.jugador
-
-	# 3. Como los objetos ya están colocados a mano en la escena, 
-	#    simplemente cargamos su estado (ej. destruimos los que ya recogiste)
-	cargar_estado_escena_actual()
-
-	if autoguardar:
-		Save_Game() # 4. Guarda a disco el nuevo estado
-
-
 func Reset_Game() -> void:
 	datos_por_escenas.clear()
 	Porcentaje_Limpieza = 0
