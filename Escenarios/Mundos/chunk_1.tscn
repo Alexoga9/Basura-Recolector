@@ -9,7 +9,6 @@
 [ext_resource type="AudioStream" uid="uid://dr7bho43atgf6" path="res://Assets/audio/tornado audio.mp3" id="4_u8set"]
 [ext_resource type="PackedScene" uid="uid://b8u0pprb4t2sj" path="res://Entidades/Estaciones/Trituradora/trituradora.tscn" id="5_c2e4j"]
 [ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="5_isstk"]
-[ext_resource type="Resource" uid="uid://dd3e44dslqngq" path="res://Entidades/Basura/Basura_pesada.tres" id="6_3lpn2"]
 [ext_resource type="Resource" uid="uid://dkoxwvu2yrs81" path="res://Entidades/Basura/Obstaculo prueba.tres" id="6_4xlto"]
 [ext_resource type="PackedScene" uid="uid://cjlmg6cpg7g6g" path="res://Entidades/Estaciones/Maquina Expendedora/MaquinaExpendedora.tscn" id="6_isstk"]
 [ext_resource type="Texture2D" uid="uid://syxbc1c047yk" path="res://Assets/Variedad de cajas.png" id="6_tl5id"]
@@ -31,7 +30,7 @@
 [ext_resource type="Script" uid="uid://brs2x5jqdp1tv" path="res://Recursos/data_notas.gd" id="16_1mu81"]
 [ext_resource type="Texture2D" uid="uid://d2w68k8llr4oi" path="res://Assets/Inventario/piedra.png" id="16_wre61"]
 [ext_resource type="Resource" uid="uid://cn42hyavquied" path="res://Entidades/Estaciones/Estación Rota/Requisitos de materiales/Estacion_rota_requisitos_madera.tres" id="17_1mu81"]
-[ext_resource type="Texture2D" uid="uid://cj67bs1scsaiw" path="res://Assets/Inventario/moneda.png" id="18_bkx32"]
+[ext_resource type="Texture2D" uid="uid://cj67bs1scsaiw" path="res://Assets/Inventario/Moneda.png" id="18_bkx32"]
 [ext_resource type="Texture2D" uid="uid://bai1een67q4ss" path="res://Assets/tienda rota.png" id="20_bkx32"]
 [ext_resource type="Texture2D" uid="uid://d3grevrisjs14" path="res://Assets/maquina expendedora rota.png" id="20_wre61"]
 [ext_resource type="Texture2D" uid="uid://bnj7dvfesgnbn" path="res://Assets/trituradora rota.png" id="25_1mu81"]
@@ -261,16 +260,13 @@ position = Vector2(582, 505)
 [node name="Basura6" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=1476925183 instance=ExtResource("3_dahfg")]
 position = Vector2(575, 495)
 
-[node name="Basura" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=529520627 instance=ExtResource("3_dahfg")]
-data = ExtResource("6_3lpn2")
-
 [node name="Pesadas" type="Node2D" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=69145048]
 y_sort_enabled = true
 
 [node name="Basura" parent="Objetos Ambientales/Entiddaes/Basuras/Pesadas" unique_id=992033780 instance=ExtResource("3_dahfg")]
 position = Vector2(576, 337)
 
-[node name="Basura4" parent="Objetos Ambientales/Entiddaes/Basuras/Pesadas" unique_id=1057177187 instance=ExtResource("3_dahfg")]
+[node name="Basura4" parent="Objetos Ambientales/Entiddaes/Basuras/Pesadas" unique_id=529520627 instance=ExtResource("3_dahfg")]
 position = Vector2(658, 554)
 data = ExtResource("6_4xlto")
 
@@ -355,8 +351,6 @@ materiales = Array[ExtResource("15_iq5bc")]([SubResource("Resource_18pdu")])
 
 [node name="puerta_Valla" parent="Objetos Ambientales" unique_id=1538247553 instance=ExtResource("8_aqtp6")]
 position = Vector2(394, -144)
-porcentaje_requerido = 0
-next_scene = "res://Escenarios/Mundos/chunk_2.tscn"
 costo_puerta = 300
 condiccion_para_abrir = 1
 

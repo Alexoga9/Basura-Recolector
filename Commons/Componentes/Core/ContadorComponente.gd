@@ -30,7 +30,6 @@ func set_limpieza(porcentaje_guardado: int) -> void:
 
 func get_porcentaje() -> int:
 	var result = int((float(basuras_actuales) / cantidad_de_basuras) * 100)
-	print(str(result))
 	return result
 
 
