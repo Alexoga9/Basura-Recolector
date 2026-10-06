@@ -1,11 +1,3 @@
-res://Commons/Componentes/Core/ContadorComponente.gd
-res://Entidades/Basura/Basura_item.gd
-res://Escenarios/save_game.gd
-res://Escenarios/prueba de cambio de sprite/spriteRestauracion.gd
-res://Escenarios/prueba de cambio de sprite/valla.gd
-res://UI/HUD/Pausa/pausa.gd
-res://UI/HUD/Pausa/pausa.tscn
-res://Utilidades/Sistemas/spawner.gd
 res://Escenarios/Mundos/chunk_1.tscn
 res://UI/Theme/Tienda.tres
 res://Entidades/Estaciones/Tienda/Outline.gdshader
@@ -13,6 +5,7 @@ res://Escenarios/Oficial/TileMapOficial.tres
 res://Escenarios/shine/hit_flash.gdshader
 res://Entidades/Basura/basura_data.tres
 res://Escenarios/Sprite_sucio/Tile sucio.tres
+res://Entidades/Basura/Basura_pesada.tres
 res://Entidades/Basura/Obstaculo prueba.tres
 res://Entidades/Consumible/Tipos de Consumibles/animacion lata consumible.tres
 res://Assets/Shaders/Shader nuevo ajustable correctamente.tres
@@ -24,7 +17,3 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
-res://UI/HUD/Inventario/Inventario.tscn
-res://Entidades/Consumible/Tipos de Consumibles/honguito.tres
-res://Entidades/Basura/Basura_pesada.tres
-res://Entidades/Estaciones/Estación Rota/estación_rota.tscn
