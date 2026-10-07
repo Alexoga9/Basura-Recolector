@@ -28,7 +28,7 @@ var tipo_de_basura: TipoBasura
 var valor: int
 
 var requisito: bool
-enum tipo_de_requisito_Enum {RECOGIDA, FUERZA}
+enum tipo_de_requisito_Enum {PICO, HACHA, AZADA}
 var tipo_de_requisito: tipo_de_requisito_Enum
 var nivel_requisito: int
 

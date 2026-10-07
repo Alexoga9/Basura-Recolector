@@ -9,4 +9,5 @@ id = "hierba alta "
 nombre = "hierba alta "
 audio = ExtResource("1_heqw4")
 tipo_de_elemento = 2
+tipo_de_requisito = 2
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"

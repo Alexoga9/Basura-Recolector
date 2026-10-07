@@ -1,4 +1,4 @@
-res://Entidades/Basura/Basura.tscn
+res://Escenarios/Mundos/chunk_1.tscn
 res://UI/Theme/Tienda.tres
 res://Entidades/Estaciones/Tienda/Outline.gdshader
 res://Escenarios/Oficial/TileMapOficial.tres
@@ -16,11 +16,15 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
-res://Entidades/Basura/Arbol.tres
-res://Entidades/Basura/Arbol Cesped Claro.tres
-res://Entidades/Basura/Caja/Obstaculos/piedra/piedra cesped claro.tres
-res://Escenarios/Mundos/chunk_1.tscn
+res://UI/Tienda/logica_hacha.gd
+res://UI/Tienda/tienda_ui.tscn
+res://UI/Tienda/logica_azada.gd
+res://Commons/Componentes/Core/EstadisticasComponente.gd
+res://UI/Tienda/MejoraFuerza.gd
+res://Entidades/Basura/Basura_item.gd
+res://Commons/Componentes/Radares/RadarComponente.gd
 res://Entidades/Basura/Caja/Obstaculos/Arbol/Arbol Cesped Claro.tres
-res://Entidades/Basura/Caja/Obstaculos/Arbol/Arbol Cesped Oscuro.tres
-res://Entidades/Basura/Caja/Obstaculos/piedra/piedra cesped oscuro.tres
+res://Recursos/LootDefinicion.gd
+res://Entidades/Basura/Caja/Obstaculos/piedra/piedra cesped claro.tres
 res://Entidades/Basura/Caja/Obstaculos/hierba alta/hierba alta.tres
+res://Entidades/Basura/Caja/Obstaculos/Arbol/Arbol Cesped Oscuro.tres

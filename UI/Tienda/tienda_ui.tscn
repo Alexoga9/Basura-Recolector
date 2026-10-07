@@ -12,7 +12,7 @@
 [ext_resource type="Resource" uid="uid://gi5lwe4ui2dd" path="res://Entidades/Basura/basura_data.tres" id="9_65riy"]
 [ext_resource type="Resource" uid="uid://fmtqlytfb15i" path="res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.tres" id="9_ng6pv"]
 [ext_resource type="Script" uid="uid://do66icfihy641" path="res://UI/Tienda/mejoras de habilidades/mejoras/mejora_lanzamiento.gd" id="10_p2tmy"]
-[ext_resource type="Script" uid="uid://pe2yywnrv3m7" path="res://UI/Tienda/mejoras de habilidades/mejoras/mejora_honguitos.gd" id="10_upi7f"]
+[ext_resource type="Script" uid="uid://pe2yywnrv3m7" path="res://UI/Tienda/mejoras de habilidades/mejoras/mejora_refresco.gd" id="10_upi7f"]
 [ext_resource type="Resource" uid="uid://bwbt2o3gbm3gu" path="res://Entidades/Consumible/Tipos de Consumibles/honguito.tres" id="11_upi7f"]
 [ext_resource type="Script" uid="uid://b58afgr65p6fg" path="res://UI/Tienda/MejoraFuerza.gd" id="12_2icyj"]
 [ext_resource type="Resource" uid="uid://dpdy87aeige8s" path="res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres" id="12_72a65"]
@@ -21,6 +21,8 @@
 [ext_resource type="Script" uid="uid://byubgof7ym1vf" path="res://UI/Tienda/golpe_mejora.gd" id="19_52q4a"]
 [ext_resource type="Texture2D" uid="uid://due6mtxcwadhu" path="res://Assets/Inventario/Items.png" id="19_ng6pv"]
 [ext_resource type="Script" uid="uid://dxsan7lcfsr3y" path="res://Recursos/DatosHabilidades.gd" id="20_72a65"]
+[ext_resource type="Script" uid="uid://pxogusd22fja" path="res://UI/Tienda/logica_hacha.gd" id="22_iqrif"]
+[ext_resource type="Script" uid="uid://bihxf8vcqi3h5" path="res://UI/Tienda/logica_azada.gd" id="23_iqrif"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6dplc"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -38,6 +40,32 @@ precio = 6
 imagen = SubResource("AtlasTexture_iqrif")
 metadata/_custom_type_script = "uid://dxsan7lcfsr3y"
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_0x7iy"]
+atlas = ExtResource("19_ng6pv")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="Resource" id="Resource_iqrif"]
+script = ExtResource("20_72a65")
+nombre = "Hacha"
+descripcion = "Mejora el hacha
+para romper obstaculos"
+precio = 5
+imagen = SubResource("AtlasTexture_0x7iy")
+metadata/_custom_type_script = "uid://dxsan7lcfsr3y"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ncotw"]
+atlas = ExtResource("19_ng6pv")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="Resource" id="Resource_ncotw"]
+script = ExtResource("20_72a65")
+nombre = "Azada"
+descripcion = "Mejora la azada
+para romper obstaculos"
+precio = 5
+imagen = SubResource("AtlasTexture_ncotw")
+metadata/_custom_type_script = "uid://dxsan7lcfsr3y"
+
 [node name="TiendaUi" type="Control" unique_id=1611773581 node_paths=PackedStringArray("panelTienda")]
 layout_mode = 3
 anchors_preset = 15
@@ -48,7 +76,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_6namq")
-panelTienda = [NodePath("MarginContainer/ScrollContainer/Caja de compras/Resistencia"), NodePath("MarginContainer/ScrollContainer/Caja de compras/Cooldown"), NodePath("MarginContainer/ScrollContainer/Caja de compras/Rango"), NodePath("MarginContainer/ScrollContainer/Caja de compras/Peso"), NodePath("MarginContainer/ScrollContainer/Caja de compras/Lanzamiento"), NodePath("MarginContainer/ScrollContainer/Caja de compras/Honguitos"), NodePath("MarginContainer/ScrollContainer/Caja de compras/Fuerza")]
+panelTienda = [NodePath("MarginContainer/ScrollContainer/Caja de compras/Resistencia"), NodePath("MarginContainer/ScrollContainer/Caja de compras/Cooldown"), NodePath("MarginContainer/ScrollContainer/Caja de compras/Rango"), NodePath("MarginContainer/ScrollContainer/Caja de compras/Peso"), NodePath("MarginContainer/ScrollContainer/Caja de compras/Lanzamiento"), NodePath("MarginContainer/ScrollContainer/Caja de compras/Refrescos"), NodePath("MarginContainer/ScrollContainer/Caja de compras/Pico")]
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=146613591]
 layout_mode = 1
@@ -121,7 +149,7 @@ metadata/_custom_type_script = "uid://cp267s1mgfxd1"
 [node name="Lanzamiento" parent="MarginContainer/ScrollContainer/Caja de compras" unique_id=265702065 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
 layout_mode = 2
 focus_neighbor_top = NodePath("../Peso")
-focus_neighbor_bottom = NodePath("../Honguitos")
+focus_neighbor_bottom = NodePath("../Refrescos")
 mejora = ExtResource("12_72a65")
 logica_mejora = NodePath("Mejora Lanzamiento")
 
@@ -129,32 +157,50 @@ logica_mejora = NodePath("Mejora Lanzamiento")
 script = ExtResource("10_p2tmy")
 metadata/_custom_type_script = "uid://cp267s1mgfxd1"
 
-[node name="Honguitos" parent="MarginContainer/ScrollContainer/Caja de compras" unique_id=1081041739 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
+[node name="Refrescos" parent="MarginContainer/ScrollContainer/Caja de compras" unique_id=1081041739 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
 layout_mode = 2
 mejora = ExtResource("14_iqrif")
-logica_mejora = NodePath("MejoraHonguitos")
+logica_mejora = NodePath("MejoraRefresco")
 
-[node name="MejoraHonguitos" type="Node" parent="MarginContainer/ScrollContainer/Caja de compras/Honguitos" unique_id=250525938]
+[node name="MejoraRefresco" type="Node" parent="MarginContainer/ScrollContainer/Caja de compras/Refrescos" unique_id=250525938]
 script = ExtResource("10_upi7f")
 honguito = ExtResource("11_upi7f")
 metadata/_custom_type_script = "uid://cp267s1mgfxd1"
 
-[node name="Fuerza" parent="MarginContainer/ScrollContainer/Caja de compras" unique_id=1195401960 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
-layout_mode = 2
-focus_neighbor_top = NodePath("../Honguitos")
-mejora = ExtResource("17_0x7iy")
-logica_mejora = NodePath("MejoraFuerza")
-
-[node name="MejoraFuerza" type="Node" parent="MarginContainer/ScrollContainer/Caja de compras/Fuerza" unique_id=447245579]
-script = ExtResource("12_2icyj")
-metadata/_custom_type_script = "uid://cp267s1mgfxd1"
-
 [node name="Golpe" parent="MarginContainer/ScrollContainer/Caja de compras" unique_id=1790802493 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
 layout_mode = 2
-focus_neighbor_top = NodePath("../Honguitos")
+focus_neighbor_top = NodePath("../Refrescos")
 mejora = SubResource("Resource_0x7iy")
 logica_mejora = NodePath("Golpe_Mejora")
 
 [node name="Golpe_Mejora" type="Node" parent="MarginContainer/ScrollContainer/Caja de compras/Golpe" unique_id=166266606]
 script = ExtResource("19_52q4a")
+metadata/_custom_type_script = "uid://cp267s1mgfxd1"
+
+[node name="Pico" parent="MarginContainer/ScrollContainer/Caja de compras" unique_id=1195401960 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
+layout_mode = 2
+focus_neighbor_top = NodePath("../Refrescos")
+mejora = ExtResource("17_0x7iy")
+logica_mejora = NodePath("MejoraPico")
+
+[node name="MejoraPico" type="Node" parent="MarginContainer/ScrollContainer/Caja de compras/Pico" unique_id=447245579]
+script = ExtResource("12_2icyj")
+metadata/_custom_type_script = "uid://cp267s1mgfxd1"
+
+[node name="Hacha" parent="MarginContainer/ScrollContainer/Caja de compras" unique_id=2012610679 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
+layout_mode = 2
+mejora = SubResource("Resource_iqrif")
+logica_mejora = NodePath("Logica_Hacha")
+
+[node name="Logica_Hacha" type="Node" parent="MarginContainer/ScrollContainer/Caja de compras/Hacha" unique_id=1266754320]
+script = ExtResource("22_iqrif")
+metadata/_custom_type_script = "uid://cp267s1mgfxd1"
+
+[node name="Azada" parent="MarginContainer/ScrollContainer/Caja de compras" unique_id=660848076 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
+layout_mode = 2
+mejora = SubResource("Resource_ncotw")
+logica_mejora = NodePath("Logica_Azada")
+
+[node name="Logica_Azada" type="Node" parent="MarginContainer/ScrollContainer/Caja de compras/Azada" unique_id=1121357555]
+script = ExtResource("23_iqrif")
 metadata/_custom_type_script = "uid://cp267s1mgfxd1"

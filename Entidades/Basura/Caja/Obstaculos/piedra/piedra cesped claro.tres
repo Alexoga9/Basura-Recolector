@@ -36,6 +36,5 @@ cantidad_maxima = 9999
 tipo_de_elemento = 3
 tipo_de_basura = 1
 veces_a_golpear = 2
-tipo_de_requisito = 1
 materiales_dentro = Array[ExtResource("3_8rfjx")]([ExtResource("4_0b47q"), ExtResource("4_0b47q")])
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"

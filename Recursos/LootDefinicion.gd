@@ -27,7 +27,7 @@ enum TipoBasura {BASICO, PESADO}
 
 @export_group("Requisitos")
 @export var tiene_requisito: bool = false
-enum TipoRequisito {RECOGIDA, FUERZA}#De referencia de momento
+enum TipoRequisito {PICO, HACHA, AZADA}#De referencia de momento
 @export var tipo_de_requisito: TipoRequisito
 @export var nivel_de_requisito: int
 

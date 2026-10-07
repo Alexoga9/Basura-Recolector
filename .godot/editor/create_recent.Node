@@ -1,4 +1,5 @@
 Logica_Mejora
+PanelTienda
 Node
 MarginContainer
 AudioStreamPlayer
@@ -11,5 +12,3 @@ TileMapLayer
 save_game
 Button
 Panel
-Node2D
-AnimatedSprite2D

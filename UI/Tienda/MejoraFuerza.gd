@@ -6,9 +6,9 @@ func _ready():
 
 
 func aplicar_mejora():
-	jugador.estadisticas_componente.fuerza += 1
+	jugador.estadisticas_componente.pico += 1
 	actualizar_datos()
 
 
 func actualizar_datos():
-	panel.estadisticas(jugador.estadisticas_componente.fuerza, jugador.estadisticas_componente.fuerza + 1)
+	panel.estadisticas(jugador.estadisticas_componente.pico, jugador.estadisticas_componente.pico + 1)

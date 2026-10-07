@@ -44,13 +44,11 @@ func revisar_tipo_de_basura(body: Basura):
 # 🔑 AHORA SÍ: chequear requisito y salir si falla
 	if not revisar_tipo_de_requisito(body):
 		return
-	
+
 	if body.data.veces_a_golpear > 0:
 		print("Basura pesada")
 		body.romper()
 		return
-
-	
 
 	recolectar_basura(body)
 
@@ -67,12 +65,16 @@ func revisar_tipo_de_requisito(body: Basura) -> bool:
 		return true
 
 	match body.tipo_de_requisito:
-		body.tipo_de_requisito_Enum.RECOGIDA:
-			# ¿Qué debe cumplir? Por ahora permitimos
-			return true
+		body.tipo_de_requisito_Enum.PICO:
+			if body.nivel_requisito <= jugador.estadisticas_componente.pico:
+				return true
 
-		body.tipo_de_requisito_Enum.FUERZA:
-			if body.nivel_requisito <= jugador.estadisticas_componente.fuerza:
+		body.tipo_de_requisito_Enum.HACHA:
+			if body.nivel_requisito <= jugador.estadisticas_componente.hacha:
+				return true
+
+		body.tipo_de_requisito_Enum.AZADA:
+			if body.nivel_requisito <= jugador.estadisticas_componente.azada:
 				return true
 
 			print("Compra niveles de fuerza")
