@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="LootDefinicion" format=3 uid="uid://32vanmbpxq1r"]
+
+[ext_resource type="AudioStream" uid="uid://sahbu26hpnvx" path="res://Assets/audio/Hit.wav" id="1_heqw4"]
+[ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="2_gdxd7"]
+
+[resource]
+script = ExtResource("2_gdxd7")
+id = "hierba alta "
+nombre = "hierba alta "
+audio = ExtResource("1_heqw4")
+tipo_de_elemento = 2
+metadata/_custom_type_script = "uid://dnu2r5yw53pto"

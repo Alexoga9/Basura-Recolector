@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="LootDefinicion" format=3 uid="uid://bro2d4njrm738"]
+
+[ext_resource type="AudioStream" uid="uid://sahbu26hpnvx" path="res://Assets/audio/Hit.wav" id="1_mk4kt"]
+[ext_resource type="Texture2D" uid="uid://i2ox5ksvvper" path="res://Escenarios/Oficial/Tilesheet Oficial.png" id="2_8kd71"]
+[ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="3_hngiy"]
+[ext_resource type="Resource" uid="uid://5k76mbciamak" path="res://Entidades/Loot/loots/re_madera.tres" id="4_6hwjp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74oem"]
+atlas = ExtResource("2_8kd71")
+region = Rect2(0, 64, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0fyxr"]
+atlas = ExtResource("2_8kd71")
+region = Rect2(48, 64, 48, 64)
+
+[resource]
+script = ExtResource("3_hngiy")
+id = "Arbol Cesped Claro"
+nombre = "Arbol Cesped Claro"
+audio = ExtResource("1_mk4kt")
+sprite = SubResource("AtlasTexture_74oem")
+conjunto_de_sprites = Array[Texture2D]([SubResource("AtlasTexture_74oem"), SubResource("AtlasTexture_0fyxr")])
+cantidad_maxima = 9999
+tipo_de_elemento = 2
+tipo_de_basura = 1
+veces_a_golpear = 5
+tiene_requisito = true
+tipo_de_requisito = 1
+nivel_de_requisito = 3
+materiales_dentro = Array[ExtResource("3_hngiy")]([ExtResource("4_6hwjp"), ExtResource("4_6hwjp")])
+metadata/_custom_type_script = "uid://dnu2r5yw53pto"

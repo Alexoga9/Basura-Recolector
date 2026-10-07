@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="LootDefinicion" format=3 uid="uid://dq615pv15ikjx"]
+
+[ext_resource type="AudioStream" uid="uid://sahbu26hpnvx" path="res://Assets/audio/Hit.wav" id="1_h8486"]
+[ext_resource type="Texture2D" uid="uid://i2ox5ksvvper" path="res://Escenarios/Oficial/Tilesheet Oficial.png" id="2_itv3a"]
+[ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="3_hxtmk"]
+[ext_resource type="Resource" uid="uid://dmky67t6umj3u" path="res://Entidades/Loot/loots/rs_piedra.tres" id="4_yu28j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8486"]
+atlas = ExtResource("2_itv3a")
+region = Rect2(80, 224, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_itv3a"]
+atlas = ExtResource("2_itv3a")
+region = Rect2(96, 224, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxtmk"]
+atlas = ExtResource("2_itv3a")
+region = Rect2(80, 240, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yu28j"]
+atlas = ExtResource("2_itv3a")
+region = Rect2(96, 240, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x1wga"]
+atlas = ExtResource("2_itv3a")
+region = Rect2(80, 224, 16, 16)
+
+[resource]
+script = ExtResource("3_hxtmk")
+id = "Piedra cesped oscuro"
+nombre = "Piedra cesped oscuro"
+audio = ExtResource("1_h8486")
+sprite = SubResource("AtlasTexture_x1wga")
+conjunto_de_sprites = Array[Texture2D]([SubResource("AtlasTexture_h8486"), SubResource("AtlasTexture_itv3a"), SubResource("AtlasTexture_hxtmk"), SubResource("AtlasTexture_yu28j")])
+cantidad_maxima = 9999
+tipo_de_elemento = 3
+tipo_de_basura = 1
+veces_a_golpear = 2
+tipo_de_requisito = 1
+materiales_dentro = Array[ExtResource("3_hxtmk")]([ExtResource("4_yu28j"), ExtResource("4_yu28j")])
+metadata/_custom_type_script = "uid://dnu2r5yw53pto"
