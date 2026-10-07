@@ -1,3 +1,4 @@
+res://Entidades/Basura/
 res://Entidades/Notas/
 res://Escenarios/Sprite_sucio/
 res://Escenarios/Mundos/
@@ -5,7 +6,6 @@ res://Entidades/Consumible/Tipos de Consumibles/
 res://Assets/
 res://Escenarios/Oficial/
 res://Entidades/Prefabs colocables/
-res://Entidades/Basura/
 res://Entidades/Notas recogibles/
 res://Assets/Shaders/
 res://

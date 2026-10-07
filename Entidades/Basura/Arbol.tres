@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="LootDefinicion" format=3 uid="uid://sjc3cn6kq6nq"]
+
+[ext_resource type="AudioStream" uid="uid://sahbu26hpnvx" path="res://Assets/audio/Hit.wav" id="1_707wf"]
+[ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="1_kyb83"]
+[ext_resource type="Texture2D" uid="uid://i2ox5ksvvper" path="res://Escenarios/Oficial/Tilesheet Oficial.png" id="3_s1xd6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxflo"]
+atlas = ExtResource("3_s1xd6")
+region = Rect2(18, 21, 32, 42)
+
+[resource]
+script = ExtResource("1_kyb83")
+id = "Arbol"
+nombre = "Arbol"
+audio = ExtResource("1_707wf")
+sprite = SubResource("AtlasTexture_hxflo")
+metadata/_custom_type_script = "uid://dnu2r5yw53pto"
