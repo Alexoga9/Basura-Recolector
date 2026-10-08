@@ -119,6 +119,6 @@ func aplicar_datos(datos: Dictionary) -> void:
 		queue_free()
 
 
-func ser_recogida():
-	SaveGame.registrar_item_destruido(id_guardado)
-	queue_free()
+#func ser_recogida():
+	#SaveGame.registrar_item_destruido(id_guardado)
+	#queue_free()
