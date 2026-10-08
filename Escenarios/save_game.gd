@@ -9,47 +9,7 @@ const ESCENA_INICIAL = "uid://cbesogarip1ji"
 const POSICION_INICIAL := Vector2(153.0, 41.0)
 
 
-func guardar_estado_escena_actual() -> void:
-	var escena_actual = get_tree().current_scene
-
-	if escena_actual == null:
-		return
-
-	var ruta = escena_actual.scene_file_path
-
-	# Obtenemos lo que ya estaba guardado para no borrar items ya recogidos
-	var estado = datos_por_escenas.get(ruta, {})
-	var guardable = get_tree().get_nodes_in_group("guardables")
-
-	for guardar in guardable:
-		if guardar.has_method("obtener_datos") and "id_guardado" in guardar:
-			estado[guardar.id_guardado] = guardar.obtener_datos()
-
-	datos_por_escenas[ruta] = estado
-
-
-func cargar_estado_escena_actual() -> void:
-	var escena_actual = get_tree().current_scene
-
-	if escena_actual == null:
-		return
-
-	var ruta = escena_actual.scene_file_path
-
-	if datos_por_escenas.has(ruta):
-		var estado = datos_por_escenas[ruta]
-
-		for objeto in get_tree().get_nodes_in_group("guardables"):
-			if "id_guardado" in objeto:
-				var clave = objeto.id_guardado
-
-				if estado.has(clave):
-					objeto.aplicar_datos(estado[clave])
-
-
 func Save_Game() -> void:
-	guardar_estado_escena_actual()
-
 	var data = SaveData.new()
 	data.SceneName = get_tree().current_scene.scene_file_path
 	data.GuadarDinero = Dinero.dinero
@@ -86,8 +46,6 @@ func Load_Game() -> void:
 	jugador.contador_componente.set_limpieza(data.Plimpieza)
 	Dinero.dinero = data.GuadarDinero
 
-	cargar_estado_escena_actual()
-
 
 func Reset_Game() -> void:
 	datos_por_escenas.clear()
@@ -112,17 +70,3 @@ func Reset_Game() -> void:
 	jugador.energia_componente.energia = 0.0
 	jugador.contador_componente.basuras_actuales = 0
 	jugador.contador_componente.set_limpieza(0)
-
-
-# Llama a esto justo antes de usar queue_free() en el objeto recogido
-func registrar_item_destruido(id_guardado: String) -> void:
-	var escena_actual = get_tree().current_scene
-
-	if escena_actual == null: return
-
-	var ruta = escena_actual.scene_file_path
-
-	if not datos_por_escenas.has(ruta):
-		datos_por_escenas[ruta] = {}
-
-	datos_por_escenas[ruta][id_guardado] = {"recogida": true}
