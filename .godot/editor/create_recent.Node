@@ -1,3 +1,4 @@
+Node2D
 ColorRect
 Logica_Mejora
 PanelTienda
@@ -11,5 +12,3 @@ VBoxContainer
 Timer
 TileMapLayer
 save_game
-Button
-Panel

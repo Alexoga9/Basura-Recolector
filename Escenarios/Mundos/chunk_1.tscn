@@ -244,6 +244,8 @@ position = Vector2(365, 52)
 y_sort_enabled = true
 metadata/_edit_lock_ = true
 
+[node name="Bolsas de basura" type="Node" parent="Objetos Ambientales/Entiddaes" unique_id=1937090420 groups=["Bolsas de Basura Pool"]]
+
 [node name="Basuras" type="Node2D" parent="Objetos Ambientales/Entiddaes" unique_id=63611162 groups=["EntidadesBasuras"]]
 y_sort_enabled = true
 position = Vector2(-316, -313)
@@ -290,8 +292,6 @@ data = SubResource("Resource_bgs43")
 position = Vector2(586, 416)
 data = SubResource("Resource_imjhf")
 
-[node name="Bolsas de basura" type="Node" parent="Objetos Ambientales/Entiddaes" unique_id=1937090420 groups=["Bolsas de Basura Pool"]]
-
 [node name="Loot" type="Node2D" parent="Objetos Ambientales/Entiddaes" unique_id=1106672725 groups=["EntidadesLoot"]]
 position = Vector2(-97, 32)
 
@@ -310,10 +310,12 @@ data = ExtResource("9_4xlto")
 [node name="Loot4" parent="Objetos Ambientales/Entiddaes/Loot" unique_id=1476248809 instance=ExtResource("8_onpbi")]
 position = Vector2(599, 228)
 
-[node name="Nota Coleccionable" parent="Objetos Ambientales/Entiddaes" unique_id=2140338302 instance=ExtResource("15_wre61")]
+[node name="Notas" type="Node2D" parent="Objetos Ambientales/Entiddaes" unique_id=234868375 groups=["Entidades Notas"]]
+
+[node name="Nota Coleccionable" parent="Objetos Ambientales/Entiddaes/Notas" unique_id=2140338302 instance=ExtResource("15_wre61")]
 position = Vector2(248, 271)
 
-[node name="Nota Coleccionable2" parent="Objetos Ambientales/Entiddaes" unique_id=633010157 instance=ExtResource("15_wre61")]
+[node name="Nota Coleccionable2" parent="Objetos Ambientales/Entiddaes/Notas" unique_id=633010157 instance=ExtResource("15_wre61")]
 position = Vector2(283, 271)
 data = SubResource("Resource_bkx32")
 
@@ -322,28 +324,32 @@ y_sort_enabled = true
 position = Vector2(168, -3)
 metadata/_edit_lock_ = true
 
-[node name="Tienda" parent="Objetos Ambientales/Estaciones" unique_id=578851082 instance=ExtResource("4_h2r1t")]
+[node name="Estaciones Normales" type="Node2D" parent="Objetos Ambientales/Estaciones" unique_id=913042695 groups=["EstacionesNormales"]]
+
+[node name="Tienda" parent="Objetos Ambientales/Estaciones/Estaciones Normales" unique_id=578851082 instance=ExtResource("4_h2r1t")]
 position = Vector2(91, -48)
 
-[node name="Trituradora" parent="Objetos Ambientales/Estaciones" unique_id=429918730 instance=ExtResource("5_c2e4j")]
+[node name="Trituradora" parent="Objetos Ambientales/Estaciones/Estaciones Normales" unique_id=429918730 instance=ExtResource("5_c2e4j")]
 visibility_layer = 2
 position = Vector2(251, -52)
 
-[node name="MaquinaExpendedora" parent="Objetos Ambientales/Estaciones" unique_id=869111144 instance=ExtResource("6_isstk")]
+[node name="MaquinaExpendedora" parent="Objetos Ambientales/Estaciones/Estaciones Normales" unique_id=869111144 instance=ExtResource("6_isstk")]
 position = Vector2(172, -40)
 
-[node name="Estación Rota" parent="Objetos Ambientales/Estaciones" unique_id=121739820 instance=ExtResource("7_xbrct")]
+[node name="Estaciones Rotas" type="Node2D" parent="Objetos Ambientales/Estaciones" unique_id=1095621018 groups=["EstacionesRotas"]]
+
+[node name="Estación Rota" parent="Objetos Ambientales/Estaciones/Estaciones Rotas" unique_id=121739820 instance=ExtResource("7_xbrct")]
 position = Vector2(313, 142)
 sprite = ExtResource("20_bkx32")
 estacion = ExtResource("4_h2r1t")
 materiales = Array[ExtResource("15_iq5bc")]([SubResource("Resource_kur0t")])
 
-[node name="Estación Rota3" parent="Objetos Ambientales/Estaciones" unique_id=915087626 instance=ExtResource("7_xbrct")]
+[node name="Estación Rota3" parent="Objetos Ambientales/Estaciones/Estaciones Rotas" unique_id=915087626 instance=ExtResource("7_xbrct")]
 position = Vector2(313, 34)
 sprite = ExtResource("20_wre61")
 materiales = Array[ExtResource("15_iq5bc")]([SubResource("Resource_uxqpp"), ExtResource("17_1mu81"), SubResource("Resource_kur0t")])
 
-[node name="Estación Rota2" parent="Objetos Ambientales/Estaciones" unique_id=1690889551 instance=ExtResource("7_xbrct")]
+[node name="Estación Rota2" parent="Objetos Ambientales/Estaciones/Estaciones Rotas" unique_id=1690889551 instance=ExtResource("7_xbrct")]
 position = Vector2(313, 247)
 sprite = ExtResource("25_1mu81")
 estacion = ExtResource("5_c2e4j")

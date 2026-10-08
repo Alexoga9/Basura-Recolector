@@ -23,3 +23,12 @@ res://addons/easytransition/easytransition.tscn
 res://UI/transicion/transicion_background.tscn
 res://transition.gdshader
 res://UI/transicion/transicion_background.gd
+res://Commons/Componentes/Core/EstadisticasComponente.gd
+res://Commons/Componentes/Radares/RadarComponente.gd
+res://Entidades/Basura/Basura_item.gd
+res://Recursos/LootDefinicion.gd
+res://UI/Tienda/MejoraFuerza.gd
+res://Escenarios/save_game.gd
+res://UI/Tienda/mejoras de habilidades/mejoras/mejora_honguitos.gd
+res://UI/HUD/Inventario/Inventario.tscn
+res://UI/Tienda/tienda_ui.tscn
