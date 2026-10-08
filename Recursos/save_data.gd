@@ -2,7 +2,7 @@ extends Resource
 class_name SaveData
 
 @export var SceneName: String
-@export var GuadarDinero: int
+@export var GuardarDinero: int
 @export var playerPosition: Vector2
 @export var Plimpieza: int
 @export var GuardadoInventario: Dictionary = {}

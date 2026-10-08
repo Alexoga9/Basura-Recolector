@@ -84,6 +84,7 @@ offset_bottom = -42.0
 grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 1
+autowrap_mode = 2
 
 [connection signal="body_entered" from="Trigger Jugador" to="." method="_on_trigger_jugador_body_entered"]
 [connection signal="body_entered" from="Trigger Jugador" to="puerta/ResaltadoComponente" method="_on_trigger_jugador_body_entered"]

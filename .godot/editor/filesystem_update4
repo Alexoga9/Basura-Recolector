@@ -1,8 +1,8 @@
-res://Escenarios/prueba de cambio de sprite/Valla.tscn
+res://Escenarios/Mundos/chunk_1.tscn
 res://UI/Theme/Tienda.tres
-res://Entidades/Estaciones/Tienda/Outline.gdshader
 res://Escenarios/Oficial/TileMapOficial.tres
 res://Escenarios/shine/hit_flash.gdshader
+res://Entidades/Estaciones/Tienda/Outline.gdshader
 res://Entidades/Basura/basura_data.tres
 res://Escenarios/Sprite_sucio/Tile sucio.tres
 res://Entidades/Basura/Obstaculo prueba.tres
@@ -16,19 +16,9 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
-res://Escenarios/prueba de cambio de sprite/valla.gd
-res://Escenarios/Mundos/chunk_1.tscn
-res://addons/easytransition/easytransition.gd
-res://addons/easytransition/easytransition.tscn
-res://UI/transicion/transicion_background.tscn
 res://transition.gdshader
-res://UI/transicion/transicion_background.gd
-res://Commons/Componentes/Core/EstadisticasComponente.gd
-res://Commons/Componentes/Radares/RadarComponente.gd
-res://Entidades/Basura/Basura_item.gd
-res://Recursos/LootDefinicion.gd
-res://UI/Tienda/MejoraFuerza.gd
 res://Escenarios/save_game.gd
-res://UI/Tienda/mejoras de habilidades/mejoras/mejora_honguitos.gd
-res://UI/HUD/Inventario/Inventario.tscn
-res://UI/Tienda/tienda_ui.tscn
+res://Recursos/save_data.gd
+res://Entidades/Basura/Basura_item.gd
+res://Escenarios/prueba de cambio de sprite/valla.gd
+res://Escenarios/prueba de cambio de sprite/Valla.tscn

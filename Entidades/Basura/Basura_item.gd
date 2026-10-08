@@ -77,7 +77,6 @@ func collect():
 	Inventario.valor_de_basuras += valor
 	SignalBus.basura_recogida.emit()
 
-	SaveGame.registrar_item_destruido(id_guardado)
 	return data
 
 

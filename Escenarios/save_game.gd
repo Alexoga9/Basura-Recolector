@@ -12,7 +12,7 @@ const POSICION_INICIAL := Vector2(153.0, 41.0)
 func Save_Game() -> void:
 	var data = SaveData.new()
 	data.SceneName = get_tree().current_scene.scene_file_path
-	data.GuadarDinero = Dinero.dinero
+	data.GuardarDinero = Dinero.dinero
 	jugador = Global.jugador
 
 	data.playerPosition = jugador.movimiento_componente.body_character.global_position

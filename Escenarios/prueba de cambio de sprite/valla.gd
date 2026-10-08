@@ -54,18 +54,22 @@ func _al_interactuar() -> void:
 	# aplicar que si no tiene el dinero suficiente y/o pago pueda abrir la puerta
 	if condiccion_para_abrir == Condiccion_para_abrir.Requisito:
 		if porcentaje_actual >= porcentaje_requerido:
-			abrir_paso()
 			deducción_de_costo()
+
 		else:
 			vallatext.show()
-			vallatext.text = "Tienes que limpiar el " + str(porcentaje_requerido) +" % "
+			vallatext.text = ("Tienes que limpiar el " + str(porcentaje_requerido) +" % " + " y tener " + str(costo_puerta) + " monedas")
 			print(str(porcentaje_actual))
 	elif condiccion_para_abrir == Condiccion_para_abrir.Abierta:
 		abrir_paso()
 
 
 func deducción_de_costo():
+	if Dinero.dinero <= costo_puerta:
+		return
+
 	Dinero.gastar(float(costo_puerta))
+	abrir_paso()
 
 
 func back() -> void:
