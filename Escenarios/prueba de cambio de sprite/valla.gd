@@ -54,8 +54,11 @@ func _al_interactuar() -> void:
 	# aplicar que si no tiene el dinero suficiente y/o pago pueda abrir la puerta
 	if condiccion_para_abrir == Condiccion_para_abrir.Requisito:
 		if porcentaje_actual >= porcentaje_requerido:
-			abrir_paso()
-			deducción_de_costo()
+			if Dinero.dinero >= costo_puerta:
+				deducción_de_costo()
+				costo_puerta
+			else:
+				print("no tienes dinero suficiente")
 		else:
 			vallatext.show()
 			vallatext.text = "Tienes que limpiar el " + str(porcentaje_requerido) +" % "
@@ -74,7 +77,6 @@ func back() -> void:
 	APuerta.play("puerta_abierta")
 	$CollisionShape2D.disabled = true
 	get_tree().change_scene_to_file(next_scene)
-	SaveGame.Load_Game()
 
 
 func abrir_paso() -> void:
