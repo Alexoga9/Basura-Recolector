@@ -22,18 +22,17 @@
 [ext_resource type="Texture2D" uid="uid://cj67bs1scsaiw" path="res://Assets/Inventario/moneda.png" id="19_6cxia"]
 [ext_resource type="PackedScene" uid="uid://c1kcmjbhf62q1" path="res://Escenarios/prueba de cambio de sprite/Valla.tscn" id="20_bv8wx"]
 [ext_resource type="Texture2D" uid="uid://d3r43nmrn4esl" path="res://Assets/entidades/Valla/Ya.png" id="21_aova3"]
-[ext_resource type="PackedScene" uid="uid://bxxsc2sciuuu3" path="res://UI/HUD/Inventario/Inventario.tscn" id="22_6bycu"]
-[ext_resource type="PackedScene" uid="uid://bqxfu5knf0pw2" path="res://UI/HUD/hud.tscn" id="23_a4for"]
-[ext_resource type="PackedScene" uid="uid://br4shbrxkwxgj" path="res://UI/Tienda/tienda_ui.tscn" id="24_asoa4"]
 [ext_resource type="Script" uid="uid://x0afdmm3k1jj" path="res://Utilidades/Sistemas/Checkpoint/CheckpointComponente.gd" id="27_sxtdg"]
 [ext_resource type="Resource" uid="uid://dkoxwvu2yrs81" path="res://Entidades/Basura/Obstaculo prueba.tres" id="28_4n7g7"]
 [ext_resource type="Texture2D" uid="uid://due6mtxcwadhu" path="res://Assets/Inventario/Items.png" id="29_l46x0"]
 [ext_resource type="Texture2D" uid="uid://i2ox5ksvvper" path="res://Escenarios/Oficial/Tilesheet Oficial.png" id="30_luur0"]
 [ext_resource type="AudioStream" uid="uid://sahbu26hpnvx" path="res://Assets/audio/Hit.wav" id="31_4dvo1"]
+[ext_resource type="Resource" uid="uid://sjc3cn6kq6nq" path="res://Entidades/Basura/Caja/Obstaculos/Arbol/Arbol Cesped Claro.tres" id="31_4n7g7"]
 [ext_resource type="Texture2D" uid="uid://cbgbirmqb5755" path="res://Assets/UI/marco tienda.png" id="32_v60to"]
 [ext_resource type="PackedScene" uid="uid://mummqqnve0vm" path="res://Entidades/Notas/nota_coleccionable.tscn" id="33_6cxia"]
 [ext_resource type="Script" uid="uid://brs2x5jqdp1tv" path="res://Recursos/data_notas.gd" id="34_bv8wx"]
 [ext_resource type="Texture2D" uid="uid://bai1een67q4ss" path="res://Assets/tienda rota.png" id="35_aova3"]
+[ext_resource type="PackedScene" uid="uid://b1luv0bei0jvi" path="res://UI/HUD/UI_canvas_layer.tscn" id="35_b1fp5"]
 [ext_resource type="Texture2D" uid="uid://d3grevrisjs14" path="res://Assets/maquina expendedora rota.png" id="36_6bycu"]
 [ext_resource type="Texture2D" uid="uid://bnj7dvfesgnbn" path="res://Assets/trituradora rota.png" id="37_a4for"]
 
@@ -500,21 +499,6 @@ position = Vector2(-5, -40)
 position = Vector2(-514, -198)
 materiales = Array[ExtResource("16_luur0")]([SubResource("Resource_uxqpp"), ExtResource("18_v60to"), SubResource("Resource_kur0t")])
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=417622220]
-
-[node name="Inventario" parent="CanvasLayer" unique_id=615073819 instance=ExtResource("22_6bycu")]
-z_index = -1
-
-[node name="HUD" parent="CanvasLayer" unique_id=67010398 instance=ExtResource("23_a4for")]
-offset_left = -1.0
-offset_top = 6.0
-offset_right = -1.0
-offset_bottom = 6.0
-
-[node name="TiendaUi" parent="CanvasLayer" unique_id=1611773581 instance=ExtResource("24_asoa4")]
-visible = false
-z_index = 4
-
 [node name="Objetos Ambientales2" type="Node2D" parent="." unique_id=737665972]
 y_sort_enabled = true
 position = Vector2(596, -21)
@@ -570,6 +554,14 @@ data = SubResource("Resource_6gxch")
 [node name="Basura3" parent="Objetos Ambientales2/Entiddaes/Basuras/Pesadas" unique_id=186576145 instance=ExtResource("4_67wik")]
 position = Vector2(586, 416)
 data = SubResource("Resource_pcm7n")
+
+[node name="Basura8" parent="Objetos Ambientales2/Entiddaes/Basuras/Pesadas" unique_id=1295762400 instance=ExtResource("4_67wik")]
+position = Vector2(558, 557)
+data = ExtResource("31_4n7g7")
+
+[node name="Basura9" parent="Objetos Ambientales2/Entiddaes/Basuras/Pesadas" unique_id=638104279 instance=ExtResource("4_67wik")]
+position = Vector2(720, 336)
+data = ExtResource("31_4n7g7")
 
 [node name="Loot" type="Node2D" parent="Objetos Ambientales2/Entiddaes" unique_id=487525912 groups=["EntidadesLoot"]]
 position = Vector2(-97, 32)
@@ -665,3 +657,6 @@ position = Vector2(990, 253)
 script = ExtResource("27_sxtdg")
 entrada = 4
 metadata/_custom_type_script = "uid://x0afdmm3k1jj"
+
+[node name="CanvasLayer" parent="." unique_id=2007522030 instance=ExtResource("35_b1fp5")]
+visible = false

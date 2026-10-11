@@ -31,9 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://bnj7dvfesgnbn" path="res://Assets/trituradora rota.png" id="29_wfaxf"]
 [ext_resource type="PackedScene" uid="uid://c1kcmjbhf62q1" path="res://Escenarios/prueba de cambio de sprite/Valla.tscn" id="30_7pgxa"]
 [ext_resource type="Texture2D" uid="uid://d3r43nmrn4esl" path="res://Assets/entidades/Valla/Ya.png" id="31_wkpve"]
-[ext_resource type="PackedScene" uid="uid://bxxsc2sciuuu3" path="res://UI/HUD/Inventario/Inventario.tscn" id="32_7i6c5"]
-[ext_resource type="PackedScene" uid="uid://bqxfu5knf0pw2" path="res://UI/HUD/hud.tscn" id="33_5ofxo"]
-[ext_resource type="PackedScene" uid="uid://br4shbrxkwxgj" path="res://UI/Tienda/tienda_ui.tscn" id="34_bu3su"]
+[ext_resource type="PackedScene" uid="uid://b1luv0bei0jvi" path="res://UI/HUD/UI_canvas_layer.tscn" id="33_xcidw"]
 [ext_resource type="Script" uid="uid://x0afdmm3k1jj" path="res://Utilidades/Sistemas/Checkpoint/CheckpointComponente.gd" id="36_23s8n"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tsijt"]
@@ -362,21 +360,6 @@ position = Vector2(42, 0)
 tile_map_data = PackedByteArray("AAAcABIAAAACAAIAAAAbABIAAAACAAAAAAAaABIAAAACAAAAAAAZABIAAAACAAAAAAAYABIAAAACAAAAAAAXABIAAAACAAAAAAAUABIAAAACAAAAAAATABIAAAACAAAAAAASABIAAAACAAAAAAARABIAAAACAAAAAAAQABIAAAACAAAAAAAPABIAAAACAAAAAAAOABIAAAACAAAAAAANABIAAAACAAAAAAAMABIAAAACAAAAAAALABIAAAABAAIAAAAdABIAAAACAAIAAAAeABIAAAADAAIAAAAeABEAAAADAAEAAAAeABAAAAADAAEAAAAeAA8AAAADAAEAAAAeAA4AAAADAAEAAAAeAA0AAAADAAEAAAAeAAwAAAADAAEAAAAeAAsAAAADAAEAAAAeAAoAAAADAAEAAAAeAAkAAAADAAEAAAAeAAgAAAADAAEAAAAeAAcAAAADAAEAAAAeAAYAAAADAAEAAAAeAAUAAAADAAEAAAAeAAQAAAADAAEAAAAeAAMAAAADAAEAAAAeAAIAAAADAAEAAAAeAAEAAAADAAEAAAAeAAAAAAADAAEAAAAeAP//AAADAAEAAAAeAP7/AAADAAEAAAAeAP3/AAADAAEAAAAeAPz/AAADAAEAAAAeAPv/AAADAAEAAAAeAPr/AAADAAEAAAAeAPn/AAADAAEAAAAeAPj/AAADAAEAAAAeAPf/AAADAAAAAAAdAPf/AAACAAAAAAAcAPf/AAACAAAAAAAbAPf/AAACAAAAAAAaAPf/AAACAAAAAAAZAPf/AAACAAAAAAAYAPf/AAACAAAAAAAXAPf/AAACAAAAAAAUAPf/AAACAAAAAAATAPf/AAACAAAAAAASAPf/AAACAAAAAAARAPf/AAACAAAAAAAQAPf/AAACAAAAAAAPAPf/AAACAAAAAAAOAPf/AAACAAAAAAANAPf/AAACAAAAAAAMAPf/AAACAAAAAAALAPf/AAABAAAAAAALAPj/AAABAAEAAAALAPn/AAABAAEAAAALAPr/AAABAAEAAAALAPv/AAABAAEAAAALAPz/AAABAAEAAAALAP3/AAABAAEAAAALAP7/AAABAAEAAAALAP//AAABAAEAAAALAAAAAAABAAEAAAALAAEAAAABAAEAAAALAAIAAAABAAEAAAALAAMAAAABAAEAAAALAAQAAAABAAEAAAALAAUAAAABAAEAAAALAAYAAAABAAEAAAALAAcAAAABAAEAAAALAAgAAAABAAEAAAALAAkAAAABAAEAAAALAAoAAAABAAEAAAALAAsAAAABAAEAAAALAAwAAAABAAEAAAALAA0AAAABAAEAAAALAA4AAAABAAEAAAALAA8AAAABAAEAAAALABAAAAABAAEAAAALABEAAAABAAEAAAA=")
 tile_set = SubResource("TileSet_ntk3k")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1027880530]
-
-[node name="Inventario" parent="CanvasLayer" unique_id=615073819 instance=ExtResource("32_7i6c5")]
-z_index = -1
-
-[node name="HUD" parent="CanvasLayer" unique_id=67010398 instance=ExtResource("33_5ofxo")]
-offset_left = -1.0
-offset_top = 6.0
-offset_right = -1.0
-offset_bottom = 6.0
-
-[node name="TiendaUi" parent="CanvasLayer" unique_id=1611773581 instance=ExtResource("34_bu3su")]
-visible = false
-z_index = 4
-
 [node name="CheckpointComponente" type="Node2D" parent="." unique_id=79241696]
 position = Vector2(393, -123)
 script = ExtResource("36_23s8n")
@@ -388,3 +371,6 @@ position = Vector2(396, 281)
 script = ExtResource("36_23s8n")
 entrada = 4
 metadata/_custom_type_script = "uid://x0afdmm3k1jj"
+
+[node name="CanvasLayer" parent="." unique_id=2007522030 instance=ExtResource("33_xcidw")]
+visible = false

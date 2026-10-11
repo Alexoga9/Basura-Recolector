@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b1luv0bei0jvi"]
+
+[ext_resource type="PackedScene" uid="uid://bxxsc2sciuuu3" path="res://UI/HUD/Inventario/Inventario.tscn" id="1_6va4q"]
+[ext_resource type="Script" uid="uid://cqdpo5f3qs8vc" path="res://UI/HUD/ui_canvas_layer.gd" id="1_r6vmc"]
+[ext_resource type="PackedScene" uid="uid://bqxfu5knf0pw2" path="res://UI/HUD/hud.tscn" id="2_r6vmc"]
+[ext_resource type="PackedScene" uid="uid://br4shbrxkwxgj" path="res://UI/Tienda/tienda_ui.tscn" id="3_2tmmb"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=2007522030]
+script = ExtResource("1_r6vmc")
+
+[node name="Inventario" parent="." unique_id=615073819 instance=ExtResource("1_6va4q")]
+z_index = -1
+
+[node name="HUD" parent="." unique_id=67010398 instance=ExtResource("2_r6vmc")]
+offset_left = -1.0
+offset_top = 6.0
+offset_right = -1.0
+offset_bottom = 6.0
+
+[node name="TiendaUi" parent="." unique_id=1611773581 instance=ExtResource("3_2tmmb")]
+visible = false
+z_index = 4
