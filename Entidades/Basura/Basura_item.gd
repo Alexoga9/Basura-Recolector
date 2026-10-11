@@ -98,7 +98,7 @@ func _on_area_2d_input_event(viewport, event, shape_idx):
 
 
 func sprite_aleatorio():
-	var random: int = randi_range(0,2)
+	var random: int = randi_range(0,data.conjunto_de_sprites.size() - 1)
 
 	if data.conjunto_de_sprites:
 		sprite2d.texture = data.conjunto_de_sprites[random]

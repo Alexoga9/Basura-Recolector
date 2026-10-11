@@ -28,7 +28,7 @@ imagen = ExtResource("6_dgkfw")
 metadata/_custom_type_script = "uid://pqkfc017cxy6"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fqxgv"]
-size = Vector2(32, 11)
+size = Vector2(32, 23.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ycxac"]
 size = Vector2(114, 102)
@@ -41,7 +41,7 @@ estacion = ExtResource("2_m1bcd")
 materiales = Array[ExtResource("3_kr500")]([SubResource("Resource_uxqpp"), ExtResource("5_483ev"), ExtResource("5_483ev"), SubResource("Resource_kur0t")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=951699094]
-position = Vector2(0, -0.5)
+position = Vector2(0, 12.75)
 shape = SubResource("RectangleShape2D_fqxgv")
 
 [node name="Trigger Jugador" type="Area2D" parent="." unique_id=1992289934]
