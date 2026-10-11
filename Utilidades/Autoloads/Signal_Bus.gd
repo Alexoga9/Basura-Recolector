@@ -23,6 +23,9 @@ signal zona_limpida(porcentaje: int)
 # Recogibles
 signal material_recogido
 
+# Ckeckpoint 
+signal entrada_de_checkpoint(entrada: int)
+
 # UI
 # # Tienda 
 signal mostrar_tienda
@@ -37,6 +40,10 @@ signal mostrar_hud
 
 # # Notas Coleccionables
 signal notas_menu(DataNotas)
+
+# # Transicion
+signal hacer_transicion
+signal terminar_transicion
 
 # # Menu Principal
 signal mostrar_menu_principal

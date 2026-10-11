@@ -1,24 +1,41 @@
 extends Control
 
 @onready var color_rect: ColorRect = %ColorRect
-var transicion_activa: bool = true
+var transicion_activa: bool = false
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	SignalBus.hacer_transicion.connect(recibido_transicion)
+	hide()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	animar_transicion(delta)
 
 
+func recibido_transicion():
+	transicion_activa = true
+
+
 func animar_transicion(delta: float):
-	if !transicion_activa:
+
+	if not transicion_activa:
 		return
 
-	var shader_value = color_rect.material.get_instance_shader_parameter("progress")
-	shader_value += delta * 0.01
+	show()
+	var shader_value = color_rect.material.get_shader_parameter("progress")
+	shader_value -= delta
 	shader_value = clamp(shader_value, 0.0, 1.0)
-	material.set_instance_shader_parameter("progress", shader_value)
+	color_rect.material.set_shader_parameter("progress", shader_value)
+	if shader_value == 0:
+		resetear_transicion()
+		SignalBus.terminar_transicion.emit()
+
+
+func resetear_transicion():
+	hide()
+	transicion_activa = false
+	var shader_value = color_rect.material.get_shader_parameter("progress")
+	shader_value = 1
+	shader_value = clamp(shader_value, 0.0, 1.0)
+	color_rect.material.set_shader_parameter("progress", shader_value)

@@ -3,6 +3,7 @@ class_name pueta_valla extends StaticBody2D
 @onready var vallatext: Label = %vallatext
 @onready var area_deteccion = %"Trigger Jugador"
 @onready var APuerta: AnimatedSprite2D = %puerta
+
 @export var porcentaje_requerido: int = 80
 @export var next_scene: String
 @export var costo_puerta: int = 500
@@ -83,6 +84,10 @@ func back() -> void:
 
 func abrir_paso() -> void:
 	Global.jugador.contador_componente.limpieza_actualizada.disconnect(_actualizar_progreso)
+	SignalBus.hacer_transicion.emit()
+
+	await get_tree().create_timer(1).timeout
+
 	SignalBus.interaccion.disconnect(_al_interactuar)
 	APuerta.play("puerta_abierta")
 	$CollisionShape2D.disabled = true

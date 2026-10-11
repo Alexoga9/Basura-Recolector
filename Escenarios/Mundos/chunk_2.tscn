@@ -19,12 +19,14 @@
 [ext_resource type="Script" uid="uid://pqkfc017cxy6" path="res://Recursos/materiales_necesarios.gd" id="16_luur0"]
 [ext_resource type="Texture2D" uid="uid://d2w68k8llr4oi" path="res://Assets/Inventario/piedra.png" id="17_4dvo1"]
 [ext_resource type="Resource" uid="uid://cn42hyavquied" path="res://Entidades/Estaciones/Estación Rota/Requisitos de materiales/Estacion_rota_requisitos_madera.tres" id="18_v60to"]
-[ext_resource type="Texture2D" uid="uid://cj67bs1scsaiw" path="res://Assets/Inventario/Moneda.png" id="19_6cxia"]
+[ext_resource type="Texture2D" uid="uid://cj67bs1scsaiw" path="res://Assets/Inventario/moneda.png" id="19_6cxia"]
 [ext_resource type="PackedScene" uid="uid://c1kcmjbhf62q1" path="res://Escenarios/prueba de cambio de sprite/Valla.tscn" id="20_bv8wx"]
 [ext_resource type="Texture2D" uid="uid://d3r43nmrn4esl" path="res://Assets/entidades/Valla/Ya.png" id="21_aova3"]
 [ext_resource type="PackedScene" uid="uid://bxxsc2sciuuu3" path="res://UI/HUD/Inventario/Inventario.tscn" id="22_6bycu"]
 [ext_resource type="PackedScene" uid="uid://bqxfu5knf0pw2" path="res://UI/HUD/hud.tscn" id="23_a4for"]
 [ext_resource type="PackedScene" uid="uid://br4shbrxkwxgj" path="res://UI/Tienda/tienda_ui.tscn" id="24_asoa4"]
+[ext_resource type="Script" uid="uid://djnqibo65pwk1" path="res://Utilidades/Sistemas/Checkpoint/CheckpointManager.gd" id="26_67wik"]
+[ext_resource type="Script" uid="uid://x0afdmm3k1jj" path="res://Utilidades/Sistemas/Checkpoint/CheckpointComponente.gd" id="27_sxtdg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wl2gp"]
 texture = ExtResource("21_aova3")
@@ -190,7 +192,7 @@ tile_set = SubResource("TileSet_oa3yh")
 y_sort_enabled = true
 
 [node name="Jugador" parent="Objetos Ambientales" unique_id=1030727379 instance=ExtResource("3_rlhdu")]
-position = Vector2(113, 279)
+position = Vector2(-81, 46)
 
 [node name="Entiddaes" type="Node2D" parent="Objetos Ambientales" unique_id=55972545]
 y_sort_enabled = true
@@ -353,3 +355,19 @@ offset_bottom = 6.0
 [node name="TiendaUi" parent="CanvasLayer" unique_id=1611773581 instance=ExtResource("24_asoa4")]
 visible = false
 z_index = 4
+
+[node name="CheckpointManager" type="Node" parent="." unique_id=493195853]
+script = ExtResource("26_67wik")
+metadata/_custom_type_script = "uid://djnqibo65pwk1"
+
+[node name="CheckpointComponente" type="Node2D" parent="CheckpointManager" unique_id=1373283570]
+position = Vector2(177, -202)
+script = ExtResource("27_sxtdg")
+entrada = 1
+metadata/_custom_type_script = "uid://x0afdmm3k1jj"
+
+[node name="CheckpointComponente2" type="Node2D" parent="CheckpointManager" unique_id=101576574]
+position = Vector2(113, 275)
+script = ExtResource("27_sxtdg")
+entrada = 4
+metadata/_custom_type_script = "uid://x0afdmm3k1jj"

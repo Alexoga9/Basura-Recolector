@@ -19,7 +19,7 @@
 [ext_resource type="Script" uid="uid://pqkfc017cxy6" path="res://Recursos/materiales_necesarios.gd" id="16_movwp"]
 [ext_resource type="Texture2D" uid="uid://d2w68k8llr4oi" path="res://Assets/Inventario/piedra.png" id="17_fupi3"]
 [ext_resource type="Resource" uid="uid://cn42hyavquied" path="res://Entidades/Estaciones/Estación Rota/Requisitos de materiales/Estacion_rota_requisitos_madera.tres" id="18_eudr3"]
-[ext_resource type="Texture2D" uid="uid://cj67bs1scsaiw" path="res://Assets/Inventario/Moneda.png" id="19_6ehlw"]
+[ext_resource type="Texture2D" uid="uid://cj67bs1scsaiw" path="res://Assets/Inventario/moneda.png" id="19_6ehlw"]
 [ext_resource type="PackedScene" uid="uid://c1kcmjbhf62q1" path="res://Escenarios/prueba de cambio de sprite/Valla.tscn" id="20_ekfr6"]
 [ext_resource type="Texture2D" uid="uid://d3r43nmrn4esl" path="res://Assets/entidades/Valla/Ya.png" id="21_y4y2f"]
 [ext_resource type="PackedScene" uid="uid://bxxsc2sciuuu3" path="res://UI/HUD/Inventario/Inventario.tscn" id="22_falab"]
@@ -176,6 +176,7 @@ tile_set = ExtResource("3_f7ndn")
 
 [node name="puerta_Valla" parent="Layers Oficiales/Terreno" unique_id=1538247553 instance=ExtResource("20_ekfr6")]
 position = Vector2(176, -224)
+entrada_posicion = 4
 condiccion_para_abrir = 1
 metadata/_edit_lock_ = true
 
@@ -183,12 +184,13 @@ metadata/_edit_lock_ = true
 position = Vector2(80, 288)
 next_scene = ""
 costo_puerta = 300
+entrada_posicion = 1
 
 [node name="Objetos Ambientales" type="Node2D" parent="." unique_id=594393213]
 y_sort_enabled = true
 
 [node name="Jugador" parent="Objetos Ambientales" unique_id=1030727379 instance=ExtResource("3_i5pp7")]
-position = Vector2(82, 277)
+position = Vector2(-205, 12)
 
 [node name="Entiddaes" type="Node2D" parent="Objetos Ambientales" unique_id=606963256]
 y_sort_enabled = true

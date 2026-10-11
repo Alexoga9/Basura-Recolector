@@ -9,6 +9,7 @@ extends HBoxContainer
 func _ready():
 	icono.texture = textura
 	Dinero.valor_dinero_cambiado.connect(actualizar_dinero)
+	actualizar_dinero(Dinero.dinero)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
