@@ -7,7 +7,7 @@ class_name pueta_valla extends StaticBody2D
 @export var porcentaje_requerido: int = 80
 @export var next_scene: String
 @export var costo_puerta: int = 500
-
+@export var entrada_posicion: int
 enum Condiccion_para_abrir {Abierta, Requisito}
 
 @export var condiccion_para_abrir: Condiccion_para_abrir
@@ -85,7 +85,7 @@ func back() -> void:
 func abrir_paso() -> void:
 	Global.jugador.contador_componente.limpieza_actualizada.disconnect(_actualizar_progreso)
 	SignalBus.hacer_transicion.emit()
-
+	SignalBus.entrada_de_checkpoint.emit(entrada_posicion)
 	await get_tree().create_timer(1).timeout
 
 	SignalBus.interaccion.disconnect(_al_interactuar)

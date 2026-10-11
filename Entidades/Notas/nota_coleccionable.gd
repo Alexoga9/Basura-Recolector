@@ -4,7 +4,6 @@ extends Area2D
 
 @onready var sonido = %sonido
 @onready var collision_shape_2d = %CollisionShape2D
-@onready var t_deslizar: TDeslizar = %TDeslizar
 @onready var sprite_2d: Sprite2D = %Sprite2D
 
 var posicion_anterior: Vector2

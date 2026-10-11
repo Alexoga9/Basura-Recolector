@@ -34,7 +34,6 @@
 [ext_resource type="PackedScene" uid="uid://bxxsc2sciuuu3" path="res://UI/HUD/Inventario/Inventario.tscn" id="32_7i6c5"]
 [ext_resource type="PackedScene" uid="uid://bqxfu5knf0pw2" path="res://UI/HUD/hud.tscn" id="33_5ofxo"]
 [ext_resource type="PackedScene" uid="uid://br4shbrxkwxgj" path="res://UI/Tienda/tienda_ui.tscn" id="34_bu3su"]
-[ext_resource type="Script" uid="uid://djnqibo65pwk1" path="res://Utilidades/Sistemas/Checkpoint/CheckpointManager.gd" id="35_ihj84"]
 [ext_resource type="Script" uid="uid://x0afdmm3k1jj" path="res://Utilidades/Sistemas/Checkpoint/CheckpointComponente.gd" id="36_23s8n"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tsijt"]
@@ -348,12 +347,14 @@ position = Vector2(394, -144)
 porcentaje_requerido = 10
 next_scene = "uid://cbesogarip1ji"
 costo_puerta = 300
+entrada_posicion = 1
 
 [node name="puerta_Valla2" parent="Objetos Ambientales" unique_id=1293160757 instance=ExtResource("30_7pgxa")]
 position = Vector2(394, 288)
 porcentaje_requerido = 10
 next_scene = "uid://bnf12k070x0ju"
 costo_puerta = 300
+entrada_posicion = 4
 
 [node name="vallas" type="TileMapLayer" parent="Objetos Ambientales" unique_id=651847729]
 y_sort_enabled = true
@@ -376,11 +377,14 @@ offset_bottom = 6.0
 visible = false
 z_index = 4
 
-[node name="CheckpointManager" type="Node" parent="." unique_id=1994724695]
-script = ExtResource("35_ihj84")
-metadata/_custom_type_script = "uid://djnqibo65pwk1"
-
-[node name="CheckpointComponente" type="Node2D" parent="CheckpointManager" unique_id=79241696]
+[node name="CheckpointComponente" type="Node2D" parent="." unique_id=79241696]
+position = Vector2(393, -123)
 script = ExtResource("36_23s8n")
 entrada = 1
+metadata/_custom_type_script = "uid://x0afdmm3k1jj"
+
+[node name="CheckpointComponente2" type="Node2D" parent="." unique_id=2116458453]
+position = Vector2(396, 281)
+script = ExtResource("36_23s8n")
+entrada = 4
 metadata/_custom_type_script = "uid://x0afdmm3k1jj"

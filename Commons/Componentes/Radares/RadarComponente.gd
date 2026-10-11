@@ -103,7 +103,7 @@ func get_entidad_mas_cercana() -> Basura:
 	if cuerpos.is_empty():
 		return null
 
-	return cuerpos.pick_random()
+	return cuerpos[cuerpos.bsearch(int(cuerpos.size()/2))]
 
 
 func _on_body_entered(body: Basura):

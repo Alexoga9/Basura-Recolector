@@ -15,7 +15,6 @@ var canMove = true
 @onready var energia_componente: EnergiaComponente = %EnergiaComponente
 
 
-
 func _ready():
 	Global.set_jugador(self)
 	SignalBus.jugador_listo.emit()
@@ -28,3 +27,8 @@ func set_mument_enable(value):
 func _physics_process(delta):
 	if canMove == true:
 		movimiento_componente.movimiento(input_componente.input_movimiento(), delta)
+
+
+func _exit_tree():
+	if Global.jugador == self:
+		Global.jugador = null

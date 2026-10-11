@@ -34,6 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://bai1een67q4ss" path="res://Assets/tienda rota.png" id="27_eudr3"]
 [ext_resource type="Texture2D" uid="uid://d3grevrisjs14" path="res://Assets/maquina expendedora rota.png" id="30_6ehlw"]
 [ext_resource type="Texture2D" uid="uid://bnj7dvfesgnbn" path="res://Assets/trituradora rota.png" id="33_ekfr6"]
+[ext_resource type="Script" uid="uid://x0afdmm3k1jj" path="res://Utilidades/Sistemas/Checkpoint/CheckpointComponente.gd" id="35_3dabi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tsijt"]
 atlas = ExtResource("13_3dabi")
@@ -348,12 +349,14 @@ position = Vector2(394, -144)
 porcentaje_requerido = 10
 next_scene = "uid://rbpm4n376u4e"
 costo_puerta = 300
+entrada_posicion = 1
 
 [node name="puerta_Valla2" parent="Objetos Ambientales" unique_id=2027866488 instance=ExtResource("20_ekfr6")]
 position = Vector2(394, 288)
 porcentaje_requerido = 10
-next_scene = "uid://bnf12k070x0ju"
+next_scene = "uid://bgd2waanh0qwk"
 costo_puerta = 300
+entrada_posicion = 4
 
 [node name="vallas" type="TileMapLayer" parent="Objetos Ambientales" unique_id=1087570800]
 y_sort_enabled = true
@@ -375,3 +378,15 @@ offset_bottom = 6.0
 [node name="TiendaUi" parent="CanvasLayer" unique_id=1611773581 instance=ExtResource("24_0ve2n")]
 visible = false
 z_index = 4
+
+[node name="CheckpointComponente" type="Node2D" parent="." unique_id=1266410088]
+position = Vector2(316, -168)
+script = ExtResource("35_3dabi")
+entrada = 1
+metadata/_custom_type_script = "uid://x0afdmm3k1jj"
+
+[node name="CheckpointComponente2" type="Node2D" parent="." unique_id=953811078]
+position = Vector2(317, 232)
+script = ExtResource("35_3dabi")
+entrada = 4
+metadata/_custom_type_script = "uid://x0afdmm3k1jj"

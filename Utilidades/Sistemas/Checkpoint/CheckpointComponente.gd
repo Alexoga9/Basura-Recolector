@@ -1,15 +1,15 @@
 class_name CheckpointComponente extends Node2D
 
-@export var entrada: int
-@onready var jugador: Jugador = get_tree().get_first_node_in_group("Jugador")
-var padre: CheckpointManager
+@export var entrada: int = 0
 
 
 func _ready():
-	padre = get_parent()
-	comparar_entradas()
+	if entrada == 0:
+		push_warning("Checkpoint sin entrada asignada: ", get_path())
+		return
+
+	CheckpointManager.registrar(entrada, self)
 
 
-func comparar_entradas():
-	if padre.saldra_por == entrada:
-		jugador.global_position = global_position
+func _exit_tree():
+	CheckpointManager.desregistrar(entrada)
