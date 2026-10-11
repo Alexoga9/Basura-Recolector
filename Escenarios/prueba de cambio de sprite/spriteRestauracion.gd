@@ -1,15 +1,15 @@
 class_name Restauracion extends Node
 
 @onready var sprite_sucio = %"Map Oscuro"
-@onready var sprite_limpio = $Cesped
+@onready var sprite_limpio = %Cesped
 
 # @onready var sonido_limpieza = $SonidoLimpieza
- 
+
 var porcentaje_actual: int
 var tween_activo: Tween
-var ya_flasheo := false  
+var ya_flasheo := false
 const UMBRAL_FLASH := 100
- 
+
 # RECORDAR QUE SI CAMBIAS LA VARIABLE porcentaje_actual tambien tienes que cambiar UMBRAL_FLASH
 
 

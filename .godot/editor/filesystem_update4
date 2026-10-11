@@ -28,3 +28,6 @@ res://Utilidades/Autoloads/Global.gd
 res://UI/transicion/transicion_background.tscn
 res://UI/transicion/transicion_background.gd
 res://UI/HUD/Inventario/Inventario.tscn
+res://Escenarios/Mundos/Chunk 4.tscn
+res://Escenarios/Mundos/Chunk_4.tscn
+res://Escenarios/prueba de cambio de sprite/spriteRestauracion.gd
