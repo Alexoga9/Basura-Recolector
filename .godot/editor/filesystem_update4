@@ -1,13 +1,15 @@
-res://Escenarios/Mundos/chunk_1.tscn
+res://UI/HUD/UI_canvas_layer.tscn
 res://UI/Theme/Tienda.tres
 res://Escenarios/Oficial/TileMapOficial.tres
 res://Escenarios/shine/hit_flash.gdshader
 res://Entidades/Estaciones/Tienda/Outline.gdshader
 res://Entidades/Basura/basura_data.tres
+res://Entidades/Loot/coleccionables/loot_coleccionable.tres
 res://Escenarios/Sprite_sucio/Tile sucio.tres
 res://Entidades/Basura/Obstaculo prueba.tres
 res://Entidades/Consumible/Tipos de Consumibles/animacion lata consumible.tres
 res://Assets/Shaders/Shader nuevo ajustable correctamente.tres
+res://Entidades/Basura/Caja/Obstaculos/Arbol/Arbol Cesped Claro.tres
 res://transition.gdshader
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_resistencia.tres
@@ -17,10 +19,9 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
-res://Entidades/Basura/Caja/Obstaculos/Arbol/Arbol Cesped Claro.tres
 res://Entidades/Basura/Caja/Obstaculos/piedra/piedra cesped claro.tres
-res://UI/HUD/ui_canvas_layer.gd
-res://UI/HUD/UI_canvas_layer.tscn
+res://Entidades/Basura/Caja/Obstaculos/piedra/piedra cesped oscuro.tres
+res://Escenarios/Mundos/chunk_1.tscn
 res://Escenarios/Mundos/chunk_2.tscn
 res://Escenarios/Mundos/chunk_3.tscn
 res://Escenarios/Mundos/Chunk_4.tscn

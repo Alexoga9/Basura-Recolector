@@ -328,7 +328,7 @@ tile_map_data = PackedByteArray("AAAGAP7/AAAgAAgAAAAGAP//AAAgAAgAAAAGAAAAAAAgAAg
 tile_set = ExtResource("3_wl2gp")
 
 [node name="Map Oscuro" type="TileMapLayer" parent="Layers Oficiales/Terreno/Map Oscuro" unique_id=595656102]
-tile_map_data = PackedByteArray("AAD7/wwAAAAHAAsAAAD4/wwAAAAGAAwAAAD5/wsAAAAFAAsAAAAQABEAAAAFAAsAAAAMABEAAAAIAAAAAAAVABEAAAAIAAAAAAAbAA4AAAAGAAAAAAAHAAoAAAAGAAAAAAAOAAIAAAAGAAAAAAAcAPz/AAAIAAAAAAAaAPb/AAAIAAAAAAAaAPX/AAAIAAAAAAAZAPb/AAAGAAAAAAAZAPX/AAAGAAAAAAAOAPX/AAAGAAAAAAAEAPX/AAAGAAAAAAACABAAAAAIAAAAAADw/xAAAAAGAAAAAADw/w8AAAAGAAAAAADv/woAAAAIAAAAAADq/wQAAAAIAAAAAAD0//b/AAAIAAQAAADx//v/AAAIAAQAAAA=")
+tile_map_data = PackedByteArray("AAD7/wwAAAAHAAsAAAD4/wwAAAAGAAwAAAD5/wsAAAAFAAsAAAAQABEAAAAFAAsAAAAMABEAAAAIAAAAAAAVABEAAAAIAAAAAAAbAA4AAAAGAAAAAAAHAAoAAAAGAAAAAAAOAAIAAAAGAAAAAAAcAPz/AAAIAAAAAAAaAPb/AAAIAAAAAAAaAPX/AAAIAAAAAAAZAPb/AAAGAAAAAAAZAPX/AAAGAAAAAAAOAPX/AAAGAAAAAAAEAPX/AAAGAAAAAAACABAAAAAIAAAAAADw/xAAAAAGAAAAAADw/w8AAAAGAAAAAADv/woAAAAIAAAAAADq/wQAAAAIAAAAAAD0//b/AAAIAAQAAADx//v/AAAIAAQAAAA8APj/AAAqAAwAAAA8APf/AAAuAAoAAAA7APj/AAAsAA0AAAA7APf/AAAtAAoAAAA6APj/AAAsAA0AAAA6APf/AAAtAAoAAAA5APj/AAAsAA0AAAA5APf/AAAtAAoAAAA4APj/AAAtAA0AAAA4APf/AAAtAAoAAAA3APj/AAAsAA0AAAA3APf/AAAtAAoAAAA2APj/AAAsAA0AAAA2APf/AAAtAAoAAAA1APj/AAAsAA0AAAA1APf/AAAtAAoAAAA0APj/AAArAA0AAAA0APf/AAArAAoAAAA8AAAAAAAjAAsAAAA8AP//AAAjAAsAAAA8AP7/AAAjAAsAAAA8AP3/AAAjAAsAAAA8APz/AAAjAAsAAAA8APv/AAAjAAsAAAA8APr/AAAjAAsAAAA8APn/AAAjAAsAAAA4AAAAAAAjAAsAAAA4AP//AAAjAAsAAAA4AP7/AAAjAAsAAAA4AP3/AAAjAAsAAAA4APz/AAAjAAsAAAA4APv/AAAjAAsAAAA4APr/AAAjAAsAAAA4APn/AAAjAAsAAAA8AAIAAAAuAA0AAAA8AAEAAAAqAAsAAAA7AAIAAAAsAA0AAAA7AAEAAAAtAAoAAAA6AAIAAAAsAA0AAAA6AAEAAAAtAAoAAAA5AAIAAAAsAA0AAAA5AAEAAAAtAAoAAAA4AAIAAAAsAA0AAAA4AAEAAAAsAAoAAAA3AAIAAAAsAA0AAAA3AAEAAAAtAAoAAAA2AAIAAAAsAA0AAAA2AAEAAAAtAAoAAAA1AAIAAAAsAA0AAAA1AAEAAAAtAAoAAAA0AAIAAAAsAA0AAAA0AAEAAAAtAAoAAAAzAAIAAAAsAA0AAAAzAAEAAAAtAAoAAAAyAAIAAAAsAA0AAAAyAAEAAAAtAAoAAAAxAAIAAAAsAA0AAAAxAAEAAAAtAAoAAAAwAAIAAAAsAA0AAAAwAAEAAAAtAAoAAAAvAAIAAAAsAA0AAAAvAAEAAAAtAAoAAAAuAAIAAAAsAA0AAAAuAAEAAAAtAAoAAAAtAAIAAAArAA0AAAAtAAEAAAArAAoAAABFABAAAAAuAAwAAABFAA8AAAAuAAwAAABFAA4AAAAuAAwAAABFAA0AAAAuAAwAAABFAAwAAAAuAAwAAABFAAsAAAAuAAwAAABFAAoAAAAuAAwAAABFAAkAAAAuAAwAAABFAAgAAAAuAAwAAABFAAcAAAAuAAwAAABFAAYAAAAuAAwAAABFAAUAAAAuAAwAAABFAAQAAAAuAAwAAABFAAMAAAAuAAwAAABFAAIAAAAuAAwAAABFAAEAAAAuAAwAAABFAAAAAAAuAAwAAABFAP//AAAuAAoAAABEABAAAAAsAAwAAABEAA8AAAAsAAwAAABEAA4AAAAsAAwAAABEAA0AAAAsAAwAAABEAAwAAAAsAAwAAABEAAsAAAAsAAwAAABEAAoAAAAsAAwAAABEAAkAAAAsAAwAAABEAAgAAAAsAAwAAABEAAcAAAAsAAwAAABEAAYAAAAsAAwAAABEAAUAAAAsAAwAAABEAAQAAAAsAAwAAABEAAMAAAAsAAwAAABEAAIAAAAsAAwAAABEAAEAAAAsAAwAAABEAAAAAAAsAAwAAABEAP//AAAtAAoAAABDABAAAAAsAAwAAABDAA8AAAAsAAwAAABDAA4AAAAsAAwAAABDAA0AAAAsAAwAAABDAAwAAAAsAAwAAABDAAsAAAAsAAwAAABDAAoAAAAsAAwAAABDAAkAAAAsAAwAAABDAAgAAAAsAAwAAABDAAcAAAAsAAwAAABDAAYAAAAsAAwAAABDAAUAAAAsAAwAAABDAAQAAAAsAAwAAABDAAMAAAAsAAwAAABDAAIAAAAsAAwAAABDAAEAAAAsAAwAAABDAAAAAAAsAAwAAABDAP//AAAtAAoAAABCABAAAAAsAAwAAABCAA8AAAAsAAwAAABCAA4AAAAsAAwAAABCAA0AAAAsAAwAAABCAAwAAAAsAAwAAABCAAsAAAAsAAwAAABCAAoAAAAsAAwAAABCAAkAAAAsAAwAAABCAAgAAAAsAAwAAABCAAcAAAAsAAwAAABCAAYAAAAsAAwAAABCAAUAAAAsAAwAAABCAAQAAAAsAAwAAABCAAMAAAAsAAwAAABCAAIAAAAsAAwAAABCAAEAAAAsAAwAAABCAAAAAAAsAAwAAABCAP//AAAtAAoAAABBABAAAAArAAsAAABBAA8AAAArAAsAAABBAA4AAAArAAsAAABBAA0AAAArAAsAAABBAAwAAAArAAsAAABBAAsAAAArAAsAAABBAAoAAAArAAsAAABBAAkAAAArAAsAAABBAAgAAAArAAsAAABBAAcAAAArAAsAAABBAAYAAAArAAsAAABBAAUAAAArAAsAAABBAAQAAAArAAsAAABBAAMAAAArAAsAAABBAAIAAAArAAsAAABBAAEAAAArAAsAAABBAAAAAAArAAsAAABBAP//AAArAAoAAABFABMAAAAuAA0AAABFABIAAAAuAAwAAABFABEAAAAuAAwAAABEABMAAAAsAA0AAABEABIAAAAsAAwAAABEABEAAAAsAAwAAABDABMAAAAsAA0AAABDABIAAAAsAAwAAABDABEAAAAsAAwAAABCABMAAAAsAA0AAABCABIAAAAsAAwAAABCABEAAAAsAAwAAABBABMAAAArAA0AAABBABIAAAArAAsAAABBABEAAAArAAsAAAA=")
 tile_set = ExtResource("3_wl2gp")
 
 [node name="puerta_Valla" parent="Layers Oficiales/Terreno" unique_id=1538247553 instance=ExtResource("20_bv8wx")]
@@ -391,6 +391,117 @@ position = Vector2(176, 230)
 
 [node name="Basura9" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=2105266183 instance=ExtResource("4_67wik")]
 position = Vector2(85, 194)
+
+[node name="Basura11" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=106708379 instance=ExtResource("4_67wik")]
+position = Vector2(1259, 529)
+
+[node name="Basura12" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=337290872 instance=ExtResource("4_67wik")]
+position = Vector2(1276, 478)
+
+[node name="Basura13" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=376996729 instance=ExtResource("4_67wik")]
+position = Vector2(1184, 527)
+
+[node name="Basura14" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=641328808 instance=ExtResource("4_67wik")]
+position = Vector2(1312, 441)
+
+[node name="Basura15" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=467036255 instance=ExtResource("4_67wik")]
+position = Vector2(1166, 422)
+
+[node name="Basura16" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=238373797 instance=ExtResource("4_67wik")]
+position = Vector2(1281, 377)
+
+[node name="Basura17" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=1082005363 instance=ExtResource("4_67wik")]
+position = Vector2(1157, 338)
+
+[node name="Basura18" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=1510816845 instance=ExtResource("4_67wik")]
+position = Vector2(1172, 338)
+
+[node name="Basura19" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=1067543090 instance=ExtResource("4_67wik")]
+position = Vector2(1165, 327)
+
+[node name="Basura20" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=265392664 instance=ExtResource("4_67wik")]
+position = Vector2(1225, 245)
+
+[node name="Basura21" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=1737075714 instance=ExtResource("4_67wik")]
+position = Vector2(1157, 252)
+
+[node name="Basura22" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=503371865 instance=ExtResource("4_67wik")]
+position = Vector2(1220, 290)
+
+[node name="Basura23" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=1787025921 instance=ExtResource("4_67wik")]
+position = Vector2(1224, 331)
+
+[node name="Basura24" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=330403919 instance=ExtResource("4_67wik")]
+position = Vector2(1241, 331)
+
+[node name="Basura25" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=350024998 instance=ExtResource("4_67wik")]
+position = Vector2(1348, 330)
+
+[node name="Basura26" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=282058884 instance=ExtResource("4_67wik")]
+position = Vector2(1350, 272)
+
+[node name="Basura27" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=237134880 instance=ExtResource("4_67wik")]
+position = Vector2(1420, 264)
+
+[node name="Basura28" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=437913220 instance=ExtResource("4_67wik")]
+position = Vector2(1425, 292)
+
+[node name="Basura29" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=511362582 instance=ExtResource("4_67wik")]
+position = Vector2(1425, 326)
+
+[node name="Basura30" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=288154582 instance=ExtResource("4_67wik")]
+position = Vector2(1425, 353)
+
+[node name="Basura31" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=140545111 instance=ExtResource("4_67wik")]
+position = Vector2(1397, 339)
+
+[node name="Basura32" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=1699632967 instance=ExtResource("4_67wik")]
+position = Vector2(1424, 384)
+
+[node name="Basura33" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=143305324 instance=ExtResource("4_67wik")]
+position = Vector2(1391, 372)
+
+[node name="Basura34" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=470421678 instance=ExtResource("4_67wik")]
+position = Vector2(1419, 415)
+
+[node name="Basura35" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=133386952 instance=ExtResource("4_67wik")]
+position = Vector2(1425, 454)
+
+[node name="Basura36" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=2020278712 instance=ExtResource("4_67wik")]
+position = Vector2(1348, 378)
+
+[node name="Basura37" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=1756312987 instance=ExtResource("4_67wik")]
+position = Vector2(1418, 220)
+
+[node name="Basura38" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=27180022 instance=ExtResource("4_67wik")]
+position = Vector2(1417, 477)
+
+[node name="Basura39" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=289533482 instance=ExtResource("4_67wik")]
+position = Vector2(1425, 499)
+
+[node name="Basura40" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=922341135 instance=ExtResource("4_67wik")]
+position = Vector2(1426, 531)
+
+[node name="Basura41" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=1167654651 instance=ExtResource("4_67wik")]
+position = Vector2(1356, 542)
+
+[node name="Basura42" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=729051726 instance=ExtResource("4_67wik")]
+position = Vector2(1342, 516)
+
+[node name="Basura43" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=1390075179 instance=ExtResource("4_67wik")]
+position = Vector2(1352, 483)
+
+[node name="Basura44" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=679434264 instance=ExtResource("4_67wik")]
+position = Vector2(1391, 471)
+
+[node name="Basura45" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=262721910 instance=ExtResource("4_67wik")]
+position = Vector2(1354, 446)
+
+[node name="Basura46" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=150591984 instance=ExtResource("4_67wik")]
+position = Vector2(1344, 407)
+
+[node name="Basura47" parent="Objetos Ambientales/Entiddaes/Basuras/Normales" unique_id=1883780280 instance=ExtResource("4_67wik")]
+position = Vector2(1338, 298)
 
 [node name="Pesadas" type="Node2D" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=754650847]
 y_sort_enabled = true
