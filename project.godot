@@ -27,6 +27,7 @@ SignalBus="*uid://de1hm7ggjo12u"
 Dinero="*uid://ch8alg1k4awm0"
 Inventario="*uid://d2f0m5j1ciuls"
 CheckpointManager="*uid://djnqibo65pwk1"
+NivelesDeExperiencia="*uid://b3atf1xujheax"
 
 [debug]
 

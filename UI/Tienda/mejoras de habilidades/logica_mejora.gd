@@ -5,6 +5,11 @@ class_name Logica_Mejora extends Node
 
 var jugador: Jugador
 var panel: PanelTienda
+var nivel: int = 1
+
+
+func guardar_nivel():
+	pass
 
 
 func iniciar():

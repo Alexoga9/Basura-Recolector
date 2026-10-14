@@ -3,7 +3,7 @@ extends Logica_Mejora
 
 func _ready():
 	iniciar()
-	#print(jugador)
+	nivel = NivelesDeExperiencia.nivel_resistencia
 
 
 func aplicar_mejora():

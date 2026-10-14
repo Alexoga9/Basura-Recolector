@@ -1,9 +1,7 @@
-[gd_resource type="Resource" script_class="LootDefinicion" format=3 uid="uid://cgrmmq154onj0"]
+[gd_resource type="Resource" format=3 uid="uid://cgrmmq154onj0"]
 
 [ext_resource type="AudioStream" uid="uid://sahbu26hpnvx" path="res://Assets/audio/Hit.wav" id="1_bvgs1"]
 [ext_resource type="Texture2D" uid="uid://i2ox5ksvvper" path="res://Escenarios/Oficial/Tilesheet Oficial.png" id="2_f3m0x"]
-[ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="3_8rfjx"]
-[ext_resource type="Resource" uid="uid://dmky67t6umj3u" path="res://Entidades/Loot/loots/rs_piedra.tres" id="4_0b47q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_86fdr"]
 atlas = ExtResource("2_f3m0x")
@@ -21,12 +19,50 @@ region = Rect2(80, 192, 16, 16)
 atlas = ExtResource("2_f3m0x")
 region = Rect2(96, 192, 16, 16)
 
+[sub_resource type="GDScript" id="GDScript_vbpxe"]
+script/source = "class_name LootDefinicion extends Resource
+
+@export_group(\"Escena\")
+@export var id: String
+@export var nombre: String
+@export var audio: AudioStream
+@export var sprite: Texture2D
+@export var conjunto_de_sprites: Array[Texture2D]
+@export var cantidad_maxima: int
+
+@export_group(\"Tipo de objeto\")
+enum TipoElemento {BASURA,
+MATERIAL,
+PAQUETE,
+OBSTACULO,
+BOLSA_DE_BASURA,
+COLECCIONABLE}
+@export var tipo_de_elemento: TipoElemento
+enum TipoBasura {BASICO, PESADO}
+
+@export_subgroup(\"Si es basura\")
+@export var tipo_de_basura: TipoBasura
+@export var valor: int
+
+@export_subgroup(\"Si es basura pesada\")
+@export var veces_a_golpear: int
+
+@export_group(\"Requisitos\")
+@export var tiene_requisito: bool = false
+enum TipoRequisito {PICO, HACHA, AZADA}#De referencia de momento
+@export var tipo_de_requisito: TipoRequisito
+@export var nivel_de_requisito: int
+
+@export_group(\"Paquete\")
+@export var materiales_dentro: Array[LootDefinicion]
+"
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_5d7mj"]
 atlas = ExtResource("2_f3m0x")
 region = Rect2(80, 176, 16, 16)
 
 [resource]
-script = ExtResource("3_8rfjx")
+script = SubResource("GDScript_vbpxe")
 id = "Piedra cesped claro"
 nombre = "Piedra cesped claro"
 audio = ExtResource("1_bvgs1")
@@ -38,5 +74,4 @@ tipo_de_basura = 1
 veces_a_golpear = 2
 tiene_requisito = true
 nivel_de_requisito = 1
-materiales_dentro = Array[ExtResource("3_8rfjx")]([ExtResource("4_0b47q"), ExtResource("4_0b47q")])
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"

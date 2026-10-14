@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DataValla" format=3 uid="uid://cf0gu0k4ed7ov"]
+
+[ext_resource type="Script" uid="uid://bldnpq3emoi1h" path="res://Recursos/data_valla.gd" id="1_i7whu"]
+
+[resource]
+script = ExtResource("1_i7whu")
+porcentaje_requerido = 50
+metadata/_custom_type_script = "uid://bldnpq3emoi1h"
