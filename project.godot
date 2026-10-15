@@ -22,12 +22,13 @@ buses/default_bus_layout="res://Utilidades/AudioBus/default_bus_layout.tres"
 [autoload]
 
 Global="*uid://50g7q8nvqdp2"
-SaveGame="*uid://bvc2tljjdumg8"
 SignalBus="*uid://de1hm7ggjo12u"
 Dinero="*uid://ch8alg1k4awm0"
 Inventario="*uid://d2f0m5j1ciuls"
+SaveGame="*uid://bvc2tljjdumg8"
 CheckpointManager="*uid://djnqibo65pwk1"
 NivelesDeExperiencia="*uid://b3atf1xujheax"
+DataSave2="*uid://coiafei55lea"
 
 [debug]
 
@@ -65,9 +66,12 @@ Obstaculo=""
 guardables=""
 Basura=""
 EntidadesLoot="A donde van a parar todos los loots de la escena"
-"Entidades Notas"=""
 EstacionesNormales=""
 EstacionesRotas=""
+Chunk="El origen del Nivel"
+"Entidades Notas"=""
+EntidadesVallas=""
+CapaSucia=""
 
 [gui]
 

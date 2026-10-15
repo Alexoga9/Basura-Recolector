@@ -1,22 +1,22 @@
-res://Utilidades/Autoloads/
-res://Recursos/
-res://Entidades/Valla/
-res://Entidades/
-res://UI/HUD/
-res://Utilidades/Sistemas/Checkpoint/
-res://UI/transicion/
-res://Entidades/Basura/Caja/Obstaculos/piedra/
-res://Entidades/Basura/
-res://Entidades/Notas/
+res://Recursos/entidades/
 res://Escenarios/Sprite_sucio/
 res://Escenarios/Mundos/
 res://Entidades/Consumible/Tipos de Consumibles/
 res://Assets/
 res://Escenarios/Oficial/
 res://Entidades/Prefabs colocables/
+res://Entidades/Basura/
 res://Entidades/Notas recogibles/
 res://Assets/Shaders/
 res://
 res://Escenarios/Otoño/
 res://Entidades/Basura/Caja/
 res://Utilidades/Sistemas/
+res://Entidades/BolsaDeBasura/
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/
+res://Assets/entidades/trituradora/
+res://Escenarios/Tilesets/
+res://Assets/entidades/maquina expendedora/
+res://Assets/entidades/
+res://Escenarios/TileMap/
+res://Assets/tipografia/

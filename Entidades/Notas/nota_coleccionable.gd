@@ -1,4 +1,4 @@
-extends Area2D
+class_name Notas extends Area2D
 
 @export var data: DataNotas
 

@@ -1,5 +1,4 @@
-res://UI/Tienda/Panel tienda/panel_tienda.gd
-res://UI/Tienda/tienda_ui.tscn
+res://Escenarios/Mundos/chunk_1.tscn
 res://UI/Theme/Tienda.tres
 res://Escenarios/Oficial/TileMapOficial.tres
 res://Escenarios/shine/hit_flash.gdshader
@@ -10,7 +9,6 @@ res://Entidades/Basura/Obstaculo prueba.tres
 res://Entidades/Consumible/Tipos de Consumibles/animacion lata consumible.tres
 res://Assets/Shaders/Shader nuevo ajustable correctamente.tres
 res://Entidades/Basura/Caja/Obstaculos/Arbol/Arbol Cesped Claro.tres
-res://transition.gdshader
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_resistencia.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_cooldown.tres
@@ -19,7 +17,5 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
-res://Entidades/Basura/Caja/Obstaculos/piedra/piedra cesped claro.tres
-res://UI/Tienda/mejoras de habilidades/mejoras/mejora_resistencia.gd
-res://Utilidades/Autoloads/niveles_de_experiencia.gd
-res://UI/Tienda/mejoras de habilidades/logica_mejora.gd
+res://Recursos/entidades/DataSave2.gd
+res://Entidades/Loot/coleccionables/loot_coleccionable.tres
