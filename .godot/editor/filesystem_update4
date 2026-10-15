@@ -22,3 +22,4 @@ res://Entidades/Basura/Caja/Obstaculos/piedra/piedra cesped claro.tres
 res://Escenarios/Mundos/chunk_2.tscn
 res://Escenarios/Mundos/chunk_4.tscn
 res://Recursos/entidades/RecolectorData.gd
+res://Recursos/Save/ReconstructorData.gd
