@@ -1,4 +1,4 @@
-res://Utilidades/Autoloads/niveles_de_experiencia.gd
+res://UI/Tienda/Panel tienda/panel_tienda.gd
 res://UI/Tienda/tienda_ui.tscn
 res://UI/Theme/Tienda.tres
 res://Escenarios/Oficial/TileMapOficial.tres
@@ -20,6 +20,6 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanza
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
 res://Entidades/Basura/Caja/Obstaculos/piedra/piedra cesped claro.tres
-res://UI/Tienda/mejoras de habilidades/logica_mejora.gd
 res://UI/Tienda/mejoras de habilidades/mejoras/mejora_resistencia.gd
-res://UI/Tienda/Panel tienda/panel_tienda.tscn
+res://Utilidades/Autoloads/niveles_de_experiencia.gd
+res://UI/Tienda/mejoras de habilidades/logica_mejora.gd

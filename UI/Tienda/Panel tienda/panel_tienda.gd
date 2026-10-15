@@ -17,6 +17,7 @@ class_name PanelTienda extends Control
 @export var mejora: DatosHabilidades
 @export var logica_mejora: Logica_Mejora
 
+@export var nombre_nivel: String
 var nivel: int = 1
 var precio: int = 0
 
@@ -24,6 +25,7 @@ var precio: int = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_settear_valores_iniciales()
+	nivel = leer_nivel()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -78,3 +80,12 @@ func _on_boton_pressed():
 func estadisticas(ahora: float, buff: float):
 	beneficio.text = str(ahora)
 	actual.text = str(buff)
+
+
+func leer_nivel() -> int:
+	print(nombre_nivel)
+	return NivelesDeExperiencia.get("nivel_" + nombre_nivel)
+
+
+func escribir_nivel(v: int) -> void:
+	NivelesDeExperiencia.set("nivel_" + nombre_nivel, v)

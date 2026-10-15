@@ -5,7 +5,7 @@ class_name Logica_Mejora extends Node
 
 var jugador: Jugador
 var panel: PanelTienda
-var nivel: int = 1
+var padre: PanelTienda
 
 
 func guardar_nivel():
@@ -17,6 +17,7 @@ func iniciar():
 	jugador = Global.jugador
 	panel = get_parent()
 	actualizar_datos()
+	padre = get_parent()
 
 
 func aplicar_mejora():
