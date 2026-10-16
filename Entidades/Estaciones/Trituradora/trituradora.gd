@@ -4,19 +4,33 @@ extends StaticBody2D
 @onready var sierras = %Sierras
 @onready var chispas = %Chispas
 
+var interaccion_del_jugador: bool = false
+var jugador_en_area: bool = false
+
+
+func _ready():
+	SignalBus.interaccion.connect(interaccion_recibida)
+
+
+func _process(delta):
+	depositar_basura()
+
+
+func interaccion_recibida():
+	if not jugador_en_area:
+		return
+
+	interaccion_del_jugador = !interaccion_del_jugador
+
+
+func depositar_basura():
+	if interaccion_del_jugador and jugador_en_area:
+		recibir_basura_jugador()
+
 
 func recibir_basura_jugador():
-	#print("jugador")
-
-	if Inventario.peso > 0: #Inventario.get_count("Basura") > 0
-		#var cantidad_basura: int = Inventario.get_count("Basura")
-		#var valor_basura: int = Inventario.get_item_resource("Basura").valor
-		#var valor_basura: int = 100
-		#var valor_de_venta: int = Inventario.peso * valor_basura
-
+	if Inventario.peso > 0:
 		Dinero.ganar(Inventario.valor_de_basuras)
-		#print(str(cantidad_basura))
-		#Inventario.remove_item("Basura", cantidad_basura)
 		Inventario.peso = 0
 		Inventario.valor_de_basuras = 0
 		audio.play()
@@ -33,9 +47,9 @@ func recibir_basura_fisica(body):
 
 
 func _on_trigger_basura_body_entered(body):
-	#print("Area") puede que cuado este en el area del basudero presione una tecla para que sea mas interactivo
-	if body.is_in_group("Jugador") and Inventario.peso > 0:
-		recibir_basura_jugador()
+
+	if body.is_in_group("Jugador"):
+		jugador_en_area = true
 
 	if body.is_in_group("BolsaDeBasura"):
 		recibir_basura_fisica(body)
@@ -43,3 +57,9 @@ func _on_trigger_basura_body_entered(body):
 
 func _on_chispas_animation_finished():
 	chispas.frame = 0
+
+
+func _on_trigger_jugador_body_exited(body):
+	if body.is_in_group("Jugador"):
+		jugador_en_area = false
+		interaccion_del_jugador = false

@@ -13,6 +13,9 @@ func _process(delta):
 
 
 func interaccion_recibida():
+	if not jugador_en_area:
+		return
+
 	interaccion_del_jugador = !interaccion_del_jugador
 
 
