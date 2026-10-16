@@ -63,7 +63,6 @@ animation = &"idle"
 [node name="E sprite" parent="puerta" unique_id=1797379794 instance=ExtResource("3_bag1r")]
 visible = false
 position = Vector2(6.0796738e-06, -12)
-scale = Vector2(0.7741219, 0.7210982)
 
 [node name="ResaltadoComponente" type="Node" parent="puerta" unique_id=1465628742 node_paths=PackedStringArray("trigger_area", "e_sprite")]
 script = ExtResource("4_qcp71")

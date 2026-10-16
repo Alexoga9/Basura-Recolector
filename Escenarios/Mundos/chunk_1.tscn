@@ -546,9 +546,9 @@ tile_set = SubResource("TileSet_onpbi")
 
 [node name="puerta_Valla" parent="Objetos Ambientales/Node2D" unique_id=1538247553 instance=ExtResource("8_aqtp6")]
 position = Vector2(394, -144)
-porcentaje_requerido = 50
+porcentaje_requerido = 1
 next_scene = "uid://bgd2waanh0qwk"
-costo_puerta = 100
+costo_puerta = 10
 entrada_posicion = 1
 condiccion_para_abrir = 1
 

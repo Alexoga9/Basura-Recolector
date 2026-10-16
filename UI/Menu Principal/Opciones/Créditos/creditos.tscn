@@ -52,14 +52,8 @@ theme_override_constants/margin_right = 50
 [node name="Label" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer2" unique_id=774099854]
 layout_mode = 2
 size_flags_vertical = 6
-text = "Texto
-mucho
-ad+
-add
-adad
-adad
-adad
-adad
-"
+text = "SnowHex: Dirección, Arte
+Shxadow9: Jefe de Programación
+Juaco: Programación"
 
 [connection signal="pressed" from="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/Atras" to="." method="_on_atras_pressed"]
