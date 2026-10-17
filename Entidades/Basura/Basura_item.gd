@@ -55,12 +55,13 @@ func iniciar_valores():
 
 
 func decidir_grupo():
-	match data.tipo_de_elemento:
-		data.TipoElemento.BASURA:
-			add_to_group("Basura")
-
-		data.TipoElemento.OBSTACULO:
-			add_to_group("Obstaculo")
+	add_to_group("Basura")
+	#match data.tipo_de_elemento:
+		#data.TipoElemento.BASURA:
+			#add_to_group("Basura")
+#
+		#data.TipoElemento.OBSTACULO:
+			#add_to_group("Obstaculo")
 
 
 func recibir_input():

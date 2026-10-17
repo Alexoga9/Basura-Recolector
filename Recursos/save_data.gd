@@ -1,5 +1,4 @@
-extends Resource
-class_name SaveData
+class_name SaveData extends Resource
 
 @export var SceneName: String
 @export var GuardarDinero: int

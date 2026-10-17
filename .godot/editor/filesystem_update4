@@ -1,5 +1,8 @@
-res://Entidades/Estaciones/Trituradora/trituradora.gd
-res://Entidades/Estaciones/Tienda/tienda.tscn
+res://Recursos/Save/RecolectorData.gd
+res://Utilidades/Autoloads/niveles_de_experiencia.gd
+res://Utilidades/Autoloads/Ajustes.gd
+res://UI/Menu Principal/Opciones/Opciones de audio/opciones_de_audio.gd
+res://UI/Menu Principal/Opciones/Opciones de audio/opciones_de_audio.tscn
 res://UI/Theme/Tienda.tres
 res://Escenarios/Oficial/TileMapOficial.tres
 res://Escenarios/shine/hit_flash.gdshader
@@ -19,9 +22,5 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanza
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
 res://Entidades/Basura/Caja/Obstaculos/piedra/piedra cesped claro.tres
-res://Entidades/Estaciones/Trituradora/trituradora.tscn
-res://UI/Menu Principal/Opciones/Créditos/creditos.tscn
-res://Entidades/Estaciones/Maquina Expendedora/MaquinaExpendedora.tscn
-res://Escenarios/prueba de cambio de sprite/Valla.tscn
-res://Escenarios/Mundos/chunk_1.tscn
-res://UI/HUD/Pausa/pausa.tscn
+res://Entidades/Basura/Basura_item.gd
+res://Recursos/save_data.gd

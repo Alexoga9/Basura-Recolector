@@ -13,6 +13,15 @@ var estaciones: Array[StaticBody2D] = []
 var estaciones_rotas: Array[EstacionRota] = []
 var vallas: Array[pueta_valla] = []
 
+var mochila_inventario: Dictionary
+var dinero: int = 0
+var peso_basura: int = 0
+var energia_actual: int= 0
+var niveles_de_mejoras: Dictionary
+# compara la cantidad de basuras con un antes y un despues, sacando un porcentaje
+# es decir habian 100 cajas, ahora quedan 50, eso es el 50% que se recogio
+var estado_de_limpieza: int= 0
+
 
 func _ready():
 	call_deferred("recolectar_todo")
@@ -25,6 +34,12 @@ func recolectar_todo() -> void:
 	nombre_escena = _nombre_de_grupo("Chunk")
 	terreno = _nodo_de_grupo("CapaSucia") as Node2D
 	jugador = _nodo_de_grupo("Jugador") as Jugador
+
+	dinero = int(Dinero.dinero)
+	energia_actual = int(jugador.energia_componente.energia)
+	peso_basura = Inventario.peso
+	mochila_inventario = Inventario.get_backpack_data()
+	niveles_de_mejoras = NivelesDeExperiencia.serializar()
 
 	_recoger_hijos("EntidadesBasuras", basuras)
 	_recoger_hijos("EntidadesLoot", loots)
