@@ -9,6 +9,7 @@ func _process(delta):
 	input_tab()
 	input_esc()
 	input_interaccion_E()
+	input_beber_refresco()
 	input_click()
 
 
@@ -22,6 +23,11 @@ func input_movimiento() -> Vector2:
 func input_interaccion_E():
 	if Input.is_action_just_pressed("Interaccion"):
 		SignalBus.interaccion.emit()
+
+
+func input_beber_refresco():
+	if Input.is_action_just_pressed("beber_refresco"):
+		SignalBus.beber_refresco.emit()
 
 
 func input_tab():

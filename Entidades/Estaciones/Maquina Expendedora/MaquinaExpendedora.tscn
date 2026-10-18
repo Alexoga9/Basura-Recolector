@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cjlmg6cpg7g6g"]
 
 [ext_resource type="Script" uid="uid://bqf61t5aq5kig" path="res://Entidades/Estaciones/Maquina Expendedora/maquina_expendedora.gd" id="1_j4evy"]
-[ext_resource type="PackedScene" uid="uid://bgn5c32aqoq6c" path="res://Entidades/Consumible/consumible.tscn" id="2_cglwt"]
+[ext_resource type="PackedScene" uid="uid://dmsrrncsuv1vg" path="res://Entidades/Consumible/refresco_loot.tscn" id="2_pprbo"]
 [ext_resource type="AudioStream" uid="uid://cjghok5vlof2n" path="res://Assets/audio/drop-coin.mp3" id="4_ev2gr"]
 [ext_resource type="Texture2D" uid="uid://i2ox5ksvvper" path="res://Escenarios/Oficial/Tilesheet Oficial.png" id="4_pv4qb"]
 [ext_resource type="Material" uid="uid://dh8ldak1ngnox" path="res://Assets/Shaders/Shader nuevo ajustable correctamente.tres" id="5_pprbo"]
@@ -294,7 +294,7 @@ collision_layer = 16
 collision_mask = 0
 script = ExtResource("1_j4evy")
 precio = 10
-consumible = ExtResource("2_cglwt")
+refresco = ExtResource("2_pprbo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=144946869]
 visible = false

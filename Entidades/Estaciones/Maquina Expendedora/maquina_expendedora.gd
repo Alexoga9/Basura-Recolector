@@ -1,7 +1,7 @@
 extends StaticBody2D
 
 @export var precio: int = 50
-@export var consumible: PackedScene
+@export var refresco: PackedScene
 var jugador
 @onready var audio = %audio
 @onready var animacion: AnimatedSprite2D = %AnimatedSprite2D
@@ -30,7 +30,7 @@ func dispensar():
 
 
 func spawnear():
-	var nuevo: Consumible = consumible.instantiate()
+	var nuevo: Loot = refresco.instantiate()
 
 	nuevo.global_position = self.global_position #+ Vector2(0, 50)
 	get_tree().current_scene.add_child(nuevo)

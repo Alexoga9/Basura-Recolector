@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="LootDefinicion" format=3 uid="uid://cjmitmv0r87es"]
+
+[ext_resource type="AudioStream" uid="uid://sahbu26hpnvx" path="res://Assets/audio/Hit.wav" id="1_0gije"]
+[ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="1_5aeph"]
+[ext_resource type="Texture2D" uid="uid://b2b1h2jh4bfuy" path="res://Assets/lata.png" id="2_kmx8c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mhwmq"]
+atlas = ExtResource("2_kmx8c")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rcf12"]
+atlas = ExtResource("2_kmx8c")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_55cmx"]
+atlas = ExtResource("2_kmx8c")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfiw4"]
+atlas = ExtResource("2_kmx8c")
+region = Rect2(0, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_5aeph")
+id = "refresco"
+nombre = "refresco"
+audio = ExtResource("1_0gije")
+sprite = SubResource("AtlasTexture_tfiw4")
+conjunto_de_sprites = Array[Texture2D]([SubResource("AtlasTexture_mhwmq"), SubResource("AtlasTexture_rcf12"), SubResource("AtlasTexture_55cmx")])
+cantidad_maxima = 99
+tipo_de_elemento = 1
+metadata/_custom_type_script = "uid://dnu2r5yw53pto"

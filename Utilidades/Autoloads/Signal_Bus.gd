@@ -15,6 +15,7 @@ signal interaccion
 signal input_tab
 signal input_esc
 signal input_click
+signal beber_refresco
 
 # Basura
 signal basura_recogida

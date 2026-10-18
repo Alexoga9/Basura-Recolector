@@ -1,3 +1,7 @@
+AudioStreamPlayer
+BeberRefresco
+TDeslizar
+Loot
 MarginContainer
 Button
 Label
@@ -9,6 +13,3 @@ Node
 ReconstructorData
 RecolectorData
 CheckpointComponente
-ColorRect
-Logica_Mejora
-PanelTienda

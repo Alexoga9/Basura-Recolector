@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dmsrrncsuv1vg"]
+
+[ext_resource type="Script" uid="uid://d1alhwontnr3g" path="res://Entidades/Loot/Loot_Item.gd" id="1_csv3s"]
+[ext_resource type="Resource" uid="uid://cjmitmv0r87es" path="res://Entidades/Consumible/refresco.tres" id="2_ht4cp"]
+[ext_resource type="Script" uid="uid://beooi4cmwyrr8" path="res://Commons/Componentes/Tweens/Tween_deslizar.gd" id="3_ht4cp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l3i4g"]
+radius = 3.0
+
+[node name="Refresco" type="Area2D" unique_id=1853375756 groups=["Loot"]]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_csv3s")
+data = ExtResource("2_ht4cp")
+metadata/_custom_type_script = "uid://d1alhwontnr3g"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1622931416]
+unique_name_in_owner = true
+shape = SubResource("CircleShape2D_l3i4g")
+debug_color = Color(0.21118888, 0.6402497, 0, 0.41960785)
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1663026413]
+unique_name_in_owner = true
+
+[node name="sonido" type="AudioStreamPlayer" parent="." unique_id=1091246458]
+unique_name_in_owner = true
+volume_db = -10.0
+pitch_scale = 1.5
+
+[node name="TDeslizar" type="Node" parent="." unique_id=1440048743]
+script = ExtResource("3_ht4cp")
+metadata/_custom_type_script = "uid://beooi4cmwyrr8"

@@ -23,6 +23,12 @@ func _ready() -> void:
 	SignalBus.pasar_entrada_valla.connect(pasar_puerta)
 
 	vallatext.hide()
+	iniciar_sprite()
+
+
+func iniciar_sprite():
+	if condiccion_para_abrir == Condiccion_para_abrir.Abierta:
+		APuerta.play("puerta_abierta")
 
 
 # ------------------------------------------------------------------

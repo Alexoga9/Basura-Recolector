@@ -1,3 +1,5 @@
+res://Entidades/Consumible/
+res://
 res://UI/transicion/
 res://Entidades/Loot/coleccionables/
 res://Assets/Coleccionables/
@@ -13,10 +15,8 @@ res://Entidades/Prefabs colocables/
 res://Entidades/Basura/
 res://Entidades/Notas recogibles/
 res://Assets/Shaders/
-res://
 res://Escenarios/Otoño/
 res://Entidades/Basura/Caja/
 res://Utilidades/Sistemas/
 res://Entidades/BolsaDeBasura/
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/
-res://Assets/entidades/trituradora/

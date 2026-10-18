@@ -29,3 +29,12 @@ res://UI/transicion/volver_escena_anterior.tscn
 res://Utilidades/Autoloads/Signal_Bus.gd
 res://UI/transicion/pasar_por_puerta.gd
 res://UI/transicion/pasar_por_puerta.tscn
+res://Entidades/Consumible/consumible.tscn
+res://Entidades/Consumible/refresco.tres
+res://Escenarios/Mundos/chunk_1.tscn
+res://UI/HUD/Inventario/Inventario.tscn
+res://Commons/Componentes/Input/beber_refresco.gd
+res://Commons/Componentes/Input/InputComponente.gd
+res://Entidades/Estaciones/Maquina Expendedora/MaquinaExpendedora.tscn
+res://Entidades/Estaciones/Maquina Expendedora/maquina_expendedora.gd
+res://Entidades/Consumible/refresco_loot.tscn
