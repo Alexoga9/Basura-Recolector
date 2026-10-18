@@ -73,13 +73,13 @@ func deducción_de_costo():
 	abrir_paso()
 
 
-func back() -> void:
-	Global.jugador.contador_componente.limpieza_actualizada.disconnect(_actualizar_progreso)
-	SignalBus.interaccion.disconnect(_al_interactuar)
-	APuerta.play("puerta_abierta")
-	$CollisionShape2D.disabled = true
-	get_tree().change_scene_to_file(next_scene)
-	SaveGame.Load_Game()
+#func back() -> void:
+	#Global.jugador.contador_componente.limpieza_actualizada.disconnect(_actualizar_progreso)
+	#SignalBus.interaccion.disconnect(_al_interactuar)
+	#APuerta.play("puerta_abierta")
+	#$CollisionShape2D.disabled = true
+	#get_tree().change_scene_to_file(next_scene)
+	#SaveGame.Load_Game()
 
 
 func abrir_paso() -> void:

@@ -9,6 +9,6 @@
 script = ExtResource("1_n6pew")
 metadata/_custom_type_script = "uid://coiafei55lea"
 
-[node name="ReconstructorData" type="Node" parent="." unique_id=1561904218 groups=["Reconstructor"]]
+[node name="ReconstructorData" type="Node" parent="." unique_id=1561904218 groups=["ReconstructorData"]]
 script = ExtResource("2_3nvp8")
 metadata/_custom_type_script = "uid://dyo1l45kbwvxm"

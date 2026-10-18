@@ -1,6 +1,5 @@
-res://Recursos/Save/RecolectorData.gd
-res://Recursos/Save/ReconstructorData.gd
-res://Escenarios/Mundos/chunk_1.tscn
+res://Escenarios/save_game.gd
+res://Recursos/Save/logica_guardado.tscn
 res://UI/Theme/Tienda.tres
 res://Escenarios/Oficial/TileMapOficial.tres
 res://Escenarios/shine/hit_flash.gdshader
@@ -20,5 +19,4 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanza
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
 res://Entidades/Basura/Caja/Obstaculos/piedra/piedra cesped claro.tres
-res://Escenarios/save_game.gd
-res://Escenarios/Mundos/chunk_2.tscn
+res://Escenarios/prueba de cambio de sprite/valla.gd

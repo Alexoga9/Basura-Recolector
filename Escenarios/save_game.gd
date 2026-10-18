@@ -11,13 +11,13 @@ const RUTA_SAVE := "user://save.res"
 # GUARDAR
 # ------------------------------------------------------------------
 func Guardar() -> void:
-	var escena_path := get_tree().current_scene.scene_file_path
+	var escena_path := _normalizar(get_tree().current_scene.scene_file_path)
 
 	# 1. Recolectar entidades de la escena actual y actualizar el diccionario en memoria
 	var recolector: RecolectorData= get_tree().get_first_node_in_group("RecolectorData")
 
 	if recolector != null:
-		#recolector.recolectar_todo()
+		recolector.recolectar_todo()
 		datos_por_escenas[escena_path] = recolector.serializar()
 
 	# 2. Construir SaveData
@@ -53,14 +53,14 @@ func Cargar() -> void:
 
 	datos_por_escenas = data.datos_por_escenas
 
-	if data.escena_actual != get_tree().current_scene.scene_file_path:
+	if data.escena_actual != _normalizar(get_tree().current_scene.scene_file_path):
 		get_tree().change_scene_to_file(data.escena_actual)
 		await get_tree().process_frame
 
 	var datos_escena: Dictionary = datos_por_escenas.get(data.escena_actual, {})
 
 	if not datos_escena.is_empty():
-		var reconstructor := get_tree().get_first_node_in_group("Reconstructor")
+		var reconstructor := get_tree().get_first_node_in_group("ReconstructorData")
 
 		if reconstructor != null:
 			await reconstructor.restaurar(datos_escena)
@@ -80,36 +80,39 @@ func Cargar() -> void:
 # CAMBIO DE ESCENA (durante la partida)
 # ------------------------------------------------------------------
 func Cambiar_Escena(ruta_escena: String) -> void:
-	var escena_actual := get_tree().current_scene.scene_file_path
+	ruta_escena = _normalizar(ruta_escena)
+	var escena_actual := _normalizar(get_tree().current_scene.scene_file_path)
 	var recolector := get_tree().get_first_node_in_group("RecolectorData")
 
 	if recolector != null:
 		recolector.recolectar_todo()
-		print("[DEBUG] Basuras: ", recolector.basuras.size())
-		print("[DEBUG] Loots: ", recolector.loots.size())
-		print("[DEBUG] Notas: ", recolector.notas.size())
-		print("[DEBUG] Estaciones: ", recolector.estaciones.size())
-		print("[DEBUG] Estaciones rotas: ", recolector.estaciones_rotas.size())
-		print("[DEBUG] Vallas: ", recolector.vallas.size())
-
-		var serializado: Dictionary = recolector.serializar()
-		print("[DEBUG] Serializado: ", serializado)
+		var serializado: Dictionary= recolector.serializar()
+		print("[DEBUG] Serializado '", escena_actual, "': ", serializado)
 		datos_por_escenas[escena_actual] = serializado
-
-	if recolector != null:
-		recolector.recolectar_todo()
-		datos_por_escenas[escena_actual] = recolector.serializar()
+	else:
+		print("[DEBUG] ERROR: no hay RecolectorData")
 
 	get_tree().change_scene_to_file(ruta_escena)
 	await get_tree().process_frame
 
 	var datos_destino: Dictionary = datos_por_escenas.get(ruta_escena, {})
+	print("[DEBUG] Claves guardadas: ", datos_por_escenas.keys())
+	print("[DEBUG] Datos destino para '", ruta_escena, "': ", datos_destino)
 
 	if not datos_destino.is_empty():
-		var reconstructor := get_tree().get_first_node_in_group("Reconstructor")
+		var reconstructor := get_tree().get_first_node_in_group("ReconstructorData")
 
 		if reconstructor != null:
 			await reconstructor.restaurar(datos_destino)
+		else:
+			print("[DEBUG] ERROR: no hay ReconstructorData")
+
+
+func _normalizar(ruta: String) -> String:
+	if ruta.begins_with("uid://"):
+		return ResourceUID.ensure_path(ruta)
+
+	return ruta
 
 
 # ------------------------------------------------------------------
