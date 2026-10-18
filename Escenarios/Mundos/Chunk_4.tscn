@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://rbpm4n376u4e"]
+[gd_scene format=4 uid="uid://brv2hxmql7k4m"]
 
 [ext_resource type="Script" uid="uid://clfxttjs56cw8" path="res://Escenarios/prueba de cambio de sprite/spriteRestauracion.gd" id="1_m4jap"]
 [ext_resource type="TileSet" uid="uid://bp6rx8j03kyjv" path="res://Escenarios/Oficial/TileMapOficial.tres" id="2_px8us"]

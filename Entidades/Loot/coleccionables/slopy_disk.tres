@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="LootDefinicion" format=3 uid="uid://5rkp1mf566u5"]
+
+[ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="1_gssry"]
+[ext_resource type="AudioStream" uid="uid://sahbu26hpnvx" path="res://Assets/audio/Hit.wav" id="1_pj77k"]
+[ext_resource type="Texture2D" uid="uid://b2s1y1mog5c63" path="res://Assets/Coleccionables/coleccionables pequeñospng.png" id="3_v72bs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8hid"]
+atlas = ExtResource("3_v72bs")
+region = Rect2(128, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_gssry")
+id = "slopy_disk"
+nombre = "slopy_disk"
+audio = ExtResource("1_pj77k")
+sprite = SubResource("AtlasTexture_h8hid")
+cantidad_maxima = 1
+tipo_de_elemento = 5
+metadata/_custom_type_script = "uid://dnu2r5yw53pto"

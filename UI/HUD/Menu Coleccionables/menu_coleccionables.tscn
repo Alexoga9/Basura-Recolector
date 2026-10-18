@@ -3,10 +3,50 @@
 [ext_resource type="PackedScene" uid="uid://b0dgesesasocr" path="res://UI/HUD/Menu Coleccionables/casilla_coleccionable.tscn" id="1_bwl53"]
 [ext_resource type="Texture2D" uid="uid://cbgbirmqb5755" path="res://Assets/UI/marco tienda.png" id="1_j0bk1"]
 [ext_resource type="Script" uid="uid://dqin1ym6b2vmv" path="res://UI/HUD/Menu Coleccionables/menu_coleccionables.gd" id="1_j2pqr"]
-[ext_resource type="Texture2D" uid="uid://byc7chx2gort5" path="res://Assets/UI/barra/icono energia barra.png" id="4_3g63i"]
+[ext_resource type="Texture2D" uid="uid://b2s1y1mog5c63" path="res://Assets/Coleccionables/coleccionables pequeñospng.png" id="5_1cf7v"]
+[ext_resource type="Texture2D" uid="uid://bs1jlib3do263" path="res://Assets/Coleccionables/coleccionables grandes.png" id="5_acyce"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_usfxb"]
+atlas = ExtResource("5_acyce")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1cf7v"]
+atlas = ExtResource("5_acyce")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5428l"]
+atlas = ExtResource("5_acyce")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1cfo4"]
+atlas = ExtResource("5_acyce")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkea7"]
+atlas = ExtResource("5_acyce")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o5uk3"]
+atlas = ExtResource("5_acyce")
+region = Rect2(0, 48, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iafvq"]
+atlas = ExtResource("5_1cf7v")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_acyce"]
+atlas = ExtResource("5_acyce")
+region = Rect2(64, 48, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pujed"]
+atlas = ExtResource("5_acyce")
+region = Rect2(96, 48, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rxs6f"]
+atlas = ExtResource("5_acyce")
+region = Rect2(128, 48, 32, 32)
 
 [node name="Menu Coleccionables" type="Control" unique_id=990696473]
-visible = false
 z_index = 2
 layout_mode = 3
 anchors_preset = 15
@@ -44,64 +84,92 @@ theme_override_constants/margin_bottom = 30
 layout_mode = 2
 columns = 5
 
-[node name="Casilla Coleccionable" parent="MarginContainer/GridContainer" unique_id=917467084 instance=ExtResource("1_bwl53")]
+[node name="control_nes" parent="MarginContainer/GridContainer" unique_id=917467084 instance=ExtResource("1_bwl53")]
 layout_mode = 2
-nombre = "coleccionable"
-imagen = ExtResource("4_3g63i")
+nombre = "control_nes"
+imagen = SubResource("AtlasTexture_usfxb")
 
-[node name="Casilla Coleccionable2" parent="MarginContainer/GridContainer" unique_id=599982414 instance=ExtResource("1_bwl53")]
+[node name="gameboy" parent="MarginContainer/GridContainer" unique_id=599982414 instance=ExtResource("1_bwl53")]
 layout_mode = 2
+nombre = "gameboy"
+imagen = SubResource("AtlasTexture_1cf7v")
 
-[node name="Casilla Coleccionable3" parent="MarginContainer/GridContainer" unique_id=1970228553 instance=ExtResource("1_bwl53")]
+[node name="vhs" parent="MarginContainer/GridContainer" unique_id=1970228553 instance=ExtResource("1_bwl53")]
 layout_mode = 2
+nombre = "vhs"
+imagen = SubResource("AtlasTexture_5428l")
 
-[node name="Casilla Coleccionable4" parent="MarginContainer/GridContainer" unique_id=1118126518 instance=ExtResource("1_bwl53")]
+[node name="cassette" parent="MarginContainer/GridContainer" unique_id=1118126518 instance=ExtResource("1_bwl53")]
 layout_mode = 2
+nombre = "cassette"
+imagen = SubResource("AtlasTexture_1cfo4")
 
-[node name="Casilla Coleccionable5" parent="MarginContainer/GridContainer" unique_id=225780490 instance=ExtResource("1_bwl53")]
+[node name="slopy_disk" parent="MarginContainer/GridContainer" unique_id=225780490 instance=ExtResource("1_bwl53")]
 layout_mode = 2
+nombre = "slopy_disk"
+imagen = SubResource("AtlasTexture_lkea7")
 
-[node name="Casilla Coleccionable6" parent="MarginContainer/GridContainer" unique_id=628815208 instance=ExtResource("1_bwl53")]
+[node name="tv" parent="MarginContainer/GridContainer" unique_id=628815208 instance=ExtResource("1_bwl53")]
 layout_mode = 2
+nombre = "tv"
+imagen = SubResource("AtlasTexture_o5uk3")
 
-[node name="Casilla Coleccionable7" parent="MarginContainer/GridContainer" unique_id=576759486 instance=ExtResource("1_bwl53")]
+[node name="vinilo" parent="MarginContainer/GridContainer" unique_id=576759486 instance=ExtResource("1_bwl53")]
 layout_mode = 2
+nombre = "vinilo"
+imagen = SubResource("AtlasTexture_iafvq")
 
-[node name="Casilla Coleccionable8" parent="MarginContainer/GridContainer" unique_id=1541189959 instance=ExtResource("1_bwl53")]
+[node name="radio" parent="MarginContainer/GridContainer" unique_id=2125650289 instance=ExtResource("1_bwl53")]
 layout_mode = 2
+nombre = "radio"
+imagen = SubResource("AtlasTexture_acyce")
 
-[node name="Casilla Coleccionable9" parent="MarginContainer/GridContainer" unique_id=1805221379 instance=ExtResource("1_bwl53")]
+[node name="calculadora" parent="MarginContainer/GridContainer" unique_id=1541189959 instance=ExtResource("1_bwl53")]
 layout_mode = 2
+nombre = "calculadora"
+imagen = SubResource("AtlasTexture_pujed")
+
+[node name="reloj" parent="MarginContainer/GridContainer" unique_id=1805221379 instance=ExtResource("1_bwl53")]
+layout_mode = 2
+nombre = "reloj"
+imagen = SubResource("AtlasTexture_rxs6f")
 
 [node name="Casilla Coleccionable10" parent="MarginContainer/GridContainer" unique_id=1882524073 instance=ExtResource("1_bwl53")]
-layout_mode = 2
-
-[node name="Casilla Coleccionable11" parent="MarginContainer/GridContainer" unique_id=2125650289 instance=ExtResource("1_bwl53")]
+visible = false
 layout_mode = 2
 
 [node name="Casilla Coleccionable12" parent="MarginContainer/GridContainer" unique_id=708861389 instance=ExtResource("1_bwl53")]
+visible = false
 layout_mode = 2
 
 [node name="Casilla Coleccionable13" parent="MarginContainer/GridContainer" unique_id=1167575171 instance=ExtResource("1_bwl53")]
+visible = false
 layout_mode = 2
 
 [node name="Casilla Coleccionable14" parent="MarginContainer/GridContainer" unique_id=1210658528 instance=ExtResource("1_bwl53")]
+visible = false
 layout_mode = 2
 
 [node name="Casilla Coleccionable15" parent="MarginContainer/GridContainer" unique_id=1441124952 instance=ExtResource("1_bwl53")]
+visible = false
 layout_mode = 2
 
 [node name="Casilla Coleccionable16" parent="MarginContainer/GridContainer" unique_id=802828794 instance=ExtResource("1_bwl53")]
+visible = false
 layout_mode = 2
 
 [node name="Casilla Coleccionable17" parent="MarginContainer/GridContainer" unique_id=270610458 instance=ExtResource("1_bwl53")]
+visible = false
 layout_mode = 2
 
 [node name="Casilla Coleccionable18" parent="MarginContainer/GridContainer" unique_id=1523303169 instance=ExtResource("1_bwl53")]
+visible = false
 layout_mode = 2
 
 [node name="Casilla Coleccionable19" parent="MarginContainer/GridContainer" unique_id=1499569126 instance=ExtResource("1_bwl53")]
+visible = false
 layout_mode = 2
 
 [node name="Casilla Coleccionable20" parent="MarginContainer/GridContainer" unique_id=211466051 instance=ExtResource("1_bwl53")]
+visible = false
 layout_mode = 2

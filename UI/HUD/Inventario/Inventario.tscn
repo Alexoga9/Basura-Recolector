@@ -209,6 +209,7 @@ grow_vertical = 1
 text = "Cleare"
 
 [node name="Menu Coleccionables" parent="MarginContainer" unique_id=990696473 instance=ExtResource("7_lx5vd")]
+visible = false
 layout_mode = 2
 
 [node name="Texto de nota" parent="MarginContainer" unique_id=238381988 instance=ExtResource("10_8wy0j")]

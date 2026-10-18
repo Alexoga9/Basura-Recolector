@@ -25,6 +25,9 @@
 [ext_resource type="PackedScene" uid="uid://mummqqnve0vm" path="res://Entidades/Notas/nota_coleccionable.tscn" id="15_wre61"]
 [ext_resource type="PackedScene" uid="uid://cd6lygsc501ww" path="res://Entidades/Loot/Loot.tscn" id="17_imjhf"]
 [ext_resource type="Resource" uid="uid://sjc3cn6kq6nq" path="res://Entidades/Basura/Caja/Obstaculos/Arbol/Arbol Cesped Claro.tres" id="17_pmfwy"]
+[ext_resource type="Resource" uid="uid://cb5ucrwrw42s4" path="res://Entidades/Loot/coleccionables/vhs.tres" id="19_bgs43"]
+[ext_resource type="Resource" uid="uid://bmj2s3ucjwupi" path="res://Entidades/Loot/coleccionables/radio.tres" id="20_imjhf"]
+[ext_resource type="Resource" uid="uid://dg6j6kbsk5dye" path="res://Entidades/Loot/coleccionables/reloj.tres" id="21_3lpn2"]
 [ext_resource type="Resource" uid="uid://co8ovdxeg1nte" path="res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/MaquinaExpendedoraRota.tres" id="24_iq5bc"]
 [ext_resource type="Resource" uid="uid://cgw3qw61x5b08" path="res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/TiendaRota.tres" id="25_1mu81"]
 [ext_resource type="Resource" uid="uid://bfnagf80xln8o" path="res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/TrituradoraRota.tres" id="26_bkx32"]
@@ -470,7 +473,16 @@ data = SubResource("Resource_000eb")
 position = Vector2(-97, 32)
 
 [node name="Loot" parent="Objetos Ambientales/Entiddaes/Loot" unique_id=1738087845 instance=ExtResource("17_imjhf")]
-data = ExtResource("9_4xlto")
+position = Vector2(493, -35)
+data = ExtResource("19_bgs43")
+
+[node name="Loot2" parent="Objetos Ambientales/Entiddaes/Loot" unique_id=1819214844 instance=ExtResource("17_imjhf")]
+position = Vector2(445, -34)
+data = ExtResource("20_imjhf")
+
+[node name="Loot3" parent="Objetos Ambientales/Entiddaes/Loot" unique_id=676793612 instance=ExtResource("17_imjhf")]
+position = Vector2(473, 50)
+data = ExtResource("21_3lpn2")
 
 [node name="Notas" type="Node2D" parent="Objetos Ambientales/Entiddaes" unique_id=234868375 groups=["Entidades Notas"]]
 

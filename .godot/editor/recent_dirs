@@ -1,3 +1,5 @@
+res://Entidades/Loot/coleccionables/
+res://Assets/Coleccionables/
 res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/
 res://Recursos/Save/
 res://Utilidades/Autoloads/
@@ -18,5 +20,3 @@ res://Entidades/BolsaDeBasura/
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/
 res://Assets/entidades/trituradora/
 res://Escenarios/Tilesets/
-res://Assets/entidades/maquina expendedora/
-res://Assets/entidades/

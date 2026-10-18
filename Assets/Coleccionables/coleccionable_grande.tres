@@ -1,0 +1,6 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://dag0v3x5hgl8p"]
+
+[ext_resource type="Texture2D" uid="uid://b2s1y1mog5c63" path="res://Assets/Coleccionables/coleccionables pequeñospng.png" id="1_8f105"]
+
+[resource]
+atlas = ExtResource("1_8f105")
