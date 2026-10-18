@@ -8,9 +8,9 @@ func _ready():
 
 
 func aplicar_mejora():
-	Inventario.peso += 2
+	Inventario.peso_maximo += 2
 	actualizar_datos()
 
 
 func actualizar_datos():
-	panel.estadisticas(Inventario.peso, Inventario.peso + 2)
+	panel.estadisticas(Inventario.peso_maximo, Inventario.peso_maximo + 2)

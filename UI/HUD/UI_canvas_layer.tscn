@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cqdpo5f3qs8vc" path="res://UI/HUD/ui_canvas_layer.gd" id="1_r6vmc"]
 [ext_resource type="PackedScene" uid="uid://bqxfu5knf0pw2" path="res://UI/HUD/hud.tscn" id="2_r6vmc"]
 [ext_resource type="PackedScene" uid="uid://br4shbrxkwxgj" path="res://UI/Tienda/tienda_ui.tscn" id="3_2tmmb"]
+[ext_resource type="PackedScene" uid="uid://rwh52xelkbw4" path="res://UI/transicion/pasar_por_puerta.tscn" id="5_2tmmb"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=2007522030]
 script = ExtResource("1_r6vmc")
@@ -16,3 +17,6 @@ z_index = -1
 [node name="TiendaUi" parent="." unique_id=1611773581 instance=ExtResource("3_2tmmb")]
 visible = false
 z_index = 4
+
+[node name="Pasar por puerta" parent="." unique_id=316275069 instance=ExtResource("5_2tmmb")]
+visible = false

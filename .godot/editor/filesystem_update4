@@ -1,7 +1,6 @@
-res://UI/HUD/Pausa/pausa.gd
-res://Escenarios/save_game.gd
-res://Recursos/save_data.gd
-res://UI/HUD/UI_canvas_layer.tscn
+res://UI/Tienda/mejoras de habilidades/mejoras/mejora_peso.gd
+res://Commons/Componentes/Core/EnergiaComponente.gd
+res://Entidades/Jugador/Jugador.tscn
 res://UI/Theme/Tienda.tres
 res://Escenarios/Oficial/TileMapOficial.tres
 res://Escenarios/shine/hit_flash.gdshader
@@ -15,6 +14,7 @@ res://Entidades/Basura/Caja/Obstaculos/Arbol/Arbol Cesped Claro.tres
 res://Entidades/Loot/coleccionables/vhs.tres
 res://Entidades/Loot/coleccionables/radio.tres
 res://Entidades/Loot/coleccionables/reloj.tres
+res://transition.gdshader
 res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_resistencia.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_cooldown.tres
@@ -23,15 +23,9 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
-res://UI/HUD/hud.tscn
-res://UI/Menu Principal/menu_principal.gd
-res://UI/Menu Principal/menu_principal.tscn
-res://transition.gdshader
-res://UI/transicion/transicion_background.gd
-res://UI/Menu Principal/Opciones/opciones.tscn
-res://UI/Menu Principal/Opciones/Créditos/creditos.tscn
-res://UI/Menu Principal/Opciones/Créditos/creditos.gd
-res://Escenarios/Mundos/chunk_1.tscn
-res://UI/HUD/Pausa/pausa.tscn
-res://UI/HUD/Inventario/Inventario.tscn
-res://UI/Tienda/Panel tienda/panel_tienda.tscn
+res://UI/HUD/UI_canvas_layer.tscn
+res://Escenarios/prueba de cambio de sprite/valla.gd
+res://UI/transicion/volver_escena_anterior.tscn
+res://Utilidades/Autoloads/Signal_Bus.gd
+res://UI/transicion/pasar_por_puerta.gd
+res://UI/transicion/pasar_por_puerta.tscn

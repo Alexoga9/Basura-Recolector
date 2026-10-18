@@ -41,6 +41,10 @@ signal mostrar_hud
 # # Notas Coleccionables
 signal notas_menu(DataNotas)
 
+# # Valla
+signal preguntar_pasar_por_valla(entrada:int)
+signal pasar_entrada_valla(entrada:int)
+
 # # Transicion
 signal hacer_transicion
 signal terminar_transicion

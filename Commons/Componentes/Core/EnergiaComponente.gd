@@ -104,7 +104,9 @@ func activar_timer():
 
 
 func _on_recarga_lenta_timeout():
-	if energia < 2:
-		recuperar_por_segundo(1)
-	elif energia == 2:
-		recarga_lenta.stop()
+	recuperar_por_segundo(1)
+	#if energia < 2:
+		#recuperar_por_segundo(1)
+
+	#elif energia == 2:
+		#recarga_lenta.stop()
