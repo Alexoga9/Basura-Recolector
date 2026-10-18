@@ -2,23 +2,25 @@ class_name RecolectorData extends Node
 
 # ------------------------------------------------------------------
 # Datos recolectados
+# (arrays sin tipo: un Array[T] tipado falla con assign() si algún hijo
+#  de la carpeta no es exactamente de ese tipo)
 # ------------------------------------------------------------------
 var nombre_escena: String = ""
 var terreno: Node2D = null
 var jugador: Jugador = null
-var basuras: Array[Basura] = []
-var loots: Array[Loot] = []
-var notas: Array[Notas] = []
-var estaciones: Array[StaticBody2D] = []
-var estaciones_rotas: Array[EstacionRota] = []
-var vallas: Array[pueta_valla] = []
+var basuras: Array = []
+var loots: Array = []
+var notas: Array = []
+var estaciones: Array = []
+var estaciones_rotas: Array = []
+var vallas: Array = []
 
 # compara la cantidad de basuras con un antes y un despues, sacando un porcentaje
 # es decir habian 100 cajas, ahora quedan 50, eso es el 50% que se recogio
-var estado_de_limpieza: int= 0
+var estado_de_limpieza: int = 0
 
 
-func _ready():
+func _ready() -> void:
 	call_deferred("recolectar_todo")
 
 
@@ -36,7 +38,6 @@ func recolectar_todo() -> void:
 	_recoger_hijos("EstacionesNormales", estaciones)
 	_recoger_hijos("EstacionesRotas", estaciones_rotas)
 	_recoger_hijos("EntidadesVallas", vallas)
-	
 
 
 func _nodo_de_grupo(grupo: StringName) -> Node:
@@ -45,7 +46,6 @@ func _nodo_de_grupo(grupo: StringName) -> Node:
 
 func _nombre_de_grupo(grupo: StringName) -> String:
 	var n := _nodo_de_grupo(grupo)
-
 	return n.name if n != null else ""
 
 
@@ -56,7 +56,11 @@ func _recoger_hijos(grupo: StringName, destino: Array) -> void:
 	if contenedor == null:
 		return
 
-	destino.assign(contenedor.get_children())
+	for hijo in contenedor.get_children():
+		# ignorar nodos que ya se están eliminando
+		if hijo.is_queued_for_deletion():
+			continue
+		destino.append(hijo)
 
 
 # ------------------------------------------------------------------
@@ -73,9 +77,9 @@ func serializar() -> Dictionary:
 	}
 
 
-## Serializa una carpeta: { escena: uid, entradas: [ {recurso, posicion}, ... ] }
+## Serializa una carpeta: { entradas: [ {escena, recurso, posicion, props}, ... ] }
+## Una carpeta vacía devuelve entradas = [] (significa "todo fue recogido").
 func _serializar_carpeta(lista: Array) -> Dictionary:
-	var uid_escena := _uid_de_lista(lista)
 	var entradas: Array = []
 
 	for nodo in lista:
@@ -88,49 +92,26 @@ func _serializar_carpeta(lista: Array) -> Dictionary:
 		entradas.append(_serializar_nodo(nodo))
 
 	return {
-		"escena": uid_escena,
 		"entradas": entradas,
 	}
 
 
-## Serializa un nodo: { recurso, posicion }
-func _serializar_nodo(nodo: Node) -> Dictionary:
+## Serializa un nodo: { escena, recurso, posicion, props }
+## - escena: ruta de la escena de ESE nodo (ya no una sola por carpeta)
+## - recurso: resource_path de nodo.data (opcional)
+## - props: diccionario opcional si el nodo implementa serializar_estado()
+func _serializar_nodo(nodo: Node2D) -> Dictionary:
 	var entrada := {
+		"escena": nodo.scene_file_path,
 		"recurso": "",
 		"posicion": nodo.position,
+		"props": {},
 	}
 
 	if "data" in nodo and nodo.data != null:
 		entrada["recurso"] = nodo.data.resource_path
 
+	if nodo.has_method("serializar_estado"):
+		entrada["props"] = nodo.serializar_estado()
+
 	return entrada
-
-
-## Devuelve el UID de la escena del primer nodo válido de la lista.
-## Si la lista está vacía o no se puede resolver, devuelve "".
-func _uid_de_lista(lista: Array) -> String:
-	for nodo in lista:
-		if not is_instance_valid(nodo):
-			continue
-
-		var uid := _uid_de_nodo(nodo)
-
-		if uid != "":
-			return uid
-
-	return ""
-
-
-## Devuelve el UID de la escena de la que proviene un nodo.
-func _uid_de_nodo(nodo: Node) -> String:
-	var ruta := nodo.scene_file_path
-
-	if ruta == "":
-		return ""
-
-	var uid_int := ResourceLoader.get_resource_uid(ruta)
-
-	if uid_int == ResourceUID.INVALID_ID:
-		return ""
-
-	return ResourceUID.id_to_text(uid_int)

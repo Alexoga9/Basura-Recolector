@@ -18,11 +18,31 @@ var timer_mensaje: Timer
 
 func _ready() -> void:
 	# Escuchamos el progreso y el botón de interacción
-
 	SignalBus.zona_limpida.connect(_actualizar_progreso)
 	SignalBus.interaccion.connect(_al_interactuar)
 
 	vallatext.hide()
+
+
+# ------------------------------------------------------------------
+# Guardado / carga (lo usan RecolectorData y ReconstructorData)
+# ------------------------------------------------------------------
+func serializar_estado() -> Dictionary:
+	return {
+		"porcentaje_requerido": porcentaje_requerido,
+		"next_scene": next_scene,
+		"costo_puerta": costo_puerta,
+		"entrada_posicion": entrada_posicion,
+		"condiccion_para_abrir": condiccion_para_abrir,
+	}
+
+
+func restaurar_estado(d: Dictionary) -> void:
+	porcentaje_requerido = d.get("porcentaje_requerido", porcentaje_requerido)
+	next_scene = d.get("next_scene", next_scene)
+	costo_puerta = d.get("costo_puerta", costo_puerta)
+	entrada_posicion = d.get("entrada_posicion", entrada_posicion)
+	condiccion_para_abrir = d.get("condiccion_para_abrir", condiccion_para_abrir)
 
 
 func _on_trigger_jugador_body_entered(body: Node2D) -> void:
@@ -56,39 +76,38 @@ func _al_interactuar() -> void:
 	if condiccion_para_abrir == Condiccion_para_abrir.Requisito:
 		if porcentaje_actual >= porcentaje_requerido:
 			deducción_de_costo()
-
 		else:
 			vallatext.show()
-			vallatext.text = ("Tienes que limpiar el " + str(porcentaje_requerido) +" % " + " y tener " + str(costo_puerta) + " monedas")
+			vallatext.text = "Tienes que limpiar el " + str(porcentaje_requerido) + " % " + " y tener " + str(costo_puerta) + " monedas"
 			print(str(porcentaje_actual))
 	elif condiccion_para_abrir == Condiccion_para_abrir.Abierta:
 		abrir_paso()
 
 
-func deducción_de_costo():
-	if Dinero.dinero <= costo_puerta:
+func deducción_de_costo() -> void:
+	# antes era '<=': con dinero exacto no dejaba pagar
+
+	if Dinero.dinero < costo_puerta:
 		return
 
 	Dinero.gastar(float(costo_puerta))
 	abrir_paso()
 
 
-#func back() -> void:
-	#Global.jugador.contador_componente.limpieza_actualizada.disconnect(_actualizar_progreso)
-	#SignalBus.interaccion.disconnect(_al_interactuar)
-	#APuerta.play("puerta_abierta")
-	#$CollisionShape2D.disabled = true
-	#get_tree().change_scene_to_file(next_scene)
-	#SaveGame.Load_Game()
-
-
 func abrir_paso() -> void:
-	Global.jugador.contador_componente.limpieza_actualizada.disconnect(_actualizar_progreso)
+	# is_connected evita error si ya estaba desconectado
+	var contador = Global.jugador.contador_componente
+
+	if contador.limpieza_actualizada.is_connected(_actualizar_progreso):
+		contador.limpieza_actualizada.disconnect(_actualizar_progreso)
+
 	SignalBus.hacer_transicion.emit()
 	SignalBus.entrada_de_checkpoint.emit(entrada_posicion)
 	await get_tree().create_timer(1).timeout
 
-	SignalBus.interaccion.disconnect(_al_interactuar)
+	if SignalBus.interaccion.is_connected(_al_interactuar):
+		SignalBus.interaccion.disconnect(_al_interactuar)
+
 	APuerta.play("puerta_abierta")
 	$CollisionShape2D.disabled = true
 	SaveGame.Cambiar_Escena(next_scene)

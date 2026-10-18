@@ -22,17 +22,12 @@
 [ext_resource type="AudioStream" uid="uid://sahbu26hpnvx" path="res://Assets/audio/Hit.wav" id="10_bgs43"]
 [ext_resource type="Texture2D" uid="uid://i2ox5ksvvper" path="res://Escenarios/Oficial/Tilesheet Oficial.png" id="10_imjhf"]
 [ext_resource type="Texture2D" uid="uid://cbgbirmqb5755" path="res://Assets/UI/marco tienda.png" id="12_imjhf"]
-[ext_resource type="Script" uid="uid://pqkfc017cxy6" path="res://Recursos/materiales_necesarios.gd" id="15_iq5bc"]
 [ext_resource type="PackedScene" uid="uid://mummqqnve0vm" path="res://Entidades/Notas/nota_coleccionable.tscn" id="15_wre61"]
-[ext_resource type="Texture2D" uid="uid://d2w68k8llr4oi" path="res://Assets/Inventario/piedra.png" id="16_wre61"]
-[ext_resource type="Resource" uid="uid://cn42hyavquied" path="res://Entidades/Estaciones/Estación Rota/Requisitos de materiales/Estacion_rota_requisitos_madera.tres" id="17_1mu81"]
 [ext_resource type="PackedScene" uid="uid://cd6lygsc501ww" path="res://Entidades/Loot/Loot.tscn" id="17_imjhf"]
 [ext_resource type="Resource" uid="uid://sjc3cn6kq6nq" path="res://Entidades/Basura/Caja/Obstaculos/Arbol/Arbol Cesped Claro.tres" id="17_pmfwy"]
-[ext_resource type="Texture2D" uid="uid://cj67bs1scsaiw" path="res://Assets/Inventario/moneda.png" id="18_bkx32"]
-[ext_resource type="Texture2D" uid="uid://bai1een67q4ss" path="res://Assets/tienda rota.png" id="20_bkx32"]
-[ext_resource type="Texture2D" uid="uid://d3grevrisjs14" path="res://Assets/maquina expendedora rota.png" id="20_wre61"]
-[ext_resource type="Texture2D" uid="uid://bnj7dvfesgnbn" path="res://Assets/trituradora rota.png" id="25_1mu81"]
-[ext_resource type="Texture2D" uid="uid://d0v6krou2ook8" path="res://Assets/Inventario/madera.png" id="30_000eb"]
+[ext_resource type="Resource" uid="uid://co8ovdxeg1nte" path="res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/MaquinaExpendedoraRota.tres" id="24_iq5bc"]
+[ext_resource type="Resource" uid="uid://cgw3qw61x5b08" path="res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/TiendaRota.tres" id="25_1mu81"]
+[ext_resource type="Resource" uid="uid://bfnagf80xln8o" path="res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/TrituradoraRota.tres" id="26_bkx32"]
 [ext_resource type="PackedScene" uid="uid://b1luv0bei0jvi" path="res://UI/HUD/UI_canvas_layer.tscn" id="33_imjhf"]
 [ext_resource type="Script" uid="uid://x0afdmm3k1jj" path="res://Utilidades/Sistemas/Checkpoint/CheckpointComponente.gd" id="36_pmfwy"]
 
@@ -178,26 +173,6 @@ tipo_de_requisito = 1
 nivel_de_requisito = 3
 materiales_dentro = Array[ExtResource("5_isstk")]([ExtResource("9_4xlto"), ExtResource("9_4xlto")])
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"
-
-[sub_resource type="Resource" id="Resource_ui408"]
-script = ExtResource("15_iq5bc")
-tipo_de_elemento = 4
-cantidad_necesaria = 200
-imagen = ExtResource("18_bkx32")
-metadata/_custom_type_script = "uid://pqkfc017cxy6"
-
-[sub_resource type="Resource" id="Resource_tkros"]
-script = ExtResource("15_iq5bc")
-tipo_de_elemento = 1
-cantidad_necesaria = 1
-imagen = ExtResource("16_wre61")
-metadata/_custom_type_script = "uid://pqkfc017cxy6"
-
-[sub_resource type="Resource" id="Resource_18pdu"]
-script = ExtResource("15_iq5bc")
-cantidad_necesaria = 5
-imagen = ExtResource("30_000eb")
-metadata/_custom_type_script = "uid://pqkfc017cxy6"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w8mdt"]
 texture = ExtResource("9_d0bkc")
@@ -524,20 +499,15 @@ position = Vector2(172, -40)
 
 [node name="Estación Rota" parent="Objetos Ambientales/Estaciones/Estaciones Rotas" unique_id=121739820 instance=ExtResource("7_xbrct")]
 position = Vector2(313, 142)
-sprite = ExtResource("20_bkx32")
-estacion = ExtResource("4_h2r1t")
-materiales = Array[ExtResource("15_iq5bc")]([SubResource("Resource_ui408")])
+data = ExtResource("24_iq5bc")
 
 [node name="Estación Rota3" parent="Objetos Ambientales/Estaciones/Estaciones Rotas" unique_id=915087626 instance=ExtResource("7_xbrct")]
 position = Vector2(313, 34)
-sprite = ExtResource("20_wre61")
-materiales = Array[ExtResource("15_iq5bc")]([SubResource("Resource_tkros"), ExtResource("17_1mu81"), SubResource("Resource_ui408")])
+data = ExtResource("25_1mu81")
 
 [node name="Estación Rota2" parent="Objetos Ambientales/Estaciones/Estaciones Rotas" unique_id=1690889551 instance=ExtResource("7_xbrct")]
 position = Vector2(313, 247)
-sprite = ExtResource("25_1mu81")
-estacion = ExtResource("5_c2e4j")
-materiales = Array[ExtResource("15_iq5bc")]([SubResource("Resource_18pdu")])
+data = ExtResource("26_bkx32")
 
 [node name="vallas" type="TileMapLayer" parent="Objetos Ambientales" unique_id=356144072]
 y_sort_enabled = true

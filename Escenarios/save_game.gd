@@ -1,6 +1,6 @@
 extends Node
 
-var datos_por_escenas: Dictionary = {}# en memoria durante la partida
+var datos_por_escenas: Dictionary = {} # en memoria durante la partida
 
 const ESCENA_INICIAL = "uid://cbesogarip1ji"
 const POSICION_INICIAL := Vector2(153.0, 41.0)
@@ -8,21 +8,70 @@ const RUTA_SAVE := "user://save.res"
 
 
 # ------------------------------------------------------------------
+# UTILIDADES
+# ------------------------------------------------------------------
+
+## Convierte cualquier ruta (uid:// o res://) a ruta res:// para usarla
+## SIEMPRE como clave de datos_por_escenas. Este era el bug principal:
+## se guardaba con res:// y se buscaba con uid://.
+func _normalizar(ruta: String) -> String:
+	if ruta.begins_with("uid://"):
+		var id := ResourceUID.text_to_id(ruta)
+		if ResourceUID.has_id(id):
+			return ResourceUID.get_id_path(id)
+	return ruta
+
+
+## Recolecta la escena actual y guarda su estado en memoria.
+func _registrar_escena_actual() -> void:
+	var escena := get_tree().current_scene
+	if escena == null:
+		return
+
+	var clave := _normalizar(escena.scene_file_path)
+	var recolector := get_tree().get_first_node_in_group("RecolectorData") as RecolectorData
+
+	if recolector == null:
+		push_warning("SaveGame: no hay RecolectorData en '%s'" % clave)
+		return
+
+	recolector.recolectar_todo()
+	datos_por_escenas[clave] = recolector.serializar()
+
+
+## Restaura la escena actual con lo que haya en memoria.
+func _restaurar_escena_actual() -> void:
+	var clave := _normalizar(get_tree().current_scene.scene_file_path)
+	var datos: Dictionary = datos_por_escenas.get(clave, {})
+
+	if datos.is_empty():
+		return
+
+	var reconstructor := get_tree().get_first_node_in_group("ReconstructorData") as ReconstructorData
+
+	if reconstructor == null:
+		push_warning("SaveGame: no hay ReconstructorData en '%s'" % clave)
+		return
+
+	await reconstructor.restaurar(datos)
+
+
+## Espera a que la escena nueva esté realmente lista.
+func _esperar_escena_nueva() -> void:
+	await get_tree().process_frame
+	await get_tree().process_frame
+
+
+# ------------------------------------------------------------------
 # GUARDAR
 # ------------------------------------------------------------------
 func Guardar() -> void:
-	var escena_path := _normalizar(get_tree().current_scene.scene_file_path)
-
-	# 1. Recolectar entidades de la escena actual y actualizar el diccionario en memoria
-	var recolector: RecolectorData= get_tree().get_first_node_in_group("RecolectorData")
-
-	if recolector != null:
-		recolector.recolectar_todo()
-		datos_por_escenas[escena_path] = recolector.serializar()
+	# 1. Recolectar la escena actual
+	_registrar_escena_actual()
 
 	# 2. Construir SaveData
 	var data := SaveData.new()
-	data.escena_actual = escena_path
+	data.escena_actual = _normalizar(get_tree().current_scene.scene_file_path)
 	data.posicion_jugador = Global.jugador.movimiento_componente.body_character.global_position
 	data.dinero = Dinero.dinero
 	data.peso_basura = Inventario.peso
@@ -35,7 +84,7 @@ func Guardar() -> void:
 	var err := ResourceSaver.save(data, RUTA_SAVE)
 
 	if err != OK:
-		push_error("Error al guardar: ", err)
+		push_error("Error al guardar: %s" % err)
 
 
 # ------------------------------------------------------------------
@@ -45,25 +94,25 @@ func Cargar() -> void:
 	if not ResourceLoader.exists(RUTA_SAVE):
 		return
 
-	var data: SaveData = load(RUTA_SAVE) as SaveData
+	# CACHE_MODE_IGNORE: evita recibir una versión vieja cacheada del save
+	var data := ResourceLoader.load(RUTA_SAVE, "", ResourceLoader.CACHE_MODE_IGNORE) as SaveData
 
 	if data == null:
 		push_error("No se pudo cargar el save")
 		return
 
-	datos_por_escenas = data.datos_por_escenas
+	# Normalizar claves (por si hay saves antiguos con uid://)
+	datos_por_escenas = {}
+	for clave in data.datos_por_escenas:
+		datos_por_escenas[_normalizar(String(clave))] = data.datos_por_escenas[clave]
 
-	if data.escena_actual != _normalizar(get_tree().current_scene.scene_file_path):
-		get_tree().change_scene_to_file(data.escena_actual)
-		await get_tree().process_frame
+	var escena_guardada := _normalizar(data.escena_actual)
 
-	var datos_escena: Dictionary = datos_por_escenas.get(data.escena_actual, {})
+	if escena_guardada != _normalizar(get_tree().current_scene.scene_file_path):
+		get_tree().change_scene_to_file(escena_guardada)
+		await _esperar_escena_nueva()
 
-	if not datos_escena.is_empty():
-		var reconstructor := get_tree().get_first_node_in_group("ReconstructorData")
-
-		if reconstructor != null:
-			await reconstructor.restaurar(datos_escena)
+	await _restaurar_escena_actual()
 
 	# Restaurar estado del jugador
 	var jugador := Global.jugador
@@ -81,38 +130,15 @@ func Cargar() -> void:
 # ------------------------------------------------------------------
 func Cambiar_Escena(ruta_escena: String) -> void:
 	ruta_escena = _normalizar(ruta_escena)
-	var escena_actual := _normalizar(get_tree().current_scene.scene_file_path)
-	var recolector := get_tree().get_first_node_in_group("RecolectorData")
 
-	if recolector != null:
-		recolector.recolectar_todo()
-		var serializado: Dictionary= recolector.serializar()
-		print("[DEBUG] Serializado '", escena_actual, "': ", serializado)
-		datos_por_escenas[escena_actual] = serializado
-	else:
-		print("[DEBUG] ERROR: no hay RecolectorData")
+	# Guardar el estado de la escena de la que salimos
+	_registrar_escena_actual()
 
 	get_tree().change_scene_to_file(ruta_escena)
-	await get_tree().process_frame
+	await _esperar_escena_nueva()
 
-	var datos_destino: Dictionary = datos_por_escenas.get(ruta_escena, {})
-	print("[DEBUG] Claves guardadas: ", datos_por_escenas.keys())
-	print("[DEBUG] Datos destino para '", ruta_escena, "': ", datos_destino)
-
-	if not datos_destino.is_empty():
-		var reconstructor := get_tree().get_first_node_in_group("ReconstructorData")
-
-		if reconstructor != null:
-			await reconstructor.restaurar(datos_destino)
-		else:
-			print("[DEBUG] ERROR: no hay ReconstructorData")
-
-
-func _normalizar(ruta: String) -> String:
-	if ruta.begins_with("uid://"):
-		return ResourceUID.ensure_path(ruta)
-
-	return ruta
+	# Restaurar el estado de la escena a la que entramos (si ya la visitamos)
+	await _restaurar_escena_actual()
 
 
 # ------------------------------------------------------------------
@@ -127,6 +153,5 @@ func Reset_Game() -> void:
 	if FileAccess.file_exists(RUTA_SAVE):
 		DirAccess.remove_absolute(RUTA_SAVE)
 
-	var jugador_viejo = Global.jugador
-	get_tree().change_scene_to_file(ESCENA_INICIAL)
-	await get_tree().process_frame
+	get_tree().change_scene_to_file(_normalizar(ESCENA_INICIAL))
+	await _esperar_escena_nueva()

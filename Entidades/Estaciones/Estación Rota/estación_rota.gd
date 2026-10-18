@@ -1,15 +1,23 @@
 class_name EstacionRota extends StaticBody2D
 
-@export var sprite: Texture2D
-@export var estacion: PackedScene
-@export var materiales: Array[MaterialesNecesarios]
+@export var data: DataEstacionRota
+var estacion: PackedScene
+var materiales: Array[MaterialesNecesarios]
 var jugador_en_area: bool
 @onready var sprite_2d: Sprite2D = %Sprite2D
 
 
 func _ready():
 	SignalBus.interaccion.connect(interaccion)
-	sprite_2d.texture = sprite
+	igualar_datos()
+
+
+func igualar_datos():
+	if not data: return
+
+	sprite_2d.texture = data.sprite
+	estacion = data.estacion
+	materiales = data.materiales
 
 
 ## Al precionar E, recibe la señal
@@ -84,8 +92,10 @@ func comprobar_materiales_restantes():
 
 ## Cambia la instancia de rota por una funcional
 func sustituir_por_estación():
+	print(estacion)
 	var nueva_instancia = estacion.instantiate()
-	var padre = get_tree().get_first_node_in_group("Estaciones")
+	print("AQui" + str(nueva_instancia))
+	var padre = get_tree().get_first_node_in_group("EstacionesNormales")
 
 	padre.add_child.call_deferred(nueva_instancia)
 	nueva_instancia.global_position = position

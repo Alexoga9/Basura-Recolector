@@ -12,7 +12,7 @@ func _ready():
 
 ## Crea una cantidad de contenedores igual al array de EstacionRota
 func contenedores():
-	for i in estacion_rota.materiales.size():
+	for i in estacion_rota.data.materiales.size():
 		var nuevo_casilla = casilla.instantiate()
 		contenedor.add_child(nuevo_casilla)
 		establecer_valores(nuevo_casilla, i)
@@ -22,7 +22,7 @@ func contenedores():
 func actualizar_valores():
 	print("actualizando...")
 	contenedor.get_child_count()
-	for i in estacion_rota.materiales.size():
+	for i in estacion_rota.data.materiales.size():
 		var hijo = contenedor.get_child(i)
 		establecer_valores(hijo, i)
 		if hijo.label.text == "0":
@@ -31,5 +31,5 @@ func actualizar_valores():
 
 ## Asigna valores de cantidad y sprite
 func establecer_valores(casilla: CasillaDeRequisitoMateriales, i):
-	casilla.label.text = str(estacion_rota.materiales[i].cantidad_necesaria)
-	casilla.texture_rect.texture = estacion_rota.materiales[i].imagen
+	casilla.label.text = str(estacion_rota.data.materiales[i].cantidad_necesaria)
+	casilla.texture_rect.texture = estacion_rota.data.materiales[i].imagen

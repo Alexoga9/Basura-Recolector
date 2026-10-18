@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="DataEstacionRota" format=3 uid="uid://bfnagf80xln8o"]
+
+[ext_resource type="PackedScene" uid="uid://b8u0pprb4t2sj" path="res://Entidades/Estaciones/Trituradora/trituradora.tscn" id="1_vprc1"]
+[ext_resource type="Script" uid="uid://pqkfc017cxy6" path="res://Recursos/materiales_necesarios.gd" id="2_w5kk5"]
+[ext_resource type="Resource" uid="uid://cfore7bg7vjrl" path="res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/materialesNecesariosPiedra.tres" id="3_f3r4t"]
+[ext_resource type="Script" uid="uid://c3l06xkoelcf0" path="res://Recursos/data_estacion_rota.gd" id="4_kn521"]
+[ext_resource type="Texture2D" uid="uid://bnj7dvfesgnbn" path="res://Assets/trituradora rota.png" id="5_vvvjt"]
+
+[resource]
+script = ExtResource("4_kn521")
+sprite = ExtResource("5_vvvjt")
+estacion = ExtResource("1_vprc1")
+materiales = Array[ExtResource("2_w5kk5")]([ExtResource("3_f3r4t")])
+metadata/_custom_type_script = "uid://c3l06xkoelcf0"
