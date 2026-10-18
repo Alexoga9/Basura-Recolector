@@ -1,6 +1,25 @@
 [gd_scene format=3 uid="uid://c60fm7nwe6rer"]
 
 [ext_resource type="Script" uid="uid://bnuwtensy41ki" path="res://UI/HUD/Pausa/pausa.gd" id="1_tbmkw"]
+[ext_resource type="FontFile" uid="uid://dryil6kc3yx5s" path="res://Assets/tipografia/DobleHex2.ttf" id="2_iabu1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ogopn"]
+font = ExtResource("2_iabu1")
+font_size = 32
+outline_color = Color(0, 0, 0, 1)
+stacked_outline_count = 1
+stacked_shadow_count = 5
+stacked_outline_0/size = 4
+stacked_outline_0/color = Color(0.23921569, 0.16078432, 0.21176471, 1)
+stacked_shadow_0/offset = Vector2(1, 1)
+stacked_shadow_0/color = Color(0.23921569, 0.16078432, 0.21176471, 1)
+stacked_shadow_1/offset = Vector2(1, -1)
+stacked_shadow_1/color = Color(0.23921569, 0.16078432, 0.21176471, 1)
+stacked_shadow_2/offset = Vector2(-1, 1)
+stacked_shadow_2/color = Color(0.23921569, 0.16078432, 0.21176471, 1)
+stacked_shadow_3/offset = Vector2(-1, -1)
+stacked_shadow_3/color = Color(0.23921569, 0.16078432, 0.21176471, 1)
+stacked_shadow_4/offset = Vector2(1, 1)
 
 [node name="Pausa" type="Control" unique_id=1538665821]
 process_mode = 3
@@ -39,12 +58,13 @@ visible = false
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Opciones" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer" unique_id=1805365132]
+[node name="Pausa" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer" unique_id=1805365132]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 theme_override_font_sizes/font_size = 32
 text = "Pausa"
+label_settings = SubResource("LabelSettings_ogopn")
 
 [node name="Control2" type="Control" parent="MarginContainer/PanelContainer/VBoxContainer" unique_id=636267941]
 visible = false

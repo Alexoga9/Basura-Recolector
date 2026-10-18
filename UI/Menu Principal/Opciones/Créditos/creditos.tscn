@@ -1,6 +1,26 @@
 [gd_scene format=3 uid="uid://c4my3d7q6t5wa"]
 
 [ext_resource type="Script" uid="uid://b1nhlmwhp6epi" path="res://UI/Menu Principal/Opciones/Créditos/creditos.gd" id="1_u3dp7"]
+[ext_resource type="FontFile" uid="uid://dryil6kc3yx5s" path="res://Assets/tipografia/DobleHex2.ttf" id="2_8d37g"]
+[ext_resource type="LabelSettings" uid="uid://crqcrwgjb38h3" path="res://UI/Theme/tipografia tienda.tres" id="3_oxq1v"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wuggo"]
+font = ExtResource("2_8d37g")
+font_size = 48
+outline_color = Color(0, 0, 0, 1)
+stacked_outline_count = 1
+stacked_shadow_count = 5
+stacked_outline_0/size = 4
+stacked_outline_0/color = Color(0.23921569, 0.16078432, 0.21176471, 1)
+stacked_shadow_0/offset = Vector2(1, 1)
+stacked_shadow_0/color = Color(0.23921569, 0.16078432, 0.21176471, 1)
+stacked_shadow_1/offset = Vector2(1, -1)
+stacked_shadow_1/color = Color(0.23921569, 0.16078432, 0.21176471, 1)
+stacked_shadow_2/offset = Vector2(-1, 1)
+stacked_shadow_2/color = Color(0.23921569, 0.16078432, 0.21176471, 1)
+stacked_shadow_3/offset = Vector2(-1, -1)
+stacked_shadow_3/color = Color(0.23921569, 0.16078432, 0.21176471, 1)
+stacked_shadow_4/offset = Vector2(1, 1)
 
 [node name="Creditos" type="Control" unique_id=1758811285]
 layout_mode = 3
@@ -24,36 +44,35 @@ layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer" unique_id=1987608185]
 layout_mode = 2
-alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer/VBoxContainer" unique_id=1862017209]
-layout_mode = 2
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 50
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1935498059]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Atras" type="Button" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer" unique_id=1154982315]
+[node name="Atras" type="Button" parent="VBoxContainer" unique_id=761599383]
 layout_mode = 2
 size_flags_horizontal = 0
-size_flags_vertical = 6
+size_flags_vertical = 0
 text = "Atras"
 
-[node name="Creditos" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer" unique_id=1617046337]
+[node name="Creditos" type="Label" parent="VBoxContainer" unique_id=427531149]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 6
 theme_override_font_sizes/font_size = 32
 text = "Creditos"
+label_settings = SubResource("LabelSettings_wuggo")
 
-[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/PanelContainer/VBoxContainer" unique_id=1359830458]
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=2013275679]
 layout_mode = 2
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_right = 50
-
-[node name="Label" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer2" unique_id=774099854]
-layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 6
 text = "SnowHex: Dirección, Arte
 Shxadow9: Jefe de Programación
 Juaco: Programación"
+label_settings = ExtResource("3_oxq1v")
 
-[connection signal="pressed" from="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/Atras" to="." method="_on_atras_pressed"]
+[connection signal="pressed" from="VBoxContainer/Atras" to="." method="_on_atras_pressed"]
