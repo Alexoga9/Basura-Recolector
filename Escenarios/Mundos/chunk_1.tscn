@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://cbesogarip1ji"]
 
+[ext_resource type="PackedScene" uid="uid://ud0knr52js7o" path="res://Recursos/Save/logica_guardado.tscn" id="1_3lpn2"]
 [ext_resource type="TileSet" uid="uid://bp6rx8j03kyjv" path="res://Escenarios/Oficial/TileMapOficial.tres" id="1_f8k6w"]
 [ext_resource type="Script" uid="uid://clfxttjs56cw8" path="res://Escenarios/prueba de cambio de sprite/spriteRestauracion.gd" id="1_tl5id"]
 [ext_resource type="PackedScene" uid="uid://e856quj4lvvn" path="res://Entidades/Jugador/Jugador.tscn" id="2_1o2ys"]
@@ -245,6 +246,8 @@ physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_w8mdt")
 
 [node name="chunk_1" type="Node" unique_id=1578300621 groups=["Chunk"]]
+
+[node name="Logica Guardado" parent="." unique_id=1899351693 instance=ExtResource("1_3lpn2")]
 
 [node name="Layers Oficiales" type="Node2D" parent="." unique_id=1805610311]
 y_sort_enabled = true
@@ -542,12 +545,12 @@ position = Vector2(42, 0)
 tile_map_data = PackedByteArray("AAAcABIAAAACAAIAAAAbABIAAAACAAAAAAAaABIAAAACAAAAAAAZABIAAAACAAAAAAAYABIAAAACAAAAAAAXABIAAAACAAAAAAAWABIAAAACAAAAAAAVABIAAAACAAAAAAAUABIAAAACAAAAAAATABIAAAACAAAAAAASABIAAAACAAAAAAARABIAAAACAAAAAAAQABIAAAACAAAAAAAPABIAAAACAAAAAAAOABIAAAACAAAAAAANABIAAAACAAAAAAAMABIAAAACAAAAAAALABIAAAABAAIAAAAdABIAAAACAAIAAAAeABIAAAADAAIAAAAeABEAAAADAAEAAAAeABAAAAADAAEAAAAeAA8AAAADAAEAAAAeAA4AAAADAAEAAAAeAA0AAAADAAEAAAAeAAwAAAADAAEAAAAeAAsAAAADAAEAAAAeAAoAAAADAAEAAAAeAAkAAAADAAEAAAAeAAgAAAADAAEAAAAeAAcAAAADAAEAAAAeAAYAAAADAAEAAAAeAAUAAAADAAEAAAAeAAQAAAADAAEAAAAeAAMAAAADAAEAAAAeAAIAAAADAAEAAAAeAAEAAAADAAEAAAAeAAAAAAADAAEAAAAeAP//AAADAAEAAAAeAP7/AAADAAEAAAAeAP3/AAADAAEAAAAeAPz/AAADAAEAAAAeAPv/AAADAAEAAAAeAPr/AAADAAEAAAAeAPn/AAADAAEAAAAeAPj/AAADAAEAAAAeAPf/AAADAAAAAAAdAPf/AAACAAAAAAAcAPf/AAACAAAAAAAbAPf/AAACAAAAAAAaAPf/AAACAAAAAAAZAPf/AAACAAAAAAAYAPf/AAACAAAAAAAXAPf/AAACAAAAAAAUAPf/AAACAAAAAAATAPf/AAACAAAAAAASAPf/AAACAAAAAAARAPf/AAACAAAAAAAQAPf/AAACAAAAAAAPAPf/AAACAAAAAAAOAPf/AAACAAAAAAANAPf/AAACAAAAAAAMAPf/AAACAAAAAAALAPf/AAABAAAAAAALAPj/AAABAAEAAAALAPn/AAABAAEAAAALAPr/AAABAAEAAAALAPv/AAABAAEAAAALAPz/AAABAAEAAAALAP3/AAABAAEAAAALAP7/AAABAAEAAAALAP//AAABAAEAAAALAAAAAAABAAEAAAALAAEAAAABAAEAAAALAAIAAAABAAEAAAALAAMAAAABAAEAAAALAAQAAAABAAEAAAALAAUAAAABAAEAAAALAAYAAAABAAEAAAALAAcAAAABAAEAAAALAAgAAAABAAEAAAALAAkAAAABAAEAAAALAAoAAAABAAEAAAALAAsAAAABAAEAAAALAAwAAAABAAEAAAALAA0AAAABAAEAAAALAA4AAAABAAEAAAALAA8AAAABAAEAAAALABAAAAABAAEAAAALABEAAAABAAEAAAA=")
 tile_set = SubResource("TileSet_onpbi")
 
-[node name="Node2D" type="Node2D" parent="Objetos Ambientales" unique_id=2043866187 groups=["EntidadesVallas"]]
+[node name="Vallas" type="Node2D" parent="Objetos Ambientales" unique_id=2043866187 groups=["EntidadesVallas"]]
 
-[node name="puerta_Valla" parent="Objetos Ambientales/Node2D" unique_id=1538247553 instance=ExtResource("8_aqtp6")]
+[node name="puerta_Valla" parent="Objetos Ambientales/Vallas" unique_id=1538247553 instance=ExtResource("8_aqtp6")]
 position = Vector2(394, -144)
 porcentaje_requerido = 1
-next_scene = "uid://bgd2waanh0qwk"
+next_scene = "res://Escenarios/Mundos/chunk_2.tscn"
 costo_puerta = 10
 entrada_posicion = 1
 condiccion_para_abrir = 1

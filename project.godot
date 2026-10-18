@@ -28,7 +28,7 @@ Inventario="*uid://d2f0m5j1ciuls"
 SaveGame="*uid://bvc2tljjdumg8"
 CheckpointManager="*uid://djnqibo65pwk1"
 NivelesDeExperiencia="*uid://b3atf1xujheax"
-RecolectorData="*uid://coiafei55lea"
+RecolectorData="uid://coiafei55lea"
 Ajustes="*uid://b8im441yon8c3"
 
 [debug]
@@ -73,6 +73,8 @@ Chunk="El origen del Nivel"
 "Entidades Notas"=""
 EntidadesVallas=""
 CapaSucia=""
+Reconstructor=""
+RecolectorData=""
 
 [gui]
 

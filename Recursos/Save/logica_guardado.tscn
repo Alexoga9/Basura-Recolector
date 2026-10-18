@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ud0knr52js7o"]
+
+[ext_resource type="Script" uid="uid://coiafei55lea" path="res://Recursos/Save/RecolectorData.gd" id="1_n6pew"]
+[ext_resource type="Script" uid="uid://dyo1l45kbwvxm" path="res://Recursos/Save/ReconstructorData.gd" id="2_3nvp8"]
+
+[node name="Logica Guardado" type="Node" unique_id=1899351693]
+
+[node name="RecolectorData" type="Node" parent="." unique_id=1300809191 groups=["RecolectorData"]]
+script = ExtResource("1_n6pew")
+metadata/_custom_type_script = "uid://coiafei55lea"
+
+[node name="ReconstructorData" type="Node" parent="." unique_id=1561904218 groups=["Reconstructor"]]
+script = ExtResource("2_3nvp8")
+metadata/_custom_type_script = "uid://dyo1l45kbwvxm"

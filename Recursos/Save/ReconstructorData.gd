@@ -1,30 +1,36 @@
-extends Node
+class_name ReconstructorData extends Node
 
 
-## Punto de entrada. Llámalo desde save_game.Load_Game().
+## Restaura las entidades de la escena a partir de un diccionario
+## producido por RecolectorData.
+##
+## Formato esperado:
+## {
+##   "EntidadesBasuras": { "escena": "uid://...", "entradas": [ {recurso, posicion}, ... ] },
+##   ...
+## }
 func restaurar(datos: Dictionary) -> void:
+	print("Restaurando...")
 	if datos.is_empty():
-		return # deberia de enviar una señal aqui?
+		return
 
 	for nombre_grupo in datos:
 		var info: Dictionary = datos[nombre_grupo]
 		await _restaurar_carpeta(nombre_grupo, info)
 
 
-# ------------------------------------------------------------------
-# Reconstrucción por carpeta
-# ------------------------------------------------------------------
 func _restaurar_carpeta(nombre_grupo: String, info: Dictionary) -> void:
+
 	var carpeta := _obtener_carpeta_por_grupo(nombre_grupo)
 
 	if carpeta == null:
 		push_warning("Reconstructor: no se encontró carpeta en el grupo '", nombre_grupo, "'")
 		return
 
-	# 1. Borrar hijos actuales (el diccionario manda)
+	# 1. Borrar hijos actuales
 	_borrar_hijos(carpeta)
 
-	# 2. Esperar a que se liberen (queue_free es diferido)
+	# 2. Esperar a que se liberen
 	await get_tree().process_frame
 
 	# 3. Obtener la escena desde el UID
@@ -54,7 +60,6 @@ func _borrar_hijos(carpeta: Node) -> void:
 
 
 func _instanciar_entrada(carpeta: Node, escena: PackedScene, entrada: Dictionary, grupo: String) -> void:
-	# Regla: si no hay recurso, se ignora
 	var ruta: String = entrada.get("recurso", "")
 
 	if ruta == "":
@@ -80,5 +85,4 @@ func _instanciar_entrada(carpeta: Node, escena: PackedScene, entrada: Dictionary
 
 
 func _obtener_carpeta_por_grupo(nombre_grupo: String) -> Node:
-	var nodo := get_tree().get_first_node_in_group(StringName(nombre_grupo))
-	return nodo
+	return get_tree().get_first_node_in_group(StringName(nombre_grupo))

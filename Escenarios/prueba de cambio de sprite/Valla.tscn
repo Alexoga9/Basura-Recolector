@@ -9,7 +9,7 @@
 size = Vector2(32, 7)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wt0fl"]
-size = Vector2(7.9317603, 43.794876)
+size = Vector2(2.0189936, 9.333335)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wt0fl"]
 atlas = ExtResource("2_qcp71")
@@ -39,6 +39,7 @@ animations = [{
 }]
 
 [node name="puerta_Valla" type="StaticBody2D" unique_id=1538247553]
+y_sort_enabled = true
 collision_layer = 4
 script = ExtResource("1_c32ja")
 
@@ -48,17 +49,21 @@ shape = SubResource("RectangleShape2D_qcp71")
 
 [node name="Trigger Jugador" type="Area2D" parent="." unique_id=816342261]
 unique_name_in_owner = true
-visible = false
 scale = Vector2(27.736586, 2.7857141)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger Jugador" unique_id=786454062]
+position = Vector2(0, 2.1538463)
 scale = Vector2(1.0000002, 1)
 shape = SubResource("RectangleShape2D_wt0fl")
 
 [node name="puerta" type="AnimatedSprite2D" parent="." unique_id=1851487843]
 unique_name_in_owner = true
+y_sort_enabled = true
+position = Vector2(0, 12)
 sprite_frames = SubResource("SpriteFrames_qcp71")
 animation = &"idle"
+frame_progress = 0.33169806
+offset = Vector2(0, -12)
 
 [node name="E sprite" parent="puerta" unique_id=1797379794 instance=ExtResource("3_bag1r")]
 visible = false

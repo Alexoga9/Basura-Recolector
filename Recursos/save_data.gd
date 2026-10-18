@@ -1,7 +1,10 @@
 class_name SaveData extends Resource
 
-var mochila_inventario: Dictionary
-var dinero: int = 0
-var peso_basura: int = 0
-var energia_actual: int= 0
-var niveles_de_mejoras: Dictionary
+@export var dinero: int = 0
+@export var peso_basura: int = 0
+@export var energia_actual: int= 0
+@export var niveles_de_mejoras: Dictionary
+@export var mochila_inventario: Dictionary
+
+@export var escena_actual: String = ""
+@export var datos_por_escenas: Dictionary = {}

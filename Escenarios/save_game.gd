@@ -1,72 +1,129 @@
-class_name save_game extends Node
+extends Node
 
-var jugador: Jugador
-var Porcentaje_Limpieza: int
-var datos_por_escenas: Dictionary = {}# vive en memoria durante toda la partida
+var datos_por_escenas: Dictionary = {}# en memoria durante la partida
 
-# reset
 const ESCENA_INICIAL = "uid://cbesogarip1ji"
 const POSICION_INICIAL := Vector2(153.0, 41.0)
+const RUTA_SAVE := "user://save.res"
 
 
-func Save_Game() -> void:
-	var data = SaveData.new()
-	data.SceneName = get_tree().current_scene.scene_file_path
-	data.GuardarDinero = Dinero.dinero
-	jugador = Global.jugador
+# ------------------------------------------------------------------
+# GUARDAR
+# ------------------------------------------------------------------
+func Guardar() -> void:
+	var escena_path := get_tree().current_scene.scene_file_path
 
-	data.playerPosition = jugador.movimiento_componente.body_character.global_position
-	data.GuardadoInventario = Inventario.get_backpack_data()
-	data.Penergia = jugador.energia_componente.energia
-	data.Plimpieza = jugador.contador_componente.basuras_actuales
+	# 1. Recolectar entidades de la escena actual y actualizar el diccionario en memoria
+	var recolector: RecolectorData= get_tree().get_first_node_in_group("RecolectorData")
+
+	if recolector != null:
+		#recolector.recolectar_todo()
+		datos_por_escenas[escena_path] = recolector.serializar()
+
+	# 2. Construir SaveData
+	var data := SaveData.new()
+	data.escena_actual = escena_path
+	data.posicion_jugador = Global.jugador.movimiento_componente.body_character.global_position
+	data.dinero = Dinero.dinero
+	data.peso_basura = Inventario.peso
+	data.energia_actual = Global.jugador.energia_componente.energia
+	data.niveles_de_mejoras = NivelesDeExperiencia.serializar()
+	data.mochila_inventario = Inventario.get_backpack_data()
 	data.datos_por_escenas = datos_por_escenas
 
-	ResourceSaver.save(data, "user://save.res")
+	# 3. Persistir
+	var err := ResourceSaver.save(data, RUTA_SAVE)
+
+	if err != OK:
+		push_error("Error al guardar: ", err)
 
 
-func Load_Game() -> void:
-	if not ResourceLoader.exists("user://save.res"):
+# ------------------------------------------------------------------
+# CARGAR
+# ------------------------------------------------------------------
+func Cargar() -> void:
+	if not ResourceLoader.exists(RUTA_SAVE):
 		return
 
-	var data: SaveData = load("user://save.res")
+	var data: SaveData = load(RUTA_SAVE) as SaveData
+
+	if data == null:
+		push_error("No se pudo cargar el save")
+		return
+
 	datos_por_escenas = data.datos_por_escenas
 
-	if data.SceneName != get_tree().current_scene.scene_file_path:
-		get_tree().change_scene_to_file(data.SceneName)
-		print(data.SceneName)
+	if data.escena_actual != get_tree().current_scene.scene_file_path:
+		get_tree().change_scene_to_file(data.escena_actual)
 		await get_tree().process_frame
 
-	jugador = Global.jugador
-	jugador.movimiento_componente.body_character.global_position = data.playerPosition
+	var datos_escena: Dictionary = datos_por_escenas.get(data.escena_actual, {})
 
-	if data.GuardadoInventario != null:
-		Inventario.load_backpack_data(data.GuardadoInventario)
+	if not datos_escena.is_empty():
+		var reconstructor := get_tree().get_first_node_in_group("Reconstructor")
 
-	jugador.energia_componente.energia = data.Penergia
-	jugador.contador_componente.set_limpieza(data.Plimpieza)
-	Dinero.dinero = data.GuadarDinero
+		if reconstructor != null:
+			await reconstructor.restaurar(datos_escena)
+
+	# Restaurar estado del jugador
+	var jugador := Global.jugador
+	jugador.movimiento_componente.body_character.global_position = data.posicion_jugador
+	jugador.energia_componente.energia = data.energia_actual
+
+	# Restaurar datos globales
+	Dinero.dinero = data.dinero
+	NivelesDeExperiencia.deserializar(data.niveles_de_mejoras)
+	Inventario.load_backpack_data(data.mochila_inventario)
 
 
+# ------------------------------------------------------------------
+# CAMBIO DE ESCENA (durante la partida)
+# ------------------------------------------------------------------
+func Cambiar_Escena(ruta_escena: String) -> void:
+	var escena_actual := get_tree().current_scene.scene_file_path
+	var recolector := get_tree().get_first_node_in_group("RecolectorData")
+
+	if recolector != null:
+		recolector.recolectar_todo()
+		print("[DEBUG] Basuras: ", recolector.basuras.size())
+		print("[DEBUG] Loots: ", recolector.loots.size())
+		print("[DEBUG] Notas: ", recolector.notas.size())
+		print("[DEBUG] Estaciones: ", recolector.estaciones.size())
+		print("[DEBUG] Estaciones rotas: ", recolector.estaciones_rotas.size())
+		print("[DEBUG] Vallas: ", recolector.vallas.size())
+
+		var serializado: Dictionary = recolector.serializar()
+		print("[DEBUG] Serializado: ", serializado)
+		datos_por_escenas[escena_actual] = serializado
+
+	if recolector != null:
+		recolector.recolectar_todo()
+		datos_por_escenas[escena_actual] = recolector.serializar()
+
+	get_tree().change_scene_to_file(ruta_escena)
+	await get_tree().process_frame
+
+	var datos_destino: Dictionary = datos_por_escenas.get(ruta_escena, {})
+
+	if not datos_destino.is_empty():
+		var reconstructor := get_tree().get_first_node_in_group("Reconstructor")
+
+		if reconstructor != null:
+			await reconstructor.restaurar(datos_destino)
+
+
+# ------------------------------------------------------------------
+# RESET
+# ------------------------------------------------------------------
 func Reset_Game() -> void:
 	datos_por_escenas.clear()
-	Porcentaje_Limpieza = 0
 	Dinero.dinero = 0
 	Inventario.reset()
+	NivelesDeExperiencia.reset()
 
-	if FileAccess.file_exists("user://save.res"):
-		DirAccess.remove_absolute("user://save.res")
+	if FileAccess.file_exists(RUTA_SAVE):
+		DirAccess.remove_absolute(RUTA_SAVE)
 
 	var jugador_viejo = Global.jugador
 	get_tree().change_scene_to_file(ESCENA_INICIAL)
-
 	await get_tree().process_frame
-	while get_tree().current_scene == null \
-	or not is_instance_valid(Global.jugador) \
-	or Global.jugador == jugador_viejo:
-		await get_tree().process_frame
-
-	jugador = Global.jugador
-	jugador.movimiento_componente.body_character.global_position = POSICION_INICIAL
-	jugador.energia_componente.energia = 0.0
-	jugador.contador_componente.basuras_actuales = 0
-	jugador.contador_componente.set_limpieza(0)

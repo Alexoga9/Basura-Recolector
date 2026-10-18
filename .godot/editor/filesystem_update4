@@ -1,8 +1,6 @@
 res://Recursos/Save/RecolectorData.gd
-res://Utilidades/Autoloads/niveles_de_experiencia.gd
-res://Utilidades/Autoloads/Ajustes.gd
-res://UI/Menu Principal/Opciones/Opciones de audio/opciones_de_audio.gd
-res://UI/Menu Principal/Opciones/Opciones de audio/opciones_de_audio.tscn
+res://Recursos/Save/ReconstructorData.gd
+res://Escenarios/Mundos/chunk_1.tscn
 res://UI/Theme/Tienda.tres
 res://Escenarios/Oficial/TileMapOficial.tres
 res://Escenarios/shine/hit_flash.gdshader
@@ -22,6 +20,5 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanza
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
 res://Entidades/Basura/Caja/Obstaculos/piedra/piedra cesped claro.tres
-res://Entidades/Basura/Basura_item.gd
-res://Recursos/save_data.gd
-res://Entidades/Basura/Basura.tscn
+res://Escenarios/save_game.gd
+res://Escenarios/Mundos/chunk_2.tscn

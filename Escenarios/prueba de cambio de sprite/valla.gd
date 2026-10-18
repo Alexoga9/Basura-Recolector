@@ -91,4 +91,4 @@ func abrir_paso() -> void:
 	SignalBus.interaccion.disconnect(_al_interactuar)
 	APuerta.play("puerta_abierta")
 	$CollisionShape2D.disabled = true
-	get_tree().change_scene_to_file(next_scene)
+	SaveGame.Cambiar_Escena(next_scene)
