@@ -5,6 +5,7 @@ var transicion_activa: bool = false
 
 
 func _ready():
+	color_rect.material.set_shader_parameter("progress", 1)
 	SignalBus.hacer_transicion.connect(recibido_transicion)
 	hide()
 

@@ -1,15 +1,15 @@
 extends Node
 
-var datos_por_escenas: Dictionary = {} # en memoria durante la partida
+var datos_por_escenas: Dictionary = {}# en memoria durante la partida
 
 const ESCENA_INICIAL = "uid://cbesogarip1ji"
 const POSICION_INICIAL := Vector2(153.0, 41.0)
 const RUTA_SAVE := "user://save.res"
 
-
 # ------------------------------------------------------------------
 # UTILIDADES
 # ------------------------------------------------------------------
+
 
 ## Convierte cualquier ruta (uid:// o res://) a ruta res:// para usarla
 ## SIEMPRE como clave de datos_por_escenas. Este era el bug principal:
@@ -17,14 +17,17 @@ const RUTA_SAVE := "user://save.res"
 func _normalizar(ruta: String) -> String:
 	if ruta.begins_with("uid://"):
 		var id := ResourceUID.text_to_id(ruta)
+
 		if ResourceUID.has_id(id):
 			return ResourceUID.get_id_path(id)
+
 	return ruta
 
 
 ## Recolecta la escena actual y guarda su estado en memoria.
 func _registrar_escena_actual() -> void:
 	var escena := get_tree().current_scene
+
 	if escena == null:
 		return
 
@@ -103,6 +106,7 @@ func Cargar() -> void:
 
 	# Normalizar claves (por si hay saves antiguos con uid://)
 	datos_por_escenas = {}
+
 	for clave in data.datos_por_escenas:
 		datos_por_escenas[_normalizar(String(clave))] = data.datos_por_escenas[clave]
 

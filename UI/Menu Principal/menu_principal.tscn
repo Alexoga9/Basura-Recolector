@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ddorvnkqdqkvg" path="res://UI/Menu Principal/menu_principal.gd" id="1_u2r14"]
 [ext_resource type="PackedScene" uid="uid://cyosjufx0xt31" path="res://UI/Menu Principal/Opciones/opciones.tscn" id="3_ggg3k"]
+[ext_resource type="PackedScene" uid="uid://f2fifod0frun" path="res://UI/transicion/transicion_background.tscn" id="3_pi268"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lt0ek"]
 
@@ -87,10 +88,21 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 focus_behavior_recursive = 1
 
+[node name="Transicion Background" parent="." unique_id=1610179321 instance=ExtResource("3_pi268")]
+visible = true
+layout_mode = 1
+
 [node name="Opciones" parent="." unique_id=1511520291 instance=ExtResource("3_ggg3k")]
 unique_name_in_owner = true
 visible = false
-layout_mode = 1
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 358.0
+offset_bottom = 206.0
 focus_behavior_recursive = 1
 
 [connection signal="pressed" from="Menu/Jugar" to="." method="_on_jugar_pressed"]

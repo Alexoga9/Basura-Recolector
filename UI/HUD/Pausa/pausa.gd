@@ -15,17 +15,17 @@ func _on_continuar_pressed():
 
 func _on_menu_principal_pressed():
 	get_tree().paused = false
-	get_tree().reload_current_scene()
+	SaveGame.Cambiar_Escena("uid://kyb4e7wfvufr")
 
 
 func saveGame():
-	SaveGame.Save_Game()
+	SaveGame.Guardar()
 	get_tree().paused = false
 	hide()
 
 
 func load_game() -> void:
-	SaveGame.Load_Game()
+	SaveGame.Cargar()
 	get_tree().paused = false
 	hide()
 
