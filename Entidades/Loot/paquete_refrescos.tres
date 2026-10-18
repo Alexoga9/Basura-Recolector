@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="LootDefinicion" format=3 uid="uid://clilkml5ewjiw"]
+
+[ext_resource type="AudioStream" uid="uid://sahbu26hpnvx" path="res://Assets/audio/Hit.wav" id="1_84vbs"]
+[ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="2_vmyqe"]
+[ext_resource type="Resource" uid="uid://cjmitmv0r87es" path="res://Entidades/Consumible/refresco.tres" id="3_f1cct"]
+[ext_resource type="Texture2D" uid="uid://cbgbirmqb5755" path="res://Assets/UI/marco tienda.png" id="4_ldlrb"]
+
+[resource]
+script = ExtResource("2_vmyqe")
+id = "paquete_refrescos"
+nombre = "paquete_refrescos"
+audio = ExtResource("1_84vbs")
+sprite = ExtResource("4_ldlrb")
+cantidad_maxima = 9999
+tipo_de_elemento = 2
+valor = 5
+veces_a_golpear = 3
+materiales_dentro = Array[ExtResource("2_vmyqe")]([ExtResource("3_f1cct"), ExtResource("3_f1cct"), ExtResource("3_f1cct"), ExtResource("3_f1cct")])
+metadata/_custom_type_script = "uid://dnu2r5yw53pto"

@@ -13,6 +13,7 @@
 [ext_resource type="Resource" uid="uid://dkoxwvu2yrs81" path="res://Entidades/Basura/Obstaculo prueba.tres" id="6_4xlto"]
 [ext_resource type="PackedScene" uid="uid://cjlmg6cpg7g6g" path="res://Entidades/Estaciones/Maquina Expendedora/MaquinaExpendedora.tscn" id="6_isstk"]
 [ext_resource type="Texture2D" uid="uid://syxbc1c047yk" path="res://Assets/Variedad de cajas.png" id="6_tl5id"]
+[ext_resource type="Resource" uid="uid://clilkml5ewjiw" path="res://Entidades/Loot/paquete_refrescos.tres" id="7_3lpn2"]
 [ext_resource type="PackedScene" uid="uid://dkwgdyg1ccod6" path="res://Entidades/Estaciones/Estación Rota/estación_rota.tscn" id="7_xbrct"]
 [ext_resource type="PackedScene" uid="uid://c1kcmjbhf62q1" path="res://Escenarios/prueba de cambio de sprite/Valla.tscn" id="8_aqtp6"]
 [ext_resource type="Resource" uid="uid://5k76mbciamak" path="res://Entidades/Loot/loots/re_madera.tres" id="9_4xlto"]
@@ -334,6 +335,7 @@ position = Vector2(718, 485)
 
 [node name="Basura14" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=21987051 instance=ExtResource("3_dahfg")]
 position = Vector2(572, 466)
+data = ExtResource("7_3lpn2")
 
 [node name="Basura15" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1816812529 instance=ExtResource("3_dahfg")]
 position = Vector2(687, 421)

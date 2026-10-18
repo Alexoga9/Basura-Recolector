@@ -19,7 +19,3 @@ func beber_refresco():
 		audio_refresco.play()
 		Inventario.remove_item("refresco")
 		energia_componente.energia += 2 + (NivelesDeExperiencia.nivel_refrescos * 1)
-
-
-func _on_audio_stream_player_finished():
-	pass # Replace with function body.
