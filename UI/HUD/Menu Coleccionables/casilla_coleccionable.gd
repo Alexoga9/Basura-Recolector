@@ -8,6 +8,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	revisar_coleccionable_en_inventario()
 	imagen_coleccionable.texture = imagen
 	SignalBus.material_recogido.connect(revisar_coleccionable_en_inventario)
 
