@@ -1,6 +1,4 @@
-res://UI/Tienda/mejoras de habilidades/mejoras/mejora_peso.gd
-res://Commons/Componentes/Core/EnergiaComponente.gd
-res://Entidades/Jugador/Jugador.tscn
+res://UI/transicion/transicion_background.tscn
 res://UI/Theme/Tienda.tres
 res://Escenarios/Oficial/TileMapOficial.tres
 res://Escenarios/shine/hit_flash.gdshader
@@ -8,7 +6,7 @@ res://Entidades/Estaciones/Tienda/Outline.gdshader
 res://Entidades/Basura/basura_data.tres
 res://Escenarios/Sprite_sucio/Tile sucio.tres
 res://Entidades/Basura/Obstaculo prueba.tres
-res://Entidades/Consumible/Tipos de Consumibles/animacion lata consumible.tres
+res://Entidades/Consumible/refresco.tres
 res://Assets/Shaders/Shader nuevo ajustable correctamente.tres
 res://Entidades/Basura/Caja/Obstaculos/Arbol/Arbol Cesped Claro.tres
 res://Entidades/Loot/coleccionables/vhs.tres
@@ -20,32 +18,8 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_resis
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_cooldown.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_rango.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.tres
+res://Entidades/Consumible/Tipos de Consumibles/animacion lata consumible.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
-res://UI/HUD/UI_canvas_layer.tscn
-res://Escenarios/prueba de cambio de sprite/valla.gd
-res://UI/transicion/volver_escena_anterior.tscn
-res://Utilidades/Autoloads/Signal_Bus.gd
-res://UI/transicion/pasar_por_puerta.gd
-res://UI/transicion/pasar_por_puerta.tscn
-res://Entidades/Consumible/consumible.tscn
-res://Entidades/Consumible/refresco.tres
-res://Escenarios/Mundos/chunk_1.tscn
-res://UI/HUD/Inventario/Inventario.tscn
-res://Commons/Componentes/Input/beber_refresco.gd
-res://Commons/Componentes/Input/InputComponente.gd
-res://Entidades/Estaciones/Maquina Expendedora/MaquinaExpendedora.tscn
-res://Entidades/Estaciones/Maquina Expendedora/maquina_expendedora.gd
-res://Entidades/Consumible/refresco_loot.tscn
-res://Commons/Componentes/Radares/RadarComponente.gd
-res://UI/Tienda/mejoras de habilidades/mejoras/mejora_cooldown.gd
-res://UI/Tienda/mejoras de habilidades/mejoras/mejora_rango.gd
-res://UI/Tienda/tienda_ui.tscn
-res://UI/Tienda/Panel tienda/panel_tienda.tscn
-res://UI/Tienda/Panel tienda/panel_tienda.gd
-res://Entidades/Estaciones/Estación Rota/Requisitos de materiales/UI Requisitos Materiales/casilla_de_requisito_materiales.tscn
-res://Entidades/Estaciones/Estación Rota/estación_rota.tscn
-res://Escenarios/Mundos/chunk_2.tscn
-res://UI/transicion/transicion_background.tscn
 res://UI/transicion/transicion_background.gd
