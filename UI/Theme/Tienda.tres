@@ -81,7 +81,7 @@ texture = SubResource("AtlasTexture_pc5ro")
 modulate_color = Color(1, 1, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c2bmj"]
-content_margin_right = 16.0
+content_margin_right = 6.0
 bg_color = Color(0.32156864, 0.2, 0.24705882, 1)
 corner_detail = 1
 

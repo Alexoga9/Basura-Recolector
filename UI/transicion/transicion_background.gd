@@ -5,7 +5,7 @@ var transicion_activa: bool = false
 
 
 func _ready():
-	color_rect.material.set_shader_parameter("progress", 1)
+	color_rect.material.set_shader_parameter("progress", 2)
 	SignalBus.hacer_transicion.connect(recibido_transicion)
 	hide()
 
@@ -26,7 +26,7 @@ func animar_transicion(delta: float):
 	show()
 	var shader_value = color_rect.material.get_shader_parameter("progress")
 	shader_value -= delta
-	shader_value = clamp(shader_value, 0.0, 1.0)
+	shader_value = clamp(shader_value, 0.0, 2.0)
 	color_rect.material.set_shader_parameter("progress", shader_value)
 	if shader_value == 0:
 		resetear_transicion()
@@ -37,6 +37,6 @@ func resetear_transicion():
 	hide()
 	transicion_activa = false
 	var shader_value = color_rect.material.get_shader_parameter("progress")
-	shader_value = 1
-	shader_value = clamp(shader_value, 0.0, 1.0)
+	shader_value = 2
+	shader_value = clamp(shader_value, 0.0, 2.0)
 	color_rect.material.set_shader_parameter("progress", shader_value)

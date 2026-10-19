@@ -1,3 +1,7 @@
+TextureRect
+HBoxContainer
+Control
+VBoxContainer
 AudioStreamPlayer
 BeberRefresco
 TDeslizar
@@ -5,11 +9,7 @@ Loot
 MarginContainer
 Button
 Label
-HBoxContainer
-VBoxContainer
 Panel
 Node2D
 Node
 ReconstructorData
-RecolectorData
-CheckpointComponente

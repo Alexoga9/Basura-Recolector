@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://cjlmg6cpg7g6g" path="res://Entidades/Estaciones/Maquina Expendedora/MaquinaExpendedora.tscn" id="6_isstk"]
 [ext_resource type="Texture2D" uid="uid://syxbc1c047yk" path="res://Assets/Variedad de cajas.png" id="6_tl5id"]
 [ext_resource type="Resource" uid="uid://clilkml5ewjiw" path="res://Entidades/Loot/paquete_refrescos.tres" id="7_3lpn2"]
-[ext_resource type="PackedScene" uid="uid://dkwgdyg1ccod6" path="res://Entidades/Estaciones/Estación Rota/estación_rota.tscn" id="7_xbrct"]
 [ext_resource type="PackedScene" uid="uid://c1kcmjbhf62q1" path="res://Escenarios/prueba de cambio de sprite/Valla.tscn" id="8_aqtp6"]
 [ext_resource type="Resource" uid="uid://5k76mbciamak" path="res://Entidades/Loot/loots/re_madera.tres" id="9_4xlto"]
 [ext_resource type="Texture2D" uid="uid://d3r43nmrn4esl" path="res://Assets/entidades/Valla/Ya.png" id="9_d0bkc"]
@@ -30,9 +29,6 @@
 [ext_resource type="Resource" uid="uid://bmj2s3ucjwupi" path="res://Entidades/Loot/coleccionables/radio.tres" id="20_imjhf"]
 [ext_resource type="Resource" uid="uid://dg6j6kbsk5dye" path="res://Entidades/Loot/coleccionables/reloj.tres" id="21_3lpn2"]
 [ext_resource type="Resource" uid="uid://cjmitmv0r87es" path="res://Entidades/Consumible/refresco.tres" id="23_imjhf"]
-[ext_resource type="Resource" uid="uid://co8ovdxeg1nte" path="res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/MaquinaExpendedoraRota.tres" id="24_iq5bc"]
-[ext_resource type="Resource" uid="uid://cgw3qw61x5b08" path="res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/TiendaRota.tres" id="25_1mu81"]
-[ext_resource type="Resource" uid="uid://bfnagf80xln8o" path="res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/TrituradoraRota.tres" id="26_bkx32"]
 [ext_resource type="PackedScene" uid="uid://b1luv0bei0jvi" path="res://UI/HUD/UI_canvas_layer.tscn" id="33_imjhf"]
 [ext_resource type="Script" uid="uid://x0afdmm3k1jj" path="res://Utilidades/Sistemas/Checkpoint/CheckpointComponente.gd" id="36_pmfwy"]
 
@@ -515,18 +511,6 @@ position = Vector2(251, -52)
 position = Vector2(172, -40)
 
 [node name="Estaciones Rotas" type="Node2D" parent="Objetos Ambientales/Estaciones" unique_id=1095621018 groups=["EstacionesRotas"]]
-
-[node name="Estación Rota" parent="Objetos Ambientales/Estaciones/Estaciones Rotas" unique_id=121739820 instance=ExtResource("7_xbrct")]
-position = Vector2(313, 142)
-data = ExtResource("24_iq5bc")
-
-[node name="Estación Rota3" parent="Objetos Ambientales/Estaciones/Estaciones Rotas" unique_id=915087626 instance=ExtResource("7_xbrct")]
-position = Vector2(313, 34)
-data = ExtResource("25_1mu81")
-
-[node name="Estación Rota2" parent="Objetos Ambientales/Estaciones/Estaciones Rotas" unique_id=1690889551 instance=ExtResource("7_xbrct")]
-position = Vector2(313, 247)
-data = ExtResource("26_bkx32")
 
 [node name="vallas" type="TileMapLayer" parent="Objetos Ambientales" unique_id=356144072]
 y_sort_enabled = true

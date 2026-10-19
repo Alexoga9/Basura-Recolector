@@ -7,7 +7,7 @@
 shader = ExtResource("1_w8q5h")
 shader_parameter/use_sprite_alpha = true
 shader_parameter/use_transition_texture = false
-shader_parameter/transition_type = 3
+shader_parameter/transition_type = 0
 shader_parameter/position = Vector2(0, 0)
 shader_parameter/invert = true
 shader_parameter/grid_size = Vector2(1, 1)
@@ -28,11 +28,10 @@ shader_parameter/edges = 6
 shader_parameter/shape_feather = 0.1
 shader_parameter/sectors = 1
 shader_parameter/clock_feather = 0.0
-shader_parameter/progress = 1.0
+shader_parameter/progress = 2.0
 shader_parameter/progress_bias = Vector2(0, 0)
 
 [node name="Transicion Background" type="Control" unique_id=1610179321]
-visible = false
 z_index = 999
 z_as_relative = false
 layout_mode = 3
@@ -52,3 +51,4 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.101960786, 0.09803922, 0.19607843, 1)

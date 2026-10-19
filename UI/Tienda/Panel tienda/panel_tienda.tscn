@@ -8,9 +8,9 @@
 [ext_resource type="LabelSettings" uid="uid://crqcrwgjb38h3" path="res://UI/Theme/tipografia tienda.tres" id="6_ahgl1"]
 [ext_resource type="FontFile" uid="uid://b0npykajpdagi" path="res://Assets/tipografia/HexFont16pix.ttf" id="7_be048"]
 [ext_resource type="AudioStream" uid="uid://cjghok5vlof2n" path="res://Assets/audio/drop-coin.mp3" id="7_vehtn"]
-[ext_resource type="FontVariation" uid="uid://ch3sj7u8tc2me" path="res://Assets/tipografia/FuenteOffset.tres" id="7_wbqoc"]
 [ext_resource type="Texture2D" uid="uid://cg40f2x5atd3o" path="res://Assets/UI/barra completado nivel.png" id="8_6rtv5"]
 [ext_resource type="FontFile" uid="uid://dryil6kc3yx5s" path="res://Assets/tipografia/DobleHex2.ttf" id="9_y73xl"]
+[ext_resource type="Texture2D" uid="uid://cj67bs1scsaiw" path="res://Assets/Inventario/moneda.png" id="10_6rtv5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_y73xl"]
 shader = ExtResource("1_rs542")
@@ -36,13 +36,22 @@ region = Rect2(1, 11, 40, 5)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8f3sw"]
 texture = SubResource("AtlasTexture_mhpnl")
 
-[sub_resource type="LabelSettings" id="LabelSettings_rs542"]
-line_spacing = -4.0
-font = ExtResource("7_wbqoc")
-font_size = 8
-font_color = Color(1, 1, 0.1254902, 1)
-outline_size = 2
+[sub_resource type="LabelSettings" id="LabelSettings_y73xl"]
+font = ExtResource("9_y73xl")
 outline_color = Color(0, 0, 0, 1)
+stacked_outline_count = 1
+stacked_shadow_count = 5
+stacked_outline_0/size = 4
+stacked_outline_0/color = Color(0.23921569, 0.16078432, 0.21176471, 1)
+stacked_shadow_0/offset = Vector2(1, 1)
+stacked_shadow_0/color = Color(0.23921569, 0.16078432, 0.21176471, 1)
+stacked_shadow_1/offset = Vector2(1, -1)
+stacked_shadow_1/color = Color(0.23921569, 0.16078432, 0.21176471, 1)
+stacked_shadow_2/offset = Vector2(-1, 1)
+stacked_shadow_2/color = Color(0.23921569, 0.16078432, 0.21176471, 1)
+stacked_shadow_3/offset = Vector2(-1, -1)
+stacked_shadow_3/color = Color(0.23921569, 0.16078432, 0.21176471, 1)
+stacked_shadow_4/offset = Vector2(1, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_jb2wh"]
 font = ExtResource("9_y73xl")
@@ -61,23 +70,9 @@ stacked_shadow_3/offset = Vector2(-1, -1)
 stacked_shadow_3/color = Color(0.23921569, 0.16078432, 0.21176471, 1)
 stacked_shadow_4/offset = Vector2(1, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_y73xl"]
-line_spacing = -4.0
-font = ExtResource("7_wbqoc")
-font_color = Color(2.5509298e-06, 0.8523314, 0.2960147, 1)
-outline_size = 2
-outline_color = Color(0, 0, 0, 1)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_3e1ft"]
 atlas = ExtResource("4_wcpre")
 region = Rect2(96, 0, 16, 16)
-
-[sub_resource type="LabelSettings" id="LabelSettings_6rtv5"]
-line_spacing = -4.0
-font = ExtResource("7_wbqoc")
-font_color = Color(0.9999997, 0.16316366, 0.25265014, 1)
-outline_size = 2
-outline_color = Color(0, 0, 0, 1)
 
 [node name="Panel Tienda" type="Control" unique_id=1195401960]
 material = SubResource("ShaderMaterial_y73xl")
@@ -104,9 +99,11 @@ grow_vertical = 2
 [node name="NinePatchRect" type="NinePatchRect" parent="Panel" unique_id=1602948107]
 custom_minimum_size = Vector2(112, 64)
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_right = 0.99700004
+anchor_bottom = 1.0940001
+offset_right = 0.10397339
+offset_bottom = -0.01600647
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_3e1ft")
@@ -175,13 +172,14 @@ label_settings = ExtResource("6_ahgl1")
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
-theme_override_constants/separation = 1
+theme_override_constants/separation = 4
 
 [node name="barra" type="ProgressBar" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer" unique_id=1135561093]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(120, 5)
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 8
 theme_override_styles/background = SubResource("StyleBoxTexture_0hp5w")
 theme_override_styles/fill = SubResource("StyleBoxTexture_8f3sw")
 max_value = 10.0
@@ -192,14 +190,9 @@ show_percentage = false
 [node name="nivel" type="Label" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer" unique_id=2044466936]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_vertical = 8
-theme_override_colors/font_color = Color(0.98039216, 1, 0.17254902, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 2
-theme_override_fonts/font = ExtResource("7_be048")
-theme_override_font_sizes/font_size = 16
-text = "Nivel 1"
-label_settings = SubResource("LabelSettings_rs542")
+size_flags_vertical = 0
+text = "nvl 1"
+label_settings = SubResource("LabelSettings_y73xl")
 horizontal_alignment = 1
 
 [node name="Control" type="Control" parent="Panel/MarginContainer/HBoxContainer" unique_id=1890556930]
@@ -209,13 +202,27 @@ size_flags_stretch_ratio = 3.58
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/HBoxContainer" unique_id=2022160989]
 layout_mode = 2
+size_flags_horizontal = 0
 size_flags_vertical = 4
 theme_override_constants/separation = 5
 
-[node name="precio" type="Label" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer" unique_id=95191658]
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1642297361]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="moneda" type="TextureRect" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=974260010]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+texture = ExtResource("10_6rtv5")
+stretch_mode = 3
+
+[node name="precio" type="Label" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=95191658]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 4
+size_flags_horizontal = 8
+size_flags_vertical = 0
 text = "Nombre"
 label_settings = ExtResource("6_ahgl1")
 horizontal_alignment = 1
@@ -256,7 +263,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Nombre"
-label_settings = SubResource("LabelSettings_y73xl")
+label_settings = ExtResource("6_ahgl1")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -271,7 +278,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Nombre"
-label_settings = SubResource("LabelSettings_6rtv5")
+label_settings = ExtResource("6_ahgl1")
 horizontal_alignment = 1
 vertical_alignment = 1
 

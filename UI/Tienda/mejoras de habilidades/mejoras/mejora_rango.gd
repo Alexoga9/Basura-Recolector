@@ -6,6 +6,7 @@ func _ready():
 
 
 func aplicar_mejora():
+	NivelesDeExperiencia.nivel_rango +=1
 	jugador.radar_componente.basura_collider.shape.radius += 10
 	actualizar_datos()
 

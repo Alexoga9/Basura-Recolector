@@ -11,7 +11,7 @@
 size = Vector2(32, 23.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ycxac"]
-size = Vector2(114, 102)
+size = Vector2(48, 36)
 
 [node name="Estación Rota" type="StaticBody2D" unique_id=121739820]
 y_sort_enabled = true
@@ -26,6 +26,7 @@ shape = SubResource("RectangleShape2D_fqxgv")
 collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger Jugador" unique_id=1682131691]
+position = Vector2(0, 12)
 shape = SubResource("RectangleShape2D_ycxac")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=499963391]

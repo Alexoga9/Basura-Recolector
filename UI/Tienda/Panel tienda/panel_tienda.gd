@@ -57,7 +57,7 @@ func _comprar_mejora():
 	logica_mejora.aplicar_mejora()
 	Dinero.dinero -= precio #Cambiar por el base
 	nivel += 1
-	label_nivel.text = ("Nivel " + str(nivel))
+	label_nivel.text = ("nvl " + str(nivel))
 	_actualizar_barra_de_progreso()
 	_actualizar_precio()
 
@@ -78,8 +78,8 @@ func _on_boton_pressed():
 
 
 func estadisticas(ahora: float, buff: float):
-	beneficio.text = str(ahora)
-	actual.text = str(buff)
+	beneficio.text = str(buff)
+	actual.text = str(ahora)
 
 
 func leer_nivel() -> int:

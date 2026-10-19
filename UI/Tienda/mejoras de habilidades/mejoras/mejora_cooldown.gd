@@ -7,6 +7,7 @@ func _ready():
 
 
 func aplicar_mejora():
+	NivelesDeExperiencia.nivel_cooldown += 1
 	jugador.radar_componente.cooldown_tiempo -= 0.2
 	actualizar_datos()
 

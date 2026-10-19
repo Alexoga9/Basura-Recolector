@@ -38,3 +38,14 @@ res://Commons/Componentes/Input/InputComponente.gd
 res://Entidades/Estaciones/Maquina Expendedora/MaquinaExpendedora.tscn
 res://Entidades/Estaciones/Maquina Expendedora/maquina_expendedora.gd
 res://Entidades/Consumible/refresco_loot.tscn
+res://Commons/Componentes/Radares/RadarComponente.gd
+res://UI/Tienda/mejoras de habilidades/mejoras/mejora_cooldown.gd
+res://UI/Tienda/mejoras de habilidades/mejoras/mejora_rango.gd
+res://UI/Tienda/tienda_ui.tscn
+res://UI/Tienda/Panel tienda/panel_tienda.tscn
+res://UI/Tienda/Panel tienda/panel_tienda.gd
+res://Entidades/Estaciones/Estación Rota/Requisitos de materiales/UI Requisitos Materiales/casilla_de_requisito_materiales.tscn
+res://Entidades/Estaciones/Estación Rota/estación_rota.tscn
+res://Escenarios/Mundos/chunk_2.tscn
+res://UI/transicion/transicion_background.tscn
+res://UI/transicion/transicion_background.gd
