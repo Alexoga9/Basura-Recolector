@@ -1,5 +1,4 @@
-res://Escenarios/save_game.gd
-res://Recursos/Save/logica_guardado.tscn
+res://Entidades/Jugador/Jugador.tscn
 res://UI/Theme/Tienda.tres
 res://Escenarios/Oficial/TileMapOficial.tres
 res://Escenarios/shine/hit_flash.gdshader
@@ -18,16 +17,5 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
-res://Entidades/Basura/Caja/Obstaculos/piedra/piedra cesped claro.tres
-res://Escenarios/prueba de cambio de sprite/valla.gd
-res://Recursos/Save/RecolectorData.gd
-res://Recursos/Save/ReconstructorData.gd
-res://Recursos/data_estacion_rota.gd
-res://Entidades/Estaciones/Estación Rota/estación_rota.gd
-res://Entidades/Estaciones/Estación Rota/estación_rota.tscn
-res://Escenarios/Mundos/chunk_1.tscn
-res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/MaquinaExpendedoraRota.tres
-res://Entidades/Estaciones/Estación Rota/panel_de_requisitos_de_materiales.gd
-res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/TrituradoraRota.tres
-res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/TiendaRota.tres
-res://Escenarios/Mundos/chunk_2.tscn
+res://Commons/Componentes/Radares/RadarComponente.gd
+res://Commons/Componentes/Utilidades/Feedback/Resaltado/ResaltadoComponente.gd
