@@ -6,7 +6,7 @@ extends BarraDeProgreso
 func _process(delta):
 	if recoge_basura.cooldown_activo:
 		visible = true
-		
+
 		# Usamos directamente las propiedades nativas de ProgressBar
 		# para evitar el lerp del padre.
 		max_value = recoge_basura.cooldown_tiempo

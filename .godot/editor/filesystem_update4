@@ -37,3 +37,4 @@ res://Entidades/Jugador/Jugador.gd
 res://UI/Tienda/mejoras de habilidades/mejoras/mejora_refresco.gd
 res://UI/Tienda/golpe_mejora.gd
 res://Entidades/Jugador/barra_cooldown.gd
+res://UI/Tienda/Panel tienda/panel_tienda.tscn

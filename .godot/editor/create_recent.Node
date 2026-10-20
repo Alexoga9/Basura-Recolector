@@ -1,9 +1,9 @@
+TextureRect
 TDeslizar
 Timer
 ColorRect
 MarginContainer
 Label
-TextureRect
 HBoxContainer
 Control
 VBoxContainer
