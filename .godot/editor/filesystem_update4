@@ -23,3 +23,12 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanza
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
 res://UI/transicion/transicion_background.gd
+res://UI/Tienda/mejoras de habilidades/logica_mejora.gd
+res://UI/Tienda/mejoras de habilidades/mejoras/mejora_resistencia.gd
+res://UI/Tienda/tienda_ui.tscn
+res://UI/Tienda/MejoraFuerza.gd
+res://Escenarios/Mundos/chunk_1.tscn
+res://Entidades/Basura/Caja/Obstaculos/piedra/piedra cesped claro.tres
+res://Entidades/Basura/Caja/Obstaculos/piedra/piedra cesped oscuro.tres
+res://UI/Tienda/mejoras de habilidades/mejoras/mejora_cooldown.gd
+res://UI/Tienda/mejoras de habilidades/mejoras/mejora_rango.gd

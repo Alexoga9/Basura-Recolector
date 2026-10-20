@@ -185,6 +185,7 @@ script = ExtResource("19_52q4a")
 metadata/_custom_type_script = "uid://cp267s1mgfxd1"
 
 [node name="Pico" parent="MarginContainer/ScrollContainer/Caja de compras" unique_id=1195401960 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
+visible = false
 layout_mode = 2
 focus_neighbor_top = NodePath("../Refrescos")
 mejora = ExtResource("17_0x7iy")
@@ -196,6 +197,7 @@ script = ExtResource("12_2icyj")
 metadata/_custom_type_script = "uid://cp267s1mgfxd1"
 
 [node name="Hacha" parent="MarginContainer/ScrollContainer/Caja de compras" unique_id=2012610679 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
+visible = false
 layout_mode = 2
 mejora = SubResource("Resource_iqrif")
 logica_mejora = NodePath("Logica_Hacha")
@@ -206,6 +208,7 @@ script = ExtResource("22_iqrif")
 metadata/_custom_type_script = "uid://cp267s1mgfxd1"
 
 [node name="Azada" parent="MarginContainer/ScrollContainer/Caja de compras" unique_id=660848076 node_paths=PackedStringArray("logica_mejora") instance=ExtResource("1_d2rrg")]
+visible = false
 layout_mode = 2
 mejora = SubResource("Resource_ncotw")
 logica_mejora = NodePath("Logica_Azada")

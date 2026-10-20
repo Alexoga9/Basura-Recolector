@@ -17,7 +17,6 @@
 [ext_resource type="PackedScene" uid="uid://c1kcmjbhf62q1" path="res://Escenarios/prueba de cambio de sprite/Valla.tscn" id="8_aqtp6"]
 [ext_resource type="Resource" uid="uid://5k76mbciamak" path="res://Entidades/Loot/loots/re_madera.tres" id="9_4xlto"]
 [ext_resource type="Texture2D" uid="uid://d3r43nmrn4esl" path="res://Assets/entidades/Valla/Ya.png" id="9_d0bkc"]
-[ext_resource type="Texture2D" uid="uid://due6mtxcwadhu" path="res://Assets/Inventario/Items.png" id="9_iq5bc"]
 [ext_resource type="Resource" uid="uid://dmky67t6umj3u" path="res://Entidades/Loot/loots/rs_piedra.tres" id="10_18pdu"]
 [ext_resource type="AudioStream" uid="uid://sahbu26hpnvx" path="res://Assets/audio/Hit.wav" id="10_bgs43"]
 [ext_resource type="Texture2D" uid="uid://i2ox5ksvvper" path="res://Escenarios/Oficial/Tilesheet Oficial.png" id="10_imjhf"]
@@ -32,25 +31,6 @@
 [ext_resource type="PackedScene" uid="uid://b1luv0bei0jvi" path="res://UI/HUD/UI_canvas_layer.tscn" id="33_imjhf"]
 [ext_resource type="Script" uid="uid://x0afdmm3k1jj" path="res://Utilidades/Sistemas/Checkpoint/CheckpointComponente.gd" id="36_pmfwy"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tsijt"]
-atlas = ExtResource("9_iq5bc")
-region = Rect2(48, 81, 16, 14)
-
-[sub_resource type="Resource" id="Resource_wre61"]
-script = ExtResource("5_isstk")
-id = "Peñon"
-nombre = "Peñon"
-audio = ExtResource("4_u8set")
-sprite = SubResource("AtlasTexture_tsijt")
-cantidad_maxima = 9999
-tipo_de_elemento = 3
-valor = 10
-veces_a_golpear = 2
-tiene_requisito = true
-tipo_de_requisito = 1
-nivel_de_requisito = 2
-metadata/_custom_type_script = "uid://dnu2r5yw53pto"
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_pmfwy"]
 atlas = ExtResource("10_imjhf")
 region = Rect2(17, 152, 14, 22)
@@ -63,7 +43,7 @@ audio = ExtResource("4_u8set")
 sprite = SubResource("AtlasTexture_pmfwy")
 cantidad_maxima = 9999
 tipo_de_elemento = 2
-valor = 500
+valor = 10
 veces_a_golpear = 2
 tiene_requisito = true
 tipo_de_requisito = 1
@@ -438,7 +418,6 @@ data = ExtResource("6_4xlto")
 
 [node name="Basura49" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=696166597 instance=ExtResource("3_dahfg")]
 position = Vector2(725, 411)
-data = SubResource("Resource_wre61")
 
 [node name="Basura50" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=185417449 instance=ExtResource("3_dahfg")]
 position = Vector2(625, 573)

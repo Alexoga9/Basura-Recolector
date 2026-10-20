@@ -33,7 +33,6 @@ audio = ExtResource("1_h8486")
 sprite = SubResource("AtlasTexture_x1wga")
 conjunto_de_sprites = Array[Texture2D]([SubResource("AtlasTexture_h8486"), SubResource("AtlasTexture_itv3a"), SubResource("AtlasTexture_hxtmk"), SubResource("AtlasTexture_yu28j")])
 cantidad_maxima = 9999
-tipo_de_elemento = 3
 tipo_de_basura = 1
 veces_a_golpear = 2
 tipo_de_requisito = 1

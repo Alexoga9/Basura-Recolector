@@ -6,11 +6,17 @@ func _ready():
 
 
 func aplicar_mejora():
-	#print(str(jugador.energia_componente.energia_maxima))
+	NivelesDeExperiencia.nivel_resistencia += 1
 	jugador.energia_componente.aumentar_energia_maxima(10)
-	#print(str(jugador.energia_componente.energia_maxima))
+	mejora_pico()
 	actualizar_datos()
 
 
 func actualizar_datos():
 	panel.estadisticas(jugador.energia_componente.energia_maxima, jugador.energia_componente.energia_maxima + 10)
+
+
+func mejora_pico():
+	if NivelesDeExperiencia.nivel_resistencia >= 3:
+		print("PICO")
+		jugador.estadisticas_componente.pico += 1
