@@ -2,64 +2,97 @@
 class_name LanzaBasura extends Node
 
 @export var bolsa_de_basura: PackedScene
-@export var data_template: LootDefinicion
+@export var data: LootDefinicion
 
-var direccion_lanzamiento: Vector2 = Vector2.UP
-@export var fuerza_lanzamiento: float = 100.0 # Velocidad de vuelo (píxeles por segundo)
-@export var distancia_vuelo: float = 50.0 # Qué tan lejos volará antes de desaparecer o chocar
+@export var fuerza_lanzamiento: float = 100.0
+@export var distancia_vuelo: float = 50.0
+@export var offset_inicial: float = 30.0
+
 @onready var jugador: Jugador = $"../.."
 
+var direccion_lanzamiento: Vector2 = Vector2.UP
 
-func _process(delta):
-	var input_dir = Input.get_vector("izquierda", "derecha", "arriba", "abajo")
+
+func _process(_delta: float) -> void:
+	var input_dir: Vector2 = Input.get_vector(
+		"izquierda",
+		"derecha",
+		"arriba",
+		"abajo"
+
+	)
 
 	if input_dir != Vector2.ZERO:
-		direccion_lanzamiento = input_dir
+		direccion_lanzamiento = input_dir.normalized()
 
 	if Input.is_action_just_pressed("Lanzar_Basura"):
-		datos_basura()
+		lanzar_basura()
 
 
-func datos_basura():
-	if Inventario.peso == null or Inventario.peso <= 0:
+func lanzar_basura() -> void:
+	if Inventario.peso <= 0:
 		return
 
-	var cantidad_basura: int = Inventario.peso
-	#var recurso_basura = Inventario.get_item_resource("Basura")
+	if bolsa_de_basura == null or data == null:
+		push_warning("Falta configurar la bolsa de basura.")
+		return
 
-	#if recurso_basura == null:
-		#return
+	# Crear datos independientes para la bolsa.
+	var datos_bolsa: LootDefinicion = data.duplicate()
+	datos_bolsa.valor = Inventario.valor_de_basuras
 
-	var valor_total: int = cantidad_basura * 100
-
-	var datos_bolsa = data_template.duplicate()
-	datos_bolsa.valor = valor_total
-
-	#Inventario.remove_item("Basura", cantidad_basura)
-	Inventario.peso = 0
-	spawnear(datos_bolsa)
+	# Crear y lanzar la bolsa.
+	if spawnear(datos_bolsa):
+		Inventario.peso = 0
+		Inventario.valor_de_basuras = 0
 
 
-func spawnear(datos_bolsa: LootDefinicion):
-	var nuevo = bolsa_de_basura.instantiate()
+func spawnear(datos_bolsa: LootDefinicion) -> bool:
+	if fuerza_lanzamiento <= 0.0:
+		return false
+
+	if not is_instance_valid(jugador):
+		return false
+
+	var nuevo: BolsaDeBasura = bolsa_de_basura.instantiate() as BolsaDeBasura
+
+	if nuevo == null:
+		push_warning("La escena debe utilizar BolsaDeBasura como script raíz.")
+		return false
+
+	# Asignar datos ANTES de agregar al árbol.
 	nuevo.data = datos_bolsa
 
-	# Posición inicial: Justo delante del jugador
-	var posicion_inicial = jugador.global_position
-	var offset_inicial: float = 30.0 # Para que no explote dentro del jugador
-	nuevo.global_position = posicion_inicial + (direccion_lanzamiento * offset_inicial)
-
-	# Agregamos la bolsa al mundo
 	get_tree().current_scene.add_child(nuevo)
 
-	# 👇 AQUÍ ESTÁ EL MOVIMIENTO LINEAL, TOTALMENTE CONTROLADO AQUÍ 👇
-	var punto_final = posicion_inicial + (direccion_lanzamiento * distancia_vuelo)
+	# Posición inicial frente al jugador.
+	var direccion: Vector2 = direccion_lanzamiento.normalized()
 
-	# Calculamos el tiempo que tardará en llegar según la fuerza de lanzamiento
-	var tiempo_vuelo = distancia_vuelo / fuerza_lanzamiento
+	var posicion_inicial: Vector2 = (
+		jugador.global_position +
+		direccion * offset_inicial
 
-	# Crear el Tween para mover la bolsa suavemente
-	var tween = create_tween()
-	tween.tween_property(nuevo, "global_position", punto_final, tiempo_vuelo)\
-	.set_trans(Tween.TRANS_LINEAR)\
-	.set_ease(Tween.EASE_OUT)
+	)
+
+	nuevo.global_position = posicion_inicial
+
+	# La distancia representa cuánto viaja después de aparecer.
+	var punto_final: Vector2 = (
+		posicion_inicial +
+		direccion * distancia_vuelo
+
+	)
+
+	var tiempo_vuelo: float = distancia_vuelo / fuerza_lanzamiento
+
+	var tween: Tween = nuevo.create_tween()
+
+	tween.tween_property(
+		nuevo,
+		"global_position",
+		punto_final,
+		tiempo_vuelo
+
+	).set_trans(Tween.TRANS_LINEAR)
+
+	return true

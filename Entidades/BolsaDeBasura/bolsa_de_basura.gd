@@ -1,14 +1,11 @@
 @icon("res://addons/iconos/obstaculo.svg")
-class_name BolsaDeBasura extends RigidBody2D
+class_name BolsaDeBasura extends StaticBody2D
 
 @onready var sprite2d = %Sprite
 @onready var collision_shape_2d = %CollisionShape2D
 @onready var sonido = %sonido
 @onready var resaltado_componente: ResaltadoComponente = %ResaltadoComponente
 @onready var t_recogida: TRecogida = %TRecogida
-
-# 📌 EL COMPONENTE DE APILAMIENTO
-@onready var componente_apilable: ComponenteApilable = %ComponenteApilable
 
 @export var data: LootDefinicion
 
@@ -29,13 +26,21 @@ func _ready():
 	iniciar_valores()
 
 
-func collect():
+func collect() -> LootDefinicion:
+
+	if data == null:
+		return null
+
 	t_recogida.tween()
 	sonido.play()
-	collision_shape_2d.call_deferred("set", "disabled", true)
+	collision_shape_2d.set_deferred("disabled", true)
 
-	Inventario.add_item(data)
+	# Recuperar el peso y valor de la bolsa.
+	Inventario.peso += valor
+	Inventario.valor_de_basuras += data.valor
+
 	SignalBus.basura_recogida.emit()
+
 	return data
 
 
@@ -43,13 +48,18 @@ func _on_sonido_finished():
 	queue_free()
 
 
-func iniciar_valores():
+func iniciar_valores() -> void:
+	if data == null:
+		push_warning("La bolsa de basura no tiene datos asignados.")
+		return
+
 	id = data.id
 	nombre = data.nombre
 	requisito = data.tiene_requisito
 	tipo_de_requisito = int(data.tipo_de_requisito)
 	nivel_requisito = data.nivel_de_requisito
 	valor = data.valor
+
 	sonido.stream = data.audio
 	sprite2d.texture = data.sprite
 

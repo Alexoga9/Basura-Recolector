@@ -200,7 +200,7 @@ body_character = NodePath("../..")
 unique_name_in_owner = true
 script = ExtResource("11_8xsec")
 bolsa_de_basura = ExtResource("6_qtgc7")
-data_template = ExtResource("13_orci8")
+data = ExtResource("13_orci8")
 
 [node name="EstadisticasComponente" type="Node" parent="Componentes" unique_id=384667304]
 unique_name_in_owner = true

@@ -1,4 +1,3 @@
-
 @icon("res://addons/iconos/Radar.svg")
 class_name RadarComponente extends Area2D
 
@@ -146,7 +145,7 @@ func actualizar_resaltado() -> void:
 # =========================================
 
 
-func revisar_espacio_inventario(body: Basura = null) -> void:
+func revisar_espacio_inventario(body = null) -> void:
 
 	# Si no se seleccionó una basura,
 	# utilizar la más cercana.
@@ -180,7 +179,7 @@ func revisar_espacio_inventario(body: Basura = null) -> void:
 # =========================================
 
 
-func revisar_tipo_de_basura(body: Basura) -> void:
+func revisar_tipo_de_basura(body:) -> void:
 
 	if not is_instance_valid(body):
 		return
@@ -245,7 +244,7 @@ func revisar_tipo_de_requisito(body: Basura) -> bool:
 # =========================================
 
 
-func recolectar_basura(body: Basura) -> void:
+func recolectar_basura(body) -> void:
 
 	if not is_instance_valid(body):
 		return
@@ -263,8 +262,8 @@ func recolectar_basura(body: Basura) -> void:
 
 	# Retirar el objeto antes de recolectarlo.
 	quitar_cuerpo(body)
-
-	body.collect()
+	if body.has_method("collect"):
+		body.collect()
 
 	jugador.energia_componente.agotar(1)
 

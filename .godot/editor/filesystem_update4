@@ -17,5 +17,9 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
+res://Commons/Componentes/Input/lanza_basura.gd
+res://Escenarios/Mundos/chunk_1.tscn
+res://Entidades/BolsaDeBasura/bolsa_de_basura.gd
+res://Entidades/Basura/Basura.tscn
+res://Commons/Componentes/Utilidades/Loot/loot_collector.gd
 res://Commons/Componentes/Radares/RadarComponente.gd
-res://Commons/Componentes/Utilidades/Feedback/Resaltado/ResaltadoComponente.gd
