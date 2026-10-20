@@ -150,13 +150,13 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_frfy0"]
-radius = 24.0
+radius = 25.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1ibpt"]
 radius = 12.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yyjpx"]
-radius = 24.0
+radius = 25.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8xsec"]
 bg_color = Color(0.54509807, 0.54509807, 0.54509807, 0.49803922)
@@ -216,6 +216,7 @@ script = ExtResource("10_8j4j1")
 metadata/_custom_type_script = "uid://cb0k0n6eyh661"
 
 [node name="BeberRefresco" type="Node" parent="Componentes" unique_id=537897415]
+unique_name_in_owner = true
 script = ExtResource("11_8j4j1")
 metadata/_custom_type_script = "uid://dxiih3fmt05kb"
 
@@ -255,7 +256,8 @@ collision_layer = 0
 collision_mask = 2
 script = ExtResource("9_6pwru")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Loot Collector" unique_id=643640936]
+[node name="LootCollectorShape" type="CollisionShape2D" parent="Loot Collector" unique_id=643640936]
+unique_name_in_owner = true
 position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_1ibpt")
 debug_color = Color(0.2517849, 0.6236958, 0.3297198, 0.41960785)

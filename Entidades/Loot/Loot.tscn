@@ -7,6 +7,7 @@
 radius = 3.0
 
 [node name="Loot" type="Area2D" unique_id=1738087845 groups=["Loot"]]
+y_sort_enabled = true
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_yo54l")
@@ -19,6 +20,7 @@ debug_color = Color(0.21118888, 0.6402497, 0, 0.41960785)
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1161258588]
 unique_name_in_owner = true
+y_sort_enabled = true
 
 [node name="sonido" type="AudioStreamPlayer" parent="." unique_id=1004405695]
 unique_name_in_owner = true

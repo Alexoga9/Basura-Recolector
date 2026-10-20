@@ -6,8 +6,14 @@ func _ready():
 
 
 func aplicar_mejora():
-	jugador.estadisticas_componente.golpe += 1
+	NivelesDeExperiencia.nivel_golpe +=1
+	setear_nivel()
 	actualizar_datos()
+
+
+func setear_nivel():
+	var nuevo_golpe := 1 + (NivelesDeExperiencia.nivel_cooldown - 1) * 2
+	jugador.estadisticas_componente.golpe += nuevo_golpe
 
 
 func actualizar_datos():

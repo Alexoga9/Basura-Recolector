@@ -9,13 +9,21 @@ func _ready():
 
 func aplicar_mejora():
 	NivelesDeExperiencia.nivel_rango +=1
-	jugador.radar_componente.basura_collider.shape.radius += 10
+	setear_nivel()
 	mejora_azada()
 	actualizar_datos()
 
 
 func actualizar_datos():
 	panel.estadisticas(jugador.radar_componente.basura_collider.shape.radius, jugador.radar_componente.basura_collider.shape.radius + 10)
+
+
+func setear_nivel():
+	var nuevo_radio := 25.0 + (NivelesDeExperiencia.nivel_rango - 1) * 5.0
+
+	if jugador.radar_componente.basura_collider.shape.radius != nuevo_radio:
+		jugador.radar_componente.basura_collider.shape.radius = nuevo_radio
+		jugador.radar_componente.loot_collector_shape.shape.radius = nuevo_radio
 
 
 func mejora_azada():

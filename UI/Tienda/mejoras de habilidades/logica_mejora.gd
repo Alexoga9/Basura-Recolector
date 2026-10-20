@@ -16,8 +16,13 @@ func iniciar():
 	await get_tree().process_frame
 	jugador = Global.jugador
 	panel = get_parent()
-	actualizar_datos()
 	padre = get_parent()
+	setear_nivel()
+	actualizar_datos()
+
+
+func setear_nivel():
+	pass
 
 
 func aplicar_mejora():

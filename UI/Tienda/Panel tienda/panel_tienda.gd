@@ -26,6 +26,7 @@ var precio: int = 0
 func _ready():
 	_settear_valores_iniciales()
 	nivel = leer_nivel()
+	actualizar_datos()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -57,15 +58,19 @@ func _comprar_mejora():
 	logica_mejora.aplicar_mejora()
 	Dinero.dinero -= precio #Cambiar por el base
 	nivel += 1
-	label_nivel.text = ("nvl " + str(nivel))
-	_actualizar_barra_de_progreso()
-	_actualizar_precio()
+	actualizar_datos()
 
 
 func _actualizar_precio():
 	precio *= 1.7
 	precio = int(precio)
 	label_precio.text = str(precio)
+	label_nivel.text = ("nvl " + str(nivel))
+
+
+func actualizar_datos():
+	_actualizar_precio()
+	_actualizar_barra_de_progreso()
 
 
 func _actualizar_barra_de_progreso():

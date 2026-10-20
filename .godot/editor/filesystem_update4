@@ -1,4 +1,10 @@
-res://UI/transicion/transicion_background.tscn
+res://UI/Tienda/mejoras de habilidades/mejoras/mejora_resistencia.gd
+res://UI/Tienda/mejoras de habilidades/logica_mejora.gd
+res://UI/Tienda/Panel tienda/panel_tienda.gd
+res://UI/Tienda/mejoras de habilidades/mejoras/mejora_cooldown.gd
+res://Commons/Componentes/Radares/RadarComponente.gd
+res://UI/Tienda/mejoras de habilidades/mejoras/mejora_rango.gd
+res://Entidades/Jugador/Jugador.tscn
 res://UI/Theme/Tienda.tres
 res://Escenarios/Oficial/TileMapOficial.tres
 res://Escenarios/shine/hit_flash.gdshader
@@ -22,17 +28,12 @@ res://Entidades/Consumible/Tipos de Consumibles/animacion lata consumible.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
-res://UI/transicion/transicion_background.gd
-res://UI/Tienda/mejoras de habilidades/logica_mejora.gd
-res://UI/Tienda/mejoras de habilidades/mejoras/mejora_resistencia.gd
-res://UI/Tienda/tienda_ui.tscn
-res://UI/Tienda/MejoraFuerza.gd
+res://UI/Tienda/mejoras de habilidades/mejoras/mejora_peso.gd
+res://Entidades/Loot/Loot.tscn
 res://Escenarios/Mundos/chunk_1.tscn
-res://Entidades/Basura/Caja/Obstaculos/piedra/piedra cesped claro.tres
-res://Entidades/Basura/Caja/Obstaculos/piedra/piedra cesped oscuro.tres
-res://UI/Tienda/mejoras de habilidades/mejoras/mejora_cooldown.gd
-res://UI/Tienda/mejoras de habilidades/mejoras/mejora_rango.gd
-res://Utilidades/Autoloads/Signal_Bus.gd
-res://UI/HUD/Notificacion/notificaion.gd
-res://UI/HUD/Notificacion/notificaion.tscn
-res://UI/HUD/UI_canvas_layer.tscn
+res://UI/Tienda/mejoras de habilidades/mejoras/mejora_lanzamiento.gd
+res://Commons/Componentes/Input/beber_refresco.gd
+res://Entidades/Jugador/Jugador.gd
+res://UI/Tienda/mejoras de habilidades/mejoras/mejora_refresco.gd
+res://UI/Tienda/golpe_mejora.gd
+res://Entidades/Jugador/barra_cooldown.gd

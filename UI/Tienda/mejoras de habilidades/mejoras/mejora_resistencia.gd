@@ -9,9 +9,14 @@ func _ready():
 
 func aplicar_mejora():
 	NivelesDeExperiencia.nivel_resistencia += 1
-	jugador.energia_componente.aumentar_energia_maxima(10)
+	setear_nivel()
 	mejora_pico()
 	actualizar_datos()
+
+
+func setear_nivel():
+	var nueva_energia_maxima := 10 + (NivelesDeExperiencia.nivel_cooldown - 1) * 2
+	jugador.energia_componente.energia_maxima = nueva_energia_maxima
 
 
 func actualizar_datos():

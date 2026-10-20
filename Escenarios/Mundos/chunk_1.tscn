@@ -448,6 +448,7 @@ position = Vector2(699, 546)
 data = SubResource("Resource_000eb")
 
 [node name="Loot" type="Node2D" parent="Objetos Ambientales/Entiddaes" unique_id=1106672725 groups=["EntidadesLoot"]]
+y_sort_enabled = true
 position = Vector2(-97, 32)
 
 [node name="Loot" parent="Objetos Ambientales/Entiddaes/Loot" unique_id=1738087845 instance=ExtResource("17_imjhf")]
@@ -462,14 +463,14 @@ data = ExtResource("20_imjhf")
 position = Vector2(473, 50)
 data = ExtResource("21_3lpn2")
 
+[node name="Loot4" parent="Objetos Ambientales/Entiddaes/Loot" unique_id=1252821559 instance=ExtResource("17_imjhf")]
+position = Vector2(504, 15)
+data = ExtResource("23_imjhf")
+
 [node name="Notas" type="Node2D" parent="Objetos Ambientales/Entiddaes" unique_id=234868375 groups=["Entidades Notas"]]
 
 [node name="Nota Coleccionable" parent="Objetos Ambientales/Entiddaes/Notas" unique_id=2140338302 instance=ExtResource("15_wre61")]
 position = Vector2(238, 274)
-
-[node name="Loot2" parent="Objetos Ambientales/Entiddaes" unique_id=1252821559 instance=ExtResource("17_imjhf")]
-position = Vector2(407, 47)
-data = ExtResource("23_imjhf")
 
 [node name="Estaciones" type="Node2D" parent="Objetos Ambientales" unique_id=812052510]
 y_sort_enabled = true
@@ -484,12 +485,14 @@ position = Vector2(91, -48)
 
 [node name="Trituradora" parent="Objetos Ambientales/Estaciones/Estaciones Normales" unique_id=429918730 instance=ExtResource("5_c2e4j")]
 visibility_layer = 2
+y_sort_enabled = true
 position = Vector2(251, -52)
 
 [node name="MaquinaExpendedora" parent="Objetos Ambientales/Estaciones/Estaciones Normales" unique_id=869111144 instance=ExtResource("6_isstk")]
 position = Vector2(172, -40)
 
 [node name="Estaciones Rotas" type="Node2D" parent="Objetos Ambientales/Estaciones" unique_id=1095621018 groups=["EstacionesRotas"]]
+y_sort_enabled = true
 
 [node name="vallas" type="TileMapLayer" parent="Objetos Ambientales" unique_id=356144072]
 y_sort_enabled = true

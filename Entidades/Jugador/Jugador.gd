@@ -4,6 +4,7 @@ class_name Jugador extends CharacterBody2D
 @onready var input_componente: InputComponente = %InputComponente
 @onready var movimiento_componente: MovimientoComponente = %MovimientoComponente
 @onready var radar_componente: RadarComponente = %RadarComponente
+@onready var beber_refresco: BeberRefresco = %BeberRefresco
 
 @onready var contador_componente: ContadorComponente = %ContadorComponente
 

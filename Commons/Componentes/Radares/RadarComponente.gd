@@ -6,14 +6,16 @@ var cuerpos: Array[Basura] = []
 @onready var jugador: Jugador = $".."
 @onready var timer: Timer = %Timer
 @onready var basura_collider:CollisionShape2D = %basuraCollider
+@onready var loot_collector_shape:CollisionShape2D = %LootCollectorShape
 
 @export var cooldown_tiempo: float = 1.5
 var cooldown_activo: bool = false
 
 
+
 func _ready():
 	SignalBus.interaccion.connect(revisar_espacio_inventario)
-	timer.wait_time = cooldown_tiempo - (NivelesDeExperiencia.nivel_cooldown * 0.2)
+	timer.wait_time = cooldown_tiempo
 
 
 func revisar_espacio_inventario():
@@ -85,7 +87,7 @@ func revisar_tipo_de_requisito(body: Basura) -> bool:
 
 
 func recolectar_basura(basura: Basura):
-	timer.wait_time = cooldown_tiempo - (NivelesDeExperiencia.nivel_cooldown * 0.2)
+	timer.wait_time = cooldown_tiempo
 	timer.start()
 	cooldown_activo = true
 	print("Cooldown activo")

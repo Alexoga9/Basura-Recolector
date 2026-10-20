@@ -8,8 +8,16 @@ func _ready():
 
 
 func aplicar_mejora():
-	Inventario.peso_maximo += 2
+	NivelesDeExperiencia.nivel_peso +=1
+	setear_nivel()
 	actualizar_datos()
+
+
+func setear_nivel():
+	var nuevo_peso := 3 + (NivelesDeExperiencia.nivel_peso - 1) * 2
+
+	if Inventario.peso_maximo != nuevo_peso:
+		Inventario.peso_maximo = nuevo_peso
 
 
 func actualizar_datos():
