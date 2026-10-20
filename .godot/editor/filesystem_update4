@@ -32,3 +32,7 @@ res://Entidades/Basura/Caja/Obstaculos/piedra/piedra cesped claro.tres
 res://Entidades/Basura/Caja/Obstaculos/piedra/piedra cesped oscuro.tres
 res://UI/Tienda/mejoras de habilidades/mejoras/mejora_cooldown.gd
 res://UI/Tienda/mejoras de habilidades/mejoras/mejora_rango.gd
+res://Utilidades/Autoloads/Signal_Bus.gd
+res://UI/HUD/Notificacion/notificaion.gd
+res://UI/HUD/Notificacion/notificaion.tscn
+res://UI/HUD/UI_canvas_layer.tscn

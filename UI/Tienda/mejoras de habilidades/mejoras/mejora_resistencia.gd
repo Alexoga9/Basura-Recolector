@@ -1,5 +1,7 @@
 extends Logica_Mejora
 
+@export_multiline var mensaje_notificacion: String
+
 
 func _ready():
 	iniciar()
@@ -20,3 +22,4 @@ func mejora_pico():
 	if NivelesDeExperiencia.nivel_resistencia >= 3:
 		print("PICO")
 		jugador.estadisticas_componente.pico += 1
+		SignalBus.notificacion.emit(mensaje_notificacion)

@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://brsvcig4qpclr"]
+
+[ext_resource type="Script" uid="uid://ctu8qtrardkpf" path="res://UI/HUD/Notificacion/notificaion.gd" id="1_02hpm"]
+[ext_resource type="LabelSettings" uid="uid://crqcrwgjb38h3" path="res://UI/Theme/tipografia tienda.tres" id="2_02hpm"]
+
+[node name="Notificaion" type="Control" unique_id=1609407371]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_02hpm")
+
+[node name="Timer" type="Timer" parent="." unique_id=705481973]
+unique_name_in_owner = true
+wait_time = 5.0
+one_shot = true
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=343752373]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_bottom = 50
+
+[node name="Label" type="Label" parent="MarginContainer" unique_id=79382109]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 8
+text = "Pito"
+label_settings = ExtResource("2_02hpm")
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/Label" unique_id=98786782]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.23529412)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

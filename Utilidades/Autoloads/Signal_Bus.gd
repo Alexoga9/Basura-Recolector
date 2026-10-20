@@ -39,6 +39,9 @@ signal juego_reanudado
 # # HUD
 signal mostrar_hud
 
+# # Notificaciones
+signal notificacion(texto: String)
+
 # # Notas Coleccionables
 signal notas_menu(DataNotas)
 

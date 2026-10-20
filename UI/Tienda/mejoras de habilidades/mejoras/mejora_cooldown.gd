@@ -1,7 +1,8 @@
 extends Logica_Mejora
 
+@export_multiline var mensaje_notificacion: String
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
 	iniciar()
 
@@ -20,3 +21,4 @@ func mejora_pico():
 	if NivelesDeExperiencia.nivel_cooldown >= 3:
 		print("HACHA")
 		jugador.estadisticas_componente.hacha += 1
+		SignalBus.notificacion.emit(mensaje_notificacion)
