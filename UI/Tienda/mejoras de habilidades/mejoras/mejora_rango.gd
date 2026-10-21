@@ -20,6 +20,7 @@ func actualizar_datos():
 
 func setear_nivel():
 	var nuevo_radio := 25.0 + (NivelesDeExperiencia.nivel_rango - 1) * 5.0
+	jugador.estadisticas_componente.actualizar_herramientas()
 
 	if jugador.radar_componente.basura_collider.shape.radius != nuevo_radio:
 		jugador.radar_componente.basura_collider.shape.radius = nuevo_radio
@@ -29,5 +30,4 @@ func setear_nivel():
 func mejora_azada():
 	if NivelesDeExperiencia.nivel_rango >= 3:
 		print("AZADA")
-		jugador.estadisticas_componente.azada += 1
 		SignalBus.notificacion.emit(mensaje_notificacion)

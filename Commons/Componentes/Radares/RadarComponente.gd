@@ -63,6 +63,8 @@ func objeto_disponible(body: Node2D) -> bool:
 
 	if not es_objeto_recolectable(body):
 		return false
+	if body is Basura and body.recogida:
+		return false
 
 	# Las bolsas no se pueden recoger durante el vuelo.
 	if body is BolsaDeBasura:
@@ -262,7 +264,7 @@ func revisar_tipo_de_basura(body: Node2D) -> void:
 			print("No cumples los requisitos")
 			return
 
-		if basura.data.veces_a_golpear > 0:
+		if basura.golpes_restantes > 0:
 			print("Basura pesada")
 			basura.romper()
 			return

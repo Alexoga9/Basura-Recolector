@@ -1,40 +1,12 @@
 extends ResaltadoComponente
-
-@onready var basura: Basura =$"../.."
-
-
-func _ready():
-
-	# Ahora conectamos correctamente
-	trigger_area.area_entered.connect(_on_area_2d_area_entered)
-	trigger_area.area_exited.connect(_on_area_2d_area_exited)
+## El radar decide que objeto resaltar; otras areas no activan el outline.
 
 
-#func _on_trigger_jugador_body_entered(body):
-	#if body.is_in_group("Radar Basura"):
-		#resaltado()
-#
-#
-#func _on_trigger_jugador_body_exited(body):
-	#if body.is_in_group("Radar Basura"):
-		#no_resaltado()
-
-
-func _on_area_2d_mouse_entered():
-	print("MOUSE")
-	if basura.en_area_jugador:
-		resaltado()
-
-
-func _on_area_2d_mouse_exited():
-	no_resaltado()
-
-
-func _on_area_2d_area_entered(area):
-	print("Caja")
-	resaltado()
-
-
-func _on_area_2d_area_exited(area):
-	if area.is_in_group("Radar Basura"):
-		no_resaltado()
+func configurar_region(textura: Texture2D) -> void:
+	if material_outline is ShaderMaterial:
+		material_outline = material_outline.duplicate()
+		var region := Vector4.ZERO
+		if textura is AtlasTexture:
+			var rect: Rect2 = textura.region
+			region = Vector4(rect.position.x, rect.position.y, rect.size.x, rect.size.y)
+		material_outline.set_shader_parameter("texture_region", region)

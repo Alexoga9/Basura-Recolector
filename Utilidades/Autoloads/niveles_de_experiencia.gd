@@ -1,5 +1,7 @@
 extends Node
 
+signal niveles_actualizados
+
 var nivel_resistencia: int = 1
 var nivel_cooldown: int = 1
 var nivel_rango: int = 1
@@ -33,6 +35,7 @@ func deserializar(datos: Dictionary) -> void:
 	for clave in datos:
 		if clave in self:
 			set(clave, datos[clave])
+	niveles_actualizados.emit()
 
 
 ## Resetea todos los niveles a 1.
@@ -47,3 +50,4 @@ func reset() -> void:
 	nivel_pico = 1
 	nivel_hacha = 1
 	nivel_azada = 1
+	niveles_actualizados.emit()

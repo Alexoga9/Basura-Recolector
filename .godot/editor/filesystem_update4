@@ -24,3 +24,10 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerz
 res://UI/Barras/barras_hud.tscn
 res://UI/Gestor de Interfas/GestorInterfaces.gd
 res://UI/HUD/Pausa/pausa.tscn
+res://Commons/Componentes/Core/EstadisticasComponente.gd
+res://Entidades/Basura/Basura_item.gd
+res://Entidades/Basura/resaltado_basura.gd
+res://UI/Tienda/mejoras de habilidades/mejoras/mejora_cooldown.gd
+res://UI/Tienda/mejoras de habilidades/mejoras/mejora_rango.gd
+res://UI/Tienda/mejoras de habilidades/mejoras/mejora_resistencia.gd
+res://Utilidades/Autoloads/niveles_de_experiencia.gd

@@ -20,6 +20,8 @@ var id_guardado: String = ""
 var objetivo = null
 var en_area_jugador: bool = false
 var input_recibido: bool = false
+var recogida: bool = false
+var golpes_restantes: int = -1
 
 var id: String
 var nombre: String
@@ -43,6 +45,8 @@ func _ready():
 
 
 func iniciar_valores():
+	if golpes_restantes < 0:
+		golpes_restantes = data.veces_a_golpear
 	id = data.id
 	nombre = data.nombre
 	tipo_de_basura = int(data.tipo_de_basura)
@@ -69,6 +73,9 @@ func recibir_input():
 
 
 func collect():
+	if recogida:
+		return null
+	recogida = true
 	t_recogida.tween()
 	sonido.play()
 	collision_shape_2d.call_deferred("set", "disabled", true)
@@ -83,7 +90,7 @@ func collect():
 
 func romper():
 	print("Golpeas " + str(Global.jugador.estadisticas_componente.golpe))
-	data.veces_a_golpear -= Global.jugador.estadisticas_componente.golpe
+	golpes_restantes = maxi(0, golpes_restantes - Global.jugador.estadisticas_componente.golpe)
 	sonido_romper.play()
 	tween_rebote.tween()
 
@@ -99,24 +106,41 @@ func _on_area_2d_input_event(viewport, event, shape_idx):
 
 
 func sprite_aleatorio():
-	var random: int = randi_range(0,data.conjunto_de_sprites.size() - 1)
-
 	if data.conjunto_de_sprites:
+		var random: int = randi_range(0, data.conjunto_de_sprites.size() - 1)
 		sprite2d.texture = data.conjunto_de_sprites[random]
 	else:
 		sprite2d.texture = data.sprite
+	if sprite2d.texture.get_height() > 32:
+		# Mantener la base del arbol junto al collider.
+		sprite2d.offset.y = 4.0 - sprite2d.texture.get_height() / 2.0
+	var rect_sprite: Rect2 = sprite2d.get_rect()
+	var detector: Area2D = $"Mouse Detector"
+	detector.position = sprite2d.position + rect_sprite.get_center()
+	var forma_mouse := RectangleShape2D.new()
+	forma_mouse.size = rect_sprite.size
+	detector.get_node("CollisionShape2D").shape = forma_mouse
+	resaltado_componente.configurar_region(sprite2d.texture)
 
 
 func obtener_datos() -> Dictionary:
 	return {
 		"global_position": global_position,
-		"veces_a_golpear": data.veces_a_golpear
+		"veces_a_golpear": golpes_restantes
 	}
 
 
 func aplicar_datos(datos: Dictionary) -> void:
 	if datos.has("recogida") and datos["recogida"] == true:
 		queue_free()
+
+
+func serializar_estado() -> Dictionary:
+	return {"golpes_restantes": golpes_restantes}
+
+
+func restaurar_estado(datos: Dictionary) -> void:
+	golpes_restantes = maxi(0, int(datos.get("golpes_restantes", data.veces_a_golpear)))
 
 
 #func ser_recogida():

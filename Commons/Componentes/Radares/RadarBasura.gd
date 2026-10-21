@@ -50,11 +50,11 @@ func revisar_tipo_de_basura():
 	var body = get_entidad_aleatoria()
 
 	if body != null and jugador.energia_componente.energia > 0 and !cooldown_activo:
-		if body.data.veces_a_golpear > 0:
+		if body.golpes_restantes > 0:
 			print("Basura pesada")
 			body.romper()
 
-		elif body.data.veces_a_golpear == 0:
+		elif body.golpes_restantes == 0:
 			recolectar_basura(body)
 
 

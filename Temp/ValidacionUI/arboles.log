@@ -1,0 +1,94 @@
+Godot Engine v4.6.3.stable.steam.7d41c59c4 - https://godotengine.org
+
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2570)
+✅ Jugador asignado en Global: Jugador
+Analizando: Basura
+No cumples los requisitos
+ERROR: Condition "!actions.custom_samplers.has(function->arguments[j].tex_builtin)" is true. Continuing.
+   at: _dump_node_code (servers/rendering/shader_compiler.cpp:1294)
+   GDScript backtrace (most recent call first):
+       [0] validar (res://Tools/validar_arboles.gd:67)
+       [1] pulsar_e (res://Tools/validar_arboles.gd:28)
+resistencia
+cooldown
+rango
+peso
+lanzamiento
+refrescos
+golpe
+pico
+hacha
+azada
+PICO
+PICO
+PICO
+HACHA
+HACHA
+HACHA
+AZADA
+AZADA
+AZADA
+Analizando: Basura
+Basura pesada
+Golpeas 2
+Analizando: Basura
+Basura pesada
+Golpeas 2
+Analizando: Basura
+Basura pesada
+Golpeas 2
+Analizando: Basura
+Recolectando: Basura
+[Inventory] Se añadió material. Estado de madera: 1
+[Inventory] Se añadió material. Estado de madera: 2
+ERROR: Condition "!actions.custom_samplers.has(function->arguments[j].tex_builtin)" is true. Continuing.
+   at: _dump_node_code (servers/rendering/shader_compiler.cpp:1294)
+   GDScript backtrace (most recent call first):
+       [0] validar (res://Tools/validar_arboles.gd:108)
+✅ Jugador asignado en Global: Jugador
+resistencia
+cooldown
+rango
+peso
+lanzamiento
+refrescos
+golpe
+pico
+hacha
+azada
+[Inventory] Se añadió material. Estado de refresco: 1
+[Inventory] Se añadió material. Estado de reloj: 1
+Coleccionable Adquirido
+Coleccionable Adquirido
+Analizando: Basura50
+Basura pesada
+Golpeas 10
+Analizando: Basura50
+Recolectando: Basura50
+[Inventory] Se añadió material. Estado de madera: 3
+Coleccionable Adquirido
+Coleccionable Adquirido
+[Inventory] Se añadió material. Estado de madera: 4
+Coleccionable Adquirido
+Coleccionable Adquirido
+Cooldown terminado
+Analizando: Basura55
+Basura pesada
+Golpeas 10
+Analizando: Basura55
+Recolectando: Basura55
+[Inventory] Se añadió material. Estado de madera: 5
+Coleccionable Adquirido
+Coleccionable Adquirido
+[Inventory] Se añadió material. Estado de madera: 6
+Coleccionable Adquirido
+Coleccionable Adquirido
+Cooldown terminado
+Analizando: Basura56
+Basura pesada
+Golpeas 10
+Analizando: Basura56
+Recolectando: Basura56
+Arboles reales del nivel talados con E: 3
+Validacion arboles y mejoras: 0 errores

@@ -15,8 +15,9 @@ func aplicar_mejora():
 
 
 func setear_nivel():
-	var nueva_energia_maxima := 10 + (NivelesDeExperiencia.nivel_cooldown - 1) * 2
+	var nueva_energia_maxima := 10 + (NivelesDeExperiencia.nivel_resistencia - 1) * 2
 	jugador.energia_componente.energia_maxima = nueva_energia_maxima
+	jugador.estadisticas_componente.actualizar_herramientas()
 
 
 func actualizar_datos():
@@ -26,5 +27,4 @@ func actualizar_datos():
 func mejora_pico():
 	if NivelesDeExperiencia.nivel_resistencia >= 3:
 		print("PICO")
-		jugador.estadisticas_componente.pico += 1
 		SignalBus.notificacion.emit(mensaje_notificacion)
