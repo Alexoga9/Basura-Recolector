@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://br4shbrxkwxgj" path="res://UI/Tienda/tienda_ui.tscn" id="3_2tmmb"]
 [ext_resource type="PackedScene" uid="uid://rwh52xelkbw4" path="res://UI/transicion/pasar_por_puerta.tscn" id="5_2tmmb"]
 [ext_resource type="PackedScene" uid="uid://brsvcig4qpclr" path="res://UI/HUD/Notificacion/notificaion.tscn" id="6_dn1ve"]
+[ext_resource type="PackedScene" uid="uid://ddmkbldfr3fiv" path="res://UI/HUD/Menu Coleccionables/menu_coleccionables.tscn" id="7_veisl"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=2007522030]
 script = ExtResource("1_r6vmc")
@@ -24,4 +25,7 @@ z_index = 4
 visible = false
 
 [node name="Notificaion" parent="." unique_id=1609407371 instance=ExtResource("6_dn1ve")]
+visible = false
+
+[node name="Menu Coleccionables" parent="." unique_id=990696473 instance=ExtResource("7_veisl")]
 visible = false

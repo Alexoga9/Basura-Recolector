@@ -67,6 +67,7 @@ func spawnear(datos_bolsa: LootDefinicion) -> bool:
 	# Asignar datos ANTES de agregar al árbol.
 	nuevo.data = datos_bolsa
 	nuevo.peso_contenido = Inventario.peso
+	nuevo.puede_recogerse = false
 
 	get_tree().current_scene.add_child(nuevo)
 
@@ -99,5 +100,6 @@ func spawnear(datos_bolsa: LootDefinicion) -> bool:
 		tiempo_vuelo
 
 	).set_trans(Tween.TRANS_LINEAR)
+	tween.tween_callback(nuevo.set.bind("puede_recogerse", true))
 
 	return true

@@ -603,8 +603,9 @@ position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_frfy0")
 debug_color = Color(0.63369, 0.5259296, 0.0091273235, 0.41960785)
 
-[node name="BebeRefresco" parent="." unique_id=766981547 instance=ExtResource("13_54am8")]
+[node name="BebeRefresco" parent="." unique_id=766981547 node_paths=PackedStringArray("energia_componente") instance=ExtResource("13_54am8")]
 unique_name_in_owner = true
+energia_componente = NodePath("../Componentes/EnergiaComponente")
 
 [node name="Loot Collector" type="Area2D" parent="." unique_id=376001421]
 editor_description = "Se encarga de recolectar los objetos  en el mundo.

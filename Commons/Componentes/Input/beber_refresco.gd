@@ -1,6 +1,6 @@
 class_name BeberRefresco extends Node
 
-@onready var energia_componente: EnergiaComponente = %EnergiaComponente
+@export var energia_componente: EnergiaComponente
 @onready var audio_refresco:AudioStreamPlayer = %AudioRefresco
 
 var energia_recuperada: int = 2

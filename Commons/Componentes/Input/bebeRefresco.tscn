@@ -1,17 +1,11 @@
 [gd_scene format=3 uid="uid://5pp4m7kfpi2e"]
 
 [ext_resource type="Script" uid="uid://dxiih3fmt05kb" path="res://Commons/Componentes/Input/beber_refresco.gd" id="1_8vrsr"]
-[ext_resource type="Script" uid="uid://ctb6hc0tn7yig" path="res://Commons/Componentes/Core/EnergiaComponente.gd" id="2_wxhvn"]
 [ext_resource type="AudioStream" uid="uid://cjghok5vlof2n" path="res://Assets/audio/drop-coin.mp3" id="3_lb8nk"]
 
 [node name="BebeRefresco" type="Node" unique_id=766981547]
 script = ExtResource("1_8vrsr")
 metadata/_custom_type_script = "uid://dxiih3fmt05kb"
-
-[node name="EnergiaComponente" type="Node" parent="." unique_id=1814614476]
-unique_name_in_owner = true
-script = ExtResource("2_wxhvn")
-metadata/_custom_type_script = "uid://ctb6hc0tn7yig"
 
 [node name="AudioRefresco" type="AudioStreamPlayer" parent="." unique_id=203654113]
 unique_name_in_owner = true
