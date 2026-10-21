@@ -29,6 +29,9 @@ func _process(_delta: float) -> void:
 	var botones := botones_disponibles()
 	for i in botones.size():
 		var boton := botones[i]
+		var enfocar := _enfocar_con_mouse.bind(boton)
+		if not boton.mouse_entered.is_connected(enfocar):
+			boton.mouse_entered.connect(enfocar)
 		var anterior := botones[(i - 1 + botones.size()) % botones.size()]
 		var siguiente := botones[(i + 1) % botones.size()]
 		boton.focus_neighbor_top = boton.get_path_to(anterior)
@@ -42,6 +45,12 @@ func _process(_delta: float) -> void:
 		restaurar_foco()
 	elif foco != null:
 		ultimos_focos[interfaz_actual.get_instance_id()] = weakref(foco)
+
+
+func _enfocar_con_mouse(boton: BaseButton) -> void:
+	if botones_disponibles().has(boton):
+		boton.grab_focus()
+		ultimos_focos[interfaz_actual.get_instance_id()] = weakref(boton)
 
 
 func restaurar_foco() -> void:
@@ -77,7 +86,7 @@ func abrir_interfaz(interfaz: Control) -> void:
 		var estilo := StyleBoxFlat.new()
 		estilo.bg_color = Color.TRANSPARENT
 		estilo.border_color = Color(1.0, 0.85, 0.25)
-		estilo.set_border_width_all(2)
+		estilo.set_border_width_all(1)
 		boton.add_theme_stylebox_override("focus", estilo)
 	restaurar_foco.call_deferred()
 

@@ -21,3 +21,6 @@ res://Entidades/Consumible/Tipos de Consumibles/animacion lata consumible.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
+res://UI/Barras/barras_hud.tscn
+res://UI/Gestor de Interfas/GestorInterfaces.gd
+res://UI/HUD/Pausa/pausa.tscn

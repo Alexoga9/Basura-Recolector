@@ -49,11 +49,8 @@ region = Rect2(8, 64.98008, 72, 11.021248)
 texture = SubResource("AtlasTexture_4x5sh")
 region_rect = Rect2(0, -1.2075214, 72, 14.221708)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6sjcf"]
-load_path = "res://.godot/imported/barras.png-4a80219611d372fa2e756a33b57a0644.ctex"
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_2orqm"]
-atlas = SubResource("CompressedTexture2D_6sjcf")
+atlas = ExtResource("2_4x5sh")
 region = Rect2(7, 32, 74, 14)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dptl3"]
@@ -68,11 +65,8 @@ texture = SubResource("AtlasTexture_yvp2q")
 region_rect = Rect2(0, -0.2697258, 72, 14.324356)
 modulate_color = Color(1, 0.4132895, 0.5624667, 1)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yvp2q"]
-load_path = "res://.godot/imported/barra completado nivel.png-6675e23632ab13b784b523c055fe22ee.ctex"
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_6sjcf"]
-atlas = SubResource("CompressedTexture2D_yvp2q")
+atlas = ExtResource("6_tuoc7")
 region = Rect2(0, 0, 42, 8)
 
 [node name="VBoxContainer" type="VBoxContainer" unique_id=376441717]

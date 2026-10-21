@@ -2,11 +2,10 @@
 
 [ext_resource type="Script" uid="uid://dxsan7lcfsr3y" path="res://Recursos/DatosHabilidades.gd" id="1_bq8mx"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7465i"]
-load_path = "res://.godot/imported/Items.png-25e6b9c465b490096982c9e191a3cf7f.ctex"
+[ext_resource type="Texture2D" path="res://Assets/Inventario/Items.png" id="2_items"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mog8t"]
-atlas = SubResource("CompressedTexture2D_7465i")
+atlas = ExtResource("2_items")
 region = Rect2(32, 64, 16, 16)
 
 [resource]

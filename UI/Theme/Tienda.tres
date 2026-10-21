@@ -5,24 +5,18 @@
 [ext_resource type="Texture2D" uid="uid://bufyh2pfyydu4" path="res://Assets/UI/sliders.png" id="3_c2bmj"]
 [ext_resource type="FontFile" uid="uid://b0npykajpdagi" path="res://Assets/tipografia/HexFont16pix.ttf" id="4_op4kc"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vehtn"]
-load_path = "res://.godot/imported/marco tienda.png-44704895ee92af5e2e32ada2f35bf46f.ctex"
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xf2eu"]
 content_margin_top = 0.0
-texture = SubResource("CompressedTexture2D_vehtn")
+texture = ExtResource("2_op4kc")
 texture_margin_left = 4.0
 texture_margin_top = 4.0
 texture_margin_right = 4.0
 texture_margin_bottom = 6.0
 modulate_color = Color(0.43211025, 0.43211025, 0.4321102, 1)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_be048"]
-load_path = "res://.godot/imported/marco tienda.png-44704895ee92af5e2e32ada2f35bf46f.ctex"
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vehtn"]
 content_margin_top = 0.0
-texture = SubResource("CompressedTexture2D_be048")
+texture = ExtResource("2_op4kc")
 texture_margin_left = 4.0
 texture_margin_top = 4.0
 texture_margin_right = 4.0
@@ -37,12 +31,9 @@ texture_margin_top = 4.0
 texture_margin_right = 4.0
 texture_margin_bottom = 6.0
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xf2eu"]
-load_path = "res://.godot/imported/marco tienda.png-44704895ee92af5e2e32ada2f35bf46f.ctex"
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ak11l"]
 content_margin_top = 0.0
-texture = SubResource("CompressedTexture2D_xf2eu")
+texture = ExtResource("2_op4kc")
 texture_margin_left = 4.0
 texture_margin_top = 4.0
 texture_margin_right = 4.0
@@ -69,11 +60,8 @@ region = Rect2(37.009644, 3.9951653, 6.0153427, 40.023052)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_op4kc"]
 texture = SubResource("AtlasTexture_op4kc")
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c2bmj"]
-load_path = "res://.godot/imported/sliders.png-91434a4362cbc38ae9ccc0d6dc2e96e3.ctex"
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_pc5ro"]
-atlas = SubResource("CompressedTexture2D_c2bmj")
+atlas = ExtResource("3_c2bmj")
 region = Rect2(37.009644, 3.9951653, 6.0153427, 40.023052)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yfof6"]

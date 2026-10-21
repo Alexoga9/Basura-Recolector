@@ -1,136 +1,137 @@
-res://addons/kanban_tasks/view/board/board.tscn::2cb08e71a2e0bff37cc0b2518c4c5ffc::1776607738::res://.godot/exported/133200997/export-daea182019a10c65ab6e89e2abedf5b5-board.scn
-res://addons/kanban_tasks/view/details/details.tscn::28eb95b434895e7db2dbda6a05f12d07::1776607738::res://.godot/exported/133200997/export-75943a8a2cd190059a47de86762d6ce8-details.scn
-res://addons/kanban_tasks/view/details/step_holder.tscn::a6d4e702b519db4c223a9ac4f9e36dc8::1776607738::res://.godot/exported/133200997/export-3a071426fc2ebe70bc7254a94a605ed8-step_holder.scn
-res://addons/kanban_tasks/view/documentation/documentation.tscn::fdc3bea8b4bb46850954f4a1e11c228f::1776607738::res://.godot/exported/133200997/export-05c726e8b11a685441a9033971b75adb-documentation.scn
-res://addons/kanban_tasks/view/settings/categories/categories.tscn::bbecd756db59323f0a038b74929c788b::1776607738::res://.godot/exported/133200997/export-935c01ed31ad1def72ef9d1481b8dd7c-categories.scn
-res://addons/kanban_tasks/view/settings/general/general.tscn::4a04a5a4c14eba5b44e867103f25f6e7::1776607738::res://.godot/exported/133200997/export-68bb1c8893edecefe2142822543b0cc2-general.scn
-res://addons/kanban_tasks/view/settings/stages/stages.tscn::fb6b34a92b1f9b3d0bb9c43cafbaacf8::1776607738::res://.godot/exported/133200997/export-bf3bbdaeba84c5f0e6d0d46491a260cb-stages.scn
-res://addons/kanban_tasks/view/settings/settings.tscn::41bf5db895d840109f13a9ff680a9d6a::1776607738::res://.godot/exported/133200997/export-67156235658f1aef00042bc3025ddd45-settings.scn
-res://addons/kanban_tasks/view/stage/stage.tscn::aeff10ede6ac9cdd7188ee07f8665143::1776607738::res://.godot/exported/133200997/export-8157973a508c23a9f7a865c48bed066a-stage.scn
-res://addons/kanban_tasks/view/start/start.tscn::5628f661f64323f9720a76ad734dabda::1776607738::res://.godot/exported/133200997/export-93c323a3653cd47631e288d56f60112d-start.scn
-res://addons/kanban_tasks/view/task/task.tscn::b8b79465ab7e3b57f83cb2a52386b1fa::1776607738::res://.godot/exported/133200997/export-a30f366497878cc0a6339c236ddfcba1-task.scn
-res://addons/ridiculous_coding/blip.tscn::6faa2d731470e761155be3ce4a430a60::1776607738::res://.godot/exported/133200997/export-b1ad8d14270ed9cc1579a4d6c9cefed0-blip.scn
-res://addons/ridiculous_coding/boom.tscn::d6f890c760f652d0130ffda1539db61c::1776607738::res://.godot/exported/133200997/export-11f90c4756095d97250dcbf86355b502-boom.scn
-res://addons/ridiculous_coding/dock.tscn::dba5e25d4205dba1c254f667dfb34fb5::1776607738::res://.godot/exported/133200997/export-dedb02818fc44fca15e7272c63823ea6-dock.scn
-res://addons/ridiculous_coding/font.tres::d9f6da3f1e8e111a5e2fa9dff0040b82::1776607738::res://.godot/exported/133200997/export-a54c4bd19718d4a0ce53162c96591a54-font.res
-res://addons/ridiculous_coding/newline.tscn::316da9c480a4fd393f8ebcf64a2f1258::1776607738::res://.godot/exported/133200997/export-72fbb1bf8ab7e45286a88e04c2484d2b-newline.scn
-res://addons/script_splitter/core/ui/multi_split_container/taby/container.tscn::313efe99a8a0b43194315bd5f3c4e265::1776607738::res://.godot/exported/133200997/export-586d5dd167b0c300810bc8b1deced25a-container.scn
-res://addons/script_splitter/core/ui/multi_split_container/taby/separator.tscn::b1a6d3065022a4f302fa0b5bb28af202::1776607738::res://.godot/exported/133200997/export-e8d8fc7ee30af4a22ec5eb707afef5d2-separator.scn
-res://addons/script_splitter/core/ui/multi_split_container/taby/tab.tscn::c2a214715cf8e00e5c785f24510ed75e::1776607738::res://.godot/exported/133200997/export-6a99765f01fc036a104f72ef09a3bfba-tab.scn
-res://addons/script_splitter/core/ui/splitter/taby/split_selection/flat_box.tres::6f2973ba10da48a044c20e1b549d0d79::1773435730::res://.godot/exported/133200997/export-c8e6432dc57bf26a8e4198957cc34a9f-flat_box.res
-res://addons/script_splitter/core/ui/splitter/taby/split_selection/SplitSelection.tscn::8567a7fb7b2e04ed4dc18af965752a97::1776607738::res://.godot/exported/133200997/export-ba16693e2d22ed14513a34a26e1aac2a-SplitSelection.scn
-res://addons/script_splitter/core/ui/window/code_search.tscn::5c0f615cad88d51296b4694b47877526::1776607738::res://.godot/exported/133200997/export-a60968e9584b0c1332510ee054ec3122-code_search.scn
-res://addons/script_splitter/core/ui/window/editor.tscn::975a1e8dccf93424f8bcadb4824eb784::1776607738::res://.godot/exported/133200997/export-6e0767766a886198e2cfe24fb4815188-editor.scn
-res://addons/default_env.tres::a52129f071fffbd20a6013a6c0edec1e::1773270161::res://.godot/exported/133200997/export-f5db7a05e3be4093730deb35af71336b-default_env.res
-res://Entidades/Basura/Basura.tscn::c20e877b636dbe0353e9602f05ad87d1::1792340920::res://.godot/exported/133200997/export-5d1fb6cafa3ec9c4f6ddd018b7944c9c-Basura.scn
-res://Entidades/Basura/basura_data.tres::b7a9d3a8e582336261930dcd841f0427::1792448494::res://.godot/exported/133200997/export-396b5ac51926ff00dfc86563d961cb5e-basura_data.res
-res://Entidades/Consumible/consumible.tscn::2baacd879228286696fdb69757a37943::1792365207::res://.godot/exported/133200997/export-12cead33d0ce7cb0a3827c7939c38a2a-consumible.scn
-res://Entidades/Jugador/Jugador.tscn::7ebce2351db2566b141954f1814b67c4::1792375404::res://.godot/exported/133200997/export-31457da9209bbc1b3d5868a0f9adced3-Jugador.scn
-res://Entidades/Loot/loots/re_madera.tres::c6f0369f18016f9075521d67de603743::1792341300::res://.godot/exported/133200997/export-cba5209377725ece2db7b19242b0129a-re_madera.res
-res://Entidades/Loot/loots/rs_piedra.tres::df55dbe99dab4aab5c45a1ec1bb06719::1792341300::res://.godot/exported/133200997/export-7cee234c2e3e10ea2e74d04a019cfcdb-rs_piedra.res
-res://Entidades/Loot/Loot.tscn::c229ac4edb574660a822078af3570ed2::1792360178::res://.godot/exported/133200997/export-11aa46a4c136026aa7c0e126e0313e54-Loot.scn
-res://Entidades/Obstaculo/obstaculo.tscn::c7788c66b8b7460067824d017481df29::1790720232::res://.godot/exported/133200997/export-a2f913514ca5f82239c73d6a0e83fdc3-obstaculo.scn
-res://Escenarios/mundo.tscn::dd4fcce0829bcba53f628c1f7c70962b::1790437967::res://.godot/exported/133200997/export-7d50e33541e0c429e281775500b06e79-mundo.scn
-res://UI/Theme/Tienda.tres::74a744344600aefe8a7f84860e23ae64::1792448494::res://.godot/exported/133200997/export-b5a1f2eb2d8487032fa9fe61ea3f9ac6-Tienda.res
-res://UI/Theme/tipografia tienda.tres::b2f6024e0d798029c5b9d5ba60cbb60e::1789683791::res://.godot/exported/133200997/export-84f49ca6dfbea0b3d9d85a4d40aa8240-tipografia tienda.res
-res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres::291a52dc4cacc52e8dc1c174891e65cc::1792448495::res://.godot/exported/133200997/export-30efe66eced9eeca562be28ff14a8051-mejora_resistencia.res
-res://addons/scene_palette/components/favorite_button/FavoriteButton.tscn::52607dd86dc4933844f3ee953f9b7e95::1792340922::res://.godot/exported/133200997/export-1f42466e133e7a775391fa38f32102e5-FavoriteButton.scn
-res://addons/scene_palette/components/scene_thumbnail/scene_drop.tscn::94ea0957f020ff6fc0b06fa11fd8fd4a::1792340922::res://.godot/exported/133200997/export-7616ded9db712086a51cd3e95c051eed-scene_drop.scn
-res://addons/scene_palette/components/sub_palette.tscn::53907e68f168d9fe7225f60a748bf932::1792340922::res://.godot/exported/133200997/export-74f4dab00f3b268055e470a9f2aa3583-sub_palette.scn
-res://addons/scene_palette/save_data/save_data.tres::7e349ec4b6c5ec64ac93c9527c256974::1792340922::res://.godot/exported/133200997/export-c1456b174ab3731982c674b72f3b52a7-save_data.res
-res://addons/scene_palette/styles/back_panel.tres::7fd9620a0896f6477fcdea362d4eb0ad::1792341300::res://.godot/exported/133200997/export-38b5b8e4658be085e52d15087994d034-back_panel.res
-res://addons/scene_palette/palette.tscn::c35bd14b148e9c8c4c2384b08e5a0a6a::1792340922::res://.godot/exported/133200997/export-e10f8441008a06af384b4eafc45ecfc3-palette.scn
-res://Assets/entidades/OutlineMaterial.tres::ec71dadeeed48319f46e3af3d99c5627::1788819736::res://.godot/exported/133200997/export-85fe8b95d5b9aae7c8f5a31605c5929f-OutlineMaterial.res
-res://Assets/Shaders/Shader nuevo ajustable correctamente.tres::2514302bbafd774a62f6e8f062bc28d3::1792448494::res://.godot/exported/133200997/export-eb6d85960c311c21e84c5ea88787e8d4-Shader nuevo ajustable correctamente.res
-res://Assets/tipografia/FuenteOffset.tres::7bf133018374ae32f2756d95e646685b::1787440175::res://.godot/exported/133200997/export-53811a179c80d223069f65f849672af6-FuenteOffset.res
-res://Entidades/Basura/Bolsa de Basura/bolsa_de_basura.tres::43bcae6e598175c61236d96b30147cad::1791943627::res://.godot/exported/133200997/export-966c5f7b3460b4ba62bfed899fb9926f-bolsa_de_basura.res
-res://Entidades/Basura/Caja/Obstaculos/Arbol/Arbol Cesped Claro.tres::a6a888c4bc33a7ed644b5626b3419d0c::1792448494::res://.godot/exported/133200997/export-a73ee5c25f373269072bafc43cf951eb-Arbol Cesped Claro.res
-res://Entidades/Basura/Caja/Obstaculos/Arbol/Arbol Cesped Oscuro.tres::ad67d86217b1ccfed075c5bf8ffd335f::1792340920::res://.godot/exported/133200997/export-8d70fab6b8e94e306317e3b3c270203c-Arbol Cesped Oscuro.res
-res://Entidades/Basura/Caja/Obstaculos/hierba alta/hierba alta.tres::03f2e4f05e8b77ef7b1b3700acc336d4::1792340920::res://.godot/exported/133200997/export-acd984fe07b6d4fe67edca609f9c485a-hierba alta.res
-res://Entidades/Basura/Caja/Obstaculos/piedra/piedra cesped claro.tres::7d722e0a1e959aa1ba6036513afc7163::1792453786::res://.godot/exported/133200997/export-62921a8eb993492cbfebeedc1a4782ed-piedra cesped claro.res
-res://Entidades/Basura/Caja/Obstaculos/piedra/piedra cesped oscuro.tres::e59ad27254fefc3412d119d013ab235f::1792453786::res://.godot/exported/133200997/export-82635e5714d3a287a5ea1a020f02b851-piedra cesped oscuro.res
-res://Entidades/Basura/Caja/caja_shape_2d.tres::2f4b907b5b73fbdf0c3f13b16e406a0f::1787441144::res://.godot/exported/133200997/export-eb0b7b7a81b6a41f8ebed5de171f0e60-caja_shape_2d.res
-res://Entidades/Basura/Basura_pesada.tres::606269fc81b5e1fa0551f6511ea11123::1791943627::res://.godot/exported/133200997/export-c81222a04ca0a56a253f0f246fe5a7da-Basura_pesada.res
-res://Entidades/Basura/Obstaculo prueba.tres::5ee8c77fbbb1e6bc1d84d70f5a2ab13f::1792455551::res://.godot/exported/133200997/export-8b4fcf41de2ba13d38c9c77f0d6609cc-Obstaculo prueba.res
-res://Entidades/BolsaDeBasura/bolsa_de_basura.tscn::621b9ee13746ae35f0f94a82d23c04ff::1792340920::res://.godot/exported/133200997/export-7387564f74f50265cda0d230d9ddda76-bolsa_de_basura.scn
-res://Entidades/Consumible/Tipos de Consumibles/animacion lata consumible.tres::8fd0ba9c6e3b04ee60dcf0159e4077d7::1792448495::res://.godot/exported/133200997/export-2595ea090b8188c6ac077179d28bda95-animacion lata consumible.res
-res://Entidades/Consumible/Tipos de Consumibles/honguito.tres::9c23f385200999fdafdd65f4f7624ddc::1791943627::res://.godot/exported/133200997/export-8904caa8ff84ad8450cfcf0c380d4277-honguito.res
-res://Entidades/Estaciones/Estación Rota/Requisitos de materiales/UI Requisitos Materiales/casilla_de_requisito_materiales.tscn::2037f18560ad96d72531aa725d58b993::1792375404::res://.godot/exported/133200997/export-447e9eebd831cf2b26b8732676e76155-casilla_de_requisito_materiales.scn
-res://Entidades/Estaciones/Estación Rota/Requisitos de materiales/Estacion_rota_requisitos_madera.tres::a450c243a8985a09e71ad470b4036685::1788484618::res://.godot/exported/133200997/export-4803ea5b2acfd0abb1565c6e45a871ce-Estacion_rota_requisitos_madera.res
-res://Entidades/Estaciones/Estación Rota/estación_rota.tscn::d7fbe458dc784b3f4dc0cee9c798e264::1792375404::res://.godot/exported/133200997/export-11825a3597c43ca04ba9ec586fd55dd3-estación_rota.scn
-res://Entidades/Estaciones/Maquina Expendedora/MaquinaExpendedora.tscn::bce8840a2c388773be3beffec4698ee0::1792375404::res://.godot/exported/133200997/export-814322e1f2056803a5b3e846532a6a4b-MaquinaExpendedora.scn
-res://Entidades/Estaciones/Tienda/tienda.tscn::ffc77c2edbe0010d18a695be5110b383::1792181471::res://.godot/exported/133200997/export-7271af09ced6cf4c098f73cdc27c6675-tienda.scn
-res://Entidades/Estaciones/Trituradora/trituradora.tscn::d1c830accbeb922685762d6f4f984d1f::1792340920::res://.godot/exported/133200997/export-802793f2ce4ae6a885648326879c5e50-trituradora.scn
-res://Entidades/genericos/e_sprite.tscn::f68a7836884bd5184eeabcd9a4b9bd92::1785333042::res://.godot/exported/133200997/export-41d3471f698a2948edfba3e1934ef915-e_sprite.scn
-res://Entidades/Loot/coleccionables/loot_coleccionable.tres::c94c2571e9e4060c832c936666647824::1792341300::res://.godot/exported/133200997/export-6adee81fcf5cb0987ae9d865acd0ea06-loot_coleccionable.res
-res://Entidades/Notas/nota_coleccionable.tscn::d48362bf0030ba2c7063bea46f3d8d35::1792340921::res://.godot/exported/133200997/export-668abaf692023d74c1227520ae1b4af4-nota_coleccionable.scn
-res://Entidades/Notas recogibles/texto_de_nota_recogible.tscn::0884284461a04e4c928545e8550c5f53::1792340921::res://.godot/exported/133200997/export-f12eef7337e478d83247e460907cc0f8-texto_de_nota_recogible.scn
-res://Entidades/Prefabs colocables/piramide.tscn::42cb39514cdaed403c65f6a34b05a183::1789772898::res://.godot/exported/133200997/export-faebf8568254b41e43755c72e9c30af6-piramide.scn
-res://Escenarios/Mundos/chunk_1.tscn::f7df97a2c5e5ca61b6f276f760ee5d27::1792455985::res://.godot/exported/133200997/export-901f5b961531c497b58ad1c0f56c4e71-chunk_1.scn
-res://Escenarios/Mundos/chunk_2.tscn::ab09a4f905b8d7854fd8e7a25fb84e56::1792375404::res://.godot/exported/133200997/export-f95024da180f0597e0df70d683a7c856-chunk_2.scn
-res://Escenarios/Mundos/chunk_3.tscn::c688ea8aa39ce9ad32b823a416557ae6::1792340921::res://.godot/exported/133200997/export-9c284e7c71ef611200fefd4be6657b6f-chunk_3.scn
-res://Escenarios/Mundos/Chunk_4.tscn::290dd2af1cac0631a9ced028429c1746::1792360178::res://.godot/exported/133200997/export-e52f6c0c8e370fdad562ae3f3986fc2b-Chunk_4.scn
-res://Escenarios/Oficial/TileMapOficial.tres::9398f0b9810c83e8e9210ad884862fc5::1792448494::res://.godot/exported/133200997/export-66f6aa5828be7b3f37acddbbb07b257d-TileMapOficial.res
-res://Escenarios/Otoño/layer de otoño recuperable.tscn::b1beaf6c0e02145f7f7d690a012bed69::1788646933::res://.godot/exported/133200997/export-3bf8a17204500f4380667347795a659a-layer de otoño recuperable.scn
-res://Escenarios/Otoño/TS_Otoño.tres::96d368c24205d5e492124d731550571d::1790905066::res://.godot/exported/133200997/export-899c9bd82a03e58b07f0f66d3dc54906-TS_Otoño.res
-res://Escenarios/prueba de cambio de sprite/cambioSprite.tscn::3bd3ee44099a98ad68bf9d8dcdbec889::1790905066::res://.godot/exported/133200997/export-ef19430332f48302f19add9519ef313c-cambioSprite.scn
-res://Escenarios/prueba de cambio de sprite/Valla.tscn::b2adac051f632244d168f9c182a12602::1792340921::res://.godot/exported/133200997/export-c0321e9e8794206f60431969db576cd5-Valla.scn
-res://Escenarios/shine/shining.tscn::062aa0284bd285446e9469097e32fd74::1788653990::res://.godot/exported/133200997/export-1ad8b2747b717c93eb59ce554334f62d-shining.scn
-res://Escenarios/Sprite_sucio/Tile sucio.tres::6ac8ee6376c3f7339d8dd25104fab20e::1792448494::res://.godot/exported/133200997/export-249c2f3b24570f9f4d7bb158eed50ea8-Tile sucio.res
-res://Escenarios/TileMap/Map.tscn::aade18b54d1e7cbd0ff250dcab00d097::1785198600::res://.godot/exported/133200997/export-a0193b13a7bc5548d443f62bcba6d85d-Map.scn
-res://Escenarios/Tilesets/primavera arboles.tres::3c3c6ec388e7958f1cc540ac7b0edbcb::1785325180::res://.godot/exported/133200997/export-55b5d7b15efacbc7cadbc3750bdd3998-primavera arboles.res
-res://Escenarios/Tilesets/TS_Primavera.tres::b3564dfed258bbe8b2c14894a34e958d::1785365008::res://.godot/exported/133200997/export-bda029f68dfd0fc267b665a9baf83eeb-TS_Primavera.res
-res://Escenarios/kdo.tscn::0d8d77ae369dc176e7d094e911c66856::1790438011::res://.godot/exported/133200997/export-f2270d6ba72dc4f316389b30237e923c-kdo.scn
-res://UI/Barras/barras_hud.tscn::468df27fb33bd9a8ce7243c66f55a9f6::1788484618::res://.godot/exported/133200997/export-c16651d369cc4fda4e11e55ebc435a69-barras_hud.scn
-res://UI/HUD/Inventario/Slots Inventario/slot_de_dinero.tscn::06cb2354b924d6d21b7f61f8569e4130::1789772898::res://.godot/exported/133200997/export-367826ba250ece8ab2a0d502af018333-slot_de_dinero.scn
-res://UI/HUD/Inventario/Slots Inventario/slot_de_inventario.tscn::3193cd354ab3e22efa4e6db395004caa::1788484618::res://.godot/exported/133200997/export-7bcf4f7a8d667547debac89fe1956d99-slot_de_inventario.scn
-res://UI/HUD/Inventario/Inventario.tscn::d2a4c603f10412be514d0dbc974cf032::1792375404::res://.godot/exported/133200997/export-dc24853566504fdaba78cb15f994adda-Inventario.scn
-res://UI/HUD/Menu Coleccionables/casilla_coleccionable.tscn::9fae0e6ce7a7e3db4685ef0670e926d7::1788484618::res://.godot/exported/133200997/export-0050db451161c2152fb6687bd996ba80-casilla_coleccionable.scn
-res://UI/HUD/Menu Coleccionables/menu_coleccionables.tscn::bb30d4df3e8c9bb2b596f3e7962b09e3::1792360178::res://.godot/exported/133200997/export-6ea58a62d17088425243ac8bd1cd31da-menu_coleccionables.scn
-res://UI/HUD/Pausa/pausa.tscn::88ca18e456467333cf2671783122ca78::1792360178::res://.godot/exported/133200997/export-bd5368b4111b29848b2c4679033398ed-pausa.scn
-res://UI/HUD/hud.tscn::cfdedb6a876ba69e5212c18e61251f7a::1792360575::res://.godot/exported/133200997/export-1704045a8893c2c818e7ae71df7f0760-hud.scn
-res://UI/HUD/UI_canvas_layer.tscn::7e6d012f74fdbe09de527a11226046d8::1792460826::res://.godot/exported/133200997/export-8d29e71120a9bc7c0b843ef8335754ae-UI_canvas_layer.scn
-res://UI/Menu Principal/Opciones/Créditos/creditos.tscn::de7546c1be46d8fc76d660d65f0c16fa::1792360178::res://.godot/exported/133200997/export-b20e8cc3d0089ff206a705e8a4847bdb-creditos.scn
-res://UI/Menu Principal/Opciones/Opciones de audio/VolumeSlider/VolumeSlider.tscn::b8af6e19a8dc663daeea19b87c879e59::1784064133::res://.godot/exported/133200997/export-5a4eb4a08693afd5dbf85a2c83d37025-VolumeSlider.scn
-res://UI/Menu Principal/Opciones/Opciones de audio/opciones_de_audio.tscn::92c445227162d85c255ef096704bf8bd::1792200190::res://.godot/exported/133200997/export-93f1efa862180b10e6bcb4d6e009467a-opciones_de_audio.scn
-res://UI/Menu Principal/Opciones/Salir/salir.tscn::6efe891189fab9c35a091b44b258033b::1784063318::res://.godot/exported/133200997/export-f62693cc2bbec38bd4b12844067528c2-salir.scn
-res://UI/Menu Principal/Opciones/opciones.tscn::8b9ba67bc3cb6198623adf071e2ea03d::1792360178::res://.godot/exported/133200997/export-60b170ce05ed298c8c1a7c051846daec-opciones.scn
-res://UI/Menu Principal/menu_principal.tscn::0c202ed11fac5c01bc72f4da3863046c::1792360178::res://.godot/exported/133200997/export-936796ab812395c332ef38fd9d1ecb8a-menu_principal.scn
-res://UI/Theme/shaders/label_personalizado.tscn::0986de1de28690e202879b33e96ec565::1788656367::res://.godot/exported/133200997/export-94f7de7361800540ed33e960d8cf5c0a-label_personalizado.scn
-res://UI/Theme/shaders/Shader_label.tres::2b142bbdaa3fe33cb945fd5f3c99cc6b::1788484618::res://.godot/exported/133200997/export-a4c7c71ccd1cb37748505c9c37e70323-Shader_label.res
-res://UI/Theme/labelTheme.tres::2d932822ec53f4899568fb216591950c::1788820791::res://.godot/exported/133200997/export-d8078407c6cdbb8420e6a0ce49bd149c-labelTheme.res
-res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_cooldown.tres::51c6329fc50718fc4b495b667926e16b::1792448495::res://.godot/exported/133200997/export-79d793423bfb6fef634e05fa1daa10eb-datos_habilidades_cooldown.res
-res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres::69e40ea3e1ee2a2d9cee497eaddbcd49::1792448495::res://.godot/exported/133200997/export-472b0fc9b15cf98b0a3fb3f6ac55c9ac-datos_habilidades_fuerza.res
-res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres::d88ec2d4729328dc3fe7ae8c616f5f49::1792448495::res://.godot/exported/133200997/export-d84e8a48723e0c0ebacb6cfdf6ffd0fa-datos_habilidades_honguitos.res
-res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres::61d4e483257adcf3d019f0193e4e0123::1792448495::res://.godot/exported/133200997/export-819a218871e4069940084f28b1b01446-datos_habilidades_lanzamiento.res
-res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.tres::8f298c25f1bb30ebc1b16e40d12f25d7::1792448495::res://.godot/exported/133200997/export-9616ad3d4529b5515d5470e6c5a12709-datos_habilidades_peso.res
-res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_rango.tres::625de19e4048b57cbc767e3a0be139ce::1792448495::res://.godot/exported/133200997/export-f41cbe2d81e478d3ee1a45d2ebb31d58-datos_habilidades_rango.res
-res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_resistencia.tres::add8c19ff886d22a5e25194c81166cc0::1792448495::res://.godot/exported/133200997/export-d4252011738e39c830cf2471fa0026cf-datos_habilidades_resistencia.res
-res://UI/Tienda/Panel tienda/panel_tienda.tscn::aa9b5f8191079a7f4615ed782cad890e::1792375404::res://.godot/exported/133200997/export-4e71010b3b9adcb8fb1b7366bc40433c-panel_tienda.scn
-res://UI/Tienda/tienda_ui.tscn::ae5340447c026eedae9ff9953e164324::1792457266::res://.godot/exported/133200997/export-c517c004ad9c84b3ab3eaf71be3b9887-tienda_ui.scn
-res://UI/transicion/transicion_background.tscn::b6705a73d30b37c8492931471a1b2daa::1792450260::res://.godot/exported/133200997/export-a2dbe74110872cc5581fd3fc9d22b020-transicion_background.scn
-res://Utilidades/AudioBus/default_bus_layout.tres::26f428743a067951c8d46acd6cc791be::1783977596::res://.godot/exported/133200997/export-54be4d24a40c0d0d176293cae7599802-default_bus_layout.res
-res://Utilidades/Sistemas/spawner.tscn::5a9b22f8488acab3a68170f68c3b3a77::1787696734::res://.godot/exported/133200997/export-1cf9c51ad309f29353c031bed3b048cf-spawner.scn
-res://Assets/Coleccionables/coleccionable_grande.tres::be685f69511757abfd4d90d2230b4eb7::1792360178::res://.godot/exported/133200997/export-1396a95ba2d9e65f91ee28c6a8a24b3f-coleccionable_grande.res
-res://Entidades/Consumible/refresco.tres::f9365e38f08dc8f463037583a1c904f2::1792448494::res://.godot/exported/133200997/export-179fe494cb833b94aecf65e4aa286725-refresco.res
-res://Entidades/Consumible/refresco_loot.tscn::a7f81e88092592ac746d1d3590b95e41::1792375404::res://.godot/exported/133200997/export-5fda49f1fcba780273e049c38973a202-refresco_loot.scn
-res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/MaquinaExpendedoraRota.tres::7b911e9f9eb3adfb5ae6679cc1f11f0e::1792341300::res://.godot/exported/133200997/export-dfa3065457f823ef419518377b2e9a19-MaquinaExpendedoraRota.res
-res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/materialesNecesariosDinero.tres::f373a7a06e40b753b6d8433d8f289eea::1792341300::res://.godot/exported/133200997/export-0c763c22831d13da3ab37b8b437d8add-materialesNecesariosDinero.res
-res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/materialesNecesariosPiedra.tres::dc9044f10bad7a61dac96a6219e06c9b::1792341300::res://.godot/exported/133200997/export-da4370d97f7fa2482344868fb9804532-materialesNecesariosPiedra.res
-res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/TiendaRota.tres::9c322add0281a2a75cc8bdafb47f24a9::1792341300::res://.godot/exported/133200997/export-35eb4491621266712cd49e4e3308bde4-TiendaRota.res
-res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/TrituradoraRota.tres::1f32f1e4617b26ed057a084900648798::1792341300::res://.godot/exported/133200997/export-cd7c8f793fab3318522709925e33894c-TrituradoraRota.res
-res://Entidades/Loot/coleccionables/calculadora.tres::d7355a0ca9df8c517e7e658592844d91::1792360178::res://.godot/exported/133200997/export-c5d52ff09cf0fd2743aff94aeba36f54-calculadora.res
-res://Entidades/Loot/coleccionables/cassette.tres::5db8e86ca9271855cd792cc2dc57203f::1792360178::res://.godot/exported/133200997/export-ea293b2795dbe18df6bb7b05da727556-cassette.res
-res://Entidades/Loot/coleccionables/control_nes.tres::4f0f32a585c4c180e5e8c24d06dcdd89::1792360178::res://.godot/exported/133200997/export-31af8daa4c2be81306b55674ea762065-control_nes.res
-res://Entidades/Loot/coleccionables/gameboy.tres::5abee4239911f6d0cf00811510cb6f86::1792360178::res://.godot/exported/133200997/export-7cb1a18e84eff29dc6391885583c0777-gameboy.res
-res://Entidades/Loot/coleccionables/radio.tres::01b6de539c2fd84123e41fde2c0121c4::1792448495::res://.godot/exported/133200997/export-e14d4fdc30048d060d4f3a5be634617a-radio.res
-res://Entidades/Loot/coleccionables/reloj.tres::8eb8e55f976dc6b2a89b4d1381304f7f::1792448495::res://.godot/exported/133200997/export-6cbd5059c2bd5dac78c420d54779afd6-reloj.res
-res://Entidades/Loot/coleccionables/slopy_disk.tres::4d0da3beac3325c1cfd5005fe6dda2f4::1792360178::res://.godot/exported/133200997/export-7f109d336cf02286e9f8c8871e7158b0-slopy_disk.res
-res://Entidades/Loot/coleccionables/tv.tres::3ad26df5ba726c3115e600d0eb1de59e::1792360178::res://.godot/exported/133200997/export-b14466a34d0364f5993a793ad3e9cd5f-tv.res
-res://Entidades/Loot/coleccionables/vhs.tres::90d361e485807b79b1176fe607615413::1792448494::res://.godot/exported/133200997/export-a40b8637e1efe8d3045d628b366b7251-vhs.res
-res://Entidades/Loot/coleccionables/vinilo.tres::82a14eee95c5a6d61095d5b1196b689b::1792360178::res://.godot/exported/133200997/export-9aa649f930b2c56fadff0ea89c135280-vinilo.res
-res://Entidades/Loot/paquete_refrescos.tres::8e5c3f44dcca0de27fc62afa3119f22a::1792375404::res://.godot/exported/133200997/export-aeb8f5f2730a5da9b2ade2a1e794de6d-paquete_refrescos.res
-res://Entidades/Valla/1ra valla .tres::2d697f72db7269a568e6930ba1785d86::1792340921::res://.godot/exported/133200997/export-3599f7fb43251fc13a2f093506dbb989-1ra valla .res
-res://Recursos/Save/logica_guardado.tscn::5ed6c0fc1f96f629a9dd439aad40e41b::1792340921::res://.godot/exported/133200997/export-ea03212991c530e80013dfd46b659c9c-logica_guardado.scn
-res://UI/transicion/pasar_por_puerta.tscn::ca5f74dd0bc21e70641a2b7e744696ff::1792375404::res://.godot/exported/133200997/export-9ea14c1244d36678b35f87629943d4dd-pasar_por_puerta.scn
-res://UI/HUD/Notificacion/notificaion.tscn::a69d550d2edaaa465d7ca1f7bf968575::1792464593::res://.godot/exported/133200997/export-1934d70bd2d9a991872bd2a72534238b-notificaion.scn
+res://addons/kanban_tasks/view/board/board.tscn::2cb08e71a2e0bff37cc0b2518c4c5ffc::1781483105::res://.godot/exported/133200997/export-daea182019a10c65ab6e89e2abedf5b5-board.scn
+res://addons/kanban_tasks/view/details/details.tscn::28eb95b434895e7db2dbda6a05f12d07::1781483105::res://.godot/exported/133200997/export-75943a8a2cd190059a47de86762d6ce8-details.scn
+res://addons/kanban_tasks/view/details/step_holder.tscn::a6d4e702b519db4c223a9ac4f9e36dc8::1781483105::res://.godot/exported/133200997/export-3a071426fc2ebe70bc7254a94a605ed8-step_holder.scn
+res://addons/kanban_tasks/view/documentation/documentation.tscn::fdc3bea8b4bb46850954f4a1e11c228f::1781483105::res://.godot/exported/133200997/export-05c726e8b11a685441a9033971b75adb-documentation.scn
+res://addons/kanban_tasks/view/settings/categories/categories.tscn::bbecd756db59323f0a038b74929c788b::1781483105::res://.godot/exported/133200997/export-935c01ed31ad1def72ef9d1481b8dd7c-categories.scn
+res://addons/kanban_tasks/view/settings/general/general.tscn::4a04a5a4c14eba5b44e867103f25f6e7::1781483105::res://.godot/exported/133200997/export-68bb1c8893edecefe2142822543b0cc2-general.scn
+res://addons/kanban_tasks/view/settings/stages/stages.tscn::fb6b34a92b1f9b3d0bb9c43cafbaacf8::1781483105::res://.godot/exported/133200997/export-bf3bbdaeba84c5f0e6d0d46491a260cb-stages.scn
+res://addons/kanban_tasks/view/settings/settings.tscn::41bf5db895d840109f13a9ff680a9d6a::1781483105::res://.godot/exported/133200997/export-67156235658f1aef00042bc3025ddd45-settings.scn
+res://addons/kanban_tasks/view/stage/stage.tscn::aeff10ede6ac9cdd7188ee07f8665143::1781483105::res://.godot/exported/133200997/export-8157973a508c23a9f7a865c48bed066a-stage.scn
+res://addons/kanban_tasks/view/start/start.tscn::5628f661f64323f9720a76ad734dabda::1781483105::res://.godot/exported/133200997/export-93c323a3653cd47631e288d56f60112d-start.scn
+res://addons/kanban_tasks/view/task/task.tscn::b8b79465ab7e3b57f83cb2a52386b1fa::1781483105::res://.godot/exported/133200997/export-a30f366497878cc0a6339c236ddfcba1-task.scn
+res://addons/ridiculous_coding/blip.tscn::6faa2d731470e761155be3ce4a430a60::1781483105::res://.godot/exported/133200997/export-b1ad8d14270ed9cc1579a4d6c9cefed0-blip.scn
+res://addons/ridiculous_coding/boom.tscn::d6f890c760f652d0130ffda1539db61c::1781483105::res://.godot/exported/133200997/export-11f90c4756095d97250dcbf86355b502-boom.scn
+res://addons/ridiculous_coding/dock.tscn::dba5e25d4205dba1c254f667dfb34fb5::1781483105::res://.godot/exported/133200997/export-dedb02818fc44fca15e7272c63823ea6-dock.scn
+res://addons/ridiculous_coding/font.tres::d9f6da3f1e8e111a5e2fa9dff0040b82::1781483105::res://.godot/exported/133200997/export-a54c4bd19718d4a0ce53162c96591a54-font.res
+res://addons/ridiculous_coding/newline.tscn::316da9c480a4fd393f8ebcf64a2f1258::1781483105::res://.godot/exported/133200997/export-72fbb1bf8ab7e45286a88e04c2484d2b-newline.scn
+res://addons/script_splitter/core/ui/multi_split_container/taby/container.tscn::313efe99a8a0b43194315bd5f3c4e265::1781483105::res://.godot/exported/133200997/export-586d5dd167b0c300810bc8b1deced25a-container.scn
+res://addons/script_splitter/core/ui/multi_split_container/taby/separator.tscn::b1a6d3065022a4f302fa0b5bb28af202::1781483105::res://.godot/exported/133200997/export-e8d8fc7ee30af4a22ec5eb707afef5d2-separator.scn
+res://addons/script_splitter/core/ui/multi_split_container/taby/tab.tscn::c2a214715cf8e00e5c785f24510ed75e::1781483105::res://.godot/exported/133200997/export-6a99765f01fc036a104f72ef09a3bfba-tab.scn
+res://addons/script_splitter/core/ui/splitter/taby/split_selection/flat_box.tres::6f2973ba10da48a044c20e1b549d0d79::1781483105::res://.godot/exported/133200997/export-c8e6432dc57bf26a8e4198957cc34a9f-flat_box.res
+res://addons/script_splitter/core/ui/splitter/taby/split_selection/SplitSelection.tscn::8567a7fb7b2e04ed4dc18af965752a97::1781483105::res://.godot/exported/133200997/export-ba16693e2d22ed14513a34a26e1aac2a-SplitSelection.scn
+res://addons/script_splitter/core/ui/window/code_search.tscn::5c0f615cad88d51296b4694b47877526::1781483105::res://.godot/exported/133200997/export-a60968e9584b0c1332510ee054ec3122-code_search.scn
+res://addons/script_splitter/core/ui/window/editor.tscn::975a1e8dccf93424f8bcadb4824eb784::1781483105::res://.godot/exported/133200997/export-6e0767766a886198e2cfe24fb4815188-editor.scn
+res://addons/default_env.tres::a52129f071fffbd20a6013a6c0edec1e::1781483105::res://.godot/exported/133200997/export-f5db7a05e3be4093730deb35af71336b-default_env.res
+res://Entidades/Basura/Basura.tscn::c20e877b636dbe0353e9602f05ad87d1::1792532649::res://.godot/exported/133200997/export-5d1fb6cafa3ec9c4f6ddd018b7944c9c-Basura.scn
+res://Entidades/Basura/basura_data.tres::b7a9d3a8e582336261930dcd841f0427::1792571517::res://.godot/exported/133200997/export-396b5ac51926ff00dfc86563d961cb5e-basura_data.res
+res://Entidades/Consumible/consumible.tscn::2baacd879228286696fdb69757a37943::1791240430::res://.godot/exported/133200997/export-12cead33d0ce7cb0a3827c7939c38a2a-consumible.scn
+res://Entidades/Jugador/Jugador.tscn::756c8822c9cdf6403dc9e3b7c677e808::1792570757::res://.godot/exported/133200997/export-31457da9209bbc1b3d5868a0f9adced3-Jugador.scn
+res://Entidades/Loot/loots/re_madera.tres::c6f0369f18016f9075521d67de603743::1792340709::res://.godot/exported/133200997/export-cba5209377725ece2db7b19242b0129a-re_madera.res
+res://Entidades/Loot/loots/rs_piedra.tres::df55dbe99dab4aab5c45a1ec1bb06719::1792340709::res://.godot/exported/133200997/export-7cee234c2e3e10ea2e74d04a019cfcdb-rs_piedra.res
+res://Entidades/Loot/Loot.tscn::f0013157011547ca45e92625907a1ec4::1792570458::res://.godot/exported/133200997/export-11aa46a4c136026aa7c0e126e0313e54-Loot.scn
+res://Entidades/Obstaculo/obstaculo.tscn::c7788c66b8b7460067824d017481df29::1790886779::res://.godot/exported/133200997/export-a2f913514ca5f82239c73d6a0e83fdc3-obstaculo.scn
+res://Escenarios/mundo.tscn::dd4fcce0829bcba53f628c1f7c70962b::1790215995::res://.godot/exported/133200997/export-7d50e33541e0c429e281775500b06e79-mundo.scn
+res://UI/Theme/Tienda.tres::3a4c0bf75f5576a078631c981bf1b934::1792572357::res://.godot/exported/133200997/export-b5a1f2eb2d8487032fa9fe61ea3f9ac6-Tienda.res
+res://UI/Theme/tipografia tienda.tres::b2f6024e0d798029c5b9d5ba60cbb60e::1789926007::res://.godot/exported/133200997/export-84f49ca6dfbea0b3d9d85a4d40aa8240-tipografia tienda.res
+res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres::291a52dc4cacc52e8dc1c174891e65cc::1792571517::res://.godot/exported/133200997/export-30efe66eced9eeca562be28ff14a8051-mejora_resistencia.res
+res://addons/scene_palette/components/favorite_button/FavoriteButton.tscn::52607dd86dc4933844f3ee953f9b7e95::1792340709::res://.godot/exported/133200997/export-1f42466e133e7a775391fa38f32102e5-FavoriteButton.scn
+res://addons/scene_palette/components/scene_thumbnail/scene_drop.tscn::94ea0957f020ff6fc0b06fa11fd8fd4a::1792340709::res://.godot/exported/133200997/export-7616ded9db712086a51cd3e95c051eed-scene_drop.scn
+res://addons/scene_palette/components/sub_palette.tscn::53907e68f168d9fe7225f60a748bf932::1792340709::res://.godot/exported/133200997/export-74f4dab00f3b268055e470a9f2aa3583-sub_palette.scn
+res://addons/scene_palette/save_data/save_data.tres::7e349ec4b6c5ec64ac93c9527c256974::1792340709::res://.godot/exported/133200997/export-c1456b174ab3731982c674b72f3b52a7-save_data.res
+res://addons/scene_palette/styles/back_panel.tres::7fd9620a0896f6477fcdea362d4eb0ad::1792340709::res://.godot/exported/133200997/export-38b5b8e4658be085e52d15087994d034-back_panel.res
+res://addons/scene_palette/palette.tscn::c35bd14b148e9c8c4c2384b08e5a0a6a::1792340709::res://.godot/exported/133200997/export-e10f8441008a06af384b4eafc45ecfc3-palette.scn
+res://Assets/entidades/OutlineMaterial.tres::ec71dadeeed48319f46e3af3d99c5627::1788654777::res://.godot/exported/133200997/export-85fe8b95d5b9aae7c8f5a31605c5929f-OutlineMaterial.res
+res://Assets/Shaders/Shader nuevo ajustable correctamente.tres::2514302bbafd774a62f6e8f062bc28d3::1792571517::res://.godot/exported/133200997/export-eb6d85960c311c21e84c5ea88787e8d4-Shader nuevo ajustable correctamente.res
+res://Assets/tipografia/FuenteOffset.tres::7bf133018374ae32f2756d95e646685b::1787442427::res://.godot/exported/133200997/export-53811a179c80d223069f65f849672af6-FuenteOffset.res
+res://Entidades/Basura/Bolsa de Basura/bolsa_de_basura.tres::43bcae6e598175c61236d96b30147cad::1792464520::res://.godot/exported/133200997/export-966c5f7b3460b4ba62bfed899fb9926f-bolsa_de_basura.res
+res://Entidades/Basura/Caja/Obstaculos/Arbol/Arbol Cesped Claro.tres::a6a888c4bc33a7ed644b5626b3419d0c::1792571517::res://.godot/exported/133200997/export-a73ee5c25f373269072bafc43cf951eb-Arbol Cesped Claro.res
+res://Entidades/Basura/Caja/Obstaculos/Arbol/Arbol Cesped Oscuro.tres::ad67d86217b1ccfed075c5bf8ffd335f::1792340709::res://.godot/exported/133200997/export-8d70fab6b8e94e306317e3b3c270203c-Arbol Cesped Oscuro.res
+res://Entidades/Basura/Caja/Obstaculos/hierba alta/hierba alta.tres::03f2e4f05e8b77ef7b1b3700acc336d4::1792340709::res://.godot/exported/133200997/export-acd984fe07b6d4fe67edca609f9c485a-hierba alta.res
+res://Entidades/Basura/Caja/Obstaculos/piedra/piedra cesped claro.tres::7d722e0a1e959aa1ba6036513afc7163::1792340709::res://.godot/exported/133200997/export-62921a8eb993492cbfebeedc1a4782ed-piedra cesped claro.res
+res://Entidades/Basura/Caja/Obstaculos/piedra/piedra cesped oscuro.tres::e59ad27254fefc3412d119d013ab235f::1792570458::res://.godot/exported/133200997/export-82635e5714d3a287a5ea1a020f02b851-piedra cesped oscuro.res
+res://Entidades/Basura/Caja/caja_shape_2d.tres::2f4b907b5b73fbdf0c3f13b16e406a0f::1787442427::res://.godot/exported/133200997/export-eb0b7b7a81b6a41f8ebed5de171f0e60-caja_shape_2d.res
+res://Entidades/Basura/Basura_pesada.tres::606269fc81b5e1fa0551f6511ea11123::1790906981::res://.godot/exported/133200997/export-c81222a04ca0a56a253f0f246fe5a7da-Basura_pesada.res
+res://Entidades/Basura/Obstaculo prueba.tres::5ee8c77fbbb1e6bc1d84d70f5a2ab13f::1792571517::res://.godot/exported/133200997/export-8b4fcf41de2ba13d38c9c77f0d6609cc-Obstaculo prueba.res
+res://Entidades/BolsaDeBasura/bolsa_de_basura.tscn::cb37d9e02d7922573569a9b76ca91aac::1792568609::res://.godot/exported/133200997/export-7387564f74f50265cda0d230d9ddda76-bolsa_de_basura.scn
+res://Entidades/Consumible/Tipos de Consumibles/animacion lata consumible.tres::8fd0ba9c6e3b04ee60dcf0159e4077d7::1792571517::res://.godot/exported/133200997/export-2595ea090b8188c6ac077179d28bda95-animacion lata consumible.res
+res://Entidades/Consumible/Tipos de Consumibles/honguito.tres::9c23f385200999fdafdd65f4f7624ddc::1789926007::res://.godot/exported/133200997/export-8904caa8ff84ad8450cfcf0c380d4277-honguito.res
+res://Entidades/Estaciones/Estación Rota/Requisitos de materiales/UI Requisitos Materiales/casilla_de_requisito_materiales.tscn::2037f18560ad96d72531aa725d58b993::1792570458::res://.godot/exported/133200997/export-447e9eebd831cf2b26b8732676e76155-casilla_de_requisito_materiales.scn
+res://Entidades/Estaciones/Estación Rota/Requisitos de materiales/Estacion_rota_requisitos_madera.tres::a450c243a8985a09e71ad470b4036685::1788654661::res://.godot/exported/133200997/export-4803ea5b2acfd0abb1565c6e45a871ce-Estacion_rota_requisitos_madera.res
+res://Entidades/Estaciones/Estación Rota/estación_rota.tscn::d7fbe458dc784b3f4dc0cee9c798e264::1792570458::res://.godot/exported/133200997/export-11825a3597c43ca04ba9ec586fd55dd3-estación_rota.scn
+res://Entidades/Estaciones/Maquina Expendedora/MaquinaExpendedora.tscn::bce8840a2c388773be3beffec4698ee0::1792570458::res://.godot/exported/133200997/export-814322e1f2056803a5b3e846532a6a4b-MaquinaExpendedora.scn
+res://Entidades/Estaciones/Tienda/tienda.tscn::ffc77c2edbe0010d18a695be5110b383::1789926007::res://.godot/exported/133200997/export-7271af09ced6cf4c098f73cdc27c6675-tienda.scn
+res://Entidades/Estaciones/Trituradora/trituradora.tscn::d1c830accbeb922685762d6f4f984d1f::1792551868::res://.godot/exported/133200997/export-802793f2ce4ae6a885648326879c5e50-trituradora.scn
+res://Entidades/genericos/e_sprite.tscn::f68a7836884bd5184eeabcd9a4b9bd92::1786798227::res://.godot/exported/133200997/export-41d3471f698a2948edfba3e1934ef915-e_sprite.scn
+res://Entidades/Loot/coleccionables/loot_coleccionable.tres::c94c2571e9e4060c832c936666647824::1788654661::res://.godot/exported/133200997/export-6adee81fcf5cb0987ae9d865acd0ea06-loot_coleccionable.res
+res://Entidades/Notas/nota_coleccionable.tscn::d48362bf0030ba2c7063bea46f3d8d35::1791240430::res://.godot/exported/133200997/export-668abaf692023d74c1227520ae1b4af4-nota_coleccionable.scn
+res://Entidades/Notas recogibles/texto_de_nota_recogible.tscn::0884284461a04e4c928545e8550c5f53::1791240430::res://.godot/exported/133200997/export-f12eef7337e478d83247e460907cc0f8-texto_de_nota_recogible.scn
+res://Entidades/Prefabs colocables/piramide.tscn::42cb39514cdaed403c65f6a34b05a183::1789926007::res://.godot/exported/133200997/export-faebf8568254b41e43755c72e9c30af6-piramide.scn
+res://Escenarios/Mundos/chunk_1.tscn::6dd9a7e44fbfd1f83e8442f046128d64::1792570458::res://.godot/exported/133200997/export-901f5b961531c497b58ad1c0f56c4e71-chunk_1.scn
+res://Escenarios/Mundos/chunk_2.tscn::ab09a4f905b8d7854fd8e7a25fb84e56::1792570458::res://.godot/exported/133200997/export-f95024da180f0597e0df70d683a7c856-chunk_2.scn
+res://Escenarios/Mundos/chunk_3.tscn::c688ea8aa39ce9ad32b823a416557ae6::1792340709::res://.godot/exported/133200997/export-9c284e7c71ef611200fefd4be6657b6f-chunk_3.scn
+res://Escenarios/Mundos/Chunk_4.tscn::290dd2af1cac0631a9ced028429c1746::1792570458::res://.godot/exported/133200997/export-e52f6c0c8e370fdad562ae3f3986fc2b-Chunk_4.scn
+res://Escenarios/Oficial/TileMapOficial.tres::9398f0b9810c83e8e9210ad884862fc5::1792571517::res://.godot/exported/133200997/export-66f6aa5828be7b3f37acddbbb07b257d-TileMapOficial.res
+res://Escenarios/Otoño/layer de otoño recuperable.tscn::b1beaf6c0e02145f7f7d690a012bed69::1788654661::res://.godot/exported/133200997/export-3bf8a17204500f4380667347795a659a-layer de otoño recuperable.scn
+res://Escenarios/Otoño/TS_Otoño.tres::96d368c24205d5e492124d731550571d::1789931332::res://.godot/exported/133200997/export-899c9bd82a03e58b07f0f66d3dc54906-TS_Otoño.res
+res://Escenarios/prueba de cambio de sprite/cambioSprite.tscn::3bd3ee44099a98ad68bf9d8dcdbec889::1788654266::res://.godot/exported/133200997/export-ef19430332f48302f19add9519ef313c-cambioSprite.scn
+res://Escenarios/prueba de cambio de sprite/Valla.tscn::151ca3b6bca7266b42c15b1349f0e0e3::1792551868::res://.godot/exported/133200997/export-c0321e9e8794206f60431969db576cd5-Valla.scn
+res://Escenarios/shine/shining.tscn::062aa0284bd285446e9469097e32fd74::1788654266::res://.godot/exported/133200997/export-1ad8b2747b717c93eb59ce554334f62d-shining.scn
+res://Escenarios/Sprite_sucio/Tile sucio.tres::6ac8ee6376c3f7339d8dd25104fab20e::1792571517::res://.godot/exported/133200997/export-249c2f3b24570f9f4d7bb158eed50ea8-Tile sucio.res
+res://Escenarios/TileMap/Map.tscn::aade18b54d1e7cbd0ff250dcab00d097::1786798227::res://.godot/exported/133200997/export-a0193b13a7bc5548d443f62bcba6d85d-Map.scn
+res://Escenarios/Tilesets/primavera arboles.tres::3c3c6ec388e7958f1cc540ac7b0edbcb::1786798227::res://.godot/exported/133200997/export-55b5d7b15efacbc7cadbc3750bdd3998-primavera arboles.res
+res://Escenarios/Tilesets/TS_Primavera.tres::b3564dfed258bbe8b2c14894a34e958d::1786798227::res://.godot/exported/133200997/export-bda029f68dfd0fc267b665a9baf83eeb-TS_Primavera.res
+res://Escenarios/kdo.tscn::0d8d77ae369dc176e7d094e911c66856::1789942789::res://.godot/exported/133200997/export-f2270d6ba72dc4f316389b30237e923c-kdo.scn
+res://UI/Barras/barras_hud.tscn::8a56fe7724a39ed3595673dca3ab3780::1792572358::res://.godot/exported/133200997/export-c16651d369cc4fda4e11e55ebc435a69-barras_hud.scn
+res://UI/HUD/Inventario/Slots Inventario/slot_de_dinero.tscn::06cb2354b924d6d21b7f61f8569e4130::1789030357::res://.godot/exported/133200997/export-367826ba250ece8ab2a0d502af018333-slot_de_dinero.scn
+res://UI/HUD/Inventario/Slots Inventario/slot_de_inventario.tscn::3193cd354ab3e22efa4e6db395004caa::1788654661::res://.godot/exported/133200997/export-7bcf4f7a8d667547debac89fe1956d99-slot_de_inventario.scn
+res://UI/HUD/Inventario/Inventario.tscn::d2a4c603f10412be514d0dbc974cf032::1792570458::res://.godot/exported/133200997/export-dc24853566504fdaba78cb15f994adda-Inventario.scn
+res://UI/HUD/Menu Coleccionables/casilla_coleccionable.tscn::9fae0e6ce7a7e3db4685ef0670e926d7::1788654661::res://.godot/exported/133200997/export-0050db451161c2152fb6687bd996ba80-casilla_coleccionable.scn
+res://UI/HUD/Menu Coleccionables/menu_coleccionables.tscn::bb30d4df3e8c9bb2b596f3e7962b09e3::1792570458::res://.godot/exported/133200997/export-6ea58a62d17088425243ac8bd1cd31da-menu_coleccionables.scn
+res://UI/HUD/Pausa/pausa.tscn::e83f7738a9cb50d43d7d83bd2d67b96e::1792570458::res://.godot/exported/133200997/export-bd5368b4111b29848b2c4679033398ed-pausa.scn
+res://UI/HUD/hud.tscn::cfdedb6a876ba69e5212c18e61251f7a::1792570458::res://.godot/exported/133200997/export-1704045a8893c2c818e7ae71df7f0760-hud.scn
+res://UI/HUD/UI_canvas_layer.tscn::adf619640019554dfc4ee485375a83e0::1792572085::res://.godot/exported/133200997/export-8d29e71120a9bc7c0b843ef8335754ae-UI_canvas_layer.scn
+res://UI/Menu Principal/Opciones/Créditos/creditos.tscn::de7546c1be46d8fc76d660d65f0c16fa::1792570458::res://.godot/exported/133200997/export-b20e8cc3d0089ff206a705e8a4847bdb-creditos.scn
+res://UI/Menu Principal/Opciones/Opciones de audio/VolumeSlider/VolumeSlider.tscn::b8af6e19a8dc663daeea19b87c879e59::1786798227::res://.godot/exported/133200997/export-5a4eb4a08693afd5dbf85a2c83d37025-VolumeSlider.scn
+res://UI/Menu Principal/Opciones/Opciones de audio/opciones_de_audio.tscn::92c445227162d85c255ef096704bf8bd::1786798227::res://.godot/exported/133200997/export-93f1efa862180b10e6bcb4d6e009467a-opciones_de_audio.scn
+res://UI/Menu Principal/Opciones/Salir/salir.tscn::6efe891189fab9c35a091b44b258033b::1786798227::res://.godot/exported/133200997/export-f62693cc2bbec38bd4b12844067528c2-salir.scn
+res://UI/Menu Principal/Opciones/opciones.tscn::8b9ba67bc3cb6198623adf071e2ea03d::1792570458::res://.godot/exported/133200997/export-60b170ce05ed298c8c1a7c051846daec-opciones.scn
+res://UI/Menu Principal/menu_principal.tscn::0c202ed11fac5c01bc72f4da3863046c::1792570458::res://.godot/exported/133200997/export-936796ab812395c332ef38fd9d1ecb8a-menu_principal.scn
+res://UI/Theme/shaders/label_personalizado.tscn::0986de1de28690e202879b33e96ec565::1788654661::res://.godot/exported/133200997/export-94f7de7361800540ed33e960d8cf5c0a-label_personalizado.scn
+res://UI/Theme/shaders/Shader_label.tres::2b142bbdaa3fe33cb945fd5f3c99cc6b::1788654661::res://.godot/exported/133200997/export-a4c7c71ccd1cb37748505c9c37e70323-Shader_label.res
+res://UI/Theme/labelTheme.tres::2d932822ec53f4899568fb216591950c::1787442427::res://.godot/exported/133200997/export-d8078407c6cdbb8420e6a0ce49bd149c-labelTheme.res
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_cooldown.tres::bd012f0833e1610f3a5a24020fc54247::1792572358::res://.godot/exported/133200997/export-79d793423bfb6fef634e05fa1daa10eb-datos_habilidades_cooldown.res
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres::1ab2d4f89eb1bb2d80f3c141654068b0::1792572358::res://.godot/exported/133200997/export-472b0fc9b15cf98b0a3fb3f6ac55c9ac-datos_habilidades_fuerza.res
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres::d88ec2d4729328dc3fe7ae8c616f5f49::1792571517::res://.godot/exported/133200997/export-d84e8a48723e0c0ebacb6cfdf6ffd0fa-datos_habilidades_honguitos.res
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres::67554257bc991490c8a89cec490ba30b::1792572358::res://.godot/exported/133200997/export-819a218871e4069940084f28b1b01446-datos_habilidades_lanzamiento.res
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.tres::1355cc5620825bda90d895c3a7c23e8a::1792572358::res://.godot/exported/133200997/export-9616ad3d4529b5515d5470e6c5a12709-datos_habilidades_peso.res
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_rango.tres::baa78443b97b23be46407e5b580e6fbc::1792572358::res://.godot/exported/133200997/export-f41cbe2d81e478d3ee1a45d2ebb31d58-datos_habilidades_rango.res
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_resistencia.tres::c2d06e4d3006bd493b2e4052fca7c958::1792572358::res://.godot/exported/133200997/export-d4252011738e39c830cf2471fa0026cf-datos_habilidades_resistencia.res
+res://UI/Tienda/Panel tienda/panel_tienda.tscn::a5529eaa48d1d39f6d5540186b11c161::1792570458::res://.godot/exported/133200997/export-4e71010b3b9adcb8fb1b7366bc40433c-panel_tienda.scn
+res://UI/Tienda/tienda_ui.tscn::ae5340447c026eedae9ff9953e164324::1792570458::res://.godot/exported/133200997/export-c517c004ad9c84b3ab3eaf71be3b9887-tienda_ui.scn
+res://UI/transicion/transicion_background.tscn::b6705a73d30b37c8492931471a1b2daa::1792570458::res://.godot/exported/133200997/export-a2dbe74110872cc5581fd3fc9d22b020-transicion_background.scn
+res://Utilidades/AudioBus/default_bus_layout.tres::26f428743a067951c8d46acd6cc791be::1786798228::res://.godot/exported/133200997/export-54be4d24a40c0d0d176293cae7599802-default_bus_layout.res
+res://Utilidades/Sistemas/spawner.tscn::5a9b22f8488acab3a68170f68c3b3a77::1790548537::res://.godot/exported/133200997/export-1cf9c51ad309f29353c031bed3b048cf-spawner.scn
+res://Assets/Coleccionables/coleccionable_grande.tres::be685f69511757abfd4d90d2230b4eb7::1792570458::res://.godot/exported/133200997/export-1396a95ba2d9e65f91ee28c6a8a24b3f-coleccionable_grande.res
+res://Entidades/Consumible/refresco.tres::f9365e38f08dc8f463037583a1c904f2::1792571517::res://.godot/exported/133200997/export-179fe494cb833b94aecf65e4aa286725-refresco.res
+res://Entidades/Consumible/refresco_loot.tscn::a7f81e88092592ac746d1d3590b95e41::1792570822::res://.godot/exported/133200997/export-5fda49f1fcba780273e049c38973a202-refresco_loot.scn
+res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/MaquinaExpendedoraRota.tres::7b911e9f9eb3adfb5ae6679cc1f11f0e::1792551868::res://.godot/exported/133200997/export-dfa3065457f823ef419518377b2e9a19-MaquinaExpendedoraRota.res
+res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/materialesNecesariosDinero.tres::f373a7a06e40b753b6d8433d8f289eea::1792551868::res://.godot/exported/133200997/export-0c763c22831d13da3ab37b8b437d8add-materialesNecesariosDinero.res
+res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/materialesNecesariosPiedra.tres::dc9044f10bad7a61dac96a6219e06c9b::1792551868::res://.godot/exported/133200997/export-da4370d97f7fa2482344868fb9804532-materialesNecesariosPiedra.res
+res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/TiendaRota.tres::9c322add0281a2a75cc8bdafb47f24a9::1792551868::res://.godot/exported/133200997/export-35eb4491621266712cd49e4e3308bde4-TiendaRota.res
+res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/TrituradoraRota.tres::1f32f1e4617b26ed057a084900648798::1792551868::res://.godot/exported/133200997/export-cd7c8f793fab3318522709925e33894c-TrituradoraRota.res
+res://Entidades/Loot/coleccionables/calculadora.tres::d7355a0ca9df8c517e7e658592844d91::1792570822::res://.godot/exported/133200997/export-c5d52ff09cf0fd2743aff94aeba36f54-calculadora.res
+res://Entidades/Loot/coleccionables/cassette.tres::5db8e86ca9271855cd792cc2dc57203f::1792570822::res://.godot/exported/133200997/export-ea293b2795dbe18df6bb7b05da727556-cassette.res
+res://Entidades/Loot/coleccionables/control_nes.tres::4f0f32a585c4c180e5e8c24d06dcdd89::1792570822::res://.godot/exported/133200997/export-31af8daa4c2be81306b55674ea762065-control_nes.res
+res://Entidades/Loot/coleccionables/gameboy.tres::5abee4239911f6d0cf00811510cb6f86::1792570822::res://.godot/exported/133200997/export-7cb1a18e84eff29dc6391885583c0777-gameboy.res
+res://Entidades/Loot/coleccionables/radio.tres::01b6de539c2fd84123e41fde2c0121c4::1792571517::res://.godot/exported/133200997/export-e14d4fdc30048d060d4f3a5be634617a-radio.res
+res://Entidades/Loot/coleccionables/reloj.tres::8eb8e55f976dc6b2a89b4d1381304f7f::1792571517::res://.godot/exported/133200997/export-6cbd5059c2bd5dac78c420d54779afd6-reloj.res
+res://Entidades/Loot/coleccionables/slopy_disk.tres::4d0da3beac3325c1cfd5005fe6dda2f4::1792570822::res://.godot/exported/133200997/export-7f109d336cf02286e9f8c8871e7158b0-slopy_disk.res
+res://Entidades/Loot/coleccionables/tv.tres::3ad26df5ba726c3115e600d0eb1de59e::1792570822::res://.godot/exported/133200997/export-b14466a34d0364f5993a793ad3e9cd5f-tv.res
+res://Entidades/Loot/coleccionables/vhs.tres::90d361e485807b79b1176fe607615413::1792571517::res://.godot/exported/133200997/export-a40b8637e1efe8d3045d628b366b7251-vhs.res
+res://Entidades/Loot/coleccionables/vinilo.tres::82a14eee95c5a6d61095d5b1196b689b::1792570822::res://.godot/exported/133200997/export-9aa649f930b2c56fadff0ea89c135280-vinilo.res
+res://Entidades/Loot/paquete_refrescos.tres::8e5c3f44dcca0de27fc62afa3119f22a::1792570822::res://.godot/exported/133200997/export-aeb8f5f2730a5da9b2ade2a1e794de6d-paquete_refrescos.res
+res://Entidades/Valla/1ra valla .tres::2d697f72db7269a568e6930ba1785d86::1792340709::res://.godot/exported/133200997/export-3599f7fb43251fc13a2f093506dbb989-1ra valla .res
+res://Recursos/Save/logica_guardado.tscn::5ed6c0fc1f96f629a9dd439aad40e41b::1792551868::res://.godot/exported/133200997/export-ea03212991c530e80013dfd46b659c9c-logica_guardado.scn
+res://UI/transicion/pasar_por_puerta.tscn::ca5f74dd0bc21e70641a2b7e744696ff::1792570822::res://.godot/exported/133200997/export-9ea14c1244d36678b35f87629943d4dd-pasar_por_puerta.scn
+res://UI/HUD/Notificacion/notificaion.tscn::a69d550d2edaaa465d7ca1f7bf968575::1792570458::res://.godot/exported/133200997/export-1934d70bd2d9a991872bd2a72534238b-notificaion.scn
+res://Commons/Componentes/Input/bebeRefresco.tscn::76a63a45c87c115f70d70ab836a51bca::1792570756::res://.godot/exported/133200997/export-285278411e5c22f125a1c9ced8700418-bebeRefresco.scn
