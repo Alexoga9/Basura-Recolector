@@ -14,6 +14,7 @@ script = ExtResource("1_r6vmc")
 z_index = -1
 
 [node name="HUD" parent="." unique_id=67010398 instance=ExtResource("2_r6vmc")]
+panel = null
 
 [node name="TiendaUi" parent="." unique_id=1611773581 instance=ExtResource("3_2tmmb")]
 visible = false

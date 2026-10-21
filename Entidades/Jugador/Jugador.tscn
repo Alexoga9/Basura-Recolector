@@ -203,7 +203,7 @@ body_character = NodePath("../..")
 unique_name_in_owner = true
 script = ExtResource("11_8xsec")
 bolsa_de_basura = ExtResource("6_qtgc7")
-data_template = ExtResource("13_orci8")
+data = ExtResource("13_orci8")
 
 [node name="EstadisticasComponente" type="Node" parent="Componentes" unique_id=384667304]
 unique_name_in_owner = true
@@ -268,7 +268,7 @@ editor_description = "Reconoce las entidades a su al rededor, administrandolas e
 
 Permite elegir si quieres un enemigo aleatorio, cercano o lejano"
 collision_layer = 0
-collision_mask = 36
+collision_mask = 100
 script = ExtResource("9_y6klq")
 metadata/_custom_type_script = "uid://dqiir7o6l4sjy"
 

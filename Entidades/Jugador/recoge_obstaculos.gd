@@ -26,6 +26,8 @@ func get_entidad_aleatoria() -> Obstaculo:
 
 
 func revisar_espacio_inventario():
+	if Interfaces.juego_bloqueado():
+		return
 	if Input.is_action_just_pressed("Interaccion"):
 		# 1. Obtenemos los datos del ítem "Obstaculo" (puede ser null)
 		var recurso_Obstaculo = Inventario.get_item_resource("Obstaculo")
@@ -61,6 +63,8 @@ func revisar_tipo_de_requisito():
 
 
 func recolectar_obstaculo(obstaculo: Obstaculo):
+	if Interfaces.juego_bloqueado():
+		return
 	timer.wait_time = cooldown_tiempo
 	timer.start()
 	cooldown_activo = true

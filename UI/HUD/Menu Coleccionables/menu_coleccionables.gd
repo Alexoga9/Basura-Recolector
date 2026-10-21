@@ -14,6 +14,6 @@ func _process(delta):
 func desglosar_menu_coleccionable():
 
 	if visible:
-		hide()
+		Interfaces.cerrar_interfaz_especifica(self)
 	else:
-		show()
+		Interfaces.abrir_interfaz(self)

@@ -20,7 +20,7 @@ func _ready():
 
 
 func resaltado():
-	#if not is_inside_tree(): return
+	# if not is_inside_tree(): return
 	_outline_on()
 	_mostrar_e()
 

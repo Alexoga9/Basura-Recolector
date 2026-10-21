@@ -10,10 +10,11 @@ func _ready() -> void:
 
 func _on_continuar_pressed():
 	get_tree().paused = false
-	hide()
+	Interfaces.cerrar_interfaz_especifica(self)
 
 
 func _on_menu_principal_pressed():
+	Interfaces.cerrar_interfaz_especifica(self)
 	get_tree().paused = false
 	SaveGame.Cambiar_Escena("uid://kyb4e7wfvufr")
 
@@ -21,16 +22,16 @@ func _on_menu_principal_pressed():
 func saveGame():
 	SaveGame.Guardar()
 	get_tree().paused = false
-	hide()
+	Interfaces.cerrar_interfaz_especifica(self)
 
 
 func load_game() -> void:
 	SaveGame.Cargar()
 	get_tree().paused = false
-	hide()
+	Interfaces.cerrar_interfaz_especifica(self)
 
 
 func reset() -> void:
 	get_tree().paused = false
 	SaveGame.Reset_Game()
-	hide()
+	Interfaces.cerrar_interfaz_especifica(self)
