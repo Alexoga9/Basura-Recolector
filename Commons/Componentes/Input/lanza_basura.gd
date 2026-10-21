@@ -90,7 +90,7 @@ func spawnear(datos_bolsa: LootDefinicion) -> bool:
 
 	var tiempo_vuelo: float = distancia_vuelo / fuerza_lanzamiento
 
-	var tween: Tween = nuevo.create_tween()
+	var tween: Tween = nuevo.create_tween().set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
 
 	tween.tween_property(
 		nuevo,

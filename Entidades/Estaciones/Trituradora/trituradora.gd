@@ -38,9 +38,11 @@ func recibir_basura_jugador():
 		chispas.play()
 
 
-func recibir_basura_fisica(body):
-	Dinero.ganar(body.valor)
-	body.collect()
+func recibir_basura_fisica(body: BolsaDeBasura):
+	var valor_bolsa: int = body.valor
+	if not body.triturar():
+		return
+	Dinero.ganar(valor_bolsa)
 	audio.play()
 	sierras.play()
 	chispas.play()

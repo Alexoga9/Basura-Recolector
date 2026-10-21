@@ -10,6 +10,14 @@ enum TipoCuerpo {CHARACTER_BODY, AREA}
 @export var friccion: float = 4.5
 @export var velocidad_rotacion: float = (TAU * 2)
 
+var ultima_direccion: Vector2 = Vector2.DOWN
+
+@export_category("Animaciones de correr")
+@export var correr_derecha: StringName = &"Run_right"
+@export var correr_izquierda: StringName = &"Run_left"
+@export var correr_abajo: StringName = &"Run_down"
+@export var correr_arriba: StringName = &"Run_up"
+
 @export_category("Referencias")
 @export var body_character: CharacterBody2D
 @export var body: Node2D
@@ -32,22 +40,38 @@ func _validate_property(property: Dictionary):
 
 
 func movimiento(direccion: Vector2, delta: float):
-	# Actualizar sprite
-	if animated_sprite_2d:
-		if direccion.x > 0:
-			animated_sprite_2d.flip_h = false
-		elif direccion.x < 0:
-			animated_sprite_2d.flip_h = true
+	# Elegir un solo eje para impedir el movimiento diagonal.
+	if abs(direccion.x) >= abs(direccion.y):
+		direccion = Vector2(sign(direccion.x), 0)
+	else:
+		direccion = Vector2(0, sign(direccion.y))
 
-	if animated_sprite_2d:
-		if direccion != Vector2.ZERO:
-			animated_sprite_2d.play("Walk")
-		else:
-			animated_sprite_2d.play("Idle")
-
-	# Guardar último movimiento válido
 	if direccion != Vector2.ZERO:
+		ultima_direccion = direccion
 		ultimo_movimiento = direccion
+
+	if animated_sprite_2d:
+		animated_sprite_2d.flip_h = false
+		var animacion_idle: StringName
+		var animacion_correr: StringName
+		if ultima_direccion.x != 0:
+			if ultima_direccion.x > 0:
+				animacion_idle = &"Idle_right"
+				animacion_correr = correr_derecha
+			else:
+				animacion_idle = &"Idle_left"
+				animacion_correr = correr_izquierda
+		else:
+			if ultima_direccion.y > 0:
+				animacion_idle = &"Idle_down"
+				animacion_correr = correr_abajo
+			else:
+				animacion_idle = &"Idle_up"
+				animacion_correr = correr_arriba
+		var animacion: StringName = animacion_idle
+		if direccion != Vector2.ZERO and animated_sprite_2d.sprite_frames.has_animation(animacion_correr):
+			animacion = animacion_correr
+		animated_sprite_2d.play(animacion)
 
 	# Aplicar movimiento según el tipo de cuerpo
 	match tipo_cuerpo:
@@ -60,7 +84,12 @@ func movimiento(direccion: Vector2, delta: float):
 
 func mover_character_body(direccion: Vector2, delta:float):
 	if body_character:
-		var peso_de_velocidad: float = delta * (aceleracion if direccion else friccion)
+		# Eliminar la inercia perpendicular al cambiar de eje.
+		if direccion.x != 0:
+			body_character.velocity.y = 0
+		elif direccion.y != 0:
+			body_character.velocity.x = 0
+		var peso_de_velocidad: float = clampf(delta * (aceleracion if direccion else friccion), 0.0, 1.0)
 		body_character.velocity = lerp(body_character.velocity, (direccion.normalized() * velocidad_movimiento), peso_de_velocidad)
 		body_character.move_and_slide()
 

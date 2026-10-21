@@ -1,4 +1,4 @@
-res://UI/HUD/Pausa/pausa.tscn
+res://Entidades/Jugador/Jugador.tscn
 res://UI/Theme/Tienda.tres
 res://Escenarios/Oficial/TileMapOficial.tres
 res://Escenarios/shine/hit_flash.gdshader
@@ -17,4 +17,7 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
-res://UI/HUD/hud.tscn
+res://Commons/Componentes/Input/lanza_basura.gd
+res://Entidades/BolsaDeBasura/bolsa_de_basura.gd
+res://Entidades/BolsaDeBasura/bolsa_de_basura.tscn
+res://Entidades/Estaciones/Trituradora/trituradora.gd

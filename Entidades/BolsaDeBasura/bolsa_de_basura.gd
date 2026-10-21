@@ -1,5 +1,5 @@
 @icon("res://addons/iconos/obstaculo.svg")
-class_name BolsaDeBasura extends StaticBody2D
+class_name BolsaDeBasura extends AnimatableBody2D
 
 @onready var sprite2d = %Sprite
 @onready var collision_shape_2d = %CollisionShape2D
@@ -51,6 +51,18 @@ func collect() -> LootDefinicion:
 	SignalBus.basura_recogida.emit()
 
 	return data
+
+
+func triturar() -> bool:
+	if recogida or is_queued_for_deletion() or data == null:
+		return false
+
+	# Consumir la bolsa sin devolver su contenido al inventario.
+	recogida = true
+	puede_recogerse = false
+	collision_shape_2d.set_deferred("disabled", true)
+	queue_free()
+	return true
 
 
 func _on_sonido_finished():
