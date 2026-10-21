@@ -31,3 +31,4 @@ res://UI/Tienda/mejoras de habilidades/mejoras/mejora_cooldown.gd
 res://UI/Tienda/mejoras de habilidades/mejoras/mejora_rango.gd
 res://UI/Tienda/mejoras de habilidades/mejoras/mejora_resistencia.gd
 res://Utilidades/Autoloads/niveles_de_experiencia.gd
+res://Escenarios/Mundos/chunk_1.tscn
