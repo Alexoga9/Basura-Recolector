@@ -18,9 +18,20 @@ func _ready() -> void:
 
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("Cancelar UI") and not event.is_echo():
-		SignalBus.input_esc.emit()
-		get_viewport().set_input_as_handled()
+	if event.is_echo():
+		return
+	if event.is_action_pressed("Cancelar UI"):
+		_on_pausa_pressed()
+	elif event.is_action_pressed("ui_cancel"):
+		if is_instance_valid(Interfaces.interfaz_actual):
+			Interfaces.cerrar_interfaz()
+		elif event is InputEventKey:
+			_on_pausa_pressed()
+	elif event.is_action_pressed("Tab"):
+		SignalBus.input_tab.emit()
+	else:
+		return
+	get_viewport().set_input_as_handled()
 
 
 func _on_pausa_pressed() -> void:

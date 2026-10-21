@@ -6,6 +6,7 @@ class_name TiendaUI extends Control
 
 
 func _ready() -> void:
+	$MarginContainer/ScrollContainer.follow_focus = true
 	SignalBus.mostrar_tienda.connect(mostrar_tienda)
 	SignalBus.ocultar_tienda.connect(ocultar_tienda)
 

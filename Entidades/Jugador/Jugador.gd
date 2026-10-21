@@ -25,8 +25,10 @@ func set_mument_enable(value):
 
 
 func _physics_process(delta):
-	if canMove == true:
+	if canMove and not Interfaces.juego_bloqueado():
 		movimiento_componente.movimiento(input_componente.input_movimiento(), delta)
+	else:
+		velocity = Vector2.ZERO
 
 
 func _exit_tree():

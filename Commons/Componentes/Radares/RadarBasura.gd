@@ -26,6 +26,8 @@ func get_entidad_aleatoria() -> Basura:
 
 
 func revisar_espacio_inventario():
+	if Interfaces.juego_bloqueado():
+		return
 	if Input.is_action_just_pressed("Interaccion"):
 		# 1. Obtenemos los datos del ítem "Basura" (puede ser null)
 		var recurso_basura = Inventario.get_item_resource("Basura")

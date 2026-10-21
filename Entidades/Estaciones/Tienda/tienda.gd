@@ -8,15 +8,11 @@ func _ready():
 	SignalBus.interaccion.connect(interaccion_recibida)
 
 
-func _process(delta):
-	mostrar_ocultar_tienda()
-
-
 func interaccion_recibida():
-	if not jugador_en_area:
+	if not jugador_en_area or Interfaces.juego_bloqueado():
 		return
-
-	interaccion_del_jugador = !interaccion_del_jugador
+	interaccion_del_jugador = true
+	mostrar_ocultar_tienda()
 
 
 func mostrar_ocultar_tienda():
@@ -35,3 +31,4 @@ func _on_trigger_jugador_body_exited(body):
 	if body.is_in_group("Jugador"):
 		jugador_en_area = false
 		interaccion_del_jugador = false
+		SignalBus.ocultar_tienda.emit()

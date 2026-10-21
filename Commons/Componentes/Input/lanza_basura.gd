@@ -14,6 +14,8 @@ var direccion_lanzamiento: Vector2 = Vector2.UP
 
 
 func _process(_delta: float) -> void:
+	if Interfaces.juego_bloqueado():
+		return
 	var input_dir: Vector2 = Input.get_vector(
 		"izquierda",
 		"derecha",
@@ -30,6 +32,8 @@ func _process(_delta: float) -> void:
 
 
 func lanzar_basura() -> void:
+	if Interfaces.juego_bloqueado():
+		return
 	if Inventario.peso <= 0:
 		return
 

@@ -203,6 +203,8 @@ func actualizar_resaltado() -> void:
 
 
 func revisar_espacio_inventario(body: Node2D = null) -> void:
+	if Interfaces.juego_bloqueado():
+		return
 
 	if body == null:
 		body = get_entidad_mas_cercana()

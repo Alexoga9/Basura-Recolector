@@ -6,7 +6,8 @@ var mov: Vector2 = Vector2.ZERO
 
 
 func _process(delta):
-	input_tab()
+	if Interfaces.juego_bloqueado():
+		return
 	input_interaccion_E()
 	input_click()
 
@@ -21,11 +22,6 @@ func input_movimiento() -> Vector2:
 func input_interaccion_E():
 	if Input.is_action_just_pressed("Interaccion"):
 		SignalBus.interaccion.emit()
-
-
-func input_tab():
-	if Input.is_action_just_pressed("Tab"):
-		SignalBus.input_tab.emit()
 
 
 func input_click():

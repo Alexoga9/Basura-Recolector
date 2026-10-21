@@ -59,6 +59,7 @@ focus_neighbor_bottom = NodePath("../menu principal")
 text = "Continuar"
 
 [node name="Save" type="Button" parent="MarginContainer/PanelContainer/VBoxContainer" unique_id=1420667319]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
@@ -66,6 +67,7 @@ focus_neighbor_bottom = NodePath("../menu principal")
 text = "Save Game"
 
 [node name="load" type="Button" parent="MarginContainer/PanelContainer/VBoxContainer" unique_id=243639764]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
@@ -73,6 +75,7 @@ focus_neighbor_bottom = NodePath("../menu principal")
 text = "Load Game"
 
 [node name="reset" type="Button" parent="MarginContainer/PanelContainer/VBoxContainer" unique_id=1568245978]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
