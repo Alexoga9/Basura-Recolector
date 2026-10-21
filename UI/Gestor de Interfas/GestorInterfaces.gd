@@ -9,6 +9,7 @@ func abrir_interfaz(interfaz: Control) -> void:
 
 	# Si ya está abierta, no hacer nada.
 	if interfaz_actual == interfaz:
+		interfaz.show()
 		return
 
 	# Cerrar la interfaz anterior.
@@ -20,10 +21,10 @@ func abrir_interfaz(interfaz: Control) -> void:
 
 
 func cerrar_interfaz() -> void:
-	if is_instance_valid(interfaz_actual):
-		interfaz_actual.hide()
-
+	var anterior := interfaz_actual
 	interfaz_actual = null
+	if is_instance_valid(anterior):
+		anterior.hide()
 
 
 func cerrar_interfaz_especifica(interfaz: Control) -> void:

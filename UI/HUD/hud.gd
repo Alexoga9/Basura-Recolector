@@ -6,6 +6,7 @@ extends Control
 
 
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	SignalBus.input_esc.connect(_on_pausa_pressed)
 	SignalBus.mostrar_hud.connect(mostrar)
 
@@ -14,6 +15,12 @@ func _ready() -> void:
 
 	# Permitir que el menú funcione mientras el juego está pausado.
 	panel_pausa.process_mode = Node.PROCESS_MODE_ALWAYS
+
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("Cancelar UI") and not event.is_echo():
+		SignalBus.input_esc.emit()
+		get_viewport().set_input_as_handled()
 
 
 func _on_pausa_pressed() -> void:

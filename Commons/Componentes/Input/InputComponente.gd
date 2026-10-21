@@ -7,7 +7,6 @@ var mov: Vector2 = Vector2.ZERO
 
 func _process(delta):
 	input_tab()
-	input_esc()
 	input_interaccion_E()
 	input_click()
 
@@ -32,8 +31,3 @@ func input_tab():
 func input_click():
 	if Input.is_action_just_pressed("Click"):
 		SignalBus.input_click.emit()
-
-
-func input_esc():
-	if Input.is_action_just_pressed("Cancelar UI"):
-		SignalBus.input_esc.emit()

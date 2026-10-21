@@ -62,6 +62,7 @@ func spawnear(datos_bolsa: LootDefinicion) -> bool:
 
 	# Asignar datos ANTES de agregar al árbol.
 	nuevo.data = datos_bolsa
+	nuevo.peso_contenido = Inventario.peso
 
 	get_tree().current_scene.add_child(nuevo)
 

@@ -5,8 +5,8 @@ class_name RadarComponente extends Area2D
 # VARIABLES
 # =========================================
 
-var cuerpos: Array[Basura] = []
-var objeto_resaltado: Basura = null
+var cuerpos: Array[Node2D] = []
+var objeto_resaltado: Node2D = null
 
 @onready var jugador: Jugador = $".."
 @onready var timer: Timer = %Timer
@@ -22,12 +22,9 @@ var cooldown_activo: bool = false
 
 
 func _ready() -> void:
-	SignalBus.interaccion.connect(revisar_espacio_inventario)
-
 	timer.wait_time = cooldown_tiempo
 	timer.one_shot = true
 
-	# Conectar señales del radar
 	if not body_entered.is_connected(_on_body_entered):
 		body_entered.connect(_on_body_entered)
 
@@ -42,66 +39,129 @@ func _ready() -> void:
 # =========================================
 
 
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("Interaccion") and not event.is_echo():
+		revisar_espacio_inventario()
+
+
 func _physics_process(_delta: float) -> void:
 	limpiar_cuerpos()
 	actualizar_resaltado()
 
 # =========================================
-# LIMPIAR ARRAY DE CUERPOS
+# VALIDAR TIPOS DE OBJETOS
+# =========================================
+
+
+func es_objeto_recolectable(body: Node2D) -> bool:
+	return body is Basura or body is BolsaDeBasura
+
+
+func objeto_disponible(body: Node2D) -> bool:
+	if not is_instance_valid(body):
+		return false
+
+	if body.is_queued_for_deletion():
+		return false
+
+	if not es_objeto_recolectable(body):
+		return false
+
+	# Las bolsas no se pueden recoger durante el vuelo.
+	if body is BolsaDeBasura:
+		var bolsa: BolsaDeBasura = body
+
+		if not bolsa.puede_recogerse:
+			return false
+
+		if bolsa.recogida:
+			return false
+
+	return true
+
+# =========================================
+# RESALTADO
+# =========================================
+
+
+func obtener_resaltado(body: Node2D) -> ResaltadoComponente:
+	if not is_instance_valid(body):
+		return null
+
+	if body is Basura:
+		var basura: Basura = body
+		return basura.resaltado_componente
+
+	if body is BolsaDeBasura:
+		var bolsa: BolsaDeBasura = body
+		return bolsa.resaltado_componente
+
+	return null
+
+
+func cambiar_estado_area(body: Node2D, estado: bool) -> void:
+	if not is_instance_valid(body):
+		return
+
+	if body is Basura:
+		var basura: Basura = body
+		basura.en_area_jugador = estado
+
+	elif body is BolsaDeBasura:
+		var bolsa: BolsaDeBasura = body
+		bolsa.en_area_jugador = estado
+
+
+func quitar_resaltado(body: Node2D) -> void:
+	var resaltado := obtener_resaltado(body)
+
+	if resaltado != null:
+		resaltado.no_resaltado()
+
+# =========================================
+# LIMPIAR CUERPOS
 # =========================================
 
 
 func limpiar_cuerpos() -> void:
 	var cuerpos_detectados: Array[Node2D] = []
 
-	# Obtener los cuerpos que realmente
-	# siguen dentro del radar.
 	for body in get_overlapping_bodies():
-		if body is Basura:
-			if not body.is_queued_for_deletion():
-				cuerpos_detectados.append(body)
+		if objeto_disponible(body):
+			cuerpos_detectados.append(body)
 
-	# Recorrer el array al revés para poder
-	# eliminar elementos sin alterar el recorrido.
 	for i in range(cuerpos.size() - 1, -1, -1):
-		var body: Basura = cuerpos[i]
+		var body: Node2D = cuerpos[i]
 
 		if not is_instance_valid(body):
 			cuerpos.remove_at(i)
 			continue
 
-		if body.is_queued_for_deletion():
-			cuerpos.remove_at(i)
-			continue
-
-		# Si ya no está dentro del radar
 		if not cuerpos_detectados.has(body):
+			cambiar_estado_area(body, false)
+			quitar_resaltado(body)
 
-			body.en_area_jugador = false
-			body.resaltado_componente.no_resaltado()
+			if objeto_resaltado == body:
+				objeto_resaltado = null
 
 			cuerpos.remove_at(i)
 
-	# Registrar nuevas basuras detectadas.
 	for body in cuerpos_detectados:
 		if not cuerpos.has(body):
 			cuerpos.append(body)
-			body.en_area_jugador = true
+			cambiar_estado_area(body, true)
 
 # =========================================
-# BUSCAR LA BASURA MÁS CERCANA
+# OBJETO MÁS CERCANO
 # =========================================
 
 
-func get_entidad_mas_cercana() -> Basura:
-	var objeto_cercano: Basura = null
+func get_entidad_mas_cercana() -> Node2D:
+	var objeto_cercano: Node2D = null
 	var distancia_minima: float = INF
 
 	for obj in cuerpos:
-		if not is_instance_valid(obj):
-			continue
-
-		if obj.is_queued_for_deletion():
+		if not objeto_disponible(obj):
 			continue
 
 		var distancia: float = jugador.global_position.distance_squared_to(
@@ -121,41 +181,33 @@ func get_entidad_mas_cercana() -> Basura:
 
 
 func actualizar_resaltado() -> void:
-	var objeto_cercano: Basura = get_entidad_mas_cercana()
+	var objeto_cercano: Node2D = get_entidad_mas_cercana()
 
-	# No cambiar si sigue siendo el mismo.
 	if objeto_cercano == objeto_resaltado:
 		return
 
-	# Quitar resaltado anterior.
 	if is_instance_valid(objeto_resaltado):
-		if not objeto_resaltado.is_queued_for_deletion():
-			objeto_resaltado.resaltado_componente.no_resaltado()
+		quitar_resaltado(objeto_resaltado)
 
-	# Guardar nuevo objeto.
 	objeto_resaltado = objeto_cercano
 
-	# Resaltar el nuevo objeto más cercano.
 	if is_instance_valid(objeto_resaltado):
-		if not objeto_resaltado.is_queued_for_deletion():
-			objeto_resaltado.resaltado_componente.resaltado()
+		var resaltado := obtener_resaltado(objeto_resaltado)
+
+		if resaltado != null:
+			resaltado.resaltado()
 
 # =========================================
-# COMPROBAR ESPACIO DEL INVENTARIO
+# COMPROBAR INVENTARIO
 # =========================================
 
 
-func revisar_espacio_inventario(body = null) -> void:
+func revisar_espacio_inventario(body: Node2D = null) -> void:
 
-	# Si no se seleccionó una basura,
-	# utilizar la más cercana.
 	if body == null:
 		body = get_entidad_mas_cercana()
 
-	if not is_instance_valid(body):
-		return
-
-	if body.is_queued_for_deletion():
+	if not objeto_disponible(body):
 		return
 
 	if not cuerpos.has(body):
@@ -168,8 +220,14 @@ func revisar_espacio_inventario(body = null) -> void:
 		print("No tienes energía")
 		return
 
-	if Inventario.peso >= Inventario.peso_maximo:
-		print("Inventario lleno")
+	var peso_objeto: int = 1
+
+	if body is BolsaDeBasura:
+		var bolsa: BolsaDeBasura = body
+		peso_objeto = bolsa.peso_contenido
+
+	if Inventario.peso + peso_objeto > Inventario.peso_maximo:
+		print("No tienes espacio suficiente")
 		return
 
 	revisar_tipo_de_basura(body)
@@ -179,12 +237,8 @@ func revisar_espacio_inventario(body = null) -> void:
 # =========================================
 
 
-func revisar_tipo_de_basura(body:) -> void:
-
-	if not is_instance_valid(body):
-		return
-
-	if body.is_queued_for_deletion():
+func revisar_tipo_de_basura(body: Node2D) -> void:
+	if not objeto_disponible(body):
 		return
 
 	if cooldown_activo:
@@ -195,18 +249,25 @@ func revisar_tipo_de_basura(body:) -> void:
 
 	print("Analizando: ", body.name)
 
-	if not revisar_tipo_de_requisito(body):
-		print("No cumples los requisitos")
+	# CASO 1: Bolsa lanzada.
+	if body is BolsaDeBasura:
+		recolectar_basura(body)
 		return
 
-	# Basura que necesita golpes.
-	if body.data.veces_a_golpear > 0:
-		print("Basura pesada")
-		body.romper()
-		return
+	# CASO 2: Basura normal.
+	if body is Basura:
+		var basura: Basura = body
 
-	# Basura lista para recolectar.
-	recolectar_basura(body)
+		if not revisar_tipo_de_requisito(basura):
+			print("No cumples los requisitos")
+			return
+
+		if basura.data.veces_a_golpear > 0:
+			print("Basura pesada")
+			basura.romper()
+			return
+
+		recolectar_basura(basura)
 
 # =========================================
 # REVISAR REQUISITOS
@@ -214,27 +275,22 @@ func revisar_tipo_de_basura(body:) -> void:
 
 
 func revisar_tipo_de_requisito(body: Basura) -> bool:
-
 	if not is_instance_valid(body):
 		return false
 
-	# Sin requisitos.
 	if not body.requisito:
 		return true
 
 	match body.tipo_de_requisito:
 
 		body.tipo_de_requisito_Enum.PICO:
-			if body.nivel_requisito <= jugador.estadisticas_componente.pico:
-				return true
+			return body.nivel_requisito <= jugador.estadisticas_componente.pico
 
 		body.tipo_de_requisito_Enum.HACHA:
-			if body.nivel_requisito <= jugador.estadisticas_componente.hacha:
-				return true
+			return body.nivel_requisito <= jugador.estadisticas_componente.hacha
 
 		body.tipo_de_requisito_Enum.AZADA:
-			if body.nivel_requisito <= jugador.estadisticas_componente.azada:
-				return true
+			return body.nivel_requisito <= jugador.estadisticas_componente.azada
 
 	print("Necesitas mejorar tus herramientas")
 	return false
@@ -244,15 +300,21 @@ func revisar_tipo_de_requisito(body: Basura) -> bool:
 # =========================================
 
 
-func recolectar_basura(body) -> void:
-
-	if not is_instance_valid(body):
-		return
-
-	if body.is_queued_for_deletion():
+func recolectar_basura(body: Node2D) -> void:
+	if not objeto_disponible(body):
 		return
 
 	if cooldown_activo:
+		return
+
+	if not body.has_method("collect"):
+		return
+
+	# Ejecutar la recogida.
+	var resultado = body.call("collect")
+
+	# Si collect() devuelve null, no se recogió.
+	if resultado == null:
 		return
 
 	cooldown_activo = true
@@ -260,32 +322,25 @@ func recolectar_basura(body) -> void:
 
 	print("Recolectando: ", body.name)
 
-	# Retirar el objeto antes de recolectarlo.
 	quitar_cuerpo(body)
-	if body.has_method("collect"):
-		body.collect()
 
 	jugador.energia_componente.agotar(1)
 
 	actualizar_resaltado()
 
 # =========================================
-# QUITAR CUERPO DEL RADAR
+# QUITAR CUERPO
 # =========================================
 
 
-func quitar_cuerpo(body: Basura) -> void:
-
+func quitar_cuerpo(body: Node2D) -> void:
 	cuerpos.erase(body)
 
 	if not is_instance_valid(body):
 		return
 
-	if body.is_queued_for_deletion():
-		return
-
-	body.en_area_jugador = false
-	body.resaltado_componente.no_resaltado()
+	cambiar_estado_area(body, false)
+	quitar_resaltado(body)
 
 	if objeto_resaltado == body:
 		objeto_resaltado = null
@@ -295,12 +350,8 @@ func quitar_cuerpo(body: Basura) -> void:
 # =========================================
 
 
-func click_en_basura(objeto: Basura) -> void:
-
-	if not is_instance_valid(objeto):
-		return
-
-	if objeto.is_queued_for_deletion():
+func click_en_basura(objeto: Node2D) -> void:
+	if not objeto_disponible(objeto):
 		return
 
 	if not cuerpos.has(objeto):
@@ -314,19 +365,14 @@ func click_en_basura(objeto: Basura) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-
-	if not body is Basura:
-		return
-
-	if body.is_queued_for_deletion():
+	if not objeto_disponible(body):
 		return
 
 	if cuerpos.has(body):
 		return
 
 	cuerpos.append(body)
-
-	body.en_area_jugador = true
+	cambiar_estado_area(body, true)
 
 	actualizar_resaltado()
 
@@ -336,12 +382,10 @@ func _on_body_entered(body: Node2D) -> void:
 
 
 func _on_body_exited(body: Node2D) -> void:
-
-	if not body is Basura:
+	if not es_objeto_recolectable(body):
 		return
 
 	quitar_cuerpo(body)
-
 	actualizar_resaltado()
 
 # =========================================

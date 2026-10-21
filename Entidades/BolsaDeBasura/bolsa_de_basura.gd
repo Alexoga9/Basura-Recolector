@@ -13,6 +13,10 @@ var objetivo = null
 var en_area_jugador: bool = false
 var input_recibido: bool = false
 
+var peso_contenido: int = 1
+var puede_recogerse: bool = true
+var recogida: bool = false
+
 var id: String
 var nombre: String
 var requisito: bool
@@ -27,16 +31,21 @@ func _ready():
 
 
 func collect() -> LootDefinicion:
+	if not puede_recogerse or recogida:
+		return null
 
 	if data == null:
 		return null
 
+	recogida = true
+	puede_recogerse = false
+
 	t_recogida.tween()
 	sonido.play()
+
 	collision_shape_2d.set_deferred("disabled", true)
 
-	# Recuperar el peso y valor de la bolsa.
-	Inventario.peso += valor
+	Inventario.peso += peso_contenido
 	Inventario.valor_de_basuras += data.valor
 
 	SignalBus.basura_recogida.emit()
@@ -67,4 +76,4 @@ func iniciar_valores() -> void:
 func _on_area_2d_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index == MOUSE_BUTTON_LEFT:
-			Global.jugador.recoge_basura.click_en_basura(self)
+			Global.jugador.radar_componente.click_en_basura(self)
