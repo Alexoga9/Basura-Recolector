@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://n5y5s26fj4li" path="res://Commons/Componentes/Input/lanza_basura.gd" id="11_8xsec"]
 [ext_resource type="Texture2D" uid="uid://blxmybrrygaxw" path="res://Assets/jugador/Animations/player_animacionrun.png" id="12_8j4j1"]
 [ext_resource type="Script" uid="uid://b1prp2tpnsf1h" path="res://Entidades/Jugador/barra_cooldown.gd" id="13_8xsec"]
+[ext_resource type="PackedScene" uid="uid://5pp4m7kfpi2e" path="res://Commons/Componentes/Input/bebeRefresco.tscn" id="13_54am8"]
 [ext_resource type="Resource" uid="uid://besidf7otrxpl" path="res://Entidades/Basura/Bolsa de Basura/bolsa_de_basura.tres" id="13_orci8"]
 [ext_resource type="Script" uid="uid://ccn4v8e1f186" path="res://Entidades/Jugador/el_super_radar.gd" id="16_8j4j1"]
 
@@ -602,6 +603,9 @@ position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_frfy0")
 debug_color = Color(0.63369, 0.5259296, 0.0091273235, 0.41960785)
 
+[node name="BebeRefresco" parent="." unique_id=766981547 instance=ExtResource("13_54am8")]
+unique_name_in_owner = true
+
 [node name="Loot Collector" type="Area2D" parent="." unique_id=376001421]
 editor_description = "Se encarga de recolectar los objetos  en el mundo.
 "
@@ -611,6 +615,7 @@ collision_mask = 2
 script = ExtResource("9_6pwru")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Loot Collector" unique_id=643640936]
+unique_name_in_owner = true
 position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_1ibpt")
 debug_color = Color(0.2517849, 0.6236958, 0.3297198, 0.41960785)

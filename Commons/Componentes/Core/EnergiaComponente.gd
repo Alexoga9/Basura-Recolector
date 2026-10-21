@@ -5,7 +5,7 @@ class_name EnergiaComponente extends Node
 signal cansado
 signal valor_energia_cambiado(nuevo_valor: float)
 signal valor_maximo_energia_cambiado(nuevo_max: float)
-@onready var recarga_lenta: Timer = %"Recarga lenta"
+@onready var recarga_lenta: Timer =%"Recarga lenta"
 
 @export var es_jugador: bool = false
 

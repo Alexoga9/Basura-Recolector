@@ -6,8 +6,7 @@ var cuerpos: Array[Basura] = []
 @onready var jugador: Jugador = $".."
 @onready var timer: Timer = %Timer
 @onready var basura_collider:CollisionShape2D = %basuraCollider
-@onready var loot_collector_shape:CollisionShape2D = %LootCollectorShape
-
+@onready var loot_collector_shape:CollisionShape2D = %CollisionShape2D
 @export var cooldown_tiempo: float = 1.5
 var cooldown_activo: bool = false
 

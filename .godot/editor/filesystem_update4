@@ -1,0 +1,26 @@
+res://Entidades/Jugador/Jugador.tscn
+res://UI/Theme/Tienda.tres
+res://Escenarios/Oficial/TileMapOficial.tres
+res://Entidades/Basura/basura_data.tres
+res://Escenarios/Sprite_sucio/Tile sucio.tres
+res://Entidades/Basura/Obstaculo prueba.tres
+res://Entidades/Consumible/refresco.tres
+res://Assets/Shaders/Shader nuevo ajustable correctamente.tres
+res://Entidades/Basura/Caja/Obstaculos/Arbol/Arbol Cesped Claro.tres
+res://Entidades/Loot/coleccionables/vhs.tres
+res://Entidades/Loot/coleccionables/radio.tres
+res://Entidades/Loot/coleccionables/reloj.tres
+res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_resistencia.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_cooldown.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_rango.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.tres
+res://Entidades/Consumible/Tipos de Consumibles/animacion lata consumible.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
+res://Commons/Componentes/Radares/RadarComponente.gd
+res://Commons/Componentes/Input/bebeRefresco.tscn
+res://UI/Tienda/mejoras de habilidades/mejoras/mejora_refresco.gd
+res://Commons/Componentes/Core/EnergiaComponente.gd
+res://Entidades/Jugador/Jugador.gd
