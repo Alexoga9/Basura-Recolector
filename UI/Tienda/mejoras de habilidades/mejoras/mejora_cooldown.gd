@@ -10,6 +10,7 @@ func _ready():
 func aplicar_mejora():
 	NivelesDeExperiencia.nivel_cooldown += 1
 	setear_nivel()
+	mejora_hacha()
 	actualizar_datos()
 
 
@@ -24,7 +25,7 @@ func setear_nivel():
 	#jugador.radar_componente.timer.wait_time = nuevo_cooldown
 
 
-func mejora_pico():
+func mejora_hacha():
 	if NivelesDeExperiencia.nivel_cooldown >= 3:
 		print("HACHA")
 		jugador.estadisticas_componente.hacha += 1

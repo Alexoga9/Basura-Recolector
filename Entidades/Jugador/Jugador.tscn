@@ -530,7 +530,6 @@ bg_color = Color(0.8392157, 0.8392157, 0.8392157, 0.49803922)
 [sub_resource type="CircleShape2D" id="CircleShape2D_54am8"]
 
 [node name="Jugador" type="CharacterBody2D" unique_id=1030727379 groups=["Jugador"]]
-position = Vector2(1, -1)
 collision_mask = 60
 motion_mode = 1
 script = ExtResource("1_5k27j")
@@ -559,6 +558,7 @@ script = ExtResource("2_30dg6")
 unique_name_in_owner = true
 script = ExtResource("3_30dg6")
 velocidad_movimiento = 120.0
+aceleracion = 30.0
 friccion = 10.0
 body_character = NodePath("../..")
 

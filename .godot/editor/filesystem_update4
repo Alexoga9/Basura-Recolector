@@ -1,6 +1,4 @@
-res://Commons/Componentes/Input/lanza_basura.gd
-res://Commons/Componentes/Radares/RadarComponente.gd
-res://UI/HUD/UI_canvas_layer.tscn
+res://Entidades/Jugador/Jugador.tscn
 res://UI/Theme/Tienda.tres
 res://Escenarios/Oficial/TileMapOficial.tres
 res://Entidades/Basura/basura_data.tres
@@ -21,6 +19,5 @@ res://Entidades/Consumible/Tipos de Consumibles/animacion lata consumible.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
-res://UI/Barras/barras_hud.tscn
-res://UI/Gestor de Interfas/GestorInterfaces.gd
-res://UI/HUD/Pausa/pausa.tscn
+res://UI/HUD/Notificacion/notificaion.gd
+res://UI/Tienda/mejoras de habilidades/mejoras/mejora_cooldown.gd

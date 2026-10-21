@@ -16,6 +16,7 @@ func recibir_texto(texto: String):
 
 
 func tween(cantidad_deslizar:float):
+	show()
 	var tween: Tween = get_tree().create_tween()
 	tween.tween_property(self, "position", (global_position + Vector2(cantidad_deslizar, 0)), 1)\
 	.set_ease(Tween.EASE_IN_OUT)\
@@ -30,7 +31,14 @@ func tween_entrada(texto: String):
 
 
 func tween_salida():
-	tween(tamaño_viewport.x)
+	tween(tamaño_viewport.x * 2)
+	resetear_posicion()
+
+
+func resetear_posicion():
+	await get_tree().create_timer(timer.wait_time).timeout
+	hide()
+	global_position.x = -tamaño_viewport.x/2
 
 
 func _on_timer_timeout():
