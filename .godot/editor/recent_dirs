@@ -1,11 +1,6 @@
-C:/Users/alexa/Documents/Exports/
-res://UI/HUD/Notificacion/
-res://Entidades/Loot/
-res://Entidades/Consumible/
-res://
-res://UI/transicion/
-res://Entidades/Loot/coleccionables/
-res://Assets/Coleccionables/
+res://Assets/jugador/Animations/
+res://Assets/jugador/
+res://UI/Gestor de Interfas/
 res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/
 res://Recursos/Save/
 res://Utilidades/Autoloads/
@@ -18,6 +13,10 @@ res://Entidades/Prefabs colocables/
 res://Entidades/Basura/
 res://Entidades/Notas recogibles/
 res://Assets/Shaders/
+res://
 res://Escenarios/Otoño/
 res://Entidades/Basura/Caja/
 res://Utilidades/Sistemas/
+res://Entidades/BolsaDeBasura/
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/
+res://Assets/entidades/trituradora/

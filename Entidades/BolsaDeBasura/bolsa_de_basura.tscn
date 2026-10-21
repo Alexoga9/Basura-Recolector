@@ -16,7 +16,8 @@ absorbent = true
 [sub_resource type="CircleShape2D" id="CircleShape2D_7j55v"]
 radius = 11.0
 
-[node name="BolsaDeBasura" type="StaticBody2D" unique_id=327537673 groups=["BolsaDeBasura"]]
+[node name="BolsaDeBasura" type="AnimatableBody2D" unique_id=327537673 groups=["BolsaDeBasura"]]
+sync_to_physics = false
 y_sort_enabled = true
 collision_layer = 64
 collision_mask = 116
