@@ -12,7 +12,6 @@ var cuerpos: Array[Basura] = []
 var cooldown_activo: bool = false
 
 
-
 func _ready():
 	SignalBus.interaccion.connect(revisar_espacio_inventario)
 	timer.wait_time = cooldown_tiempo
@@ -22,13 +21,11 @@ func revisar_espacio_inventario():
 	var body = get_entidad_mas_cercana()
 
 	# CASO 1: Hay espacio en el inventario
-	if Inventario.peso_maximo > Inventario.peso:
-		print("Revisando basura")
-		revisar_tipo_de_basura(body)
+	revisar_tipo_de_basura(body)
 
 	# CASO 2: Inventario lleno
-	else:
-		print("ta lleno - No se puede recoger más")
+	#else:
+		#print("ta lleno - No se puede recoger más")
 
 
 func revisar_tipo_de_basura(body: Basura):
@@ -52,7 +49,8 @@ func revisar_tipo_de_basura(body: Basura):
 		body.romper()
 		return
 
-	recolectar_basura(body)
+	if Inventario.peso_maximo > Inventario.peso:
+		recolectar_basura(body)
 
 
 ## Devuelve true si se cumplen los requisitos (o no hay requisitos), false si no.
