@@ -52,6 +52,7 @@ tiene_requisito = true
 tipo_de_requisito = 1
 nivel_de_requisito = 2
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"
+perfil_mundo = 2
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pmfwy"]
 atlas = ExtResource("11_xcoqo")
@@ -72,6 +73,7 @@ tipo_de_requisito = 1
 nivel_de_requisito = 2
 materiales_dentro = Array[ExtResource("8_gyn1n")]([ExtResource("10_q7cj0"), ExtResource("10_q7cj0")])
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"
+perfil_mundo = 1
 
 [sub_resource type="Resource" id="Resource_vq32w"]
 script = ExtResource("8_gyn1n")

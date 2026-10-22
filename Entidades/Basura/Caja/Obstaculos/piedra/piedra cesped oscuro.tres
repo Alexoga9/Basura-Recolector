@@ -38,3 +38,4 @@ veces_a_golpear = 2
 tipo_de_requisito = 1
 materiales_dentro = Array[ExtResource("3_hxtmk")]([ExtResource("4_yu28j"), ExtResource("4_yu28j")])
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"
+perfil_mundo = 2

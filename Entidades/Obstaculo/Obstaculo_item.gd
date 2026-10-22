@@ -1,6 +1,8 @@
 @icon("res://addons/iconos/obstaculo.svg")
 class_name Obstaculo extends StaticBody2D
 
+const PRESENTACION = preload("res://Commons/Componentes/Utilidades/presentacion_objeto.gd")
+
 @onready var sprite2d = %Sprite
 @onready var collision_shape_2d = %CollisionShape2D
 @onready var sonido = %sonido
@@ -57,6 +59,7 @@ func iniciar_valores():
 	valor = data.valor
 	sonido.stream = data.audio
 	sprite2d.texture = data.sprite
+	PRESENTACION.aplicar(data, self, sprite2d, collision_shape_2d, $Area2D)
 
 
 func _on_area_2d_input_event(viewport, event, shape_idx):

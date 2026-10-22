@@ -8,6 +8,14 @@ class_name LootDefinicion extends Resource
 @export var conjunto_de_sprites: Array[Texture2D]
 @export var cantidad_maxima: int
 
+@export_group("Presentacion en el mundo")
+enum PerfilMundo {CAJA, ARBOL, PIEDRA, HIERBA, PERSONALIZADO}
+@export var perfil_mundo: PerfilMundo = PerfilMundo.CAJA
+@export var forma_colision: Shape2D
+@export var posicion_colision: Vector2 = Vector2.ZERO
+@export var desplazamiento_visual: Vector2 = Vector2.ZERO
+@export var tamano_interaccion: Vector2 = Vector2.ZERO
+
 @export_group("Tipo de objeto")
 enum TipoElemento {BASURA,
 MATERIAL,

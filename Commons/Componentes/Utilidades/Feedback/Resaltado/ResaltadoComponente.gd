@@ -5,18 +5,22 @@ class_name ResaltadoComponente extends Node
 @export var material_outline: Material
 @export var e_sprite: TweenAparecer
 var estado_original_material: Material = null
+var sprite_objetivo: Sprite2D
+var objetivo_visual: Node2D
 
 
 func _ready():
-	# 1. Guardamos el material original del padre (NO lo modificamos aún)
-	if get_parent() is Node2D:
-		estado_original_material = get_parent().material
-
-	# 2. Esperamos 1 frame para que el nodo esté completamente establecido
-	await get_tree().process_frame
-
-	# 3. Ahora sí, forzamos el estado inicial DESACTIVADO
-	#no_resaltado()
+	sprite_objetivo = get_parent() as Sprite2D
+	if not sprite_objetivo:
+		sprite_objetivo = get_parent().get_node_or_null("Sprite") as Sprite2D
+	objetivo_visual = sprite_objetivo if sprite_objetivo else get_parent() as Node2D
+	if objetivo_visual:
+		estado_original_material = objetivo_visual.material
+		if material_outline:
+			material_outline = material_outline.duplicate()
+	if sprite_objetivo:
+		sprite_objetivo.texture_changed.connect(_actualizar_region)
+		_actualizar_region()
 
 
 func resaltado():
@@ -32,14 +36,27 @@ func no_resaltado():
 
 
 func _outline_on():
-	if get_parent() is Node2D and material_outline:
-		get_parent().material = material_outline
+	if objetivo_visual and material_outline:
+		objetivo_visual.material = material_outline
 
 
 func _outline_off():
-	if get_parent() is Node2D:
+	if objetivo_visual:
 		# Restauramos el material original (si tenía) o lo ponemos a null
-		get_parent().material = estado_original_material
+		objetivo_visual.material = estado_original_material
+
+
+func _actualizar_region() -> void:
+	if not material_outline is ShaderMaterial or not sprite_objetivo.texture:
+		return
+	var region := Vector4.ZERO
+	if sprite_objetivo.texture is AtlasTexture:
+		var rect: Rect2 = sprite_objetivo.texture.region
+		region = Vector4(rect.position.x, rect.position.y, rect.size.x, rect.size.y)
+	elif sprite_objetivo.region_enabled:
+		var rect := sprite_objetivo.region_rect
+		region = Vector4(rect.position.x, rect.position.y, rect.size.x, rect.size.y)
+	material_outline.set_shader_parameter("texture_region", region)
 
 
 func _mostrar_e():

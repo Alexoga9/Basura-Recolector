@@ -7,6 +7,8 @@ extends Area2D
 
 # Hacer un ajuste en cuanto a la energia componente apartir de vida
 func _on_area_entered(object: Loot):
+	if object == null or object.es_coleccionable() or object.recogido:
+		return
 	if object.is_in_group("Loot"):
 		match object.tipo_de_basura:
 

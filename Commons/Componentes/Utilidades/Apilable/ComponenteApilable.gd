@@ -15,6 +15,13 @@ var cuerpo_padre: StaticBody2D = null
 
 func _ready():
 	cuerpo_padre = get_parent() as StaticBody2D
+	if cuerpo_padre is Basura and cuerpo_padre.data.perfil_mundo != LootDefinicion.PerfilMundo.CAJA:
+		set_process(false)
+		if ray_cast_abajo:
+			ray_cast_abajo.enabled = false
+		if ray_cast_arriba:
+			ray_cast_arriba.enabled = false
+		return
 
 	# Configuramos los raycasts
 	if ray_cast_abajo:
@@ -43,7 +50,7 @@ func detectar_caja_debajo():
 	if ray_cast_abajo.is_colliding():
 		var colision = ray_cast_abajo.get_collider()
 
-		if colision != cuerpo_padre and colision is StaticBody2D:
+		if colision != cuerpo_padre and colision is StaticBody2D and _permite_apilar(colision):
 			caja_debajo = colision
 
 			if caja_debajo.has_method("get_altura_pila"):
@@ -68,7 +75,7 @@ func detectar_caja_arriba():
 	if ray_cast_arriba.is_colliding():
 		var colision = ray_cast_arriba.get_collider()
 
-		if colision != cuerpo_padre and colision is StaticBody2D:
+		if colision != cuerpo_padre and colision is StaticBody2D and _permite_apilar(colision):
 			caja_arriba = colision
 			return
 
@@ -100,6 +107,10 @@ func caer_al_siguiente_nivel():
 
 func get_altura_pila() -> int:
 	return altura_pila
+
+
+func _permite_apilar(cuerpo: StaticBody2D) -> bool:
+	return not cuerpo is Basura or cuerpo.data.perfil_mundo == LootDefinicion.PerfilMundo.CAJA
 
 
 # 📌 EXPONEMOS LAS FUNCIONES PÚBLICAS PARA QUE EL PADRE PUEDA LLAMARLAS

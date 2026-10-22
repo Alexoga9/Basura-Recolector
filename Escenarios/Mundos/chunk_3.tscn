@@ -54,6 +54,7 @@ tiene_requisito = true
 nivel_de_requisito = 3
 materiales_dentro = Array[ExtResource("6_3fydg")]([ExtResource("11_ggcp5"), ExtResource("11_ggcp5"), ExtResource("11_ggcp5")])
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"
+perfil_mundo = 2
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pmfwy"]
 atlas = ExtResource("15_wapn8")
@@ -74,6 +75,7 @@ tipo_de_requisito = 1
 nivel_de_requisito = 2
 materiales_dentro = Array[ExtResource("6_3fydg")]([ExtResource("10_7ghf4"), ExtResource("10_7ghf4")])
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"
+perfil_mundo = 1
 
 [sub_resource type="Resource" id="Resource_p7l1k"]
 script = ExtResource("6_3fydg")

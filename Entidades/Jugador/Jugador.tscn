@@ -532,6 +532,7 @@ bg_color = Color(0.8392157, 0.8392157, 0.8392157, 0.49803922)
 [node name="Jugador" type="CharacterBody2D" unique_id=1030727379 groups=["Jugador"]]
 collision_mask = 60
 motion_mode = 1
+safe_margin = 0.5
 script = ExtResource("1_5k27j")
 
 [node name="Sombra" type="Sprite2D" parent="." unique_id=1329384721]
@@ -627,7 +628,7 @@ editor_description = "Reconoce las entidades a su al rededor, administrandolas e
 
 Permite elegir si quieres un enemigo aleatorio, cercano o lejano"
 collision_layer = 0
-collision_mask = 100
+collision_mask = 102
 script = ExtResource("9_y6klq")
 metadata/_custom_type_script = "uid://dqiir7o6l4sjy"
 

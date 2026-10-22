@@ -1,6 +1,8 @@
 @icon("res://addons/iconos/basura.svg")
 class_name Basura extends StaticBody2D
 
+const PRESENTACION = preload("res://Commons/Componentes/Utilidades/presentacion_objeto.gd")
+
 @onready var sprite2d = %Sprite
 @onready var collision_shape_2d = %CollisionShape2D
 @onready var sonido: AudioStreamPlayer = %sonido_recogida
@@ -49,6 +51,7 @@ func iniciar_valores():
 	valor = data.valor
 	sonido.stream = data.audio
 	sprite_aleatorio()
+	PRESENTACION.aplicar(data, self, sprite2d, collision_shape_2d, $"Mouse Detector")
 	requisito = data.tiene_requisito
 	tipo_de_requisito = int(data.tipo_de_requisito)
 	nivel_requisito = data.nivel_de_requisito
@@ -99,9 +102,8 @@ func _on_area_2d_input_event(viewport, event, shape_idx):
 
 
 func sprite_aleatorio():
-	var random: int = randi_range(0,data.conjunto_de_sprites.size() - 1)
-
 	if data.conjunto_de_sprites:
+		var random: int = randi_range(0, data.conjunto_de_sprites.size() - 1)
 		sprite2d.texture = data.conjunto_de_sprites[random]
 	else:
 		sprite2d.texture = data.sprite

@@ -50,6 +50,7 @@ tipo_de_requisito = 1
 nivel_de_requisito = 2
 materiales_dentro = Array[ExtResource("5_isstk")]([ExtResource("9_4xlto"), ExtResource("9_4xlto")])
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"
+perfil_mundo = 1
 
 [sub_resource type="Resource" id="Resource_3lpn2"]
 script = ExtResource("5_isstk")
@@ -124,6 +125,7 @@ tiene_requisito = true
 nivel_de_requisito = 1
 materiales_dentro = Array[ExtResource("5_isstk")]([ExtResource("10_18pdu"), ExtResource("10_18pdu")])
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"
+perfil_mundo = 2
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_707wf"]
 atlas = ExtResource("10_imjhf")
@@ -154,6 +156,7 @@ tipo_de_requisito = 1
 nivel_de_requisito = 3
 materiales_dentro = Array[ExtResource("5_isstk")]([ExtResource("9_4xlto"), ExtResource("9_4xlto")])
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"
+perfil_mundo = 1
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w8mdt"]
 texture = ExtResource("9_d0bkc")

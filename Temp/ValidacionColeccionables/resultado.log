@@ -1,0 +1,7 @@
+Godot Engine v4.6.3.stable.steam.7d41c59c4 - https://godotengine.org
+
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2570)
+✅ Jugador asignado en Global: Jugador
+[Inventory] Se añadió material. Estado de vhs: 1
+Validacion coleccionables: 0 errores

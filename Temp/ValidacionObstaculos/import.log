@@ -1,0 +1,55 @@
+Godot Engine v4.6.3.stable.steam.7d41c59c4 - https://godotengine.org
+
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2570)
+[   0% ] first_scan_filesystem | Started Project initialization (5 steps)
+[   0% ] first_scan_filesystem | Scanning file structure...
+[  16% ] first_scan_filesystem | Loading global class names...
+[  33% ] first_scan_filesystem | Verifying GDExtensions...
+[  50% ] first_scan_filesystem | Creating autoload scripts...
+[  66% ] first_scan_filesystem | Initializing plugins...
+WARNING: res://addons/scene_palette/components/sub_palette.tscn:4 - ext_resource, invalid UID: uid://djkikw5bibcc4 - using text path instead: res://addons/scene_palette/icons/arrow-side.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+WARNING: res://addons/scene_palette/components/sub_palette.tscn:5 - ext_resource, invalid UID: uid://u8n744wuh87v - using text path instead: res://addons/scene_palette/icons/arrow-down.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+WARNING: res://addons/scene_palette/components/sub_palette.tscn:6 - ext_resource, invalid UID: uid://dtr1mvnxsqbfu - using text path instead: res://addons/scene_palette/icons/file-folder.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+WARNING: res://addons/scene_palette/components/scene_thumbnail/scene_drop.tscn:5 - ext_resource, invalid UID: uid://26wme2if3npg - using text path instead: res://addons/scene_palette/icons/open_scene.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+WARNING: res://addons/scene_palette/components/favorite_button/FavoriteButton.tscn:5 - ext_resource, invalid UID: uid://cnbdmmb6fnvld - using text path instead: res://addons/scene_palette/icons/palette.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+WARNING: res://addons/scene_palette/components/favorite_button/FavoriteButton.tscn:6 - ext_resource, invalid UID: uid://ej7ami3jsn2b - using text path instead: res://addons/scene_palette/icons/eye_dropper.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+WARNING: res://addons/scene_palette/palette.tscn:7 - ext_resource, invalid UID: uid://b8sr6lj3gvokt - using text path instead: res://addons/scene_palette/icons/heart.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+WARNING: res://addons/scene_palette/palette.tscn:8 - ext_resource, invalid UID: uid://cikn33hitvmkf - using text path instead: res://addons/scene_palette/icons/wrench.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+[  83% ] first_scan_filesystem | Starting file scan...
+[ DONE ] first_scan_filesystem
+
+[   0% ] update_scripts_classes | Started Registering global classes... (6 steps)
+[   0% ] update_scripts_classes | ResaltadoComponente
+[  14% ] update_scripts_classes | 
+[  28% ] update_scripts_classes | 
+[  42% ] update_scripts_classes | Obstaculo
+[  57% ] update_scripts_classes | LootDefinicion
+[  71% ] update_scripts_classes | 
+[ DONE ] update_scripts_classes
+
+[   0% ] loading_editor_layout | Started Loading editor (5 steps)
+[   0% ] loading_editor_layout | Loading editor layout...
+[  16% ] loading_editor_layout | Loading docks...
+[  33% ] loading_editor_layout | Reopening scenes...
+ERROR: Condition "!actions.custom_samplers.has(function->arguments[j].tex_builtin)" is true. Continuing.
+   at: _dump_node_code (servers/rendering/shader_compiler.cpp:1294)
+ERROR: Condition "!actions.custom_samplers.has(function->arguments[j].tex_builtin)" is true. Continuing.
+   at: _dump_node_code (servers/rendering/shader_compiler.cpp:1294)
+[  50% ] loading_editor_layout | Loading central editor layout...
+[  66% ] loading_editor_layout | Loading plugin window layout...
+[  83% ] loading_editor_layout | Editor layout ready.
+[ DONE ] loading_editor_layout
+
+ERROR: Cannot save file 'C:/Program Files (x86)/Steam/steamapps/common/Godot Engine/editor_data/editor_settings-4.6.tres'.
+   at: save (scene/resources/resource_format_text.cpp:1756)
+ERROR: Error saving editor settings to C:/Program Files (x86)/Steam/steamapps/common/Godot Engine/editor_data/editor_settings-4.6.tres
+   at: save (editor/settings/editor_settings.cpp:1404)

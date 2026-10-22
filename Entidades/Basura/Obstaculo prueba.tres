@@ -22,3 +22,4 @@ tiene_requisito = true
 nivel_de_requisito = 1
 materiales_dentro = Array[ExtResource("2_bo28q")]([ExtResource("3_bo28q"), ExtResource("3_bo28q")])
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"
+perfil_mundo = 2

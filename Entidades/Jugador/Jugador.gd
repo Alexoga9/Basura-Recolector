@@ -11,6 +11,23 @@ class_name Jugador extends CharacterBody2D
 @onready var lanza_basura: LanzaBasura = %"Lanza Basura"
 @onready var estadisticas_componente: EstadisticasComponente = %EstadisticasComponente
 var canMove = true
+const TEXTO_RECOGIDA = preload("res://UI/Theme/shaders/label_personalizado.tscn")
+
+
+func mostrar_recogida(nombre_objeto: String) -> void:
+	var mensaje: LabelSombreado = TEXTO_RECOGIDA.instantiate()
+	mensaje.text = "Recogiste: " + nombre_objeto.replace("_", " ")
+	mensaje.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	mensaje.z_index = 100
+	add_child(mensaje)
+	mensaje.get_node("Label").mouse_filter = Control.MOUSE_FILTER_IGNORE
+	mensaje.set_anchors_and_offsets_preset(Control.PRESET_TOP_LEFT)
+	mensaje.reset_size()
+	mensaje.position = Vector2(-mensaje.size.x / 2.0, -40.0)
+	var animacion := create_tween()
+	animacion.tween_property(mensaje, "position:y", -60.0, 1.5)
+	animacion.parallel().tween_property(mensaje, "modulate:a", 0.0, 0.5).set_delay(1.0)
+	animacion.tween_callback(mensaje.queue_free)
 
 # In Game
 @onready var energia_componente: EnergiaComponente = %EnergiaComponente

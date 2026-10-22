@@ -2,6 +2,7 @@ extends ResaltadoComponente
 
 
 func _ready():
+	super._ready()
 
 	# Ahora conectamos correctamente
 	trigger_area.body_entered.connect(_on_trigger_jugador_body_entered)

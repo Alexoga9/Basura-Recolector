@@ -29,3 +29,4 @@ tipo_de_requisito = 1
 nivel_de_requisito = 3
 materiales_dentro = Array[ExtResource("3_hngiy")]([ExtResource("4_6hwjp"), ExtResource("4_6hwjp")])
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"
+perfil_mundo = 1

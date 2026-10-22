@@ -4,6 +4,7 @@ extends ResaltadoComponente
 
 
 func _ready():
+	super._ready()
 
 	# Ahora conectamos correctamente
 	trigger_area.area_entered.connect(_on_area_2d_area_entered)
@@ -31,8 +32,8 @@ func _on_area_2d_mouse_exited():
 
 
 func _on_area_2d_area_entered(area):
-	print("Caja")
-	resaltado()
+	if area.is_in_group("Radar Basura"):
+		resaltado()
 
 
 func _on_area_2d_area_exited(area):

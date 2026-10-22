@@ -1,0 +1,9 @@
+Godot Engine v4.6.3.stable.steam.7d41c59c4 - https://godotengine.org
+
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2570)
+✅ Jugador asignado en Global: Jugador
+Contacto (0.0, 1.0) oscilacion=(0.0, 0.0) posicion=(-1.0, 13.74174)
+Contacto (0.0, -1.0) oscilacion=(0.0, 0.0) posicion=(-1.0, 26.25826)
+Contacto (-1.0, 0.0) oscilacion=(0.0, 0.0) posicion=(11.00826, 20.0)
+Contacto (1.0, 0.0) oscilacion=(0.0, 0.0) posicion=(-11.00826, 20.0)
