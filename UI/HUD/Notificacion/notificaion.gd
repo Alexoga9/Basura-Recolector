@@ -7,7 +7,7 @@ var tamaño_viewport: Vector2
 
 func _ready():
 	tamaño_viewport = get_viewport().size
-	tween(-tamaño_viewport.x/2)
+	tween(-tamaño_viewport.x)
 	SignalBus.notificacion.connect(tween_entrada)
 
 
@@ -16,6 +16,7 @@ func recibir_texto(texto: String):
 
 
 func tween(cantidad_deslizar:float):
+	resetear_posicion()
 	show()
 	var tween: Tween = get_tree().create_tween()
 	tween.tween_property(self, "position", (global_position + Vector2(cantidad_deslizar, 0)), 1)\
@@ -27,18 +28,18 @@ func tween_entrada(texto: String):
 	timer.start()
 	show()
 	recibir_texto(texto)
-	tween(tamaño_viewport.x/2)
+	tween(tamaño_viewport.x)
 
 
 func tween_salida():
-	tween(tamaño_viewport.x * 2)
+	tween(tamaño_viewport.x)
 	resetear_posicion()
 
 
 func resetear_posicion():
 	await get_tree().create_timer(timer.wait_time).timeout
 	hide()
-	global_position.x = -tamaño_viewport.x/2
+	global_position.x = -tamaño_viewport.x
 
 
 func _on_timer_timeout():

@@ -119,6 +119,11 @@ func aplicar_datos(datos: Dictionary) -> void:
 		queue_free()
 
 
+func notificar_limitacion():
+	var nombre_mejora: String = data.TipoRequisito.keys()[data.tipo_de_requisito]
+	SignalBus.notificacion.emit("Necesitas la mejora de " + nombre_mejora)
+
+
 #func ser_recogida():
 	#SaveGame.registrar_item_destruido(id_guardado)
 	#queue_free()

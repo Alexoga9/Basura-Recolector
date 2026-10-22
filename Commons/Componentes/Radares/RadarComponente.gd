@@ -200,8 +200,10 @@ func actualizar_resaltado() -> void:
 
 
 func revisar_espacio_inventario(body: Node2D = null) -> void:
+
 	if Interfaces.juego_bloqueado():
 		return
+
 	limpiar_cuerpos()
 
 	if body == null:
@@ -260,6 +262,7 @@ func revisar_tipo_de_basura(body: Node2D) -> void:
 
 		if not revisar_tipo_de_requisito(basura):
 			print("No cumples los requisitos")
+			basura.notificar_limitacion()
 			return
 
 		if basura.data.veces_a_golpear > 0:

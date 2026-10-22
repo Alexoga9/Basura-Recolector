@@ -28,3 +28,7 @@ res://UI/Menu Principal/Opciones/Opciones de audio/opciones_de_audio.tscn
 res://UI/Menu Principal/Opciones/Créditos/creditos.tscn
 res://UI/Menu Principal/menu_principal.tscn
 res://UI/Menu Principal/menu_principal.gd
+res://Utilidades/Autoloads/Global.gd
+res://Escenarios/Mundos/chunk_1.tscn
+res://Entidades/Basura/Basura_item.gd
+res://Commons/Componentes/Radares/RadarComponente.gd

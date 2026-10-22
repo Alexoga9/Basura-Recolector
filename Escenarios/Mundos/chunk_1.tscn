@@ -335,12 +335,6 @@ position = Vector2(578, 382)
 [node name="Basura18" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=45255654 instance=ExtResource("3_dahfg")]
 position = Vector2(571, 371)
 
-[node name="Basura19" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=842793883 instance=ExtResource("3_dahfg")]
-position = Vector2(631, 289)
-
-[node name="Basura20" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1289803741 instance=ExtResource("3_dahfg")]
-position = Vector2(563, 296)
-
 [node name="Basura21" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=120075022 instance=ExtResource("3_dahfg")]
 position = Vector2(626, 334)
 
