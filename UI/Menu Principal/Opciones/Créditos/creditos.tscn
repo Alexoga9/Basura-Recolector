@@ -71,7 +71,9 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 text = "SnowHex: Dirección, Arte
+
 Shxadow9: Jefe de Programación
+
 Juaco: Programación"
 label_settings = ExtResource("3_oxq1v")
 

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bnuwtensy41ki" path="res://UI/HUD/Pausa/pausa.gd" id="1_tbmkw"]
 [ext_resource type="FontFile" uid="uid://dryil6kc3yx5s" path="res://Assets/tipografia/DobleHex2.ttf" id="2_iabu1"]
+[ext_resource type="PackedScene" uid="uid://cyosjufx0xt31" path="res://UI/Menu Principal/Opciones/opciones.tscn" id="3_ogopn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ogopn"]
 font = ExtResource("2_iabu1")
@@ -100,14 +101,26 @@ size_flags_vertical = 6
 focus_neighbor_bottom = NodePath("../menu principal")
 text = "Reset"
 
+[node name="Opciones" type="Button" parent="MarginContainer/PanelContainer/VBoxContainer" unique_id=1290552119]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Opciones"
+
 [node name="menu principal" type="Button" parent="MarginContainer/PanelContainer/VBoxContainer" unique_id=896950974]
 layout_mode = 2
 size_flags_horizontal = 4
 focus_neighbor_top = NodePath("../Continuar")
 text = "menu principal"
 
+[node name="Opciones" parent="." unique_id=248209814 instance=ExtResource("3_ogopn")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+
 [connection signal="pressed" from="MarginContainer/PanelContainer/VBoxContainer/Continuar" to="." method="_on_continuar_pressed"]
 [connection signal="pressed" from="MarginContainer/PanelContainer/VBoxContainer/Save" to="." method="saveGame"]
 [connection signal="pressed" from="MarginContainer/PanelContainer/VBoxContainer/load" to="." method="load_game"]
 [connection signal="pressed" from="MarginContainer/PanelContainer/VBoxContainer/reset" to="." method="reset"]
+[connection signal="pressed" from="MarginContainer/PanelContainer/VBoxContainer/Opciones" to="." method="_on_opciones_pressed"]
 [connection signal="pressed" from="MarginContainer/PanelContainer/VBoxContainer/menu principal" to="." method="_on_menu_principal_pressed"]

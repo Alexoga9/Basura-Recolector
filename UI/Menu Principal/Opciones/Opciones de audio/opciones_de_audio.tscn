@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://d0p871ccdly2t"]
 
 [ext_resource type="Script" uid="uid://djr0e4u5n53br" path="res://UI/Menu Principal/Opciones/Opciones de audio/opciones_de_audio.gd" id="1_1m0p4"]
+[ext_resource type="Theme" uid="uid://ccuc20xm80owq" path="res://UI/Theme/Tienda.tres" id="1_vpuxu"]
 [ext_resource type="PackedScene" uid="uid://c1c88cbt0hvf5" path="res://UI/Menu Principal/Opciones/Opciones de audio/VolumeSlider/VolumeSlider.tscn" id="2_okawx"]
+[ext_resource type="LabelSettings" uid="uid://crqcrwgjb38h3" path="res://UI/Theme/tipografia tienda.tres" id="3_6gnh7"]
 
 [node name="Opciones de Audio" type="Control" unique_id=891913058]
 layout_mode = 3
@@ -10,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_vpuxu")
 script = ExtResource("1_1m0p4")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=310776182]
@@ -19,6 +22,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer" unique_id=2079346960]
 layout_mode = 2
@@ -30,66 +37,83 @@ alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer/VBoxContainer" unique_id=2121189659]
 layout_mode = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
 
-[node name="Atras" type="Button" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer" unique_id=730336619]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer" unique_id=100133117]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=545083581]
+layout_mode = 2
+
+[node name="Atras" type="Button" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=730336619]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 6
 text = "Atras"
 
-[node name="Audio" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer" unique_id=2052779052]
+[node name="Audio" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2052779052]
 layout_mode = 2
-size_flags_horizontal = 4
+size_flags_horizontal = 6
 size_flags_vertical = 6
 text = "Audio"
+label_settings = ExtResource("3_6gnh7")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/VBoxContainer" unique_id=1829838331]
+[node name="Control" type="Control" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=332550296]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1829838331]
 layout_mode = 2
 size_flags_vertical = 3
 alignment = 1
 
-[node name="Master" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1692176267]
+[node name="Master" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1692176267]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Master"
+label_settings = ExtResource("3_6gnh7")
 
-[node name="MasterSlider" parent="MarginContainer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=748427830 instance=ExtResource("2_okawx")]
+[node name="MasterSlider" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=748427830 instance=ExtResource("2_okawx")]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 bus_name = "Master"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/PanelContainer/VBoxContainer" unique_id=609538358]
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=609538358]
 layout_mode = 2
 size_flags_vertical = 3
 alignment = 1
 
-[node name="Música" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2" unique_id=406221675]
+[node name="Música" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=406221675]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Música"
+label_settings = ExtResource("3_6gnh7")
 
-[node name="MusicaSlider" parent="MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2" unique_id=1564595856 instance=ExtResource("2_okawx")]
+[node name="MusicaSlider" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1564595856 instance=ExtResource("2_okawx")]
 unique_name_in_owner = true
 layout_mode = 2
 bus_name = "Musica"
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/PanelContainer/VBoxContainer" unique_id=1532293283]
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1532293283]
 layout_mode = 2
 size_flags_vertical = 3
 alignment = 1
 
-[node name="SFX" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer/HBoxContainer3" unique_id=1555721221]
+[node name="SFX" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1555721221]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "SFX"
+label_settings = ExtResource("3_6gnh7")
 
-[node name="SfxSlider" parent="MarginContainer/PanelContainer/VBoxContainer/HBoxContainer3" unique_id=422034552 instance=ExtResource("2_okawx")]
+[node name="SfxSlider" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=422034552 instance=ExtResource("2_okawx")]
 unique_name_in_owner = true
 layout_mode = 2
 bus_name = "SFX"
@@ -99,7 +123,7 @@ layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 4.25
 
-[connection signal="pressed" from="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/Atras" to="." method="_on_atras_pressed"]
-[connection signal="value_changed" from="MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/MasterSlider" to="." method="_on_master_slider_value_changed"]
-[connection signal="value_changed" from="MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/MusicaSlider" to="." method="_on_musica_slider_value_changed"]
-[connection signal="value_changed" from="MarginContainer/PanelContainer/VBoxContainer/HBoxContainer3/SfxSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="pressed" from="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/Atras" to="." method="_on_atras_pressed"]
+[connection signal="value_changed" from="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2/MasterSlider" to="." method="_on_master_slider_value_changed"]
+[connection signal="value_changed" from="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer3/MusicaSlider" to="." method="_on_musica_slider_value_changed"]
+[connection signal="value_changed" from="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer4/SfxSlider" to="." method="_on_sfx_slider_value_changed"]

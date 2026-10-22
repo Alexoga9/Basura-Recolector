@@ -21,3 +21,10 @@ res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_hongu
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
 res://UI/HUD/Notificacion/notificaion.gd
 res://UI/Tienda/mejoras de habilidades/mejoras/mejora_cooldown.gd
+res://UI/HUD/Pausa/pausa.tscn
+res://UI/HUD/Pausa/pausa.gd
+res://UI/Menu Principal/Opciones/opciones.tscn
+res://UI/Menu Principal/Opciones/Opciones de audio/opciones_de_audio.tscn
+res://UI/Menu Principal/Opciones/Créditos/creditos.tscn
+res://UI/Menu Principal/menu_principal.tscn
+res://UI/Menu Principal/menu_principal.gd

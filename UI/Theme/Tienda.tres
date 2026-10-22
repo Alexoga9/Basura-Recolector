@@ -40,6 +40,14 @@ texture_margin_right = 4.0
 texture_margin_bottom = 6.0
 modulate_color = Color(0.9999991, 0.9906611, 0.51251674, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sn432"]
+bg_color = Color(0.87058824, 0.54901963, 0.4117647, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.23921569, 0.16078432, 0.21176471, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ce683"]
 bg_color = Color(0.78774184, 0.40709773, 0.93499106, 1)
 
@@ -99,6 +107,7 @@ Button/styles/normal = SubResource("StyleBoxTexture_be048")
 Button/styles/pressed = SubResource("StyleBoxTexture_ak11l")
 Label/font_sizes/font_size = 16
 Label/fonts/font = ExtResource("1_ce683")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_sn432")
 ProgressBar/styles/background = SubResource("StyleBoxFlat_ce683")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_op4kc")
 ScrollContainer/icons/scroll_hint_vertical = SubResource("GradientTexture1D_xf2eu")

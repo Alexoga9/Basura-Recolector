@@ -23,14 +23,6 @@ stacked_shadow_3/offset = Vector2(-1, -1)
 stacked_shadow_3/color = Color(0.23921569, 0.16078432, 0.21176471, 1)
 stacked_shadow_4/offset = Vector2(1, 1)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lt0ek"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u2r14"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nxkad"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pi268"]
-
 [node name="MenuPrincipal" type="Control" unique_id=1428838178]
 layout_mode = 3
 anchors_preset = 15
@@ -55,22 +47,12 @@ focus_behavior_recursive = 1
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 32
-text = "Menu principal"
+text = "What did grandpa keep?"
 label_settings = SubResource("LabelSettings_ggg3k")
-
-[node name="Jugar" type="Button" parent="Menu" unique_id=1282465543]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 20.0
-focus_behavior_recursive = 1
-theme_override_styles/normal = SubResource("StyleBoxEmpty_lt0ek")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_u2r14")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_nxkad")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_pi268")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Menu" unique_id=120950094]
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_vertical = 10
 size_flags_stretch_ratio = 2.2
 focus_behavior_recursive = 1
 alignment = 1
@@ -85,12 +67,20 @@ layout_mode = 2
 size_flags_horizontal = 3
 focus_behavior_recursive = 1
 
+[node name="Jugar" type="Button" parent="Menu/HBoxContainer" unique_id=1282465543]
+layout_mode = 2
+focus_behavior_recursive = 1
+text = "Play"
+
 [node name="opciones" type="Button" parent="Menu/HBoxContainer" unique_id=1086592573]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 4.59
 focus_behavior_recursive = 1
 text = "Opciones"
+
+[node name="Salir" type="Button" parent="Menu/HBoxContainer" unique_id=1219782185]
+layout_mode = 2
+focus_behavior_recursive = 1
+text = "salir"
 
 [node name="Control2" type="Control" parent="Menu/HBoxContainer" unique_id=533442111]
 layout_mode = 2
@@ -106,10 +96,10 @@ focus_behavior_recursive = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+size_flags_stretch_ratio = 0.26
 focus_behavior_recursive = 1
 
 [node name="Transicion Background" parent="." unique_id=1610179321 instance=ExtResource("3_pi268")]
-visible = true
 layout_mode = 1
 
 [node name="Opciones" parent="." unique_id=1511520291 instance=ExtResource("3_ggg3k")]
@@ -127,5 +117,6 @@ grow_horizontal = 1
 grow_vertical = 1
 focus_behavior_recursive = 1
 
-[connection signal="pressed" from="Menu/Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="Menu/HBoxContainer/Jugar" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="Menu/HBoxContainer/opciones" to="." method="_on_opciones_pressed"]
+[connection signal="pressed" from="Menu/HBoxContainer/Salir" to="." method="_on_salir_pressed"]

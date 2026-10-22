@@ -28,3 +28,7 @@ func _on_opciones_pressed():
 func mostrar_menu_principal():
 	menu.show()
 	#print("se muestra el menu principal")
+
+
+func _on_salir_pressed():
+	get_tree().quit()

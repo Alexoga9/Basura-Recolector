@@ -2,6 +2,7 @@ class_name Pausa extends Control
 
 @onready var continuar: Button = $MarginContainer/PanelContainer/VBoxContainer/Continuar
 @export var hud: Control
+@onready var opciones = %Opciones
 
 
 func _ready() -> void:
@@ -35,3 +36,7 @@ func reset() -> void:
 	get_tree().paused = false
 	SaveGame.Reset_Game()
 	Interfaces.cerrar_interfaz_especifica(self)
+
+
+func _on_opciones_pressed():
+	opciones.show()

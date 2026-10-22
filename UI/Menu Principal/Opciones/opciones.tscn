@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cyosjufx0xt31"]
 
 [ext_resource type="Script" uid="uid://btoxy437uvye1" path="res://UI/Menu Principal/Opciones/opciones.gd" id="1_pcrob"]
+[ext_resource type="LabelSettings" uid="uid://crqcrwgjb38h3" path="res://UI/Theme/tipografia tienda.tres" id="2_caorp"]
 [ext_resource type="PackedScene" uid="uid://d0p871ccdly2t" path="res://UI/Menu Principal/Opciones/Opciones de audio/opciones_de_audio.tscn" id="2_egtol"]
 [ext_resource type="PackedScene" uid="uid://dr04jwhce10ns" path="res://UI/Menu Principal/Opciones/Salir/salir.tscn" id="3_74tjs"]
 [ext_resource type="PackedScene" uid="uid://c4my3d7q6t5wa" path="res://UI/Menu Principal/Opciones/Créditos/creditos.tscn" id="4_hj841"]
@@ -55,8 +56,10 @@ size_flags_horizontal = 4
 size_flags_vertical = 6
 theme_override_font_sizes/font_size = 32
 text = "Opciones"
+label_settings = ExtResource("2_caorp")
 
 [node name="Control2" type="Control" parent="panel_opciones/PanelContainer/VBoxContainer" unique_id=723942575]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
 
