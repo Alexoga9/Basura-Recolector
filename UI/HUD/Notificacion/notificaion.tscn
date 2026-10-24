@@ -10,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_02hpm")
 
 [node name="Timer" type="Timer" parent="." unique_id=705481973]
@@ -24,6 +25,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_constants/margin_bottom = 50
 
 [node name="Label" type="Label" parent="MarginContainer" unique_id=79382109]
@@ -43,6 +45,7 @@ anchor_bottom = 1.3330001
 offset_bottom = 0.00399971
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(1, 1, 1, 0.23529412)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,14 +1,14 @@
+Node2D
+Button
+Control
 AudioStreamPlayer
 Node
 VBoxContainer
-Control
 HBoxContainer
-Button
 EnergiaComponente
 BeberRefresco
 AnimatedSprite2D
 Basura
-Node2D
 ReconstructorData
 RecolectorData
 CheckpointComponente

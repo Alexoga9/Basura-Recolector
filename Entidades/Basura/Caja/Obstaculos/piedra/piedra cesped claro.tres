@@ -1,9 +1,8 @@
-[gd_resource type="Resource" format=3 uid="uid://cgrmmq154onj0"]
+[gd_resource type="Resource" script_class="LootDefinicion" format=3 uid="uid://cgrmmq154onj0"]
 
 [ext_resource type="AudioStream" uid="uid://sahbu26hpnvx" path="res://Assets/audio/Hit.wav" id="1_bvgs1"]
 [ext_resource type="Texture2D" uid="uid://i2ox5ksvvper" path="res://Escenarios/Oficial/Tilesheet Oficial.png" id="2_f3m0x"]
-
-[ext_resource type="Script" path="res://Recursos/LootDefinicion.gd" id="3_presentacion"]
+[ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="3_presentacion"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_86fdr"]
 atlas = ExtResource("2_f3m0x")
@@ -33,10 +32,10 @@ audio = ExtResource("1_bvgs1")
 sprite = SubResource("AtlasTexture_5d7mj")
 conjunto_de_sprites = Array[Texture2D]([SubResource("AtlasTexture_86fdr"), SubResource("AtlasTexture_oexfj"), SubResource("AtlasTexture_6ttuy"), SubResource("AtlasTexture_wd5n8")])
 cantidad_maxima = 9999
+perfil_mundo = 2
 tipo_de_elemento = 2
 tipo_de_basura = 1
 veces_a_golpear = 2
 tiene_requisito = true
 nivel_de_requisito = 1
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"
-perfil_mundo = 2

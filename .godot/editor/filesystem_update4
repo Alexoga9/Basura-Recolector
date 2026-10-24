@@ -30,3 +30,13 @@ res://Entidades/Loot/coleccionables/gameboy.tres
 res://Entidades/Loot/coleccionables/slopy_disk.tres
 res://Entidades/Loot/coleccionables/tv.tres
 res://Entidades/Loot/coleccionables/vinilo.tres
+res://UI/HUD/Notificacion/notificaion.tscn
+res://Escenarios/prueba de cambio de sprite/Valla.tscn
+res://UI/HUD/UI_canvas_layer.tscn
+res://UI/transicion/pasar_por_puerta.tscn
+res://Escenarios/Mundos/chunk_2.tscn
+res://Escenarios/Mundos/chunk_3.tscn
+res://Entidades/Basura/Caja/Obstaculos/piedra/piedra cesped claro.tres
+res://Escenarios/Mundos/Chunk_4.tscn
+res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/materialesNecesariosDinero.tres
+res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/TiendaRota.tres
