@@ -14,6 +14,10 @@ func restaurar(datos: Dictionary) -> void:
 		return
 
 	for nombre_grupo in datos:
+		# las claves que empiezan con '_' son meta (ej. "_limpieza"), no carpetas
+		if String(nombre_grupo).begins_with("_"):
+			continue
+
 		var info: Dictionary = datos[nombre_grupo]
 		_restaurar_carpeta(String(nombre_grupo), info)
 

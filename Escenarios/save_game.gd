@@ -1,15 +1,15 @@
 extends Node
 
-var datos_por_escenas: Dictionary = {}# en memoria durante la partida
+var datos_por_escenas: Dictionary = {} # en memoria durante la partida
 
 const ESCENA_INICIAL = "uid://cbesogarip1ji"
 const POSICION_INICIAL := Vector2(153.0, 41.0)
 const RUTA_SAVE := "user://save.res"
 
+
 # ------------------------------------------------------------------
 # UTILIDADES
 # ------------------------------------------------------------------
-
 
 ## Convierte cualquier ruta (uid:// o res://) a ruta res:// para usarla
 ## SIEMPRE como clave de datos_por_escenas. Este era el bug principal:
@@ -17,17 +17,14 @@ const RUTA_SAVE := "user://save.res"
 func _normalizar(ruta: String) -> String:
 	if ruta.begins_with("uid://"):
 		var id := ResourceUID.text_to_id(ruta)
-
 		if ResourceUID.has_id(id):
 			return ResourceUID.get_id_path(id)
-
 	return ruta
 
 
 ## Recolecta la escena actual y guarda su estado en memoria.
 func _registrar_escena_actual() -> void:
 	var escena := get_tree().current_scene
-
 	if escena == null:
 		return
 
@@ -39,7 +36,14 @@ func _registrar_escena_actual() -> void:
 		return
 
 	recolector.recolectar_todo()
-	datos_por_escenas[clave] = recolector.serializar()
+	var datos: Dictionary = recolector.serializar()
+
+	# Meta de limpieza: total ORIGINAL + recogidas de esta escena
+	var contador = _contador_actual()
+	if contador != null:
+		datos["_limpieza"] = contador.exportar()
+
+	datos_por_escenas[clave] = datos
 
 
 ## Restaura la escena actual con lo que haya en memoria.
@@ -51,12 +55,65 @@ func _restaurar_escena_actual() -> void:
 		return
 
 	var reconstructor := get_tree().get_first_node_in_group("ReconstructorData") as ReconstructorData
+	var reconstruido := false
 
 	if reconstructor == null:
 		push_warning("SaveGame: no hay ReconstructorData en '%s'" % clave)
-		return
+	else:
+		await reconstructor.restaurar(datos)
+		reconstruido = true
 
-	await reconstructor.restaurar(datos)
+	# Restaurar total original / recogidas / porcentaje de limpieza
+	var limpieza: Dictionary = datos.get("_limpieza", {})
+	var contador = _contador_actual()
+
+	if not limpieza.is_empty() and contador != null:
+		contador.cargar_estado(int(limpieza.get("total", 1)), int(limpieza.get("recogidas", 0)), reconstruido)
+
+
+func _contador_actual():
+	var j = Global.jugador
+	if j != null and is_instance_valid(j):
+		return j.contador_componente
+	return null
+
+
+# ------------------------------------------------------------------
+# CONSULTA DE LIMPIEZA POR ESCENA
+# ------------------------------------------------------------------
+
+## Devuelve {total, recogidas} guardado para una escena, o {} si no hay datos.
+func get_limpieza_guardada(ruta_escena: String) -> Dictionary:
+	var datos: Dictionary = datos_por_escenas.get(_normalizar(ruta_escena), {})
+	return datos.get("_limpieza", {})
+
+
+## Estadísticas de una escena: {total, recogidas, restantes, porcentaje}.
+## Si es la escena actual usa el contador en vivo; si no, lo guardado.
+func get_estadisticas_escena(ruta_escena: String) -> Dictionary:
+	var ruta := _normalizar(ruta_escena)
+	var total := 0
+	var recogidas := 0
+
+	var actual := get_tree().current_scene
+	var contador = _contador_actual()
+
+	if actual != null and contador != null and _normalizar(actual.scene_file_path) == ruta:
+		total = contador.cantidad_de_basuras
+		recogidas = contador.basuras_actuales
+	else:
+		var l := get_limpieza_guardada(ruta)
+		if l.is_empty():
+			return {}
+		total = int(l.get("total", 0))
+		recogidas = int(l.get("recogidas", 0))
+
+	return {
+		"total": total,
+		"recogidas": recogidas,
+		"restantes": maxi(total - recogidas, 0),
+		"porcentaje": int(float(recogidas) / maxi(total, 1) * 100.0),
+	}
 
 
 ## Espera a que la escena nueva esté realmente lista.
@@ -106,7 +163,6 @@ func Cargar() -> void:
 
 	# Normalizar claves (por si hay saves antiguos con uid://)
 	datos_por_escenas = {}
-
 	for clave in data.datos_por_escenas:
 		datos_por_escenas[_normalizar(String(clave))] = data.datos_por_escenas[clave]
 
