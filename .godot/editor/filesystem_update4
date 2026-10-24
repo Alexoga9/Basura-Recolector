@@ -38,3 +38,8 @@ res://UI/Tienda/Panel tienda/panel_tienda.tscn
 res://Commons/Componentes/Core/ContadorComponente.gd
 res://Recursos/Save/ReconstructorData.gd
 res://Escenarios/save_game.gd
+res://UI/HUD/UI_canvas_layer.tscn
+res://UI/HUD/Inventario/Slots Inventario/slot_de_inventario.tscn
+res://UI/HUD/Inventario/Slots Inventario/slot_de_inventario.gd
+res://Utilidades/Autoloads/inventario.gd
+res://UI/HUD/Notificacion/notificaion.gd

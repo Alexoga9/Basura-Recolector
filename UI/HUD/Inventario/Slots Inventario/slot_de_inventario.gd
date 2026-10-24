@@ -3,13 +3,17 @@ class_name SlotDeInventario extends HBoxContainer
 @export var id_a_recibir: String
 @onready var icono = %Icono
 @onready var label = %Label
-@onready var label_con_sombreado: LabelSombreado = %"Label Con Sombreado"
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	hide()
 	Inventario.slot_updated.connect(actualizar_slot)
+
+	# El Inventario es un autoload y sobrevive al cambio de escena, pero este
+	# slot se crea de nuevo con la escena: hay que leer el estado actual.
+	# Si hay 0, actualizar_slot lo deja escondido.
+	actualizar_slot(id_a_recibir, Inventario.get_count(id_a_recibir))
 
 
 func actualizar_slot(item_id: String, cantidad: int):
@@ -22,7 +26,6 @@ func actualizar_slot(item_id: String, cantidad: int):
 		hide()
 		label.text = str(0)
 		label.modulate = Color.WHITE
-		label_con_sombreado.actualizar_labels(0)
 		return
 
 	# Obtenemos el recurso y actualizamos la UI
@@ -32,7 +35,6 @@ func actualizar_slot(item_id: String, cantidad: int):
 		show()
 		icono.texture = item.sprite
 		label.text = str(cantidad)
-		label_con_sombreado.actualizar_labels(cantidad)
 
 		if item.cantidad_maxima == cantidad:
 			label.modulate = Color.RED

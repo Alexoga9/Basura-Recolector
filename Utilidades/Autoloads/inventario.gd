@@ -78,7 +78,14 @@ func get_backpack_data() -> Dictionary:
 
 
 func load_backpack_data(data: Dictionary) -> void:
+	# Avisar a la UI de los ítems que ya no estarán (para que se escondan)
+	var ids_anteriores := backpack.keys()
 	backpack.clear()
+
+	for item_id in ids_anteriores:
+		if not data.has(item_id):
+			slot_updated.emit(item_id, 0)
+
 	for item_id in data.keys():
 		var entry = data[item_id]
 		backpack[item_id] = [entry["cantidad"], entry["resource"]]
@@ -86,4 +93,8 @@ func load_backpack_data(data: Dictionary) -> void:
 
 
 func reset() -> void:
+	var ids_anteriores := backpack.keys()
 	backpack.clear()
+
+	for item_id in ids_anteriores:
+		slot_updated.emit(item_id, 0)
