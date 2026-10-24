@@ -62,7 +62,7 @@ func _comprar_mejora():
 
 
 func _actualizar_precio():
-	precio *= 1.7
+	precio *= 1.5
 	precio = int(precio)
 	label_precio.text = str(precio)
 	label_nivel.text = ("nvl " + str(nivel))

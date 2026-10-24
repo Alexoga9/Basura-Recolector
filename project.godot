@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Basura recolector"
-run/main_scene="uid://cbesogarip1ji"
+run/main_scene="uid://kyb4e7wfvufr"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 

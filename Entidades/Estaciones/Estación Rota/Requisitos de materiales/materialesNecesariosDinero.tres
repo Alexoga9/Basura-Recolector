@@ -1,11 +1,15 @@
 [gd_resource type="Resource" script_class="MaterialesNecesarios" format=3 uid="uid://cxsx0qxcgj5f6"]
 
-[ext_resource type="Texture2D" uid="uid://cj67bs1scsaiw" path="res://Assets/Inventario/moneda.png" id="1_4tt5a"]
+[ext_resource type="Texture2D" uid="uid://c8vwhd7tvuu4x" path="res://Assets/materiales.png" id="1_4tt5a"]
 [ext_resource type="Script" uid="uid://pqkfc017cxy6" path="res://Recursos/materiales_necesarios.gd" id="2_s6l1m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6l1m"]
+atlas = ExtResource("1_4tt5a")
+region = Rect2(20, 11, 8, 9)
 
 [resource]
 script = ExtResource("2_s6l1m")
 tipo_de_elemento = 4
 cantidad_necesaria = 20
-imagen = ExtResource("1_4tt5a")
+imagen = SubResource("AtlasTexture_s6l1m")
 metadata/_custom_type_script = "uid://pqkfc017cxy6"

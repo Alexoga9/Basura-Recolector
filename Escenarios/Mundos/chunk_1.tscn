@@ -27,8 +27,8 @@
 [ext_resource type="Resource" uid="uid://sjc3cn6kq6nq" path="res://Entidades/Basura/Caja/Obstaculos/Arbol/Arbol Cesped Claro.tres" id="17_pmfwy"]
 [ext_resource type="Resource" uid="uid://cb5ucrwrw42s4" path="res://Entidades/Loot/coleccionables/vhs.tres" id="19_bgs43"]
 [ext_resource type="Resource" uid="uid://bmj2s3ucjwupi" path="res://Entidades/Loot/coleccionables/radio.tres" id="20_imjhf"]
-[ext_resource type="Resource" uid="uid://dg6j6kbsk5dye" path="res://Entidades/Loot/coleccionables/reloj.tres" id="21_3lpn2"]
 [ext_resource type="Resource" uid="uid://cjmitmv0r87es" path="res://Entidades/Consumible/refresco.tres" id="23_imjhf"]
+[ext_resource type="Resource" uid="uid://5rkp1mf566u5" path="res://Entidades/Loot/coleccionables/slopy_disk.tres" id="24_bkx32"]
 [ext_resource type="PackedScene" uid="uid://b1luv0bei0jvi" path="res://UI/HUD/UI_canvas_layer.tscn" id="33_imjhf"]
 [ext_resource type="Script" uid="uid://x0afdmm3k1jj" path="res://Utilidades/Sistemas/Checkpoint/CheckpointComponente.gd" id="36_pmfwy"]
 
@@ -86,7 +86,7 @@ nombre = "Basura"
 audio = ExtResource("4_u8set")
 sprite = SubResource("AtlasTexture_ykwam")
 cantidad_maxima = 3
-valor = 100
+valor = 30
 veces_a_golpear = 3
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"
 
@@ -244,6 +244,7 @@ tile_set = ExtResource("1_f8k6w")
 metadata/_edit_lock_ = true
 
 [node name="Motas" type="TileMapLayer" parent="Layers Oficiales/Terreno" unique_id=1094973385]
+visible = false
 tile_map_data = PackedByteArray("AADs/wwAAgAMAAwAAAD+/xAAAgAKAAwAAAALABoAAgANAAwAAAAMABoAAgAMAAwAAAAKABQAAgANAAwAAAAKABMAAgALAAwAAAAJABMAAgANAAwAAAAJABIAAgALAAwAAAAJABEAAgANAAwAAAAIAA0AAgAJAAwAAAAHAAwAAgAOAAwAAAD9/wgAAgANAAwAAAD8/wgAAgAPAAwAAAD7/wgAAgANAAwAAAD6/wgAAgAPAAwAAAD6/wkAAgAOAAwAAAD5/wkAAgALAAwAAAD1/w4AAgAJAAwAAAD1/w8AAgAKAAwAAAD1/xAAAgAMAAwAAAD1/xEAAgANAAwAAAD2/xIAAgAJAAwAAAD2/xMAAgAMAAwAAAD2/xQAAgALAAwAAAAeABoAAgANAAwAAAAfABkAAgALAAwAAAAhABgAAgALAAwAAAAhABcAAgAMAAwAAAAiABYAAgAPAAwAAAAiABUAAgAMAAwAAAAjABQAAgAKAAwAAAAmAAwAAgAJAAwAAAAmAAsAAgAKAAwAAAAmAAoAAgAOAAwAAAAmAAkAAgAKAAwAAAAmAAgAAgAMAAwAAAAkAAMAAgAJAAwAAAAkAAIAAgALAAwAAAAkAAEAAgAOAAwAAAAjAAEAAgALAAwAAAAjAAAAAgAJAAwAAAAjAP7/AgAPAAwAAAAjAP3/AgAJAAwAAAAjAPz/AgAJAAwAAAAiAPz/AgAPAAwAAAAeAPj/AgALAAwAAAAdAPf/AgAKAAwAAAAcAPf/AgAPAAwAAAARAPr/AgAMAAwAAAAQAPr/AgANAAwAAAAQAPn/AgALAAwAAAAPAPr/AgAJAAwAAAAOAPn/AgALAAwAAAANAPj/AgAJAAwAAAALAPf/AgAOAAwAAAAEAPf/AgALAAwAAAADAPf/AgAKAAwAAAACAPj/AgAKAAwAAAAGAAMAAgALAAwAAAAHAAQAAgANAAwAAAAMAAYAAgAJAAwAAAAMAAcAAgALAAwAAAAMAA8AAgAPAAwAAAAMABIAAgAPAAwAAAAMABMAAgANAAwAAAARABUAAgAMAAwAAAATABYAAgAMAAwAAAAUABYAAgALAAwAAAAYABcAAgALAAwAAAAXABgAAgAOAAwAAAAWABgAAgAMAAwAAAAVABgAAgAPAAwAAAAJABkAAgAMAAwAAAAJABgAAgAPAAwAAAAIABgAAgANAAwAAAAHABgAAgAPAAwAAAAHABcAAgAMAAwAAAAGABcAAgAOAAwAAAAAABQAAgAJAAwAAAAAABMAAgAJAAwAAAD//w4AAgAJAAwAAAD//w0AAgAJAAwAAAAAAA0AAgAPAAwAAAAAAAwAAgAMAAwAAAABAAwAAgANAAwAAAADAAoAAgANAAwAAAAFAAwAAgAJAAwAAAAFAA0AAgALAAwAAAAFAA4AAgAJAAwAAAAFAA8AAgALAAwAAAAIABEAAgALAAwAAAAJABAAAgAOAAwAAAANAAkAAgAOAAwAAAANAAgAAgAPAAwAAAAOAAgAAgAMAAwAAAA=")
 tile_set = ExtResource("1_f8k6w")
 metadata/_edit_lock_ = true
@@ -262,9 +263,9 @@ tile_set = ExtResource("3_onpbi")
 
 [node name="puerta_Valla" parent="Vallas" unique_id=1538247553 instance=ExtResource("8_aqtp6")]
 position = Vector2(394, -144)
-porcentaje_requerido = 1
+porcentaje_requerido = 40
 next_scene = "res://Escenarios/Mundos/chunk_2.tscn"
-costo_puerta = 10
+costo_puerta = 200
 entrada_posicion = 1
 condiccion_para_abrir = 1
 
@@ -460,20 +461,23 @@ y_sort_enabled = true
 position = Vector2(-97, 32)
 
 [node name="Loot" parent="Objetos Ambientales/Entiddaes/Loot" unique_id=1738087845 instance=ExtResource("17_imjhf")]
-position = Vector2(493, -35)
+position = Vector2(590, 149)
 data = ExtResource("19_bgs43")
 
 [node name="Loot2" parent="Objetos Ambientales/Entiddaes/Loot" unique_id=1819214844 instance=ExtResource("17_imjhf")]
-position = Vector2(445, -34)
+position = Vector2(361, 242)
 data = ExtResource("20_imjhf")
 
-[node name="Loot3" parent="Objetos Ambientales/Entiddaes/Loot" unique_id=676793612 instance=ExtResource("17_imjhf")]
-position = Vector2(473, 50)
-data = ExtResource("21_3lpn2")
+[node name="Loot5" parent="Objetos Ambientales/Entiddaes/Loot" unique_id=1171055049 instance=ExtResource("17_imjhf")]
+position = Vector2(497, 22)
 
 [node name="Loot4" parent="Objetos Ambientales/Entiddaes/Loot" unique_id=1252821559 instance=ExtResource("17_imjhf")]
-position = Vector2(504, 15)
+position = Vector2(542, -155)
 data = ExtResource("23_imjhf")
+
+[node name="Loot6" parent="Objetos Ambientales/Entiddaes/Loot" unique_id=343301962 instance=ExtResource("17_imjhf")]
+position = Vector2(467, 53)
+data = ExtResource("24_bkx32")
 
 [node name="Notas" type="Node2D" parent="Objetos Ambientales/Entiddaes" unique_id=234868375 groups=["Entidades Notas"]]
 

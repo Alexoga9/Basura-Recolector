@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cjlmg6cpg7g6g" path="res://Entidades/Estaciones/Maquina Expendedora/MaquinaExpendedora.tscn" id="1_jcoxe"]
 [ext_resource type="Script" uid="uid://pqkfc017cxy6" path="res://Recursos/materiales_necesarios.gd" id="2_gccf5"]
-[ext_resource type="Resource" uid="uid://cn42hyavquied" path="res://Entidades/Estaciones/Estación Rota/Requisitos de materiales/Estacion_rota_requisitos_madera.tres" id="3_fmxlm"]
+[ext_resource type="Resource" uid="uid://cn42hyavquied" path="res://Entidades/Estaciones/Estación Rota/Requisitos de materiales/materialesNecesariosMadera.tres" id="3_fmxlm"]
 [ext_resource type="Script" uid="uid://c3l06xkoelcf0" path="res://Recursos/data_estacion_rota.gd" id="4_o1tcx"]
 [ext_resource type="Texture2D" uid="uid://d3grevrisjs14" path="res://Assets/maquina expendedora rota.png" id="5_k0ipn"]
 

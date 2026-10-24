@@ -9,11 +9,14 @@
 [ext_resource type="AudioStream" uid="uid://dr7bho43atgf6" path="res://Assets/audio/tornado audio.mp3" id="5_sxtdg"]
 [ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="6_h87e8"]
 [ext_resource type="Texture2D" uid="uid://syxbc1c047yk" path="res://Assets/Variedad de cajas.png" id="7_4vi8s"]
+[ext_resource type="PackedScene" uid="uid://cd6lygsc501ww" path="res://Entidades/Loot/Loot.tscn" id="9_qgf50"]
 [ext_resource type="Resource" uid="uid://5k76mbciamak" path="res://Entidades/Loot/loots/re_madera.tres" id="10_m57cy"]
 [ext_resource type="Resource" uid="uid://dmky67t6umj3u" path="res://Entidades/Loot/loots/rs_piedra.tres" id="11_75jin"]
 [ext_resource type="PackedScene" uid="uid://b8u0pprb4t2sj" path="res://Entidades/Estaciones/Trituradora/trituradora.tscn" id="13_hs4y1"]
 [ext_resource type="PackedScene" uid="uid://cjlmg6cpg7g6g" path="res://Entidades/Estaciones/Maquina Expendedora/MaquinaExpendedora.tscn" id="14_4n7g7"]
 [ext_resource type="PackedScene" uid="uid://dkwgdyg1ccod6" path="res://Entidades/Estaciones/Estación Rota/estación_rota.tscn" id="15_l46x0"]
+[ext_resource type="Resource" uid="uid://bh5fi4sh0g5a8" path="res://Entidades/Loot/coleccionables/vinilo.tres" id="17_67wik"]
+[ext_resource type="Resource" uid="uid://bf672hysh5pul" path="res://Entidades/Loot/coleccionables/tv.tres" id="18_sxtdg"]
 [ext_resource type="PackedScene" uid="uid://c1kcmjbhf62q1" path="res://Escenarios/prueba de cambio de sprite/Valla.tscn" id="20_bv8wx"]
 [ext_resource type="Texture2D" uid="uid://d3r43nmrn4esl" path="res://Assets/entidades/Valla/Ya.png" id="21_aova3"]
 [ext_resource type="Resource" uid="uid://cgw3qw61x5b08" path="res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/TiendaRota.tres" id="26_qgf50"]
@@ -331,7 +334,7 @@ position = Vector2(597, 244)
 position = Vector2(560, 260)
 
 [node name="Basura17" parent="Objetos Ambientales2/Entiddaes/Basuras" unique_id=142968095 instance=ExtResource("4_67wik")]
-position = Vector2(579, 260)
+position = Vector2(579, 212)
 
 [node name="Basura18" parent="Objetos Ambientales2/Entiddaes/Basuras" unique_id=790163449 instance=ExtResource("4_67wik")]
 position = Vector2(597, 260)
@@ -358,7 +361,7 @@ position = Vector2(835, 244)
 position = Vector2(798, 260)
 
 [node name="Basura26" parent="Objetos Ambientales2/Entiddaes/Basuras" unique_id=244047357 instance=ExtResource("4_67wik")]
-position = Vector2(817, 260)
+position = Vector2(817, 210)
 
 [node name="Basura27" parent="Objetos Ambientales2/Entiddaes/Basuras" unique_id=84321607 instance=ExtResource("4_67wik")]
 position = Vector2(835, 260)
@@ -375,6 +378,14 @@ position = Vector2(835, 276)
 [node name="Loot" type="Node2D" parent="Objetos Ambientales2/Entiddaes" unique_id=487525912 groups=["EntidadesLoot"]]
 position = Vector2(-97, 32)
 
+[node name="Loot" parent="Objetos Ambientales2/Entiddaes/Loot" unique_id=1738087845 instance=ExtResource("9_qgf50")]
+position = Vector2(360, -87)
+data = ExtResource("17_67wik")
+
+[node name="Loot2" parent="Objetos Ambientales2/Entiddaes/Loot" unique_id=2029785601 instance=ExtResource("9_qgf50")]
+position = Vector2(597, -87)
+data = ExtResource("18_sxtdg")
+
 [node name="Notas" type="Node2D" parent="Objetos Ambientales2/Entiddaes" unique_id=858701572 groups=["Entidades Notas"]]
 
 [node name="Jugador" parent="Objetos Ambientales2/Entiddaes" unique_id=1030727379 instance=ExtResource("3_rlhdu")]
@@ -386,6 +397,7 @@ position = Vector2(168, -3)
 metadata/_edit_lock_ = true
 
 [node name="Estaciones Normales" type="Node2D" parent="Objetos Ambientales2/Entiddaes/Estaciones" unique_id=157175028 groups=["EstacionesNormales"]]
+y_sort_enabled = true
 
 [node name="Trituradora" parent="Objetos Ambientales2/Entiddaes/Estaciones/Estaciones Normales" unique_id=1464174491 instance=ExtResource("13_hs4y1")]
 visibility_layer = 2
@@ -395,6 +407,7 @@ position = Vector2(245, 65)
 position = Vector2(173, 67)
 
 [node name="Estaciones Rotas" type="Node2D" parent="Objetos Ambientales2/Entiddaes/Estaciones" unique_id=43261489 groups=["EstacionesRotas"]]
+y_sort_enabled = true
 
 [node name="Estación Rota3" parent="Objetos Ambientales2/Entiddaes/Estaciones/Estaciones Rotas" unique_id=1982592740 instance=ExtResource("15_l46x0")]
 position = Vector2(326, 116)
@@ -422,14 +435,16 @@ metadata/_custom_type_script = "uid://x0afdmm3k1jj"
 visible = false
 
 [node name="Valla" type="Node2D" parent="." unique_id=1058231260 groups=["EntidadesVallas"]]
+y_sort_enabled = true
 position = Vector2(596, -21)
 
 [node name="puerta_Valla2" parent="Valla" unique_id=2724234 instance=ExtResource("20_bv8wx")]
 position = Vector2(394, 288)
-porcentaje_requerido = 0
+porcentaje_requerido = 50
 next_scene = "res://Escenarios/Mundos/chunk_1.tscn"
 costo_puerta = 300
 entrada_posicion = 4
+condiccion_para_abrir = 1
 
 [node name="puerta_Valla3" parent="Valla" unique_id=1005563778 instance=ExtResource("20_bv8wx")]
 position = Vector2(394, -144)

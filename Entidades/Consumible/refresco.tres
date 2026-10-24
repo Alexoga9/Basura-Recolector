@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="LootDefinicion" format=3 uid="uid://cjmitmv0r87es"]
 
-[ext_resource type="AudioStream" uid="uid://sahbu26hpnvx" path="res://Assets/audio/Hit.wav" id="1_0gije"]
+[ext_resource type="AudioStream" uid="uid://bjonwv6oke7od" path="res://Assets/audio/para demo/material_recogido.ogg" id="1_0gije"]
 [ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="1_5aeph"]
 [ext_resource type="Texture2D" uid="uid://b2b1h2jh4bfuy" path="res://Assets/lata.png" id="2_kmx8c"]
 

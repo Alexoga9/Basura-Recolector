@@ -40,3 +40,14 @@ res://Entidades/Basura/Caja/Obstaculos/piedra/piedra cesped claro.tres
 res://Escenarios/Mundos/Chunk_4.tscn
 res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/materialesNecesariosDinero.tres
 res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/TiendaRota.tres
+res://UI/Tienda/Panel tienda/panel_tienda.gd
+res://UI/Menu Principal/menu_principal.tscn
+res://Commons/Componentes/Input/bebeRefresco.tscn
+res://Entidades/Basura/Basura_pesada.tres
+res://Entidades/Loot/loots/re_madera.tres
+res://Entidades/Loot/loots/rs_piedra.tres
+res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/materialesNecesariosPiedra.tres
+res://Entidades/Estaciones/Estación Rota/Requisitos de materiales/materialesNecesariosMadera.tres
+res://Escenarios/Mundos/chunk_reset.tscn
+res://Entidades/Basura/Caja/Obstaculos/Arbol/Arbol Cesped Oscuro.tres
+res://Entidades/Basura/Bolsa de Basura/bolsa_de_basura.tres

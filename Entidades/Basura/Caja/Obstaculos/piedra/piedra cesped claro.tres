@@ -3,6 +3,7 @@
 [ext_resource type="AudioStream" uid="uid://sahbu26hpnvx" path="res://Assets/audio/Hit.wav" id="1_bvgs1"]
 [ext_resource type="Texture2D" uid="uid://i2ox5ksvvper" path="res://Escenarios/Oficial/Tilesheet Oficial.png" id="2_f3m0x"]
 [ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="3_presentacion"]
+[ext_resource type="Resource" uid="uid://dmky67t6umj3u" path="res://Entidades/Loot/loots/rs_piedra.tres" id="4_bvgs1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_86fdr"]
 atlas = ExtResource("2_f3m0x")
@@ -38,4 +39,5 @@ tipo_de_basura = 1
 veces_a_golpear = 2
 tiene_requisito = true
 nivel_de_requisito = 1
+materiales_dentro = Array[ExtResource("3_presentacion")]([ExtResource("4_bvgs1"), ExtResource("4_bvgs1")])
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"

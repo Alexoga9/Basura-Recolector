@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://djkhs1kntn135"
+path="res://.godot/imported/beber_soda.ogg-c00e254c7fc7ef3872e6b4035e962d34.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/audio/para demo/beber_soda.ogg"
+dest_files=["res://.godot/imported/beber_soda.ogg-c00e254c7fc7ef3872e6b4035e962d34.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

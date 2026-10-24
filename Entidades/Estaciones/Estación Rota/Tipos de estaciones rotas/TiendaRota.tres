@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bujsrbbq0elhi" path="res://Entidades/Estaciones/Tienda/tienda.tscn" id="1_0g8qy"]
 [ext_resource type="Script" uid="uid://pqkfc017cxy6" path="res://Recursos/materiales_necesarios.gd" id="2_cse6j"]
-[ext_resource type="Resource" uid="uid://cxsx0qxcgj5f6" path="res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/materialesNecesariosDinero.tres" id="3_mtr1t"]
+[ext_resource type="Resource" uid="uid://cxsx0qxcgj5f6" path="res://Entidades/Estaciones/Estación Rota/Requisitos de materiales/materialesNecesariosDinero.tres" id="3_mtr1t"]
 [ext_resource type="Script" uid="uid://c3l06xkoelcf0" path="res://Recursos/data_estacion_rota.gd" id="4_up221"]
 [ext_resource type="Texture2D" uid="uid://bai1een67q4ss" path="res://Assets/tienda rota.png" id="5_wum6y"]
 
