@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://syxbc1c047yk" path="res://Assets/Variedad de cajas.png" id="4_rw4v2"]
 [ext_resource type="Script" uid="uid://bubqfvtslgafd" path="res://Commons/Componentes/Tweens/Tween_recogida.gd" id="5_mq21f"]
 [ext_resource type="Material" uid="uid://dy8jul72maxm7" path="res://Assets/entidades/OutlineMaterial.tres" id="5_sshtx"]
-[ext_resource type="AudioStream" uid="uid://sahbu26hpnvx" path="res://Assets/audio/Hit.wav" id="6_sshtx"]
+[ext_resource type="AudioStream" uid="uid://cov3b0jcb1hsh" path="res://Assets/audio/para demo/golpe_basura.ogg" id="7_3ynl3"]
 [ext_resource type="Script" uid="uid://cdkdjciti2gnu" path="res://Entidades/Basura/detector_colisiones.gd" id="7_rw4v2"]
 [ext_resource type="Script" uid="uid://bnu0umged2ipg" path="res://Commons/Componentes/Utilidades/Apilable/ComponenteApilable.gd" id="8_bws82"]
 [ext_resource type="Script" uid="uid://d3f11xq7ly0e4" path="res://Commons/Componentes/Tweens/Tween_rebote.gd" id="9_5gi75"]
@@ -61,7 +61,7 @@ bus = &"SFX"
 
 [node name="sonido_romper" type="AudioStreamPlayer" parent="." unique_id=471225445]
 unique_name_in_owner = true
-stream = ExtResource("6_sshtx")
+stream = ExtResource("7_3ynl3")
 volume_db = -10.0
 pitch_scale = 1.5
 bus = &"SFX"

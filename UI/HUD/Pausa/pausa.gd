@@ -12,12 +12,14 @@ func _ready() -> void:
 func _on_continuar_pressed():
 	get_tree().paused = false
 	Interfaces.cerrar_interfaz_especifica(self)
+	AudiosGlobales.boton.play()
 
 
 func _on_menu_principal_pressed():
 	Interfaces.cerrar_interfaz_especifica(self)
 	get_tree().paused = false
 	SaveGame.Cambiar_Escena("uid://kyb4e7wfvufr")
+	AudiosGlobales.boton.play()
 
 
 func saveGame():
@@ -40,3 +42,4 @@ func reset() -> void:
 
 func _on_opciones_pressed():
 	opciones.show()
+	AudiosGlobales.boton.play()

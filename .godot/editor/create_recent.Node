@@ -1,15 +1,14 @@
+AudioStreamPlayer
+Node
 VBoxContainer
 Control
 HBoxContainer
 Button
 EnergiaComponente
-AudioStreamPlayer
 BeberRefresco
 AnimatedSprite2D
 Basura
 Node2D
-Node
 ReconstructorData
 RecolectorData
 CheckpointComponente
-ColorRect

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://7hxcgtlfc22i"]
+
+[ext_resource type="Script" uid="uid://yag6pjt4lunh" path="res://Utilidades/Autoloads/audios_globales.gd" id="1_vkfg8"]
+[ext_resource type="AudioStream" uid="uid://dwlm3ojipl1lo" path="res://Assets/audio/para demo/Menu_Open_04.ogg" id="2_lbx36"]
+[ext_resource type="AudioStream" uid="uid://csh3o5xbeelpp" path="res://Assets/audio/para demo/Menu_Close_04.ogg" id="3_4w4tg"]
+[ext_resource type="AudioStream" uid="uid://d00h40h4x3tr0" path="res://Assets/audio/para demo/Button_Pressed_04.ogg" id="4_lbx36"]
+
+[node name="Audios Globales" type="Node" unique_id=1940116648]
+process_mode = 3
+script = ExtResource("1_vkfg8")
+
+[node name="Abrir menu" type="AudioStreamPlayer" parent="." unique_id=1767125332]
+unique_name_in_owner = true
+stream = ExtResource("2_lbx36")
+
+[node name="Cerrar menu" type="AudioStreamPlayer" parent="." unique_id=1389803104]
+unique_name_in_owner = true
+stream = ExtResource("3_4w4tg")
+
+[node name="Boton" type="AudioStreamPlayer" parent="." unique_id=204774275]
+unique_name_in_owner = true
+stream = ExtResource("4_lbx36")

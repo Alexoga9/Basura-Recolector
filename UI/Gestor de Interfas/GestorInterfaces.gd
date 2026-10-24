@@ -15,23 +15,30 @@ func juego_bloqueado() -> bool:
 
 func botones_disponibles() -> Array[Control]:
 	var botones: Array[Control] = []
+
 	if not is_instance_valid(interfaz_actual):
 		return botones
+
 	for nodo in interfaz_actual.find_children("*", "BaseButton", true, false):
 		if nodo.is_visible_in_tree() and not nodo.disabled and nodo.focus_mode == Control.FOCUS_ALL:
 			botones.append(nodo)
+
 	return botones
 
 
 func _process(_delta: float) -> void:
 	if not is_instance_valid(interfaz_actual):
 		return
+
 	var botones := botones_disponibles()
+
 	for i in botones.size():
 		var boton := botones[i]
 		var enfocar := _enfocar_con_mouse.bind(boton)
+
 		if not boton.mouse_entered.is_connected(enfocar):
 			boton.mouse_entered.connect(enfocar)
+
 		var anterior := botones[(i - 1 + botones.size()) % botones.size()]
 		var siguiente := botones[(i + 1) % botones.size()]
 		boton.focus_neighbor_top = boton.get_path_to(anterior)
@@ -40,7 +47,9 @@ func _process(_delta: float) -> void:
 		boton.focus_neighbor_right = boton.get_path_to(boton)
 		boton.focus_previous = boton.get_path_to(anterior)
 		boton.focus_next = boton.get_path_to(siguiente)
+
 	var foco := get_viewport().gui_get_focus_owner()
+
 	if not botones.has(foco):
 		restaurar_foco()
 	elif foco != null:
@@ -55,24 +64,31 @@ func _enfocar_con_mouse(boton: BaseButton) -> void:
 
 func restaurar_foco() -> void:
 	var botones := botones_disponibles()
+
 	if botones.is_empty():
 		var foco := get_viewport().gui_get_focus_owner()
+
 		if foco != null:
 			foco.release_focus()
+
 		return
+
 	var referencia = ultimos_focos.get(interfaz_actual.get_instance_id())
+
 	var anterior = referencia.get_ref() if referencia != null else null
 	var destino: Control = anterior if botones.has(anterior) else botones[0]
 	destino.grab_focus()
 
 
 func abrir_interfaz(interfaz: Control) -> void:
+	AudiosGlobales.abrir_menu.play()
 	if not is_instance_valid(interfaz):
 		return
 
 	# Si ya está abierta, no hacer nada.
 	if interfaz_actual == interfaz:
 		interfaz.show()
+
 		return
 
 	# Cerrar la interfaz anterior.
@@ -88,18 +104,24 @@ func abrir_interfaz(interfaz: Control) -> void:
 		estilo.border_color = Color(1.0, 0.85, 0.25)
 		estilo.set_border_width_all(1)
 		boton.add_theme_stylebox_override("focus", estilo)
+
 	restaurar_foco.call_deferred()
 
 
 func cerrar_interfaz() -> void:
+
 	var anterior := interfaz_actual
 	var foco := get_viewport().gui_get_focus_owner()
+
 	if is_instance_valid(anterior) and foco != null and anterior.is_ancestor_of(foco):
 		ultimos_focos[anterior.get_instance_id()] = weakref(foco)
 		foco.release_focus()
+
 	interfaz_actual = null
 	ultimo_cambio = Engine.get_process_frames()
+
 	if is_instance_valid(anterior):
+		AudiosGlobales.cerrar_menu.play()
 		anterior.hide()
 
 

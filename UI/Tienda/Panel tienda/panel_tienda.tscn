@@ -7,10 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://due6mtxcwadhu" path="res://Assets/Inventario/Items.png" id="4_wcpre"]
 [ext_resource type="LabelSettings" uid="uid://crqcrwgjb38h3" path="res://UI/Theme/tipografia tienda.tres" id="6_ahgl1"]
 [ext_resource type="FontFile" uid="uid://b0npykajpdagi" path="res://Assets/tipografia/HexFont16pix.ttf" id="7_be048"]
-[ext_resource type="AudioStream" uid="uid://cjghok5vlof2n" path="res://Assets/audio/drop-coin.mp3" id="7_vehtn"]
 [ext_resource type="Texture2D" uid="uid://cg40f2x5atd3o" path="res://Assets/UI/barra completado nivel.png" id="8_6rtv5"]
 [ext_resource type="FontFile" uid="uid://dryil6kc3yx5s" path="res://Assets/tipografia/DobleHex2.ttf" id="9_y73xl"]
 [ext_resource type="Texture2D" uid="uid://cj67bs1scsaiw" path="res://Assets/Inventario/moneda.png" id="10_6rtv5"]
+[ext_resource type="AudioStream" uid="uid://behy14rp6cdki" path="res://Assets/audio/para demo/comprar_tienda.ogg" id="11_6rtv5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_y73xl"]
 shader = ExtResource("1_rs542")
@@ -266,7 +266,7 @@ horizontal_alignment = 1
 
 [node name="audio" type="AudioStreamPlayer" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/boton" unique_id=1129363895]
 unique_name_in_owner = true
-stream = ExtResource("7_vehtn")
+stream = ExtResource("11_6rtv5")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="Panel/MarginContainer/HBoxContainer" unique_id=1979427470]
 layout_mode = 2

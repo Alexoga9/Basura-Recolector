@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://btmcxx5anjib0"
+path="res://.godot/imported/vender_trituradora.ogg-179f9e239fbe244c2cc4bf44e54a3912.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/audio/para demo/vender_trituradora.ogg"
+dest_files=["res://.godot/imported/vender_trituradora.ogg-179f9e239fbe244c2cc4bf44e54a3912.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -3,10 +3,10 @@
 [ext_resource type="Script" uid="uid://bavd3c4essg3w" path="res://Entidades/Estaciones/Trituradora/trituradora.gd" id="1_we1hm"]
 [ext_resource type="Texture2D" uid="uid://bgyh8rm8os5sa" path="res://Assets/sierra recolor.png" id="2_j8t7u"]
 [ext_resource type="Texture2D" uid="uid://i2ox5ksvvper" path="res://Escenarios/Oficial/Tilesheet Oficial.png" id="2_pay24"]
-[ext_resource type="AudioStream" uid="uid://cjghok5vlof2n" path="res://Assets/audio/drop-coin.mp3" id="3_k24a0"]
 [ext_resource type="Script" uid="uid://dn4y66lee8nf6" path="res://Entidades/Estaciones/Tienda/Tienda_resaltado.gd" id="4_fkswi"]
 [ext_resource type="PackedScene" uid="uid://b4nutgd65x10o" path="res://Entidades/genericos/e_sprite.tscn" id="5_pay24"]
 [ext_resource type="Texture2D" uid="uid://cpgyvjxpoja7v" path="res://Assets/entidades/trituradora/particulas de trituradora.png" id="6_mipmb"]
+[ext_resource type="AudioStream" uid="uid://btmcxx5anjib0" path="res://Assets/audio/para demo/vender_trituradora.ogg" id="6_pay24"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aod6l"]
 atlas = ExtResource("2_j8t7u")
@@ -368,7 +368,8 @@ debug_color = Color(0.4739082, 0.167575, 0, 0.41960785)
 
 [node name="audio" type="AudioStreamPlayer" parent="." unique_id=1237359968]
 unique_name_in_owner = true
-stream = ExtResource("3_k24a0")
+stream = ExtResource("6_pay24")
+bus = &"SFX"
 
 [node name="Chispas" type="AnimatedSprite2D" parent="." unique_id=2076967284]
 unique_name_in_owner = true

@@ -10,6 +10,7 @@ func _ready():
 
 
 func _on_jugar_pressed():
+	AudiosGlobales.boton.play()
 	SignalBus.hacer_transicion.emit()
 	#menu.hide()
 	#SignalBus.mostrar_hud.emit()
@@ -21,11 +22,13 @@ func empezar_a_jugar():
 
 
 func _on_opciones_pressed():
+	AudiosGlobales.boton.play()
 	menu.hide()
 	opciones.show()
 
 
 func mostrar_menu_principal():
+	AudiosGlobales.boton.play()
 	menu.show()
 	#print("se muestra el menu principal")
 

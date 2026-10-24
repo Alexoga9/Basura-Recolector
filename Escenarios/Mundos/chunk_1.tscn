@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://i2ox5ksvvper" path="res://Escenarios/Oficial/Tilesheet Oficial.png" id="10_imjhf"]
 [ext_resource type="Texture2D" uid="uid://cbgbirmqb5755" path="res://Assets/UI/marco tienda.png" id="12_imjhf"]
 [ext_resource type="PackedScene" uid="uid://mummqqnve0vm" path="res://Entidades/Notas/nota_coleccionable.tscn" id="15_wre61"]
+[ext_resource type="AudioStream" uid="uid://dxfp54nq4ir4a" path="res://Assets/audio/para demo/recoger_basura.ogg" id="17_bkx32"]
 [ext_resource type="PackedScene" uid="uid://cd6lygsc501ww" path="res://Entidades/Loot/Loot.tscn" id="17_imjhf"]
 [ext_resource type="Resource" uid="uid://sjc3cn6kq6nq" path="res://Entidades/Basura/Caja/Obstaculos/Arbol/Arbol Cesped Claro.tres" id="17_pmfwy"]
 [ext_resource type="Resource" uid="uid://cb5ucrwrw42s4" path="res://Entidades/Loot/coleccionables/vhs.tres" id="19_bgs43"]
@@ -42,6 +43,7 @@ nombre = "Arbol"
 audio = ExtResource("4_u8set")
 sprite = SubResource("AtlasTexture_pmfwy")
 cantidad_maxima = 9999
+perfil_mundo = 1
 tipo_de_elemento = 2
 valor = 10
 veces_a_golpear = 2
@@ -50,7 +52,6 @@ tipo_de_requisito = 1
 nivel_de_requisito = 2
 materiales_dentro = Array[ExtResource("5_isstk")]([ExtResource("9_4xlto"), ExtResource("9_4xlto")])
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"
-perfil_mundo = 1
 
 [sub_resource type="Resource" id="Resource_3lpn2"]
 script = ExtResource("5_isstk")
@@ -71,7 +72,7 @@ region = Rect2(48, 32, 16, 16)
 script = ExtResource("5_isstk")
 id = "Basura pesada"
 nombre = "Basura"
-audio = ExtResource("4_u8set")
+audio = ExtResource("17_bkx32")
 sprite = SubResource("AtlasTexture_000eb")
 cantidad_maxima = 3
 valor = 100
@@ -117,6 +118,7 @@ audio = ExtResource("10_bgs43")
 sprite = SubResource("AtlasTexture_5d7mj")
 conjunto_de_sprites = Array[Texture2D]([SubResource("AtlasTexture_86fdr"), SubResource("AtlasTexture_oexfj"), SubResource("AtlasTexture_6ttuy"), SubResource("AtlasTexture_wd5n8")])
 cantidad_maxima = 9999
+perfil_mundo = 2
 tipo_de_elemento = 2
 tipo_de_basura = 1
 valor = 10
@@ -125,7 +127,6 @@ tiene_requisito = true
 nivel_de_requisito = 1
 materiales_dentro = Array[ExtResource("5_isstk")]([ExtResource("10_18pdu"), ExtResource("10_18pdu")])
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"
-perfil_mundo = 2
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_707wf"]
 atlas = ExtResource("10_imjhf")
@@ -147,6 +148,7 @@ audio = ExtResource("10_bgs43")
 sprite = SubResource("AtlasTexture_hxflo")
 conjunto_de_sprites = Array[Texture2D]([SubResource("AtlasTexture_707wf"), SubResource("AtlasTexture_s1xd6")])
 cantidad_maxima = 9999
+perfil_mundo = 1
 tipo_de_elemento = 2
 tipo_de_basura = 1
 valor = 10
@@ -156,7 +158,6 @@ tipo_de_requisito = 1
 nivel_de_requisito = 3
 materiales_dentro = Array[ExtResource("5_isstk")]([ExtResource("9_4xlto"), ExtResource("9_4xlto")])
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"
-perfil_mundo = 1
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w8mdt"]
 texture = ExtResource("9_d0bkc")
@@ -344,7 +345,7 @@ position = Vector2(626, 334)
 [node name="Basura22" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=53844669 instance=ExtResource("3_dahfg")]
 position = Vector2(630, 375)
 
-[node name="Basura23" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1487201359 instance=ExtResource("3_dahfg")]
+[node name="Basura19" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1487201359 instance=ExtResource("3_dahfg")]
 position = Vector2(647, 375)
 
 [node name="Basura24" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=516164620 instance=ExtResource("3_dahfg")]

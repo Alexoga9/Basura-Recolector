@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dxfp54nq4ir4a"
+path="res://.godot/imported/recoger_basura.ogg-7fd210cb74fc4ba23ab69f939420901f.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/audio/para demo/recoger_basura.ogg"
+dest_files=["res://.godot/imported/recoger_basura.ogg-7fd210cb74fc4ba23ab69f939420901f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -20,6 +20,7 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
 	if event.is_echo():
 		return
+
 	if event.is_action_pressed("Cancelar UI"):
 		_on_pausa_pressed()
 	elif event.is_action_pressed("ui_cancel"):
@@ -31,18 +32,22 @@ func _input(event: InputEvent) -> void:
 		SignalBus.input_tab.emit()
 	else:
 		return
+
 	get_viewport().set_input_as_handled()
 
 
 func _on_pausa_pressed() -> void:
 	if panel_pausa.visible:
 		_on_pausa_exit()
+
 	else:
 		Interfaces.abrir_interfaz(panel_pausa)
+		AudiosGlobales.abrir_menu.play()
 
 
 func _on_pausa_exit() -> void:
 	Interfaces.cerrar_interfaz_especifica(panel_pausa)
+	AudiosGlobales.cerrar_menu.play()
 
 
 func _on_pausa_visibility_changed() -> void:

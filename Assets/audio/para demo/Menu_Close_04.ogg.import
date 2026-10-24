@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://csh3o5xbeelpp"
+path="res://.godot/imported/Menu_Close_04.ogg-313fdc7ccfbb1fdb1e1e07558b7cd121.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/audio/para demo/Menu_Close_04.ogg"
+dest_files=["res://.godot/imported/Menu_Close_04.ogg-313fdc7ccfbb1fdb1e1e07558b7cd121.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://f0y64gec7whj"
+path="res://.godot/imported/sonido_notas.ogg-3c6624e02296bb9a8284cd55e303fb7e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/audio/para demo/sonido_notas.ogg"
+dest_files=["res://.godot/imported/sonido_notas.ogg-3c6624e02296bb9a8284cd55e303fb7e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://bqf61t5aq5kig" path="res://Entidades/Estaciones/Maquina Expendedora/maquina_expendedora.gd" id="1_j4evy"]
 [ext_resource type="PackedScene" uid="uid://dmsrrncsuv1vg" path="res://Entidades/Consumible/refresco_loot.tscn" id="2_pprbo"]
-[ext_resource type="AudioStream" uid="uid://cjghok5vlof2n" path="res://Assets/audio/drop-coin.mp3" id="4_ev2gr"]
 [ext_resource type="Texture2D" uid="uid://i2ox5ksvvper" path="res://Escenarios/Oficial/Tilesheet Oficial.png" id="4_pv4qb"]
 [ext_resource type="Material" uid="uid://dh8ldak1ngnox" path="res://Assets/Shaders/Shader nuevo ajustable correctamente.tres" id="5_pprbo"]
 [ext_resource type="Script" uid="uid://dn4y66lee8nf6" path="res://Entidades/Estaciones/Tienda/Tienda_resaltado.gd" id="5_riqe1"]
 [ext_resource type="PackedScene" uid="uid://b4nutgd65x10o" path="res://Entidades/genericos/e_sprite.tscn" id="7_ojreo"]
+[ext_resource type="AudioStream" uid="uid://td3pr8ab4jjs" path="res://Assets/audio/para demo/dispensado_maquina_expendedora.ogg" id="8_pprbo"]
 [ext_resource type="Texture2D" uid="uid://ducslhwdi22ke" path="res://Assets/entidades/maquina expendedora/maquina expendedora sombra.png" id="9_riqe1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1wau7"]
@@ -341,7 +341,7 @@ debug_color = Color(0.65120107, 0.0018948114, 0.8419935, 0.41960785)
 
 [node name="audio" type="AudioStreamPlayer" parent="." unique_id=186736399]
 unique_name_in_owner = true
-stream = ExtResource("4_ev2gr")
+stream = ExtResource("8_pprbo")
 
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
 [connection signal="body_entered" from="Trigger Jugador" to="." method="_on_trigger_jugador_body_entered"]

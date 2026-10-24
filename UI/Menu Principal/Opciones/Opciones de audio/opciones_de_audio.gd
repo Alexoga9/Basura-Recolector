@@ -33,5 +33,6 @@ func _on_sfx_slider_value_changed(value: float) -> void:
 
 
 func _on_atras_pressed():
+	AudiosGlobales.boton.play()
 	hide()
 	panel_opciones.show()
