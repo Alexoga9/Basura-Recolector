@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="LootDefinicion" format=3 uid="uid://bmj2s3ucjwupi"]
 
 [ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="1_hjuss"]
-[ext_resource type="AudioStream" uid="uid://sahbu26hpnvx" path="res://Assets/audio/Hit.wav" id="1_x2ker"]
+[ext_resource type="AudioStream" uid="uid://tefh43bdpyru" path="res://Assets/audio/para demo/recoger_coleccionable.ogg" id="1_x2ker"]
 [ext_resource type="Texture2D" uid="uid://b2s1y1mog5c63" path="res://Assets/Coleccionables/coleccionables pequeñospng.png" id="3_vytmm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tyx3x"]
@@ -15,5 +15,5 @@ nombre = "radio"
 audio = ExtResource("1_x2ker")
 sprite = SubResource("AtlasTexture_tyx3x")
 cantidad_maxima = 1
-tipo_de_elemento = 5
+tipo_de_elemento = 1
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"

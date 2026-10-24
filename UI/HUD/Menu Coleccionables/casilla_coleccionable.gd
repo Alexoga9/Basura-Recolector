@@ -15,5 +15,6 @@ func _ready():
 
 func revisar_coleccionable_en_inventario():
 	if Inventario.has_item(nombre, 1):
+		SignalBus.notificacion.emit("Haz conseguido un " + nombre)
 		print("Coleccionable Adquirido")
 		imagen_coleccionable.modulate = Color.WHITE

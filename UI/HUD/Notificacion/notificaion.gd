@@ -1,6 +1,6 @@
 class_name Notificacion extends Control
 
-enum Estado { OCULTA, ENTRANDO, VISIBLE, SALIENDO }
+enum Estado {OCULTA, ENTRANDO, VISIBLE, SALIENDO}
 
 ## Posición X (global) donde la notificación queda visible.
 @export var x_reposo: float = 0.0
@@ -41,9 +41,11 @@ func mostrar(texto: String) -> void:
 		Estado.VISIBLE:
 			# Ya está en pantalla: solo reiniciamos el tiempo visible
 			timer.start()
+
 		Estado.ENTRANDO:
 			# Ya viene entrando con el texto nuevo: nada más que hacer
 			pass
+
 		Estado.OCULTA, Estado.SALIENDO:
 			# Si estaba saliendo, vuelve desde donde esté (sin saltos)
 			timer.stop()
@@ -68,6 +70,7 @@ func _animar_entrada() -> void:
 	_tween.tween_property(self, "global_position:x", x_reposo, duracion) \
 		.set_trans(Tween.TRANS_CUBIC) \
 		.set_ease(Tween.EASE_OUT) # arranca rápido, frena suave al llegar
+
 	_tween.tween_callback(_on_entrada_terminada)
 
 
@@ -81,6 +84,7 @@ func _animar_salida() -> void:
 	_tween.tween_property(self, "global_position:x", destino, duracion_salida) \
 		.set_trans(Tween.TRANS_CUBIC) \
 		.set_ease(Tween.EASE_IN) # arranca suave, acelera al salir
+
 	_tween.tween_callback(_on_salida_terminada)
 
 

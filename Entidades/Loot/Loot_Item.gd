@@ -36,6 +36,7 @@ func iniciar_valores():
 func collect():
 	if recogido:
 		return null
+
 	recogido = true
 	sonido.play()
 	collision_shape_2d.call_deferred("set", "disabled", true)
@@ -43,6 +44,7 @@ func collect():
 	SignalBus.material_recogido.emit()
 	if sonido.stream == null:
 		queue_free()
+
 	return data
 
 
@@ -51,19 +53,26 @@ func es_coleccionable() -> bool:
 
 
 func _on_input_event(viewport: Node, event: InputEvent, _shape_idx: int) -> void:
-	if not es_coleccionable() or recogido or Interfaces.juego_bloqueado():
+	if not recogido or Interfaces.juego_bloqueado():
 		return
+
 	if not (event is InputEventMouseButton):
 		return
+
 	if event.button_index != MOUSE_BUTTON_LEFT or not event.pressed:
 		return
+
 	var jugador := Global.jugador
+
 	if not is_instance_valid(jugador):
 		return
+
 	if not jugador.radar_componente.get_overlapping_areas().has(self):
 		return
+
 	if Inventario.get_count(data.id) >= data.cantidad_maxima:
 		return
+
 	Inventario.add_item(data)
 	collect()
 	jugador.mostrar_recogida(nombre)

@@ -19,27 +19,14 @@ res://Entidades/Consumible/Tipos de Consumibles/animacion lata consumible.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_lanzamiento.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
 res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
-res://Entidades/Estaciones/Trituradora/trituradora.tscn
-res://Utilidades/Autoloads/audios_globales.gd
-res://UI/HUD/hud.gd
-res://UI/HUD/hud.tscn
-res://Utilidades/Autoloads/audios_globales.tscn
-res://UI/Tienda/tienda_ui.gd
-res://UI/Gestor de Interfas/GestorInterfaces.gd
-res://Entidades/Estaciones/Maquina Expendedora/MaquinaExpendedora.tscn
-res://Entidades/Basura/Basura.tscn
-res://UI/HUD/Pausa/pausa.gd
-res://UI/transicion/pasar_por_puerta.gd
-res://UI/Menu Principal/Opciones/Créditos/creditos.gd
-res://UI/Menu Principal/Opciones/opciones.gd
-res://UI/Menu Principal/Opciones/Opciones de audio/opciones_de_audio.gd
-res://UI/Menu Principal/menu_principal.gd
-res://UI/Tienda/Panel tienda/panel_tienda.tscn
-res://Commons/Componentes/Core/ContadorComponente.gd
-res://Recursos/Save/ReconstructorData.gd
-res://Escenarios/save_game.gd
-res://UI/HUD/UI_canvas_layer.tscn
-res://UI/HUD/Inventario/Slots Inventario/slot_de_inventario.tscn
-res://UI/HUD/Inventario/Slots Inventario/slot_de_inventario.gd
-res://Utilidades/Autoloads/inventario.gd
-res://UI/HUD/Notificacion/notificaion.gd
+res://Entidades/Basura/Caja/caja_shape_2d.tres
+res://Entidades/Loot/Loot.tscn
+res://Entidades/Loot/coleccionables/calculadora.tres
+res://Entidades/Loot/coleccionables/cassette.tres
+res://Entidades/Loot/coleccionables/control_nes.tres
+res://Entidades/Loot/Loot_Item.gd
+res://UI/HUD/Menu Coleccionables/casilla_coleccionable.gd
+res://Entidades/Loot/coleccionables/gameboy.tres
+res://Entidades/Loot/coleccionables/slopy_disk.tres
+res://Entidades/Loot/coleccionables/tv.tres
+res://Entidades/Loot/coleccionables/vinilo.tres
