@@ -1,0 +1,25 @@
+res://Escenarios/Mundos/chunk_reset.tscn
+res://UI/Theme/Tienda.tres
+res://Escenarios/Oficial/TileMapOficial.tres
+res://Entidades/Basura/basura_data.tres
+res://Escenarios/Sprite_sucio/Tile sucio.tres
+res://Entidades/Basura/peñon.tres
+res://Entidades/Consumible/refresco.tres
+res://Assets/Shaders/Shader nuevo ajustable correctamente.tres
+res://Entidades/Basura/Caja/Obstaculos/Arbol/Arbol Cesped Claro.tres
+res://Entidades/Loot/coleccionables/vhs.tres
+res://Entidades/Loot/coleccionables/radio.tres
+res://Entidades/Loot/coleccionables/slopy_disk.tres
+res://UI/Tienda/mejoras de habilidades/mejora_resistencia.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_resistencia.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_cooldown.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_rango.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_peso.tres
+res://Entidades/Consumible/Tipos de Consumibles/animacion lata consumible.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_honguitos.tres
+res://UI/Tienda/mejoras de habilidades/Datos Habilidades/datos_habilidades_fuerza.tres
+res://Entidades/Loot/coleccionables/vinilo.tres
+res://Entidades/Loot/coleccionables/tv.tres
+res://Entidades/Estaciones/Estación Rota/Requisitos de materiales/materialesNecesariosDinero.tres
+res://Entidades/Estaciones/Estación Rota/Requisitos de materiales/materialesNecesariosPiedra.tres
+res://Entidades/Estaciones/Estación Rota/Requisitos de materiales/materialesNecesariosMadera.tres
