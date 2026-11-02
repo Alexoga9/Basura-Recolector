@@ -1,5 +1,5 @@
-TileMapLayer
 Node2D
+TileMapLayer
 Button
 Control
 AudioStreamPlayer
@@ -12,4 +12,3 @@ AnimatedSprite2D
 Basura
 ReconstructorData
 RecolectorData
-CheckpointComponente
