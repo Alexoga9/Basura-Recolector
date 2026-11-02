@@ -11,19 +11,18 @@
 [ext_resource type="Texture2D" uid="uid://syxbc1c047yk" path="res://Assets/Variedad de cajas.png" id="7_qpreb"]
 [ext_resource type="PackedScene" uid="uid://cd6lygsc501ww" path="res://Entidades/Loot/Loot.tscn" id="9_nbhen"]
 [ext_resource type="Resource" uid="uid://5k76mbciamak" path="res://Entidades/Loot/loots/re_madera.tres" id="10_7ghf4"]
-[ext_resource type="Resource" uid="uid://dkoxwvu2yrs81" path="res://Entidades/Basura/Obstaculo prueba.tres" id="10_ggcp5"]
+[ext_resource type="Resource" uid="uid://dkoxwvu2yrs81" path="res://Entidades/Basura/peñon.tres" id="10_ggcp5"]
 [ext_resource type="Resource" uid="uid://dmky67t6umj3u" path="res://Entidades/Loot/loots/rs_piedra.tres" id="11_ggcp5"]
+[ext_resource type="Resource" uid="uid://sjc3cn6kq6nq" path="res://Entidades/Basura/Caja/Obstaculos/Arbol/Arbol Cesped Claro.tres" id="12_yginr"]
 [ext_resource type="Texture2D" uid="uid://due6mtxcwadhu" path="res://Assets/Inventario/Items.png" id="13_3dabi"]
 [ext_resource type="PackedScene" uid="uid://cjlmg6cpg7g6g" path="res://Entidades/Estaciones/Maquina Expendedora/MaquinaExpendedora.tscn" id="14_tj0bs"]
 [ext_resource type="PackedScene" uid="uid://dkwgdyg1ccod6" path="res://Entidades/Estaciones/Estación Rota/estación_rota.tscn" id="15_46y7b"]
-[ext_resource type="Texture2D" uid="uid://i2ox5ksvvper" path="res://Escenarios/Oficial/Tilesheet Oficial.png" id="15_wapn8"]
+[ext_resource type="AudioStream" uid="uid://dxfp54nq4ir4a" path="res://Assets/audio/para demo/recoger_basura.ogg" id="16_4hfm7"]
 [ext_resource type="AudioStream" uid="uid://sahbu26hpnvx" path="res://Assets/audio/Hit.wav" id="16_tj0bs"]
-[ext_resource type="Resource" uid="uid://cgrmmq154onj0" path="res://Entidades/Basura/Caja/Obstaculos/piedra/piedra cesped claro.tres" id="16_wapn8"]
 [ext_resource type="Texture2D" uid="uid://cbgbirmqb5755" path="res://Assets/UI/marco tienda.png" id="18_46y7b"]
 [ext_resource type="PackedScene" uid="uid://c1kcmjbhf62q1" path="res://Escenarios/prueba de cambio de sprite/Valla.tscn" id="20_ekfr6"]
 [ext_resource type="PackedScene" uid="uid://mummqqnve0vm" path="res://Entidades/Notas/nota_coleccionable.tscn" id="21_movwp"]
 [ext_resource type="Texture2D" uid="uid://d3r43nmrn4esl" path="res://Assets/entidades/Valla/Ya.png" id="21_y4y2f"]
-[ext_resource type="Script" uid="uid://brs2x5jqdp1tv" path="res://Recursos/data_notas.gd" id="22_fupi3"]
 [ext_resource type="Resource" uid="uid://bfnagf80xln8o" path="res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/TrituradoraRota.tres" id="24_yginr"]
 [ext_resource type="Resource" uid="uid://cgw3qw61x5b08" path="res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/TiendaRota.tres" id="25_4hfm7"]
 [ext_resource type="PackedScene" uid="uid://b1luv0bei0jvi" path="res://UI/HUD/UI_canvas_layer.tscn" id="34_ggcp5"]
@@ -50,27 +49,6 @@ nivel_de_requisito = 3
 materiales_dentro = Array[ExtResource("6_3fydg")]([ExtResource("11_ggcp5"), ExtResource("11_ggcp5"), ExtResource("11_ggcp5")])
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pmfwy"]
-atlas = ExtResource("15_wapn8")
-region = Rect2(17, 152, 14, 22)
-
-[sub_resource type="Resource" id="Resource_falab"]
-script = ExtResource("6_3fydg")
-id = "Arbol"
-nombre = "Arbol"
-audio = ExtResource("5_4hfm7")
-sprite = SubResource("AtlasTexture_pmfwy")
-cantidad_maxima = 9999
-perfil_mundo = 1
-tipo_de_elemento = 2
-valor = 500
-veces_a_golpear = 2
-tiene_requisito = true
-tipo_de_requisito = 1
-nivel_de_requisito = 2
-materiales_dentro = Array[ExtResource("6_3fydg")]([ExtResource("10_7ghf4"), ExtResource("10_7ghf4")])
-metadata/_custom_type_script = "uid://dnu2r5yw53pto"
-
 [sub_resource type="Resource" id="Resource_p7l1k"]
 script = ExtResource("6_3fydg")
 id = "Paquete prueba"
@@ -82,37 +60,31 @@ tipo_de_elemento = 2
 materiales_dentro = Array[ExtResource("6_3fydg")]([ExtResource("11_ggcp5"), ExtResource("10_7ghf4"), ExtResource("10_7ghf4")])
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_000eb"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ui5uu"]
 atlas = ExtResource("7_qpreb")
 region = Rect2(48, 32, 16, 16)
 
-[sub_resource type="Resource" id="Resource_0ve2n"]
+[sub_resource type="Resource" id="Resource_3fydg"]
 script = ExtResource("6_3fydg")
 id = "Basura"
 nombre = "Basura"
-audio = ExtResource("5_4hfm7")
-sprite = SubResource("AtlasTexture_000eb")
+audio = ExtResource("16_4hfm7")
+sprite = SubResource("AtlasTexture_ui5uu")
 cantidad_maxima = 3
 valor = 100
 veces_a_golpear = 3
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"
 
-[sub_resource type="Resource" id="Resource_0ttpa"]
+[sub_resource type="Resource" id="Resource_qpreb"]
 script = ExtResource("6_3fydg")
 id = "Basura"
 nombre = "Basura"
-audio = ExtResource("5_4hfm7")
-sprite = SubResource("AtlasTexture_000eb")
+audio = ExtResource("16_4hfm7")
+sprite = SubResource("AtlasTexture_ui5uu")
 cantidad_maxima = 3
 valor = 100
 veces_a_golpear = 3
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"
-
-[sub_resource type="Resource" id="Resource_kj1fw"]
-script = ExtResource("22_fupi3")
-titulo_nota = "Puto"
-texto_nota = "EL que lo lea :v"
-metadata/_custom_type_script = "uid://brs2x5jqdp1tv"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gqsie"]
 texture = ExtResource("21_y4y2f")
@@ -356,7 +328,7 @@ data = SubResource("Resource_y4y2f")
 
 [node name="Basura7" parent="Objetos Ambientales/Entiddaes/Basuras/Pesadas" unique_id=1059847722 instance=ExtResource("4_yginr")]
 position = Vector2(598, 534)
-data = SubResource("Resource_falab")
+data = ExtResource("12_yginr")
 
 [node name="Basura6" parent="Objetos Ambientales/Entiddaes/Basuras/Pesadas" unique_id=553509282 instance=ExtResource("4_yginr")]
 position = Vector2(835, 194)
@@ -364,15 +336,15 @@ data = SubResource("Resource_p7l1k")
 
 [node name="Basura2" parent="Objetos Ambientales/Entiddaes/Basuras/Pesadas" unique_id=357027308 instance=ExtResource("4_yginr")]
 position = Vector2(567, 416)
-data = SubResource("Resource_0ve2n")
+data = SubResource("Resource_3fydg")
 
 [node name="Basura3" parent="Objetos Ambientales/Entiddaes/Basuras/Pesadas" unique_id=66036502 instance=ExtResource("4_yginr")]
 position = Vector2(586, 416)
-data = SubResource("Resource_0ttpa")
+data = SubResource("Resource_qpreb")
 
 [node name="Basura8" parent="Objetos Ambientales/Entiddaes/Basuras/Pesadas" unique_id=604415291 instance=ExtResource("4_yginr")]
 position = Vector2(666, 415)
-data = ExtResource("16_wapn8")
+data = ExtResource("10_ggcp5")
 
 [node name="Loot" type="Node2D" parent="Objetos Ambientales/Entiddaes" unique_id=366166692 groups=["EntidadesLoot"]]
 y_sort_enabled = true
@@ -396,10 +368,6 @@ y_sort_enabled = true
 
 [node name="Nota Coleccionable" parent="Objetos Ambientales/Entiddaes/Notas" unique_id=2140338302 instance=ExtResource("21_movwp")]
 position = Vector2(248, 271)
-
-[node name="Nota Coleccionable2" parent="Objetos Ambientales/Entiddaes/Notas" unique_id=443299689 instance=ExtResource("21_movwp")]
-position = Vector2(283, 271)
-data = SubResource("Resource_kj1fw")
 
 [node name="Estaciones" type="Node2D" parent="Objetos Ambientales" unique_id=507587051 groups=["Estaciones"]]
 y_sort_enabled = true
@@ -438,6 +406,7 @@ porcentaje_requerido = 55
 next_scene = "uid://rbpm4n376u4e"
 costo_puerta = 350
 entrada_posicion = 1
+condiccion_para_abrir = 1
 
 [node name="puerta_Valla2" parent="Objetos Ambientales/Vallas" unique_id=2027866488 instance=ExtResource("20_ekfr6")]
 position = Vector2(394, 288)

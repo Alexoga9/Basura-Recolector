@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Basura recolector"
 run/main_scene="uid://kyb4e7wfvufr"
-config/features=PackedStringArray("4.6", "Forward Plus")
+config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 
 [audio]
@@ -44,7 +44,7 @@ window/stretch/mode="viewport"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/SimpleFormatOnSave/plugin.cfg", "res://addons/kanban_tasks/plugin.cfg", "res://addons/ridiculous_coding/plugin.cfg", "res://addons/scene_palette/plugin.cfg", "res://addons/script_splitter/plugin.cfg")
+enabled=PackedStringArray("res://addons/SimpleFormatOnSave/plugin.cfg", "res://addons/ridiculous_coding/plugin.cfg", "res://addons/scene_palette/plugin.cfg", "res://addons/script_splitter/plugin.cfg")
 
 [file_customization]
 

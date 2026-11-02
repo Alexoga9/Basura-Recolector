@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="LootDefinicion" format=3 uid="uid://cgrmmq154onj0"]
 
-[ext_resource type="AudioStream" uid="uid://sahbu26hpnvx" path="res://Assets/audio/Hit.wav" id="1_bvgs1"]
+[ext_resource type="AudioStream" uid="uid://dxfp54nq4ir4a" path="res://Assets/audio/para demo/recoger_basura.ogg" id="1_bvgs1"]
 [ext_resource type="Texture2D" uid="uid://i2ox5ksvvper" path="res://Escenarios/Oficial/Tilesheet Oficial.png" id="2_f3m0x"]
 [ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="3_presentacion"]
 [ext_resource type="Resource" uid="uid://dmky67t6umj3u" path="res://Entidades/Loot/loots/rs_piedra.tres" id="4_bvgs1"]

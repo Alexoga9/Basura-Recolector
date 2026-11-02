@@ -10,6 +10,6 @@ id = "bolsa_de_basura"
 nombre = "Bolsa de basura"
 audio = ExtResource("1_aanqn")
 sprite = ExtResource("3_aanqn")
-cantidad_maxima = 10
+cantidad_maxima = 99
 tipo_de_elemento = 4
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"

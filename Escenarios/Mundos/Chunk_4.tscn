@@ -6,7 +6,7 @@
 [ext_resource type="TileSet" uid="uid://c14qxhc8cbhtd" path="res://Escenarios/Sprite_sucio/Tile sucio.tres" id="3_e1g81"]
 [ext_resource type="PackedScene" uid="uid://e856quj4lvvn" path="res://Entidades/Jugador/Jugador.tscn" id="4_4jliy"]
 [ext_resource type="PackedScene" uid="uid://boa7rlwdurt22" path="res://Entidades/Basura/Basura.tscn" id="5_7l23i"]
-[ext_resource type="Resource" uid="uid://dkoxwvu2yrs81" path="res://Entidades/Basura/Obstaculo prueba.tres" id="6_jmlwp"]
+[ext_resource type="Resource" uid="uid://dkoxwvu2yrs81" path="res://Entidades/Basura/peñon.tres" id="6_jmlwp"]
 [ext_resource type="AudioStream" uid="uid://dr7bho43atgf6" path="res://Assets/audio/tornado audio.mp3" id="7_ggahu"]
 [ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="8_gyn1n"]
 [ext_resource type="Texture2D" uid="uid://due6mtxcwadhu" path="res://Assets/Inventario/Items.png" id="9_wakek"]

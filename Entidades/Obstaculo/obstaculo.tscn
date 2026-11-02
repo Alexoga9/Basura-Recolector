@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bm1w0rloqd6df"]
 
 [ext_resource type="Script" uid="uid://crrl837qbcxyi" path="res://Entidades/Obstaculo/Obstaculo_item.gd" id="1_456b4"]
-[ext_resource type="Resource" uid="uid://dkoxwvu2yrs81" path="res://Entidades/Basura/Obstaculo prueba.tres" id="2_slu53"]
+[ext_resource type="Resource" uid="uid://dkoxwvu2yrs81" path="res://Entidades/Basura/peñon.tres" id="2_slu53"]
 [ext_resource type="Texture2D" uid="uid://dut0438runrb" path="res://Assets/Inventario/caja.png" id="3_g5txv"]
 [ext_resource type="Material" uid="uid://dy8jul72maxm7" path="res://Assets/entidades/OutlineMaterial.tres" id="5_ejn1b"]
 [ext_resource type="Texture2D" uid="uid://c8imhrpes1oxk" path="res://Assets/entidades/basura completa.png" id="6_7otf1"]

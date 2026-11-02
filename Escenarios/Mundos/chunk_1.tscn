@@ -10,7 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://dr7bho43atgf6" path="res://Assets/audio/tornado audio.mp3" id="4_u8set"]
 [ext_resource type="PackedScene" uid="uid://b8u0pprb4t2sj" path="res://Entidades/Estaciones/Trituradora/trituradora.tscn" id="5_c2e4j"]
 [ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="5_isstk"]
-[ext_resource type="Resource" uid="uid://dkoxwvu2yrs81" path="res://Entidades/Basura/Obstaculo prueba.tres" id="6_4xlto"]
+[ext_resource type="Resource" uid="uid://dkoxwvu2yrs81" path="res://Entidades/Basura/peñon.tres" id="6_4xlto"]
 [ext_resource type="PackedScene" uid="uid://cjlmg6cpg7g6g" path="res://Entidades/Estaciones/Maquina Expendedora/MaquinaExpendedora.tscn" id="6_isstk"]
 [ext_resource type="Texture2D" uid="uid://syxbc1c047yk" path="res://Assets/Variedad de cajas.png" id="6_tl5id"]
 [ext_resource type="Resource" uid="uid://clilkml5ewjiw" path="res://Entidades/Loot/paquete_refrescos.tres" id="7_3lpn2"]
@@ -27,6 +27,7 @@
 [ext_resource type="Resource" uid="uid://sjc3cn6kq6nq" path="res://Entidades/Basura/Caja/Obstaculos/Arbol/Arbol Cesped Claro.tres" id="17_pmfwy"]
 [ext_resource type="Resource" uid="uid://cb5ucrwrw42s4" path="res://Entidades/Loot/coleccionables/vhs.tres" id="19_bgs43"]
 [ext_resource type="Resource" uid="uid://bmj2s3ucjwupi" path="res://Entidades/Loot/coleccionables/radio.tres" id="20_imjhf"]
+[ext_resource type="Texture2D" uid="uid://due6mtxcwadhu" path="res://Assets/Inventario/Items.png" id="20_ykwam"]
 [ext_resource type="Resource" uid="uid://cjmitmv0r87es" path="res://Entidades/Consumible/refresco.tres" id="23_imjhf"]
 [ext_resource type="Resource" uid="uid://5rkp1mf566u5" path="res://Entidades/Loot/coleccionables/slopy_disk.tres" id="24_bkx32"]
 [ext_resource type="PackedScene" uid="uid://b1luv0bei0jvi" path="res://UI/HUD/UI_canvas_layer.tscn" id="33_imjhf"]
@@ -49,7 +50,7 @@ valor = 10
 veces_a_golpear = 2
 tiene_requisito = true
 tipo_de_requisito = 1
-nivel_de_requisito = 2
+nivel_de_requisito = 1
 materiales_dentro = Array[ExtResource("5_isstk")]([ExtResource("9_4xlto"), ExtResource("9_4xlto")])
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"
 
@@ -83,49 +84,11 @@ metadata/_custom_type_script = "uid://dnu2r5yw53pto"
 script = ExtResource("5_isstk")
 id = "Basura"
 nombre = "Basura"
-audio = ExtResource("4_u8set")
+audio = ExtResource("17_bkx32")
 sprite = SubResource("AtlasTexture_ykwam")
 cantidad_maxima = 3
 valor = 30
 veces_a_golpear = 3
-metadata/_custom_type_script = "uid://dnu2r5yw53pto"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_86fdr"]
-atlas = ExtResource("10_imjhf")
-region = Rect2(80, 176, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_oexfj"]
-atlas = ExtResource("10_imjhf")
-region = Rect2(96, 176, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6ttuy"]
-atlas = ExtResource("10_imjhf")
-region = Rect2(80, 192, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wd5n8"]
-atlas = ExtResource("10_imjhf")
-region = Rect2(96, 192, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bgs43"]
-atlas = ExtResource("10_imjhf")
-region = Rect2(80, 176, 16, 16)
-
-[sub_resource type="Resource" id="Resource_pmfwy"]
-script = ExtResource("5_isstk")
-id = "Piedra cesped claro"
-nombre = "Piedra cesped claro"
-audio = ExtResource("10_bgs43")
-sprite = SubResource("AtlasTexture_bgs43")
-conjunto_de_sprites = Array[Texture2D]([SubResource("AtlasTexture_86fdr"), SubResource("AtlasTexture_oexfj"), SubResource("AtlasTexture_6ttuy"), SubResource("AtlasTexture_wd5n8")])
-cantidad_maxima = 9999
-perfil_mundo = 2
-tipo_de_elemento = 2
-tipo_de_basura = 1
-valor = 10
-veces_a_golpear = 2
-tiene_requisito = true
-nivel_de_requisito = 1
-materiales_dentro = Array[ExtResource("5_isstk")]([ExtResource("10_18pdu"), ExtResource("10_18pdu")])
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_707wf"]
@@ -157,6 +120,70 @@ tiene_requisito = true
 tipo_de_requisito = 1
 nivel_de_requisito = 3
 materiales_dentro = Array[ExtResource("5_isstk")]([ExtResource("9_4xlto"), ExtResource("9_4xlto")])
+metadata/_custom_type_script = "uid://dnu2r5yw53pto"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xkutv"]
+atlas = ExtResource("20_ykwam")
+region = Rect2(32, 80, 16, 16)
+
+[sub_resource type="Resource" id="Resource_pmfwy"]
+script = ExtResource("5_isstk")
+id = "Peñon"
+nombre = "Peñon"
+audio = ExtResource("17_bkx32")
+sprite = SubResource("AtlasTexture_xkutv")
+cantidad_maxima = 9999
+perfil_mundo = 2
+valor = 10
+veces_a_golpear = 2
+tiene_requisito = true
+nivel_de_requisito = 1
+materiales_dentro = Array[ExtResource("5_isstk")]([ExtResource("10_18pdu"), ExtResource("10_18pdu")])
+metadata/_custom_type_script = "uid://dnu2r5yw53pto"
+
+[sub_resource type="Resource" id="Resource_w8mdt"]
+script = ExtResource("5_isstk")
+id = "Peñon"
+nombre = "Peñon"
+audio = ExtResource("17_bkx32")
+sprite = SubResource("AtlasTexture_xkutv")
+cantidad_maxima = 9999
+perfil_mundo = 2
+valor = 10
+veces_a_golpear = 2
+tiene_requisito = true
+nivel_de_requisito = 1
+materiales_dentro = Array[ExtResource("5_isstk")]([ExtResource("10_18pdu"), ExtResource("10_18pdu")])
+metadata/_custom_type_script = "uid://dnu2r5yw53pto"
+
+[sub_resource type="Resource" id="Resource_stgw3"]
+script = ExtResource("5_isstk")
+id = "Peñon"
+nombre = "Peñon"
+audio = ExtResource("17_bkx32")
+sprite = SubResource("AtlasTexture_xkutv")
+cantidad_maxima = 9999
+perfil_mundo = 2
+valor = 10
+veces_a_golpear = 2
+tiene_requisito = true
+nivel_de_requisito = 1
+materiales_dentro = Array[ExtResource("5_isstk")]([ExtResource("10_18pdu"), ExtResource("10_18pdu")])
+metadata/_custom_type_script = "uid://dnu2r5yw53pto"
+
+[sub_resource type="Resource" id="Resource_foq65"]
+script = ExtResource("5_isstk")
+id = "Peñon"
+nombre = "Peñon"
+audio = ExtResource("17_bkx32")
+sprite = SubResource("AtlasTexture_xkutv")
+cantidad_maxima = 9999
+perfil_mundo = 2
+valor = 10
+veces_a_golpear = 2
+tiene_requisito = true
+nivel_de_requisito = 1
+materiales_dentro = Array[ExtResource("5_isstk")]([ExtResource("10_18pdu"), ExtResource("10_18pdu")])
 metadata/_custom_type_script = "uid://dnu2r5yw53pto"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3lpn2"]
@@ -297,14 +324,47 @@ position = Vector2(575, 495)
 [node name="Basura" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1550149306 instance=ExtResource("3_dahfg")]
 position = Vector2(658, 585)
 
-[node name="Basura2" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1077709605 instance=ExtResource("3_dahfg")]
-position = Vector2(724, 528)
-
 [node name="Basura3" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=825007215 instance=ExtResource("3_dahfg")]
 position = Vector2(640, 530)
 
 [node name="Basura4" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1828176999 instance=ExtResource("3_dahfg")]
 position = Vector2(628, 408)
+
+[node name="Basura60" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=529520627 instance=ExtResource("3_dahfg")]
+position = Vector2(681, 461)
+
+[node name="Basura61" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=434484974 instance=ExtResource("3_dahfg")]
+position = Vector2(602, 448)
+
+[node name="Basura62" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=664684299 instance=ExtResource("3_dahfg")]
+position = Vector2(795, 447)
+
+[node name="Basura63" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1489325287 instance=ExtResource("3_dahfg")]
+position = Vector2(800, 321)
+
+[node name="Basura64" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=531621027 instance=ExtResource("3_dahfg")]
+position = Vector2(655, 495)
+
+[node name="Basura65" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=489202546 instance=ExtResource("3_dahfg")]
+position = Vector2(603, 529)
+
+[node name="Basura66" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=845702272 instance=ExtResource("3_dahfg")]
+position = Vector2(705, 568)
+
+[node name="Basura67" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=519285792 instance=ExtResource("3_dahfg")]
+position = Vector2(794, 249)
+
+[node name="Basura68" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1458752433 instance=ExtResource("3_dahfg")]
+position = Vector2(829, 215)
+
+[node name="Basura70" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=733075877 instance=ExtResource("3_dahfg")]
+position = Vector2(782, 485)
+
+[node name="Basura71" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=2046456611 instance=ExtResource("3_dahfg")]
+position = Vector2(659, 537)
+
+[node name="Basura72" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1349646267 instance=ExtResource("3_dahfg")]
+position = Vector2(628, 452)
 
 [node name="Basura8" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1585560198 instance=ExtResource("3_dahfg")]
 position = Vector2(567, 544)
@@ -314,9 +374,6 @@ position = Vector2(671, 585)
 
 [node name="Basura10" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1438552749 instance=ExtResource("3_dahfg")]
 position = Vector2(665, 573)
-
-[node name="Basura11" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1187345897 instance=ExtResource("3_dahfg")]
-position = Vector2(682, 522)
 
 [node name="Basura12" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1864819707 instance=ExtResource("3_dahfg")]
 position = Vector2(590, 571)
@@ -385,7 +442,7 @@ position = Vector2(831, 498)
 [node name="Basura35" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1289496537 instance=ExtResource("3_dahfg")]
 position = Vector2(754, 422)
 
-[node name="Basura36" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=529520627 instance=ExtResource("3_dahfg")]
+[node name="Basura36" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=880887113 instance=ExtResource("3_dahfg")]
 position = Vector2(824, 264)
 
 [node name="Basura37" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=866347899 instance=ExtResource("3_dahfg")]
@@ -446,7 +503,7 @@ data = SubResource("Resource_imjhf")
 
 [node name="Basura54" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=260871064 instance=ExtResource("3_dahfg")]
 position = Vector2(728, 590)
-data = SubResource("Resource_pmfwy")
+data = ExtResource("6_4xlto")
 
 [node name="Basura55" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=328038850 instance=ExtResource("3_dahfg")]
 position = Vector2(652, 463)
@@ -455,6 +512,25 @@ data = ExtResource("17_pmfwy")
 [node name="Basura56" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=420352914 instance=ExtResource("3_dahfg")]
 position = Vector2(699, 546)
 data = SubResource("Resource_000eb")
+
+[node name="Basura20" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1028554158 instance=ExtResource("3_dahfg")]
+position = Vector2(781, 563)
+
+[node name="Basura23" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1388210602 instance=ExtResource("3_dahfg")]
+position = Vector2(781, 563)
+data = SubResource("Resource_pmfwy")
+
+[node name="Basura57" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=2139490436 instance=ExtResource("3_dahfg")]
+position = Vector2(781, 545)
+data = SubResource("Resource_w8mdt")
+
+[node name="Basura58" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=58548845 instance=ExtResource("3_dahfg")]
+position = Vector2(803, 545)
+data = SubResource("Resource_stgw3")
+
+[node name="Basura59" parent="Objetos Ambientales/Entiddaes/Basuras" unique_id=1325174517 instance=ExtResource("3_dahfg")]
+position = Vector2(803, 563)
+data = SubResource("Resource_foq65")
 
 [node name="Loot" type="Node2D" parent="Objetos Ambientales/Entiddaes" unique_id=1106672725 groups=["EntidadesLoot"]]
 y_sort_enabled = true
@@ -519,3 +595,45 @@ position = Vector2(397, -117)
 script = ExtResource("36_pmfwy")
 entrada = 1
 metadata/_custom_type_script = "uid://x0afdmm3k1jj"
+
+[node name="Basura" parent="." unique_id=1033601857 instance=ExtResource("3_dahfg")]
+position = Vector2(302, 181)
+
+[node name="Basura2" parent="." unique_id=128698338 instance=ExtResource("3_dahfg")]
+position = Vector2(312, 108)
+
+[node name="Basura3" parent="." unique_id=2103925160 instance=ExtResource("3_dahfg")]
+position = Vector2(365, 161)
+
+[node name="Basura4" parent="." unique_id=706279300 instance=ExtResource("3_dahfg")]
+position = Vector2(286, 148)
+
+[node name="Basura5" parent="." unique_id=1638448027 instance=ExtResource("3_dahfg")]
+position = Vector2(479, 147)
+
+[node name="Basura6" parent="." unique_id=1380611072 instance=ExtResource("3_dahfg")]
+position = Vector2(484, 21)
+
+[node name="Basura7" parent="." unique_id=2070611688 instance=ExtResource("3_dahfg")]
+position = Vector2(339, 195)
+
+[node name="Basura8" parent="." unique_id=1615290033 instance=ExtResource("3_dahfg")]
+position = Vector2(287, 229)
+
+[node name="Basura9" parent="." unique_id=927170741 instance=ExtResource("3_dahfg")]
+position = Vector2(389, 268)
+
+[node name="Basura10" parent="." unique_id=985829436 instance=ExtResource("3_dahfg")]
+position = Vector2(478, -51)
+
+[node name="Basura11" parent="." unique_id=1464516478 instance=ExtResource("3_dahfg")]
+position = Vector2(513, -85)
+
+[node name="Basura13" parent="." unique_id=249278628 instance=ExtResource("3_dahfg")]
+position = Vector2(466, 185)
+
+[node name="Basura14" parent="." unique_id=2004470353 instance=ExtResource("3_dahfg")]
+position = Vector2(343, 237)
+
+[node name="Basura15" parent="." unique_id=475992981 instance=ExtResource("3_dahfg")]
+position = Vector2(312, 152)

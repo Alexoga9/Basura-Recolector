@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="LootDefinicion" format=3 uid="uid://dkoxwvu2yrs81"]
+
+[ext_resource type="AudioStream" uid="uid://dxfp54nq4ir4a" path="res://Assets/audio/para demo/recoger_basura.ogg" id="1_bo28q"]
+[ext_resource type="Script" uid="uid://dnu2r5yw53pto" path="res://Recursos/LootDefinicion.gd" id="2_bo28q"]
+[ext_resource type="Resource" uid="uid://dmky67t6umj3u" path="res://Entidades/Loot/loots/rs_piedra.tres" id="3_bo28q"]
+[ext_resource type="Texture2D" uid="uid://due6mtxcwadhu" path="res://Assets/Inventario/Items.png" id="3_cugdh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xkutv"]
+atlas = ExtResource("3_cugdh")
+region = Rect2(32, 80, 16, 16)
+
+[resource]
+script = ExtResource("2_bo28q")
+id = "Peñon"
+nombre = "Peñon"
+audio = ExtResource("1_bo28q")
+sprite = SubResource("AtlasTexture_xkutv")
+cantidad_maxima = 9999
+perfil_mundo = 2
+valor = 10
+veces_a_golpear = 2
+tiene_requisito = true
+nivel_de_requisito = 1
+materiales_dentro = Array[ExtResource("2_bo28q")]([ExtResource("3_bo28q"), ExtResource("3_bo28q")])
+metadata/_custom_type_script = "uid://dnu2r5yw53pto"
