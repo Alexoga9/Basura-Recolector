@@ -16,7 +16,6 @@
 [ext_resource type="Script" uid="uid://b1prp2tpnsf1h" path="res://Entidades/Jugador/barra_cooldown.gd" id="13_8xsec"]
 [ext_resource type="PackedScene" uid="uid://5pp4m7kfpi2e" path="res://Commons/Componentes/Input/bebeRefresco.tscn" id="13_54am8"]
 [ext_resource type="Resource" uid="uid://besidf7otrxpl" path="res://Entidades/Basura/Bolsa de Basura/bolsa_de_basura.tres" id="13_orci8"]
-[ext_resource type="Script" uid="uid://ccn4v8e1f186" path="res://Entidades/Jugador/el_super_radar.gd" id="16_8j4j1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b35yh"]
 radius = 4.0
@@ -304,7 +303,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_17olq")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Idle_down",
 "speed": 5.0
 }, {
@@ -333,7 +332,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ofgdf")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Idle_left",
 "speed": 5.0
 }, {
@@ -362,7 +361,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qoomf")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Idle_right",
 "speed": 5.0
 }, {
@@ -391,7 +390,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_lmu17")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Idle_up",
 "speed": 5.0
 }, {
@@ -420,7 +419,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_gd46s")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Run_down",
 "speed": 5.0
 }, {
@@ -449,7 +448,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_dd618")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Run_left",
 "speed": 5.0
 }, {
@@ -478,7 +477,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jb7v6")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Run_right",
 "speed": 5.0
 }, {
@@ -507,7 +506,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_afpnf")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Run_up",
 "speed": 5.0
 }]
@@ -527,13 +526,17 @@ bg_color = Color(0.54509807, 0.54509807, 0.54509807, 0.49803922)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qtgc7"]
 bg_color = Color(0.8392157, 0.8392157, 0.8392157, 0.49803922)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_54am8"]
-
 [node name="Jugador" type="CharacterBody2D" unique_id=1030727379 groups=["Jugador"]]
 collision_mask = 60
 motion_mode = 1
 safe_margin = 0.5
 script = ExtResource("1_5k27j")
+
+[node name="Cuerpo" type="CollisionShape2D" parent="." unique_id=925831003]
+visible = false
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_b35yh")
+debug_color = Color(1.3536774e-07, 0.102459945, 0.126971, 0.41960785)
 
 [node name="Sombra" type="Sprite2D" parent="." unique_id=1329384721]
 self_modulate = Color(1, 1, 1, 0.39215687)
@@ -541,6 +544,10 @@ position = Vector2(-1, 2)
 texture = ExtResource("2_orci8")
 
 [node name="Componentes" type="Node" parent="." unique_id=6844626]
+
+[node name="BebeRefresco" parent="Componentes" unique_id=766981547 node_paths=PackedStringArray("energia_componente") instance=ExtResource("13_54am8")]
+unique_name_in_owner = true
+energia_componente = NodePath("../EnergiaComponente")
 
 [node name="EnergiaComponente" type="Node" parent="Componentes" unique_id=851066434]
 unique_name_in_owner = true
@@ -579,12 +586,6 @@ unique_name_in_owner = true
 script = ExtResource("10_8j4j1")
 metadata/_custom_type_script = "uid://cb0k0n6eyh661"
 
-[node name="Cuerpo" type="CollisionShape2D" parent="." unique_id=925831003]
-visible = false
-position = Vector2(-1, 0)
-shape = SubResource("CircleShape2D_b35yh")
-debug_color = Color(1.3536774e-07, 0.102459945, 0.126971, 0.41960785)
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1128054079]
 unique_name_in_owner = true
 position = Vector2(0, 3)
@@ -603,10 +604,6 @@ collision_mask = 2
 position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_frfy0")
 debug_color = Color(0.63369, 0.5259296, 0.0091273235, 0.41960785)
-
-[node name="BebeRefresco" parent="." unique_id=766981547 node_paths=PackedStringArray("energia_componente") instance=ExtResource("13_54am8")]
-unique_name_in_owner = true
-energia_componente = NodePath("../Componentes/EnergiaComponente")
 
 [node name="Loot Collector" type="Area2D" parent="." unique_id=376001421]
 editor_description = "Se encarga de recolectar los objetos  en el mundo.
@@ -653,14 +650,6 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_qtgc7")
 show_percentage = false
 script = ExtResource("13_8xsec")
 metadata/_custom_type_script = "uid://d3ixr7t11n000"
-
-[node name="EL SUPER RADAR" type="Area2D" parent="." unique_id=256559925]
-visible = false
-script = ExtResource("16_8j4j1")
-metadata/_custom_type_script = "uid://dqiir7o6l4sjy"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EL SUPER RADAR" unique_id=1246066841]
-shape = SubResource("CircleShape2D_54am8")
 
 [connection signal="timeout" from="Componentes/EnergiaComponente/Recarga lenta" to="Componentes/EnergiaComponente" method="_on_recarga_lenta_timeout"]
 [connection signal="area_entered" from="LootAtractor" to="LootAtractor" method="_on_area_entered"]
