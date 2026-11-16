@@ -1,7 +1,11 @@
 [gd_resource type="Resource" script_class="DatosHabilidades" format=3 uid="uid://dpdy87aeige8s"]
 
 [ext_resource type="Script" uid="uid://dxsan7lcfsr3y" path="res://Recursos/DatosHabilidades.gd" id="1_784cv"]
-[ext_resource type="Texture2D" uid="uid://c8xapo1ps5pwt" path="res://Assets/UI/barra/icono basura barra.png" id="1_wjq20"]
+[ext_resource type="Texture2D" uid="uid://due6mtxcwadhu" path="res://Assets/Inventario/Items.png" id="2_items"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4pge6"]
+atlas = ExtResource("2_items")
+region = Rect2(32, 96, 16, 16)
 
 [resource]
 script = ExtResource("1_784cv")
@@ -9,5 +13,5 @@ nombre = "Lanzamiento"
 descripcion = "Aumenta la distancia 
 del lanzamiento"
 precio = 5
-imagen = ExtResource("1_wjq20")
+imagen = SubResource("AtlasTexture_4pge6")
 metadata/_custom_type_script = "uid://dxsan7lcfsr3y"
