@@ -17,11 +17,11 @@ absorbent = true
 radius = 11.0
 
 [node name="BolsaDeBasura" type="AnimatableBody2D" unique_id=327537673 groups=["BolsaDeBasura"]]
-sync_to_physics = false
 y_sort_enabled = true
 collision_layer = 64
-collision_mask = 116
+collision_mask = 84
 physics_material_override = SubResource("PhysicsMaterial_4lkkk")
+sync_to_physics = false
 script = ExtResource("1_4huo8")
 data = ExtResource("2_haedb")
 metadata/_custom_type_script = "uid://b8xyvx6fjldhd"
@@ -36,12 +36,11 @@ unique_name_in_owner = true
 y_sort_enabled = true
 texture = ExtResource("1_a3l6q")
 
-[node name="ResaltadoComponente" type="Node" parent="Sprite" unique_id=1985107626 node_paths=PackedStringArray("trigger_area", "e_sprite")]
+[node name="ResaltadoComponente" type="Node" parent="Sprite" unique_id=1985107626 node_paths=PackedStringArray("trigger_area")]
 unique_name_in_owner = true
 script = ExtResource("3_8gexj")
 trigger_area = NodePath("../../Area2D")
 material_outline = ExtResource("4_haedb")
-e_sprite = NodePath("")
 metadata/_custom_type_script = "uid://csx7ka6k5q7bc"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=932870450]

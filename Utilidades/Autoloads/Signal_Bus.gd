@@ -46,7 +46,7 @@ signal notificacion(texto: String)
 signal notas_menu(DataNotas)
 
 # # Valla
-signal preguntar_pasar_por_valla(entrada:int)
+signal preguntar_pasar_por_valla(entrada:int, posicion_valla: Vector2)
 signal pasar_entrada_valla(entrada:int)
 
 # # Transicion

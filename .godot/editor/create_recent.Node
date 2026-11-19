@@ -1,7 +1,8 @@
+Control
+CanvasLayer
+Button
 Node2D
 TileMapLayer
-Button
-Control
 AudioStreamPlayer
 Node
 VBoxContainer
@@ -11,4 +12,3 @@ BeberRefresco
 AnimatedSprite2D
 Basura
 ReconstructorData
-RecolectorData

@@ -22,6 +22,7 @@
 [ext_resource type="Resource" uid="uid://cgw3qw61x5b08" path="res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/TiendaRota.tres" id="20_h0w0b"]
 [ext_resource type="Resource" uid="uid://co8ovdxeg1nte" path="res://Entidades/Estaciones/Estación Rota/Tipos de estaciones rotas/MaquinaExpendedoraRota.tres" id="21_40yjp"]
 [ext_resource type="PackedScene" uid="uid://dkwgdyg1ccod6" path="res://Entidades/Estaciones/Estación Rota/estación_rota.tscn" id="22_a4pxq"]
+[ext_resource type="PackedScene" uid="uid://rwh52xelkbw4" path="res://UI/transicion/pasar_por_puerta.tscn" id="27_40yjp"]
 [ext_resource type="PackedScene" uid="uid://c1kcmjbhf62q1" path="res://Escenarios/prueba de cambio de sprite/Valla.tscn" id="30_p06jm"]
 [ext_resource type="Texture2D" uid="uid://d3r43nmrn4esl" path="res://Assets/entidades/Valla/Ya.png" id="31_fr6lj"]
 [ext_resource type="Script" uid="uid://x0afdmm3k1jj" path="res://Utilidades/Sistemas/Checkpoint/CheckpointComponente.gd" id="32_s8xtd"]
@@ -439,3 +440,9 @@ metadata/_custom_type_script = "uid://x0afdmm3k1jj"
 
 [node name="CanvasLayer" parent="." unique_id=2007522030 instance=ExtResource("33_jtk1w")]
 visible = false
+
+[node name="Pasar por puerta2" parent="." unique_id=1945167634 instance=ExtResource("27_40yjp")]
+visible = false
+offset = Vector2(390, -120)
+transform = Transform2D(1, 0, 0, 1, 390, -120)
+follow_viewport_enabled = true

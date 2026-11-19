@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 var entrada_de_valla: int
 
@@ -8,10 +8,15 @@ func _ready():
 	SignalBus.preguntar_pasar_por_valla.connect(mostrar)
 
 
-func mostrar(entrada: int):
+func mostrar(entrada: int, posicion_valla: Vector2):
+	posicionar_panel(posicion_valla)
 	AudiosGlobales.abrir_menu.play()
 	entrada_de_valla = entrada
 	show()
+
+
+func posicionar_panel(posicion_valla: Vector2):
+	offset =posicion_valla
 
 
 func _on_entrar_pressed():

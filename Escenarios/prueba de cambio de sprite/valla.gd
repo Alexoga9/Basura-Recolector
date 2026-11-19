@@ -113,7 +113,7 @@ func abrir_paso() -> void:
 
 
 func preguntar_puerta():
-	SignalBus.preguntar_pasar_por_valla.emit(entrada_posicion)
+	SignalBus.preguntar_pasar_por_valla.emit(entrada_posicion, global_position)
 
 
 func pasar_puerta(entrada: int):

@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://d3r43nmrn4esl" path="res://Assets/entidades/Valla/Ya.png" id="2_qcp71"]
 [ext_resource type="PackedScene" uid="uid://b4nutgd65x10o" path="res://Entidades/genericos/e_sprite.tscn" id="3_bag1r"]
 [ext_resource type="Script" uid="uid://dunrj315vwhow" path="res://Escenarios/prueba de cambio de sprite/valla_resaltado_componente.gd" id="4_qcp71"]
-[ext_resource type="PackedScene" uid="uid://rwh52xelkbw4" path="res://UI/transicion/pasar_por_puerta.tscn" id="5_wt0fl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qcp71"]
 size = Vector2(32, 7)
@@ -26,7 +25,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wt0fl")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle",
 "speed": 5.0
 }, {
@@ -34,7 +33,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ob1kn")
 }],
-"loop": true,
+"loop": 1,
 "name": &"puerta_abierta",
 "speed": 5.0
 }]
@@ -98,14 +97,6 @@ offset_left = -144.0
 offset_top = -79.0
 offset_right = 134.0
 offset_bottom = -13.0
-
-[node name="Pasar por puerta" parent="Control" unique_id=316275069 instance=ExtResource("5_wt0fl")]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.029000001
-anchor_right = 1.0830001
-offset_left = 0.062000275
-offset_right = -0.07400513
 
 [connection signal="body_entered" from="Trigger Jugador" to="." method="_on_trigger_jugador_body_entered"]
 [connection signal="body_entered" from="Trigger Jugador" to="puerta/ResaltadoComponente" method="_on_trigger_jugador_body_entered"]
